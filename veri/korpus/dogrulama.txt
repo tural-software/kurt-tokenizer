@@ -1,0 +1,97 @@
+# Doğrulama korpusu — çok-alanlı doğal Türkçe koşan metin.
+# Amaç: gerçek metinde bilinmeyen-oranını ve round-trip kayıpsızlığını ÖLÇMEK.
+# Satırlar yorum (#) hariç gerçek cümlelerdir; alanlar çeşitlidir (haber, edebiyat,
+# bilim, günlük, resmî, diyalog) ki çekim morfolojisi zengin denensin.
+
+# --- Haber / politika ---
+Cumhurbaşkanı dün akşam düzenlenen törende yaptığı konuşmada ekonomik istikrarın önemini vurguladı.
+Mecliste görüşülen yasa teklifi uzun tartışmaların ardından oy çokluğuyla kabul edildi.
+Merkez Bankası faiz oranlarını değiştirmedi, ancak enflasyonun önümüzdeki aylarda düşeceğini açıkladı.
+Belediye başkanı, şehrin trafik sorununu çözmek için yeni bir metro hattı yapılacağını söyledi.
+Seçim sonuçları açıklandığında muhalefet partisinin oylarını artırdığı görüldü.
+Bakanlık, salgın döneminde alınan önlemlerin kaldırılmasına karar verdi.
+
+# --- Bilim / teknoloji ---
+Araştırmacılar geliştirdikleri yeni yöntemle hastalığın erken teşhis edilebileceğini gösterdiler.
+Yapay zekâ modelleri büyük veri kümeleri üzerinde eğitilerek dilleri çevirebiliyor.
+Gökbilimciler uzayda daha önce keşfedilmemiş bir gezegen sistemini incelediler.
+Bilgisayarın işlemcisi ısındığında performansı otomatik olarak düşürülür.
+Bu deneyde sıcaklık arttıkça tepkimenin hızlandığı gözlemlendi.
+İnternetin yaygınlaşması bilgiye erişimi kökten değiştirmiştir.
+
+# --- Edebiyat / anlatı ---
+Yağmur bütün gece durmadan yağdı, sabaha karşı sokaklar sessizliğe gömülmüştü.
+Yaşlı adam pencerenin önünde oturmuş, çocukluğunun geçtiği köyü düşünüyordu.
+Kızın gözlerindeki o derin hüznü gördüğümde söyleyecek söz bulamadım.
+Denizin kıyısında yürürken, uzaklardan gelen martı seslerini dinledik.
+Kapıyı çaldığımda kimse açmadı; belki de hepsi çoktan gitmişti.
+Rüzgâr savurdukça yaprakların hışırtısı ormanın derinliklerinde kayboluyordu.
+
+# --- Günlük / konuşma ---
+Yarın sabah erkenden kalkıp markete gitmem gerekiyor, evde hiçbir şey kalmamış.
+Sana kaç kere söyledim, telefonunu şarjda unutma diye.
+Bu akşam dışarıda yemek yiyelim mi, yoksa evde bir şeyler mi hazırlayalım?
+Arkadaşımla buluşacaktım ama hava çok kötü olduğu için iptal ettik.
+Çocuklar bahçede oynarken biz de balkonda çayımızı içiyorduk.
+Geçen hafta aldığım ayakkabılar çok rahatmış, keşke iki tane alsaydım.
+
+# --- Resmî / hukuki ---
+İşbu sözleşme taraflarca imzalandığı tarihte yürürlüğe girer ve iki yıl süreyle geçerlidir.
+Başvuruların değerlendirilmesi sonucunda uygun görülen adaylara bilgi verilecektir.
+Söz konusu kararın iptali için idare mahkemesine dava açılması gerekmektedir.
+Kurumumuz, kişisel verilerin korunması mevzuatına tam uyum sağlamaktadır.
+
+# --- Karışık / zorlayıcı (büyük harf, kesme, sayı, kısaltma) ---
+İstanbul'da yaşayan öğrencilerin yüzde altmışı sınava hazırlanmak için kursa gidiyor.
+2024 yılında Türkiye'nin ihracatı bir önceki yıla göre belirgin biçimde arttı.
+TBMM'de kabul edilen düzenleme 1 Ocak itibarıyla yürürlüğe girecek.
+Toplantı saat 14.30'da başlayacak, lütfen 10 dakika önce salonda olun.
+Ankara'dan İzmir'e giden tren yaklaşık sekiz saat sürüyor.
+Profesörün anlattıklarını not aldım ama bazı kısımlarını anlayamadım.
+
+# --- Emir / istek / dilek kipi ---
+Lütfen kapıyı kapatın ve dışarı çıkmadan önce ışıkları söndürün.
+Yarın sabah erken gelsin, toplantıya birlikte yetişelim.
+Bu konuyu bir daha düşüneyim, akşama sana kesin haberi veririm.
+Ödevini bitirmelisin, yoksa bu hafta sonu hiçbir yere gidemezsin.
+Çocuğa biraz çorba içirelim, sabahtan beri ağzına bir şey koymadı.
+Ne diyeceğimi bilemedim, karşısında öylece bakakaldım.
+
+# --- Birleşik zaman / koşul ---
+Eğer zamanında gelseydin bu sorunu birlikte kolayca çözebilirdik.
+Çocukken her yaz köye gider, dedemle tarlada sabaha kadar çalışırdık.
+Toplantı başladığında herkes yerini çoktan almıştı bile.
+Düzenli çalışsaydı sınavı kesinlikle kazanır, ailesini sevindirirdi.
+Sen ararken ben de tam seni aramaya hazırlanıyordum.
+
+# --- Soru / diyalog ---
+Bu akşamki maçı izleyecek misin, yoksa erken mi yatacaksın?
+Onların ne zaman geleceğini ve nerede kalacaklarını biliyor musun?
+Sahiden bütün kitabı bir gecede okuyup bitirdin mi?
+
+# --- Sıra sayısı / sayı ---
+Yarışmada birinci olan öğrenciye ödülünü okul müdürü verdi.
+Üçüncü kattaki dairede oturuyoruz, asansör yine sabahtan beri bozuk.
+Yirminci yüzyılın başlarında bu küçük kasaba bir balıkçı köyüydü.
+
+# --- Çatı yığını / türetim ---
+Belgeleri sekreterine yazdırıp imzalattıktan sonra arşive kaldırttı.
+Yeni köprü gelecek yıl hizmete açılacak, çalışmalar son aylarda hızlandırıldı.
+Bilimsel araştırmalar toplumsal hayatı her geçen gün derinden etkiliyor.
+Gözlükçüden yeni bir çerçeve aldım, eskisi düşünce kırılmıştı.
+
+# --- Küçültme / pekiştirme ---
+Küçücük elleriyle annesinin boynuna sımsıkı sarıldı.
+Biraz sabret, azıcık daha bekleyince sıra kesinlikle bize gelecek.
+Bembeyaz karların üstünde çocuklar koşturup duruyordu.
+
+# --- Sağlık / ekonomi / spor / teknoloji ---
+Doktor, hastanın tansiyonunu ölçtükten sonra ilaçlarını yeniden düzenledi.
+Borsada hisseler bu hafta değer kaybetti, yatırımcılar oldukça tedirgin.
+Kaleci son dakikada penaltıyı kurtarınca bütün tribünler ayağa kalktı.
+Yazılımcılar uygulamadaki hatayı bulup kısa sürede düzeltmeyi başardılar.
+
+# --- Günlük / duygu ---
+Annem telefonda ağlamaya başlayınca ben de kendimi tutamadım.
+Akşam yemeğinde ne pişireceğimi hâlâ kara kara düşünüyorum.
+Tatilde denize girdik, kumda voleybol oynadık, akşamları balık yedik.

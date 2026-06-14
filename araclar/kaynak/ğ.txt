@@ -1,0 +1,2 @@
+# ğ harfi — Türkçe'de hiçbir kelime 'ğ' (yumuşak g) ile başlamaz.
+# Bu faz kasıtlı olarak boştur; ğ.json = {} üretir. Sahte kelime uydurulmaz.

@@ -1,0 +1,14 @@
+{
+  "ben":    { "tokens": ["ben"],        "tür": "zamir", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null },
+  "biz":    { "tokens": ["biz"],        "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null },
+  "bun":    { "tokens": ["bun"],        "tür": "zamir", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null },
+  "kim":    { "tokens": ["kim"],        "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null },
+  "on":     { "tokens": ["on"],         "tür": "zamir", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null },
+  "sen":    { "tokens": ["sen"],        "tür": "zamir", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null },
+  "siz":    { "tokens": ["siz"],        "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null },
+  "şun":    { "tokens": ["şun"],        "tür": "zamir", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null },
+  "nere":   { "tokens": ["ne", "re"],   "tür": "zamir", "son_ünlü": "e", "son_ses": "ünlü",  "değişim": null },
+  "kimse":  { "tokens": ["kim", "se"],  "tür": "zamir", "son_ünlü": "e", "son_ses": "ünlü",  "değişim": null },
+  "herkes": { "tokens": ["her", "kes"], "tür": "zamir", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null },
+  "kendi":  { "tokens": ["ken", "di"],  "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null }
+}

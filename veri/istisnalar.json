@@ -1,0 +1,1665 @@
+{
+  "istisnalar": {
+    "su": {
+      "tokens": [
+        "su"
+      ],
+      "not": "tek hece, bölünmez"
+    },
+    "ne": {
+      "tokens": [
+        "ne"
+      ],
+      "not": "soru zamiri"
+    },
+    "bu": {
+      "tokens": [
+        "bu"
+      ],
+      "not": "işaret zamiri"
+    },
+    "şu": {
+      "tokens": [
+        "şu"
+      ],
+      "not": "işaret zamiri"
+    },
+    "o": {
+      "tokens": [
+        "o"
+      ],
+      "not": "tek karakter / işaret-kişi zamiri"
+    },
+    "ve": {
+      "tokens": [
+        "ve"
+      ],
+      "not": "bağlaç"
+    },
+    "ile": {
+      "tokens": [
+        "ile"
+      ],
+      "not": "bağlaç / edat"
+    }
+  },
+  "zamir": {
+    "bana": {
+      "tokens": [
+        "ban",
+        "a"
+      ],
+      "not": "suppletif datif: ben→ban (bene değil)"
+    },
+    "sana": {
+      "tokens": [
+        "san",
+        "a"
+      ],
+      "not": "suppletif datif: sen→san (sene değil)"
+    }
+  },
+  "bağlaç": {
+    "ama": {
+      "tokens": [
+        "ama"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "fakat": {
+      "tokens": [
+        "fakat"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "çünkü": {
+      "tokens": [
+        "çünkü"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "veya": {
+      "tokens": [
+        "veya"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "yani": {
+      "tokens": [
+        "yani"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "ki": {
+      "tokens": [
+        "ki"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "eğer": {
+      "tokens": [
+        "eğer"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "ancak": {
+      "tokens": [
+        "ancak"
+      ],
+      "not": "değişmez bağlaç / belirteç"
+    },
+    "hem": {
+      "tokens": [
+        "hem"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "oysa": {
+      "tokens": [
+        "oysa"
+      ],
+      "not": "değişmez bağlaç"
+    },
+    "ise": {
+      "tokens": [
+        "ise"
+      ],
+      "not": "serbest koşul koşacı / '-e gelince' (yalın)"
+    },
+    "bre": {
+      "tokens": [
+        "bre"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ha": {
+      "tokens": [
+        "ha"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ya": {
+      "tokens": [
+        "ya"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "amma": {
+      "tokens": [
+        "amma"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "bilfarz": {
+      "tokens": [
+        "bilfarz"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "dahi": {
+      "tokens": [
+        "dahi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "gelgelelim": {
+      "tokens": [
+        "gelgelelim"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hele": {
+      "tokens": [
+        "hele"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hâlbuki": {
+      "tokens": [
+        "hâlbuki"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ila": {
+      "tokens": [
+        "ila"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "lakin": {
+      "tokens": [
+        "lakin"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "madem": {
+      "tokens": [
+        "madem"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "mademki": {
+      "tokens": [
+        "mademki"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "mesela": {
+      "tokens": [
+        "mesela"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "meğerki": {
+      "tokens": [
+        "meğerki"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "meğerse": {
+      "tokens": [
+        "meğerse"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "oysaki": {
+      "tokens": [
+        "oysaki"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "velakin": {
+      "tokens": [
+        "velakin"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "veyahut": {
+      "tokens": [
+        "veyahut"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yahut": {
+      "tokens": [
+        "yahut"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "zira": {
+      "tokens": [
+        "zira"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "örneğin": {
+      "tokens": [
+        "örneğin"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "şayet": {
+      "tokens": [
+        "şayet"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "meğersem": {
+      "tokens": [
+        "meğersem"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "da": {
+      "tokens": [
+        "da"
+      ],
+      "not": "bağlaç klitik (de/da)"
+    }
+  },
+  "edat": {
+    "gibi": {
+      "tokens": [
+        "gibi"
+      ],
+      "not": "değişmez edat"
+    },
+    "için": {
+      "tokens": [
+        "için"
+      ],
+      "not": "değişmez edat"
+    },
+    "kadar": {
+      "tokens": [
+        "kadar"
+      ],
+      "not": "değişmez edat"
+    },
+    "göre": {
+      "tokens": [
+        "göre"
+      ],
+      "not": "değişmez edat"
+    },
+    "rağmen": {
+      "tokens": [
+        "rağmen"
+      ],
+      "not": "değişmez edat"
+    },
+    "dolayı": {
+      "tokens": [
+        "dolayı"
+      ],
+      "not": "değişmez edat (-dan dolayı)"
+    },
+    "ait": {
+      "tokens": [
+        "ait"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "bakarak": {
+      "tokens": [
+        "bakarak"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "bakımından": {
+      "tokens": [
+        "bakımından"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "binaen": {
+      "tokens": [
+        "binaen"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "cihetiyle": {
+      "tokens": [
+        "cihetiyle"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "dair": {
+      "tokens": [
+        "dair"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "denli": {
+      "tokens": [
+        "denli"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "değgin": {
+      "tokens": [
+        "değgin"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "diye": {
+      "tokens": [
+        "diye"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hakkında": {
+      "tokens": [
+        "hakkında"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hasebiyle": {
+      "tokens": [
+        "hasebiyle"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ilişkin": {
+      "tokens": [
+        "ilişkin"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "imişçesine": {
+      "tokens": [
+        "imişçesine"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "itibaren": {
+      "tokens": [
+        "itibaren"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "kadarınca": {
+      "tokens": [
+        "kadarınca"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "karşın": {
+      "tokens": [
+        "karşın"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "kelli": {
+      "tokens": [
+        "kelli"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "maada": {
+      "tokens": [
+        "maada"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "merbut": {
+      "tokens": [
+        "merbut"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "mukabil": {
+      "tokens": [
+        "mukabil"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "müteallik": {
+      "tokens": [
+        "müteallik"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "nazaran": {
+      "tokens": [
+        "nazaran"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "naşi": {
+      "tokens": [
+        "naşi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "nedeniyle": {
+      "tokens": [
+        "nedeniyle"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "nispetle": {
+      "tokens": [
+        "nispetle"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "sebebiyle": {
+      "tokens": [
+        "sebebiyle"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "suretiyle": {
+      "tokens": [
+        "suretiyle"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yüzünden": {
+      "tokens": [
+        "yüzünden"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ötürü": {
+      "tokens": [
+        "ötürü"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "üzere": {
+      "tokens": [
+        "üzere"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "üzre": {
+      "tokens": [
+        "üzre"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    }
+  },
+  "belirteç": {
+    "dünkü": {
+      "tokens": [
+        "dün",
+        "kü"
+      ],
+      "not": "-ki'nin düzensiz -kü biçimi (dün+kü)"
+    },
+    "bugünkü": {
+      "tokens": [
+        "bu",
+        "gün",
+        "kü"
+      ],
+      "not": "-ki düzensiz -kü (bugün+kü)"
+    },
+    "daha": {
+      "tokens": [
+        "daha"
+      ],
+      "not": "değişmez belirteç"
+    },
+    "hiç": {
+      "tokens": [
+        "hiç"
+      ],
+      "not": "değişmez belirteç"
+    },
+    "her": {
+      "tokens": [
+        "her"
+      ],
+      "not": "değişmez belgisiz sıfat"
+    },
+    "sadece": {
+      "tokens": [
+        "sadece"
+      ],
+      "not": "değişmez belirteç"
+    },
+    "hâlâ": {
+      "tokens": [
+        "hâlâ"
+      ],
+      "not": "değişmez belirteç"
+    },
+    "belki": {
+      "tokens": [
+        "belki"
+      ],
+      "not": "değişmez belirteç"
+    },
+    "galiba": {
+      "tokens": [
+        "galiba"
+      ],
+      "not": "değişmez belirteç"
+    },
+    "hepsi": {
+      "tokens": [
+        "hep",
+        "si"
+      ],
+      "not": "düzensiz: hep+si (ünsüz sonrası s)"
+    },
+    "hiçbir": {
+      "tokens": [
+        "hiç",
+        "bir"
+      ],
+      "not": "işlev bileşik (hiç+bir)"
+    },
+    "birçok": {
+      "tokens": [
+        "birçok"
+      ],
+      "not": "belgisiz/nicelik işlev sözcüğü"
+    },
+    "birkaç": {
+      "tokens": [
+        "birkaç"
+      ],
+      "not": "belgisiz/nicelik işlev sözcüğü"
+    },
+    "çoğu": {
+      "tokens": [
+        "çoğu"
+      ],
+      "not": "belgisiz/nicelik işlev sözcüğü"
+    },
+    "herhangi": {
+      "tokens": [
+        "herhangi"
+      ],
+      "not": "belgisiz/nicelik işlev sözcüğü"
+    }
+  },
+  "ünlem": {
+    "hayır": {
+      "tokens": [
+        "hayır"
+      ],
+      "not": "ünlem / olumsuz yanıt"
+    },
+    "peki": {
+      "tokens": [
+        "peki"
+      ],
+      "not": "ünlem / onay"
+    },
+    "tamam": {
+      "tokens": [
+        "tamam"
+      ],
+      "not": "ünlem / onay"
+    },
+    "be": {
+      "tokens": [
+        "be"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ce": {
+      "tokens": [
+        "ce"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "cık": {
+      "tokens": [
+        "cık"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "cıs": {
+      "tokens": [
+        "cıs"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "dah": {
+      "tokens": [
+        "dah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "deh": {
+      "tokens": [
+        "deh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "eh": {
+      "tokens": [
+        "eh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ey": {
+      "tokens": [
+        "ey"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hah": {
+      "tokens": [
+        "hah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hay": {
+      "tokens": [
+        "hay"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "he": {
+      "tokens": [
+        "he"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hey": {
+      "tokens": [
+        "hey"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hiş": {
+      "tokens": [
+        "hiş"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hişt": {
+      "tokens": [
+        "hişt"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hop": {
+      "tokens": [
+        "hop"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hu": {
+      "tokens": [
+        "hu"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "höst": {
+      "tokens": [
+        "höst"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "höt": {
+      "tokens": [
+        "höt"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hınk": {
+      "tokens": [
+        "hınk"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "kâfi": {
+      "tokens": [
+        "kâfi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "lan": {
+      "tokens": [
+        "lan"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "nah": {
+      "tokens": [
+        "nah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "of": {
+      "tokens": [
+        "of"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "oh": {
+      "tokens": [
+        "oh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "peh": {
+      "tokens": [
+        "peh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "pes": {
+      "tokens": [
+        "pes"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "pöf": {
+      "tokens": [
+        "pöf"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "tu": {
+      "tokens": [
+        "tu"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "tuh": {
+      "tokens": [
+        "tuh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "tös": {
+      "tokens": [
+        "tös"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "tüh": {
+      "tokens": [
+        "tüh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "uf": {
+      "tokens": [
+        "uf"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "vah": {
+      "tokens": [
+        "vah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "vay": {
+      "tokens": [
+        "vay"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yo": {
+      "tokens": [
+        "yo"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yuf": {
+      "tokens": [
+        "yuf"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yuh": {
+      "tokens": [
+        "yuh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "âmin": {
+      "tokens": [
+        "âmin"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "âşık": {
+      "tokens": [
+        "âşık"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "çüş": {
+      "tokens": [
+        "çüş"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "öf": {
+      "tokens": [
+        "öf"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "üf": {
+      "tokens": [
+        "üf"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "abe": {
+      "tokens": [
+        "abe"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "abo": {
+      "tokens": [
+        "abo"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "abosa": {
+      "tokens": [
+        "abosa"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "abu": {
+      "tokens": [
+        "abu"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "acayip": {
+      "tokens": [
+        "acayip"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "agucuk": {
+      "tokens": [
+        "agucuk"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "aha": {
+      "tokens": [
+        "aha"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ahacık": {
+      "tokens": [
+        "ahacık"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "aklımda": {
+      "tokens": [
+        "aklımda"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "aleykümselam": {
+      "tokens": [
+        "aleykümselam"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "alimallah": {
+      "tokens": [
+        "alimallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "alo": {
+      "tokens": [
+        "alo"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "aman": {
+      "tokens": [
+        "aman"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "amanın": {
+      "tokens": [
+        "amanın"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "amenna": {
+      "tokens": [
+        "amenna"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "aport": {
+      "tokens": [
+        "aport"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ayol": {
+      "tokens": [
+        "ayol"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "azizim": {
+      "tokens": [
+        "azizim"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "bakındı": {
+      "tokens": [
+        "bakındı"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "başüstüne": {
+      "tokens": [
+        "başüstüne"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "behey": {
+      "tokens": [
+        "behey"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "beli": {
+      "tokens": [
+        "beli"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "billahi": {
+      "tokens": [
+        "billahi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "bravo": {
+      "tokens": [
+        "bravo"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "cancağızım": {
+      "tokens": [
+        "cancağızım"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "canlar": {
+      "tokens": [
+        "canlar"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "dandini": {
+      "tokens": [
+        "dandini"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "desturun": {
+      "tokens": [
+        "desturun"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "dürzü": {
+      "tokens": [
+        "dürzü"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "efendim": {
+      "tokens": [
+        "efendim"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "efsus": {
+      "tokens": [
+        "efsus"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "elaman": {
+      "tokens": [
+        "elaman"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "elhamdülillah": {
+      "tokens": [
+        "elhamdülillah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "elveda": {
+      "tokens": [
+        "elveda"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "estağfurullah": {
+      "tokens": [
+        "estağfurullah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "eyvah": {
+      "tokens": [
+        "eyvah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "fertik": {
+      "tokens": [
+        "fertik"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "fesüphanallah": {
+      "tokens": [
+        "fesüphanallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "gidi": {
+      "tokens": [
+        "gidi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "günaydın": {
+      "tokens": [
+        "günaydın"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "güzelim": {
+      "tokens": [
+        "güzelim"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hadi": {
+      "tokens": [
+        "hadi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hadisene": {
+      "tokens": [
+        "hadisene"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hafazanallah": {
+      "tokens": [
+        "hafazanallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hamdolsun": {
+      "tokens": [
+        "hamdolsun"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "harika": {
+      "tokens": [
+        "harika"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hasbünallah": {
+      "tokens": [
+        "hasbünallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "haydin": {
+      "tokens": [
+        "haydin"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "haydindi": {
+      "tokens": [
+        "haydindi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "haydisene": {
+      "tokens": [
+        "haydisene"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hayfa": {
+      "tokens": [
+        "hayfa"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hayhay": {
+      "tokens": [
+        "hayhay"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hayrola": {
+      "tokens": [
+        "hayrola"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "haşa": {
+      "tokens": [
+        "haşa"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "heyhat": {
+      "tokens": [
+        "heyhat"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "hurra": {
+      "tokens": [
+        "hurra"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "illallah": {
+      "tokens": [
+        "illallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "inşallah": {
+      "tokens": [
+        "inşallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "işte": {
+      "tokens": [
+        "işte"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "kahrolsun": {
+      "tokens": [
+        "kahrolsun"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "kapiş": {
+      "tokens": [
+        "kapiş"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "keka": {
+      "tokens": [
+        "keka"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "kelalaka": {
+      "tokens": [
+        "kelalaka"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "keşke": {
+      "tokens": [
+        "keşke"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "keşkem": {
+      "tokens": [
+        "keşkem"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "keşki": {
+      "tokens": [
+        "keşki"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "kuruyasıca": {
+      "tokens": [
+        "kuruyasıca"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "köftehor": {
+      "tokens": [
+        "köftehor"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "lahavle": {
+      "tokens": [
+        "lahavle"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "lava": {
+      "tokens": [
+        "lava"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "lebbeyk": {
+      "tokens": [
+        "lebbeyk"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "maazallah": {
+      "tokens": [
+        "maazallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "manyak": {
+      "tokens": [
+        "manyak"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "minnoş": {
+      "tokens": [
+        "minnoş"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "monşer": {
+      "tokens": [
+        "monşer"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "neuzübillah": {
+      "tokens": [
+        "neuzübillah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "nuruaynım": {
+      "tokens": [
+        "nuruaynım"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "nurudidem": {
+      "tokens": [
+        "nurudidem"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "nuruçeşmim": {
+      "tokens": [
+        "nuruçeşmim"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "oha": {
+      "tokens": [
+        "oha"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "olamaz": {
+      "tokens": [
+        "olamaz"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "oldu": {
+      "tokens": [
+        "oldu"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ole": {
+      "tokens": [
+        "ole"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "oley": {
+      "tokens": [
+        "oley"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "pehpeh": {
+      "tokens": [
+        "pehpeh"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "pışık": {
+      "tokens": [
+        "pışık"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "selamünaleyküm": {
+      "tokens": [
+        "selamünaleyküm"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "süphanallah": {
+      "tokens": [
+        "süphanallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "tallahi": {
+      "tokens": [
+        "tallahi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "tünaydın": {
+      "tokens": [
+        "tünaydın"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "ulan": {
+      "tokens": [
+        "ulan"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "valla": {
+      "tokens": [
+        "valla"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "vallaha": {
+      "tokens": [
+        "vallaha"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "vallahi": {
+      "tokens": [
+        "vallahi"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "varda": {
+      "tokens": [
+        "varda"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "vesselam": {
+      "tokens": [
+        "vesselam"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "voyvo": {
+      "tokens": [
+        "voyvo"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yahey": {
+      "tokens": [
+        "yahey"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yahu": {
+      "tokens": [
+        "yahu"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yallah": {
+      "tokens": [
+        "yallah"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yaşasın": {
+      "tokens": [
+        "yaşasın"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yeter": {
+      "tokens": [
+        "yeter"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yuha": {
+      "tokens": [
+        "yuha"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "yısa": {
+      "tokens": [
+        "yısa"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "şükrolsun": {
+      "tokens": [
+        "şükrolsun"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    },
+    "paf": {
+      "tokens": [
+        "paf"
+      ],
+      "not": "TDK 12.baskı değişmez işlev sözcüğü"
+    }
+  },
+  "yabancı": {
+    "internet": {
+      "tokens": [
+        "internet"
+      ],
+      "not": "bütün tut"
+    },
+    "smartphone": {
+      "tokens": [
+        "smartphone"
+      ],
+      "not": "bütün tut"
+    }
+  },
+  "kısaltma": {
+    "km": {
+      "tokens": [
+        "km"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "kg": {
+      "tokens": [
+        "kg"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "cm": {
+      "tokens": [
+        "cm"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "mm": {
+      "tokens": [
+        "mm"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "gr": {
+      "tokens": [
+        "gr"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "lt": {
+      "tokens": [
+        "lt"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "ml": {
+      "tokens": [
+        "ml"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "tl": {
+      "tokens": [
+        "tl"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "vb": {
+      "tokens": [
+        "vb"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "vs": {
+      "tokens": [
+        "vs"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "vd": {
+      "tokens": [
+        "vd"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "dk": {
+      "tokens": [
+        "dk"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "sn": {
+      "tokens": [
+        "sn"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "dr": {
+      "tokens": [
+        "dr"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "prof": {
+      "tokens": [
+        "prof"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "doç": {
+      "tokens": [
+        "doç"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "cad": {
+      "tokens": [
+        "cad"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "tc": {
+      "tokens": [
+        "tc"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "abd": {
+      "tokens": [
+        "abd"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "vol": {
+      "tokens": [
+        "vol"
+      ],
+      "not": "yaygın kısaltma"
+    },
+    "hz": {
+      "tokens": [
+        "hz"
+      ],
+      "not": "yaygın kısaltma"
+    }
+  },
+  "ekfiil": {
+    "idi": {
+      "tokens": [
+        "idi"
+      ],
+      "not": "ayrık ek-fiil (imek) biçimi"
+    },
+    "iken": {
+      "tokens": [
+        "iken"
+      ],
+      "not": "ayrık ek-fiil (imek) biçimi"
+    }
+  }
+}
