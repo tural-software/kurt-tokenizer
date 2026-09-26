@@ -75,11 +75,17 @@ def en_iyi_çözüm(çözümler, kökler, ekler):
     biçimler kök değildir (X-ebilme #6-ihlalleri temizlendi) → yalnız LEKSİK eşsesli (deneyim/
     gelecek/açacak/yedi/gelir) etkilenir; bileşimsel biçimler (geleceğim=gel+ecek+im) kök
     DEĞİL → etkilenmez. Parçalanma-berabere eşsesli (baksın) bu bonusla çözülmez (ikisi de
-    ek alır) → 'en uzun kök' politikası karar verir (belgeli sınır)."""
+    ek alır) → 'en uzun kök' politikası karar verir (belgeli sınır).
+
+    SON KIRICI (tam sıra): politika eşit bıraktığında token dizisi → kök → ek adları sözlük
+    sırası. Olmazsa seçim çözümlerin SIRASINA, o da PYTHONHASHSEED'e bağlı kalır (paralel
+    hatta işçiden işçiye farklı çıktı). Örn. resmin: resim+tamlayan [re,sm,in] ile
+    resmi+iyelik_2tekil [res,mi,n] tüm ölçütlerde berabere → [re,sm,in]."""
     return min(
         çözümler,
         key=lambda ç: (0 if not ç.ekler else 1, len(ç.tokens),
-                       _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök)),
+                       _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök),
+                       tuple(ç.tokens), ç.kök, tuple(ç.ekler)),
     )
 
 
