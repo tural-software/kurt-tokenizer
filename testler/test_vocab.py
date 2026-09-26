@@ -111,6 +111,26 @@ class VocabTest(unittest.TestCase):
             self.assertFalse(bayt & set(ids), metin)
             self.assertEqual(self.v.decode_ids(ids), metin, metin)
 
+    def test_faz3b_bilim_ve_büyük_harf(self):
+        # bilim sembolleri tek token; karışık yazımlı kelimede büyük harf bayta düşmez (kΩ)
+        from tokenizer.vocab import EK_BÖLÜMLER
+        b = dict(EK_BÖLÜMLER)
+        self.assertEqual((len(b["sembol-bilim"]), len(b["harf-buyuk"])), (50, 118))
+        for c in b["sembol-bilim"]:
+            ids = self.v.encode_ids(c, self.k, self.e, self.i)
+            self.assertEqual([self.v.id2tok[x] for x in ids], [c], f"U+{ord(c):04X}")
+        bayt = {self.v.tok2id[t] for t in self.v.id2tok if t.startswith("<0x")}
+        for c in b["harf-buyuk"]:                       # karışık biçim: küçük + BÜYÜK
+            metin = "k" + c
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i)
+            self.assertFalse(bayt & set(ids), metin)
+            self.assertEqual(self.v.decode_ids(ids), metin, metin)
+        for metin in ["10 kΩ direnç", "∀x ∈ ℝ, ⌊x⌋ ≤ x ∴ ispat ∎", "N₂ + 3H₂ ⇌ 2NH₃",
+                      "E = ℏω ve 𝔼[X]", "BAKI ŞƏHƏRİ ve ŞəHəR", "Москва ҚАЗАҚ"]:
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i)
+            self.assertFalse(bayt & set(ids), metin)
+            self.assertEqual(self.v.decode_ids(ids), metin, metin)
+
     def test_harfiyen_boşluk_işareti(self):
         # metindeki HARFİYEN '▁' (U+2581) boşluk tokenıyla karışmaz → bayt kaçışı, geri '▁'
         for metin in ["▁", "a▁b", "SentencePiece ▁ işareti"]:

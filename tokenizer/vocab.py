@@ -64,6 +64,24 @@ _ARAP = ("ابتثجحخدذرزسشصضطظعغفقكلمنهوي"        # 28 
          "ًَُِّْ"  # hareke: üstün, esre, cezm, ötre, şedde, tenvin
          "،؟؛")                                 # Arap virgül, soru, noktalı virgül
 _KİRİL = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" "әғқңөүұһі"   # Rusça + Türk dilleri
+_BİLİM = ("ℏħ∮∯"                                 # fizik: h-bar (ħ ayrıca Arapça transkripsiyon/IPA)
+          "⇌⇀↽⇄⇋"                                # kimya: denge okları
+          "∴∵∎⊢⊨⊤⊻∄"                             # mantık / ispat
+          "∡∢⟂∦⌀"                                # geometri: açı, dik, çap
+          "⋂⋃∖⊊⊋⊄∋∐∬∭"                           # küme / analiz
+          "≃≢≺≻∛∜⌈⌉⌊⌋∣∤"                         # ilişki / işlem: tavan, taban, böler
+          "ℙ𝔼℘ℑℜℵ")                              # olasılık, beklenen değer, özel harfler
+
+
+def _büyük_karşılıklar(küçükler: str) -> list[str]:
+    """Küçük harflerin tek-karakter büyük karşılıkları, ilk görülme sırasıyla, tekrarsız
+    (σ/ς → Σ, μ/µ → Μ tek). Büyüğü olmayanlar (ʿ, birleşen işaret, ß→SS) atlanır."""
+    sonuç: list[str] = []
+    for c in küçükler:
+        b = sesler.türkçe_büyült(c)
+        if len(b) == 1 and b != c and b not in sonuç:
+            sonuç.append(b)
+    return sonuç
 
 # Ek bölümler (ad, tokenlar) — SIRA KALICI; yeni faz yalnız listenin SONUNA bölüm ekler.
 EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
@@ -76,6 +94,13 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     ("sembol", list(_MATEMATİK + _OK + _SİMGE + _KESİR + _PARA + _MADDE + _KUTU + _TİPOGRAFİ)),
     ("arap", list(_ARAP)),
     ("kiril", list(_KİRİL)),
+    # Faz 3b — bilim sembolleri (alan listelerinden; korpus bilimde zayıf → eşik yok).
+    ("sembol-bilim", list(_BİLİM)),
+    # Faz 3b — büyük harf karşılıkları. Tek başına büyük harfi casing işaretçisi taşır (Ω →
+    # <|Bb|> ω), ama KARIŞIK yazımlı kelime bütün-token kalır ve harf harf fallback'lenir:
+    # "kΩ" → k + Ω → Ω vocab'da yoksa bayta düşüyordu. Latin tabanda iki büyüklük zaten var.
+    ("harf-buyuk", _büyük_karşılıklar(_TÜRKOLOJİ + _TÜRK_DİLLERİ + _KÜRTÇE + _AVRUPA + _YUNAN
+                                      + _TİPOGRAFİ + _KİRİL + _BİLİM)),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -87,6 +112,8 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("sembol", 171, "e39b20c04e5a72ee701475751445972ddb7494069140e86434a84c68f3bf8c13"),
     ("arap", 52, "f965cd13d8d9872862df6128392d2934612a54c35a79279c078bc03e1249367c"),
     ("kiril", 42, "2789ca16dd0ff9786dddf236b3bec4b73547c9a7de4e9ce17a4950b943156de4"),
+    ("sembol-bilim", 50, "bd3ec86cba4fa61fd1dece2faa37418823ed3e9961cbe990b837c290117eb7aa"),
+    ("harf-buyuk", 118, "1c163979561e895a9ebdfb23c90fd4f77736ae245336c1f90f0adbd97eb7c97c"),
 ]
 
 
