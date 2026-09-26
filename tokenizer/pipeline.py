@@ -26,6 +26,27 @@ PAD, UNK, BOS, EOS = "<pad>", "<unk>", "<s>", "</s>"
 ÖZEL = {PAD, UNK, BOS, EOS, "<|sistem|>", "<|kullanici|>", "<|asistan|>", "<|bitis|>"}
 BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKETİLİR, atılmaz)
 
+# Bayt tokenları (vocab Faz 2): vocab'da olmayan HER karakter UTF-8 baytlarına iner → hiçbir
+# girdi <unk> üretmez. Tüm 0x00-0xFF (UTF-8'in hiç üretmediği baytlar dahil → tablo tam, basit).
+# encode metinden asla '<0x..>' biçiminde TEK token çıkarmaz (harf-dışı karakterler tek tek
+# tokenlanır) → bayt tokenı her zaman kaçış demektir, metinle karışmaz.
+BAYT_TOKENLARI = [f"<0x{b:02X}>" for b in range(256)]
+_BAYT = {t: b for b, t in enumerate(BAYT_TOKENLARI)}
+
+
+def bayt_tokenları(s: str) -> list[str]:
+    """Metnin UTF-8 bayt tokenları (tek başına vekil/surrogate da çökmez: surrogatepass)."""
+    return [BAYT_TOKENLARI[b] for b in s.encode("utf-8", "surrogatepass")]
+
+
+def _bayt_çöz(baytlar) -> str:
+    """Bayt koşusu → metin. Kodlayıcının ürettiği koşu her zaman çözülür (vekil dahil);
+    geçersiz koşu (ör. model çıktısı) çökmez → U+FFFD."""
+    try:
+        return bytes(baytlar).decode("utf-8", "surrogatepass")
+    except UnicodeDecodeError:
+        return bytes(baytlar).decode("utf-8", "replace")
+
 # Türkçe alfabe + büyük harfler + düzeltme imli ünlüler (â/î/û: hikâye, kâğıt, rüzgâr).
 # Düzeltme imli ünlüler kelimeyi BÖLMEMELİ (aksi halde "hikâye"→hik+â+ye yanlış bölünür);
 # harf sayılır, kelime bütün tutulur (kök eşleşmezse bilinmeyen-bütün, round-trip korunur).
@@ -122,7 +143,8 @@ def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None) 
         önceki_kesme = False                     # bir önceki altbirim kesme ile mi bitti?
         for altbirim, kelime_mi in _altbirimler(parça):
             if not kelime_mi:                    # noktalama: her karakter ayrı token
-                tokenlar.extend(altbirim)
+                for c in altbirim:               # HARFİYEN '▁' boşluk tokenıyla karışmasın → bayt
+                    tokenlar.extend(bayt_tokenları(c) if c == BOŞLUK else c)
                 önceki_kesme = altbirim[-1] in KESME
                 continue
             if önceki_kesme:
@@ -156,10 +178,37 @@ def decode(tokenlar) -> str:
     """Token dizisini metne geri çevirir (özel tokenları atar, ▁→boşluk, casing uygular).
 
     Casing işaretçisi yalnız KENDİNDEN SONRAKİ harf-koşusuna uygulanır; noktalama (ör.
-    kesme) ya da boşluk koşuyu bitirir → "TBMM'de" ALLCAPS yalnız TBMM'ye, 'de eke değil."""
+    kesme) ya da boşluk koşuyu bitirir → "TBMM'de" ALLCAPS yalnız TBMM'ye, 'de eke değil.
+    Koşu sınırı encode'unkiyle AYNI ölçüttür (_HARFLER), isalpha değil: harf-sınıfı dışı bir
+    harf (é, Ω — encode'da harf-dışı altbirim) koşuyu bitirir → "AĞé" "AĞÉ" olmaz.
+
+    Bayt tokenları: ardışık koşu UTF-8 çözülür ve HARFİYEN metin olur (asla boşluk/özel token
+    sayılmaz: metindeki '▁' geri '▁' döner); casing ona da aynı ölçütle uygulanır."""
     sonuç: list[str] = []
     durum = None                                 # bekleyen casing işaretçisi
+    baytlar = bytearray()
+
+    def metin_ekle(t):
+        nonlocal durum
+        for parça, harf_mi in _altbirimler(t):
+            if not harf_mi:                      # noktalama/rakam: casing koşusunu bitir
+                durum = None
+                sonuç.append(parça)
+            elif durum == HEP_BÜYÜK:
+                sonuç.append(sesler.türkçe_büyült(parça))     # koşu boyunca sürer
+            elif durum == BAŞ_BÜYÜK:
+                sonuç.append(sesler.türkçe_başlık(parça)); durum = None   # yalnız ilk token
+            else:
+                sonuç.append(parça)
+
     for t in tokenlar:
+        b = _BAYT.get(t)
+        if b is not None:
+            baytlar.append(b)
+            continue
+        if baytlar:
+            metin_ekle(_bayt_çöz(baytlar))
+            baytlar.clear()
         if t in BÜYÜK:
             durum = t
         elif t == BOŞLUK:
@@ -167,14 +216,8 @@ def decode(tokenlar) -> str:
             durum = None
         elif t in ÖZEL:
             continue
-        elif any(c.isalpha() for c in t):        # harf-içeren token: casing uygula
-            if durum == HEP_BÜYÜK:
-                sonuç.append(sesler.türkçe_büyült(t))     # koşu boyunca sürer
-            elif durum == BAŞ_BÜYÜK:
-                sonuç.append(sesler.türkçe_başlık(t)); durum = None   # yalnız ilk token
-            else:
-                sonuç.append(t)
-        else:                                    # noktalama/rakam: casing koşusunu bitir
-            durum = None
-            sonuç.append(t)
+        else:
+            metin_ekle(t)
+    if baytlar:
+        metin_ekle(_bayt_çöz(baytlar))
     return "".join(sonuç).strip()

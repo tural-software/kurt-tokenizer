@@ -8,10 +8,10 @@ motorun ürettiği token kümesini DETERMİNİSTİK toplayıp dondurur (BPE gibi
   2. ATOMİK taban       tüm harf (iki büyüklük) + â/î/û + rakam + noktalama  (fallback zemini)
   3. HECE/MORFEM        46k kökün tüm heceleri + ek yüzeyleri + tamponlar + istisna tokenları
 
-Bilinmeyen kelime (sabit vocab'da bütün-token OLAMAZ): HECE→HARF fallback ile atomik
-tabana iner (kayıpsız); "bütün tut" felsefesi onay kuyruğunda korunur (kelime yine
-insana sorulur). Truly-novel karakter (emoji vb.) → <unk> (Aşama 0 sınırı, byte-fallback
-sonraki bir madde).
+Bilinmeyen kelime (sabit vocab'da bütün-token OLAMAZ): HECE→HARF→BAYT fallback ile
+atomik tabana iner (kayıpsız); "bütün tut" felsefesi onay kuyruğunda korunur (kelime yine
+insana sorulur). Vocab'da olmayan karakter (ā, Ω, emoji…) UTF-8 bayt tokenlarına iner
+(Faz 2) → encode_ids hiçbir girdi için <unk> üretmez (<unk> ID 1 model uyumu için durur).
 
 SONA-EKLEME SÖZLEŞMESİ: model her tokenı ID'siyle öğrenir → bir ID'nin anlamı ASLA değişmez.
 Vocab bölümlerden oluşur: v1 (yukarıdaki 1-3, Türkçe çekirdek, 4112, DONMUŞ) + EK_BÖLÜMLER
@@ -30,7 +30,8 @@ from tokenizer import sesler
 from tokenizer.alfabe import ALFABE, alfabetik_anahtar
 from tokenizer.hece import hecele
 from tokenizer.birlestir import birleştir
-from tokenizer.pipeline import encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL
+from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
+                                BAYT_TOKENLARI, bayt_tokenları)
 
 # Sabit önek: özel tokenlar (ID 0..) — sıra KALICI olmalı (model bağımlılığı).
 ÖZEL_TOKENLAR = ["<pad>", "<unk>", "<s>", "</s>", "<|sistem|>", "<|kullanici|>",
@@ -43,12 +44,15 @@ RAKAM = list("0123456789")
 EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # Faz 1 — Türkçe alfabede olmayan Latin harfleri (önceden <unk> → metinden SİLİNİYORDU).
     ("harf-qwx", ["q", "w", "x", "Q", "W", "X"]),
+    # Faz 2 — byte-fallback: <0x00>…<0xFF>. Vocab'da olmayan her karakter bunlara iner.
+    ("bayt", BAYT_TOKENLARI),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
 DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("v1", 4112, "fd1aa7a47946a3cf36438c61d293e86b59928662e98e5be97331724b988aa4cd"),
     ("harf-qwx", 6, "4977405745b97c2adebb1a215928b87e2e6cd1d4bb246b4259d60eae040513d1"),
+    ("bayt", 256, "5c7fd0e25b2836efc016d0c39612ba381cf25d6d644baba6aa980505e5962cc0"),
 ]
 
 
@@ -161,18 +165,27 @@ class Vocab:
         self.id2tok = id2tok
         self.tok2id = {t: i for i, t in enumerate(id2tok)}
         self._unk = self.tok2id["<unk>"]
+        self._baytlı = BAYT_TOKENLARI[0] in self.tok2id   # v1 vocab'ında bayt tokenı yok
 
     def __len__(self):
         return len(self.id2tok)
 
     def _fallback(self, kelime: str) -> list[int]:
-        """Bilinmeyen bütün-token → hece, vocab'da yoksa harf, o da yoksa <unk>."""
+        """Bilinmeyen bütün-token → hece, vocab'da yoksa harf, o da yoksa UTF-8 baytları
+        (bayt bölümü olmayan eski vocab'da son çare <unk>)."""
         ids: list[int] = []
         for hece in hecele(kelime):
             if hece in self.tok2id:
                 ids.append(self.tok2id[hece])
-            else:
-                ids.extend(self.tok2id.get(ch, self._unk) for ch in hece)
+                continue
+            for ch in hece:
+                tid = self.tok2id.get(ch)
+                if tid is not None:
+                    ids.append(tid)
+                elif self._baytlı:
+                    ids.extend(self.tok2id[t] for t in bayt_tokenları(ch))
+                else:
+                    ids.append(self._unk)
         return ids
 
     def encode_ids(self, metin, kökler, ekler, istisnalar=None, kuyruk=None,

@@ -74,6 +74,18 @@ class PipelineTest(unittest.TestCase):
                       "max_index(xs)", "Quebec'e gitti"]:
             self.assertEqual(decode(self.enc(metin)), metin, metin)
 
+    def test_casing_koşu_sınırı(self):
+        # koşu sınırı encode'un harf sınıfıyla aynı (isalpha değil): harf-sınıfı dışı harf
+        # (é, Ω) büyük-harf koşusuna katılmaz → "AĞé" "AĞÉ" olmaz
+        for metin in ["AĞé", "TÜRKΩ", "Ağaçé", "é ÇOK"]:
+            self.assertEqual(decode(self.enc(metin)), metin, metin)
+
+    def test_bayt_tokenı(self):
+        from tokenizer.pipeline import bayt_tokenları
+        self.assertEqual(bayt_tokenları("ā"), ["<0xC4>", "<0x81>"])
+        self.assertEqual(decode(["ev", *bayt_tokenları("ā"), "ler"]), "evāler")
+        self.assertEqual(decode(self.enc("a▁b")), "a▁b")          # harfiyen ▁ ≠ boşluk tokenı
+
     def test_zamir_round_trip(self):
         # zamir hibrit: gövde+ek çekimleri ve suppletif istisna uçtan uca kayıpsız
         for metin in ["ben seni gördüm", "bana bunu verdi", "onlar bizden geldi"]:

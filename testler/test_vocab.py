@@ -54,6 +54,49 @@ class VocabTest(unittest.TestCase):
             self.assertNotIn(unk, ids, metin)
             self.assertEqual(self.v.decode_ids(ids), metin, metin)
 
+    def test_bayt_tüm_unicode(self):
+        # Faz 2: boşluk dışındaki HER Unicode karakteri kayıpsız ve <unk>'sız — BMP'nin tamamı +
+        # ek düzlemlerden her 11. kod noktası. (Boşluk korunumu kod kipinin işi: encode split.)
+        unk = self.v.tok2id["<unk>"]
+        kaçan = []
+        for n in [*range(0x10000), *range(0x10000, 0x110000, 11)]:
+            c = chr(n)
+            if 0xD800 <= n <= 0xDFFF or c.isspace():
+                continue
+            ids = self.v.encode_ids(c, self.k, self.e, self.i)
+            if unk in ids or self.v.decode_ids(ids) != c:
+                kaçan.append(f"U+{n:04X}")
+        self.assertEqual(kaçan, [], f"{len(kaçan)} kayıplı karakter, örn. {kaçan[:10]}")
+
+    def test_bayt_vekil_ve_geçersiz_dizi(self):
+        # tek başına vekil (surrogate) çökmez ve geri döner; geçersiz bayt dizisi (ör. model
+        # çıktısı) çökmez → U+FFFD
+        for metin in ["\ud800", "a\udfffb"]:
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i)
+            self.assertEqual(self.v.decode_ids(ids), metin)
+        t = self.v.tok2id
+        self.assertEqual(self.v.decode_ids([t["<0xFF>"]]), "�")
+        self.assertEqual(self.v.decode_ids([t["a"], t["<0xE2>"]]), "a�")   # yarım karakter
+
+    def test_bayt_karışık_metin(self):
+        # harf-sınıfı içi/dışı, çok baytlı, birleşen işaret, casing sınırı karışık rastgele metin
+        unk = self.v.tok2id["<unk>"]
+        havuz = "aAğĞıIiİxXāÑéΩω𝑖€₺±−≤☃😀中عĢ▁́'.,1"
+        rnd = random.Random(11)
+        for _ in range(500):
+            metin = " ".join("".join(rnd.choice(havuz) for _ in range(rnd.randint(1, 7)))
+                             for _ in range(rnd.randint(1, 4)))
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i)
+            self.assertNotIn(unk, ids, metin)
+            self.assertEqual(self.v.decode_ids(ids), metin, metin)
+
+    def test_harfiyen_boşluk_işareti(self):
+        # metindeki HARFİYEN '▁' (U+2581) boşluk tokenıyla karışmaz → bayt kaçışı, geri '▁'
+        for metin in ["▁", "a▁b", "SentencePiece ▁ işareti"]:
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i)
+            self.assertEqual(self.v.decode_ids(ids), metin, metin)
+        self.assertNotIn(self.v.tok2id["▁"], self.v.encode_ids("▁", self.k, self.e, self.i))
+
     def test_çözülen_token_kapsama(self):
         # RESOLVED kelimelerin ürettiği her morfem token vocab'da olmalı (fallback YOK)
         s = yükle_dizin(KÖK_DİZİN)

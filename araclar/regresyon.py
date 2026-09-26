@@ -7,10 +7,12 @@ karşılaştırma belge düzeyindekine eşdeğerdir ve daha keskindir (HANGİ ke
 Kullanım (kurt-tokenizer/ dizininden):
   python -X utf8 -m araclar.regresyon kaydet      <örnek.txt> <referans.json>
   python -X utf8 -m araclar.regresyon karsilastir <örnek.txt> <referans.json> [--hedef KARAKTERLER]
+                                                   [--hedef-kayiplilar]
 
 örnek.txt    satır başına bir belge (normalleştirilmiş metin)
 kaydet       her benzersiz parçanın ID dizisini + kayıplı parça/karakter kümesini yazar
-karsilastir  güncel tokenizer'la aynı ölçümü yapar. KAPILAR (hepsi geçmeli):
+karsilastir  güncel tokenizer'la aynı ölçümü yapar (--hedef-kayiplilar: referanstaki TÜM kayıplı
+             karakterler hedefe eklenir — kayıp gideren fazlar için). KAPILAR (hepsi geçmeli):
   1. değişen her parça --hedef karakterlerinden en az birini içerir
   2. yeni kayıplı parça yok        (kayıplı_sonra ⊆ kayıplı_önce)
   3. yeni kayıplı karakter yok ve --hedef karakterlerinin hiçbiri artık kayıplı değil
@@ -70,10 +72,10 @@ def kaydet(örnek: Path, referans: Path) -> None:
           f"<unk> {ölçüm['unk']:,}, kayıplı karakter {len(ölçüm['kayıplı_karakterler'])}")
 
 
-def karşılaştır(örnek: Path, referans: Path, hedef: str) -> bool:
+def karşılaştır(örnek: Path, referans: Path, hedef: str, kayıplılar: bool = False) -> bool:
     önce = json.loads(referans.read_text(encoding="utf-8"))
     sonra = _ölç(örnek)
-    hedef_k = set(hedef)
+    hedef_k = set(hedef) | (set(önce["kayıplı_karakterler"]) if kayıplılar else set())
     if set(önce["parçalar"]) != set(sonra["parçalar"]):
         print("KIRMIZI: örneklem referansla aynı değil (farklı örnek.txt?)")
         return False
@@ -119,11 +121,13 @@ def main(argv: list[str]) -> int:
     b.add_argument("örnek", type=Path)
     b.add_argument("referans", type=Path)
     b.add_argument("--hedef", default="", help="bu fazda değişmesine izin verilen karakterler")
+    b.add_argument("--hedef-kayiplilar", action="store_true",
+                   help="referanstaki tüm kayıplı karakterleri hedefe ekle")
     ar = ap.parse_args(argv)
     if ar.komut == "kaydet":
         kaydet(ar.örnek, ar.referans)
         return 0
-    return 0 if karşılaştır(ar.örnek, ar.referans, ar.hedef) else 1
+    return 0 if karşılaştır(ar.örnek, ar.referans, ar.hedef, ar.hedef_kayiplilar) else 1
 
 
 if __name__ == "__main__":
