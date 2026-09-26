@@ -32,8 +32,8 @@ from tokenizer.hece import hecele
 from tokenizer.birlestir import birleştir
 from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
-                                BOŞLUK_KOŞULARI)
-from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK
+                                BOŞLUK_KOŞULARI, ASCII_İŞARET)
+from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
 
 # Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
 # yanlış bırakılırsa bölümleri_ekle tekrar hatası verir → liste kendini denetler).
@@ -112,6 +112,11 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # Kod K2 — Python anahtar sözcükleri + çok karakterli operatörler + üçlü tırnak. v1'de Türkçe
     # hece olarak zaten bulunan 10 anahtar sözcük (and/def/if/in/…) AYNI tokenı paylaşır.
     ("kod-python", [t for t in PY_ANAHTAR + PY_İŞLEM + PY_TIRNAK if t not in _PY_V1_ORTAK]),
+    # Kod K3a — tanımlayıcı: ASCII casing işaretçileri (Başlık / HEP) + dunder '__'.
+    ("kod-tanimlayici", list(ASCII_İŞARET) + ["__"]),
+    # Kod K3b — kod sözlüğü (veri/kod_sozlugu.json 'yeni'): stdlib + web/veri-ML/SQL/JS-TS/
+    # sistem/test alan listeleri. Yalnız kod kipinde (kod-* → Vocab._yalnız_kod).
+    ("kod-sozluk", list(KOD_SÖZLÜK_YENİ)),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -127,6 +132,8 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("harf-buyuk", 118, "1c163979561e895a9ebdfb23c90fd4f77736ae245336c1f90f0adbd97eb7c97c"),
     ("kod-bosluk", 18, "710a4e2868cb36798f2302116ce5533c9f9ad7d2ecadbe0dad483bfc1c1eb6b9"),
     ("kod-python", 54, "d794c29ef7654e6994c3b9da0d8847398f6ace4a6db4dc2dc05c493fac747c8d"),
+    ("kod-tanimlayici", 3, "aea3f558a51675552ca961d564536d588d4532b2a631ea6a99d072d804889d96"),
+    ("kod-sozluk", 1511, "109087d4bc0a6ac23e031bc67a40f37c20229ffd16927b8b83b480065fcbae9c"),
 ]
 
 

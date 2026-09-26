@@ -149,6 +149,58 @@ class PythonK2Test(unittest.TestCase):
         # v1'deki ortak heceler (if/in/def) metin kipinde eskisi gibi kullanılır
         self.assertIn(self.v.tok2id["if"], self.v.encode_ids("if", self.k, self.e, self.i))
 
+    def test_tanımlayıcı_böl(self):
+        from tokenizer.kod import tanımlayıcı_böl
+        for ad, beklenen in [("get_item", ["get", "_", "item"]), ("getItem", ["get", "Item"]),
+                             ("HTTPServer", ["HTTP", "Server"]), ("__init__", ["__", "init", "__"]),
+                             ("utf8_decode", ["utf", "8", "_", "decode"]), ("kökBul", ["kök", "Bul"]),
+                             ("MAX_LEN", ["MAX", "_", "LEN"]), ("x", ["x"]), ("_", ["_"]),
+                             ("IOError", ["IO", "Error"]),
+                             ("HTTPserver", ["HTT", "Pserver"])]:   # standart camel kuralı, kayıpsız
+            self.assertEqual(tanımlayıcı_böl(ad), beklenen, ad)
+            self.assertEqual("".join(tanımlayıcı_böl(ad)), ad)
+
+    def test_tanımlayıcı_ascii_casing(self):
+        # ASCII kuralı: Item → <|Ab|> item ('ıtem' DEĞİL); HEP koşusu sonrası küçük parça kapatılır
+        from tokenizer.pipeline import ASCII_BAŞ, ASCII_HEP
+        t = self.py("getItem")
+        self.assertIn(ASCII_BAŞ, t)
+        self.assertNotIn("ı", "".join(t))                   # Türkçe küçültme uygulanmadı
+        self.assertIn(ASCII_HEP, self.py("MAX_LEN"))
+        for kod in ["getItem", "HTTPServer", "MAX_LEN = 1", "IOError", "ÇokDeğer", "ÇOKdeğer",
+                    "xIn", "I", "İ", "ı", "HTTPsDEĞER", "self.__init__()", "Iğdır_İl",
+                    "resp.getHeaderValue('X')", "classes = __all__"]:
+            ids, geri = self.py_gidip_gel(kod)
+            self.assertEqual(geri, kod, kod)
+        # ASCII işaretçileri metin kipinde asla üretilmez
+        metin = encode("getItem HTTPServer İstanbul", self.k, self.e, self.i)
+        self.assertFalse(set(metin) & {ASCII_BAŞ, ASCII_HEP})
+
+    def test_kod_sözlüğü(self):
+        # sözlük kelimesi kodda TEK token; metinde eskisi gibi (kod-* tokenı metne sızmaz)
+        from tokenizer.kod import KOD_SÖZLÜĞÜ, KOD_SÖZLÜK_YENİ
+        self.assertGreater(len(KOD_SÖZLÜĞÜ), 1000)
+        for w in KOD_SÖZLÜĞÜ:
+            self.assertTrue(w.isascii() and w.isalpha() and w == w.lower(), w)
+            self.assertIn(w, self.v.tok2id, w)
+        t = self.py("def get_value(self, request): return self.dataFrame")
+        for w in ["value", "self", "request", "data", "frame"]:
+            self.assertIn(w, t)
+        yalnız = {self.v.tok2id[w] for w in KOD_SÖZLÜK_YENİ}
+        metin = self.v.encode_ids("Bu value ve request değerleri path üzerinden gelir.",
+                                  self.k, self.e, self.i)
+        self.assertFalse(yalnız & set(metin))
+
+    def test_tanımlayıcı_rastgele(self):
+        # decode değişmezi: rastgele karışık-büyüklüklü tanımlayıcılar birebir geri döner
+        rnd = random.Random(5)
+        alfabe = "aeiIıİxXqQzZçÇğĞöÖşŞüÜ_09ÅåΩωß"
+        for _ in range(1500):
+            ad = rnd.choice("aAçÇ_ΩI") + "".join(rnd.choice(alfabe) for _ in range(rnd.randint(0, 12)))
+            kod = f"{ad} = {ad}.{ad}()"
+            _, geri = self.py_gidip_gel(kod)
+            self.assertEqual(geri, kod, repr(kod))
+
     def test_tanımlayıcı_kuyruğa_girmez(self):
         from tokenizer.onay import OnayKuyruğu
         q = OnayKuyruğu()

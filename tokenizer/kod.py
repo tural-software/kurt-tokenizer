@@ -19,7 +19,9 @@ Türler:
 
 from __future__ import annotations
 
+import json
 import re
+from pathlib import Path
 
 # 35 anahtar sözcük (keyword.kwlist) + sık yumuşak anahtar sözcükler (match/case/type; '_' hariç).
 PY_ANAHTAR = ("False", "None", "True", "and", "as", "assert", "async", "await", "break",
@@ -114,3 +116,45 @@ def python_parçala(kod: str):
 
 
 DİLLER = {"python": python_parçala}
+
+# Kod sözlüğü (K3b): tanımlayıcı parçası olarak TEK token olan küçük harfli İngilizce kelime ve
+# yerleşik kısaltmalar (veri/kod_sozlugu.json: stdlib taraması + elle alan listeleri; kullanıcı
+# onaylı). 'yeni' alanı vocab'ın kod-sozluk bölümüdür; geri kalanlar v1 tokenını paylaşır.
+KOD_SÖZLÜK_DOSYASI = Path(__file__).resolve().parent.parent / "veri" / "kod_sozlugu.json"
+_SÖZLÜK = json.loads(KOD_SÖZLÜK_DOSYASI.read_text(encoding="utf-8"))
+KOD_SÖZLÜĞÜ: frozenset[str] = frozenset(w for g in _SÖZLÜK["gruplar"].values() for w in g)
+KOD_SÖZLÜK_YENİ: list[str] = list(_SÖZLÜK["yeni"])
+
+
+def _büyük(c: str) -> bool:
+    return c.isupper() or c.istitle()
+
+
+def tanımlayıcı_böl(ad: str) -> list[str]:
+    """Tanımlayıcıyı parçalar (K3); birleşim == ad. '_' koşuları, rakam koşuları ve harf
+    koşularının camelCase parçaları ayrı:
+      get_item → get _ item      getItem → get Item      HTTPServer → HTTP Server
+      __init__ → __ init __      utf8_decode → utf 8 _ decode      kökBul → kök Bul
+    camelCase sınırı: küçük→Büyük (getItem) ve BÜYÜK→Büyük+küçük (HTTPServer: P|S)."""
+    parçalar: list[str] = []
+    i, n = 0, len(ad)
+    while i < n:
+        c = ad[i]
+        j = i + 1
+        if c == "_":
+            while j < n and ad[j] == "_":
+                j += 1
+        elif c.isdigit():
+            while j < n and ad[j].isdigit():
+                j += 1
+        else:
+            while j < n and ad[j] != "_" and not ad[j].isdigit():
+                ö, s = ad[j - 1], ad[j]
+                if _büyük(s) and not _büyük(ö):                      # getItem: t|I
+                    break
+                if (_büyük(ö) and _büyük(s) and j + 1 < n and ad[j + 1].islower()):
+                    break                                            # HTTPServer: P|S
+                j += 1
+        parçalar.append(ad[i:j])
+        i = j
+    return parçalar
