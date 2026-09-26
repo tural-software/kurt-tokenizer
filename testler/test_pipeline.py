@@ -62,6 +62,18 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.enc("TÜRK")[0], HEP_BÜYÜK)
         self.assertEqual(self.enc("iPhone"), ["iPhone"])    # karışık → bütün-token
 
+    def test_qwx_harf(self):
+        # q/w/x harf sayılır (kelimeyi bölmez); kök/ek/istisnada yok → bilinmeyen-BÜTÜN kalır
+        from tokenizer.pipeline import BAŞ_BÜYÜK, HEP_BÜYÜK
+        self.assertEqual(self.enc("taxi"), ["taxi"])
+        self.assertEqual(self.enc("index"), ["index"])       # eskiden inde + x (x siliniyordu)
+        self.assertEqual(self.enc("max_index"), ["max", "_", "index"])
+        self.assertEqual(self.enc("Windows"), [BAŞ_BÜYÜK, "windows"])
+        self.assertEqual(self.enc("XIV"), [HEP_BÜYÜK, "xıv"])
+        for metin in ["Windows ve WhatsApp'ta", "x=5 ise QWERTY", "XIV. yüzyıl",
+                      "max_index(xs)", "Quebec'e gitti"]:
+            self.assertEqual(decode(self.enc(metin)), metin, metin)
+
     def test_zamir_round_trip(self):
         # zamir hibrit: gövde+ek çekimleri ve suppletif istisna uçtan uca kayıpsız
         for metin in ["ben seni gördüm", "bana bunu verdi", "onlar bizden geldi"]:

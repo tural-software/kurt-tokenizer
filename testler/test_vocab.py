@@ -46,6 +46,14 @@ class VocabTest(unittest.TestCase):
             self.assertTrue(all(isinstance(x, int) for x in ids))
             self.assertEqual(self.v.decode_ids(ids), metin, metin)
 
+    def test_qwx_kayıpsız(self):
+        # Faz 1: q/w/x atomik (önceden <unk> → metinden siliniyordu)
+        unk = self.v.tok2id["<unk>"]
+        for metin in ["Windows'ta x ve y", "max_index(xs) QWERTY", "XIV. yüzyılda Quebec"]:
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i)
+            self.assertNotIn(unk, ids, metin)
+            self.assertEqual(self.v.decode_ids(ids), metin, metin)
+
     def test_çözülen_token_kapsama(self):
         # RESOLVED kelimelerin ürettiği her morfem token vocab'da olmalı (fallback YOK)
         s = yükle_dizin(KÖK_DİZİN)

@@ -29,7 +29,11 @@ BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKE
 # Türkçe alfabe + büyük harfler + düzeltme imli ünlüler (â/î/û: hikâye, kâğıt, rüzgâr).
 # Düzeltme imli ünlüler kelimeyi BÖLMEMELİ (aksi halde "hikâye"→hik+â+ye yanlış bölünür);
 # harf sayılır, kelime bütün tutulur (kök eşleşmezse bilinmeyen-bütün, round-trip korunur).
-_HARFLER = set(alfabe.ALFABE) | set("ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ") | set("âîûÂÎÛ")
+# q/w/x (vocab Faz 1): Türkçe alfabede yok ama Latin metinde yaygın (Windows, XIV, max_index);
+# harf sayılır → kelimeyi bölmez. Hiçbir kök/ek/istisna q/w/x içermez → bu harfi taşıyan
+# kelime motorca parçalanamaz: bilinmeyen-BÜTÜN (onay kuyruğu), vocab'da hece→harf fallback.
+_HARFLER = (set(alfabe.ALFABE) | set("ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ") | set("âîûÂÎÛ")
+            | set("qwxQWX"))
 
 
 def _harf_durumu(kelime, küçük):

@@ -40,11 +40,15 @@ NOKTALAMA = list(".,;:!?'\"`()[]{}<>-–—/\\|@#$%&*+=~^_°²³…’‘“”�
 RAKAM = list("0123456789")
 
 # Ek bölümler (ad, tokenlar) — SIRA KALICI; yeni faz yalnız listenin SONUNA bölüm ekler.
-EK_BÖLÜMLER: list[tuple[str, list[str]]] = []
+EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
+    # Faz 1 — Türkçe alfabede olmayan Latin harfleri (önceden <unk> → metinden SİLİNİYORDU).
+    ("harf-qwx", ["q", "w", "x", "Q", "W", "X"]),
+]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
 DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("v1", 4112, "fd1aa7a47946a3cf36438c61d293e86b59928662e98e5be97331724b988aa4cd"),
+    ("harf-qwx", 6, "4977405745b97c2adebb1a215928b87e2e6cd1d4bb246b4259d60eae040513d1"),
 ]
 
 
