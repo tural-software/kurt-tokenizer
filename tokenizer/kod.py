@@ -10,7 +10,7 @@ Türler:
   boşluk    boşluk koşusu (satır sonu/girinti)
   metin     yorum (# dahil) ve string İÇERİĞİ → Türkçe metin hattı
   tırnak    string sınırı: ' " ''' \"\"\"
-  önek      string öneki: r b u f rb br fr rf (büyük/küçük)
+  önek      string öneki: r b u f t rb br fr rf tr rt (büyük/küçük)
   anahtar   anahtar sözcük (PY_ANAHTAR)
   işlem     operatör/noktalama (çok karakterli PY_İŞLEM en uzun eşleşme; yoksa tek karakter)
   ad        tanımlayıcı (Unicode dahil: değer, kök_bul)
@@ -38,9 +38,13 @@ PY_İŞLEM = ("**=", "//=", ">>=", "<<=", "...",
 PY_TIRNAK = ('"""', "'''")                      # tek tırnaklar (' ") atomik tabanda
 
 _BOŞLUK = re.compile(r"\s+")
-_DİZE_BAŞI = re.compile(r"""(?i)(rb|br|fr|rf|b|r|u|f)?('''|\"\"\"|'|")""")
+# Önekler: bytes/raw/unicode/f-string + Python 3.14 t-string (şablon: t, tr, rt).
+_DİZE_BAŞI = re.compile(r"""(?i)(rb|br|fr|rf|tr|rt|b|r|u|f|t)?('''|\"\"\"|'|")""")
 _AD = re.compile(r"[^\W\d]\w*")
-_SAYI = re.compile(r"\d\w*(?:\.\d*\w*)?")
+# Python sayı dilbilgisi (K4: tokenize ile karşılaştırmada .05 ve 1e-6 bölünüyordu): hex/oct/bin,
+# ondalık (baştaki nokta dahil: .5), üs (işaretli: 1e-6), sanal (3j), alt çizgi (1_000).
+_SAYI = re.compile(r"0[xX][\da-fA-F_]+|0[oO][0-7_]+|0[bB][01_]+"
+                   r"|(?:\d[\d_]*(?:\.[\d_]*)?|\.\d[\d_]*)(?:[eE][+-]?\d[\d_]*)?[jJ]?")
 _İŞLEM_UZUNLUK = sorted({len(o) for o in PY_İŞLEM}, reverse=True)
 _İŞLEM = frozenset(PY_İŞLEM)
 

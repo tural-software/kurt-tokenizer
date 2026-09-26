@@ -176,6 +176,24 @@ class PythonK2Test(unittest.TestCase):
         metin = encode("getItem HTTPServer İstanbul", self.k, self.e, self.i)
         self.assertFalse(set(metin) & {ASCII_BAŞ, ASCII_HEP})
 
+    def test_sayı_ve_t_string_sınırları(self):
+        # K4 bulgusu: .05 / 1e-6 bölünüyordu; t-string öneki (3.14) tanınmıyordu
+        from tokenizer.kod import python_parçala
+        for kod, sayılar in [("x = .05 + 1e-6 - 3.14j", [".05", "1e-6", "3.14j"]),
+                             ("y = 0xFF_FF | 0b1010 | 1_000.5e+10", ["0xFF_FF", "0b1010", "1_000.5e+10"])]:
+            self.assertEqual([s for t, s in python_parçala(kod) if t == "sayı"], sayılar, kod)
+        self.assertEqual([t for t, _ in python_parçala('t"{0}"')][:2], ["önek", "tırnak"])
+
+    def test_tokenize_sınır_örneklem(self):
+        # stdlib örnekleminde lexer sınırları tokenize ile birebir (tam koşu: araclar.kod_dogrula)
+        from araclar.kod_dogrula import sınır_karşılaştır
+        lib = sorted(Path(os.__file__).parent.glob("*.py"))
+        random.Random(3).shuffle(lib)
+        for yol in lib[:40]:
+            r = sınır_karşılaştır(yol.read_text(encoding="utf-8", errors="surrogateescape"))
+            if r is not None:
+                self.assertEqual(r[0], [], str(yol))
+
     def test_kod_sözlüğü(self):
         # sözlük kelimesi kodda TEK token; metinde eskisi gibi (kod-* tokenı metne sızmaz)
         from tokenizer.kod import KOD_SÖZLÜĞÜ, KOD_SÖZLÜK_YENİ
