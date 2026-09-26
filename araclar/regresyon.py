@@ -8,12 +8,15 @@ Kullanım (kurt-tokenizer/ dizininden):
   python -X utf8 -m araclar.regresyon kaydet      <örnek.txt> <referans.json>
   python -X utf8 -m araclar.regresyon karsilastir <örnek.txt> <referans.json> [--hedef KARAKTERLER]
                                                    [--hedef-kayiplilar] [--hedef-baytlilar]
+                                                   [--hedef-yeni-tokenlar]
 
 örnek.txt    satır başına bir belge (normalleştirilmiş metin)
 kaydet       her benzersiz parçanın ID dizisini + kayıplı parça/karakter kümesini yazar
 karsilastir  güncel tokenizer'la aynı ölçümü yapar (--hedef-kayiplilar: referanstaki TÜM kayıplı
              karakterler hedefe eklenir — kayıp gideren fazlar için; --hedef-baytlilar: referansta
-             BAYTLA kodlanan tüm karakterler — bayttan tek tokena / harf sınıfına alan fazlar için).
+             BAYTLA kodlanan tüm karakterler — bayttan tek tokena / harf sınıfına alan fazlar için;
+             --hedef-yeni-tokenlar: yeni kodlaması referanstan sonra eklenen çok karakterli bir
+             tokenı içeren parça da geçerli — çok karakterli token ekleyen fazlar için, ör. kod-python).
              KAPILAR (hepsi geçmeli):
   1. değişen her parça --hedef karakterlerinden en az birini içerir
   2. yeni kayıplı parça yok        (kayıplı_sonra ⊆ kayıplı_önce)
@@ -85,9 +88,16 @@ def kaydet(örnek: Path, referans: Path) -> None:
 
 
 def karşılaştır(örnek: Path, referans: Path, hedef: str, kayıplılar: bool = False,
-                baytlılar: bool = False) -> bool:
+                baytlılar: bool = False, yeni_tokenlar: bool = False) -> bool:
+    """yeni_tokenlar: referanstan sonra eklenen çok karakterli tokenlar da hedeftir — değişen parça,
+    yeni kodlaması bu tokenlardan birini içeriyorsa geçerli (ör. kod-python 'from' metindeki
+    İngilizce 'from'u harf-harf yerine tek tokenla yakalar)."""
     önce = json.loads(referans.read_text(encoding="utf-8"))
     sonra = _ölç(örnek)
+    yeni_idler: set[int] = set()
+    if yeni_tokenlar:
+        v = Vocab.yükle(VERİ / "vocab.json")
+        yeni_idler = {x for x in range(önce["vocab_boy"], len(v)) if len(v.id2tok[x]) > 1}
     hedef_k = set(hedef) | (set(önce["kayıplı_karakterler"]) if kayıplılar else set())
     if baytlılar:
         if "baytlı_karakterler" not in önce:
@@ -99,7 +109,8 @@ def karşılaştır(örnek: Path, referans: Path, hedef: str, kayıplılar: bool
         return False
 
     değişen = [p for p, ids in sonra["parçalar"].items() if önce["parçalar"][p] != ids]
-    hedef_dışı = [p for p in değişen if not hedef_k & set(p)]
+    hedef_dışı = [p for p in değişen
+                  if not hedef_k & set(p) and not yeni_idler & set(sonra["parçalar"][p])]
     yeni_kayıplı = sorted(set(sonra["kayıplı_parçalar"]) - set(önce["kayıplı_parçalar"]))
     kk_önce, kk_sonra = set(önce["kayıplı_karakterler"]), set(sonra["kayıplı_karakterler"])
     yeni_kk = sorted(kk_sonra - kk_önce)
@@ -146,12 +157,14 @@ def main(argv: list[str]) -> int:
                    help="referanstaki tüm kayıplı karakterleri hedefe ekle")
     b.add_argument("--hedef-baytlilar", action="store_true",
                    help="referansta baytla kodlanan tüm karakterleri hedefe ekle")
+    b.add_argument("--hedef-yeni-tokenlar", action="store_true",
+                   help="değişen parça referanstan sonra eklenen çok karakterli bir tokenı içerebilir")
     ar = ap.parse_args(argv)
     if ar.komut == "kaydet":
         kaydet(ar.örnek, ar.referans)
         return 0
     return 0 if karşılaştır(ar.örnek, ar.referans, ar.hedef, ar.hedef_kayiplilar,
-                            ar.hedef_baytlilar) else 1
+                            ar.hedef_baytlilar, ar.hedef_yeni_tokenlar) else 1
 
 
 if __name__ == "__main__":

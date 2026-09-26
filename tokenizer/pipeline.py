@@ -19,6 +19,7 @@ import unicodedata
 from tokenizer import alfabe, sesler
 from tokenizer.cozumle import çözümle
 from tokenizer.hece import hecele
+from tokenizer.kod import DİLLER, PY_İŞLEM, PY_TIRNAK
 
 BOŞLUK = "▁"
 # düz ve sağ-tek-tırnak (İstanbul'da / İstanbul’da) + kesme olarak kullanılan değiştirici
@@ -39,6 +40,7 @@ EN_UZUN_BOŞLUK = 16
 BOŞLUK_KOŞULARI = [BOŞLUK * n for n in range(2, EN_UZUN_BOŞLUK + 1)]   # vocab bölümü (▁ v1'de)
 _BOŞLUK_KOŞULARI = frozenset([BOŞLUK, *BOŞLUK_KOŞULARI])
 _BOŞLUK_AYIR = re.compile(r"(\s+)")
+_KOD_BÜTÜN = frozenset(PY_İŞLEM + PY_TIRNAK)     # dil kipinde bütün token (anahtar sözcük hariç)
 
 # Bayt tokenları (vocab Faz 2): vocab'da olmayan HER karakter UTF-8 baytlarına iner → hiçbir
 # girdi <unk> üretmez. Tüm 0x00-0xFF (UTF-8'in hiç üretmediği baytlar dahil → tablo tam, basit).
@@ -174,21 +176,50 @@ def boşluk_tokenları(koşu: str) -> list[str]:
     return tokenlar
 
 
+def _kod_dil_ekle(parçalar, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin):
+    """Dil lexer'ının (tür, metin) parçalarını tokenlar (K2).
+
+    anahtar / çok karakterli işlem / üçlü tırnak → BÜTÜN token (vocab kod-python bölümü).
+    metin (yorum, string içeriği) → boşluk kayıpsız + Türkçe hat; bilinmeyen kelime kuyruğa.
+    ad / sayı / önek / tek karakter → Türkçe hattın parça işlemesi, KUYRUKSUZ (tanımlayıcılar
+    onay kuyruğunu İngilizce adlarla doldurmasın; K3'te tanımlayıcı bölme gelecek)."""
+    for tür, s in parçalar:
+        if tür == "boşluk":
+            tokenlar.extend(boşluk_tokenları(s))
+        elif tür == "anahtar" or s in _KOD_BÜTÜN:
+            tokenlar.append(s)
+        elif tür == "metin":
+            for i, p in enumerate(_BOŞLUK_AYIR.split(s)):
+                if i % 2:
+                    tokenlar.extend(boşluk_tokenları(p))
+                elif p:
+                    _parça_ekle(p, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
+        else:
+            _parça_ekle(s, tokenlar, kökler, ekler, istisnalar, None, önbellek, metin)
+
+
 def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None,
-           kip: str = "metin") -> list[str]:
+           kip: str = "metin", dil: str | None = None) -> list[str]:
     """Metni token dizisine çevirir.
 
     kip "metin" (varsayılan, Türkçe metin hattı): boşluk dizileri tek ▁'ye iner (kurt-veri
     normalleştirmesiyle uyumlu). kip "kod": boşluk, satır sonu ve girinti KAYIPSIZ korunur
     (boşluk_tokenları); boşluk dışı her parça metin hattıyla aynı işlenir. Kip AÇIKÇA verilir,
-    tahmin edilmez (ilke #3).
+    tahmin edilmez (ilke #3). dil (yalnız kod kipinde, ör. "python"): o dilin lexer'ı ile
+    anahtar sözcük/operatör bütün token, yorum/string Türkçe hat (_kod_dil_ekle).
 
     önbellek (opsiyonel dict): {küçük_kelime: token_listesi} — büyük korpusta (Aşama 1)
     aynı kelimeyi tekrar çözmemek için memoization. Deterministik (aynı kelime hep aynı
     token); yalnız hız. kuyruk yan-etkisi ilk görülüşte işler (kuyruk zaten tekilleştirir)."""
     if kip not in KİPLER:
         raise ValueError(f"bilinmeyen kip: {kip!r} (geçerli: {', '.join(KİPLER)})")
+    if dil is not None and (kip != "kod" or dil not in DİLLER):
+        raise ValueError(f"dil yalnız kod kipinde ve şunlardan biri: {', '.join(DİLLER)} ({dil!r})")
     tokenlar: list[str] = []
+    if dil is not None:
+        _kod_dil_ekle(DİLLER[dil](metin), tokenlar, kökler, ekler, istisnalar, kuyruk,
+                      önbellek, metin)
+        return tokenlar
     if kip == "kod":
         for i, parça in enumerate(_BOŞLUK_AYIR.split(metin)):
             if i % 2:                            # tek indeks = boşluk koşusu

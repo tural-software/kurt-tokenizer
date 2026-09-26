@@ -33,6 +33,11 @@ from tokenizer.birlestir import birleştir
 from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
                                 BOŞLUK_KOŞULARI)
+from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK
+
+# Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
+# yanlış bırakılırsa bölümleri_ekle tekrar hatası verir → liste kendini denetler).
+_PY_V1_ORTAK = frozenset({"and", "as", "def", "del", "for", "if", "in", "is", "not", "or"})
 
 # Sabit önek: özel tokenlar (ID 0..) — sıra KALICI olmalı (model bağımlılığı).
 ÖZEL_TOKENLAR = ["<pad>", "<unk>", "<s>", "</s>", "<|sistem|>", "<|kullanici|>",
@@ -104,6 +109,9 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
                                       + _TİPOGRAFİ + _KİRİL + _BİLİM)),
     # Kod K1 — kayıpsız boşluk: satır sonu, sekme, CR + ▁×2…▁×16 girinti/hizalama koşuları.
     ("kod-bosluk", list(KOD_BOŞLUKLARI) + BOŞLUK_KOŞULARI),
+    # Kod K2 — Python anahtar sözcükleri + çok karakterli operatörler + üçlü tırnak. v1'de Türkçe
+    # hece olarak zaten bulunan 10 anahtar sözcük (and/def/if/in/…) AYNI tokenı paylaşır.
+    ("kod-python", [t for t in PY_ANAHTAR + PY_İŞLEM + PY_TIRNAK if t not in _PY_V1_ORTAK]),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -118,6 +126,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("sembol-bilim", 50, "bd3ec86cba4fa61fd1dece2faa37418823ed3e9961cbe990b837c290117eb7aa"),
     ("harf-buyuk", 118, "1c163979561e895a9ebdfb23c90fd4f77736ae245336c1f90f0adbd97eb7c97c"),
     ("kod-bosluk", 18, "710a4e2868cb36798f2302116ce5533c9f9ad7d2ecadbe0dad483bfc1c1eb6b9"),
+    ("kod-python", 54, "d794c29ef7654e6994c3b9da0d8847398f6ace4a6db4dc2dc05c493fac747c8d"),
 ]
 
 
@@ -254,11 +263,12 @@ class Vocab:
         return ids
 
     def encode_ids(self, metin, kökler, ekler, istisnalar=None, kuyruk=None,
-                   önbellek=None, kip: str = "metin") -> list[int]:
+                   önbellek=None, kip: str = "metin", dil: str | None = None) -> list[int]:
         """Metin → ID dizisi. Bilinen token doğrudan; bilinmeyen bütün-token fallback'lenir.
-        önbellek: büyük korpus için kelime-memoization (encode'a iletilir). kip: "metin"|"kod"."""
+        önbellek: büyük korpus için kelime-memoization (encode'a iletilir). kip: "metin"|"kod";
+        dil: yalnız kod kipinde (ör. "python")."""
         ids: list[int] = []
-        for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip):
+        for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil):
             tid = self.tok2id.get(t)
             ids.append(tid) if tid is not None else ids.extend(self._fallback(t))
         return ids

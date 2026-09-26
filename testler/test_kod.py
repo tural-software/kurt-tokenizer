@@ -74,6 +74,76 @@ class KodKipiTest(unittest.TestCase):
     def test_bilinmeyen_kip(self):
         with self.assertRaises(ValueError):
             encode("x", self.k, self.e, self.i, kip="python")
+        with self.assertRaises(ValueError):                  # dil yalnız kod kipinde
+            encode("x", self.k, self.e, self.i, dil="python")
+        with self.assertRaises(ValueError):
+            encode("x", self.k, self.e, self.i, kip="kod", dil="cobol")
+
+
+class PythonK2Test(unittest.TestCase):
+    """K2 — Python lexer: anahtar sözcük/operatör bütün token, yorum/string Türkçe hat."""
+
+    @classmethod
+    def setUpClass(cls):
+        KodKipiTest.setUpClass.__func__(cls)
+
+    def py(self, kod, kuyruk=None):
+        return encode(kod, self.k, self.e, self.i, kuyruk, kip="kod", dil="python")
+
+    def py_gidip_gel(self, kod):
+        ids = self.v.encode_ids(kod, self.k, self.e, self.i, kip="kod", dil="python")
+        return ids, self.v.decode_ids(ids, kip="kod")
+
+    def test_lexer_tüm_stdlib_kayıpsız(self):
+        # lexer parçalarının birleşimi = girdi: stdlib'in TAMAMI (yapısal kayıpsızlık)
+        from tokenizer.kod import python_parçala
+        dosyalar = sorted(Path(os.__file__).parent.glob("**/*.py"))
+        self.assertGreater(len(dosyalar), 500)
+        for yol in dosyalar:
+            kod = yol.read_text(encoding="utf-8", errors="surrogateescape")
+            self.assertEqual("".join(s for _, s in python_parçala(kod)), kod, str(yol))
+
+    def test_anahtar_ve_işlem_bütün(self):
+        t = self.py("def f(x) -> None:\n    return x ** 2 if x != 0 else ...")
+        for bütün in ["def", "->", "None", "return", "**", "if", "!=", "else", "..."]:
+            self.assertIn(bütün, t)
+        self.assertIn(BOŞLUK * 4, t)
+        # anahtar sözcük yalnız TAM tanımlayıcı olarak sınıflanır ('import_x', 'classes' → ad)
+        from tokenizer.kod import python_parçala
+        türler = dict((s, t) for t, s in python_parçala("import_x = classes; import y"))
+        self.assertEqual((türler["import_x"], türler["classes"], türler["import"]),
+                         ("ad", "ad", "anahtar"))
+        self.assertNotIn("class", self.py("classes"))
+
+    def test_yorum_ve_string_türkçe(self):
+        t = self.py('# kökleri bul\nx = "evlerimizde"')
+        self.assertIn("kök", t)
+        self.assertIn("ev", t)
+        self.assertEqual(t[-1], '"')
+
+    def test_kapanmamış_ve_özel_stringler(self):
+        for kod in ['x = "kapanmadı\ny = 1', "s = '''üçlü\nsatır", 'f"{a!r:>10}"',
+                    "rb'\\x00' + Rb\"\\\\\"", 'x = "a\\"b"', "'''a'' '", "#", "\"\"\"",
+                    "değer = kök_bul(İstanbul)  # Türkçe tanımlayıcı"]:
+            ids, geri = self.py_gidip_gel(kod)
+            self.assertEqual(geri, kod, repr(kod))
+
+    def test_depo_ve_stdlib_python_kipi(self):
+        dosyalar = sorted(KÖK.glob("**/*.py"))
+        lib = sorted(Path(os.__file__).parent.glob("*.py"))
+        random.Random(11).shuffle(lib)
+        for yol in dosyalar + lib[:25]:
+            kod = yol.read_text(encoding="utf-8", errors="surrogateescape")
+            _, geri = self.py_gidip_gel(kod)
+            self.assertEqual(geri, kod, str(yol))
+
+    def test_tanımlayıcı_kuyruğa_girmez(self):
+        from tokenizer.onay import OnayKuyruğu
+        q = OnayKuyruğu()
+        self.py("zyxwqk = 1  # qwzyk", q)
+        kelimeler = {x.kelime for x in q.bekleyenler()}
+        self.assertIn("qwzyk", kelimeler)                   # yorumdaki bilinmeyen sorulur
+        self.assertNotIn("zyxwqk", kelimeler)               # tanımlayıcı sorulmaz
 
 
 if __name__ == "__main__":
