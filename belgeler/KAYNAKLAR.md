@@ -56,14 +56,13 @@ ECMA-335 metadata okuyucu eklenir. Bu okuyucu PE dosyasından tip ve üye adlar�
 
 ---
 
-## Havuz B — L0 ölçüm korpusu (repoya girer, ~250 dosya)
+## Havuz B — L0 ölçüm korpusu (repoya girer, ~220 dosya)
 
 | # | Kaynak | Sabit sürüm | Lisans | İçerik | Pay |
 |---|---|---|---|---|---|
 | B1 | `microsoft/referencesource` | `ec9fa9a` (2025-10-15) | MIT | **.NET Framework 4.8'in kendi kaynak kodu.** Commit geçmişi bunu doğruluyor: "Update Reference Sources to .NET Framework 4.8" (2019-04-16), "4.8 ZDP" (2019-08-13), "4.8 patched files" (2019-09-24). Toplam 14.641 `.cs` dosyası; en büyük bölümler System.Web 1.761, System.ServiceModel 1.722, System.Data 1.630, mscorlib 1.257, System 1.224 | ~120 |
 | B2 | `aspnet/aspnetdocs` | `1a82bb8` (2026-07-26) | Kod MIT, metin CC BY 4.0 | ASP.NET 4.x doküman kod parçaları, toplam 3.093 `.cs` dosyası: MVC 1.006, Web Forms 719, Web API 518, SignalR 428, Web Pages 126, Identity 108 | ~60 |
 | B3 | `dotnet/samples`, `framework/` klasörü | `acb39ce` (2026-09-18) | Kod MIT | WCF (373 v4.0 ve 10 v4.8 proje) ve Windows Workflow Foundation (74 v4.0 proje) | ~40 |
-| B4 | **Türkçe içerikli C#** | — | Kendi yazdığımız ya da sizin projelerinizden | Türkçe yorum, Türkçe string ve Türkçe tanımlayıcı (`MüşteriGetir`, `SiparisOlustur`). Yukarıdaki kaynakların hiçbirinde yok | ~20–30 |
 
 **Seçim deterministik yapılır:** Her alt grupta dosyalar `sha256(commit + yol)` sırasına dizilir ve
 ilk *N* dosya alınır. Aynı commit her zaman aynı seti verir. Seçilen dosyaların listesi ve
@@ -85,7 +84,7 @@ ilk *N* dosya alınır. Aynı commit her zaman aynı seti verir. Seçilen dosyal
 |---|---|---|
 | `microsoft/referencesource` (tamamı) | MIT | .NET Framework 4.8 |
 | `dotnet/ef6` | MIT | Entity Framework 6 |
-| `aspnet/aspnetwebstack` | Apache-2.0 | ASP.NET MVC 5, Web API 2, Web Pages |
+| `aspnet/aspnetwebstack` | Apache-2.0 | ASP.NET MVC 5, Web API 2, Web Pages (L0b API adları için de aday) |
 | `aspnet/aspnetdocs` (tamamı) | Metin CC BY 4.0, kod MIT | ASP.NET 4.x makaleleri ve kod parçaları |
 | `dotnet/docs`, `docs/framework/` | Metin CC BY 4.0, kod MIT | .NET Framework dokümanları: 5.454 makale (WCF, WF, veri, ağ, dağıtım, sürüm notları…) |
 | `dotnet/samples`, `framework/` | MIT | WCF ve WF örnekleri |

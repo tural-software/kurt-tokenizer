@@ -1,7 +1,7 @@
 # Kurt Tokenizer — Kod Modu ve .NET Veri Haznesi Planı
 
-> Durum: **taslak v2 (2026-09-26).** K1, K2, K4 ve K5 kararlaştırıldı. K3, K6 ve K7 için
-> öneriler varsayılan kabul edildi. K8 yeni ve açık. Kaynak envanteri:
+> Durum: **taslak v2.1 (2026-09-26).** K1, K2, K4, K5 ve K8 kararlaştırıldı. K3, K6 ve K7
+> örneklerle açıklandı, karar bekliyor. Kaynak envanteri:
 > [KAYNAKLAR.md](KAYNAKLAR.md). Tokenizer kodu bu plan onaylanmadan değişmez.
 
 ## Karar kaydı
@@ -10,12 +10,12 @@
 |---|---|---|---|---|
 | K1 | Taban sürüm | ✅ Karar | **L0 = yalnızca .NET Framework 4.8 (C# 7.3).** Bir katman onaylanmadan sonrakine geçilmez | §4.1, §7 |
 | K2 | Türkçe paragraf yapısı | ✅ Karar | **Korunur.** Türkçe eğitim korpusu Faz 0'dan sonra yeniden tokenize edilir | §1.3, §3 (0.3) |
-| K3 | Kod bölgesi tespiti | Varsayılan | Ön işlemede otomatik (dosya uzantısı ve ```` ``` ```` blokları), tokenizer'da yalnızca açık işaretçi | §3 (0.4) |
+| K3 | Kod bölgesi tespiti | Karar bekliyor | Ön işlemede otomatik (dosya uzantısı ve ```` ``` ```` blokları), tokenizer'da yalnızca açık işaretçi | §3 (0.4) |
 | K4 | Kod modunda harf büyüklüğü | ✅ Karar | **Aynen korunur, casing işaretçisi kullanılmaz** | §4.3 |
 | K5 | Kullanım amacı | ✅ Karar | **Bireysel, ticari olmayan kullanım.** Ticari karar alınırsa hukuki süreç o zaman başlatılır | §2.3 |
-| K6 | .NET 11 önizlemesi | Varsayılan | GA'ya kadar yalnızca ölçüm yapılır, vocab'a eklenmez | §4.1 |
-| K7 | Türkçe ASCII tanımlayıcılar (`SiparisOlustur`) | Varsayılan | Önce parça bölücü kullanılır, ölçümden sonra yeniden değerlendirilir | §4.3 |
-| K8 | L0'a MVC 5, Web API 2 ve EF6 API adları da girsin mi? | **Açık** | Öneri: önce yalnızca .NET Framework BCL. Bu kütüphanelerin kodunda oran belirgin düşükse ayrı bir alt katman (L0b) açılır | §4.2 |
+| K6 | .NET 11 önizlemesi | Karar bekliyor | GA'ya kadar yalnızca ölçüm yapılır, vocab'a eklenmez | §4.1 |
+| K7 | Türkçe tanımlayıcılar (`SiparisOlustur`, `MüşteriGetir`) | Karar bekliyor | Öneri: parça bölücü; parçayı Türkçe motora yalnızca motor onu tam tanıyorsa gönder | §4.3 |
+| K8 | NuGet paketlerinin API adları | ✅ Karar | **Her katman önce yalnızca çerçevenin kendi API'siyle kurulur. O sürümde kullanılan NuGet paketleri (net48 için MVC 5, Web API 2, EF6…) ayrı bir paket alt katmanı (L0b, L1b, …) olarak eklenir.** Paket seçim kuralı alt katmanın sırası gelince belirlenir | §4.2, §7 |
 
 **K1 gerekçesi (neden 3.1 değil de 4.8):**
 
@@ -109,8 +109,8 @@ ECMA-335 metadata okuyucu eklenir; sıfır bağımlılık ilkesi korunur.
 ### 2.2 Havuz B — Ölçüm korpusu
 
 L0 için: referencesource (~120 dosya), aspnetdocs kod parçaları (~60), `samples/framework`
-WCF/WF (~40) ve Türkçe içerikli C# (~20–30). Kaynaklarda Türkçe içerikli C# olmadığı için bu kısmı
-kendimiz yazacağız ya da sizin projelerinizden seçeceğiz.
+WCF/WF (~40). Türkçe yorum, string ve tanımlayıcıların doğru yönlendirildiği ayrı bir korpus
+gerektirmez; bunu birkaç elle yazılmış birim testi doğrular.
 Seçim deterministiktir: her alt grupta `sha256(commit + yol)` sırasına göre ilk *N* dosya alınır.
 
 Her sette şu biçimler bulunmalıdır: sınıf, LINQ, async, attribute, generic, `#region`, `///` XML
@@ -228,8 +228,9 @@ beklenmesi gerekmez.
    (ör. "en az *k* farklı API adında geçen parça"). *k* değeri L0 ölçümüyle belirlenir.
 5. Tam adla eklenecek istisnalar (`Task`, `String`, `Console` gibi çok sık tipler) gerekçeleriyle
    ayrı bir listede tutulur.
-6. **K8:** MVC 5, Web API 2 ve EF6 Framework'e dahil değildir (NuGet paketleridir). Öneri: L0 önce
-   yalnızca BCL ile ölçülür; bu kütüphanelerin kodunda oran belirgin düşükse L0b açılır.
+6. **Paket alt katmanları (K8):** Her sürüm katmanından sonra, o sürümde kullanılan NuGet
+   paketlerinin API adları ayrı bir alt katman olarak eklenir (L0b: MVC 5, Web API 2, EF6…;
+   L1b: o dönemin paketleri…). Adlar yine parçalara bölünür; paket başına özel token gerekmez.
 
 ### 4.3 C# lexer tasarımı (kod modu içinde)
 
@@ -289,9 +290,10 @@ Tanımlayıcı parçaları (`Get`, `Id`, `Async`…) diller arasında **paylaş�
 | 3 | L0 kaynak envanteri, lisans doğrulaması ve sürüm sabitleme ([KAYNAKLAR.md](KAYNAKLAR.md)) | ✅ |
 | 4 | **Faz 0** (§3): manifesto, byte tabanı, boşluk koruması, mod işaretçileri, kapı testleri | Sırada |
 | 5 | Havuz A araçları: ECMA-335 okuyucu → `veri/kod/csharp/api_net48.json`; C# 7.3 gramer listesi (standard-v7 + Roslyn) | |
-| 6 | Havuz B: L0 ölçüm seti (~250 dosya, deterministik seçim, Türkçe içerikli C# dahil) | |
+| 6 | Havuz B: L0 ölçüm seti (~220 dosya, deterministik seçim) | |
 | 7 | **L0** uygulaması (lexer ve parça bölücü) + ölçüm raporu → **onay kapısı** | |
-| 8 | L1 (netcoreapp3.1 / C# 8) → rapor → onay; sonra L2 … L7 aynı döngüyle, **tek tek** | |
+| 7b | **L0b:** net48 döneminin NuGet paketleri (K8) → rapor → onay | |
+| 8 | L1 (netcoreapp3.1 / C# 8) ve L1b → rapor → onay; sonra L2 … L7 aynı döngüyle, **tek tek** | |
 | 9 | XML/JSON modu | |
 | 10 | **Kod vocab v1 dondurma** (sürüm etiketi ve hash) | |
 | 11 | Havuz C'nin toplanması ve tüm korpusun (Türkçe dahil, K2) tokenizasyonu | |
