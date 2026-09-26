@@ -12,10 +12,17 @@ Bilinmeyen kelime (sabit vocab'da bütün-token OLAMAZ): HECE→HARF fallback il
 tabana iner (kayıpsız); "bütün tut" felsefesi onay kuyruğunda korunur (kelime yine
 insana sorulur). Truly-novel karakter (emoji vb.) → <unk> (Aşama 0 sınırı, byte-fallback
 sonraki bir madde).
+
+SONA-EKLEME SÖZLEŞMESİ: model her tokenı ID'siyle öğrenir → bir ID'nin anlamı ASLA değişmez.
+Vocab bölümlerden oluşur: v1 (yukarıdaki 1-3, Türkçe çekirdek, 4112, DONMUŞ) + EK_BÖLÜMLER
+sırayla SONA eklenir. Yeni token yalnız YENİ bir bölümle girer; var olan bölüm değişmez, araya
+token girmez. DONMUŞ_BÖLÜMLER her bölümün boyu + SHA-256 özetini kilitler (test_vocab önek
+kapısı): bir kök eklemesi v1'i kaydırırsa ya da bir bölüm sessizce değişirse test KIRMIZI.
 """
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -31,6 +38,32 @@ from tokenizer.pipeline import encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜ
 
 NOKTALAMA = list(".,;:!?'\"`()[]{}<>-–—/\\|@#$%&*+=~^_°²³…’‘“”«»·•")
 RAKAM = list("0123456789")
+
+# Ek bölümler (ad, tokenlar) — SIRA KALICI; yeni faz yalnız listenin SONUNA bölüm ekler.
+EK_BÖLÜMLER: list[tuple[str, list[str]]] = []
+
+# Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
+DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
+    ("v1", 4112, "fd1aa7a47946a3cf36438c61d293e86b59928662e98e5be97331724b988aa4cd"),
+]
+
+
+def bölüm_özeti(tokenlar) -> str:
+    """Bölümün SHA-256 özeti (JSON dizisi üzerinden → token sınırı belirsizliği yok)."""
+    return hashlib.sha256(json.dumps(list(tokenlar), ensure_ascii=False).encode("utf-8")).hexdigest()
+
+
+def bölümleri_ekle(taban: list[str], bölümler) -> list[str]:
+    """Tabanın SONUNA bölümleri sırayla ekler. Zaten var olan (ya da bölüm içinde tekrarlanan)
+    token ValueError verir — sessiz yutma yok: her yeni token gerçekten yeni olmalı."""
+    tokenlar, görülen = list(taban), set(taban)
+    for ad, bölüm in bölümler:
+        for t in bölüm:
+            if t in görülen:
+                raise ValueError(f"'{ad}' bölümünde zaten var olan token: {t!r}")
+            görülen.add(t)
+            tokenlar.append(t)
+    return tokenlar
 
 
 def _atomik_taban() -> list[str]:
@@ -94,7 +127,12 @@ def _ek_yüzeyleri(kökler, ekler) -> set[str]:
 
 
 def vocab_kur(kökler, ekler, istisnalar) -> list[str]:
-    """Deterministik vocab: özel + atomik taban + hece/morfem/ek/istisna tokenları."""
+    """Deterministik vocab: v1 çekirdek + EK_BÖLÜMLER (sırayla sona eklenir)."""
+    return bölümleri_ekle(_v1_kur(kökler, ekler, istisnalar), EK_BÖLÜMLER)
+
+
+def _v1_kur(kökler, ekler, istisnalar) -> list[str]:
+    """v1 — Türkçe çekirdek (DONMUŞ): özel + atomik taban + hece/morfem/ek/istisna tokenları."""
     morfem: set[str] = set()
     for kök in kökler.values():                 # kök heceleri
         morfem.update(kök.tokens)

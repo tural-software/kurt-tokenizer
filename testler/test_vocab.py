@@ -8,7 +8,8 @@ from tokenizer.kokler import çalışma_sözlüğü, yükle_dizin
 from tokenizer.ekler import yükle as ekleri_yükle
 from tokenizer.istisna import yükle as istisna_yükle
 from tokenizer.birlestir import birleştir
-from tokenizer.vocab import vocab_kur, Vocab, ÖZEL_TOKENLAR
+from tokenizer.vocab import (vocab_kur, Vocab, ÖZEL_TOKENLAR, EK_BÖLÜMLER, DONMUŞ_BÖLÜMLER,
+                             bölüm_özeti, bölümleri_ekle)
 
 KÖK_DİZİN = Path(__file__).resolve().parent.parent / "veri" / "kokler"
 EK = Path(__file__).resolve().parent.parent / "veri" / "ekler.json"
@@ -71,6 +72,31 @@ class VocabTest(unittest.TestCase):
         # vocab.json deterministik: kaynak'tan yeniden üretim birebir aynı
         yeniden = vocab_kur(self.k, self.e, self.i)
         self.assertEqual(yeniden, self.v.id2tok)
+
+    def test_önek_değişmezliği(self):
+        # SONA-EKLEME kapısı: her donmuş bölüm yerinde ve birebir (hiçbir ID kaymaz), ve
+        # vocab'da dondurulmamış token kalmaz (faz bitince DONMUŞ_BÖLÜMLER'e işlenir).
+        baş = 0
+        for ad, boy, özet in DONMUŞ_BÖLÜMLER:
+            self.assertEqual(bölüm_özeti(self.v.id2tok[baş:baş + boy]), özet,
+                             f"'{ad}' bölümü değişti ya da kaydı (ID {baş}..{baş + boy - 1})")
+            baş += boy
+        self.assertEqual(baş, len(self.v), "dondurulmamış bölüm var")
+
+    def test_bölüm_kaydı_tutarlı(self):
+        # DONMUŞ_BÖLÜMLER = v1 + EK_BÖLÜMLER, aynı sıra ve aynı boy
+        self.assertEqual([ad for ad, _, _ in DONMUŞ_BÖLÜMLER],
+                         ["v1"] + [ad for ad, _ in EK_BÖLÜMLER])
+        for (ad, boy, _), (_, bölüm) in zip(DONMUŞ_BÖLÜMLER[1:], EK_BÖLÜMLER):
+            self.assertEqual(boy, len(bölüm), ad)
+
+    def test_bölüm_tekrar_reddi(self):
+        # var olan token ya da bölüm-içi tekrar sessizce yutulmaz → ValueError
+        self.assertEqual(bölümleri_ekle(["a", "b"], [("y", ["c"])]), ["a", "b", "c"])
+        with self.assertRaises(ValueError):
+            bölümleri_ekle(["a", "b"], [("y", ["b"])])
+        with self.assertRaises(ValueError):
+            bölümleri_ekle(["a"], [("y", ["c", "c"])])
 
 
 if __name__ == "__main__":
