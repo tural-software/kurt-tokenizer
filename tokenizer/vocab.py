@@ -40,12 +40,42 @@ from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜY�
 NOKTALAMA = list(".,;:!?'\"`()[]{}<>-–—/\\|@#$%&*+=~^_°²³…’‘“”«»·•")
 RAKAM = list("0123456789")
 
+# ── Faz 3 karakter aileleri (kaynakların tamamında ölçüldü: 3,18 milyar karakter, 16 kaynak;
+#    eşik ≥1.000 oluşum + ≥3 kaynak, aileler tamamlanır; kullanıcı onaylı). Yalnız KÜÇÜK harf:
+#    büyük harfi casing işaretçisi taşır. Mojibake (Ģ Ġ › ¤ º…) GİRMEZ → bayt + Faz V onarımı.
+_TÜRKOLOJİ = "āīūēōḥḫḳṣṭẓżḍẕŝġñŋķĥïʿʾʽ"      # Osmanlıca/Türkoloji transkripsiyon (oġlı, *beniŋ)
+_TÜRK_DİLLERİ = "əäýňžʻ"                      # Azerbaycan, Türkmen, Özbek
+_KÜRTÇE = "ê"                                  # Kurmancî/Zazaca (î û v1'de)
+_AVRUPA = "éèáàíìóòúùãôøåæßëćčšđśńșɑ"         # özel adlar, dil dersleri, pinyin + IPA ɑ
+_YUNAN = "αβγδεζηθικλμνξοπρσςτυφχψω"          # bilim (α β μ δ…), alfabe tamamlandı
+_BİRLEŞEN = "̇̄̅̂"         # üst nokta, makron, üst çizgi (x̅), şapka
+_MATEMATİK = "±−×÷≠≤≥≈≡≅∼∝∞√∑∏∫∂∇∆∈∉∀∃∅∩∪⊂⊆⊃⊇∠⊥∥∧∨¬⋅∙∘⊕⊗∓∗⋯⟨⟩≪≫ℝℕℤℚℂ"
+_OK = "→←↑↓↔↕⇒⇐⇔↗↘⟶⟹↦"
+_SİMGE = "¹⁰⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎"      # üst/alt simge tam aile (² ³ v1'de)
+_KESİR = "½¼¾⅓⅔"
+_PARA = "₺€£¥₽₿"                               # $ v1'de
+_MADDE = "●■▪◦○□◆◇►▶◀▲▼△✓✔✗✘✅❌★☆†‡¶"          # liste, onay, şekil (• v1'de)
+_KUTU = "─│┌┐└┘├┤┬┴┼═║█"                       # terminal/kod çıktısı (├── └──)
+_TİPOGRAFİ = "‐‑‒―‖„‚‛′″‰№⁄‿¡¿§©®™℃℉ℓµ"
+_ARAP = ("ابتثجحخدذرزسشصضطظعغفقكلمنهوي"        # 28 temel harf
+         "ءآأإئةى"                              # hemze/elif biçimleri, tâ-i merbûta, elif-i maksûre
+         "یـ"                                   # Fars ye, tatvil
+         "پچژگکڭ"                               # Osmanlı/Fars ek harfleri (sağır kef dahil)
+         "ًَُِّْ"  # hareke: üstün, esre, cezm, ötre, şedde, tenvin
+         "،؟؛")                                 # Arap virgül, soru, noktalı virgül
+_KİRİL = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" "әғқңөүұһі"   # Rusça + Türk dilleri
+
 # Ek bölümler (ad, tokenlar) — SIRA KALICI; yeni faz yalnız listenin SONUNA bölüm ekler.
 EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # Faz 1 — Türkçe alfabede olmayan Latin harfleri (önceden <unk> → metinden SİLİNİYORDU).
     ("harf-qwx", ["q", "w", "x", "Q", "W", "X"]),
     # Faz 2 — byte-fallback: <0x00>…<0xFF>. Vocab'da olmayan her karakter bunlara iner.
     ("bayt", BAYT_TOKENLARI),
+    # Faz 3 — sık gerçek karakterler (bayttan tek tokena): harf, sembol, Arap yazısı, Kiril.
+    ("harf-genis", list(_TÜRKOLOJİ + _TÜRK_DİLLERİ + _KÜRTÇE + _AVRUPA + _YUNAN + _BİRLEŞEN)),
+    ("sembol", list(_MATEMATİK + _OK + _SİMGE + _KESİR + _PARA + _MADDE + _KUTU + _TİPOGRAFİ)),
+    ("arap", list(_ARAP)),
+    ("kiril", list(_KİRİL)),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -53,6 +83,10 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("v1", 4112, "fd1aa7a47946a3cf36438c61d293e86b59928662e98e5be97331724b988aa4cd"),
     ("harf-qwx", 6, "4977405745b97c2adebb1a215928b87e2e6cd1d4bb246b4259d60eae040513d1"),
     ("bayt", 256, "5c7fd0e25b2836efc016d0c39612ba381cf25d6d644baba6aa980505e5962cc0"),
+    ("harf-genis", 85, "62ca742eb32a44ac002be39838729eef0cae3ea25cf27bdd2a1069a6ad4ae24c"),
+    ("sembol", 171, "e39b20c04e5a72ee701475751445972ddb7494069140e86434a84c68f3bf8c13"),
+    ("arap", 52, "f965cd13d8d9872862df6128392d2934612a54c35a79279c078bc03e1249367c"),
+    ("kiril", 42, "2789ca16dd0ff9786dddf236b3bec4b73547c9a7de4e9ce17a4950b943156de4"),
 ]
 
 

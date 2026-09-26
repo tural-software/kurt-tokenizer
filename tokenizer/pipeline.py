@@ -13,13 +13,16 @@ Seçim politikası (kullanıcı kararı): BÜTÜN-KÖK → en az token → öbek
 from __future__ import annotations
 
 import itertools
+import unicodedata
 
 from tokenizer import alfabe, sesler
 from tokenizer.cozumle import çözümle
 from tokenizer.hece import hecele
 
 BOŞLUK = "▁"
-KESME = ("'", "’")   # düz ve sağ-tek-tırnak (İstanbul'da / İstanbul'da)
+# düz ve sağ-tek-tırnak (İstanbul'da / İstanbul’da) + kesme olarak kullanılan değiştirici
+# harfler (vocab Faz 3): ʼ U+02BC (Cumhuriyetʼi), ʹ U+02B9 (Kemalʹin) — harf sınıfı DIŞI.
+KESME = ("'", "’", "ʼ", "ʹ")
 BAŞ_BÜYÜK = "<|Bb|>"   # sonraki kelime Başlık-biçimi (ilk harf büyük): Bugün
 HEP_BÜYÜK = "<|BB|>"   # sonraki kelime HEP BÜYÜK: TÜRK
 PAD, UNK, BOS, EOS = "<pad>", "<unk>", "<s>", "</s>"
@@ -55,6 +58,18 @@ def _bayt_çöz(baytlar) -> str:
 # kelime motorca parçalanamaz: bilinmeyen-BÜTÜN (onay kuyruğu), vocab'da hece→harf fallback.
 _HARFLER = (set(alfabe.ALFABE) | set("ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ") | set("âîûÂÎÛ")
             | set("qwxQWX"))
+
+
+def _harf_mi(c: str) -> bool:
+    """Harf sınıfı (kelime sınırı): Türkçe harfler + q/w/x + TÜM Unicode harfleri ve birleşen
+    işaretler (vocab Faz 3), kesme gibi kullanılan ʼ ʹ hariç. Yabancı harfli kelime BÖLÜNMEZ:
+    eskiden 'Ōsaka' → Ō + 'saka' (Türkçe çözülüyordu!). Hiçbir kök/ek/istisna Türkçe dışı harf
+    içermez → böyle bir kelime motorca parçalanamaz: bilinmeyen-BÜTÜN, vocab'da fallback."""
+    if c in _HARFLER:
+        return True
+    if c in KESME:
+        return False
+    return c.isalpha() or unicodedata.category(c)[0] == "M"
 
 
 def _harf_durumu(kelime, küçük):
@@ -116,7 +131,7 @@ def en_iyi_çözüm(çözümler, kökler, ekler):
 
 def _altbirimler(parça):
     """Bir parçayı harf (kelime) ve harf-dışı (noktalama) koşularına ayırır."""
-    for harf_mi, grup in itertools.groupby(parça, key=lambda c: c in _HARFLER):
+    for harf_mi, grup in itertools.groupby(parça, key=_harf_mi):
         yield "".join(grup), bool(harf_mi)
 
 
@@ -179,8 +194,8 @@ def decode(tokenlar) -> str:
 
     Casing işaretçisi yalnız KENDİNDEN SONRAKİ harf-koşusuna uygulanır; noktalama (ör.
     kesme) ya da boşluk koşuyu bitirir → "TBMM'de" ALLCAPS yalnız TBMM'ye, 'de eke değil.
-    Koşu sınırı encode'unkiyle AYNI ölçüttür (_HARFLER), isalpha değil: harf-sınıfı dışı bir
-    harf (é, Ω — encode'da harf-dışı altbirim) koşuyu bitirir → "AĞé" "AĞÉ" olmaz.
+    Koşu sınırı encode'unkiyle AYNI ölçüttür (_harf_mi): encode'da harf-dışı olan her karakter
+    (noktalama, sembol, kesme) koşuyu bitirir → casing yalnız işaretçinin ait olduğu kelimeye.
 
     Bayt tokenları: ardışık koşu UTF-8 çözülür ve HARFİYEN metin olur (asla boşluk/özel token
     sayılmaz: metindeki '▁' geri '▁' döner); casing ona da aynı ölçütle uygulanır."""

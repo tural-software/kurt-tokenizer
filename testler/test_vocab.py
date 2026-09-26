@@ -90,6 +90,27 @@ class VocabTest(unittest.TestCase):
             self.assertNotIn(unk, ids, metin)
             self.assertEqual(self.v.decode_ids(ids), metin, metin)
 
+    def test_faz3_tek_token(self):
+        # Faz 3: onaylı 350 karakterin her biri TEK token (bayt değil), kayıpsız
+        from tokenizer.vocab import EK_BÖLÜMLER
+        faz3 = [c for ad, t in EK_BÖLÜMLER if ad in ("harf-genis", "sembol", "arap", "kiril")
+                for c in t]
+        self.assertEqual(len(faz3), 350)
+        for c in faz3:
+            ids = self.v.encode_ids(c, self.k, self.e, self.i)
+            self.assertEqual([self.v.id2tok[x] for x in ids], [c], f"U+{ord(c):04X}")
+            self.assertEqual(self.v.decode_ids(ids), c)
+
+    def test_faz3_metin_baytsız(self):
+        # gerçek karışık metin: Osmanlıca, Türk dilleri, bilim, Arap/Kiril yazısı → bayt yok
+        bayt = {self.v.tok2id[t] for t in self.v.id2tok if t.startswith("<0x")}
+        for metin in ["Kitâbü'l-ʿİber ve ṣaġīr", "Azərbaycan dili, Türkmençe ýaş",
+                      "H₂SO₄ ve Ca²⁺ için ΔH ≈ −40 kJ ± 2", "fiyat 12 € / 450 ₺ ✓",
+                      "دولت عليه عثمانیه", "Қазақстан және Москва", "├── kök │ └── ek"]:
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i)
+            self.assertFalse(bayt & set(ids), metin)
+            self.assertEqual(self.v.decode_ids(ids), metin, metin)
+
     def test_harfiyen_boşluk_işareti(self):
         # metindeki HARFİYEN '▁' (U+2581) boşluk tokenıyla karışmaz → bayt kaçışı, geri '▁'
         for metin in ["▁", "a▁b", "SentencePiece ▁ işareti"]:
