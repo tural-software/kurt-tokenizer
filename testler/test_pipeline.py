@@ -74,6 +74,38 @@ class PipelineTest(unittest.TestCase):
                       "max_index(xs)", "Quebec'e gitti"]:
             self.assertEqual(decode(self.enc(metin)), metin, metin)
 
+    def test_casing_koşu_sınırı(self):
+        # koşu sınırı encode'un harf sınıfıyla aynı (_harf_mi): karışık biçim bütün korunur,
+        # harf-dışı karakter (±, kesme) koşuyu bitirir → "AĞé" "AĞÉ" olmaz
+        for metin in ["AĞé", "TÜRKΩ", "Ağaçé", "é ÇOK", "AĞ±ÇOK", "ÉCOLE", "Αθήνα", "МОСКВА"]:
+            self.assertEqual(decode(self.enc(metin)), metin, metin)
+
+    def test_yabancı_harfli_kelime_bütün(self):
+        # Faz 3: tüm Unicode harfleri harf sınıfı → yabancı kelime parçalanıp Türkçe çözülmez
+        # (eskiden Ōsaka → Ō + 'saka' [sakacı], güneĢ → 'güne' + Ģ)
+        from tokenizer.pipeline import BAŞ_BÜYÜK
+        self.assertEqual(self.enc("Ōsaka"), [BAŞ_BÜYÜK, "ōsaka"])
+        self.assertEqual(self.enc("español"), ["español"])
+        self.assertEqual(self.enc("güneĢ"), ["güneĢ"])            # karışık biçim → bütün
+        self.assertEqual(self.enc("Москва"), [BAŞ_BÜYÜK, "москва"])
+        for metin in ["Ōsaka'da", "ṣadı̇̄ḳ", "x̅ = 5", "Muṣliḥ ve Αθήνα", "Москва'ya gitti"]:
+            self.assertEqual(decode(self.enc(metin)), metin, metin)
+
+    def test_değiştirici_kesme(self):
+        # ʼ ʹ kesme olarak kullanılır (harf sınıfı dışı): sonrası EK → hecelenir, kuyruğa girmez
+        q = OnayKuyruğu()
+        self.assertEqual(self.enc("Cumhuriyetʼi", q)[-2:], ["ʼ", "i"])
+        self.assertEqual(self.enc("Kemalʹin", q)[-2:], ["ʹ", "in"])
+        self.assertNotIn("in", [x.kelime for x in q.bekleyenler()])
+        for metin in ["Cumhuriyetʼi", "Kemalʹin", "Batıʼda kaldı"]:
+            self.assertEqual(decode(self.enc(metin)), metin, metin)
+
+    def test_bayt_tokenı(self):
+        from tokenizer.pipeline import bayt_tokenları
+        self.assertEqual(bayt_tokenları("ā"), ["<0xC4>", "<0x81>"])
+        self.assertEqual(decode(["ev", *bayt_tokenları("ā"), "ler"]), "evāler")
+        self.assertEqual(decode(self.enc("a▁b")), "a▁b")          # harfiyen ▁ ≠ boşluk tokenı
+
     def test_zamir_round_trip(self):
         # zamir hibrit: gövde+ek çekimleri ve suppletif istisna uçtan uca kayıpsız
         for metin in ["ben seni gördüm", "bana bunu verdi", "onlar bizden geldi"]:

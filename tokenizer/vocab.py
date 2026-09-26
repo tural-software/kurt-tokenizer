@@ -8,10 +8,10 @@ motorun ürettiği token kümesini DETERMİNİSTİK toplayıp dondurur (BPE gibi
   2. ATOMİK taban       tüm harf (iki büyüklük) + â/î/û + rakam + noktalama  (fallback zemini)
   3. HECE/MORFEM        46k kökün tüm heceleri + ek yüzeyleri + tamponlar + istisna tokenları
 
-Bilinmeyen kelime (sabit vocab'da bütün-token OLAMAZ): HECE→HARF fallback ile atomik
-tabana iner (kayıpsız); "bütün tut" felsefesi onay kuyruğunda korunur (kelime yine
-insana sorulur). Truly-novel karakter (emoji vb.) → <unk> (Aşama 0 sınırı, byte-fallback
-sonraki bir madde).
+Bilinmeyen kelime (sabit vocab'da bütün-token OLAMAZ): HECE→HARF→BAYT fallback ile
+atomik tabana iner (kayıpsız); "bütün tut" felsefesi onay kuyruğunda korunur (kelime yine
+insana sorulur). Vocab'da olmayan karakter (ā, Ω, emoji…) UTF-8 bayt tokenlarına iner
+(Faz 2) → encode_ids hiçbir girdi için <unk> üretmez (<unk> ID 1 model uyumu için durur).
 
 SONA-EKLEME SÖZLEŞMESİ: model her tokenı ID'siyle öğrenir → bir ID'nin anlamı ASLA değişmez.
 Vocab bölümlerden oluşur: v1 (yukarıdaki 1-3, Türkçe çekirdek, 4112, DONMUŞ) + EK_BÖLÜMLER
@@ -30,7 +30,14 @@ from tokenizer import sesler
 from tokenizer.alfabe import ALFABE, alfabetik_anahtar
 from tokenizer.hece import hecele
 from tokenizer.birlestir import birleştir
-from tokenizer.pipeline import encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL
+from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
+                                BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
+                                BOŞLUK_KOŞULARI, ASCII_İŞARET)
+from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
+
+# Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
+# yanlış bırakılırsa bölümleri_ekle tekrar hatası verir → liste kendini denetler).
+_PY_V1_ORTAK = frozenset({"and", "as", "def", "del", "for", "if", "in", "is", "not", "or"})
 
 # Sabit önek: özel tokenlar (ID 0..) — sıra KALICI olmalı (model bağımlılığı).
 ÖZEL_TOKENLAR = ["<pad>", "<unk>", "<s>", "</s>", "<|sistem|>", "<|kullanici|>",
@@ -39,16 +46,94 @@ from tokenizer.pipeline import encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜ
 NOKTALAMA = list(".,;:!?'\"`()[]{}<>-–—/\\|@#$%&*+=~^_°²³…’‘“”«»·•")
 RAKAM = list("0123456789")
 
+# ── Faz 3 karakter aileleri (kaynakların tamamında ölçüldü: 3,18 milyar karakter, 16 kaynak;
+#    eşik ≥1.000 oluşum + ≥3 kaynak, aileler tamamlanır; kullanıcı onaylı). Yalnız KÜÇÜK harf:
+#    büyük harfi casing işaretçisi taşır. Mojibake (Ģ Ġ › ¤ º…) GİRMEZ → bayt + Faz V onarımı.
+_TÜRKOLOJİ = "āīūēōḥḫḳṣṭẓżḍẕŝġñŋķĥïʿʾʽ"      # Osmanlıca/Türkoloji transkripsiyon (oġlı, *beniŋ)
+_TÜRK_DİLLERİ = "əäýňžʻ"                      # Azerbaycan, Türkmen, Özbek
+_KÜRTÇE = "ê"                                  # Kurmancî/Zazaca (î û v1'de)
+_AVRUPA = "éèáàíìóòúùãôøåæßëćčšđśńșɑ"         # özel adlar, dil dersleri, pinyin + IPA ɑ
+_YUNAN = "αβγδεζηθικλμνξοπρσςτυφχψω"          # bilim (α β μ δ…), alfabe tamamlandı
+_BİRLEŞEN = "̇̄̅̂"         # üst nokta, makron, üst çizgi (x̅), şapka
+_MATEMATİK = "±−×÷≠≤≥≈≡≅∼∝∞√∑∏∫∂∇∆∈∉∀∃∅∩∪⊂⊆⊃⊇∠⊥∥∧∨¬⋅∙∘⊕⊗∓∗⋯⟨⟩≪≫ℝℕℤℚℂ"
+_OK = "→←↑↓↔↕⇒⇐⇔↗↘⟶⟹↦"
+_SİMGE = "¹⁰⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿ₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎"      # üst/alt simge tam aile (² ³ v1'de)
+_KESİR = "½¼¾⅓⅔"
+_PARA = "₺€£¥₽₿"                               # $ v1'de
+_MADDE = "●■▪◦○□◆◇►▶◀▲▼△✓✔✗✘✅❌★☆†‡¶"          # liste, onay, şekil (• v1'de)
+_KUTU = "─│┌┐└┘├┤┬┴┼═║█"                       # terminal/kod çıktısı (├── └──)
+_TİPOGRAFİ = "‐‑‒―‖„‚‛′″‰№⁄‿¡¿§©®™℃℉ℓµ"
+_ARAP = ("ابتثجحخدذرزسشصضطظعغفقكلمنهوي"        # 28 temel harf
+         "ءآأإئةى"                              # hemze/elif biçimleri, tâ-i merbûta, elif-i maksûre
+         "یـ"                                   # Fars ye, tatvil
+         "پچژگکڭ"                               # Osmanlı/Fars ek harfleri (sağır kef dahil)
+         "ًَُِّْ"  # hareke: üstün, esre, cezm, ötre, şedde, tenvin
+         "،؟؛")                                 # Arap virgül, soru, noktalı virgül
+_KİRİL = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя" "әғқңөүұһі"   # Rusça + Türk dilleri
+_BİLİM = ("ℏħ∮∯"                                 # fizik: h-bar (ħ ayrıca Arapça transkripsiyon/IPA)
+          "⇌⇀↽⇄⇋"                                # kimya: denge okları
+          "∴∵∎⊢⊨⊤⊻∄"                             # mantık / ispat
+          "∡∢⟂∦⌀"                                # geometri: açı, dik, çap
+          "⋂⋃∖⊊⊋⊄∋∐∬∭"                           # küme / analiz
+          "≃≢≺≻∛∜⌈⌉⌊⌋∣∤"                         # ilişki / işlem: tavan, taban, böler
+          "ℙ𝔼℘ℑℜℵ")                              # olasılık, beklenen değer, özel harfler
+
+
+def _büyük_karşılıklar(küçükler: str) -> list[str]:
+    """Küçük harflerin tek-karakter büyük karşılıkları, ilk görülme sırasıyla, tekrarsız
+    (σ/ς → Σ, μ/µ → Μ tek). Büyüğü olmayanlar (ʿ, birleşen işaret, ß→SS) atlanır."""
+    sonuç: list[str] = []
+    for c in küçükler:
+        b = sesler.türkçe_büyült(c)
+        if len(b) == 1 and b != c and b not in sonuç:
+            sonuç.append(b)
+    return sonuç
+
 # Ek bölümler (ad, tokenlar) — SIRA KALICI; yeni faz yalnız listenin SONUNA bölüm ekler.
 EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # Faz 1 — Türkçe alfabede olmayan Latin harfleri (önceden <unk> → metinden SİLİNİYORDU).
     ("harf-qwx", ["q", "w", "x", "Q", "W", "X"]),
+    # Faz 2 — byte-fallback: <0x00>…<0xFF>. Vocab'da olmayan her karakter bunlara iner.
+    ("bayt", BAYT_TOKENLARI),
+    # Faz 3 — sık gerçek karakterler (bayttan tek tokena): harf, sembol, Arap yazısı, Kiril.
+    ("harf-genis", list(_TÜRKOLOJİ + _TÜRK_DİLLERİ + _KÜRTÇE + _AVRUPA + _YUNAN + _BİRLEŞEN)),
+    ("sembol", list(_MATEMATİK + _OK + _SİMGE + _KESİR + _PARA + _MADDE + _KUTU + _TİPOGRAFİ)),
+    ("arap", list(_ARAP)),
+    ("kiril", list(_KİRİL)),
+    # Faz 3b — bilim sembolleri (alan listelerinden; korpus bilimde zayıf → eşik yok).
+    ("sembol-bilim", list(_BİLİM)),
+    # Faz 3b — büyük harf karşılıkları. Tek başına büyük harfi casing işaretçisi taşır (Ω →
+    # <|Bb|> ω), ama KARIŞIK yazımlı kelime bütün-token kalır ve harf harf fallback'lenir:
+    # "kΩ" → k + Ω → Ω vocab'da yoksa bayta düşüyordu. Latin tabanda iki büyüklük zaten var.
+    ("harf-buyuk", _büyük_karşılıklar(_TÜRKOLOJİ + _TÜRK_DİLLERİ + _KÜRTÇE + _AVRUPA + _YUNAN
+                                      + _TİPOGRAFİ + _KİRİL + _BİLİM)),
+    # Kod K1 — kayıpsız boşluk: satır sonu, sekme, CR + ▁×2…▁×16 girinti/hizalama koşuları.
+    ("kod-bosluk", list(KOD_BOŞLUKLARI) + BOŞLUK_KOŞULARI),
+    # Kod K2 — Python anahtar sözcükleri + çok karakterli operatörler + üçlü tırnak. v1'de Türkçe
+    # hece olarak zaten bulunan 10 anahtar sözcük (and/def/if/in/…) AYNI tokenı paylaşır.
+    ("kod-python", [t for t in PY_ANAHTAR + PY_İŞLEM + PY_TIRNAK if t not in _PY_V1_ORTAK]),
+    # Kod K3a — tanımlayıcı: ASCII casing işaretçileri (Başlık / HEP) + dunder '__'.
+    ("kod-tanimlayici", list(ASCII_İŞARET) + ["__"]),
+    # Kod K3b — kod sözlüğü (veri/kod_sozlugu.json 'yeni'): stdlib + web/veri-ML/SQL/JS-TS/
+    # sistem/test alan listeleri. Yalnız kod kipinde (kod-* → Vocab._yalnız_kod).
+    ("kod-sozluk", list(KOD_SÖZLÜK_YENİ)),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
 DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("v1", 4112, "fd1aa7a47946a3cf36438c61d293e86b59928662e98e5be97331724b988aa4cd"),
     ("harf-qwx", 6, "4977405745b97c2adebb1a215928b87e2e6cd1d4bb246b4259d60eae040513d1"),
+    ("bayt", 256, "5c7fd0e25b2836efc016d0c39612ba381cf25d6d644baba6aa980505e5962cc0"),
+    ("harf-genis", 85, "62ca742eb32a44ac002be39838729eef0cae3ea25cf27bdd2a1069a6ad4ae24c"),
+    ("sembol", 171, "e39b20c04e5a72ee701475751445972ddb7494069140e86434a84c68f3bf8c13"),
+    ("arap", 52, "f965cd13d8d9872862df6128392d2934612a54c35a79279c078bc03e1249367c"),
+    ("kiril", 42, "2789ca16dd0ff9786dddf236b3bec4b73547c9a7de4e9ce17a4950b943156de4"),
+    ("sembol-bilim", 50, "bd3ec86cba4fa61fd1dece2faa37418823ed3e9961cbe990b837c290117eb7aa"),
+    ("harf-buyuk", 118, "1c163979561e895a9ebdfb23c90fd4f77736ae245336c1f90f0adbd97eb7c97c"),
+    ("kod-bosluk", 18, "710a4e2868cb36798f2302116ce5533c9f9ad7d2ecadbe0dad483bfc1c1eb6b9"),
+    ("kod-python", 54, "d794c29ef7654e6994c3b9da0d8847398f6ace4a6db4dc2dc05c493fac747c8d"),
+    ("kod-tanimlayici", 3, "aea3f558a51675552ca961d564536d588d4532b2a631ea6a99d072d804889d96"),
+    ("kod-sozluk", 1511, "109087d4bc0a6ac23e031bc67a40f37c20229ffd16927b8b83b480065fcbae9c"),
 ]
 
 
@@ -161,33 +246,56 @@ class Vocab:
         self.id2tok = id2tok
         self.tok2id = {t: i for i, t in enumerate(id2tok)}
         self._unk = self.tok2id["<unk>"]
+        self._baytlı = BAYT_TOKENLARI[0] in self.tok2id   # v1 vocab'ında bayt tokenı yok
+        # Kod bölümlerinin tokenları YALNIZ kod kipinde: metindeki İngilizce 'from/class' kod
+        # tokenına değil, eskisi gibi harflere iner (kod kalıbı ≠ metin kelimesi). v1'de Türkçe
+        # hece olarak bulunan and/def/if/in… v1 tokenıdır, bu kümeye girmez.
+        self._yalnız_kod = frozenset(self.tok2id[t] for ad, bölüm in EK_BÖLÜMLER
+                                     if ad.startswith("kod-") for t in bölüm if t in self.tok2id)
 
     def __len__(self):
         return len(self.id2tok)
 
-    def _fallback(self, kelime: str) -> list[int]:
-        """Bilinmeyen bütün-token → hece, vocab'da yoksa harf, o da yoksa <unk>."""
+    def _id(self, t: str, kip: str) -> int | None:
+        """Tokenın ID'si; metin kipinde kod bölümü tokenı yok sayılır (None)."""
+        tid = self.tok2id.get(t)
+        if tid is not None and kip != "kod" and tid in self._yalnız_kod:
+            return None
+        return tid
+
+    def _fallback(self, kelime: str, kip: str = "metin") -> list[int]:
+        """Bilinmeyen bütün-token → hece, vocab'da yoksa harf, o da yoksa UTF-8 baytları
+        (bayt bölümü olmayan eski vocab'da son çare <unk>)."""
         ids: list[int] = []
         for hece in hecele(kelime):
-            if hece in self.tok2id:
-                ids.append(self.tok2id[hece])
-            else:
-                ids.extend(self.tok2id.get(ch, self._unk) for ch in hece)
+            tid = self._id(hece, kip)
+            if tid is not None:
+                ids.append(tid)
+                continue
+            for ch in hece:
+                tid = self.tok2id.get(ch)
+                if tid is not None:
+                    ids.append(tid)
+                elif self._baytlı:
+                    ids.extend(self.tok2id[t] for t in bayt_tokenları(ch))
+                else:
+                    ids.append(self._unk)
         return ids
 
     def encode_ids(self, metin, kökler, ekler, istisnalar=None, kuyruk=None,
-                   önbellek=None) -> list[int]:
+                   önbellek=None, kip: str = "metin", dil: str | None = None) -> list[int]:
         """Metin → ID dizisi. Bilinen token doğrudan; bilinmeyen bütün-token fallback'lenir.
-        önbellek: büyük korpus için kelime-memoization (encode'a iletilir)."""
+        önbellek: büyük korpus için kelime-memoization (encode'a iletilir). kip: "metin"|"kod";
+        dil: yalnız kod kipinde (ör. "python")."""
         ids: list[int] = []
-        for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek):
-            tid = self.tok2id.get(t)
-            ids.append(tid) if tid is not None else ids.extend(self._fallback(t))
+        for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil):
+            tid = self._id(t, kip)
+            ids.append(tid) if tid is not None else ids.extend(self._fallback(t, kip))
         return ids
 
-    def decode_ids(self, ids) -> str:
+    def decode_ids(self, ids, kip: str = "metin") -> str:
         """ID dizisi → metin (casing/▁/özel tokenlar pipeline.decode ile çözülür)."""
-        return decode([self.id2tok[i] for i in ids])
+        return decode([self.id2tok[i] for i in ids], kip)
 
     def kaydet(self, yol: str | Path) -> None:
         Path(yol).write_text(json.dumps({"id2tok": self.id2tok}, ensure_ascii=False),

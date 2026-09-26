@@ -13,18 +13,59 @@ Seçim politikası (kullanıcı kararı): BÜTÜN-KÖK → en az token → öbek
 from __future__ import annotations
 
 import itertools
+import re
+import unicodedata
 
 from tokenizer import alfabe, sesler
 from tokenizer.cozumle import çözümle
 from tokenizer.hece import hecele
+from tokenizer.kod import DİLLER, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜĞÜ, tanımlayıcı_böl
 
 BOŞLUK = "▁"
-KESME = ("'", "’")   # düz ve sağ-tek-tırnak (İstanbul'da / İstanbul'da)
+# düz ve sağ-tek-tırnak (İstanbul'da / İstanbul’da) + kesme olarak kullanılan değiştirici
+# harfler (vocab Faz 3): ʼ U+02BC (Cumhuriyetʼi), ʹ U+02B9 (Kemalʹin) — harf sınıfı DIŞI.
+KESME = ("'", "’", "ʼ", "ʹ")
 BAŞ_BÜYÜK = "<|Bb|>"   # sonraki kelime Başlık-biçimi (ilk harf büyük): Bugün
 HEP_BÜYÜK = "<|BB|>"   # sonraki kelime HEP BÜYÜK: TÜRK
 PAD, UNK, BOS, EOS = "<pad>", "<unk>", "<s>", "</s>"
 ÖZEL = {PAD, UNK, BOS, EOS, "<|sistem|>", "<|kullanici|>", "<|asistan|>", "<|bitis|>"}
 BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKETİLİR, atılmaz)
+
+# Kod kipi (K1): boşluk kayıpsız. Satır sonu/sekme/CR harfiyen token; boşluk koşusu ▁×n
+# (n ≤ EN_UZUN_BOŞLUK; tek boşluk metin kipindeki ▁ ile aynı token). Metin kipi bunların
+# hiçbirini üretmez (split) ve metindeki harfiyen ▁ bayta kaçar → karışma yok.
+KİPLER = ("metin", "kod")
+KOD_BOŞLUKLARI = ("\n", "\t", "\r")
+EN_UZUN_BOŞLUK = 16
+BOŞLUK_KOŞULARI = [BOŞLUK * n for n in range(2, EN_UZUN_BOŞLUK + 1)]   # vocab bölümü (▁ v1'de)
+_BOŞLUK_KOŞULARI = frozenset([BOŞLUK, *BOŞLUK_KOŞULARI])
+_BOŞLUK_AYIR = re.compile(r"(\s+)")
+_KOD_BÜTÜN = frozenset(PY_İŞLEM + PY_TIRNAK + ("__",))   # dil kipinde bütün token (anahtar hariç)
+
+# Kod kipi tanımlayıcı casing'i (K3): ASCII kuralı (str.upper; i→I, İ değil). Yalnız kod kipi.
+ASCII_BAŞ, ASCII_HEP = "<|Ab|>", "<|AA|>"
+ASCII_İŞARET = (ASCII_BAŞ, ASCII_HEP)
+
+# Bayt tokenları (vocab Faz 2): vocab'da olmayan HER karakter UTF-8 baytlarına iner → hiçbir
+# girdi <unk> üretmez. Tüm 0x00-0xFF (UTF-8'in hiç üretmediği baytlar dahil → tablo tam, basit).
+# encode metinden asla '<0x..>' biçiminde TEK token çıkarmaz (harf-dışı karakterler tek tek
+# tokenlanır) → bayt tokenı her zaman kaçış demektir, metinle karışmaz.
+BAYT_TOKENLARI = [f"<0x{b:02X}>" for b in range(256)]
+_BAYT = {t: b for b, t in enumerate(BAYT_TOKENLARI)}
+
+
+def bayt_tokenları(s: str) -> list[str]:
+    """Metnin UTF-8 bayt tokenları (tek başına vekil/surrogate da çökmez: surrogatepass)."""
+    return [BAYT_TOKENLARI[b] for b in s.encode("utf-8", "surrogatepass")]
+
+
+def _bayt_çöz(baytlar) -> str:
+    """Bayt koşusu → metin. Kodlayıcının ürettiği koşu her zaman çözülür (vekil dahil);
+    geçersiz koşu (ör. model çıktısı) çökmez → U+FFFD."""
+    try:
+        return bytes(baytlar).decode("utf-8", "surrogatepass")
+    except UnicodeDecodeError:
+        return bytes(baytlar).decode("utf-8", "replace")
 
 # Türkçe alfabe + büyük harfler + düzeltme imli ünlüler (â/î/û: hikâye, kâğıt, rüzgâr).
 # Düzeltme imli ünlüler kelimeyi BÖLMEMELİ (aksi halde "hikâye"→hik+â+ye yanlış bölünür);
@@ -34,6 +75,18 @@ BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKE
 # kelime motorca parçalanamaz: bilinmeyen-BÜTÜN (onay kuyruğu), vocab'da hece→harf fallback.
 _HARFLER = (set(alfabe.ALFABE) | set("ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ") | set("âîûÂÎÛ")
             | set("qwxQWX"))
+
+
+def _harf_mi(c: str) -> bool:
+    """Harf sınıfı (kelime sınırı): Türkçe harfler + q/w/x + TÜM Unicode harfleri ve birleşen
+    işaretler (vocab Faz 3), kesme gibi kullanılan ʼ ʹ hariç. Yabancı harfli kelime BÖLÜNMEZ:
+    eskiden 'Ōsaka' → Ō + 'saka' (Türkçe çözülüyordu!). Hiçbir kök/ek/istisna Türkçe dışı harf
+    içermez → böyle bir kelime motorca parçalanamaz: bilinmeyen-BÜTÜN, vocab'da fallback."""
+    if c in _HARFLER:
+        return True
+    if c in KESME:
+        return False
+    return c.isalpha() or unicodedata.category(c)[0] == "M"
 
 
 def _harf_durumu(kelime, küçük):
@@ -95,7 +148,7 @@ def en_iyi_çözüm(çözümler, kökler, ekler):
 
 def _altbirimler(parça):
     """Bir parçayı harf (kelime) ve harf-dışı (noktalama) koşularına ayırır."""
-    for harf_mi, grup in itertools.groupby(parça, key=lambda c: c in _HARFLER):
+    for harf_mi, grup in itertools.groupby(parça, key=_harf_mi):
         yield "".join(grup), bool(harf_mi)
 
 
@@ -109,72 +162,208 @@ def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam):
     return [kelime], True                        # BÜTÜN tut
 
 
-def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None) -> list[str]:
+def boşluk_tokenları(koşu: str) -> list[str]:
+    """Kod kipinde bir boşluk koşusunun tokenları (kayıpsız). Satır sonu/sekme/CR kendi
+    tokenı; boşluk koşusu en uzun ▁-koşusu tokenından başlayarak açgözlü (16 → 1). Diğer
+    boşluk karakterleri (NBSP, \\f, \\v…) kendisi döner → vocab'da bayt yedeğine iner."""
+    tokenlar: list[str] = []
+    for boşluk_mu, grup in itertools.groupby(koşu, key=lambda c: c == " "):
+        g = "".join(grup)
+        if not boşluk_mu:
+            tokenlar.extend(g)                   # \n \t \r (ya da bayta inecek nadir boşluk)
+            continue
+        n = len(g)
+        while n:
+            k = min(n, EN_UZUN_BOŞLUK)
+            tokenlar.append(BOŞLUK * k)
+            n -= k
+    return tokenlar
+
+
+def _kod_dil_ekle(parçalar, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin):
+    """Dil lexer'ının (tür, metin) parçalarını tokenlar (K2).
+
+    anahtar / çok karakterli işlem / üçlü tırnak → BÜTÜN token (vocab kod-python bölümü).
+    metin (yorum, string içeriği) → boşluk kayıpsız + Türkçe hat; bilinmeyen kelime kuyruğa.
+    ad / sayı / önek / tek karakter → Türkçe hattın parça işlemesi, KUYRUKSUZ (tanımlayıcılar
+    onay kuyruğunu İngilizce adlarla doldurmasın; K3'te tanımlayıcı bölme gelecek)."""
+    for tür, s in parçalar:
+        if tür == "boşluk":
+            tokenlar.extend(boşluk_tokenları(s))
+        elif tür == "anahtar" or s in _KOD_BÜTÜN:
+            tokenlar.append(s)
+        elif tür == "metin":
+            for i, p in enumerate(_BOŞLUK_AYIR.split(s)):
+                if i % 2:
+                    tokenlar.extend(boşluk_tokenları(p))
+                elif p:
+                    _parça_ekle(p, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
+        elif tür == "ad":
+            _ad_ekle(s, tokenlar, kökler, ekler, istisnalar, önbellek, metin)
+        else:
+            _parça_ekle(s, tokenlar, kökler, ekler, istisnalar, None, önbellek, metin)
+
+
+def _ad_ekle(ad, tokenlar, kökler, ekler, istisnalar, önbellek, metin):
+    """Tanımlayıcı (K3): tanımlayıcı_böl parçaları; ASCII parça ASCII casing kuralıyla (kullanıcı
+    kararı: getItem → get <|Ab|> item, 'ıtem' DEĞİL), Türkçe/Unicode parça Türkçe hatla. Kuyruksuz.
+
+    DEĞİŞMEZ (decode doğruluğu): camel sınırı yalnız BÜYÜK harften önce düşer → ilk parçadan
+    sonraki her harf parçası büyük harfle başlar ve KENDİ işaretçisini taşır; önceki parçanın
+    HEP koşusu (HTTP) işaretsiz küçük parçaya taşamaz. Karışık parça (HTTPs) bütün kalır.
+    test_tanımlayıcı_rastgele bunu rastgele tanımlayıcılarla kilitler."""
+    for p in tanımlayıcı_böl(ad):
+        if not p[0].isalpha():                   # '_' / rakam: casing koşusunu zaten bitirir
+            tokenlar.append(p) if p in _KOD_BÜTÜN else _parça_ekle(
+                p, tokenlar, kökler, ekler, istisnalar, None, önbellek, metin)
+            continue
+        if p.isascii():
+            küçük = p.lower()
+            işaret = (None if p == küçük else ASCII_BAŞ if p == küçük.capitalize()
+                      else ASCII_HEP if p == p.upper() else "düz")
+        else:
+            küçük = sesler.türkçe_küçült(p)
+            işaret = _harf_durumu(p, küçük)
+        if işaret == "düz":                      # karışık parça (HTTPs) → bütün, casing'siz
+            _parça_ekle(p, tokenlar, kökler, ekler, istisnalar, None, önbellek, metin)
+            continue
+        if işaret:
+            tokenlar.append(işaret)
+        if p.isascii():
+            # ASCII parça Türkçe MOTORA GİRMEZ (ilke #1): İngilizce parça sahte bölünüyordu
+            # (size → siz+e, time → tim+e, sort → sor+t; stdlib'de 46 parça/4.877 oluşum).
+            # Kod sözlüğü → yoksa hece (Türkçe ASCII ad 'kok_bul' yine v1 hecelerine iner).
+            tokenlar.extend([küçük] if küçük in KOD_SÖZLÜĞÜ else hecele(küçük))
+        else:
+            _parça_ekle(küçük, tokenlar, kökler, ekler, istisnalar, None, önbellek, metin)
+
+
+def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None,
+           kip: str = "metin", dil: str | None = None) -> list[str]:
     """Metni token dizisine çevirir.
+
+    kip "metin" (varsayılan, Türkçe metin hattı): boşluk dizileri tek ▁'ye iner (kurt-veri
+    normalleştirmesiyle uyumlu). kip "kod": boşluk, satır sonu ve girinti KAYIPSIZ korunur
+    (boşluk_tokenları); boşluk dışı her parça metin hattıyla aynı işlenir. Kip AÇIKÇA verilir,
+    tahmin edilmez (ilke #3). dil (yalnız kod kipinde, ör. "python"): o dilin lexer'ı ile
+    anahtar sözcük/operatör bütün token, yorum/string Türkçe hat (_kod_dil_ekle).
 
     önbellek (opsiyonel dict): {küçük_kelime: token_listesi} — büyük korpusta (Aşama 1)
     aynı kelimeyi tekrar çözmemek için memoization. Deterministik (aynı kelime hep aynı
     token); yalnız hız. kuyruk yan-etkisi ilk görülüşte işler (kuyruk zaten tekilleştirir)."""
+    if kip not in KİPLER:
+        raise ValueError(f"bilinmeyen kip: {kip!r} (geçerli: {', '.join(KİPLER)})")
+    if dil is not None and (kip != "kod" or dil not in DİLLER):
+        raise ValueError(f"dil yalnız kod kipinde ve şunlardan biri: {', '.join(DİLLER)} ({dil!r})")
     tokenlar: list[str] = []
+    if dil is not None:
+        _kod_dil_ekle(DİLLER[dil](metin), tokenlar, kökler, ekler, istisnalar, kuyruk,
+                      önbellek, metin)
+        return tokenlar
+    if kip == "kod":
+        for i, parça in enumerate(_BOŞLUK_AYIR.split(metin)):
+            if i % 2:                            # tek indeks = boşluk koşusu
+                tokenlar.extend(boşluk_tokenları(parça))
+            elif parça:
+                _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
+        return tokenlar
     for i, parça in enumerate(metin.split()):
         if i > 0:
             tokenlar.append(BOŞLUK)
-        önceki_kesme = False                     # bir önceki altbirim kesme ile mi bitti?
-        for altbirim, kelime_mi in _altbirimler(parça):
-            if not kelime_mi:                    # noktalama: her karakter ayrı token
-                tokenlar.extend(altbirim)
-                önceki_kesme = altbirim[-1] in KESME
-                continue
-            if önceki_kesme:
-                # Kesme sonrası harf-koşusu = EK (özel ad/akronim/sayı eki: İstanbul'da,
-                # Ahmet'in, 2024'te) → hecele, BİLİNMEYEN kuyruğuna atma. Küçük harf eki
-                # olduğu gibi hecelenir; büyük harfli (nadir) bütün/harf-fallback kalır.
-                tokenlar.extend(hecele(altbirim))
-                önceki_kesme = False
-                continue
-            küçük = sesler.türkçe_küçült(altbirim)
-            durum = _harf_durumu(altbirim, küçük)
-            if durum == "düz":                   # karışık biçim → bütün-token, koru
-                tokenlar.append(altbirim)
-                continue
-            if durum:                            # casing işaretçisi (Başlık / HEP BÜYÜK)
-                tokenlar.append(durum)
-            if önbellek is not None and küçük in önbellek:
-                _tk, _bilinmeyen = önbellek[küçük]
-                if _bilinmeyen and kuyruk is not None:   # isabet'te de kuyruğa al (frekans doğru)
-                    kuyruk.ekle(küçük, metin)
-                tokenlar.extend(_tk)
-                continue
-            _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin)
-            if önbellek is not None:
-                önbellek[küçük] = (_tk, _bilinmeyen)
-            tokenlar.extend(_tk)
+        _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
     return tokenlar
 
 
-def decode(tokenlar) -> str:
+def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin):
+    """Boşluk içermeyen bir parçanın tokenlarını ekler (iki kipte ortak)."""
+    önceki_kesme = False                         # bir önceki altbirim kesme ile mi bitti?
+    for altbirim, kelime_mi in _altbirimler(parça):
+        if not kelime_mi:                        # noktalama: her karakter ayrı token
+            for c in altbirim:                   # HARFİYEN '▁' boşluk tokenıyla karışmasın → bayt
+                tokenlar.extend(bayt_tokenları(c) if c == BOŞLUK else c)
+            önceki_kesme = altbirim[-1] in KESME
+            continue
+        if önceki_kesme:
+            # Kesme sonrası harf-koşusu = EK (özel ad/akronim/sayı eki: İstanbul'da,
+            # Ahmet'in, 2024'te) → hecele, BİLİNMEYEN kuyruğuna atma. Küçük harf eki
+            # olduğu gibi hecelenir; büyük harfli (nadir) bütün/harf-fallback kalır.
+            tokenlar.extend(hecele(altbirim))
+            önceki_kesme = False
+            continue
+        küçük = sesler.türkçe_küçült(altbirim)
+        durum = _harf_durumu(altbirim, küçük)
+        if durum == "düz":                       # karışık biçim → bütün-token, koru
+            tokenlar.append(altbirim)
+            continue
+        if durum:                                # casing işaretçisi (Başlık / HEP BÜYÜK)
+            tokenlar.append(durum)
+        if önbellek is not None and küçük in önbellek:
+            _tk, _bilinmeyen = önbellek[küçük]
+            if _bilinmeyen and kuyruk is not None:   # isabet'te de kuyruğa al (frekans doğru)
+                kuyruk.ekle(küçük, metin)
+            tokenlar.extend(_tk)
+            continue
+        _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin)
+        if önbellek is not None:
+            önbellek[küçük] = (_tk, _bilinmeyen)
+        tokenlar.extend(_tk)
+
+
+def decode(tokenlar, kip: str = "metin") -> str:
     """Token dizisini metne geri çevirir (özel tokenları atar, ▁→boşluk, casing uygular).
 
+    kip "kod": baş/son boşluk KIRPILMAZ (girinti ve son satır sonu koddur); ▁-koşusu tokenı
+    o kadar boşluk, satır sonu/sekme/CR harfiyen. Boşluk casing koşusunu bitirir (iki kipte).
+
     Casing işaretçisi yalnız KENDİNDEN SONRAKİ harf-koşusuna uygulanır; noktalama (ör.
-    kesme) ya da boşluk koşuyu bitirir → "TBMM'de" ALLCAPS yalnız TBMM'ye, 'de eke değil."""
+    kesme) ya da boşluk koşuyu bitirir → "TBMM'de" ALLCAPS yalnız TBMM'ye, 'de eke değil.
+    Koşu sınırı encode'unkiyle AYNI ölçüttür (_harf_mi): encode'da harf-dışı olan her karakter
+    (noktalama, sembol, kesme) koşuyu bitirir → casing yalnız işaretçinin ait olduğu kelimeye.
+
+    Bayt tokenları: ardışık koşu UTF-8 çözülür ve HARFİYEN metin olur (asla boşluk/özel token
+    sayılmaz: metindeki '▁' geri '▁' döner); casing ona da aynı ölçütle uygulanır."""
     sonuç: list[str] = []
     durum = None                                 # bekleyen casing işaretçisi
+    baytlar = bytearray()
+
+    def metin_ekle(t):
+        nonlocal durum
+        for parça, harf_mi in _altbirimler(t):
+            if not harf_mi:                      # noktalama/rakam: casing koşusunu bitir
+                durum = None
+                sonuç.append(parça)
+            elif durum == ASCII_HEP:
+                sonuç.append(parça.upper())
+            elif durum == ASCII_BAŞ:
+                sonuç.append(parça[:1].upper() + parça[1:]); durum = None
+            elif durum == HEP_BÜYÜK:
+                sonuç.append(sesler.türkçe_büyült(parça))     # koşu boyunca sürer
+            elif durum == BAŞ_BÜYÜK:
+                sonuç.append(sesler.türkçe_başlık(parça)); durum = None   # yalnız ilk token
+            else:
+                sonuç.append(parça)
+
     for t in tokenlar:
-        if t in BÜYÜK:
+        b = _BAYT.get(t)
+        if b is not None:
+            baytlar.append(b)
+            continue
+        if baytlar:
+            metin_ekle(_bayt_çöz(baytlar))
+            baytlar.clear()
+        if t in BÜYÜK or t in ASCII_İŞARET:
             durum = t
-        elif t == BOŞLUK:
-            sonuç.append(" ")
+        elif t in _BOŞLUK_KOŞULARI:
+            sonuç.append(" " * len(t))
+            durum = None
+        elif t in KOD_BOŞLUKLARI:
+            sonuç.append(t)
             durum = None
         elif t in ÖZEL:
             continue
-        elif any(c.isalpha() for c in t):        # harf-içeren token: casing uygula
-            if durum == HEP_BÜYÜK:
-                sonuç.append(sesler.türkçe_büyült(t))     # koşu boyunca sürer
-            elif durum == BAŞ_BÜYÜK:
-                sonuç.append(sesler.türkçe_başlık(t)); durum = None   # yalnız ilk token
-            else:
-                sonuç.append(t)
-        else:                                    # noktalama/rakam: casing koşusunu bitir
-            durum = None
-            sonuç.append(t)
-    return "".join(sonuç).strip()
+        else:
+            metin_ekle(t)
+    if baytlar:
+        metin_ekle(_bayt_çöz(baytlar))
+    çıktı = "".join(sonuç)
+    return çıktı if kip == "kod" else çıktı.strip()
