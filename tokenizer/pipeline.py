@@ -29,7 +29,11 @@ BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKE
 # Türkçe alfabe + büyük harfler + düzeltme imli ünlüler (â/î/û: hikâye, kâğıt, rüzgâr).
 # Düzeltme imli ünlüler kelimeyi BÖLMEMELİ (aksi halde "hikâye"→hik+â+ye yanlış bölünür);
 # harf sayılır, kelime bütün tutulur (kök eşleşmezse bilinmeyen-bütün, round-trip korunur).
-_HARFLER = set(alfabe.ALFABE) | set("ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ") | set("âîûÂÎÛ")
+# q/w/x (vocab Faz 1): Türkçe alfabede yok ama Latin metinde yaygın (Windows, XIV, max_index);
+# harf sayılır → kelimeyi bölmez. Hiçbir kök/ek/istisna q/w/x içermez → bu harfi taşıyan
+# kelime motorca parçalanamaz: bilinmeyen-BÜTÜN (onay kuyruğu), vocab'da hece→harf fallback.
+_HARFLER = (set(alfabe.ALFABE) | set("ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ") | set("âîûÂÎÛ")
+            | set("qwxQWX"))
 
 
 def _harf_durumu(kelime, küçük):
@@ -75,11 +79,17 @@ def en_iyi_çözüm(çözümler, kökler, ekler):
     biçimler kök değildir (X-ebilme #6-ihlalleri temizlendi) → yalnız LEKSİK eşsesli (deneyim/
     gelecek/açacak/yedi/gelir) etkilenir; bileşimsel biçimler (geleceğim=gel+ecek+im) kök
     DEĞİL → etkilenmez. Parçalanma-berabere eşsesli (baksın) bu bonusla çözülmez (ikisi de
-    ek alır) → 'en uzun kök' politikası karar verir (belgeli sınır)."""
+    ek alır) → 'en uzun kök' politikası karar verir (belgeli sınır).
+
+    SON KIRICI (tam sıra): politika eşit bıraktığında token dizisi → kök → ek adları sözlük
+    sırası. Olmazsa seçim çözümlerin SIRASINA, o da PYTHONHASHSEED'e bağlı kalır (paralel
+    hatta işçiden işçiye farklı çıktı). Örn. resmin: resim+tamlayan [re,sm,in] ile
+    resmi+iyelik_2tekil [res,mi,n] tüm ölçütlerde berabere → [re,sm,in]."""
     return min(
         çözümler,
         key=lambda ç: (0 if not ç.ekler else 1, len(ç.tokens),
-                       _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök)),
+                       _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök),
+                       tuple(ç.tokens), ç.kök, tuple(ç.ekler)),
     )
 
 
