@@ -31,7 +31,8 @@ from tokenizer.alfabe import ALFABE, alfabetik_anahtar
 from tokenizer.hece import hecele
 from tokenizer.birlestir import birleştir
 from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
-                                BAYT_TOKENLARI, bayt_tokenları)
+                                BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
+                                BOŞLUK_KOŞULARI)
 
 # Sabit önek: özel tokenlar (ID 0..) — sıra KALICI olmalı (model bağımlılığı).
 ÖZEL_TOKENLAR = ["<pad>", "<unk>", "<s>", "</s>", "<|sistem|>", "<|kullanici|>",
@@ -101,6 +102,8 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # "kΩ" → k + Ω → Ω vocab'da yoksa bayta düşüyordu. Latin tabanda iki büyüklük zaten var.
     ("harf-buyuk", _büyük_karşılıklar(_TÜRKOLOJİ + _TÜRK_DİLLERİ + _KÜRTÇE + _AVRUPA + _YUNAN
                                       + _TİPOGRAFİ + _KİRİL + _BİLİM)),
+    # Kod K1 — kayıpsız boşluk: satır sonu, sekme, CR + ▁×2…▁×16 girinti/hizalama koşuları.
+    ("kod-bosluk", list(KOD_BOŞLUKLARI) + BOŞLUK_KOŞULARI),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -114,6 +117,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("kiril", 42, "2789ca16dd0ff9786dddf236b3bec4b73547c9a7de4e9ce17a4950b943156de4"),
     ("sembol-bilim", 50, "bd3ec86cba4fa61fd1dece2faa37418823ed3e9961cbe990b837c290117eb7aa"),
     ("harf-buyuk", 118, "1c163979561e895a9ebdfb23c90fd4f77736ae245336c1f90f0adbd97eb7c97c"),
+    ("kod-bosluk", 18, "710a4e2868cb36798f2302116ce5533c9f9ad7d2ecadbe0dad483bfc1c1eb6b9"),
 ]
 
 
@@ -250,18 +254,18 @@ class Vocab:
         return ids
 
     def encode_ids(self, metin, kökler, ekler, istisnalar=None, kuyruk=None,
-                   önbellek=None) -> list[int]:
+                   önbellek=None, kip: str = "metin") -> list[int]:
         """Metin → ID dizisi. Bilinen token doğrudan; bilinmeyen bütün-token fallback'lenir.
-        önbellek: büyük korpus için kelime-memoization (encode'a iletilir)."""
+        önbellek: büyük korpus için kelime-memoization (encode'a iletilir). kip: "metin"|"kod"."""
         ids: list[int] = []
-        for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek):
+        for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip):
             tid = self.tok2id.get(t)
             ids.append(tid) if tid is not None else ids.extend(self._fallback(t))
         return ids
 
-    def decode_ids(self, ids) -> str:
+    def decode_ids(self, ids, kip: str = "metin") -> str:
         """ID dizisi → metin (casing/▁/özel tokenlar pipeline.decode ile çözülür)."""
-        return decode([self.id2tok[i] for i in ids])
+        return decode([self.id2tok[i] for i in ids], kip)
 
     def kaydet(self, yol: str | Path) -> None:
         Path(yol).write_text(json.dumps({"id2tok": self.id2tok}, ensure_ascii=False),
