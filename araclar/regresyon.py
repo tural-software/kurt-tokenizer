@@ -16,7 +16,8 @@ karsilastir  güncel tokenizer'la aynı ölçümü yapar (--hedef-kayiplilar: re
              karakterler hedefe eklenir — kayıp gideren fazlar için; --hedef-baytlilar: referansta
              BAYTLA kodlanan tüm karakterler — bayttan tek tokena / harf sınıfına alan fazlar için;
              --hedef-yeni-tokenlar: yeni kodlaması referanstan sonra eklenen çok karakterli bir
-             tokenı içeren parça da geçerli — çok karakterli token ekleyen fazlar için, ör. kod-python).
+             tokenı içeren parça da geçerli — metin kipine açık çok karakterli token ekleyen fazlar
+             için; kod-* bölümleri metin kipinde kullanılmaz, onlarda muafiyet GEREKMEZ).
              KAPILAR (hepsi geçmeli):
   1. değişen her parça --hedef karakterlerinden en az birini içerir
   2. yeni kayıplı parça yok        (kayıplı_sonra ⊆ kayıplı_önce)
@@ -90,8 +91,8 @@ def kaydet(örnek: Path, referans: Path) -> None:
 def karşılaştır(örnek: Path, referans: Path, hedef: str, kayıplılar: bool = False,
                 baytlılar: bool = False, yeni_tokenlar: bool = False) -> bool:
     """yeni_tokenlar: referanstan sonra eklenen çok karakterli tokenlar da hedeftir — değişen parça,
-    yeni kodlaması bu tokenlardan birini içeriyorsa geçerli (ör. kod-python 'from' metindeki
-    İngilizce 'from'u harf-harf yerine tek tokenla yakalar)."""
+    yeni kodlaması bu tokenlardan birini içeriyorsa geçerli. Metin kipine AÇIK bölümler için
+    (kod-* bölümleri metin kipinde zaten kullanılmaz; orada kapı bu muafiyet olmadan geçmeli)."""
     önce = json.loads(referans.read_text(encoding="utf-8"))
     sonra = _ölç(örnek)
     yeni_idler: set[int] = set()

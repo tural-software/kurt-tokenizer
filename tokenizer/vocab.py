@@ -240,17 +240,30 @@ class Vocab:
         self.tok2id = {t: i for i, t in enumerate(id2tok)}
         self._unk = self.tok2id["<unk>"]
         self._baytlı = BAYT_TOKENLARI[0] in self.tok2id   # v1 vocab'ında bayt tokenı yok
+        # Kod bölümlerinin tokenları YALNIZ kod kipinde: metindeki İngilizce 'from/class' kod
+        # tokenına değil, eskisi gibi harflere iner (kod kalıbı ≠ metin kelimesi). v1'de Türkçe
+        # hece olarak bulunan and/def/if/in… v1 tokenıdır, bu kümeye girmez.
+        self._yalnız_kod = frozenset(self.tok2id[t] for ad, bölüm in EK_BÖLÜMLER
+                                     if ad.startswith("kod-") for t in bölüm if t in self.tok2id)
 
     def __len__(self):
         return len(self.id2tok)
 
-    def _fallback(self, kelime: str) -> list[int]:
+    def _id(self, t: str, kip: str) -> int | None:
+        """Tokenın ID'si; metin kipinde kod bölümü tokenı yok sayılır (None)."""
+        tid = self.tok2id.get(t)
+        if tid is not None and kip != "kod" and tid in self._yalnız_kod:
+            return None
+        return tid
+
+    def _fallback(self, kelime: str, kip: str = "metin") -> list[int]:
         """Bilinmeyen bütün-token → hece, vocab'da yoksa harf, o da yoksa UTF-8 baytları
         (bayt bölümü olmayan eski vocab'da son çare <unk>)."""
         ids: list[int] = []
         for hece in hecele(kelime):
-            if hece in self.tok2id:
-                ids.append(self.tok2id[hece])
+            tid = self._id(hece, kip)
+            if tid is not None:
+                ids.append(tid)
                 continue
             for ch in hece:
                 tid = self.tok2id.get(ch)
@@ -269,8 +282,8 @@ class Vocab:
         dil: yalnız kod kipinde (ör. "python")."""
         ids: list[int] = []
         for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil):
-            tid = self.tok2id.get(t)
-            ids.append(tid) if tid is not None else ids.extend(self._fallback(t))
+            tid = self._id(t, kip)
+            ids.append(tid) if tid is not None else ids.extend(self._fallback(t, kip))
         return ids
 
     def decode_ids(self, ids, kip: str = "metin") -> str:

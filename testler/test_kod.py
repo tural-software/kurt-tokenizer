@@ -137,6 +137,18 @@ class PythonK2Test(unittest.TestCase):
             _, geri = self.py_gidip_gel(kod)
             self.assertEqual(geri, kod, str(yol))
 
+    def test_kod_tokenı_yalnız_kod_kipinde(self):
+        # 'from' kodda anahtar sözcük (tek token), Türkçe metinde İngilizce kelime (harf harf)
+        kid = self.v.tok2id["from"]
+        metin = self.v.encode_ids("Veriler from ve class ile", self.k, self.e, self.i)
+        self.assertNotIn(kid, metin)
+        self.assertNotIn(self.v.tok2id["class"], metin)
+        self.assertEqual(self.v.decode_ids(metin), "Veriler from ve class ile")
+        kod = self.v.encode_ids("from x import y", self.k, self.e, self.i, kip="kod", dil="python")
+        self.assertIn(kid, kod)
+        # v1'deki ortak heceler (if/in/def) metin kipinde eskisi gibi kullanılır
+        self.assertIn(self.v.tok2id["if"], self.v.encode_ids("if", self.k, self.e, self.i))
+
     def test_tanımlayıcı_kuyruğa_girmez(self):
         from tokenizer.onay import OnayKuyruğu
         q = OnayKuyruğu()
