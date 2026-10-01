@@ -29,7 +29,9 @@ Bilinmeyen kelime kayıpsız biçimde hece→harf'e iner; "bütün tut" felsefes
 - **~44.500 kök** (TDK tabanlı), 74 ek, **4.112 token'lık donmuş vocab**.
 - Türkçe morfofonolojisi: ünlü uyumu, ünsüz yumuşaması (t→d, k→ğ, p→b, ç→c),
   ünlü düşmesi, kaynaştırma/tampon sesler — hepsi kural tabanlı.
-- **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): `decode(encode(x)) == x`.
+- **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): metin kipinde
+  `decode(encode(x)) == metin_kanonik(x)` — satır içi boşluk tek boşluğa iner, **satır sonları ve
+  paragraflar (boş satır) korunur**; kod kipinde (`kip="kod"`) boşluk dahil birebir `x`.
 - Harf büyüklüğü casing işaretçileriyle taşınır (Türkçe-duyarlı: İ↔i, I↔ı).
 
 ## Kurulum

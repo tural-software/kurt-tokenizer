@@ -65,11 +65,14 @@ class KodKipiTest(unittest.TestCase):
             _, geri = self.gidip_gel(kod)
             self.assertEqual(geri, kod, str(yol))
 
-    def test_metin_kipi_değişmedi(self):
-        # metin kipi boşluğu hâlâ tek ▁'ye indirir ve baş/son kırpar (kurt-veri uyumu)
-        t = encode("  ev\n\n  araba  ", self.k, self.e, self.i)
+    def test_metin_kipi_boşluk(self):
+        # metin kipi satır içi boşluğu tek ▁'ye indirir, baş/son kırpar; satır sonu korunur
+        t = encode("  ev  araba  ", self.k, self.e, self.i)
         self.assertEqual(t, ["ev", BOŞLUK, "a", "ra", "ba"])
         self.assertEqual(decode(t), "ev araba")
+        t = encode("  ev\n\n  araba  ", self.k, self.e, self.i)
+        self.assertEqual(t, ["ev", "\n", "\n", "a", "ra", "ba"])
+        self.assertEqual(decode(t), "ev\n\naraba")
 
     def test_bilinmeyen_kip(self):
         with self.assertRaises(ValueError):
