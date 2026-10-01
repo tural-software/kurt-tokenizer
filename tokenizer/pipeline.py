@@ -32,10 +32,15 @@ PAD, UNK, BOS, EOS = "<pad>", "<unk>", "<s>", "</s>"
 BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKETİLİR, atılmaz)
 
 # Kod kipi (K1): boşluk kayıpsız. Satır sonu/sekme/CR harfiyen token; boşluk koşusu ▁×n
-# (n ≤ EN_UZUN_BOŞLUK; tek boşluk metin kipindeki ▁ ile aynı token). Metin kipi bunların
-# hiçbirini üretmez (split) ve metindeki harfiyen ▁ bayta kaçar → karışma yok.
+# (n ≤ EN_UZUN_BOŞLUK; tek boşluk metin kipindeki ▁ ile aynı token). Metin kipi bunlardan
+# YALNIZ satır sonunu üretir (SATIR); sekme/CR/boşluk koşusu tek ▁'ye iner, metindeki harfiyen
+# ▁ bayta kaçar → karışma yok.
 KİPLER = ("metin", "kod")
 KOD_BOŞLUKLARI = ("\n", "\t", "\r")
+# Metin kipinde satır yapısı: satır sonu = "\n" tokenı (kod-bosluk bölümündeki AYNI token, yeni
+# token yok); paragraf = boş satır = iki "\n". Satır içi boşluk tek ▁; satır başı/sonu boşluğu
+# atılır. Model paragraf/liste/dize ayırmayı ön eğitimden öğrenir.
+SATIR = "\n"
 EN_UZUN_BOŞLUK = 16
 BOŞLUK_KOŞULARI = [BOŞLUK * n for n in range(2, EN_UZUN_BOŞLUK + 1)]   # vocab bölümü (▁ v1'de)
 _BOŞLUK_KOŞULARI = frozenset([BOŞLUK, *BOŞLUK_KOŞULARI])
@@ -242,7 +247,9 @@ def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None,
            kip: str = "metin", dil: str | None = None) -> list[str]:
     """Metni token dizisine çevirir.
 
-    kip "metin" (varsayılan, Türkçe metin hattı): boşluk dizileri tek ▁'ye iner (kurt-veri
+    kip "metin" (varsayılan, Türkçe metin hattı): satır içi boşluk dizileri tek ▁'ye iner, satır
+    sonları "\n" tokenı olarak KORUNUR (boş satır = paragraf = iki "\n"); satır başı/sonu boşluğu
+    ve metnin baş/son boş satırları atılır → decode(encode(x)) == metin_kanonik(x) (kurt-veri
     normalleştirmesiyle uyumlu). kip "kod": boşluk, satır sonu ve girinti KAYIPSIZ korunur
     (boşluk_tokenları); boşluk dışı her parça metin hattıyla aynı işlenir. Kip AÇIKÇA verilir,
     tahmin edilmez (ilke #3). dil (yalnız kod kipinde, ör. "python"): o dilin lexer'ı ile
@@ -267,11 +274,32 @@ def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None,
             elif parça:
                 _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
         return tokenlar
-    for i, parça in enumerate(metin.split()):
-        if i > 0:
-            tokenlar.append(BOŞLUK)
-        _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
+    for j, satır in enumerate(_satırlar(metin)):
+        if j > 0:
+            tokenlar.append(SATIR)
+        for i, parça in enumerate(satır.split()):
+            if i > 0:
+                tokenlar.append(BOŞLUK)
+            _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
     return tokenlar
+
+
+def _satırlar(metin: str) -> list[str]:
+    """Metin kipi satırları: "\n" ile bölünür (\r\n/\r önce \n olur); baştaki ve sondaki boş
+    satırlar atılır. Boşluktan ibaret satır boş satırdır (paragraf ayırıcı)."""
+    satırlar = metin.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    while satırlar and not satırlar[0].strip():
+        satırlar.pop(0)
+    while satırlar and not satırlar[-1].strip():
+        satırlar.pop()
+    return satırlar
+
+
+def metin_kanonik(metin: str) -> str:
+    """Metin kipinin geri verdiği biçim: decode(encode(x)) == metin_kanonik(x). Satır içi boşluk
+    tek boşluk, satır başı/sonu boşluğu yok, satır sonları ve boş satırlar korunur, metnin baş/son
+    boş satırları atılır."""
+    return "\n".join(" ".join(s.split()) for s in _satırlar(metin))
 
 
 def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin):

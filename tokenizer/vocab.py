@@ -32,7 +32,7 @@ from tokenizer.hece import hecele
 from tokenizer.birlestir import birleştir
 from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
-                                BOŞLUK_KOŞULARI, ASCII_İŞARET)
+                                BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR)
 from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
 
 # Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
@@ -249,9 +249,11 @@ class Vocab:
         self._baytlı = BAYT_TOKENLARI[0] in self.tok2id   # v1 vocab'ında bayt tokenı yok
         # Kod bölümlerinin tokenları YALNIZ kod kipinde: metindeki İngilizce 'from/class' kod
         # tokenına değil, eskisi gibi harflere iner (kod kalıbı ≠ metin kelimesi). v1'de Türkçe
-        # hece olarak bulunan and/def/if/in… v1 tokenıdır, bu kümeye girmez.
+        # hece olarak bulunan and/def/if/in… v1 tokenıdır, bu kümeye girmez. Satır sonu (SATIR)
+        # da girmez: hiçbir metin kelimesiyle karışmaz, metin kipi onu satır yapısı için üretir.
         self._yalnız_kod = frozenset(self.tok2id[t] for ad, bölüm in EK_BÖLÜMLER
-                                     if ad.startswith("kod-") for t in bölüm if t in self.tok2id)
+                                     if ad.startswith("kod-") for t in bölüm
+                                     if t in self.tok2id and t != SATIR)
 
     def __len__(self):
         return len(self.id2tok)
