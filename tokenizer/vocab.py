@@ -32,7 +32,7 @@ from tokenizer.hece import hecele
 from tokenizer.birlestir import birleştir
 from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
-                                BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR)
+                                BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR, LATEX_TOKENLARI)
 from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
 
 # Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
@@ -77,6 +77,9 @@ _BİLİM = ("ℏħ∮∯"                                 # fizik: h-bar (ħ ayr
           "⋂⋃∖⊊⊋⊄∋∐∬∭"                           # küme / analiz
           "≃≢≺≻∛∜⌈⌉⌊⌋∣∤"                         # ilişki / işlem: tavan, taban, böler
           "ℙ𝔼℘ℑℜℵ")                              # olasılık, beklenen değer, özel harfler
+_ÜST_ALT_HARF = ("ₐₑₒₓₔₕₖₗₘₙₚₛₜᵢⱼᵣᵤᵥᵦᵧᵨᵩᵪ"            # alt simge harfler (Latin + Yunan)
+                 "ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐᵒᵖʳˢᵗᵘᵛʷˣʸᶻᵝᵞᵟᶿᵠᵡ")  # üst simge harfler (ⁿ 'sembol'de)
+_MATEMATİK_SÖZCÜK = ("cos", "cot")              # sin/tan/sec/log/ln/lim/exp/det v1'de
 
 
 def _büyük_karşılıklar(küçükler: str) -> list[str]:
@@ -117,6 +120,14 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # Kod K3b — kod sözlüğü (veri/kod_sozlugu.json 'yeni'): stdlib + web/veri-ML/SQL/JS-TS/
     # sistem/test alan listeleri. Yalnız kod kipinde (kod-* → Vocab._yalnız_kod).
     ("kod-sozluk", list(KOD_SÖZLÜK_YENİ)),
+    # Matematik — üst/alt simge değiştirici harfler (aᵐ, Eₖ, xᵢⱼ; ⁿ 'sembol'de) + ‴ + birleşen
+    # vektör oku (v⃗). Harf sınıfı DIŞI (pipeline._üst_alt_simge_mi) → önceki harfe yapışmaz.
+    ("sembol-matematik2", list(_ÜST_ALT_HARF + "‴⃗")),
+    # Matematik — LaTeX komutları (\frac, \Delta…), ters bölü dahil; yalnız metin kipi.
+    ("latex", LATEX_TOKENLARI),
+    # Matematik — v1'de olmayan işlev adları. Yalnız BÜTÜN sözcük olarak (bilinmeyen 'cos'):
+    # hece yedeğinde kullanılmaz (Vocab._yalnız_bütün) → 'coskun' gibi sözcükler değişmez.
+    ("matematik-sozcuk", list(_MATEMATİK_SÖZCÜK)),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -134,6 +145,9 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("kod-python", 54, "d794c29ef7654e6994c3b9da0d8847398f6ace4a6db4dc2dc05c493fac747c8d"),
     ("kod-tanimlayici", 3, "aea3f558a51675552ca961d564536d588d4532b2a631ea6a99d072d804889d96"),
     ("kod-sozluk", 1511, "109087d4bc0a6ac23e031bc67a40f37c20229ffd16927b8b83b480065fcbae9c"),
+    ("sembol-matematik2", 55, "a2ff1beaa4b0e0718a7293f68845884eaf84a878018e6eab60ebf74cd1655e00"),
+    ("latex", 102, "2336c23eb1a5a01f72eb449e8beed6e1a44541fe3794208ddacff465c7ad93e0"),
+    ("matematik-sozcuk", 2, "923883cb54c3d93703e272598b085b6099713e2fed2d09c93c41cf2250ddac95"),
 ]
 
 
@@ -254,6 +268,9 @@ class Vocab:
         self._yalnız_kod = frozenset(self.tok2id[t] for ad, bölüm in EK_BÖLÜMLER
                                      if ad.startswith("kod-") for t in bölüm
                                      if t in self.tok2id and t != SATIR)
+        # Bütün-sözcük tokenları (matematik-sozcuk): hece yedeğinde kullanılmaz.
+        self._yalnız_bütün = frozenset(self.tok2id[t] for t in _MATEMATİK_SÖZCÜK
+                                       if t in self.tok2id)
 
     def __len__(self):
         return len(self.id2tok)
@@ -271,7 +288,7 @@ class Vocab:
         ids: list[int] = []
         for hece in hecele(kelime):
             tid = self._id(hece, kip)
-            if tid is not None:
+            if tid is not None and tid not in self._yalnız_bütün:
                 ids.append(tid)
                 continue
             for ch in hece:

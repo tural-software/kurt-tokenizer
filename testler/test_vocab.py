@@ -155,6 +155,27 @@ class VocabTest(unittest.TestCase):
                     pass
         self.assertEqual(kaçan, set(), f"vocab'da olmayan morfem tokenlar: {sorted(kaçan)[:20]}")
 
+    def test_matematik_sembol_latex(self):
+        # Üst/alt simge harfleri sembol (önceki harfe yapışmaz), LaTeX komutu tek token,
+        # cos/cot yalnız bütün sözcük; Türkoloji imleri (ʻ ʿ) harf kalır. Hepsi kayıpsız.
+        def tk(m):
+            ids = self.v.encode_ids(m, self.k, self.e, self.i)
+            self.assertEqual(self.v.decode_ids(ids), m, m)
+            return [self.v.id2tok[x] for x in ids]
+        self.assertEqual(tk("aᵐ·aⁿ"), ["a", "ᵐ", "·", "a", "ⁿ"])
+        self.assertEqual(tk("Eₖ"), ["<|Bb|>", "e", "ₖ"])
+        self.assertEqual(tk("xᵢⱼ"), ["x", "ᵢ", "ⱼ"])
+        self.assertEqual(tk("\\frac{1}{2}")[0], "\\frac")
+        self.assertIn("\\Delta", tk("\\sqrt{\\Delta}"))
+        self.assertNotIn("\\frac", tk("\\fracx \\\\frac"))
+        self.assertEqual(tk("cos"), ["cos"])
+        self.assertNotIn("cos", tk("coskun"))
+        self.assertIn("ʻ", tk("oʻzbek"))
+        for m in ["\\frac{a}{b}", "x\\nu y", "\\Delta=b²−4ac"]:   # kod kipinde LaTeX birleşmez
+            ids = self.v.encode_ids(m, self.k, self.e, self.i, kip="kod")
+            self.assertEqual(self.v.decode_ids(ids, "kod"), m)
+            self.assertFalse({self.v.id2tok[x] for x in ids} & {"\\frac", "\\nu", "\\Delta"})
+
     def test_bilinmeyen_fallback(self):
         # bilinmeyen kelime hece→harf fallback ile kayıpsız temsil edilir
         ids = self.v.encode_ids("zürümpülat geldi", self.k, self.e, self.i)
