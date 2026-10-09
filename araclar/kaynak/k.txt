@@ -1666,7 +1666,7 @@ kardiyoskopi|isim|
 kardırma|isim|
 kare|isim|
 karekod|isim|
-karekök|isim|k→ğ
+karekök|isim|
 kareleme|isim|
 karfiçe|isim|
 karga|isim|
@@ -4529,7 +4529,7 @@ küpe|isim|
 küpeli|isim|
 küpelik|isim|k→ğ
 küpeşte|isim|
-küpkök|isim|k→ğ
+küpkök|isim|
 küpleme|isim|
 küpleği|isim|
 küplü|isim|
@@ -5030,7 +5030,7 @@ kızılkantaron|isim|
 kızılkantarongiller|isim|
 kızılkurt|isim|
 kızılkuyruk|isim|k→ğ
-kızılkök|isim|k→ğ
+kızılkök|isim|
 kızıllaşma|isim|
 kızıllık|isim|k→ğ
 kızılma|isim|
