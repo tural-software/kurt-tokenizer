@@ -1499,3 +1499,4 @@ eşkıyaca|zarf|
 eşli|zarf|
 ekonomik|sıfat|
 etnik|sıfat|
+ertesi|isim|

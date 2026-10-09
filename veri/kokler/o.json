@@ -229,6 +229,7 @@
   "olagel": {"tokens": ["o", "la", "gel"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "olağan": {"tokens": ["o", "la", "ğan"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "olanak": {"tokens": ["o", "la", "nak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "olası": {"tokens": ["o", "la", "sı"], "tür": "sıfat", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
   "olayaz": {"tokens": ["o", "la", "yaz"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "olaycık": {"tokens": ["o", "lay", "cık"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "oldukça": {"tokens": ["ol", "duk", "ça"], "tür": "zarf", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},

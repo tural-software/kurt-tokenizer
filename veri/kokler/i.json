@@ -607,7 +607,7 @@
   "insülin": {"tokens": ["in", "sü", "lin"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "inşaat": {"tokens": ["in", "şa", "at"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "inşirah": {"tokens": ["in", "şi", "rah"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
-  "integral": {"tokens": ["in", "teg", "ral"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "integral": {"tokens": ["in", "teg", "ral"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "ince": true},
   "internet": {"tokens": ["in", "ter", "net"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "internship": {"tokens": ["in", "terns", "hip"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"p→b": "ünlü_ile_başlayan_ek_gelince"}},
   "intiba": {"tokens": ["in", "ti", "ba"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},

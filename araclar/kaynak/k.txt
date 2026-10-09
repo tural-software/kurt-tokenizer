@@ -60,7 +60,7 @@ körükle|fiil|
 köstekle|fiil|
 kucaklaş|fiil|
 kokuş|fiil|
-kaç|fiil|
+kaç|fiil||isim
 kal|fiil|
 kan|isim|
 kar|isim|
@@ -682,7 +682,7 @@ kürü|fiil|
 küskünleş|fiil|
 küstahlaş|fiil|
 küsüş|fiil|
-kütle|fiil|
+kütle|fiil||isim
 kütleş|fiil|
 kütükleş|fiil|
 kütürde|fiil|
@@ -2667,7 +2667,7 @@ kesinme|isim|
 kesinsizlik|isim|k→ğ
 kesinti|isim|
 kesintisizlik|isim|k→ğ
-kesir|isim|
+kesir|isim|düşen
 kesit|isim|
 kesiverme|isim|
 kesişim|isim|
@@ -5246,3 +5246,4 @@ kürt|sıfat|
 küresel|sıfat|
 karmaşık|sıfat|
 kültürel|sıfat|
+kısmi|sıfat|

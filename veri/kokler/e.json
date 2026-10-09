@@ -674,6 +674,7 @@
   "erseme": {"tokens": ["er", "se", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "ersizlik": {"tokens": ["er", "siz", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "ertele": {"tokens": ["er", "te", "le"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
+  "ertesi": {"tokens": ["er", "te", "si"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "esame": {"tokens": ["e", "sa", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "esami": {"tokens": ["e", "sa", "mi"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "esaret": {"tokens": ["e", "sa", "ret"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},

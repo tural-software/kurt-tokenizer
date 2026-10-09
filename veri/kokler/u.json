@@ -585,6 +585,7 @@
   "uzlaştırılma": {"tokens": ["uz", "laş", "tı", "rıl", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "ufunetlendirme": {"tokens": ["u", "fu", "net", "len", "dir", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "ulusallaştırma": {"tokens": ["u", "lu", "sal", "laş", "tır", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "uluslararası": {"tokens": ["u", "lus", "la", "ra", "ra", "sı"], "tür": "sıfat", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
   "umarsızcasına": {"tokens": ["u", "mar", "sız", "ca", "sı", "na"], "tür": "zarf", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "umarsızlaştırma": {"tokens": ["u", "mar", "sız", "laş", "tır", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "umumileştirme": {"tokens": ["u", "mu", "mi", "leş", "tir", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},

@@ -1769,3 +1769,4 @@ gıcıkça|zarf|
 gırla|zarf|
 gıyaben|zarf|
 gıyabında|zarf|
+geometrik|sıfat|

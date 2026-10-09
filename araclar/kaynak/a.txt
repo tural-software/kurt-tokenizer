@@ -3266,3 +3266,5 @@ aşksız|zarf|
 aşısız|zarf|
 alman|sıfat|
 antik|sıfat|
+asal|sıfat|
+asidik|sıfat|

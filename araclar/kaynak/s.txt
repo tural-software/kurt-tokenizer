@@ -427,7 +427,7 @@ sobele|fiil|
 softalaş|fiil|
 sokran|fiil|
 sokuş|fiil|
-sol|fiil|
+sol|fiil||isim
 solgunlaş|fiil|
 solla|fiil|
 solu|fiil|
@@ -3568,3 +3568,4 @@ sırp|sıfat|
 slav|sıfat|
 sosyal|sıfat|
 sabit|sıfat|
+skaler|sıfat|

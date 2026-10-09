@@ -34,6 +34,7 @@
   "mis": {"tokens": ["mis"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "misk": {"tokens": ["misk"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "mit": {"tokens": ["mit"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "mol": {"tokens": ["mol"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "mont": {"tokens": ["mont"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "mor": {"tokens": ["mor"], "tür": "sıfat", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "morg": {"tokens": ["morg"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},

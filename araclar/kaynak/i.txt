@@ -868,7 +868,7 @@ intan|isim|
 intaniye|isim|
 intaniyeci|isim|
 intaç|isim|ç→c
-integral|isim|
+integral|isim|ince
 integralleme|isim|
 integrasyon|isim|
 intelijans|isim|

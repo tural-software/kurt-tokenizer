@@ -259,7 +259,7 @@ yarlıga|fiil|
 yarmala|fiil|
 yarıla|fiil|
 yarımla|fiil|
-yasa|fiil|
+yasa|fiil||isim
 yasalaş|fiil|
 yasallaş|fiil|
 yasla|fiil|
@@ -792,7 +792,7 @@ yarımlama|isim|
 yarımlık|isim|k→ğ
 yarıntı|isim|
 yarıyıl|isim|
-yarıçap|isim|p→b
+yarıçap|isim|
 yarışlık|isim|k→ğ
 yarışma|isim|
 yarışmacılık|isim|k→ğ

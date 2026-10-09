@@ -2750,3 +2750,4 @@ mosmor|sıfat|
 macar|sıfat|
 müslüman|sıfat|
 modern|sıfat|
+mol|isim|

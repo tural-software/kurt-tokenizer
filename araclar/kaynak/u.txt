@@ -624,3 +624,4 @@ uçkursuz|zarf|
 uğrun|zarf|
 uğrunda|zarf|
 uğursuzca|zarf|
+uluslararası|sıfat|
