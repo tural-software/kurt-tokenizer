@@ -598,3 +598,4 @@
 öğleyin|zarf|
 öğleüstü|zarf|
 öğleüzeri|zarf|
+özkütle|isim|

@@ -4,7 +4,7 @@
   "çal": {"tokens": ["çal"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "çam": {"tokens": ["çam"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "çan": {"tokens": ["çan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
-  "çap": {"tokens": ["çap"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "çap": {"tokens": ["çap"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
   "çar": {"tokens": ["çar"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "çark": {"tokens": ["çark"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "çarp": {"tokens": ["çarp"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},

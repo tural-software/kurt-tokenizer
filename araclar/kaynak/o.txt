@@ -862,3 +862,4 @@ oyuncuktan|zarf|
 oğulsuz|zarf|
 orijinal|sıfat|
 osmanlı|sıfat|
+olası|sıfat|

@@ -47,7 +47,7 @@ bel|isim|
 bez|isim|
 biç|fiil|
 bil|fiil|
-bin|fiil|
+bin|fiil||isim
 bir|sıfat|
 bit|fiil|
 boş|sıfat|
@@ -3379,3 +3379,5 @@ bomboş|sıfat|
 bulgar|sıfat|
 belirli|sıfat|
 birleşik|sıfat|
+bazik|sıfat|
+binom|isim|

@@ -25,6 +25,20 @@ BOŞLUK = "▁"
 # düz ve sağ-tek-tırnak (İstanbul'da / İstanbul’da) + kesme olarak kullanılan değiştirici
 # harfler (vocab Faz 3): ʼ U+02BC (Cumhuriyetʼi), ʹ U+02B9 (Kemalʹin) — harf sınıfı DIŞI.
 KESME = ("'", "’", "ʼ", "ʹ")
+# LaTeX komutları (metin kipi, vocab bölümü 'latex'): ters bölü DAHİL tek token (\frac, \Delta).
+# Büyük/küçük harf komutun parçasıdır (\Delta ≠ \delta) → casing işaretçisi kullanılmaz.
+LATEX_KOMUTLARI = (
+    "frac dfrac cdot times div sqrt left right "
+    "alpha beta gamma delta epsilon varepsilon zeta eta theta lambda mu nu xi pi rho sigma tau "
+    "phi varphi chi psi omega Gamma Delta Theta Lambda Sigma Phi Omega "
+    "infty sum prod int iint oint lim to leq geq neq approx equiv pm mp partial nabla "
+    "vec hat bar overline mathbb mathrm mathbf text begin end pmatrix bmatrix vmatrix cases "
+    "sin cos tan cot sec csc log ln exp det min max quad cdots ldots "
+    "in notin subset subseteq cup cap emptyset forall exists "
+    "rightarrow Rightarrow leftrightarrow Leftrightarrow mapsto circ angle perp parallel degree"
+).split()
+LATEX_TOKENLARI = ["\\" + k for k in LATEX_KOMUTLARI]
+_LATEX = frozenset(LATEX_TOKENLARI)
 BAŞ_BÜYÜK = "<|Bb|>"   # sonraki kelime Başlık-biçimi (ilk harf büyük): Bugün
 HEP_BÜYÜK = "<|BB|>"   # sonraki kelime HEP BÜYÜK: TÜRK
 PAD, UNK, BOS, EOS = "<pad>", "<unk>", "<s>", "</s>"
@@ -91,7 +105,20 @@ def _harf_mi(c: str) -> bool:
         return True
     if c in KESME:
         return False
-    return c.isalpha() or unicodedata.category(c)[0] == "M"
+    kategori = unicodedata.category(c)
+    if kategori == "Lm" and _üst_alt_simge_mi(c):
+        return False
+    return c.isalpha() or kategori[0] == "M"
+
+
+def _üst_alt_simge_mi(c: str) -> bool:
+    """Üst/alt simge DEĞİŞTİRİCİ harfi mi (ᵐ ⁿ ⁱ ₖ ᵢ ⱼ ᵝ ʰ ˣ…)? Bunlar harf değil SEMBOLDÜR (² ₃
+    gibi): 'aⁿ', 'Eₖ', 'xᵢⱼ' önceki harfe yapışıp bilinmeyen kelime olmamalı. Yalnız Unicode adı
+    SUBSCRIPT/SUPERSCRIPT ya da 'MODIFIER LETTER SMALL/CAPITAL <harf>' olanlar; Türkoloji/Türk
+    dilleri imleri (ʻ TURNED COMMA, ʿ ʾ HALF RING, ʽ REVERSED COMMA) bu adlara uymaz → harf kalır."""
+    ad = unicodedata.name(c, "")
+    return ("SUBSCRIPT" in ad or "SUPERSCRIPT" in ad
+            or ad.startswith(("MODIFIER LETTER SMALL ", "MODIFIER LETTER CAPITAL ")))
 
 
 def _harf_durumu(kelime, küçük):
@@ -280,7 +307,8 @@ def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None,
         for i, parça in enumerate(satır.split()):
             if i > 0:
                 tokenlar.append(BOŞLUK)
-            _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin)
+            _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin,
+                        latex=True)
     return tokenlar
 
 
@@ -302,10 +330,29 @@ def metin_kanonik(metin: str) -> str:
     return "\n".join(" ".join(s.split()) for s in _satırlar(metin))
 
 
-def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin):
-    """Boşluk içermeyen bir parçanın tokenlarını ekler (iki kipte ortak)."""
+def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin,
+                latex=False):
+    """Boşluk içermeyen bir parçanın tokenlarını ekler (iki kipte ortak).
+
+    latex (yalnız metin kipi): ters bölü + TAM komut adı (\\frac, \\Delta) tek token. Ters bölü
+    koşusu TEK sayıda olmalı (\\\\frac = satır sonu komutu + düz 'frac') ve harf koşusu komut adına
+    BİREBİR eşit olmalı (\\fracx, \\Frac komut değil → eskisi gibi). Kod kipinde kapalı: Python
+    dizgesindeki '\\nu' kaçış dizisidir, LaTeX değil."""
     önceki_kesme = False                         # bir önceki altbirim kesme ile mi bitti?
-    for altbirim, kelime_mi in _altbirimler(parça):
+    altbirimler = list(_altbirimler(parça))
+    atla = False
+    for j, (altbirim, kelime_mi) in enumerate(altbirimler):
+        if atla:
+            atla = False
+            continue
+        if (latex and not kelime_mi and altbirim.endswith("\\") and j + 1 < len(altbirimler)
+                and "\\" + altbirimler[j + 1][0] in _LATEX
+                and (len(altbirim) - len(altbirim.rstrip("\\"))) % 2):
+            for c in altbirim[:-1]:
+                tokenlar.extend(bayt_tokenları(c) if c == BOŞLUK else c)
+            tokenlar.append("\\" + altbirimler[j + 1][0])
+            önceki_kesme, atla = False, True
+            continue
         if not kelime_mi:                        # noktalama: her karakter ayrı token
             for c in altbirim:                   # HARFİYEN '▁' boşluk tokenıyla karışmasın → bayt
                 tokenlar.extend(bayt_tokenları(c) if c == BOŞLUK else c)

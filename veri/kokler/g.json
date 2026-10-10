@@ -1200,6 +1200,7 @@
   "genleştirme": {"tokens": ["gen", "leş", "tir", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "geodezi": {"tokens": ["ge", "o", "de", "zi"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "geometri": {"tokens": ["ge", "o", "met", "ri"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "geometrik": {"tokens": ["ge", "o", "met", "rik"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "geoteknik": {"tokens": ["ge", "o", "tek", "nik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "gerçekçilik": {"tokens": ["ger", "çek", "çi", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "gerçekleme": {"tokens": ["ger", "çek", "le", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},

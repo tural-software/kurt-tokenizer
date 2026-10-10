@@ -333,6 +333,7 @@
   "özgürleş": {"tokens": ["öz", "gür", "leş"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "özgürlük": {"tokens": ["öz", "gür", "lük"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "özişler": {"tokens": ["ö", "ziş", "ler"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "özkütle": {"tokens": ["öz", "küt", "le"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "özleme": {"tokens": ["öz", "le", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "özleniş": {"tokens": ["öz", "le", "niş"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "özlenme": {"tokens": ["öz", "len", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},

@@ -18,7 +18,7 @@ hışırda|fiil|
 hıçkır|fiil|
 harca|fiil|
 hak|isim|
-hal|isim|
+hal|isim|ince
 ham|sıfat|
 han|isim|
 harç|isim|ç→c
@@ -324,7 +324,7 @@ hacamatçı|isim|
 hacamatçılık|isim|k→ğ
 haccetme|isim|
 hacet|isim|
-hacim|isim|
+hacim|isim|düşen
 hacimlilik|isim|k→ğ
 hacimsiz|isim|
 hacimsizlik|isim|k→ğ

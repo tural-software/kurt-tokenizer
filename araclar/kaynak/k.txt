@@ -60,7 +60,7 @@ körükle|fiil|
 köstekle|fiil|
 kucaklaş|fiil|
 kokuş|fiil|
-kaç|fiil|
+kaç|fiil||isim
 kal|fiil|
 kan|isim|
 kar|isim|
@@ -682,7 +682,7 @@ kürü|fiil|
 küskünleş|fiil|
 küstahlaş|fiil|
 küsüş|fiil|
-kütle|fiil|
+kütle|fiil||isim
 kütleş|fiil|
 kütükleş|fiil|
 kütürde|fiil|
@@ -1666,7 +1666,7 @@ kardiyoskopi|isim|
 kardırma|isim|
 kare|isim|
 karekod|isim|
-karekök|isim|k→ğ
+karekök|isim|
 kareleme|isim|
 karfiçe|isim|
 karga|isim|
@@ -2667,7 +2667,7 @@ kesinme|isim|
 kesinsizlik|isim|k→ğ
 kesinti|isim|
 kesintisizlik|isim|k→ğ
-kesir|isim|
+kesir|isim|düşen
 kesit|isim|
 kesiverme|isim|
 kesişim|isim|
@@ -4529,7 +4529,7 @@ küpe|isim|
 küpeli|isim|
 küpelik|isim|k→ğ
 küpeşte|isim|
-küpkök|isim|k→ğ
+küpkök|isim|
 küpleme|isim|
 küpleği|isim|
 küplü|isim|
@@ -5030,7 +5030,7 @@ kızılkantaron|isim|
 kızılkantarongiller|isim|
 kızılkurt|isim|
 kızılkuyruk|isim|k→ğ
-kızılkök|isim|k→ğ
+kızılkök|isim|
 kızıllaşma|isim|
 kızıllık|isim|k→ğ
 kızılma|isim|
@@ -5246,3 +5246,4 @@ kürt|sıfat|
 küresel|sıfat|
 karmaşık|sıfat|
 kültürel|sıfat|
+kısmi|sıfat|
