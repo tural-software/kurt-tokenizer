@@ -34,6 +34,7 @@ from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜY�
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
                                 BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR, LATEX_TOKENLARI)
 from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
+from tokenizer.dil import PROFİLLER, DOĞAL_DİLLER
 
 # Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
 # yanlış bırakılırsa bölümleri_ekle tekrar hatası verir → liste kendini denetler).
@@ -253,10 +254,16 @@ def _v1_kur(kökler, ekler, istisnalar) -> list[str]:
     return ÖZEL_TOKENLAR + atom + sıralı_morfem
 
 
+def dil_bölümü(ad: str) -> str | None:
+    """Bölüm bir doğal dile mi ait? '<dil>-…' önekli bölüm (az-1, az-2…) → dil kodu, yoksa None."""
+    dil = ad.split("-", 1)[0]
+    return dil if "-" in ad and dil in DOĞAL_DİLLER else None
+
+
 class Vocab:
     """Token ↔ ID; ID-düzeyi encode/decode (mevcut pipeline'ı sarar)."""
 
-    def __init__(self, id2tok: list[str]):
+    def __init__(self, id2tok: list[str], bölümler=None):
         self.id2tok = id2tok
         self.tok2id = {t: i for i, t in enumerate(id2tok)}
         self._unk = self.tok2id["<unk>"]
@@ -265,9 +272,16 @@ class Vocab:
         # tokenına değil, eskisi gibi harflere iner (kod kalıbı ≠ metin kelimesi). v1'de Türkçe
         # hece olarak bulunan and/def/if/in… v1 tokenıdır, bu kümeye girmez. Satır sonu (SATIR)
         # da girmez: hiçbir metin kelimesiyle karışmaz, metin kipi onu satır yapısı için üretir.
-        self._yalnız_kod = frozenset(self.tok2id[t] for ad, bölüm in EK_BÖLÜMLER
+        bölümler = EK_BÖLÜMLER if bölümler is None else bölümler
+        self._yalnız_kod = frozenset(self.tok2id[t] for ad, bölüm in bölümler
                                      if ad.startswith("kod-") for t in bölüm
                                      if t in self.tok2id and t != SATIR)
+        # Dil bölümlerinin (az-1…) tokenları YALNIZ o dilin metin kipinde: Türkçe metin kipi ve kod
+        # kipi bunları hiç üretemez (yedek hecede de) → Türkçe çıktı dil eklense de birebir aynı.
+        # Var olan (Türkçe/ortak) tokenlar her dilde açıktır: AZ 'ev', 'lar' aynı ID'yi kullanır.
+        self._dil_izni: dict[int, frozenset[str]] = {
+            self.tok2id[t]: frozenset({dil}) for ad, bölüm in bölümler
+            if (dil := dil_bölümü(ad)) for t in bölüm if t in self.tok2id}
         # Bütün-sözcük tokenları (matematik-sozcuk): hece yedeğinde kullanılmaz.
         self._yalnız_bütün = frozenset(self.tok2id[t] for t in _MATEMATİK_SÖZCÜK
                                        if t in self.tok2id)
@@ -275,19 +289,25 @@ class Vocab:
     def __len__(self):
         return len(self.id2tok)
 
-    def _id(self, t: str, kip: str) -> int | None:
-        """Tokenın ID'si; metin kipinde kod bölümü tokenı yok sayılır (None)."""
+    def _id(self, t: str, kip: str, dil: str | None = None) -> int | None:
+        """Tokenın ID'si; metin kipinde kod bölümü tokenı, o dilin metin kipi dışında dil bölümü
+        tokenı yok sayılır (None)."""
         tid = self.tok2id.get(t)
         if tid is not None and kip != "kod" and tid in self._yalnız_kod:
             return None
+        if tid is not None and self._dil_izni:
+            izin = self._dil_izni.get(tid)
+            if izin is not None and (kip != "metin" or dil not in izin):
+                return None
         return tid
 
-    def _fallback(self, kelime: str, kip: str = "metin") -> list[int]:
-        """Bilinmeyen bütün-token → hece, vocab'da yoksa harf, o da yoksa UTF-8 baytları
-        (bayt bölümü olmayan eski vocab'da son çare <unk>)."""
+    def _fallback(self, kelime: str, kip: str = "metin", dil: str | None = None) -> list[int]:
+        """Bilinmeyen bütün-token → hece (dilin ünlüleriyle), vocab'da yoksa harf, o da yoksa
+        UTF-8 baytları (bayt bölümü olmayan eski vocab'da son çare <unk>)."""
         ids: list[int] = []
-        for hece in hecele(kelime):
-            tid = self._id(hece, kip)
+        profil = PROFİLLER[dil] if kip == "metin" and dil in DOĞAL_DİLLER else None
+        for hece in hecele(kelime, profil):
+            tid = self._id(hece, kip, dil)
             if tid is not None and tid not in self._yalnız_bütün:
                 ids.append(tid)
                 continue
@@ -305,11 +325,12 @@ class Vocab:
                    önbellek=None, kip: str = "metin", dil: str | None = None) -> list[int]:
         """Metin → ID dizisi. Bilinen token doğrudan; bilinmeyen bütün-token fallback'lenir.
         önbellek: büyük korpus için kelime-memoization (encode'a iletilir). kip: "metin"|"kod";
-        dil: yalnız kod kipinde (ör. "python")."""
+        dil: kod kipinde programlama dili (ör. "python"), metin kipinde doğal dil (ör. "az";
+        None = Türkçe) — o zaman kökler/ekler/istisnalar o dilin verisidir."""
         ids: list[int] = []
         for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil):
-            tid = self._id(t, kip)
-            ids.append(tid) if tid is not None else ids.extend(self._fallback(t, kip))
+            tid = self._id(t, kip, dil)
+            ids.append(tid) if tid is not None else ids.extend(self._fallback(t, kip, dil))
         return ids
 
     def decode_ids(self, ids, kip: str = "metin") -> str:

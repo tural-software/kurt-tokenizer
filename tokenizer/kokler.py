@@ -32,7 +32,7 @@ class ŞemaHatası(Exception):
         )
 
 
-def _girdi_işle(ad, girdi, sözlük, hatalar, görülen, kaynak):
+def _girdi_işle(ad, girdi, sözlük, hatalar, görülen, kaynak, profil=None):
     """Tek bir kök girdisini işler; geçerliyse sözlüğe ekler, değilse hata toplar."""
     if ad in görülen:
         hatalar.append(
@@ -63,15 +63,15 @@ def _girdi_işle(ad, girdi, sözlük, hatalar, görülen, kaynak):
         ek_değişim=girdi.get("ek_değişim"),
     )
 
-    girdi_hataları = doğrula(ad, kök)
+    girdi_hataları = doğrula(ad, kök, profil)
     if girdi_hataları:
         hatalar.extend(girdi_hataları)
     else:
         sözlük[ad] = kök
 
 
-def yükle(yol: str | Path) -> dict[str, Kök]:
-    """Tek bir JSON kök dosyasını okur, doğrular ve {ad: Kök} döndürür.
+def yükle(yol: str | Path, profil=None) -> dict[str, Kök]:
+    """Tek bir JSON kök dosyasını okur, doğrular ve {ad: Kök} döndürür (profil None = Türkçe).
 
     Herhangi bir giriş geçersizse tüm hataları toplayıp ŞemaHatası fırlatır.
     """
@@ -84,14 +84,14 @@ def yükle(yol: str | Path) -> dict[str, Kök]:
     hatalar: list[str] = []
     görülen: dict[str, str] = {}
     for ad, girdi in ham.items():
-        _girdi_işle(ad, girdi, sözlük, hatalar, görülen, yol.name)
+        _girdi_işle(ad, girdi, sözlük, hatalar, görülen, yol.name, profil)
 
     if hatalar:
         raise ŞemaHatası(hatalar)
     return sözlük
 
 
-def yükle_dizin(dizin: str | Path) -> dict[str, Kök]:
+def yükle_dizin(dizin: str | Path, profil=None) -> dict[str, Kök]:
     """Dizindeki tüm <harf>.json kök dosyalarını birleştirir ve doğrular.
 
     Dosyalar arası yinelenen kök anahtarlarını da yakalar. Çalışma zamanı API'si.
@@ -110,14 +110,14 @@ def yükle_dizin(dizin: str | Path) -> dict[str, Kök]:
             hatalar.append(f"{dosya.name}: en dış yapı bir nesne (sözlük) olmalı")
             continue
         for ad, girdi in ham.items():
-            _girdi_işle(ad, girdi, sözlük, hatalar, görülen, dosya.name)
+            _girdi_işle(ad, girdi, sözlük, hatalar, görülen, dosya.name, profil)
 
     if hatalar:
         raise ŞemaHatası(hatalar)
     return sözlük
 
 
-def çalışma_sözlüğü(dizin: str | Path, *ek_dosyalar: str | Path) -> dict[str, Kök]:
+def çalışma_sözlüğü(dizin: str | Path, *ek_dosyalar: str | Path, profil=None) -> dict[str, Kök]:
     """Çalışma-zamanı kök sözlüğü: harf-fazı içerik kökleri + ek kök dosyaları.
 
     Zamir gövdeleri (ben/sen/on/bun…) işlev sözcüğüdür → harf fazlarına girmez
@@ -125,10 +125,10 @@ def çalışma_sözlüğü(dizin: str | Path, *ek_dosyalar: str | Path) -> dict[
     Motor (çözümle/pipeline) bu birleşik sözlüğü kullanır. İçerik köküyle çakışan
     ek kök ŞemaHatası verir.
     """
-    sözlük = yükle_dizin(dizin)
+    sözlük = yükle_dizin(dizin, profil)
     hatalar: list[str] = []
     for dosya in ek_dosyalar:
-        for ad, kök in yükle(dosya).items():
+        for ad, kök in yükle(dosya, profil).items():
             if ad in sözlük:
                 hatalar.append(f"{ad!r}: ek kök ({Path(dosya).name}) içerik köküyle çakışıyor")
             else:

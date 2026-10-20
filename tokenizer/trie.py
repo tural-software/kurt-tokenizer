@@ -17,23 +17,27 @@ Varyant önekleri (çözümle'nin eski 'önekler' kümesiyle aynı):
 
 from __future__ import annotations
 
+from tokenizer import sesler
 from tokenizer.birlestir import _yumuşat_son, _ünlü_düşür, _e_i
 
 
-def kök_önekleri(ad: str, kök) -> set[str]:
-    """Bir kökün, çözümleme adaylığı için tüm yüzey-varyant öneklerini döndürür."""
+def kök_önekleri(ad: str, kök, profil=None) -> set[str]:
+    """Bir kökün, çözümleme adaylığı için tüm yüzey-varyant öneklerini döndürür.
+    profil (None = Türkçe): kök düzeyi daralma yalnız 'gövde' daraltmalı dilde (AZ'de yok)."""
+    ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
     ön = {ad}
     if kök.değişim:
         ön.add(_yumuşat_son(ad, kök.değişim))
-    if ad and ad[-1] in "ae":
+    if ad and (ad[-1] in "ae" if profil is None
+               else profil.daraltma == "gövde" and ad[-1] in profil.daralan_son):
         ön.add(ad[:-1])
     if getattr(kök, "düşen", False):
-        düş = _ünlü_düşür(ad)
+        düş = _ünlü_düşür(ad, ünlüler)
         ön.add(düş)
         if kök.değişim:
             ön.add(_yumuşat_son(düş, kök.değişim))
     if getattr(kök, "daralan", False):           # ye→yi / de→di (yiyor için 'ye' adayı)
-        ön.add(_e_i(ad))
+        ön.add(_e_i(ad, ünlüler))
     if getattr(kök, "ek_değişim", None):         # ikincil-sınıf yumuşaması (tat→tad: tadıyor)
         ön.add(_yumuşat_son(ad, kök.ek_değişim))
     return ön
@@ -50,10 +54,10 @@ class _Düğüm:
 class KökTrie:
     """Kök varyant-öneklerinden kurulu karakter-trie'si."""
 
-    def __init__(self, kökler: dict):
+    def __init__(self, kökler: dict, profil=None):
         self.kök = _Düğüm()
         for ad, k in kökler.items():
-            for önek in kök_önekleri(ad, k):
+            for önek in kök_önekleri(ad, k, profil):
                 düğüm = self.kök
                 for ch in önek:
                     düğüm = düğüm.çocuk.setdefault(ch, _Düğüm())

@@ -30,18 +30,19 @@ from tokenizer.trie import KökTrie
 
 MAX_EK = 6   # koşaç zinciri için: kök+çoğul+iyelik+hâl+koşaç+kişi
 
-# Trie önbelleği: aynı kökler sözlüğü için trie bir kez kurulur (kimlikle eşleştirilir).
-_son_kökler = None
-_son_trie: KökTrie | None = None
+# Trie önbelleği: her (kökler sözlüğü, profil) için trie bir kez kurulur (kimlikle eşleştirilir).
+# Dil başına bir giriş: Türkçe ve AZ aynı süreçte dönüşümlü çalışınca trie yeniden kurulmaz.
+_trieler: dict = {}
 
 
-def _trie_al(kökler) -> KökTrie:
+def _trie_al(kökler, profil=None) -> KökTrie:
     """Verilen kökler sözlüğü için (gerekirse kurup) trie'yi döndürür — önbellekli."""
-    global _son_kökler, _son_trie
-    if kökler is not _son_kökler:
-        _son_trie = KökTrie(kökler)
-        _son_kökler = kökler
-    return _son_trie
+    kod = None if profil is None else profil.kod
+    kayıt = _trieler.get(kod)
+    if kayıt is None or kayıt[0] is not kökler:
+        kayıt = (kökler, KökTrie(kökler, profil))
+        _trieler[kod] = kayıt
+    return kayıt[1]
 
 # Kişi-bağlamı (ince morfotaktik): kişi eki, kendini lisanslayan bir işaretçiye bağlı.
 # İşaretçi (tip, kaynak): tip 1↔present-tarz / tip 2↔geçmiş-koşul; kaynak V↔fiil-zamanı,
@@ -119,8 +120,8 @@ class Çözüm:
     ekler: list[str]
 
 
-def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı):
-    tokenlar, yüzey = birleştir(kök_ad, kök, ek_dizi, ekler)
+def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, profil=None):
+    tokenlar, yüzey = birleştir(kök_ad, kök, ek_dizi, ekler, profil)
     if yüzey == hedef:
         # iyelik-gerektiren ortaç (-DIk) çıplak kabul edilmez (geldik=1.çoğul kalsın)
         if not (ek_dizi and ek_dizi[-1] in İYELİK_GEREKTİREN):
@@ -141,23 +142,25 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı):
             continue
         if not _koşaç_bağlanır(ek_ad, ek_dizi, sınıf, ekler):  # koşaç çıplak fiile bağlanmaz
             continue
-        _, ç_yüzey = birleştir(kök_ad, kök, ek_dizi + [ek_ad], ekler)
+        _, ç_yüzey = birleştir(kök_ad, kök, ek_dizi + [ek_ad], ekler, profil)
         # öneki tutan dala in; ara gövdenin SON sesi sonraki ünlü-başlı ek ile değişebilir:
         #   a/e → düşer (daraltır: gelme→gelmiyor)  |  k/p/ç/t → yumuşar (gelecek→geleceğiz).
-        # Bu yüzden son ses "değişken" ise öneki son-ses-hariç de kabul et.
+        # Bu yüzden son ses "değişken" ise öneki son-ses-hariç de kabul et (küme profilde).
         if (hedef.startswith(ç_yüzey)
-                or (ç_yüzey and ç_yüzey[-1] in "aekpçt" and hedef.startswith(ç_yüzey[:-1]))):
+                or (ç_yüzey and ç_yüzey[-1] in ("aekpçt" if profil is None else profil.değişken_son)
+                    and hedef.startswith(ç_yüzey[:-1]))):
             # nominalizer (çıkış): gövde sınıfı değişir, yuva zonu sıfırlanır
             # (fiil → isim: gelme+si, yürüyüş+ü); aksi halde aynı zonda artan yuva
             if ek.çıkış:
-                _ara(kök_ad, kök, ek_dizi + [ek_ad], 0, ek.çıkış, hedef, ekler, çıktı)
+                _ara(kök_ad, kök, ek_dizi + [ek_ad], 0, ek.çıkış, hedef, ekler, çıktı, profil)
             else:
-                _ara(kök_ad, kök, ek_dizi + [ek_ad], ek.yuva, sınıf, hedef, ekler, çıktı)
+                _ara(kök_ad, kök, ek_dizi + [ek_ad], ek.yuva, sınıf, hedef, ekler, çıktı, profil)
 
 
-def çözümle(kelime, kökler, ekler, istisnalar=None) -> list[Çözüm]:
-    """Yüzey kelimeyi tüm geçerli (kök + ek dizisi) çözümlerine ayırır."""
-    hedef = sesler.türkçe_küçült(kelime)
+def çözümle(kelime, kökler, ekler, istisnalar=None, profil=None) -> list[Çözüm]:
+    """Yüzey kelimeyi tüm geçerli (kök + ek dizisi) çözümlerine ayırır. kökler/ekler/istisnalar
+    profilin dilinden gelmelidir (profil None = Türkçe)."""
+    hedef = sesler.türkçe_küçült(kelime) if profil is None else profil.küçült(kelime)
 
     if istisnalar:
         ist = istisna_bul(istisnalar, hedef)
@@ -167,13 +170,13 @@ def çözümle(kelime, kökler, ekler, istisnalar=None) -> list[Çözüm]:
     çözümler: list[Çözüm] = []
     # Aday kökler: varyant-öneki (kök / yumuşamış / a-e-düşmüş / ünlü-düşmüş) hedefin öneki
     # olanlar. Trie ile O(len(hedef)) bulunur (eski O(kök) tarama ile birebir aynı küme).
-    for kök_ad in _trie_al(kökler).bul(hedef):
+    for kök_ad in _trie_al(kökler, profil).bul(hedef):
         kök = kökler[kök_ad]
         # eşsesli kök birden çok sınıfa ait olabilir (yaz: fiil + isim)
         türler = [kök.tür, *(kök.ek_tür or [])]
         sınıflar = {"fiil" if t == "fiil" else "isim" for t in türler}
         for sınıf in sınıflar:
-            _ara(kök_ad, kök, [], 0, sınıf, hedef, ekler, çözümler)
+            _ara(kök_ad, kök, [], 0, sınıf, hedef, ekler, çözümler, profil)
 
     # aynı (token, kök, ek) çözümünü tekilleştir (eşseslide çıplak kök yinelenebilir)
     görülen, benzersiz = set(), []

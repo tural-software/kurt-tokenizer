@@ -38,13 +38,14 @@ class Kök:
     #                                 yumuşama yok (art→artıyor). tat gibi her-iki-yön: {t→d} (tadıyor)
 
 
-def doğrula(ad: str, kök: Kök) -> list[str]:
+def doğrula(ad: str, kök: Kök, profil=None) -> list[str]:
     """Bir kök kaydını doğrular. Tüm hata mesajlarını liste olarak döndürür.
 
     İlk hatada durmaz; elle düzenlenen sözlükte tek geçişte tüm sorunları
     görebilmek için bütün ihlalleri toplar. Boş liste = geçerli.
     """
     hatalar: list[str] = []
+    ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
 
     # 1. tokens boş değil; her token boş olmayan metin
     if not kök.tokens:
@@ -65,14 +66,14 @@ def doğrula(ad: str, kök: Kök) -> list[str]:
             )
 
     # 3. son_ünlü geçerli bir ünlü olmalı
-    if kök.son_ünlü not in sesler.ÜNLÜLER:
+    if kök.son_ünlü not in ünlüler:
         hatalar.append(f"{ad!r}: son_ünlü {kök.son_ünlü!r} geçerli bir ünlü değil")
 
     # 4. son_ünlü, kökün gerçek son ünlüsüyle aynı olmalı
-    gerçek = sesler.son_ünlü_bul(ad)
+    gerçek = sesler.son_ünlü_bul(ad) if profil is None else profil.son_ünlü_bul(ad)
     if gerçek is None:
         hatalar.append(f"{ad!r}: kökte hiç ünlü yok")
-    elif kök.son_ünlü in sesler.ÜNLÜLER and gerçek != kök.son_ünlü:
+    elif kök.son_ünlü in ünlüler and gerçek != kök.son_ünlü:
         hatalar.append(
             f"{ad!r}: son_ünlü {kök.son_ünlü!r} ama yüzey biçiminin son ünlüsü {gerçek!r}"
         )
@@ -81,7 +82,7 @@ def doğrula(ad: str, kök: Kök) -> list[str]:
     if kök.son_ses not in İZİNLİ_SON_SES:
         hatalar.append(f"{ad!r}: son_ses {kök.son_ses!r} geçersiz (ünlü|ünsüz)")
     elif ad:
-        beklenen = "ünlü" if ad[-1] in sesler.ÜNLÜLER else "ünsüz"
+        beklenen = "ünlü" if ad[-1] in ünlüler else "ünsüz"
         if kök.son_ses != beklenen:
             hatalar.append(
                 f"{ad!r}: son_ses {kök.son_ses!r} ama son karakter {ad[-1]!r} → {beklenen}"
