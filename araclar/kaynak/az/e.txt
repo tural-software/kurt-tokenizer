@@ -1,0 +1,4 @@
+# e harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+ev|isim|
+et|fiil|t→d
+eşit|fiil|t→d

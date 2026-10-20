@@ -1,0 +1,5 @@
+{
+  "var": {"tokens": ["var"], "tür": "edat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "yox": {"tokens": ["yox"], "tür": "edat", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "deyil": {"tokens": ["de", "yil"], "tür": "edat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "sadece_koşaç": true}
+}

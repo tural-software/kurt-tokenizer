@@ -1,0 +1,14 @@
+{
+  "tez": {"tokens": ["tez"], "tür": "zarf", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "tək": {"tokens": ["tək"], "tür": "sıfat", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "tök": {"tokens": ["tök"], "tür": "fiil", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
+  "tut": {"tokens": ["tut"], "tür": "fiil", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
+  "türk": {"tokens": ["türk"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "təhsil": {"tokens": ["təh", "sil"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "tərəf": {"tokens": ["tə", "rəf"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "təzyiq": {"tokens": ["təz", "yiq"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "torpaq": {"tokens": ["tor", "paq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "telefon": {"tokens": ["te", "le", "fon"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "tədarük": {"tokens": ["tə", "da", "rük"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "tələbə": {"tokens": ["tə", "lə", "bə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null}
+}

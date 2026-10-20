@@ -1,0 +1,15 @@
+# i harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+iştirak|isim|
+idrak|isim|
+iş|isim|
+il|isim|
+insan|isim|
+istifadə|isim|
+isti|sıfat|
+iki|sıfat|
+iyirmi|sıfat|
+ilk|sıfat|
+indi|zarf|
+iç|fiil||isim
+işlə|fiil|
+istə|fiil|

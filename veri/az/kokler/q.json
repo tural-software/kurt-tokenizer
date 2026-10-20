@@ -1,0 +1,16 @@
+{
+  "qaç": {"tokens": ["qaç"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "qal": {"tokens": ["qal"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "qız": {"tokens": ["qız"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "qoy": {"tokens": ["qoy"], "tür": "fiil", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "qadın": {"tokens": ["qa", "dın"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "qapı": {"tokens": ["qa", "pı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
+  "qara": {"tokens": ["qa", "ra"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "qardaş": {"tokens": ["qar", "daş"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "qaşıq": {"tokens": ["qa", "şıq"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "qayıt": {"tokens": ["qa", "yıt"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}},
+  "qısa": {"tokens": ["qı", "sa"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "qonaq": {"tokens": ["qo", "naq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "qulaq": {"tokens": ["qu", "laq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "qırmızı": {"tokens": ["qır", "mı", "zı"], "tür": "sıfat", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null}
+}

@@ -49,10 +49,15 @@ def _edilgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER) -> str:
     return "(I)n" if (son in ünlüler or son == "l") else "(I)l"
 
 
-def _ettirgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER) -> str:
-    """Ettirgen (oldurgan) çatı şablonu: ünlü/r-sonu → t (okut/oturt), ünsüz → DIr (yaptır)."""
+def _ettirgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER, ünsüz_şablon: str = "DIr") -> str:
+    """Ettirgen (oldurgan) çatı şablonu: ünlü/r-sonu → t (okut/oturt), ünsüz → DIr (yaptır;
+    AZ dIr: yazdır, etdir — sertleşme yazılmaz)."""
     son = gövde[-1]
-    return "t" if (son in ünlüler or son == "r") else "DIr"
+    return "t" if (son in ünlüler or son == "r") else ünsüz_şablon
+
+
+# AZ geniş zaman olumsuzu: 1. kişi eki önünde -mAr- (gəlmərəm, gəlmərik), diğerlerinde -mAz.
+_AZ_GENİŞ_R_KİŞİ = frozenset({"şahıs_1tekil_t1", "şahıs_1çoğul_t1"})
 
 
 def _ünlü_düşür(s: str, ünlüler=sesler.ÜNLÜLER) -> str:
@@ -109,10 +114,12 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
               ) -> tuple[list[str], str]:
     """Kök + sıralı ek adları → (token listesi, yüzey biçimi). profil: dil (None = Türkçe)."""
     ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
+    y_tampon = profil is not None and getattr(kök, "y_tampon", False)
     tokenlar = list(kök.tokens)
     gövde = ad
     önceki_değişim = kök.değişim          # son morfemin yumuşama kuralı (önce kök, sonra ekler)
     önceki_ek = None                      # bir önceki ek adı (pronominal-n kararı için)
+    önceki_son_düşer = ""                 # önceki ekin son ünsüzü bu harf önünde düşer (AZ gəlmisən)
     for idx, ek_adı in enumerate(ek_adları):
         ek = ekler[ek_adı]
         # kök-koşullu ek: şablon gövdeye göre belirlenir (geniş zaman / çatı ekleri).
@@ -120,13 +127,29 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
         if kural == "geniş":
             # Olumsuz/yetersizlik sonrası geniş zaman düzensiz: -Ar/-Ir değil -z (gelmez).
             olumsuz_bağlam = any(a in ("olumsuz", "yetersizlik") for a in ek_adları[:idx])
-            şablon = "z" if olumsuz_bağlam else _geniş_şablon(gövde, ad, ünlüler)
+            if profil is not None and profil.geniş == "az":
+                sonraki = ek_adları[idx + 1] if idx + 1 < len(ek_adları) else None
+                şablon = (("r" if sonraki in _AZ_GENİŞ_R_KİŞİ else "z") if olumsuz_bağlam
+                          else "(y)Ar")
+            else:
+                şablon = "z" if olumsuz_bağlam else _geniş_şablon(gövde, ad, ünlüler)
         elif kural == "edilgen":
             şablon = _edilgen_şablon(gövde, ünlüler)
         elif kural == "ettirgen":
-            şablon = _ettirgen_şablon(gövde, ünlüler)
+            şablon = _ettirgen_şablon(gövde, ünlüler,
+                                      "DIr" if profil is None else profil.ettirgen_ünsüz)
         else:
             şablon = ek.şablon
+        # y_tampon kökü (AZ su, nə): ünlüyle başlayabilen ilk ekte araya y girer, kök ünsüz-sonu
+        # gibi davranır: ünsüz tampon (n)/(s)/(y) → y (suyu, suyun, suya, nəyi); ünlü tampon
+        # (I)/(A) → ayrı y + ünlü tampon (su+y+u+m = suyum, nə+y+i+m = nəyim). Ünsüz-başlı ek
+        # etkilenmez (sular, suda).
+        if y_tampon and idx == 0 and şablon.startswith("("):
+            if şablon[1] in "AI":
+                tokenlar.append("y")
+                gövde = gövde + "y"
+            else:
+                şablon = "(y)" + şablon[3:]
         # -Iyor daralması: daraltır ek, çok-heceli a/e-sonu gövdeye gelince son ünlü düşer
         # (oyna→oyn+u+yor=oynuyor; ara→arıyor). Dar ünlü (oku/yürü) etkilenmez.
         if (getattr(ek, "daraltır", False) and gövde
@@ -178,10 +201,14 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
         if değ and ilk_ses in ünlüler:
             tokenlar[-1] = _yumuşat_son(tokenlar[-1], değ)
             gövde = _yumuşat_son(gövde, değ)
+        if önceki_son_düşer and ilk_ses == önceki_son_düşer:
+            tokenlar[-1] = tokenlar[-1][:-1]
+            gövde = gövde[:-1]
         if tampon:
             tokenlar.append(tampon)
         tokenlar.append(gövde_eki)
         gövde = gövde + tampon + gövde_eki
         önceki_değişim = ek.değişim          # bu ek artık son morfem (sonraki sınır için)
         önceki_ek = ek_adı
+        önceki_son_düşer = ek.son_düşer
     return tokenlar, gövde

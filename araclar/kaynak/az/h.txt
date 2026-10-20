@@ -1,0 +1,6 @@
+# h harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+haqq|isim|
+həyat|isim|
+hava|isim|
+həkim|isim|
+hazır|sıfat|

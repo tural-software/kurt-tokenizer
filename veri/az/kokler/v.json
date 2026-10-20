@@ -1,0 +1,5 @@
+{
+  "vaxt": {"tokens": ["vaxt"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "ver": {"tokens": ["ver"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "vacib": {"tokens": ["va", "cib"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null}
+}

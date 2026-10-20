@@ -38,6 +38,19 @@ class DilProfili:
     daraltma: str               # "gövde": her çok heceli a/e-sonu gövde (TR oyna→oynuyor)
     #                             "olumsuz": yalnız olumsuz -mA'nın ünlüsü (AZ gəl+mə+ir→gəlmir)
     sıra_eş: tuple = ()         # sıralamada temel harfine eşlenen harfler (â→a), (harf, temel) çiftleri
+    geniş: str = "tr"           # geniş zaman kuralı: "tr" (-Ar/-Ir + GENİŞ_IR, olumsuz -z) |
+    #                             "az" (-(y)Ar; olumsuz 1. kişide -r: gəlmərəm, diğerinde -z: gəlməz)
+    ettirgen_ünsüz: str = "DIr" # ünsüz-sonu gövdede ettirgen şablonu (AZ: sertleşme yazılmaz → dIr)
+    rakam_tire_eki: bool = False  # rakamdan sonra tire + harf = ek (AZ 2024-cü, 5-də; kesme gibi)
+    kişi_lisansı: tuple = ()    # ortak KİŞİ_LİSANS'a dile özgü ek: (ek_adı, tip, kaynak) üçlüleri
+    # Seçim politikası eklentileri (pipeline.en_iyi_çözüm; Türkçe politika değişmez):
+    son_çare_ekler: frozenset = frozenset()  # bu ekleri içeren çözüm yalnız başka çözüm yoksa
+    #                                          (AZ bitişik soru -mI: özümü = öz+ü+m+ü, öz+ü+mü değil)
+    az_ek_önce: bool = False    # token sayısı eşitse daha az ekli çözüm (gəl+məli+y+əm, gəl+mə+liy+əm değil)
+    birincil_önce: bool = False # eşsesli kök birincil sınıfıyla okunabiliyorsa o okuma (yazsan = yaz+sa+n
+    #                             'yazarsan', yaz [mevsim]+san değil)
+    yeğlenmeyen_ekler: frozenset = frozenset()  # aynı token sayısında bu ekleri içermeyen çözüm
+    #                             yeğlenir (AZ 2. kişi iyelik: altından = alt+ı+n+dan, altı+n+dan değil)
 
     # ── ses ──────────────────────────────────────────────────────────────────────────────────
     def artlık(self, ünlü: str) -> str:
@@ -102,7 +115,7 @@ TR = DilProfili(
 )
 
 # Azerbaycan Türkçesi (32 harf; ə ince-düz ünlü; x/q ünsüz; w yok). Kaynak: Azərbaycan dilinin
-# orfoqrafiya normaları (NK 16.04.2019 №174). Biçimbilim kancaları AZ-2'de eklenir.
+# orfoqrafiya normaları (NK 16.04.2019 №174) ve orfoepiya normaları (NK 18.06.2021 №175).
 AZ = DilProfili(
     kod="az",
     alfabe="abcçdeəfgğhxıijkqlmnoöprsştuüvyz",
@@ -114,9 +127,18 @@ AZ = DilProfili(
     sert=frozenset("çfhxkpsşt"),
     geniş_ince="ə",
     ince_karşılık=(("a", "ə"), ("ı", "i"), ("o", "ö"), ("u", "ü")),
-    değişken_son="aəkq",
+    değişken_son="aəkqşz",         # ş: -mIş + sAn → gəlmisən (son_düşer); z: -mAz → -mAr (gəlmərəm)
     daralan_son="aə",
     daraltma="olumsuz",
+    geniş="az",
+    ettirgen_ünsüz="dIr",
+    rakam_tire_eki=True,
+    # -(y)Ib geçmişi (gəlibsən, gəliblər) ve gereklilik (gəlməliyəm, gəlməliyik) kişi eki alır.
+    kişi_lisansı=(("geçmiş_ib", 1, "V"), ("gereklilik", 1, "V")),
+    son_çare_ekler=frozenset({"soru"}),
+    az_ek_önce=True,
+    birincil_önce=True,
+    yeğlenmeyen_ekler=frozenset({"iyelik_2tekil", "iyelik_2çoğul"}),
 )
 
 PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ}

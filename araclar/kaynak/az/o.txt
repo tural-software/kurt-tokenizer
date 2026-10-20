@@ -1,0 +1,9 @@
+# o harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+otaq|isim|q→ğ
+oğul|isim|düşen
+oğlan|isim|
+ora|isim|
+ol|fiil|
+oxu|fiil|
+otur|fiil|
+oyna|fiil|

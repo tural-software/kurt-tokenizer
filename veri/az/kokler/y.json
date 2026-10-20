@@ -1,0 +1,21 @@
+{
+  "yan": {"tokens": ["yan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "yat": {"tokens": ["yat"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "yaz": {"tokens": ["yaz"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
+  "ye": {"tokens": ["ye"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
+  "yer": {"tokens": ["yer"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "yığ": {"tokens": ["yığ"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "yol": {"tokens": ["yol"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "yük": {"tokens": ["yük"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "yüz": {"tokens": ["yüz"], "tür": "sıfat", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "yaxşı": {"tokens": ["yax", "şı"], "tür": "sıfat", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
+  "yarpaq": {"tokens": ["yar", "paq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "yaşa": {"tokens": ["ya", "şa"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "yaşıl": {"tokens": ["ya", "şıl"], "tür": "sıfat", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "yataq": {"tokens": ["ya", "taq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "yeddi": {"tokens": ["yed", "di"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "yeni": {"tokens": ["ye", "ni"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "yoxla": {"tokens": ["yox", "la"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "yumşaq": {"tokens": ["yum", "şaq"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "yuxarı": {"tokens": ["yu", "xa", "rı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null}
+}

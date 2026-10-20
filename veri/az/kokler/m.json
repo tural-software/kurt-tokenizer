@@ -1,0 +1,6 @@
+{
+  "min": {"tokens": ["min"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "maşın": {"tokens": ["ma", "şın"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "məktəb": {"tokens": ["mək", "təb"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "müəllim": {"tokens": ["mü", "əl", "lim"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null}
+}

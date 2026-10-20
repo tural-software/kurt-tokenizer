@@ -1,0 +1,16 @@
+{
+  "iç": {"tokens": ["iç"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
+  "il": {"tokens": ["il"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "ilk": {"tokens": ["ilk"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "iş": {"tokens": ["iş"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "idrak": {"tokens": ["id", "rak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "iki": {"tokens": ["i", "ki"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "indi": {"tokens": ["in", "di"], "tür": "zarf", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "insan": {"tokens": ["in", "san"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "istə": {"tokens": ["is", "tə"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
+  "isti": {"tokens": ["is", "ti"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "işlə": {"tokens": ["iş", "lə"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
+  "iştirak": {"tokens": ["iş", "ti", "rak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "iyirmi": {"tokens": ["i", "yir", "mi"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "istifadə": {"tokens": ["is", "ti", "fa", "də"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null}
+}

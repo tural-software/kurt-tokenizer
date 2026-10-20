@@ -1,0 +1,18 @@
+# d harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+dodaq|isim|q→ğ
+dilək|isim|k→y
+dəniz|isim|
+dost|isim|
+dövlət|isim|
+dil|isim|
+dünya|isim|
+daş|isim|
+digər|sıfat|
+dörd|sıfat|
+doqquz|sıfat|
+dünən|zarf|
+de|fiil|
+danış|fiil|
+düşün|fiil|
+dur|fiil|
+dinlə|fiil|

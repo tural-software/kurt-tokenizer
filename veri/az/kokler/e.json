@@ -1,0 +1,5 @@
+{
+  "et": {"tokens": ["et"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}},
+  "ev": {"tokens": ["ev"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "eşit": {"tokens": ["e", "şit"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}}
+}

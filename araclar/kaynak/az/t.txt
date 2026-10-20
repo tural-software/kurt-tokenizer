@@ -1,0 +1,13 @@
+# t harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+torpaq|isim|q→ğ
+tədarük|isim|
+təzyiq|isim|
+tək|sıfat|
+türk|isim|
+telefon|isim|
+tələbə|isim|
+tərəf|isim|
+təhsil|isim|
+tez|zarf|
+tut|fiil||isim
+tök|fiil|

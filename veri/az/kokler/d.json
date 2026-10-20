@@ -1,0 +1,19 @@
+{
+  "daş": {"tokens": ["daş"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "de": {"tokens": ["de"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
+  "dil": {"tokens": ["dil"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "dost": {"tokens": ["dost"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "dörd": {"tokens": ["dörd"], "tür": "sıfat", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
+  "dur": {"tokens": ["dur"], "tür": "fiil", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
+  "danış": {"tokens": ["da", "nış"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "dəniz": {"tokens": ["də", "niz"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "digər": {"tokens": ["di", "gər"], "tür": "sıfat", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "dilək": {"tokens": ["di", "lək"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "dinlə": {"tokens": ["din", "lə"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
+  "dodaq": {"tokens": ["do", "daq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "doqquz": {"tokens": ["doq", "quz"], "tür": "sıfat", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
+  "dövlət": {"tokens": ["döv", "lət"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "dünən": {"tokens": ["dü", "nən"], "tür": "zarf", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "dünya": {"tokens": ["dün", "ya"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "düşün": {"tokens": ["dü", "şün"], "tür": "fiil", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null}
+}

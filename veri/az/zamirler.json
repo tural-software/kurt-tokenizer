@@ -1,0 +1,16 @@
+{
+  "mən": {"tokens": ["mən"], "tür": "zamir", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "sən": {"tokens": ["sən"], "tür": "zamir", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "biz": {"tokens": ["biz"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "siz": {"tokens": ["siz"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "on": {"tokens": ["on"], "tür": "zamir", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "bun": {"tokens": ["bun"], "tür": "zamir", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
+  "kim": {"tokens": ["kim"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "nə": {"tokens": ["nə"], "tür": "zamir", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null, "y_tampon": true},
+  "hara": {"tokens": ["ha", "ra"], "tür": "zamir", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "hansı": {"tokens": ["han", "sı"], "tür": "zamir", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
+  "hamı": {"tokens": ["ha", "mı"], "tür": "zamir", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
+  "öz": {"tokens": ["öz"], "tür": "zamir", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
+  "kimsə": {"tokens": ["kim", "sə"], "tür": "zamir", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
+  "həmin": {"tokens": ["hə", "min"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null}
+}

@@ -1,0 +1,10 @@
+{
+  "ol": {"tokens": ["ol"], "tür": "fiil", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "oğlan": {"tokens": ["oğ", "lan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "oğul": {"tokens": ["o", "ğul"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null, "düşen": true},
+  "oxu": {"tokens": ["o", "xu"], "tür": "fiil", "son_ünlü": "u", "son_ses": "ünlü", "değişim": null},
+  "ora": {"tokens": ["o", "ra"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "otaq": {"tokens": ["o", "taq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "otur": {"tokens": ["o", "tur"], "tür": "fiil", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
+  "oyna": {"tokens": ["oy", "na"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null}
+}

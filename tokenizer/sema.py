@@ -34,6 +34,7 @@ class Kök:
     ince: bool = False    # istisnai uyum: art ünlü ama ince ek alır (kalp→kalbi, rol→rolü)
     sadece_koşaç: bool = False  # yalnız koşaç/ek-fiil alır, isim eki almaz (mı, değil)
     daralan: bool = False  # ye/de düzensizi: çekirdek e→i, y-glide'lı ek öncesi (ye→yiyor)
+    y_tampon: bool = False  # (n) tamponu yerine y (AZ su→suyu/suyun, nə→nəyi/nəyin; düzensiz)
     ek_değişim: dict | None = None  # İKİNCİL sınıf (ek_tür) okumasının yumuşaması; None=ikincilde
     #                                 yumuşama yok (art→artıyor). tat gibi her-iki-yön: {t→d} (tadıyor)
 
@@ -110,6 +111,10 @@ def doğrula(ad: str, kök: Kök, profil=None) -> list[str]:
         hatalar.append(f"{ad!r}: sadece_koşaç alanı bool olmalı, bulundu {kök.sadece_koşaç!r}")
     if not isinstance(kök.daralan, bool):
         hatalar.append(f"{ad!r}: daralan alanı bool olmalı, bulundu {kök.daralan!r}")
+    if not isinstance(kök.y_tampon, bool):
+        hatalar.append(f"{ad!r}: y_tampon alanı bool olmalı, bulundu {kök.y_tampon!r}")
+    elif kök.y_tampon and kök.son_ses != "ünlü":
+        hatalar.append(f"{ad!r}: y_tampon yalnız ünlü-sonu kökte anlamlı")
 
     # 7. değişim / ek_değişim None ya da dict[str, str] olmalı
     for alan_ad, alan in (("değişim", kök.değişim), ("ek_değişim", kök.ek_değişim)):

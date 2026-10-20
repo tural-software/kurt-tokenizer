@@ -1,0 +1,379 @@
+# AZ altın liste (AZ-2): yüzey <TAB> beklenen tokenlar (boşlukla) <TAB> kök+ek+ek (beklenen çözümleme)
+# Elle yazıldı; dayanak: Azərbaycan dilinin orfoqrafiya normaları (NK 2019 №174), orfoepiya normaları
+# (NK 2021 №175), FineWeb-2 azj örneklemindeki gerçek yazım. Token kuralları Türkçe ile aynı: kök
+# heceleri; parantezli tampon (ünlü/ünsüz) AYRI token; ek gövdesi tek token; pronominal -n- ayrı.
+# Test: en iyi çözümün tokenları birebir + beklenen çözümleme çözüm kümesinde (etiket eşseslisi serbest).
+
+# ── isim: çoğul, iyelik, hâl ─────────────────────────────────────────────────────────────────
+evlər	ev lər	ev+çoğul
+evlərdə	ev lər də	ev+çoğul+bulunma
+evlərimiz	ev lər i miz	ev+çoğul+iyelik_1çoğul
+evlərimizdən	ev lər i miz dən	ev+çoğul+iyelik_1çoğul+ayrılma
+evim	ev i m	ev+iyelik_1tekil
+evin	ev in	ev+tamlayan
+evi	ev i	ev+belirtme
+evinə	ev i n ə	ev+iyelik_3tekil+yönelme
+evində	ev i n də	ev+iyelik_3tekil+bulunma
+evdən	ev dən	ev+ayrılma
+evə	ev ə	ev+yönelme
+evlə	ev lə	ev+araç
+evdəki	ev də ki	ev+bulunma+aitlik
+evdəkilər	ev də ki lər	ev+bulunma+aitlik+çoğul
+kitab	ki tab	kitab
+kitabı	ki tab ı	kitab+belirtme
+kitablar	ki tab lar	kitab+çoğul
+kitabda	ki tab da	kitab+bulunma
+kitabdan	ki tab dan	kitab+ayrılma
+kitabın	ki tab ın	kitab+tamlayan
+kitabımız	ki tab ı mız	kitab+iyelik_1çoğul
+kitabımızı	ki tab ı mız ı	kitab+iyelik_1çoğul+belirtme
+ataya	a ta y a	ata+yönelme
+atanın	a ta n ın	ata+tamlayan
+atanı	a ta n ı	ata+belirtme
+atası	a ta s ı	ata+iyelik_3tekil
+atasının	a ta s ı n ın	ata+iyelik_3tekil+tamlayan
+atasına	a ta s ı n a	ata+iyelik_3tekil+yönelme
+atasından	a ta s ı n dan	ata+iyelik_3tekil+ayrılma
+atam	a ta m	ata+iyelik_1tekil
+atamız	a ta mız	ata+iyelik_1çoğul
+atalar	a ta lar	ata+çoğul
+anamla	a na m la	ana+iyelik_1tekil+araç
+anasıyla	a na s ı y la	ana+iyelik_3tekil+araç
+# ── kök yumuşaması: yerli çok heceli q→ğ, k→y (normalar 1.2/1.3) ───────────────────────────────
+uşaq	u şaq	uşaq
+uşağı	u şağ ı	uşaq+belirtme
+uşağa	u şağ a	uşaq+yönelme
+uşağın	u şağ ın	uşaq+tamlayan
+uşaqlar	u şaq lar	uşaq+çoğul
+uşaqda	u şaq da	uşaq+bulunma
+uşaqdan	u şaq dan	uşaq+ayrılma
+uşağım	u şağ ı m	uşaq+iyelik_1tekil
+uşaqlarımız	u şaq lar ı mız	uşaq+çoğul+iyelik_1çoğul
+otağa	o tağ a	otaq+yönelme
+otaqda	o taq da	otaq+bulunma
+balığı	ba lığ ı	balıq+belirtme
+çörəyi	çö rəy i	çörək+belirtme
+çörəkdən	çö rək dən	çörək+ayrılma
+ürəyim	ü rəy i m	ürək+iyelik_1tekil
+ürəyimiz	ü rəy i miz	ürək+iyelik_1çoğul
+çiçəyin	çi çəy in	çiçək+tamlayan
+böyüyə	bö yüy ə	böyük+yönelme
+kiçiyi	ki çiy i	kiçik+belirtme
+soyuğu	so yuğ u	soyuq+belirtme
+# ── yumuşamayan: Arap/Fars -k, alıntı -q, yerli tek heceli, Avrupa alıntısı ─────────────────────
+əmlaka	əm lak a	əmlak+yönelme
+əmlakımız	əm lak ı mız	əmlak+iyelik_1çoğul
+şəriki	şə rik i	şərik+belirtme
+iştirakı	iş ti rak ı	iştirak+belirtme
+təzyiqi	təz yiq i	təzyiq+belirtme
+üfüqə	ü füq ə	üfüq+yönelme
+şərqdə	şərq də	şərq+bulunma
+yükü	yük ü	yük+belirtme
+kökü	kök ü	kök+belirtme
+türkün	türk ün	türk+tamlayan
+banka	bank a	bank+yönelme
+parkı	park ı	park+belirtme
+# ── ünlü düşmesi ──────────────────────────────────────────────────────────────────────────────
+ağzı	a ğz ı	ağız+belirtme
+ağzım	a ğz ı m	ağız+iyelik_1tekil
+ağızlar	a ğız lar	ağız+çoğul
+oğlu	o ğl u	oğul+iyelik_3tekil
+oğlum	o ğl u m	oğul+iyelik_1tekil
+oğullar	o ğul lar	oğul+çoğul
+burnu	bu rn u	burun+belirtme
+fikrim	fi kr i m	fikir+iyelik_1tekil
+fikirlər	fi kir lər	fikir+çoğul
+sinfə	si nf ə	sinif+yönelme
+şəkli	şə kl i	şəkil+belirtme
+# ── düzensiz y tamponu (su, nə) ───────────────────────────────────────────────────────────────
+suyu	su y u	su+belirtme
+suya	su y a	su+yönelme
+suyun	su y un	su+tamlayan
+sular	su lar	su+çoğul
+nəyi	nə y i	nə+belirtme
+nəyə	nə y ə	nə+yönelme
+nəyin	nə y in	nə+tamlayan
+# ── zamirler (mənə/sənə DÜZENLİ: Türkçe bana/sana suppletion'ı AZ'de yok) ─────────────────────
+mənə	mən ə	mən+yönelme
+məni	mən i	mən+belirtme
+mənim	mən i m	mən+iyelik_1tekil
+mənimlə	mən i m lə	mən+iyelik_1tekil+araç
+səni	sən i	sən+belirtme
+sənə	sən ə	sən+yönelme
+sənin	sən in	sən+tamlayan
+bizim	biz i m	biz+iyelik_1tekil
+bizə	biz ə	biz+yönelme
+onu	on u	on+belirtme
+ona	on a	on+yönelme
+onun	on un	on+tamlayan
+onlar	on lar	on+çoğul
+onların	on lar ın	on+çoğul+tamlayan
+onlara	on lar a	on+çoğul+yönelme
+ondan	on dan	on+ayrılma
+bunu	bun u	bun+belirtme
+buna	bun a	bun+yönelme
+bunlar	bun lar	bun+çoğul
+bundan	bun dan	bun+ayrılma
+kimə	kim ə	kim+yönelme
+kimin	kim in	kim+tamlayan
+haraya	ha ra y a	hara+yönelme
+haradan	ha ra dan	hara+ayrılma
+hamısı	ha mı s ı	hamı+iyelik_3tekil
+özü	öz ü	öz+iyelik_3tekil
+özümü	öz ü m ü	öz+iyelik_1tekil+belirtme
+özünə	öz ü n ə	öz+iyelik_3tekil+yönelme
+# ── yapım ve qoşma ekleri ───────────────────────────────────────────────────────────────────
+işçi	iş çi	iş+yapım_çı
+kitabçı	ki tab çı	kitab+yapım_çı
+balıqçı	ba lıq çı	balıq+yapım_çı
+evli	ev li	ev+yapım_lı
+evsiz	ev siz	ev+yapım_sız
+gözəllik	gö zəl lik	gözəl+yapım_lıq
+uşaqlıq	u şaq lıq	uşaq+yapım_lıq
+yaxşılıq	yax şı lıq	yaxşı+yapım_lıq
+yaxşılığı	yax şı lığ ı	yaxşı+yapım_lıq+belirtme
+dostluq	dost luq	dost+yapım_lıq
+dostluğu	dost luğ u	dost+yapım_lıq+belirtme
+birinci	bir i nci	bir+sıra
+ikinci	i ki nci	iki+sıra
+üçüncü	üç ü ncü	üç+sıra
+dördüncü	dörd ü ncü	dörd+sıra
+altıncı	al tı ncı	altı+sıra
+türkcə	türk cə	türk+eşitlik
+uşaqca	u şaq ca	uşaq+eşitlik
+evəcən	ev ə cən	ev+yönelme+edat_can
+şəhərədək	şə hər ə dək	şəhər+yönelme+edat_dək
+indiyədək	in di y ə dək	indi+yönelme+edat_dək
+# ── şimdiki zaman -(y)Ir; daralma YALNIZ olumsuz -mA sonrası ─────────────────────────────────
+gəlirəm	gəl ir əm	gəl+şimdiki_zaman+şahıs_1tekil_t1
+gəlirsən	gəl ir sən	gəl+şimdiki_zaman+şahıs_2tekil_t1
+gəlir	gəl ir	gəl+şimdiki_zaman
+gəlirik	gəl ir ik	gəl+şimdiki_zaman+şahıs_1çoğul_t1
+gəlirsiniz	gəl ir siniz	gəl+şimdiki_zaman+şahıs_2çoğul_t1
+gəlirlər	gəl ir lər	gəl+şimdiki_zaman+şahıs_3çoğul
+alıram	al ır am	al+şimdiki_zaman+şahıs_1tekil_t1
+alırıq	al ır ıq	al+şimdiki_zaman+şahıs_1çoğul_t1
+görürəm	gör ür əm	gör+şimdiki_zaman+şahıs_1tekil_t1
+görürük	gör ür ük	gör+şimdiki_zaman+şahıs_1çoğul_t1
+durur	dur ur	dur+şimdiki_zaman
+oxuyuram	o xu y ur am	oxu+şimdiki_zaman+şahıs_1tekil_t1
+oxuyur	o xu y ur	oxu+şimdiki_zaman
+işləyir	iş lə y ir	işlə+şimdiki_zaman
+başlayır	baş la y ır	başla+şimdiki_zaman
+oynayır	oy na y ır	oyna+şimdiki_zaman
+ağlayır	ağ la y ır	ağla+şimdiki_zaman
+gəlmirəm	gəl m ir əm	gəl+olumsuz+şimdiki_zaman+şahıs_1tekil_t1
+gəlmir	gəl m ir	gəl+olumsuz+şimdiki_zaman
+almırıq	al m ır ıq	al+olumsuz+şimdiki_zaman+şahıs_1çoğul_t1
+oxumur	o xu m ur	oxu+olumsuz+şimdiki_zaman
+işləmir	iş lə m ir	işlə+olumsuz+şimdiki_zaman
+bilmirəm	bil m ir əm	bil+olumsuz+şimdiki_zaman+şahıs_1tekil_t1
+# ── fiil t→d (get/et/qayıt/unut/eşit), ünsüz önünde sabit ────────────────────────────────────
+gedir	ged ir	get+şimdiki_zaman
+gedirəm	ged ir əm	get+şimdiki_zaman+şahıs_1tekil_t1
+edir	ed ir	et+şimdiki_zaman
+edirik	ed ir ik	et+şimdiki_zaman+şahıs_1çoğul_t1
+qayıdır	qa yıd ır	qayıt+şimdiki_zaman
+unudur	u nud ur	unut+şimdiki_zaman
+eşidirəm	e şid ir əm	eşit+şimdiki_zaman+şahıs_1tekil_t1
+getdi	get di	get+görülen_geçmiş
+etdi	et di	et+görülen_geçmiş
+getmir	get m ir	get+olumsuz+şimdiki_zaman
+etmək	et mək	et+mastar
+# ── görülen geçmiş -dI (sertleşme yazılmaz) ──────────────────────────────────────────────────
+gəldim	gəl di m	gəl+görülen_geçmiş+şahıs_1tekil_t2
+gəldin	gəl di n	gəl+görülen_geçmiş+şahıs_2tekil_t2
+gəldi	gəl di	gəl+görülen_geçmiş
+gəldik	gəl di k	gəl+görülen_geçmiş+şahıs_1çoğul_t2
+gəldiniz	gəl di niz	gəl+görülen_geçmiş+şahıs_2çoğul_t2
+gəldilər	gəl di lər	gəl+görülen_geçmiş+şahıs_3çoğul
+aldım	al dı m	al+görülen_geçmiş+şahıs_1tekil_t2
+aldıq	al dı q	al+görülen_geçmiş+şahıs_1çoğul_t2
+oxudu	o xu du	oxu+görülen_geçmiş
+oxuduq	o xu du q	oxu+görülen_geçmiş+şahıs_1çoğul_t2
+gördük	gör dü k	gör+görülen_geçmiş+şahıs_1çoğul_t2
+gəlmədim	gəl mə di m	gəl+olumsuz+görülen_geçmiş+şahıs_1tekil_t2
+almadı	al ma dı	al+olumsuz+görülen_geçmiş
+# ── gelecek -(y)AcAQ (ek sonu q→ğ, k→y) ─────────────────────────────────────────────────────
+gələcəyəm	gəl əcəy əm	gəl+gelecek_zaman+şahıs_1tekil_t1
+gələcəksən	gəl əcək sən	gəl+gelecek_zaman+şahıs_2tekil_t1
+gələcək	gəl əcək	gəl+gelecek_zaman
+gələcəyik	gəl əcəy ik	gəl+gelecek_zaman+şahıs_1çoğul_t1
+gələcəksiniz	gəl əcək siniz	gəl+gelecek_zaman+şahıs_2çoğul_t1
+gələcəklər	gəl əcək lər	gəl+gelecek_zaman+şahıs_3çoğul
+alacağam	al acağ am	al+gelecek_zaman+şahıs_1tekil_t1
+alacağıq	al acağ ıq	al+gelecek_zaman+şahıs_1çoğul_t1
+alacaq	al acaq	al+gelecek_zaman
+oxuyacaq	o xu y acaq	oxu+gelecek_zaman
+gedəcək	ged əcək	get+gelecek_zaman
+edəcəyik	ed əcəy ik	et+gelecek_zaman+şahıs_1çoğul_t1
+gəlməyəcək	gəl mə y əcək	gəl+olumsuz+gelecek_zaman
+almayacağam	al ma y acağ am	al+olumsuz+gelecek_zaman+şahıs_1tekil_t1
+# ── duyulan geçmiş -mIş (s önünde ş yazılmaz: gəlmisən) ve -(y)Ib ───────────────────────────
+gəlmişəm	gəl miş əm	gəl+duyulan_geçmiş+şahıs_1tekil_t1
+gəlmisən	gəl mi sən	gəl+duyulan_geçmiş+şahıs_2tekil_t1
+gəlmiş	gəl miş	gəl+duyulan_geçmiş
+gəlmişik	gəl miş ik	gəl+duyulan_geçmiş+şahıs_1çoğul_t1
+gəlmisiniz	gəl mi siniz	gəl+duyulan_geçmiş+şahıs_2çoğul_t1
+gəlmişlər	gəl miş lər	gəl+duyulan_geçmiş+şahıs_3çoğul
+gəlmişdir	gəl miş dir	gəl+duyulan_geçmiş+ek_fiil_dir
+gəlib	gəl ib	gəl+geçmiş_ib
+gəlibsən	gəl ib sən	gəl+geçmiş_ib+şahıs_2tekil_t1
+gəliblər	gəl ib lər	gəl+geçmiş_ib+şahıs_3çoğul
+gəlibdir	gəl ib dir	gəl+geçmiş_ib+ek_fiil_dir
+oxuyub	o xu y ub	oxu+geçmiş_ib
+edib	ed ib	et+geçmiş_ib
+olub	ol ub	ol+geçmiş_ib
+gəlməyib	gəl mə y ib	gəl+olumsuz+geçmiş_ib
+# ── geniş zaman -(y)Ar; olumsuz -mAz, 1. kişide -mAr ────────────────────────────────────────
+gələr	gəl ər	gəl+geniş_zaman
+gələrəm	gəl ər əm	gəl+geniş_zaman+şahıs_1tekil_t1
+gələrsən	gəl ər sən	gəl+geniş_zaman+şahıs_2tekil_t1
+gələrik	gəl ər ik	gəl+geniş_zaman+şahıs_1çoğul_t1
+gələrlər	gəl ər lər	gəl+geniş_zaman+şahıs_3çoğul
+alar	al ar	al+geniş_zaman
+bilər	bil ər	bil+geniş_zaman
+olar	ol ar	ol+geniş_zaman
+oxuyar	o xu y ar	oxu+geniş_zaman
+gəlməz	gəl mə z	gəl+olumsuz+geniş_zaman
+gəlmərəm	gəl mə r əm	gəl+olumsuz+geniş_zaman+şahıs_1tekil_t1
+gəlməzsən	gəl mə z sən	gəl+olumsuz+geniş_zaman+şahıs_2tekil_t1
+gəlmərik	gəl mə r ik	gəl+olumsuz+geniş_zaman+şahıs_1çoğul_t1
+gəlməzsiniz	gəl mə z siniz	gəl+olumsuz+geniş_zaman+şahıs_2çoğul_t1
+gəlməzlər	gəl mə z lər	gəl+olumsuz+geniş_zaman+şahıs_3çoğul
+bilməz	bil mə z	bil+olumsuz+geniş_zaman
+olmaz	ol ma z	ol+olumsuz+geniş_zaman
+# ── şart, gereklilik ─────────────────────────────────────────────────────────────────────────
+gəlsə	gəl sə	gəl+şart
+gəlsəm	gəl sə m	gəl+şart+şahıs_1tekil_t2
+gəlsən	gəl sə n	gəl+şart+şahıs_2tekil_t2
+gəlsək	gəl sə k	gəl+şart+şahıs_1çoğul_t2
+gəlsəniz	gəl sə niz	gəl+şart+şahıs_2çoğul_t2
+gəlsələr	gəl sə lər	gəl+şart+şahıs_3çoğul
+alsaq	al sa q	al+şart+şahıs_1çoğul_t2
+gəlməli	gəl məli	gəl+gereklilik
+gəlməliyəm	gəl məli y əm	gəl+gereklilik+şahıs_1tekil_t1
+gəlməliyik	gəl məli y ik	gəl+gereklilik+şahıs_1çoğul_t1
+gəlməlidir	gəl məli dir	gəl+gereklilik+ek_fiil_dir
+gəlməliydi	gəl məli y di	gəl+gereklilik+ek_fiil_idi
+# ── istek ve emir ────────────────────────────────────────────────────────────────────────────
+gələm	gəl əm	gəl+istek_1tekil
+gələsən	gəl əsən	gəl+istek_2tekil
+gələ	gəl ə	gəl+istek_3tekil
+gələk	gəl ək	gəl+istek_1çoğul
+gələsiniz	gəl əsiniz	gəl+istek_2çoğul
+gələlər	gəl ələr	gəl+istek_3çoğul
+alaq	al aq	al+istek_1çoğul
+oxuyaq	o xu y aq	oxu+istek_1çoğul
+gəl	gəl	gəl
+gəlim	gəl im	gəl+emir_1tekil
+gəlsin	gəl sin	gəl+emir_3tekil
+gəlin	gəl in	gəl+emir_2çoğul
+gəliniz	gəl iniz	gəl+emir_2çoğul_kibar
+gəlsinlər	gəl sinlər	gəl+emir_3çoğul
+oxuyun	o xu y un	oxu+emir_2çoğul
+gəlsənə	gəl sənə	gəl+ədat_sana
+qoysana	qoy sana	qoy+ədat_sana
+# ── çatı: ettirgen (dIr / t), edilgen, dönüşlü ─────────────────────────────────────────────
+yazdır	yaz dır	yaz+ettirgen
+yazdırdı	yaz dır dı	yaz+ettirgen+görülen_geçmiş
+oxut	o xu t	oxu+ettirgen
+oxutdu	o xu t du	oxu+ettirgen+görülen_geçmiş
+işlət	iş lə t	işlə+ettirgen
+oturt	o tur t	otur+ettirgen
+etdirmək	et dir mək	et+ettirgen+mastar
+yazıldı	yaz ı l dı	yaz+edilgen+görülen_geçmiş
+oxundu	o xu n du	oxu+edilgen+görülen_geçmiş
+açıldı	aç ı l dı	aç+edilgen+görülen_geçmiş
+gətirildi	gə tir i l di	gətir+edilgen+görülen_geçmiş
+# ── mastar, isim-fiil, ortaç, ulaç ─────────────────────────────────────────────────────────
+gəlmək	gəl mək	gəl+mastar
+almaq	al maq	al+mastar
+gəlməyə	gəl məy ə	gəl+mastar+yönelme
+almağa	al mağ a	al+mastar+yönelme
+gəlməyi	gəl məy i	gəl+mastar+belirtme
+gəlməsi	gəl mə s i	gəl+fiil_isim_ma+iyelik_3tekil
+gəliş	gəl iş	gəl+isim_fiil
+gəlişi	gəl iş i	gəl+isim_fiil+belirtme
+gələn	gəl ən	gəl+ortaç_an
+gələnlər	gəl ən lər	gəl+ortaç_an+çoğul
+oxuyan	o xu y an	oxu+ortaç_an
+gəldiyim	gəl diy i m	gəl+ortaç_dik+iyelik_1tekil
+aldığı	al dığ ı	al+ortaç_dik+iyelik_3tekil
+gəldiyimiz	gəl diy i miz	gəl+ortaç_dik+iyelik_1çoğul
+gördüyüm	gör düy ü m	gör+ortaç_dik+iyelik_1tekil
+gələcəyim	gəl əcəy i m	gəl+ortaç_acak+iyelik_1tekil
+gəldikdə	gəl dik də	gəl+ortaç_dik+bulunma
+gələrək	gəl ərək	gəl+ulaç_arak
+alaraq	al araq	al+ulaç_arak
+olaraq	ol araq	ol+ulaç_arak
+gəlincə	gəl incə	gəl+ulaç_inca
+gəlmədən	gəl mədən	gəl+ulaç_madan
+gələndə	gəl əndə	gəl+ulaç_anda
+oxuyanda	o xu y anda	oxu+ulaç_anda
+gəldikcə	gəl dikcə	gəl+ulaç_dıqca
+aldıqca	al dıqca	al+ulaç_dıqca
+# ── ad yüklemi ve ek-fiil (koşaç) ──────────────────────────────────────────────────────────
+müəlliməm	mü əl lim əm	müəllim+koşaç_1tekil_t1
+müəllimsən	mü əl lim sən	müəllim+koşaç_2tekil_t1
+müəllimdir	mü əl lim dir	müəllim+ek_fiil_dir
+müəllimik	mü əl lim ik	müəllim+koşaç_1çoğul_t1
+müəllimsiniz	mü əl lim siniz	müəllim+koşaç_2çoğul_t1
+müəllimdirlər	mü əl lim dir lər	müəllim+ek_fiil_dir+koşaç_3çoğul
+tələbəyəm	tə lə bə y əm	tələbə+koşaç_1tekil_t1
+tələbəyik	tə lə bə y ik	tələbə+koşaç_1çoğul_t1
+evdəyəm	ev də y əm	ev+bulunma+koşaç_1tekil_t1
+evdəydi	ev də y di	ev+bulunma+ek_fiil_idi
+hazıram	ha zır am	hazır+koşaç_1tekil_t1
+hazırıq	ha zır ıq	hazır+koşaç_1çoğul_t1
+lazımdır	la zım dır	lazım+ek_fiil_dir
+vacibdir	va cib dir	vacib+ek_fiil_dir
+gəlirdi	gəl ir di	gəl+şimdiki_zaman+ek_fiil_idi
+gəlirdim	gəl ir di m	gəl+şimdiki_zaman+ek_fiil_idi+koşaç_1tekil_t2
+gələcəkdi	gəl əcək di	gəl+gelecek_zaman+ek_fiil_idi
+gəlmişdi	gəl miş di	gəl+duyulan_geçmiş+ek_fiil_idi
+gəlirmiş	gəl ir miş	gəl+şimdiki_zaman+ek_fiil_imiş
+gəlsəydi	gəl sə y di	gəl+şart+ek_fiil_idi
+gələrkən	gəl ər kən	gəl+geniş_zaman+ek_fiil_ken
+gəlirkən	gəl ir kən	gəl+şimdiki_zaman+ek_fiil_ken
+# ── var / yox / deyil ─────────────────────────────────────────────────────────────────────
+vardır	var dır	var+ek_fiil_dir
+vardı	var dı	var+ek_fiil_idi
+yoxdur	yox dur	yox+ek_fiil_dir
+yoxdu	yox du	yox+ek_fiil_idi
+deyiləm	de yil əm	deyil+koşaç_1tekil_t1
+deyilsən	de yil sən	deyil+koşaç_2tekil_t1
+deyil	de yil	deyil
+deyilik	de yil ik	deyil+koşaç_1çoğul_t1
+deyildir	de yil dir	deyil+ek_fiil_dir
+deyildi	de yil di	deyil+ek_fiil_idi
+# ── bitişik soru eki -mI (son çare: başka çözüm varsa seçilmez) ─────────────────────────────
+varmı	var mı	var+soru
+deyilmi	de yil mi	deyil+soru
+gəlirsənmi	gəl ir sən mi	gəl+şimdiki_zaman+şahıs_2tekil_t1+soru
+gəldinmi	gəl di n mi	gəl+görülen_geçmiş+şahıs_2tekil_t2+soru
+gələcəkmi	gəl əcək mi	gəl+gelecek_zaman+soru
+evdəmi	ev də mi	ev+bulunma+soru
+lazımdırmı	la zım dır mı	lazım+ek_fiil_dir+soru
+hazırsınızmı	ha zır sınız mı	hazır+koşaç_2çoğul_t1+soru
+kitabımı	ki tab ı m ı	kitab+iyelik_1tekil+belirtme
+sözümü	söz ü m ü	söz+iyelik_1tekil+belirtme
+# ── tarama turunda düzeltilenler (AZ-2): seçim politikası + düzensiz y + -mAlI bütünlüğü ──────
+suyum	su y u m	su+iyelik_1tekil
+suyumuz	su y u muz	su+iyelik_1çoğul
+susuz	su suz	su+yapım_sız
+nəyim	nə y i m	nə+iyelik_1tekil
+açmalımı	aç malı mı	aç+gereklilik+soru
+yazsan	yaz sa n	yaz+şart+şahıs_2tekil_t2
+gülsən	gül sə n	gül+şart+şahıs_2tekil_t2
+güldü	gül dü	gül+görülen_geçmiş
+yazda	yaz da	yaz+bulunma
+içində	iç i n də	iç+iyelik_3tekil+bulunma
+altından	alt ı n dan	alt+iyelik_3tekil+ayrılma
+altında	alt ı n da	alt+iyelik_3tekil+bulunma
+altıncı	al tı ncı	altı+sıra
+yeniniz	ye ni niz	yeni+iyelik_2çoğul
+kimsən	kim sən	kim+koşaç_2tekil_t1
+atamı	a ta m ı	ata+iyelik_1tekil+belirtme
+ilki	ilk i	ilk+belirtme
+adam	a dam	adam

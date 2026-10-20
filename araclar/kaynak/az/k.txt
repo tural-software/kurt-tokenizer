@@ -1,0 +1,8 @@
+# k harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+kürək|isim|k→y
+kiçik|sıfat|k→y
+kök|isim|
+kitab|isim|
+kənd|isim|
+kişi|isim|
+köhnə|sıfat|

@@ -1,0 +1,6 @@
+{
+  "ölkə": {"tokens": ["öl", "kə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
+  "ömür": {"tokens": ["ö", "mür"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null, "düşen": true},
+  "öyrən": {"tokens": ["öy", "rən"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "öyrət": {"tokens": ["öy", "rət"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null}
+}

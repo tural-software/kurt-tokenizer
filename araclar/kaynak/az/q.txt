@@ -1,0 +1,15 @@
+# q harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+qonaq|isim|q→ğ
+qulaq|isim|q→ğ
+qaşıq|isim|q→ğ
+qardaş|isim|
+qapı|isim|
+qız|isim|
+qadın|isim|
+qısa|sıfat|
+qara|sıfat|
+qırmızı|sıfat|
+qayıt|fiil|t→d
+qal|fiil|
+qaç|fiil|
+qoy|fiil|

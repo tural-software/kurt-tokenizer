@@ -1,0 +1,9 @@
+{
+  "kənd": {"tokens": ["kənd"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "kök": {"tokens": ["kök"], "tür": "isim", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
+  "kiçik": {"tokens": ["ki", "çik"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "kişi": {"tokens": ["ki", "şi"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
+  "kitab": {"tokens": ["ki", "tab"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "köhnə": {"tokens": ["köh", "nə"], "tür": "sıfat", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
+  "kürək": {"tokens": ["kü", "rək"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}}
+}
