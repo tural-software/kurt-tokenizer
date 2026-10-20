@@ -18,6 +18,7 @@ import unicodedata
 
 from tokenizer import alfabe, sesler
 from tokenizer.cozumle import çözümle
+from tokenizer.dil import PROFİLLER, DOĞAL_DİLLER
 from tokenizer.hece import hecele
 from tokenizer.kod import DİLLER, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜĞÜ, tanımlayıcı_böl
 
@@ -121,16 +122,17 @@ def _üst_alt_simge_mi(c: str) -> bool:
             or ad.startswith(("MODIFIER LETTER SMALL ", "MODIFIER LETTER CAPITAL ")))
 
 
-def _harf_durumu(kelime, küçük):
+def _harf_durumu(kelime, küçük, profil=None):
     """Kelimenin casing işaretçisi: None (küçük) | BAŞ_BÜYÜK (Başlık) | HEP_BÜYÜK | 'düz'.
 
     'düz' = küçük-harf biçiminden basit casing ile geri üretilemeyen karışık biçim
-    (iPhone gibi) → işaretçisiz, bütün-token korunur (kayıpsızlık için)."""
+    (iPhone gibi) → işaretçisiz, bütün-token korunur (kayıpsızlık için). profil: dilin casing
+    kuralı (None = Türkçe; AZ aynı kural, İ/i I/ı + Ə/ə)."""
     if kelime == küçük:
         return None
-    if kelime == sesler.türkçe_başlık(küçük):
+    if kelime == (sesler.türkçe_başlık(küçük) if profil is None else profil.başlık(küçük)):
         return BAŞ_BÜYÜK
-    if kelime == sesler.türkçe_büyült(küçük):
+    if kelime == (sesler.türkçe_büyült(küçük) if profil is None else profil.büyült(küçük)):
         return HEP_BÜYÜK
     return "düz"
 
@@ -184,9 +186,9 @@ def _altbirimler(parça):
         yield "".join(grup), bool(harf_mi)
 
 
-def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam):
+def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=None):
     """(token_listesi, bilinmeyen_mi) döndürür. bilinmeyen_mi: çözülemedi → kuyruğa alındı."""
-    çs = çözümle(kelime, kökler, ekler, istisnalar)
+    çs = çözümle(kelime, kökler, ekler, istisnalar, profil)
     if çs:
         return list(en_iyi_çözüm(çs, kökler, ekler).tokens), False
     if kuyruk is not None:                       # bilinmeyen → bize sorulur
@@ -279,18 +281,28 @@ def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None,
     ve metnin baş/son boş satırları atılır → decode(encode(x)) == metin_kanonik(x) (kurt-veri
     normalleştirmesiyle uyumlu). kip "kod": boşluk, satır sonu ve girinti KAYIPSIZ korunur
     (boşluk_tokenları); boşluk dışı her parça metin hattıyla aynı işlenir. Kip AÇIKÇA verilir,
-    tahmin edilmez (ilke #3). dil (yalnız kod kipinde, ör. "python"): o dilin lexer'ı ile
-    anahtar sözcük/operatör bütün token, yorum/string Türkçe hat (_kod_dil_ekle).
+    tahmin edilmez (ilke #3). dil, kip "kod" iken programlama dili (ör. "python"): o dilin lexer'ı
+    ile anahtar sözcük/operatör bütün token, yorum/string Türkçe hat (_kod_dil_ekle). dil, kip
+    "metin" iken doğal dil (ör. "az"; None = Türkçe): kökler/ekler/istisnalar O DİLİN verisi
+    olmalı (tokenizer.diller), çözümleme o dilin profiliyle yapılır; boşluk/satır/casing/
+    noktalama/LaTeX davranışı Türkçe metin kipiyle aynıdır.
 
     önbellek (opsiyonel dict): {küçük_kelime: token_listesi} — büyük korpusta (Aşama 1)
     aynı kelimeyi tekrar çözmemek için memoization. Deterministik (aynı kelime hep aynı
     token); yalnız hız. kuyruk yan-etkisi ilk görülüşte işler (kuyruk zaten tekilleştirir)."""
     if kip not in KİPLER:
         raise ValueError(f"bilinmeyen kip: {kip!r} (geçerli: {', '.join(KİPLER)})")
-    if dil is not None and (kip != "kod" or dil not in DİLLER):
-        raise ValueError(f"dil yalnız kod kipinde ve şunlardan biri: {', '.join(DİLLER)} ({dil!r})")
-    tokenlar: list[str] = []
+    profil = None
     if dil is not None:
+        if kip == "kod" and dil not in DİLLER:
+            raise ValueError(f"kod kipinde dil şunlardan biri: {', '.join(DİLLER)} ({dil!r})")
+        if kip == "metin":
+            if dil not in DOĞAL_DİLLER:
+                raise ValueError(f"metin kipinde dil şunlardan biri: "
+                                 f"{', '.join(sorted(DOĞAL_DİLLER))} (Türkçe: dil verilmez) ({dil!r})")
+            profil = PROFİLLER[dil]
+    tokenlar: list[str] = []
+    if dil is not None and kip == "kod":
         _kod_dil_ekle(DİLLER[dil](metin), tokenlar, kökler, ekler, istisnalar, kuyruk,
                       önbellek, metin)
         return tokenlar
@@ -308,7 +320,7 @@ def encode(metin, kökler, ekler, istisnalar=None, kuyruk=None, önbellek=None,
             if i > 0:
                 tokenlar.append(BOŞLUK)
             _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin,
-                        latex=True)
+                        latex=True, profil=profil)
     return tokenlar
 
 
@@ -331,14 +343,17 @@ def metin_kanonik(metin: str) -> str:
 
 
 def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek, metin,
-                latex=False):
+                latex=False, profil=None):
     """Boşluk içermeyen bir parçanın tokenlarını ekler (iki kipte ortak).
 
     latex (yalnız metin kipi): ters bölü + TAM komut adı (\\frac, \\Delta) tek token. Ters bölü
     koşusu TEK sayıda olmalı (\\\\frac = satır sonu komutu + düz 'frac') ve harf koşusu komut adına
     BİREBİR eşit olmalı (\\fracx, \\Frac komut değil → eskisi gibi). Kod kipinde kapalı: Python
-    dizgesindeki '\\nu' kaçış dizisidir, LaTeX değil."""
-    önceki_kesme = False                         # bir önceki altbirim kesme ile mi bitti?
+    dizgesindeki '\\nu' kaçış dizisidir, LaTeX değil.
+
+    profil (None = Türkçe): doğal dil; önbellek anahtarı dil ayrımlıdır (aynı yüzey iki dilde
+    farklı tokenlanır): Türkçe anahtar düz 'kelime', diğer dil ('az', 'kelime')."""
+    önceki_kesme = False                        # bir önceki altbirim kesme ile mi bitti?
     altbirimler = list(_altbirimler(parça))
     atla = False
     for j, (altbirim, kelime_mi) in enumerate(altbirimler):
@@ -362,25 +377,26 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
             # Kesme sonrası harf-koşusu = EK (özel ad/akronim/sayı eki: İstanbul'da,
             # Ahmet'in, 2024'te) → hecele, BİLİNMEYEN kuyruğuna atma. Küçük harf eki
             # olduğu gibi hecelenir; büyük harfli (nadir) bütün/harf-fallback kalır.
-            tokenlar.extend(hecele(altbirim))
+            tokenlar.extend(hecele(altbirim, profil))
             önceki_kesme = False
             continue
-        küçük = sesler.türkçe_küçült(altbirim)
-        durum = _harf_durumu(altbirim, küçük)
+        küçük = sesler.türkçe_küçült(altbirim) if profil is None else profil.küçült(altbirim)
+        durum = _harf_durumu(altbirim, küçük, profil)
         if durum == "düz":                       # karışık biçim → bütün-token, koru
             tokenlar.append(altbirim)
             continue
         if durum:                                # casing işaretçisi (Başlık / HEP BÜYÜK)
             tokenlar.append(durum)
-        if önbellek is not None and küçük in önbellek:
-            _tk, _bilinmeyen = önbellek[küçük]
+        anahtar = küçük if profil is None else (profil.kod, küçük)
+        if önbellek is not None and anahtar in önbellek:
+            _tk, _bilinmeyen = önbellek[anahtar]
             if _bilinmeyen and kuyruk is not None:   # isabet'te de kuyruğa al (frekans doğru)
                 kuyruk.ekle(küçük, metin)
             tokenlar.extend(_tk)
             continue
-        _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin)
+        _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin, profil)
         if önbellek is not None:
-            önbellek[küçük] = (_tk, _bilinmeyen)
+            önbellek[anahtar] = (_tk, _bilinmeyen)
         tokenlar.extend(_tk)
 
 

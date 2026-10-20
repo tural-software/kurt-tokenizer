@@ -8,6 +8,7 @@ DETERMİNİSTİK türetilir — kök tasarımındaki "son_ünlü tek kaynak" ilk
   I      dar ünlü morfofonemi     → ı/i/u/ü    (artlık+yuvarlaklık)
   D      ünsüz morfofonemi        → d/t        (önceki ses ötümsüzse t)
   C      ünsüz morfofonemi        → c/ç        (önceki ses ötümsüzse ç)
+  Q      ünsüz morfofonemi        → q/k        (artlığa göre; AZ -AcAQ: alacaq/gələcək)
   (X)    tampon:
            X ünlü (A/I) ise  → yalnızca ÜNSÜZ-sonu gövdeye eklenir   (iyelik -(I)m)
            X ünsüz (y/n/s) ise → yalnızca ÜNLÜ-sonu gövdeye eklenir  (-(y)I, -(s)I)
@@ -30,16 +31,17 @@ from tokenizer.alfabe import ALFABE
 SERT: frozenset[str] = frozenset("çfhkpsşt")
 
 İZİNLİ_ÖBEK: frozenset[str] = frozenset({"isim", "fiil", "her"})  # her = ad+fiil (koşaç)
-_ŞABLON_SİMGE = set(ALFABE) | set("AIDC()")
+_MORFOFONEM = "AIDCQ()"
+_ŞABLON_SİMGE = set(ALFABE) | set(_MORFOFONEM)
 
 
-def çöz_ünlü(simge: str, son_ünlü: str) -> str:
-    """A/I morfofonemini kökün son ünlüsüne göre yüzeye indirger."""
-    art = sesler.artlık(son_ünlü)
+def çöz_ünlü(simge: str, son_ünlü: str, profil=None) -> str:
+    """A/I morfofonemini kökün son ünlüsüne göre yüzeye indirger (profil: dil, None = Türkçe)."""
+    art = sesler.artlık(son_ünlü) if profil is None else profil.artlık(son_ünlü)
     if simge == "A":
-        return "a" if art == "kalın" else "e"
+        return "a" if art == "kalın" else ("e" if profil is None else profil.geniş_ince)
     if simge == "I":
-        yuv = sesler.yuvarlaklık(son_ünlü)
+        yuv = sesler.yuvarlaklık(son_ünlü) if profil is None else profil.yuvarlaklık(son_ünlü)
         return {
             ("kalın", "düz"): "ı", ("ince", "düz"): "i",
             ("kalın", "yuvarlak"): "u", ("ince", "yuvarlak"): "ü",
@@ -47,9 +49,9 @@ def çöz_ünlü(simge: str, son_ünlü: str) -> str:
     raise ValueError(f"Ünlü morfofonemi değil: {simge!r}")
 
 
-def çöz_ünsüz(simge: str, önceki: str) -> str:
+def çöz_ünsüz(simge: str, önceki: str, profil=None) -> str:
     """D/C morfofonemini önceki sesin ötümlülüğüne göre yüzeye indirger."""
-    sert = önceki in SERT
+    sert = önceki in (SERT if profil is None else profil.sert)
     if simge == "D":
         return "t" if sert else "d"
     if simge == "C":
@@ -57,18 +59,19 @@ def çöz_ünsüz(simge: str, önceki: str) -> str:
     raise ValueError(f"Ünsüz morfofonemi değil: {simge!r}")
 
 
-def ek_çöz(şablon: str, gövde: str, son_ü: str | None = None) -> str:
+def ek_çöz(şablon: str, gövde: str, son_ü: str | None = None, profil=None) -> str:
     """Soyut ek şablonunu, eklendiği gövdeye göre yüzey biçimine indirger.
 
     Örn: ek_çöz("(y)I", "araba") -> "yı";  ek_çöz("DA", "kitap") -> "ta".
     `son_ü` verilirse ilk uyum çapası olarak kullanılır (istisnai uyum: kalp→kalbi için
     art ünlü 'a' yerine ince karşılığı 'e' geçirilir); verilmezse gövdeden türetilir.
     """
-    if son_ü is None:
-        son_ü = sesler.son_ünlü_bul(gövde)   # ilerleyici uyum için "o anki son ünlü"
+    ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
+    if son_ü is None:                       # ilerleyici uyum için "o anki son ünlü"
+        son_ü = (sesler.son_ünlü_bul(gövde) if profil is None else profil.son_ünlü_bul(gövde))
     if son_ü is None:
         raise ValueError(f"Gövdede ünlü yok: {gövde!r}")
-    ünlü_sonu = gövde[-1] in sesler.ÜNLÜLER
+    ünlü_sonu = gövde[-1] in ünlüler
     önceki = gövde[-1]
     sonuç: list[str] = []
     i = 0
@@ -79,20 +82,23 @@ def ek_çöz(şablon: str, gövde: str, son_ü: str | None = None) -> str:
             i += 3  # "(X)" atla
             if simge in "AI":              # tampon ünlü → ünsüz-sonu gövdeye
                 if not ünlü_sonu:
-                    h = çöz_ünlü(simge, son_ü)
+                    h = çöz_ünlü(simge, son_ü, profil)
                     sonuç.append(h); önceki = h; son_ü = h
             else:                          # tampon ünsüz (y/n/s) → ünlü-sonu gövdeye
                 if ünlü_sonu:
                     sonuç.append(simge); önceki = simge
             continue
         if c in "AI":
-            h = çöz_ünlü(c, son_ü)         # önceki ÜNLÜ ile uyumla (ilerleyici)
+            h = çöz_ünlü(c, son_ü, profil)  # önceki ÜNLÜ ile uyumla (ilerleyici)
             son_ü = h
         elif c in "DC":
-            h = çöz_ünsüz(c, önceki)
+            h = çöz_ünsüz(c, önceki, profil)
+        elif c == "Q":                     # artlığa göre q/k (AZ); Türkçe şablonlarda yok
+            h = "q" if (sesler.artlık(son_ü) if profil is None
+                        else profil.artlık(son_ü)) == "kalın" else "k"
         else:
             h = c
-            if c in sesler.ÜNLÜLER:        # düz ünlü de uyumu ilerletir (ör. -Iyor'daki o)
+            if c in ünlüler:               # düz ünlü de uyumu ilerletir (ör. -Iyor'daki o)
                 son_ü = c
         sonuç.append(h); önceki = h
         i += 1
@@ -121,12 +127,13 @@ class EkŞemaHatası(Exception):
         )
 
 
-def doğrula(ad: str, ek: Ek) -> list[str]:
+def doğrula(ad: str, ek: Ek, profil=None) -> list[str]:
     hatalar: list[str] = []
+    simgeler = _ŞABLON_SİMGE if profil is None else set(profil.alfabe) | set(_MORFOFONEM)
     if not ek.şablon:
         hatalar.append(f"{ad!r}: şablon boş olamaz")
     else:
-        bilinmeyen = set(ek.şablon) - _ŞABLON_SİMGE
+        bilinmeyen = set(ek.şablon) - simgeler
         if bilinmeyen:
             hatalar.append(f"{ad!r}: şablonda geçersiz simge(ler): {sorted(bilinmeyen)}")
     if ek.öbek not in İZİNLİ_ÖBEK:
@@ -140,8 +147,8 @@ def doğrula(ad: str, ek: Ek) -> list[str]:
     return hatalar
 
 
-def yükle(yol: str | Path) -> dict[str, Ek]:
-    """Ek listesini JSON'dan yükler ve doğrular."""
+def yükle(yol: str | Path, profil=None) -> dict[str, Ek]:
+    """Ek listesini JSON'dan yükler ve doğrular (profil: şablon alfabesi; None = Türkçe)."""
     ham = json.loads(Path(yol).read_text(encoding="utf-8"))
     sözlük: dict[str, Ek] = {}
     hatalar: list[str] = []
@@ -153,7 +160,7 @@ def yükle(yol: str | Path) -> dict[str, Ek]:
                              else (girdi.get("kök_koşullu") or "")),
                 çıkış=girdi.get("çıkış", ""),
                 değişim=girdi.get("değişim"))
-        g = doğrula(ad, ek)
+        g = doğrula(ad, ek, profil)
         hatalar.extend(g) if g else sözlük.update({ad: ek})
     if hatalar:
         raise EkŞemaHatası(hatalar)

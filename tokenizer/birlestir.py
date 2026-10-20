@@ -32,41 +32,41 @@ GENİŞ_IR = frozenset({"al", "bil", "bul", "dur", "den", "gel", "gör", "kal", 
                       "ol", "öl", "san", "var", "ver", "vur"})
 
 
-def _geniş_şablon(gövde: str, ad: str) -> str:
+def _geniş_şablon(gövde: str, ad: str, ünlüler=sesler.ÜNLÜLER) -> str:
     """Geniş zaman ekinin köke göre şablonu: ünlü-sonu→r, çok-heceli ünsüz→Ir,
     tek-heceli→Ar (istisna kümesi→Ir)."""
-    if gövde[-1] in sesler.ÜNLÜLER:
+    if gövde[-1] in ünlüler:
         return "r"
-    çok_heceli = sum(1 for c in gövde if c in sesler.ÜNLÜLER) > 1
+    çok_heceli = sum(1 for c in gövde if c in ünlüler) > 1
     if çok_heceli:
         return "Ir"
     return "Ir" if ad in GENİŞ_IR else "Ar"
 
 
-def _edilgen_şablon(gövde: str) -> str:
+def _edilgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER) -> str:
     """Edilgen (pasif) çatı şablonu: ünlü/l-sonu → (I)n (okun/alın), ünsüz → (I)l (yapıl)."""
     son = gövde[-1]
-    return "(I)n" if (son in sesler.ÜNLÜLER or son == "l") else "(I)l"
+    return "(I)n" if (son in ünlüler or son == "l") else "(I)l"
 
 
-def _ettirgen_şablon(gövde: str) -> str:
+def _ettirgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER) -> str:
     """Ettirgen (oldurgan) çatı şablonu: ünlü/r-sonu → t (okut/oturt), ünsüz → DIr (yaptır)."""
     son = gövde[-1]
-    return "t" if (son in sesler.ÜNLÜLER or son == "r") else "DIr"
+    return "t" if (son in ünlüler or son == "r") else "DIr"
 
 
-def _ünlü_düşür(s: str) -> str:
+def _ünlü_düşür(s: str, ünlüler=sesler.ÜNLÜLER) -> str:
     """Sözcüğün SON ünlüsünü düşürür (ünlü düşmesi): akıl→akl, ağız→ağz, kıl→kl."""
     for j in range(len(s) - 1, -1, -1):
-        if s[j] in sesler.ÜNLÜLER:
+        if s[j] in ünlüler:
             return s[:j] + s[j + 1:]
     return s
 
 
-def _e_i(s: str) -> str:
+def _e_i(s: str, ünlüler=sesler.ÜNLÜLER) -> str:
     """ye/de düzensizi: sözcüğün son ünlüsü e→i (ye→yi, de→di). Diğer ünlü değişmez."""
     for j in range(len(s) - 1, -1, -1):
-        if s[j] in sesler.ÜNLÜLER:
+        if s[j] in ünlüler:
             return s[:j] + ("i" if s[j] == "e" else s[j]) + s[j + 1:]
     return s
 
@@ -86,7 +86,8 @@ def _ince_çevir(ünlü: str) -> str:
     return {"a": "e", "ı": "i", "o": "ö", "u": "ü", "â": "e", "û": "ü"}.get(ünlü, ünlü)
 
 
-def _çöz_parça(şablon: str, gövde: str, son_ü: str | None = None) -> tuple[str, str]:
+def _çöz_parça(şablon: str, gövde: str, son_ü: str | None = None, profil=None
+               ) -> tuple[str, str]:
     """Eki çözüp (tampon, gövde_eki) döndürür.
 
     Şablondaki parantezli tampon (ünlü ya da ünsüz) emildiyse AYRI token olur
@@ -94,19 +95,20 @@ def _çöz_parça(şablon: str, gövde: str, son_ü: str | None = None) -> tuple
     karakterdir, bu yüzden yüzey[0] tampon, yüzey[1:] ek gövdesidir.
     `son_ü` (istisnai uyum çapası) verilirse ek_çöz'e geçirilir.
     """
-    yüzey = ek_çöz(şablon, gövde, son_ü)
+    yüzey = ek_çöz(şablon, gövde, son_ü, profil)
     if şablon.startswith("("):
         simge = şablon[1]
-        ünlü_sonu = gövde[-1] in sesler.ÜNLÜLER
+        ünlü_sonu = gövde[-1] in (sesler.ÜNLÜLER if profil is None else profil.ünlüler)
         emildi = (simge in "AI" and not ünlü_sonu) or (simge not in "AI" and ünlü_sonu)
         if emildi:
             return yüzey[0], yüzey[1:]
     return "", yüzey
 
 
-def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek]
+def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profil=None
               ) -> tuple[list[str], str]:
-    """Kök + sıralı ek adları → (token listesi, yüzey biçimi)."""
+    """Kök + sıralı ek adları → (token listesi, yüzey biçimi). profil: dil (None = Türkçe)."""
+    ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
     tokenlar = list(kök.tokens)
     gövde = ad
     önceki_değişim = kök.değişim          # son morfemin yumuşama kuralı (önce kök, sonra ekler)
@@ -118,17 +120,19 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek]
         if kural == "geniş":
             # Olumsuz/yetersizlik sonrası geniş zaman düzensiz: -Ar/-Ir değil -z (gelmez).
             olumsuz_bağlam = any(a in ("olumsuz", "yetersizlik") for a in ek_adları[:idx])
-            şablon = "z" if olumsuz_bağlam else _geniş_şablon(gövde, ad)
+            şablon = "z" if olumsuz_bağlam else _geniş_şablon(gövde, ad, ünlüler)
         elif kural == "edilgen":
-            şablon = _edilgen_şablon(gövde)
+            şablon = _edilgen_şablon(gövde, ünlüler)
         elif kural == "ettirgen":
-            şablon = _ettirgen_şablon(gövde)
+            şablon = _ettirgen_şablon(gövde, ünlüler)
         else:
             şablon = ek.şablon
         # -Iyor daralması: daraltır ek, çok-heceli a/e-sonu gövdeye gelince son ünlü düşer
         # (oyna→oyn+u+yor=oynuyor; ara→arıyor). Dar ünlü (oku/yürü) etkilenmez.
-        if (getattr(ek, "daraltır", False) and gövde and gövde[-1] in "ae"
-                and any(c in sesler.ÜNLÜLER for c in gövde[:-1])):
+        if (getattr(ek, "daraltır", False) and gövde
+                and gövde[-1] in ("ae" if profil is None else profil.daralan_son)
+                and any(c in ünlüler for c in gövde[:-1])
+                and (profil is None or profil.daraltma == "gövde" or önceki_ek == "olumsuz")):
             gövde = gövde[:-1]
             tokenlar[-1] = tokenlar[-1][:-1]
             if not tokenlar[-1]:
@@ -140,8 +144,11 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek]
             gövde = gövde + "n"
         # İstisnai uyum: ince kökte ilk ek, kökün son ünlüsünün İNCE karşılığına uyumlar
         # (kalp→kalbi, rol→rolü). Yalnız ilk ek (sonra gövde zaten ince ünlü taşır).
-        uyum_ü = _ince_çevir(kök.son_ünlü) if (idx == 0 and getattr(kök, "ince", False)) else None
-        tampon, gövde_eki = _çöz_parça(şablon, gövde, uyum_ü)
+        uyum_ü = None
+        if idx == 0 and getattr(kök, "ince", False):
+            uyum_ü = (_ince_çevir(kök.son_ünlü) if profil is None
+                      else profil.ince_çevir(kök.son_ünlü))
+        tampon, gövde_eki = _çöz_parça(şablon, gövde, uyum_ü, profil)
         # Yumuşama: ÖNCEKİ morfemin (kök ya da bir önceki ek) son ünsüzü, ünlüyle başlayan
         # ek gelince yumuşar (kök: kitap→kitabı, git→gidiyor; ek: gelecek→geleceğiz k→ğ).
         # Ünsüz öncesi olmaz (git+ti→gitti); tampon ünsüzle başlarsa da olmaz (araba+y+a).
@@ -149,15 +156,15 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek]
         # Ünlü düşmesi: düşen-ünlü kökte ilk ekte ünlü-başlı ek gelince kökün son ünlüsü
         # düşer (akıl+ım→aklım, ağız+ı→ağzı). Harmony orijinal son ünlüden alındı (ek_çöz
         # öncesi); kayıp gibi düşen+yumuşamada önce düşer sonra yumuşar (kayp→kayb→kaybı).
-        if idx == 0 and getattr(kök, "düşen", False) and ilk_ses in sesler.ÜNLÜLER:
-            tokenlar[-1] = _ünlü_düşür(tokenlar[-1])
-            gövde = _ünlü_düşür(gövde)
+        if idx == 0 and getattr(kök, "düşen", False) and ilk_ses in ünlüler:
+            tokenlar[-1] = _ünlü_düşür(tokenlar[-1], ünlüler)
+            gövde = _ünlü_düşür(gövde, ünlüler)
         # ye/de düzensizi: çekirdek e→i, yalnız y-glide'lı ek öncesi (ünlü-başlı ek → tampon
         # y; -Iyor → 'yor'). Ünsüz-başlı ekte (yedi/yer/dedi/der) değişmez. Yalnız ilk ek.
         if (idx == 0 and getattr(kök, "daralan", False)
                 and (tampon + gövde_eki).startswith("y")):
-            tokenlar[-1] = _e_i(tokenlar[-1])
-            gövde = _e_i(gövde)
+            tokenlar[-1] = _e_i(tokenlar[-1], ünlüler)
+            gövde = _e_i(gövde, ünlüler)
         # Sınıf-farkındalıklı yumuşama (kural #7): YUMUŞAMA KÖKÜN BİRİNCİL SINIFINA AİTTİR.
         # Kök ikincil sınıfında (ek_tür) okunuyorsa (ilk ek öbeği ≠ birincil tür) değişim
         # UYGULANMAZ. Bu, okumaya-göre-değişen eşsesli yumuşamayı çözer: art→ardı(isim, t→d)
@@ -168,7 +175,7 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek]
             birincil = "fiil" if kök.tür == "fiil" else "isim"
             if ek.öbek != birincil:                # ikincil sınıf okuması: ek_değişim (yoksa None)
                 değ = kök.ek_değişim               # art→None (sabit), tat→{t→d} (tadıyor)
-        if değ and ilk_ses in sesler.ÜNLÜLER:
+        if değ and ilk_ses in ünlüler:
             tokenlar[-1] = _yumuşat_son(tokenlar[-1], değ)
             gövde = _yumuşat_son(gövde, değ)
         if tampon:

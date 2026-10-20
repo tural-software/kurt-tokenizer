@@ -19,9 +19,11 @@ from __future__ import annotations
 from tokenizer import sesler
 
 
-def hecele(kelime: str) -> list[str]:
-    """Bir kökü (ek almamış kelimeyi) hecelere böler."""
-    ünlü_yerleri = [i for i, harf in enumerate(kelime) if harf in sesler.ÜNLÜLER]
+def hecele(kelime: str, profil=None) -> list[str]:
+    """Bir kökü (ek almamış kelimeyi) hecelere böler. profil: dil profili (None = Türkçe);
+    kural tüm Türk dillerinde aynı, yalnız ünlü kümesi profilden gelir (AZ: ə)."""
+    ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
+    ünlü_yerleri = [i for i, harf in enumerate(kelime) if harf in ünlüler]
     if not ünlü_yerleri:
         return [kelime] if kelime else []
 
