@@ -1,0 +1,7 @@
+{
+  "üç": {"tokens": ["üç"], "tür": "sıfat", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "üst": {"tokens": ["üst"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "üfüq": {"tokens": ["ü", "füq"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "ürək": {"tokens": ["ü", "rək"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "üzər": {"tokens": ["ü", "zər"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null}
+}

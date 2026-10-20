@@ -1,0 +1,20 @@
+# y harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+yarpaq|isim|q→ğ
+yataq|isim|q→ğ
+yumşaq|sıfat|q→ğ
+yük|isim|
+yol|isim|
+yer|isim|
+yan|isim|
+yuxarı|isim|
+yaxşı|sıfat|
+yeni|sıfat|
+yaşıl|sıfat|
+yeddi|sıfat|
+yüz|sıfat|
+ye|fiil|
+yaz|fiil||isim
+yat|fiil|
+yoxla|fiil|
+yaşa|fiil|
+yığ|fiil|

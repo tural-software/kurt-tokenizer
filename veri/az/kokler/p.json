@@ -1,0 +1,5 @@
+{
+  "park": {"tokens": ["park"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "pis": {"tokens": ["pis"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "pəncərə": {"tokens": ["pən", "cə", "rə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null}
+}

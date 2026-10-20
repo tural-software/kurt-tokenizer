@@ -1,0 +1,15 @@
+{
+  "sat": {"tokens": ["sat"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "sev": {"tokens": ["sev"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "səs": {"tokens": ["səs"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "son": {"tokens": ["son"], "tür": "sıfat", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "söz": {"tokens": ["söz"], "tür": "isim", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
+  "su": {"tokens": ["su"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünlü", "değişim": null, "y_tampon": true},
+  "süd": {"tokens": ["süd"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "sabah": {"tokens": ["sa", "bah"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "saxla": {"tokens": ["sax", "la"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "səkkiz": {"tokens": ["sək", "kiz"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "sinif": {"tokens": ["si", "nif"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "düşen": true},
+  "soyuq": {"tokens": ["so", "yuq"], "tür": "sıfat", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "söylə": {"tokens": ["söy", "lə"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null}
+}

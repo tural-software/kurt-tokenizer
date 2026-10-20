@@ -12,6 +12,7 @@ sıralar ve veri/kokler/<harf>.json'a yazar.
 Kullanım:
   python -X utf8 -m araclar.uret a         # tek harf
   python -X utf8 -m araclar.uret --hepsi   # tüm kaynaklar
+  python -X utf8 -m araclar.uret --dil az --hepsi   # başka dil: araclar/kaynak/az → veri/az/kokler
 """
 
 from __future__ import annotations
@@ -23,6 +24,7 @@ from pathlib import Path
 from tokenizer import sesler
 from tokenizer.alfabe import alfabetik_anahtar
 from tokenizer.hece import hecele
+from tokenizer.dil import PROFİLLER
 from tokenizer.sema import Kök, doğrula
 
 KÖK_DİZİN = Path(__file__).resolve().parent.parent
@@ -48,7 +50,7 @@ def kaynak_oku(txt_yol: str | Path) -> list[tuple]:
         değişim_ham = parçalar[2] if len(parçalar) > 2 else ""
         ek_tür_ham = parçalar[3] if len(parçalar) > 3 else ""
         ek_değişim_ham = parçalar[4] if len(parçalar) > 4 else ""
-        düşen = ince = daralan = False
+        düşen = ince = daralan = y_tampon = False
         kurallar = []
         for m in (p.strip() for p in değişim_ham.split(",") if p.strip()):
             if m == "düşen":
@@ -57,25 +59,29 @@ def kaynak_oku(txt_yol: str | Path) -> list[tuple]:
                 ince = True
             elif m == "daralan":
                 daralan = True
+            elif m == "y_tampon":
+                y_tampon = True
             else:
                 kurallar.append(m)
         değişim = {m: DEĞİŞİM_KOŞULU for m in kurallar} if kurallar else None
         ek_tür = [t.strip() for t in ek_tür_ham.split(",")] if ek_tür_ham else []
         ek_kurallar = [m.strip() for m in ek_değişim_ham.split(",") if m.strip()]
         ek_değişim = {m: DEĞİŞİM_KOŞULU for m in ek_kurallar} if ek_kurallar else None
-        kayıtlar.append((kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim))
+        kayıtlar.append((kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim, y_tampon))
     return kayıtlar
 
 
 def kök_üret(kelime: str, tür: str, değişim: dict | None, ek_tür=None,
              düşen: bool = False, ince: bool = False, daralan: bool = False,
-             ek_değişim: dict | None = None) -> dict:
+             ek_değişim: dict | None = None, profil=None, y_tampon: bool = False) -> dict:
     """Mekanik alanları (tokens, son_ünlü, son_ses) türeterek tam kök girdisi üretir."""
+    ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
     giriş = {
-        "tokens": hecele(kelime),
+        "tokens": hecele(kelime, profil),
         "tür": tür,
-        "son_ünlü": sesler.son_ünlü_bul(kelime),
-        "son_ses": "ünlü" if kelime and kelime[-1] in sesler.ÜNLÜLER else "ünsüz",
+        "son_ünlü": (sesler.son_ünlü_bul(kelime) if profil is None
+                     else profil.son_ünlü_bul(kelime)),
+        "son_ses": "ünlü" if kelime and kelime[-1] in ünlüler else "ünsüz",
         "değişim": değişim,
     }
     if ek_tür:                                   # yalnız eşseslilerde ek alan
@@ -88,28 +94,33 @@ def kök_üret(kelime: str, tür: str, değişim: dict | None, ek_tür=None,
         giriş["daralan"] = True
     if ek_değişim:                               # yalnız her-iki-yön yumuşayan eşseslide (tat)
         giriş["ek_değişim"] = ek_değişim
+    if y_tampon:                                 # yalnız (n) yerine y alan düzensizde (AZ su)
+        giriş["y_tampon"] = True
     return giriş
 
 
-def sıra_anahtarı(ad: str) -> tuple[int, list[int]]:
-    """Sıralama anahtarı: önce hece sayısı, eşitlikte Türkçe alfabetik."""
-    return (len(hecele(ad)), alfabetik_anahtar(ad))
+def sıra_anahtarı(ad: str, profil=None) -> tuple[int, list[int]]:
+    """Sıralama anahtarı: önce hece sayısı, eşitlikte dilin alfabetik sırası."""
+    if profil is None:
+        return (len(hecele(ad)), alfabetik_anahtar(ad))
+    return (len(hecele(ad, profil)), profil.alfabetik_anahtar(ad))
 
 
-def sözlük_üret(kayıtlar) -> dict[str, dict]:
+def sözlük_üret(kayıtlar, profil=None) -> dict[str, dict]:
     """Kayıtları doğrulanmış, sıralı bir {ad: girdi} sözlüğüne dönüştürür."""
     girişler: dict[str, dict] = {}
     hatalar: list[str] = []
-    for kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim in kayıtlar:
+    for kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim, y_tampon in kayıtlar:
         if kelime in girişler:
             hatalar.append(f"{kelime!r}: kaynakta yinelenmiş")
             continue
-        giriş = kök_üret(kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim)
-        hatalar.extend(doğrula(kelime, Kök(**giriş)))
+        giriş = kök_üret(kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim, profil,
+                         y_tampon)
+        hatalar.extend(doğrula(kelime, Kök(**giriş), profil))
         girişler[kelime] = giriş
     if hatalar:
         raise ValueError("Üretim doğrulama hatası:\n  " + "\n  ".join(hatalar))
-    return {ad: girişler[ad] for ad in sorted(girişler, key=sıra_anahtarı)}
+    return {ad: girişler[ad] for ad in sorted(girişler, key=lambda a: sıra_anahtarı(a, profil))}
 
 
 def biçimlendir(sözlük: dict[str, dict]) -> str:
@@ -126,21 +137,34 @@ def biçimlendir(sözlük: dict[str, dict]) -> str:
     return "{\n" + ",\n".join(satırlar) + "\n}\n"
 
 
-def üret_ve_yaz(harf: str) -> int:
-    """Bir harfin kaynağını okuyup veri/kokler/<harf>.json'a yazar; kök sayısını döndürür."""
-    sözlük = sözlük_üret(kaynak_oku(KAYNAK_DİZİN / f"{harf}.txt"))
-    ÇIKTI_DİZİN.mkdir(parents=True, exist_ok=True)
-    (ÇIKTI_DİZİN / f"{harf}.json").write_text(biçimlendir(sözlük), encoding="utf-8")
+def dizinler(dil: str | None = None) -> tuple[Path, Path]:
+    """(kaynak dizini, çıktı dizini): Türkçe araclar/kaynak → veri/kokler; dil X için
+    araclar/kaynak/X → veri/X/kokler."""
+    if dil is None:
+        return KAYNAK_DİZİN, ÇIKTI_DİZİN
+    return KAYNAK_DİZİN / dil, KÖK_DİZİN / "veri" / dil / "kokler"
+
+
+def üret_ve_yaz(harf: str, dil: str | None = None) -> int:
+    """Bir harfin kaynağını okuyup <çıktı>/<harf>.json'a yazar; kök sayısını döndürür."""
+    kaynak, çıktı = dizinler(dil)
+    profil = None if dil is None else PROFİLLER[dil]
+    sözlük = sözlük_üret(kaynak_oku(kaynak / f"{harf}.txt"), profil)
+    çıktı.mkdir(parents=True, exist_ok=True)
+    (çıktı / f"{harf}.json").write_text(biçimlendir(sözlük), encoding="utf-8")
     return len(sözlük)
 
 
 def main(argv: list[str]) -> None:
+    dil = None
+    if argv[:1] == ["--dil"]:
+        dil, argv = argv[1], argv[2:]
     if not argv or argv[0] == "--hepsi":
-        harfler = sorted(p.stem for p in KAYNAK_DİZİN.glob("*.txt"))
+        harfler = sorted(p.stem for p in dizinler(dil)[0].glob("*.txt"))
     else:
         harfler = argv
     for harf in harfler:
-        print(f"{harf}.json  ←  {üret_ve_yaz(harf)} kök")
+        print(f"{harf}.json  ←  {üret_ve_yaz(harf, dil)} kök")
 
 
 if __name__ == "__main__":

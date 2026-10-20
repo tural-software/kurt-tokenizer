@@ -1,0 +1,9 @@
+{
+  "ək": {"tokens": ["ək"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "əl": {"tokens": ["əl"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "ət": {"tokens": ["ət"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "ələk": {"tokens": ["ə", "lək"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "əmlak": {"tokens": ["əm", "lak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "ərik": {"tokens": ["ə", "rik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "ətraf": {"tokens": ["ət", "raf"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null}
+}

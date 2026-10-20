@@ -157,7 +157,23 @@ def _öbek_uyumsuz(çöz, kökler, ekler) -> int:
     return say
 
 
-def en_iyi_çözüm(çözümler, kökler, ekler):
+def _ikincil_okuma(çöz, kökler, ekler) -> int:
+    """Çözüm kökü İKİNCİL sınıfında (ek_tür) mı okuyor? 1 = evet. Okunan sınıf: çıkıştan önceki ilk
+    ad/fiil öbekli ekin öbeği; yalnız koşaç ('her') ekleri varsa ad (koşaç çıplak fiile bağlanmaz)."""
+    kök = kökler.get(çöz.kök)
+    if kök is None or not çöz.ekler or not kök.ek_tür:
+        return 0
+    birincil = "fiil" if kök.tür == "fiil" else "isim"
+    okunan = "isim"
+    for ad in çöz.ekler:
+        öbek = ekler[ad].öbek
+        if öbek != "her":
+            okunan = öbek
+            break
+    return int(okunan != birincil)
+
+
+def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
     """Deterministik seçim: BÜTÜN-KÖK → en az token → en az öbek-uyumsuzluk → en uzun kök.
 
     BÜTÜN-KÖK önceliği (bilgi-tabanlı): kelime ZATEN sözlükte bir kök ise (ek yok) o okuma,
@@ -171,7 +187,23 @@ def en_iyi_çözüm(çözümler, kökler, ekler):
     SON KIRICI (tam sıra): politika eşit bıraktığında token dizisi → kök → ek adları sözlük
     sırası. Olmazsa seçim çözümlerin SIRASINA, o da PYTHONHASHSEED'e bağlı kalır (paralel
     hatta işçiden işçiye farklı çıktı). Örn. resmin: resim+tamlayan [re,sm,in] ile
-    resmi+iyelik_2tekil [res,mi,n] tüm ölçütlerde berabere → [re,sm,in]."""
+    resmi+iyelik_2tekil [res,mi,n] tüm ölçütlerde berabere → [re,sm,in].
+
+    profil (None = Türkçe) politikayı yalnız genişletir: son_çare_ekler (AZ bitişik soru -mI)
+    içeren çözüm, başka çözüm varsa seçilmez; az_ek_önce ise token sayısı eşitliğinde daha az
+    ekli çözümü yeğler. Türkçe anahtar birebir aynıdır."""
+    if profil is not None and (profil.son_çare_ekler or profil.az_ek_önce
+                               or profil.birincil_önce or profil.yeğlenmeyen_ekler):
+        son_çare, yeğlenmeyen = profil.son_çare_ekler, profil.yeğlenmeyen_ekler
+        return min(
+            çözümler,
+            key=lambda ç: (sum(e in son_çare for e in ç.ekler), 0 if not ç.ekler else 1,
+                           _ikincil_okuma(ç, kökler, ekler) if profil.birincil_önce else 0,
+                           len(ç.tokens), len(ç.ekler) if profil.az_ek_önce else 0,
+                           sum(e in yeğlenmeyen for e in ç.ekler),
+                           _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök),
+                           tuple(ç.tokens), ç.kök, tuple(ç.ekler)),
+        )
     return min(
         çözümler,
         key=lambda ç: (0 if not ç.ekler else 1, len(ç.tokens),
@@ -190,7 +222,7 @@ def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=No
     """(token_listesi, bilinmeyen_mi) döndürür. bilinmeyen_mi: çözülemedi → kuyruğa alındı."""
     çs = çözümle(kelime, kökler, ekler, istisnalar, profil)
     if çs:
-        return list(en_iyi_çözüm(çs, kökler, ekler).tokens), False
+        return list(en_iyi_çözüm(çs, kökler, ekler, profil).tokens), False
     if kuyruk is not None:                       # bilinmeyen → bize sorulur
         kuyruk.ekle(kelime, bağlam)
     return [kelime], True                        # BÜTÜN tut
@@ -371,7 +403,9 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
         if not kelime_mi:                        # noktalama: her karakter ayrı token
             for c in altbirim:                   # HARFİYEN '▁' boşluk tokenıyla karışmasın → bayt
                 tokenlar.extend(bayt_tokenları(c) if c == BOŞLUK else c)
-            önceki_kesme = altbirim[-1] in KESME
+            önceki_kesme = altbirim[-1] in KESME or (
+                profil is not None and profil.rakam_tire_eki and altbirim[-1] == "-"
+                and len(altbirim) > 1 and altbirim[-2].isdigit())   # AZ: 2024-cü, 5-də
             continue
         if önceki_kesme:
             # Kesme sonrası harf-koşusu = EK (özel ad/akronim/sayı eki: İstanbul'da,

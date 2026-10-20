@@ -1,0 +1,65 @@
+{
+  "bağlaç": {
+    "və": {"tokens": ["və"], "not": "bağlayıcı"},
+    "ilə": {"tokens": ["ilə"], "not": "bağlayıcı/qoşma; samitdən sonra -la/-lə bitişik de yazılır (araç eki)"},
+    "ki": {"tokens": ["ki"], "not": "bağlayıcı"},
+    "amma": {"tokens": ["amma"], "not": "bağlayıcı"},
+    "lakin": {"tokens": ["lakin"], "not": "bağlayıcı"},
+    "ancaq": {"tokens": ["ancaq"], "not": "bağlayıcı/ədat"},
+    "çünki": {"tokens": ["çünki"], "not": "mənşəcə mürəkkəb bağlayıcı, bitişik (normalar 7.3)"},
+    "əgər": {"tokens": ["əgər"], "not": "bağlayıcı"},
+    "həm": {"tokens": ["həm"], "not": "bağlayıcı"},
+    "ya": {"tokens": ["ya"], "not": "bağlayıcı"},
+    "yaxud": {"tokens": ["yaxud"], "not": "bağlayıcı (normalar 7.3)"},
+    "yoxsa": {"tokens": ["yoxsa"], "not": "bağlayıcı"},
+    "həmçinin": {"tokens": ["həmçinin"], "not": "bağlayıcı (normalar 7.3)"},
+    "habelə": {"tokens": ["habelə"], "not": "bağlayıcı (normalar 7.3)"},
+    "halbuki": {"tokens": ["halbuki"], "not": "bağlayıcı (normalar 7.3)"},
+    "hərçənd": {"tokens": ["hərçənd"], "not": "bağlayıcı (normalar 7.3)"},
+    "nəinki": {"tokens": ["nəinki"], "not": "bağlayıcı (normalar 7.3)"},
+    "yainki": {"tokens": ["yainki"], "not": "bağlayıcı (normalar 7.3)"}
+  },
+  "qoşma": {
+    "üçün": {"tokens": ["üçün"], "not": "ikihecalı qoşma, ayrı yazılır (normalar 7.2.2)"},
+    "kimi": {"tokens": ["kimi"], "not": "qoşma; kim+i (belirtme) ile eşsesli — qoşma okunuşu"},
+    "qədər": {"tokens": ["qədər"], "not": "qoşma"},
+    "ötrü": {"tokens": ["ötrü"], "not": "qoşma"},
+    "təki": {"tokens": ["təki"], "not": "qoşma"},
+    "görə": {"tokens": ["görə"], "not": "qoşma"},
+    "sonra": {"tokens": ["sonra"], "not": "qoşma/zərf"},
+    "əvvəl": {"tokens": ["əvvəl"], "not": "qoşma/zərf"},
+    "bəri": {"tokens": ["bəri"], "not": "qoşma"},
+    "üzrə": {"tokens": ["üzrə"], "not": "qoşma"},
+    "doğru": {"tokens": ["doğru"], "not": "qoşma/sifət"}
+  },
+  "ədat": {
+    "da": {"tokens": ["da"], "not": "ədat (dedim də), ayrı yazılır"},
+    "də": {"tokens": ["də"], "not": "ədat"},
+    "hətta": {"tokens": ["hətta"], "not": "ədat"},
+    "belə": {"tokens": ["belə"], "not": "ədat/zərf"},
+    "elə": {"tokens": ["elə"], "not": "ədat/zərf"},
+    "hələ": {"tokens": ["hələ"], "not": "zərf"},
+    "artıq": {"tokens": ["artıq"], "not": "zərf/ədat"},
+    "ən": {"tokens": ["ən"], "not": "ədat (ən yaxşı)"},
+    "lap": {"tokens": ["lap"], "not": "ədat"},
+    "daha": {"tokens": ["daha"], "not": "ədat/zərf"},
+    "hər": {"tokens": ["hər"], "not": "təyini əvəzlik"},
+    "heç": {"tokens": ["heç"], "not": "inkar əvəzliyi/ədat"},
+    "isə": {"tokens": ["isə"], "not": "köməkçi söz (TR ise)"},
+    "idi": {"tokens": ["idi"], "not": "köməkçi söz, adlardan sonra ayrı yazılır (normalar 7.1)"},
+    "imiş": {"tokens": ["imiş"], "not": "köməkçi söz (normalar 7.1)"},
+    "ikən": {"tokens": ["ikən"], "not": "köməkçi söz (normalar 7.1)"}
+  },
+  "nida": {
+    "bəli": {"tokens": ["bəli"], "not": "təsdiq"},
+    "xeyr": {"tokens": ["xeyr"], "not": "inkar"},
+    "hə": {"tokens": ["hə"], "not": "təsdiq (danışıq)"},
+    "ah": {"tokens": ["ah"], "not": "nida"},
+    "eh": {"tokens": ["eh"], "not": "nida"},
+    "ay": {"tokens": ["ay"], "not": "nida; ay (Ay, isim) ile eşsesli — çekimli biçimleri isim kökünden"}
+  },
+  "zamir": {
+    "o": {"tokens": ["o"], "not": "işarə/şəxs əvəzliyi yalın; çekimi on- gövdəsindən (onu, ona, onlar)"},
+    "bu": {"tokens": ["bu"], "not": "işarə əvəzliyi yalın; çekimi bun- gövdəsindən (bunu, buna, bunlar)"}
+  }
+}

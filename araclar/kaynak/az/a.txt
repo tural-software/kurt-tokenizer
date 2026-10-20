@@ -1,0 +1,24 @@
+# a harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+ayaq|isim|q→ğ
+ağız|isim|düşen
+ay|isim|
+ata|isim|
+ana|isim|
+adam|isim|
+ağac|isim|
+alma|isim|
+ad|isim|
+ara|isim|
+alt|isim|
+arxa|isim|
+aşağı|isim|
+azərbaycan|isim|
+ağ|sıfat|
+az|sıfat|
+altı|sıfat|
+al|fiil|
+aç|fiil|
+anla|fiil|
+axtar|fiil|
+apar|fiil|
+ağla|fiil|

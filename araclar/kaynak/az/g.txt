@@ -1,0 +1,13 @@
+# g harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+göz|isim|
+gün|isim|
+gözəl|sıfat|
+gec|zarf|
+gəl|fiil|
+get|fiil|t→d
+gör|fiil|
+gir|fiil|
+gəz|fiil|
+gətir|fiil|
+göndər|fiil|
+gül|fiil||isim

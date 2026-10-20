@@ -1,0 +1,7 @@
+{
+  "haqq": {"tokens": ["haqq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "hava": {"tokens": ["ha", "va"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "hazır": {"tokens": ["ha", "zır"], "tür": "sıfat", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "həkim": {"tokens": ["hə", "kim"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "həyat": {"tokens": ["hə", "yat"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null}
+}

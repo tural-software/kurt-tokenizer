@@ -1,0 +1,14 @@
+{
+  "gec": {"tokens": ["gec"], "tür": "zarf", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "get": {"tokens": ["get"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}},
+  "gəl": {"tokens": ["gəl"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "gəz": {"tokens": ["gəz"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "gir": {"tokens": ["gir"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "gör": {"tokens": ["gör"], "tür": "fiil", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
+  "göz": {"tokens": ["göz"], "tür": "isim", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
+  "gül": {"tokens": ["gül"], "tür": "fiil", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
+  "gün": {"tokens": ["gün"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "gətir": {"tokens": ["gə", "tir"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "göndər": {"tokens": ["gön", "dər"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "gözəl": {"tokens": ["gö", "zəl"], "tür": "sıfat", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null}
+}

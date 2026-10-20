@@ -91,11 +91,12 @@ def ek_çöz(şablon: str, gövde: str, son_ü: str | None = None, profil=None) 
         if c in "AI":
             h = çöz_ünlü(c, son_ü, profil)  # önceki ÜNLÜ ile uyumla (ilerleyici)
             son_ü = h
-        elif c in "DC":
-            h = çöz_ünsüz(c, önceki, profil)
-        elif c == "Q":                     # artlığa göre q/k (AZ); Türkçe şablonlarda yok
-            h = "q" if (sesler.artlık(son_ü) if profil is None
-                        else profil.artlık(son_ü)) == "kalın" else "k"
+        elif c in "DCQ":
+            if c == "Q":                   # artlığa göre q/k (AZ); Türkçe şablonlarda yok
+                h = "q" if (sesler.artlık(son_ü) if profil is None
+                            else profil.artlık(son_ü)) == "kalın" else "k"
+            else:
+                h = çöz_ünsüz(c, önceki, profil)
         else:
             h = c
             if c in ünlüler:               # düz ünlü de uyumu ilerletir (ör. -Iyor'daki o)
@@ -117,6 +118,10 @@ class Ek:
     kök_koşullu: str = ""      # şablon gövdeye göre çözülür: "geniş"|"edilgen"|"ettirgen"
     çıkış: str = ""            # sınıf-değiştiren ek (nominalizer -mA/-Iş): gövdenin yeni öbeği
     değişim: dict | None = None  # ek-sonu yumuşaması: ünlü-başlı ek gelince (gelecek→geleceğiz)
+    son_düşer: str = ""        # ekin son ünsüzü, bu harfle başlayan ek önünde düşer (AZ -mIş + sAn
+    #                            → gəlmisən: ş, s önünde yazılmaz)
+    önce_olamaz: tuple = ()    # bu eklerden HEMEN sonra gelemez (AZ yapım_lı ← fiil_isim_ma: -mAlI
+    #                            gereklilik ekidir, -mA + -lI diye bölünmez)
 
 
 class EkŞemaHatası(Exception):
@@ -159,7 +164,9 @@ def yükle(yol: str | Path, profil=None) -> dict[str, Ek]:
                 kök_koşullu=("geniş" if girdi.get("kök_koşullu") is True
                              else (girdi.get("kök_koşullu") or "")),
                 çıkış=girdi.get("çıkış", ""),
-                değişim=girdi.get("değişim"))
+                değişim=girdi.get("değişim"),
+                son_düşer=girdi.get("son_düşer", ""),
+                önce_olamaz=tuple(girdi.get("önce_olamaz", ())))
         g = doğrula(ad, ek, profil)
         hatalar.extend(g) if g else sözlük.update({ad: ek})
     if hatalar:

@@ -1,0 +1,6 @@
+{
+  "unut": {"tokens": ["u", "nut"], "tür": "fiil", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}},
+  "uşaq": {"tokens": ["u", "şaq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "uzaq": {"tokens": ["u", "zaq"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "uzun": {"tokens": ["u", "zun"], "tür": "sıfat", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null}
+}

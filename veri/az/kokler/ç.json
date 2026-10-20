@@ -1,0 +1,9 @@
+{
+  "çay": {"tokens": ["çay"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "çək": {"tokens": ["çək"], "tür": "fiil", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "çıx": {"tokens": ["çıx"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "çox": {"tokens": ["çox"], "tür": "sıfat", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "çalış": {"tokens": ["ça", "lış"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "çiçək": {"tokens": ["çi", "çək"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "çörək": {"tokens": ["çö", "rək"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}}
+}

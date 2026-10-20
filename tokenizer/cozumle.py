@@ -56,6 +56,17 @@ KİŞİ_LİSANS = {
     "ek_fiil_imiş": (1, "K"), "ek_fiil_dir": (1, "K"),
     "ek_fiil_idi": (2, "K"), "ek_fiil_ise": (2, "K"),
 }
+_DİL_LİSANS: dict = {}   # profil kodu → KİŞİ_LİSANS + profilin kişi_lisansı (bir kez kurulur)
+
+
+def _lisanslar(profil) -> dict:
+    if profil is None or not profil.kişi_lisansı:
+        return KİŞİ_LİSANS
+    t = _DİL_LİSANS.get(profil.kod)
+    if t is None:
+        t = _DİL_LİSANS[profil.kod] = {**KİŞİ_LİSANS,
+                                       **{a: (tip, k) for a, tip, k in profil.kişi_lisansı}}
+    return t
 KİŞİ_TİP = {
     "şahıs_1tekil_t1": (1, "V"), "şahıs_2tekil_t1": (1, "V"),
     "şahıs_1çoğul_t1": (1, "V"), "şahıs_2çoğul_t1": (1, "V"),
@@ -86,13 +97,14 @@ def _present_zero_ok(ek_dizi, sınıf):
     return sınıf == "isim" and not (ek_dizi and ek_dizi[-1] in TAHMİN_DIŞI_HAL)
 
 
-def _kişi_uygun(ek_ad, ek_dizi, sınıf):
+def _kişi_uygun(ek_ad, ek_dizi, sınıf, profil=None):
     """Kişi eki ek_ad, mevcut zincir bağlamında geçerli mi? (tip+kaynak lisanslama)"""
     beklenen = KİŞİ_TİP.get(ek_ad)
     if beklenen is None:
         return True                              # kişi eki değil → kısıt yok
     tip, kaynak = beklenen
-    lisanslar = [KİŞİ_LİSANS[a] for a in ek_dizi if a in KİŞİ_LİSANS]
+    tablo = KİŞİ_LİSANS if profil is None else _lisanslar(profil)
+    lisanslar = [tablo[a] for a in ek_dizi if a in tablo]
     son = lisanslar[-1] if lisanslar else None   # (tip, kaynak) | None
     if tip == "T":                                # 3. çoğul (-lAr)
         if son is not None and son[1] == kaynak:
@@ -134,11 +146,13 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
         # yuva kesin artan olmalı
         if (ek.öbek not in ("her", sınıf)) or ek.yuva <= son_yuva:
             continue
+        if ek_dizi and ek.önce_olamaz and ek_dizi[-1] in ek.önce_olamaz:
+            continue
         # sadece-koşaç kökler (mı/değil) isim eki almaz; yalnız koşaç/ek-fiil ('her')
         # → "mide" yanlışlıkla mi+bulunma diye bölünmez
         if getattr(kök, "sadece_koşaç", False) and ek.öbek != "her":
             continue
-        if not _kişi_uygun(ek_ad, ek_dizi, sınıf):    # kişi-bağlamı (tip+kaynak)
+        if not _kişi_uygun(ek_ad, ek_dizi, sınıf, profil):    # kişi-bağlamı (tip+kaynak)
             continue
         if not _koşaç_bağlanır(ek_ad, ek_dizi, sınıf, ekler):  # koşaç çıplak fiile bağlanmaz
             continue

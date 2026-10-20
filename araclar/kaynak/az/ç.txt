@@ -1,0 +1,8 @@
+# ç harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+çörək|isim|k→y
+çiçək|isim|k→y
+çay|isim|
+çox|sıfat|
+çıx|fiil|
+çalış|fiil|
+çək|fiil|

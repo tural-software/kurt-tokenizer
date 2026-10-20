@@ -1,0 +1,5 @@
+# u harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+uşaq|isim|q→ğ
+uzaq|sıfat|q→ğ
+uzun|sıfat|
+unut|fiil|t→d

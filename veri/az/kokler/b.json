@@ -1,0 +1,23 @@
+{
+  "bax": {"tokens": ["bax"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "bank": {"tokens": ["bank"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "baş": {"tokens": ["baş"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "beş": {"tokens": ["beş"], "tür": "sıfat", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "bərk": {"tokens": ["bərk"], "tür": "sıfat", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "bil": {"tokens": ["bil"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "bir": {"tokens": ["bir"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "bacı": {"tokens": ["ba", "cı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
+  "bağla": {"tokens": ["bağ", "la"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "balıq": {"tokens": ["ba", "lıq"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "başqa": {"tokens": ["baş", "qa"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "başla": {"tokens": ["baş", "la"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "bayraq": {"tokens": ["bay", "raq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "beyin": {"tokens": ["be", "yin"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "düşen": true},
+  "bıçaq": {"tokens": ["bı", "çaq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "bitir": {"tokens": ["bi", "tir"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "böyük": {"tokens": ["bö", "yük"], "tür": "sıfat", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "bucaq": {"tokens": ["bu", "caq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "bulaq": {"tokens": ["bu", "laq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "bura": {"tokens": ["bu", "ra"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "burun": {"tokens": ["bu", "run"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null, "düşen": true}
+}

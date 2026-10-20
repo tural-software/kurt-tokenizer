@@ -1,0 +1,14 @@
+# s harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+soyuq|sıfat|q→ğ
+sinif|isim|düşen
+su|isim|y_tampon
+söz|isim|
+süd|isim|
+səs|isim|
+səkkiz|sıfat|
+son|sıfat|
+sabah|isim|
+sev|fiil|
+sat|fiil|
+saxla|fiil|
+söylə|fiil|

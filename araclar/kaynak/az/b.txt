@@ -1,0 +1,22 @@
+# b harfi — AZ tohum sözlük (AZ-2)  (kelime|tür|değişim|ek_tür|ek_değişim)
+bulaq|isim|q→ğ
+bıçaq|isim|q→ğ
+balıq|isim|q→ğ
+bucaq|isim|q→ğ
+bayraq|isim|q→ğ
+böyük|sıfat|k→y
+bərk|sıfat|
+bank|isim|
+burun|isim|düşen
+beyin|isim|düşen
+baş|isim|
+bacı|isim|
+bura|isim|
+başqa|sıfat|
+bir|sıfat|
+beş|sıfat|
+bil|fiil|
+bax|fiil|
+başla|fiil|
+bağla|fiil|
+bitir|fiil|

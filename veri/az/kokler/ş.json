@@ -1,0 +1,7 @@
+{
+  "şərq": {"tokens": ["şərq"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "şagird": {"tokens": ["şa", "gird"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "şəhər": {"tokens": ["şə", "hər"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
+  "şəkil": {"tokens": ["şə", "kil"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "düşen": true},
+  "şərik": {"tokens": ["şə", "rik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null}
+}
