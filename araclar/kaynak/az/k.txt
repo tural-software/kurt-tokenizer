@@ -2462,7 +2462,7 @@ komalaşma|isim|türemiş_ekli
 komalıq|isim|q→ğ
 komanda|isim|
 komandalıq|isim|q→ğ
-komandan|isim|
+komandan|isim|geri
 komandanlıq|isim|q→ğ
 komandir|isim|
 komandirlik|isim|k→y
@@ -4257,7 +4257,7 @@ kürəkvari|isim|
 kürələ|fiil|
 kürələmə|isim|türemiş_ekli
 kürəli|isim|
-kürən|isim||fiil|
+kürən|isim|geri|fiil|
 kürənbaş|isim|
 kürənbel|isim|
 kürənbığ|isim|

@@ -305,6 +305,19 @@ class AzSözlükKuralları(unittest.TestCase):
         self.assertTrue(any("dönüşlü" in ç.ekler for ç in çs))
         self.assertEqual(en_iyi_çözüm(çs, kökler, self.ekler, AZ).tokens, ["yer", "i", "n", "ə"])
 
+    def test_geri_kök(self):
+        # AZ-6: geri kök, aynı ek dizisini üreten rakibine yenilir (bacım = bacı+m); çakışma yoksa etkisiz
+        kökler = {"bac": _kök("bac", "isim", AZ, geri=True), "bacı": _kök("bacı", "isim", AZ),
+                  "dərin": _kök("dərin", "isim", AZ, geri=True), "dəri": _kök("dəri", "isim", AZ)}
+        en_iyi = lambda w: en_iyi_çözüm(çözümle(w, kökler, self.ekler, None, AZ), kökler, self.ekler, AZ)
+        self.assertEqual(en_iyi("bacım").tokens, ["ba", "cı", "m"])
+        self.assertEqual(en_iyi("dərinin").tokens, ["də", "ri", "n", "in"])
+        self.assertEqual(en_iyi("dərin").tokens, ["də", "rin"])            # eksiz okuma çakışma sayılmaz
+        self.assertEqual(en_iyi("dərində").kök, "dərin")                  # rakip okuma yok
+        kökler["bac"] = _kök("bac", "isim", AZ)                            # bayraksız: kısa kök (BİRİM) kazanır
+        self.assertEqual(en_iyi("bacım").kök, "bac")
+        self.assertTrue(doğrula("bac", _kök("bac", "isim", AZ, geri=1), AZ))   # bool olmalı
+
 
 class AzEkKuralları(unittest.TestCase):
     """AZ-4: çift ünsüz tekleşmesi, kök/ek konum kısıtları, y'siz ek-fiil, tire/tırnak sonrası ek."""
@@ -351,6 +364,21 @@ class AzEkKuralları(unittest.TestCase):
         self.assertNotIn("ın", [g.kelime for g in kuyruk.bekleyenler()])
         # büyük harfle başlayan ikinci parça ek değildir (Bakı-Sumqayıt); Türkçe kip kuralı yok
         self.assertIn("<|Bb|>", encode("Bakı-Sumqayıt", AZ_KÖKLER, self.ekler, None, dil="az")[2:])
+
+    def test_işaret_ve_kısaltma_sonrası_tire_eki(self):
+        # AZ-6: % ² ³ ° + tire ve ÜNLÜSÜZ kısaltma (km, mm, x) + tire sonrası küçük harf = ek; ünlülü sözcük
+        # + tire bileşik kalır (ev-ev: ikinci parça normal çözülür)
+        kuyruk = OnayKuyruğu()
+        for metin, son in (("30%-i", ["%", "-", "i"]), ("km²-dir", ["²", "-", "dir"]), ("45°-dir", ["°", "-", "dir"]),
+                           ("km-lik", ["km", "-", "lik"]), ("mm-dir", ["mm", "-", "dir"])):
+            t = encode(metin, AZ_KÖKLER, self.ekler, None, kuyruk=kuyruk, dil="az")
+            self.assertEqual(t[-3:], son)
+            self.assertEqual(decode(t), metin)
+        self.assertFalse({"i", "dir", "lik"} & {g.kelime for g in kuyruk.bekleyenler()})
+        self.assertEqual(encode("ev-ev", AZ_KÖKLER, self.ekler, None, dil="az"), ["ev", "-", "ev"])
+        kuyruk = OnayKuyruğu()
+        encode("30%-i", AZ_KÖKLER, self.ekler, None, kuyruk=kuyruk)          # Türkçe kip: kural yok
+        self.assertIn("i", {g.kelime for g in kuyruk.bekleyenler()})
 
 
 if __name__ == "__main__":

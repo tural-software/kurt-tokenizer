@@ -261,7 +261,7 @@
   "fosfor": {"tokens": ["fos", "for"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "fosgen": {"tokens": ["fos", "gen"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "foto": {"tokens": ["fo", "to"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünlü", "değişim": null},
-  "foton": {"tokens": ["fo", "ton"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "foton": {"tokens": ["fo", "ton"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null, "geri": true},
   "foye": {"tokens": ["fo", "ye"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "fövqəl": {"tokens": ["föv", "qəl"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": null},
   "fraklı": {"tokens": ["frak", "lı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},

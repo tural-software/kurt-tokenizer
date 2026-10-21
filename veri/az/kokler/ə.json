@@ -93,7 +93,7 @@
   "əmgək": {"tokens": ["əm", "gək"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
   "əmi": {"tokens": ["ə", "mi"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "əmik": {"tokens": ["ə", "mik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
-  "əmin": {"tokens": ["ə", "min"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "əmin": {"tokens": ["ə", "min"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "geri": true},
   "əmir": {"tokens": ["ə", "mir"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "əmlak": {"tokens": ["əm", "lak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "əmlik": {"tokens": ["əm", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},

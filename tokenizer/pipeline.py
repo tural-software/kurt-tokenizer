@@ -28,6 +28,7 @@ BOŞLUK = "▁"
 # harfler (vocab Faz 3): ʼ U+02BC (Cumhuriyetʼi), ʹ U+02B9 (Kemalʹin) — harf sınıfı DIŞI.
 KESME = ("'", "’", "ʼ", "ʹ")
 KAPANIŞ_TIRNAK = ("»", "”", "\"")   # AZ: kapanış tırnağına ek bitişik (dil profili büyük_tire_eki)
+RAKAM_İŞARET = "%²³°"   # AZ: sayıya bağlı işaret + tire + ek (30%-i, km²-dir, 45°-dir; profil rakam_tire_eki)
 # LaTeX komutları (metin kipi, vocab bölümü 'latex'): ters bölü DAHİL tek token (\frac, \Delta).
 # Büyük/küçük harf komutun parçasıdır (\Delta ≠ \delta) → casing işaretçisi kullanılmaz.
 LATEX_KOMUTLARI = (
@@ -193,6 +194,28 @@ def _türemiş(çöz, kökler) -> int:
     return int(bool(çöz.ekler) == (kök.türemiş == "ekli"))
 
 
+_AM_ÇAKIŞMA = {("koşaç_1tekil_t1",), ("iyelik_1tekil",)}
+
+
+def geri_eş_ek(a, b) -> bool:
+    """Geri kök çakışması: iki okumanın EK DİZİSİ aynı (fark kök sınırında: bac+ı+m ↔ bacı+m, gəmik+ə ↔ gəmi+y+ə)
+    ya da AZ -(y)Am çakışması (tələb+əm koşaç ↔ tələbə+m iyelik). Eksiz okuma çakışma sayılmaz (məsələn bütün)."""
+    return bool(a) and (list(a) == list(b) or {tuple(a), tuple(b)} == _AM_ÇAKIŞMA)
+
+
+def _geri_cezalı(çözümler, kökler) -> set[str]:
+    """Geri çekilen kökler: kökü 'geri' (sema.Kök.geri, AZ korpus kararı) ve bir okuması rakip bir kökün okumasıyla
+    çakışıyor (geri_eş_ek) → o kökün TÜM okumaları geri (bacım = bacı+m; məsələni = məsələ+n+i, məsələn+i değil).
+    Çakışma yoksa etkisiz (məsələn, dərin bütün kalır)."""
+    cezalı = set()
+    for ç in çözümler:
+        kök = kökler.get(ç.kök)
+        if (ç.kök not in cezalı and kök is not None and kök.geri
+                and any(d.kök != ç.kök and geri_eş_ek(ç.ekler, d.ekler) for d in çözümler)):
+            cezalı.add(ç.kök)
+    return cezalı
+
+
 def _seyrek(ek_adları, seyrek, seyrek_dizi) -> int:
     """Seyrek ek + seyrek ardışık ek çifti sayısı (profil.seyrek_ekler / seyrek_diziler)."""
     n = sum(e in seyrek for e in ek_adları)
@@ -226,7 +249,8 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
       1. seyrek ek/dizi (üretken dönüşlü, edebî istek kişileri, ortaç+idi): başka çözüm varsa seçilmez
          (yerinə = yer+i+n+ə; atam = ata+m);
       2. TÜREMİŞ kök (bileşik biçimle eşsesli sözlük başlığı, sema.Kök.türemiş): bileşik okuma varsa
-         seçilmez (çıplak 'gəlir' = gəl+ir; açmalımı = aç+malı+mı, açma+lı+m+ı değil);
+         seçilmez (çıplak 'gəlir' = gəl+ir; açmalımı = aç+malı+mı, açma+lı+m+ı değil); ardından GERİ kök
+         (sema.Kök.geri, korpus kararı: bacım = bacı+m, bac+ı+m değil);
       3. son_çare_ekler (bitişik soru -mI) → bütün-kök → birincil sınıf (yalnız aynı kökün okumaları);
       4. BİRİM (kök hecesi + ek sayısı; tampon tokenı morfem sayılmaz) → az ek → zamir → token sayısı →
          yeğlenmeyen ekler → öbek uyumu → en uzun kök → son kırıcı."""
@@ -239,9 +263,10 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
         # ad+koşaç); farklı kökler arasında (kəs 'kişi' ad ↔ kəsən = kəs+ən) birim/ek sayısı karar verir
         çoklu = ({k for k, n in Counter(ç.kök for ç in çözümler).items() if n > 1}
                  if profil.birincil_önce else frozenset())
+        geri = _geri_cezalı(çözümler, kökler)
         return min(
             çözümler,
-            key=lambda ç: (_seyrek(ç.ekler, seyrek, seyrek_dizi), _türemiş(ç, kökler),
+            key=lambda ç: (_seyrek(ç.ekler, seyrek, seyrek_dizi), _türemiş(ç, kökler), ç.kök in geri,
                            sum(e in son_çare for e in ç.ekler),
                            0 if not ç.ekler else 1,
                            _ikincil_okuma(ç, kökler, ekler) if ç.kök in çoklu else 0,
@@ -453,13 +478,15 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
                 tokenlar.extend(bayt_tokenları(c) if c == BOŞLUK else c)
             önceki_kesme = altbirim[-1] in KESME or (
                 profil is not None and profil.rakam_tire_eki and altbirim[-1] == "-"
-                and len(altbirim) > 1 and altbirim[-2].isdigit())   # AZ: 2024-cü, 5-də
+                and len(altbirim) > 1 and (altbirim[-2].isdigit() or altbirim[-2] in RAKAM_İŞARET))
+            #                                            AZ: 2024-cü, 5-də, 30%-i, km²-dir
             if (not önceki_kesme and profil is not None and profil.büyük_tire_eki
                     and 0 < j < len(altbirimler) - 1 and altbirimler[j - 1][1]
                     and altbirimler[j + 1][1] and altbirimler[j + 1][0][0].islower()
-                    and ((altbirim == "-" and altbirimler[j - 1][0][0].isupper())
+                    and ((altbirim == "-" and (altbirimler[j - 1][0][0].isupper()
+                                               or not any(c in profil.ünlüler for c in altbirimler[j - 1][0])))
                          or altbirim[-1] in KAPANIŞ_TIRNAK)):
-                önceki_kesme = True                  # AZ: ABŞ-ın, Magnitsky-nin, XX-ci; «pullar»ın
+                önceki_kesme = True                  # AZ: ABŞ-ın, Magnitsky-nin, XX-ci, km-i; «pullar»ın
             continue
         if önceki_kesme:
             # Kesme sonrası harf-koşusu = EK (özel ad/akronim/sayı eki: İstanbul'da,

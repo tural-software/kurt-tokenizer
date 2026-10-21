@@ -1214,7 +1214,7 @@ fotomüsabiqə|isim|
 fotomüşahidə|isim|
 fotomüşahidəçi|isim|
 fotomüşahidəçilik|isim|k→y
-foton|isim|
+foton|isim|geri
 fotoneqativ|isim|
 fotoneytron|isim|
 fotonika|isim|

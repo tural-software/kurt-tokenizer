@@ -530,7 +530,7 @@
 çəkicvuran|isim|
 çəkiçəkən|isim|
 çəkidişli|isim|
-çəkik|isim|k→y
+çəkik|isim|k→y,geri
 çəkil|isim|
 çəkili|isim|
 çəkilik|isim|k→y

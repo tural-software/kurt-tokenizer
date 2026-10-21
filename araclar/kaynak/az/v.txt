@@ -673,7 +673,7 @@ viktorina|isim|
 vilayət|isim|
 vilayətlərarası|isim|
 villa|isim|
-villan|isim|
+villan|isim|geri
 villanelle|isim|
 vindikasiya|isim|
 vindikasiyalaşma|isim|
@@ -866,7 +866,7 @@ vurğu|isim|
 vurğula|fiil|
 vurğulama|isim|türemiş_ekli
 vurğulu|isim|
-vurğun|isim|
+vurğun|isim|geri
 vurğuncasına|isim|
 vurğunlan|fiil|
 vurğunlanma|isim|türemiş_ekli

@@ -2,7 +2,7 @@
 # Başlık sözcükler: Azərbaycan dilinin orfoqrafiya lüğəti (2021) — yalnız sözcük; tür/değişim/düşen/ince
 # bizim yazımımız (ses kuralı + FineWeb-2 azj korpus kanıtı + elle karar). ÜRETİLİR: scripts/az_sozluk/
 # kaynak_uret.py (elle düzeltme docs/veri/az_sozluk/elle.txt'e yazılır, bu dosyaya değil).
-bab|isim|
+bab|isim|geri
 baba|isim|
 babacan|isim|
 babadanqalan|isim|
@@ -27,7 +27,7 @@ bablaş|fiil|
 bablaşma|isim|türemiş_ekli
 babuvist|isim|
 babuvizm|isim|
-bac|isim|
+bac|isim|geri
 baca|isim|
 bacaq|isim|q→ğ
 bacaqlı|isim|
@@ -842,7 +842,7 @@ başqa|sıfat|
 başqalaş|fiil|
 başqalaşma|isim|türemiş_ekli
 başqalıq|isim|q→ğ
-başqan|isim|
+başqan|isim|geri
 başqanlıq|isim|q→ğ
 başqası|isim|
 başqırd|isim|

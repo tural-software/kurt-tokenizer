@@ -1362,7 +1362,7 @@ normallaşma|isim|türemiş_ekli
 normallat|fiil|t→d
 normallatma|isim|türemiş_ekli
 normallıq|isim|q→ğ
-norman|isim|
+norman|isim|geri
 normandiyalı|isim|
 normaölçən|isim|
 normasız|isim|

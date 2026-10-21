@@ -992,7 +992,7 @@ mediamarketinq|isim|q→ğ
 mediamenecer|isim|
 mediamenecment|isim|
 mediamorfoz|isim|
-median|isim|
+median|isim|geri
 medianta|isim|
 mediaplan|isim|
 mediapleyer|isim|
@@ -2355,7 +2355,7 @@ məsəl|isim|
 məsəlçi|isim|
 məsəlçilik|isim|k→y
 məsələ|isim|
-məsələn|isim|
+məsələn|isim|geri
 məsxərə|isim|
 məsxərəçi|isim|
 məsxərəçilik|isim|k→y

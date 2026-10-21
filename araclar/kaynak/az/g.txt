@@ -400,7 +400,7 @@ gəmiburaxma|isim|
 gəmiçi|isim|
 gəmiçilik|isim|k→y
 gəmidaxili|isim|
-gəmik|isim|k→y
+gəmik|isim|k→y,geri
 gəmikli|isim|
 gəmiksiz|isim|
 gəmiqaldıran|isim|
@@ -1588,7 +1588,7 @@ gürrah|isim|
 gürz|isim|
 gürzə|isim|
 gürzəboğaz|isim|
-güvə|isim|
+güvə|isim|geri
 güvəc|isim|
 güvədüşən|isim|
 güvəkəsməz|isim|

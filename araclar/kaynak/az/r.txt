@@ -1132,7 +1132,7 @@ rədifsiz|isim|
 rəf|isim|
 rəfedici|isim|
 rəfətə|isim|
-rəfiq|isim|
+rəfiq|isim|geri
 rəfiqə|isim|
 rəfiqəlik|isim|k→y
 rəfiqlik|isim|k→y
@@ -1490,7 +1490,7 @@ roksolan|isim|
 rol|isim|
 rolik|isim|
 rolqanq|isim|q→ğ
-roll|isim|qoşa_tek
+roll|isim|qoşa_tek,geri
 roller|isim|
 rolli|isim|
 rollu|isim|

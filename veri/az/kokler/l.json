@@ -88,7 +88,7 @@
   "lambir": {"tokens": ["lam", "bir"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "lamer": {"tokens": ["la", "mer"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "lampa": {"tokens": ["lam", "pa"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
-  "lampas": {"tokens": ["lam", "pas"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "lampas": {"tokens": ["lam", "pas"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "geri": true},
   "lamprid": {"tokens": ["lamp", "rid"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "lamus": {"tokens": ["la", "mus"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
   "lamut": {"tokens": ["la", "mut"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},

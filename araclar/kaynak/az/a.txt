@@ -2382,7 +2382,7 @@ aramla|isim|
 aramlı|isim|
 aramsız|isim|
 aramsızlıq|isim|q→ğ
-aran|isim|
+aran|isim|geri
 arançı|isim|
 arançılıq|isim|q→ğ
 aranje|isim|
@@ -3008,7 +3008,7 @@ aşçı|isim|
 aşdibi|isim|
 aşxana|isim|
 aşxanaçı|isim|
-aşı|isim|
+aşı|isim|geri
 aşıq|isim|q→ğ
 aşıqqoz|isim|
 aşıqla|fiil|

@@ -35,7 +35,7 @@
   "oğlaq": {"tokens": ["oğ", "laq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "oğlan": {"tokens": ["oğ", "lan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "oğru": {"tokens": ["oğ", "ru"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünlü", "değişim": null},
-  "oğrun": {"tokens": ["oğ", "run"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
+  "oğrun": {"tokens": ["oğ", "run"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null, "geri": true},
   "oğul": {"tokens": ["o", "ğul"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null, "düşen": true},
   "oğuz": {"tokens": ["o", "ğuz"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
   "oxay": {"tokens": ["o", "xay"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},

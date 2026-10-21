@@ -853,7 +853,7 @@ seçimlilik|isim|k→y
 seçki|isim|
 seçkiqabağı|isim|
 seçkili|isim|
-seçkin|isim|
+seçkin|isim|geri
 seçkinlik|isim|k→y
 seçkiöncəsi|isim|
 seçkiönü|isim|
@@ -2493,7 +2493,7 @@ sinəgir|isim|
 sinəgirli|isim|
 sinəgirlik|isim|k→y
 sinəgirsiz|isim|
-sinək|isim|k→y
+sinək|isim|k→y,geri
 sinəli|isim|
 sinəyumşaldan|isim|
 sinəyumşaldıcı|isim|
@@ -2777,7 +2777,7 @@ sivriş|fiil|
 sivrişmə|isim|türemiş_ekli
 sivriyarpaq|isim|q→ğ
 sivriyarpaqlı|isim|
-siyah|isim|
+siyah|isim|geri
 siyahı|isim|
 siyahılı|isim|
 siyahısız|isim|

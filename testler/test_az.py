@@ -8,11 +8,14 @@
      geri kazanılır.
   4. Kaynak ↔ çıktı: veri/az/kokler, araclar/kaynak/az'dan birebir yeniden üretilir.
   5. Hat: dil="az" round-trip kayıpsız, rakam-tire eki (2024-cü), casing (Ə/İ), Türkçe izolasyon.
+  6. Korpus (veri/az/korpus/dogrulama.txt, AZ-6: çok alanlı elle yazılmış metin): küçük harfli bilinmeyen YOK —
+     yalnız özel ad (Bakı, Gəncə) bilinmeyen kalır; yeni bir çekim boşluğu açılırsa kapı düşer.
 """
 
 from __future__ import annotations
 
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -146,6 +149,14 @@ class AzHat(unittest.TestCase):
         ids = self.vocab.encode_ids(self.metin, self.v.kökler, self.v.ekler, self.v.istisnalar, dil="az")
         self.assertEqual(self.vocab.decode_ids(ids), metin_kanonik(self.metin))
         self.assertNotIn(self.vocab.tok2id["<unk>"], ids)
+
+    def test_küçük_harfli_bilinmeyen_yok(self):
+        kuyruk = OnayKuyruğu()
+        self.az(self.metin, kuyruk=kuyruk)
+        küçük = {w for w in re.findall(r"[^\W\d_]+", self.metin) if w == AZ.küçült(w)}
+        bilinmeyen = {g.kelime for g in kuyruk.bekleyenler()}
+        self.assertEqual(bilinmeyen & küçük, set())
+        self.assertLessEqual(len(bilinmeyen), 6, bilinmeyen)        # yalnız özel adlar (Bakı, Gəncə, Yupiter)
 
     def test_rakam_tire_eki(self):
         # normalar 5.4: rakama ek tireyle; tireden sonrası ek (hecelenir, bilinmeyene gitmez)

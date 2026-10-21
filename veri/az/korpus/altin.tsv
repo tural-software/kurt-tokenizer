@@ -5,7 +5,9 @@
 # Test: en iyi çözümün tokenları birebir + beklenen çözümleme çözüm kümesinde (etiket eşseslisi serbest).
 # AZ-3 (tam sözlük): sözlükte kök olan eşsesli BÜTÜN okunur (alaq 'yabani ot', gəlin 'gelin'); bilinen
 # eşsesli seçim sınırları (dilbilgisel ikinci okuma kazanır, kayıp yok): oxundu = ox+u+n+du, oxudur = ox+u+dur,
-# siyahımıza = siyah+ı+mız+a, bacım = bac+ı+m, anda = and+a, alındı = alın 'alın'+dı.
+# anda = and+a, alındı = alın 'alın'+dı, anam = an+am, tələbəm = tələb+əm (-(y)Am koşaç ↔ -m iyelik; iki kök de güçlü).
+# AZ-6 (geri kök, korpus kararı docs/veri/az_sozluk/geri.tsv): aynı ek dizisini iki kök üretiyorsa zayıf kök geri
+# çekilir → bacım = bacı+m, siyahımıza = siyahı+mız+a; çakışma yoksa geri kök bütün/kendi okumasında kalır.
 
 # ── isim: çoğul, iyelik, hâl ─────────────────────────────────────────────────────────────────
 evlər	ev lər	ev+çoğul
@@ -462,3 +464,19 @@ vebsaytın	veb sayt ın	vebsayt+tamlayan
 noutbuku	no ut buk u	noutbuk+belirtme
 hörümçəyi	hö rüm çəy i	hörümçək+belirtme
 qızına	qız ı n a	qız+iyelik_3tekil+yönelme
+
+# ── AZ-6: geri kök (eşsesli kök çakışması) ─────────────────────────────────────────────────────
+bacım	ba cı m	bacı+iyelik_1tekil
+bacımızda	ba cı mız da	bacı+iyelik_1çoğul+bulunma
+siyahımıza	si ya hı mız a	siyahı+iyelik_1çoğul+yönelme
+gəmiyə	gə mi y ə	gəmi+yönelme
+komandanın	ko man da n ın	komanda+tamlayan
+komandan	ko man dan	komandan
+məsələni	mə sə lə n i	məsələ+belirtme
+məsələn	mə sə lən	məsələn
+dərinin	də ri n in	dəri+tamlayan
+dərin	də rin	dərin
+dərində	də rin də	dərin+bulunma
+güvəni	gü vən i	güvən+belirtme
+babam	ba ba m	baba+iyelik_1tekil
+əminəm	ə min əm	əmin+koşaç_1tekil_t1
