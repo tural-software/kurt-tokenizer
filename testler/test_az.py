@@ -23,7 +23,7 @@ from tokenizer.cozumle import çözümle
 from tokenizer.dil import AZ
 from tokenizer.onay import OnayKuyruğu
 from tokenizer.pipeline import BAŞ_BÜYÜK, HEP_BÜYÜK, decode, en_iyi_çözüm, encode, metin_kanonik
-from tokenizer.vocab import Vocab
+from tokenizer.vocab import EK_BÖLÜMLER, Vocab
 
 KÖK = Path(__file__).resolve().parent.parent
 ÖRNEKLEM_ADIM = 200   # 65k kök × ~100 zincir tam koşu dakikalar sürer; deterministik eşit aralıklı örneklem
@@ -161,6 +161,20 @@ class AzHat(unittest.TestCase):
         self.assertEqual(self.az("Əlimdə")[:2], [BAŞ_BÜYÜK, "əl"])
         for s in ("ÜRƏYİMDƏ", "Əlimdə", "İşçilər", "IŞIQ"):
             self.assertEqual(decode(self.az(s)), s)
+
+    def test_az1_bölümü_dil_kapısı(self):
+        # az-1 tokenları YALNIZ dil="az" metin kipinde: AZ metni Türkçe kipte ve kod kipinde onları üretmez,
+        # Türkçe metin hiç üretmez; AZ kipte üretir ve ID round-trip kayıpsız kalır.
+        az1 = {self.vocab.tok2id[t] for ad, b in EK_BÖLÜMLER if ad == "az-1" for t in b}
+        self.assertGreater(len(az1), 1500)
+        az = self.vocab.encode_ids(self.metin, self.v.kökler, self.v.ekler, self.v.istisnalar, dil="az")
+        self.assertTrue(az1 & set(az))
+        self.assertEqual(self.vocab.decode_ids(az), metin_kanonik(self.metin))
+        tr = diller.yükle()
+        for metin in (self.metin, (KÖK / "veri" / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")):
+            self.assertFalse(az1 & set(self.vocab.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar)))
+            self.assertFalse(az1 & set(self.vocab.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar,
+                                                             kip="kod")))
 
     def test_türkçe_hat_etkilenmez(self):
         tr = diller.yükle()
