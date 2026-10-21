@@ -20,6 +20,9 @@ from tokenizer import sesler
 İZİNLİ_SON_SES: frozenset[str] = frozenset({"ünlü", "ünsüz"})
 
 
+TÜREMİŞ_TÜRLERİ = frozenset({"", "hep", "ekli", "çıplak"})
+
+
 @dataclass(frozen=True)
 class Kök:
     """Tek bir kök kaydı. Alanlar CLAUDE.md şemasıyla birebir eşleşir."""
@@ -35,6 +38,11 @@ class Kök:
     sadece_koşaç: bool = False  # yalnız koşaç/ek-fiil alır, isim eki almaz (mı, değil)
     daralan: bool = False  # ye/de düzensizi: çekirdek e→i, y-glide'lı ek öncesi (ye→yiyor)
     y_tampon: bool = False  # (n) tamponu yerine y (AZ su→suyu/suyun, nə→nəyi/nəyin; düzensiz)
+    türemiş: str = ""       # bileşik biçimle eşsesli sözlük başlığı; bileşik okuma varsa o yeğlenir
+    #                         (pipeline.en_iyi_çözüm, dil profili). "hep": her zaman (AZ olan = ol+an,
+    #                         gəlir = gəl+ir); "ekli": yalnız ek alınca (-mA adı: düymə bütün, gəlməliyəm =
+    #                         gəl+məli+y+əm); "çıplak": yalnız eksizken (-Ir ettirgen: artır = art+ır,
+    #                         artırmalı = artır+malı)
     ek_değişim: dict | None = None  # İKİNCİL sınıf (ek_tür) okumasının yumuşaması; None=ikincilde
     #                                 yumuşama yok (art→artıyor). tat gibi her-iki-yön: {t→d} (tadıyor)
 
@@ -111,6 +119,8 @@ def doğrula(ad: str, kök: Kök, profil=None) -> list[str]:
         hatalar.append(f"{ad!r}: sadece_koşaç alanı bool olmalı, bulundu {kök.sadece_koşaç!r}")
     if not isinstance(kök.daralan, bool):
         hatalar.append(f"{ad!r}: daralan alanı bool olmalı, bulundu {kök.daralan!r}")
+    if kök.türemiş not in TÜREMİŞ_TÜRLERİ:
+        hatalar.append(f"{ad!r}: türemiş alanı {sorted(TÜREMİŞ_TÜRLERİ)} olmalı, bulundu {kök.türemiş!r}")
     if not isinstance(kök.y_tampon, bool):
         hatalar.append(f"{ad!r}: y_tampon alanı bool olmalı, bulundu {kök.y_tampon!r}")
     elif kök.y_tampon and kök.son_ses != "ünlü":

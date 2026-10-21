@@ -23,7 +23,7 @@ from tokenizer.hece import hecele
 from tokenizer.istisna import yükle as istisna_yükle
 from tokenizer.kokler import çalışma_sözlüğü
 from tokenizer.onay import OnayKuyruğu
-from tokenizer.pipeline import BAŞ_BÜYÜK, BOŞLUK, decode, encode, metin_kanonik, _altbirimler
+from tokenizer.pipeline import BAŞ_BÜYÜK, BOŞLUK, decode, encode, en_iyi_çözüm, metin_kanonik, _altbirimler
 from tokenizer.sema import Kök, doğrula
 from tokenizer.vocab import EK_BÖLÜMLER, Vocab, dil_bölümü
 
@@ -240,6 +240,70 @@ class VocabDilKapısı(unittest.TestCase):
         ids = self.v.encode_ids("gələr", AZ_KÖKLER, AZ_EKLER, dil="az")
         self.assertEqual([self.v.id2tok[i] for i in ids], ["gə", "lər"])   # bilinmeyen → AZ hecesi
         self.assertEqual(self.v.decode_ids(ids), "gələr")
+
+
+class AzSözlükKuralları(unittest.TestCase):
+    """AZ-3 (tam sözlük) motor kuralları: çatı şablonları, kök kısıtlı ek, türemiş/seyrek seçim katmanları."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.ekler = ekleri_yükle(VERİ / "az" / "ekler.json", AZ)
+
+    def üret(self, ad, zincir, **alanlar):
+        return birleştir(ad, _kök(ad, "fiil", AZ, **alanlar), zincir, self.ekler, AZ)[1]
+
+    def test_ettirgen(self):
+        # ünlü ve ÇOK heceli r/l → -t (oxut, oturt, azalt); tek heceli r/l ve ünsüz → dIr (gördür, aldır)
+        beklenen = {"oxu": "oxut", "otur": "oturt", "azal": "azalt", "gör": "gördür", "al": "aldır",
+                    "yaz": "yazdır"}
+        for ad, yüzey in beklenen.items():
+            self.assertEqual(self.üret(ad, ["ettirgen"]), yüzey)
+        self.assertEqual(self.üret("oxu", ["ettirgen", "şimdiki_zaman"]), "oxudur")   # ek -t → d
+        self.assertEqual(self.üret("oxu", ["ettirgen", "görülen_geçmiş"]), "oxutdu")
+
+    def test_edilgen_tek_heceli_ünlü(self):
+        self.assertEqual(self.üret("de", ["edilgen", "şimdiki_zaman"]), "deyilir")
+        self.assertEqual(self.üret("ye", ["edilgen"]), "yeyil")
+        self.assertEqual(self.üret("oxu", ["edilgen"]), "oxun")
+        self.assertEqual(self.üret("yaz", ["edilgen"]), "yazıl")
+        # Türkçe profil etkilenmez
+        self.assertEqual(birleştir("de", _kök("de", "fiil", TR), ["edilgen"], ekleri_yükle(VERİ / "ekler.json"),
+                                   None)[1], "den")
+
+    def test_sıra_yalnız_sayıya(self):
+        kökler = {ad: _kök(ad, "isim", AZ) for ad in ("alt", "altı")}
+        çözümler = çözümle("altıncı", kökler, self.ekler, None, AZ)
+        self.assertEqual({(ç.kök, tuple(ç.ekler)) for ç in çözümler}, {("altı", ("sıra",))})
+
+    def test_belirtme_ve_istek_sonrası_koşaç_yok(self):
+        kökler = {"ox": _kök("ox", "isim", AZ), "yar": _kök("yar", "fiil", AZ)}
+        self.assertFalse(any(ç.ekler == ["belirtme", "ek_fiil_dir"]
+                             for ç in çözümle("oxudur", kökler, self.ekler, None, AZ)))
+        self.assertFalse(any(ç.ekler[:1] == ["istek_3tekil"] and len(ç.ekler) > 1
+                             for ç in çözümle("yaradır", kökler, self.ekler, None, AZ)))
+
+    def test_türemiş_şema(self):
+        for değer in ("", "hep", "ekli", "çıplak"):
+            self.assertEqual(doğrula("olan", _kök("olan", "isim", AZ, türemiş=değer), AZ), [])
+        self.assertTrue(doğrula("olan", _kök("olan", "isim", AZ, türemiş=True), AZ))
+
+    def test_türemiş_seçim(self):
+        def seç(ad, alanlar, kelime):
+            kökler = {"ol": _kök("ol", "fiil", AZ), "art": _kök("art", "fiil", AZ),
+                      ad: _kök(ad, "fiil" if ad == "artır" else "isim", AZ, **alanlar)}
+            çs = çözümle(kelime, kökler, self.ekler, None, AZ)
+            return en_iyi_çözüm(çs, kökler, self.ekler, AZ).tokens
+        self.assertEqual(seç("olan", {}, "olan"), ["o", "lan"])                    # bayraksız: bütün-kök
+        self.assertEqual(seç("olan", {"türemiş": "hep"}, "olan"), ["ol", "an"])   # hep: bileşik
+        self.assertEqual(seç("artır", {"türemiş": "çıplak"}, "artır"), ["art", "ır"])
+        self.assertEqual(seç("artır", {"türemiş": "çıplak"}, "artırdı"), ["ar", "tır", "dı"])
+
+    def test_seyrek_ek_geri(self):
+        # üretken dönüşlü (seyrek) okuma, eşdeğer ad okumasına yenilir: yerinə = yer+i+n+ə
+        kökler = {"yer": _kök("yer", "isim", AZ), "yeri": _kök("yeri", "fiil", AZ)}
+        çs = çözümle("yerinə", kökler, self.ekler, None, AZ)
+        self.assertTrue(any("dönüşlü" in ç.ekler for ç in çs))
+        self.assertEqual(en_iyi_çözüm(çs, kökler, self.ekler, AZ).tokens, ["yer", "i", "n", "ə"])
 
 
 if __name__ == "__main__":

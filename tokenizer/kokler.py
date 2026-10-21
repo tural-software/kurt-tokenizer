@@ -15,7 +15,7 @@ from tokenizer import sesler
 from tokenizer.sema import Kök, doğrula
 
 _ALANLAR = {"tokens", "tür", "son_ünlü", "son_ses", "değişim", "ek_tür", "düşen", "ince",
-            "sadece_koşaç", "daralan", "ek_değişim", "y_tampon"}
+            "sadece_koşaç", "daralan", "ek_değişim", "y_tampon", "türemiş"}
 
 
 class ŞemaHatası(Exception):
@@ -62,6 +62,7 @@ def _girdi_işle(ad, girdi, sözlük, hatalar, görülen, kaynak, profil=None):
         daralan=girdi.get("daralan", False),
         ek_değişim=girdi.get("ek_değişim"),
         y_tampon=girdi.get("y_tampon", False),
+        türemiş=girdi.get("türemiş", ""),
     )
 
     girdi_hataları = doğrula(ad, kök, profil)

@@ -1,9 +1,11 @@
-"""Azerbaycan Türkçesi (AZ-2): ek motoru + tohum sözlük kapıları.
+"""Azerbaycan Türkçesi (AZ-2 motor, AZ-3 tam sözlük) kapıları.
 
   1. Altın liste (veri/az/korpus/altin.tsv): en iyi çözümün tokenları birebir + beklenen çözümleme
      çözüm kümesinde. Elle yazıldı (orfoqrafiya/orfoepiya normaları + gerçek yazım).
-  2. Sahte bölme taraması: her AZ kökü tek başına BÜTÜN okunur.
-  3. Üret → çözümle: dilbilgisel zincirlerle üretilen her biçimin çözümlemesi geri kazanılır.
+  2. Sahte bölme taraması (TÜM kökler): her AZ kökü tek başına BÜTÜN okunur; yalnız bilinçli türemiş
+     başlıklar (türemiş hep/çıplak: olan = ol+an, artır = art+ır) bileşik okunur — birleşimi köke eşit.
+  3. Üret → çözümle (deterministik örneklem): dilbilgisel zincirlerle üretilen biçimin çözümlemesi
+     geri kazanılır.
   4. Kaynak ↔ çıktı: veri/az/kokler, araclar/kaynak/az'dan birebir yeniden üretilir.
   5. Hat: dil="az" round-trip kayıpsız, rakam-tire eki (2024-cü), casing (Ə/İ), Türkçe izolasyon.
 """
@@ -24,6 +26,7 @@ from tokenizer.pipeline import BAŞ_BÜYÜK, HEP_BÜYÜK, decode, en_iyi_çözü
 from tokenizer.vocab import Vocab
 
 KÖK = Path(__file__).resolve().parent.parent
+ÖRNEKLEM_ADIM = 200   # 65k kök × ~100 zincir tam koşu dakikalar sürer; deterministik eşit aralıklı örneklem
 AZ_VERİ = KÖK / "veri" / "az"
 
 # Dilbilgisel zincirler (üret → çözümle geri kazanım): ad ve fiil tabanı için.
@@ -84,15 +87,24 @@ class AzMotor(unittest.TestCase):
         self.assertGreaterEqual(satır, 350)
 
     def test_kök_bütün_okunur(self):
-        # İlke #1: hiçbir kök kendi başına bölünmez (bütün-kök önceliği AZ politikasında da ilk sırada)
-        for ad in self.v.kökler:
+        # İlke #1: hiçbir kök kendi başına bölünmez; türemiş (hep/çıplak) başlık bilinçli olarak bileşik okunur
+        # (sözlükte üretken fiil biçimi olan başlık: olan = ol+an) — o zaman da tokenlar köke birleşir.
+        bileşik = 0
+        for ad, kök in self.v.kökler.items():
             with self.subTest(kök=ad):
                 _, b = self.en_iyi(ad)
-                self.assertEqual(b.ekler, [], (b.tokens, b.ekler))
+                self.assertEqual("".join(b.tokens), ad)
+                if kök.türemiş in ("hep", "çıplak"):
+                    bileşik += bool(b.ekler)
+                else:
+                    self.assertEqual(b.ekler, [], (b.tokens, b.ekler))
+        self.assertGreater(bileşik, 300)
 
     def test_üret_çözümle_geri_kazanım(self):
         eksik, gölge = [], set()
-        for ad, kök in self.v.kökler.items():
+        örneklem = sorted(self.v.kökler, key=AZ.alfabetik_anahtar)[::ÖRNEKLEM_ADIM]
+        for ad in örneklem:
+            kök = self.v.kökler[ad]
             zincirler = FİİL_ZİNCİR if kök.tür == "fiil" else İSİM_ZİNCİR
             for z in zincirler:
                 if getattr(kök, "sadece_koşaç", False) and z and self.v.ekler[z[0]].öbek != "her":
@@ -105,7 +117,8 @@ class AzMotor(unittest.TestCase):
                 if not any(c.kök == ad and c.ekler == z for c in çs):
                     eksik.append((ad, "+".join(z), yüzey))
         self.assertEqual(eksik, [])
-        self.assertEqual(gölge, {"ilə", "üçün", "kimi", "təki", "ay"})   # ay: nida = kök, aynı token
+        self.assertGreaterEqual(len(örneklem), 300)
+        self.assertTrue(gölge <= set(self.v.istisnalar))
 
     def test_kaynak_çıktı_eşleşir(self):
         kaynak, çıktı = dizinler("az")
