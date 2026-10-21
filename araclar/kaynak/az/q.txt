@@ -1756,7 +1756,7 @@ qəbzəli|isim|
 qəbzəsiz|isim|
 qəcəc|isim|
 qəcələ|isim|
-qədd|isim|
+qədd|isim|qoşa_tek
 qəddar|isim|
 qəddaranə|isim|
 qəddarca|isim|
@@ -2131,6 +2131,8 @@ qəşənglənmə|isim|türemiş_ekli
 qəşəngləş|fiil|
 qəşəngləşmə|isim|türemiş_ekli
 qəşənglik|isim|k→y
+qəşş|isim|
+qət|isim|
 qətedici|isim|
 qətfə|isim|
 qətfəçi|isim|
@@ -2787,9 +2789,9 @@ qıynaqla|fiil|
 qıynaqlama|isim|türemiş_ekli
 qıynaqlı|isim|
 qıyya|isim|
-qız|isim|
-qızar|fiil|
-qızaraq|isim|q→ğ
+qız|isim||fiil
+qızar|fiil|türemiş_çıplak
+qızaraq|isim|q→ğ,türemiş
 qızarıq|isim|q→ğ
 qızarış|fiil|
 qızarışma|isim|türemiş_ekli
@@ -2910,7 +2912,7 @@ qızquşu|isim|
 qızlarağası|isim|
 qızlarquşu|isim|
 qızlıq|isim|q→ğ
-qızma|isim|
+qızma|isim|türemiş_ekli
 qızmar|isim|
 qızmarlıq|isim|q→ğ
 qiblə|isim|
@@ -3538,6 +3540,7 @@ qönçəli|isim|
 qönçəlik|isim|k→y
 qönçəsiz|isim|
 qövm|isim|
+qövr|isim|
 qövs|isim|
 qövsaltı|isim|
 qövsarası|isim|
@@ -3586,6 +3589,7 @@ qranitləmə|isim|türemiş_ekli
 qranitləş|fiil|
 qranitləşmə|isim|türemiş_ekli
 qranodiorit|isim|
+qrant|isim|
 qrantor|isim|
 qranul|isim|
 qranulema|isim|

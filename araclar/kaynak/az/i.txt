@@ -160,6 +160,7 @@ ideal|isim|
 idealist|isim|
 idealistcəsinə|isim|
 idealistlik|isim|k→y
+idealizə|isim|
 idealizm|isim|
 ideallaş|fiil|
 ideallaşma|isim|türemiş_ekli
@@ -2495,6 +2496,7 @@ izoxron|isim|
 izoxronluq|isim|q→ğ
 izoqamiya|isim|
 izoqlos|isim|
+izolə|isim|
 izoləedici|isim|
 izolyasiya|isim|
 izolyasiyaçı|isim|

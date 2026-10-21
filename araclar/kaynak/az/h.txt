@@ -65,7 +65,7 @@ hakimiyyətyönlü|isim|
 hakimiyyətyönümlü|isim|
 hakimlik|isim|k→y
 haqkəsən|isim|
-haqq|isim|
+haqq|isim|qoşa_tek
 haqqında|isim|türemiş
 haqla|fiil|
 haqlama|isim|türemiş_ekli
@@ -102,6 +102,7 @@ halələn|fiil|
 halələnmə|isim|türemiş_ekli
 haləli|isim|
 halət|isim|
+hali|isim|
 halqa|isim|
 halqaborulu|isim|
 halqala|fiil|
@@ -687,7 +688,7 @@ həcvçi|isim|
 həcvçilik|isim|k→y
 həcvnamə|isim|
 hədbəhəd|isim|
-hədd|isim|
+hədd|isim|qoşa_tek
 hədə|isim|
 hədəf|isim|
 hədəfəalma|isim|
@@ -760,7 +761,7 @@ həlimlənmə|isim|türemiş_ekli
 həlimləş|fiil|
 həlimləşmə|isim|türemiş_ekli
 həlimlik|isim|k→y
-həll|isim|
+həll|isim|qoşa_tek
 həllac|isim|
 həllaclıq|isim|q→ğ
 həlledici|isim|
@@ -1702,6 +1703,7 @@ hospitalizasiya|isim|
 hospitalizə|isim|
 host|isim|
 hostel|isim|
+hosting|isim|
 hostinq|isim|
 hotel|isim|
 hotelçilik|isim|k→y
@@ -1774,6 +1776,7 @@ hörük|isim|k→y
 hörüklə|fiil|
 hörükləmə|isim|türemiş_ekli
 hörüklü|isim|
+hörümçək|isim|k→y
 hörümçəkkimi|isim|
 hörümçəyəbənzər|isim|
 hörümçəyəoxşar|isim|

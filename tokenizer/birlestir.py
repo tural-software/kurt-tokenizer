@@ -193,6 +193,11 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
         if idx == 0 and getattr(kök, "düşen", False) and ilk_ses in ünlüler:
             tokenlar[-1] = _ünlü_düşür(tokenlar[-1], ünlüler)
             gövde = _ünlü_düşür(gövde, ünlüler)
+        # Çift ünsüz tekleşmesi (AZ qoşa_tek): ünsüzle başlayan ilk ek önünde kök sonu teke iner
+        # (xətt+lər → xətlər, hədd+dən → həddən); ünlü önünde korunur (xətti).
+        if idx == 0 and getattr(kök, "qoşa_tek", False) and ilk_ses and ilk_ses not in ünlüler:
+            tokenlar[-1] = tokenlar[-1][:-1]
+            gövde = gövde[:-1]
         # ye/de düzensizi: çekirdek e→i, yalnız y-glide'lı ek öncesi (ünlü-başlı ek → tampon
         # y; -Iyor → 'yor'). Ünsüz-başlı ekte (yedi/yer/dedi/der) değişmez. Yalnız ilk ek.
         if (idx == 0 and getattr(kök, "daralan", False)

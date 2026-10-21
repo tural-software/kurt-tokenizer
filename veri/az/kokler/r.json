@@ -1,5 +1,6 @@
 {
   "rad": {"tokens": ["rad"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "ram": {"tokens": ["ram"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "rand": {"tokens": ["rand"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ranq": {"tokens": ["ranq"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "rapp": {"tokens": ["rapp"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
@@ -34,7 +35,7 @@
   "ritm": {"tokens": ["ritm"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "rok": {"tokens": ["rok"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "rol": {"tokens": ["rol"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
-  "roll": {"tokens": ["roll"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
+  "roll": {"tokens": ["roll"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null, "qoşa_tek": true},
   "rom": {"tokens": ["rom"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "romb": {"tokens": ["romb"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "ron": {"tokens": ["ron"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
@@ -754,6 +755,7 @@
   "raketoplan": {"tokens": ["ra", "ke", "top", "lan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ramazanlıq": {"tokens": ["ra", "ma", "zan", "lıq"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"q→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "ramburslama": {"tokens": ["ram", "burs", "la", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "randomizə": {"tokens": ["ran", "do", "mi", "zə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
   "ranqlaşdırma": {"tokens": ["ranq", "laş", "dır", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null, "türemiş": "ekli"},
   "rapakivi": {"tokens": ["ra", "pa", "ki", "vi"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "rapanui": {"tokens": ["ra", "pa", "nu", "i"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},

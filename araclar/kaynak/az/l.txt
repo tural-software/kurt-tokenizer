@@ -28,7 +28,7 @@ lafet|isim|
 lafetçi|isim|
 lafetli|isim|
 lafetsiz|isim|
-lagerr|isim|
+lagerr|isim|qoşa_tek
 lağ|isim|
 lağar|isim|
 lağbaz|isim|
@@ -83,6 +83,7 @@ lakoniklik|isim|k→y
 lakoniya|isim|
 lakonizm|isim|
 lakrimator|isim|
+lakros|isim|
 laksız|isim|
 laktasiya|isim|
 laktogen|isim|
@@ -983,6 +984,7 @@ loqarifm|isim|
 loqarifmik|isim|k→y
 loqarifmlə|fiil|
 loqarifmləmə|isim|türemiş_ekli
+loqin|isim|
 loqqulda|fiil|
 loqquldama|isim|türemiş_ekli
 loqqultu|isim|

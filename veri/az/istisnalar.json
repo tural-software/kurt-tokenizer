@@ -30,7 +30,11 @@
     "əvvəl": {"tokens": ["əvvəl"], "not": "qoşma/zərf"},
     "bəri": {"tokens": ["bəri"], "not": "qoşma"},
     "üzrə": {"tokens": ["üzrə"], "not": "qoşma"},
-    "doğru": {"tokens": ["doğru"], "not": "qoşma/sifət"}
+    "doğru": {"tokens": ["doğru"], "not": "qoşma/sifət"},
+    "dək": {"tokens": ["dək"], "not": "qoşma (ayrı yazılışı; bitişik -dək ek)"},
+    "haqda": {"tokens": ["haq", "da"], "not": "qoşma (haqqında qısa biçimi)"},
+    "köməyilə": {"tokens": ["kö", "məy", "i", "lə"], "not": "qoşma kalıbı (köməyi ilə; ünlüden sonra y'siz)"},
+    "şərtilə": {"tokens": ["şərt", "i", "lə"], "not": "qoşma kalıbı (şərti ilə; ünlüden sonra y'siz)"}
   },
   "ədat": {
     "da": {"tokens": ["da"], "not": "ədat (dedim də), ayrı yazılır"},
@@ -61,6 +65,27 @@
   },
   "zamir": {
     "o": {"tokens": ["o"], "not": "işarə/şəxs əvəzliyi yalın; çekimi on- gövdəsindən (onu, ona, onlar)"},
-    "bu": {"tokens": ["bu"], "not": "işarə əvəzliyi yalın; çekimi bun- gövdəsindən (bunu, buna, bunlar)"}
+    "bu": {"tokens": ["bu"], "not": "işarə əvəzliyi yalın; çekimi bun- gövdəsindən (bunu, buna, bunlar)"},
+    "odur": {"tokens": ["o", "dur"], "not": "o + ek-fiil -dur (yalın o istisna olduğundan)"},
+    "budur": {"tokens": ["bu", "dur"], "not": "bu + ek-fiil -dur"},
+    "idim": {"tokens": ["idi", "m"], "not": "ayrı yazılan ek-fiil idi + kişi"},
+    "idin": {"tokens": ["idi", "n"], "not": "ayrı yazılan ek-fiil idi + kişi"},
+    "idik": {"tokens": ["idi", "k"], "not": "ayrı yazılan ek-fiil idi + kişi"},
+    "idiniz": {"tokens": ["idi", "niz"], "not": "ayrı yazılan ek-fiil idi + kişi"},
+    "idilər": {"tokens": ["idi", "lər"], "not": "ayrı yazılan ek-fiil idi + kişi"},
+    "idisə": {"tokens": ["idi", "sə"], "not": "ayrı yazılan ek-fiil idi + şərt"}
+  },
+  "ixtisar": {
+    "km": {"tokens": ["km"], "not": "kilometr"},
+    "kq": {"tokens": ["kq"], "not": "kiloqram"},
+    "sm": {"tokens": ["sm"], "not": "santimetr"},
+    "mm": {"tokens": ["mm"], "not": "millimetr"},
+    "kv": {"tokens": ["kv"], "not": "kvadrat"},
+    "ml": {"tokens": ["ml"], "not": "millilitr"},
+    "mq": {"tokens": ["mq"], "not": "milliqram"},
+    "mln": {"tokens": ["mln"], "not": "milyon"},
+    "mlrd": {"tokens": ["mlrd"], "not": "milyard"},
+    "səh": {"tokens": ["səh"], "not": "səhifə"},
+    "dəq": {"tokens": ["dəq"], "not": "dəqiqə"}
   }
 }

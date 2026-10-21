@@ -40,6 +40,8 @@ def kök_önekleri(ad: str, kök, profil=None) -> set[str]:
         ön.add(_e_i(ad, ünlüler))
     if getattr(kök, "ek_değişim", None):         # ikincil-sınıf yumuşaması (tat→tad: tadıyor)
         ön.add(_yumuşat_son(ad, kök.ek_değişim))
+    if getattr(kök, "qoşa_tek", False):          # AZ çift ünsüz tekleşmesi (xətt → xət-lər)
+        ön.add(ad[:-1])
     return ön
 
 

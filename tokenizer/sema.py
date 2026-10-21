@@ -38,6 +38,8 @@ class Kök:
     sadece_koşaç: bool = False  # yalnız koşaç/ek-fiil alır, isim eki almaz (mı, değil)
     daralan: bool = False  # ye/de düzensizi: çekirdek e→i, y-glide'lı ek öncesi (ye→yiyor)
     y_tampon: bool = False  # (n) tamponu yerine y (AZ su→suyu/suyun, nə→nəyi/nəyin; düzensiz)
+    qoşa_tek: bool = False  # son çift ünsüz, ünsüzle başlayan İLK ek önünde teke iner (AZ xətt → xətlər,
+    #                         xətdə; hədd+dən → həddən). hiss/həll korur (hisslər) → bayraksız
     türemiş: str = ""       # bileşik biçimle eşsesli sözlük başlığı; bileşik okuma varsa o yeğlenir
     #                         (pipeline.en_iyi_çözüm, dil profili). "hep": her zaman (AZ olan = ol+an,
     #                         gəlir = gəl+ir); "ekli": yalnız ek alınca (-mA adı: düymə bütün, gəlməliyəm =
@@ -119,6 +121,10 @@ def doğrula(ad: str, kök: Kök, profil=None) -> list[str]:
         hatalar.append(f"{ad!r}: sadece_koşaç alanı bool olmalı, bulundu {kök.sadece_koşaç!r}")
     if not isinstance(kök.daralan, bool):
         hatalar.append(f"{ad!r}: daralan alanı bool olmalı, bulundu {kök.daralan!r}")
+    if not isinstance(kök.qoşa_tek, bool):
+        hatalar.append(f"{ad!r}: qoşa_tek alanı bool olmalı, bulundu {kök.qoşa_tek!r}")
+    elif kök.qoşa_tek and not (len(ad) > 2 and ad[-1] == ad[-2] and ad[-1] not in ünlüler):
+        hatalar.append(f"{ad!r}: qoşa_tek yalnız çift ünsüzle biten kökte anlamlı")
     if kök.türemiş not in TÜREMİŞ_TÜRLERİ:
         hatalar.append(f"{ad!r}: türemiş alanı {sorted(TÜREMİŞ_TÜRLERİ)} olmalı, bulundu {kök.türemiş!r}")
     if not isinstance(kök.y_tampon, bool):

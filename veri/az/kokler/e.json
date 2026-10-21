@@ -26,6 +26,7 @@
   "ekspert": {"tokens": ["eks", "pert"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "eksployt": {"tokens": ["eksp", "loyt"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "ekspres": {"tokens": ["eksp", "res"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "ekspress": {"tokens": ["eksp", "ress"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "ekspromt": {"tokens": ["eksp", "romt"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "ekstaz": {"tokens": ["eks", "taz"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ekstent": {"tokens": ["eks", "tent"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},

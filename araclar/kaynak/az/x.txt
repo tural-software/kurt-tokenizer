@@ -384,6 +384,7 @@ xələtlik|isim|k→y
 xəlifə|isim|
 xəlifəlik|isim|k→y
 xəlitə|isim|
+xəlq|isim|
 xəlqi|isim|
 xəlqiləş|fiil|
 xəlqiləşmə|isim|türemiş_ekli
@@ -530,7 +531,7 @@ xətmi|isim|
 xətsiz|isim|
 xətşünas|isim|
 xətşünaslıq|isim|q→ğ
-xətt|isim|
+xətt|isim|qoşa_tek
 xəttaltı|isim|
 xəttat|isim|
 xəttatlıq|isim|q→ğ
@@ -858,6 +859,7 @@ xoflatma|isim|türemiş_ekli
 xoflu|isim|
 xofluluq|isim|q→ğ
 xofsuz|isim|
+xokkey|isim|
 xolerik|isim|k→y
 xolesistit|isim|
 xolesterin|isim|

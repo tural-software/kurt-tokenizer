@@ -306,5 +306,52 @@ class AzSözlükKuralları(unittest.TestCase):
         self.assertEqual(en_iyi_çözüm(çs, kökler, self.ekler, AZ).tokens, ["yer", "i", "n", "ə"])
 
 
+class AzEkKuralları(unittest.TestCase):
+    """AZ-4: çift ünsüz tekleşmesi, kök/ek konum kısıtları, y'siz ek-fiil, tire/tırnak sonrası ek."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.ekler = ekleri_yükle(VERİ / "az" / "ekler.json", AZ)
+
+    def test_qoşa_tek(self):
+        xətt = _kök("xətt", "isim", AZ, qoşa_tek=True)
+        self.assertEqual(birleştir("xətt", xətt, ["çoğul"], self.ekler, AZ), (["xət", "lər"], "xətlər"))
+        self.assertEqual(birleştir("xətt", xətt, ["belirtme"], self.ekler, AZ)[1], "xətti")   # ünlü önü korunur
+        hədd = _kök("hədd", "isim", AZ, qoşa_tek=True)
+        self.assertEqual(birleştir("hədd", hədd, ["ayrılma"], self.ekler, AZ)[1], "həddən")
+        self.assertEqual(birleştir("hiss", _kök("hiss", "isim", AZ), ["çoğul"], self.ekler, AZ)[1], "hisslər")
+        kökler = {"xətt": xətt}
+        self.assertTrue(any(ç.ekler == ["çoğul"] for ç in çözümle("xətlər", kökler, self.ekler, None, AZ)))
+        self.assertTrue(doğrula("xət", _kök("xət", "isim", AZ, qoşa_tek=True), AZ))      # çift ünsüz yok
+
+    def test_ünlü_sonra_ek_fiil(self):
+        kökler = {"hədd": _kök("hədd", "isim", AZ, qoşa_tek=True), "yaxşı": _kök("yaxşı", "isim", AZ)}
+        self.assertFalse(any("ek_fiil_di" in ç.ekler for ç in çözümle("həddi", kökler, self.ekler, None, AZ)))
+        self.assertTrue(any(ç.ekler == ["ek_fiil_di"] for ç in çözümle("yaxşıdı", kökler, self.ekler, None, AZ)))
+
+    def test_koşul_ve_kişi_sonrası(self):
+        kökler = {"var": _kök("var", "isim", AZ), "deyil": _kök("deyil", "edat", AZ, sadece_koşaç=True)}
+        self.assertTrue(any(ç.ekler == ["ek_fiil_ise"] for ç in çözümle("varsa", kökler, self.ekler, None, AZ)))
+        self.assertTrue(any(ç.ekler == ["koşaç_2çoğul_t1", "koşaç_ise"]
+                            for ç in çözümle("deyilsinizsə", kökler, self.ekler, None, AZ)))
+        self.assertFalse(any("koşaç_ise" in ç.ekler for ç in çözümle("varsa", kökler, self.ekler, None, AZ)))
+
+    def test_belirsizlik_sa_yalnız_zamir(self):
+        kökler = {"nə": _kök("nə", "zamir", AZ, y_tampon=True), "ev": _kök("ev", "isim", AZ)}
+        self.assertTrue(any(ç.ekler == ["belirtme", "belgisiz_sa"]
+                            for ç in çözümle("nəyisə", kökler, self.ekler, None, AZ)))
+        self.assertFalse(any("belgisiz_sa" in ç.ekler for ç in çözümle("evsə", kökler, self.ekler, None, AZ)))
+
+    def test_tire_ve_tırnak_sonrası_ek(self):
+        kuyruk = OnayKuyruğu()
+        for metin, ek in (("ABŞ-ın", "ın"), ("«pullar»ın", "ın"), ("XX-ci", "ci")):
+            t = encode(metin, AZ_KÖKLER, self.ekler, None, kuyruk=kuyruk, dil="az")
+            self.assertEqual(t[-1], ek)
+            self.assertEqual(decode(t), metin)
+        self.assertNotIn("ın", [g.kelime for g in kuyruk.bekleyenler()])
+        # büyük harfle başlayan ikinci parça ek değildir (Bakı-Sumqayıt); Türkçe kip kuralı yok
+        self.assertIn("<|Bb|>", encode("Bakı-Sumqayıt", AZ_KÖKLER, self.ekler, None, dil="az")[2:])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -643,7 +643,7 @@ karpogen|isim|
 karpoideya|isim|
 karpoqrafiya|isim|
 karpologiya|isim|
-karr|isim|
+karr|isim|qoşa_tek
 karsala|isim|
 karser|isim|
 karsız|isim|
@@ -1600,6 +1600,7 @@ kibernetik|isim|k→y
 kibernetika|isim|
 kiberpank|isim|k→y
 kiberskvottinq|isim|q→ğ
+kibersport|isim|
 kiberterror|isim|
 kiberterrorizm|isim|
 kibertəhdid|isim|
@@ -2182,6 +2183,7 @@ kleyetipiya|isim|
 kleyn|isim|
 kleystoqamiya|isim|
 klif|isim|
+klik|isim|
 klimaks|isim|
 klimakterik|isim|k→y
 klimatip|isim|
@@ -3051,6 +3053,7 @@ koordinat|isim|
 koordinatoqraf|isim|
 koordinator|isim|
 koordinatölçən|isim|
+koordinə|isim|
 koortasiya|isim|
 kopal|isim|
 kopirayter|isim|
@@ -3889,6 +3892,7 @@ kubu|isim|
 kubvari|isim|
 kudu|isim|
 kufi|isim|
+kuki|isim|
 kukla|isim|
 kuklaçı|isim|
 kuklaçılıq|isim|q→ğ
@@ -4136,7 +4140,7 @@ külxanaçı|isim|
 külxanaçılıq|isim|q→ğ
 külxançı|isim|
 külqabı|isim|
-küll|isim|
+küll|isim|qoşa_tek
 küllə|fiil|
 külləmə|isim|türemiş_ekli
 külləş|fiil|

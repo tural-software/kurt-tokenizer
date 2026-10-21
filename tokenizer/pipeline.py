@@ -27,6 +27,7 @@ BOŞLUK = "▁"
 # düz ve sağ-tek-tırnak (İstanbul'da / İstanbul’da) + kesme olarak kullanılan değiştirici
 # harfler (vocab Faz 3): ʼ U+02BC (Cumhuriyetʼi), ʹ U+02B9 (Kemalʹin) — harf sınıfı DIŞI.
 KESME = ("'", "’", "ʼ", "ʹ")
+KAPANIŞ_TIRNAK = ("»", "”", "\"")   # AZ: kapanış tırnağına ek bitişik (dil profili büyük_tire_eki)
 # LaTeX komutları (metin kipi, vocab bölümü 'latex'): ters bölü DAHİL tek token (\frac, \Delta).
 # Büyük/küçük harf komutun parçasıdır (\Delta ≠ \delta) → casing işaretçisi kullanılmaz.
 LATEX_KOMUTLARI = (
@@ -453,6 +454,12 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
             önceki_kesme = altbirim[-1] in KESME or (
                 profil is not None and profil.rakam_tire_eki and altbirim[-1] == "-"
                 and len(altbirim) > 1 and altbirim[-2].isdigit())   # AZ: 2024-cü, 5-də
+            if (not önceki_kesme and profil is not None and profil.büyük_tire_eki
+                    and 0 < j < len(altbirimler) - 1 and altbirimler[j - 1][1]
+                    and altbirimler[j + 1][1] and altbirimler[j + 1][0][0].islower()
+                    and ((altbirim == "-" and altbirimler[j - 1][0][0].isupper())
+                         or altbirim[-1] in KAPANIŞ_TIRNAK)):
+                önceki_kesme = True                  # AZ: ABŞ-ın, Magnitsky-nin, XX-ci; «pullar»ın
             continue
         if önceki_kesme:
             # Kesme sonrası harf-koşusu = EK (özel ad/akronim/sayı eki: İstanbul'da,

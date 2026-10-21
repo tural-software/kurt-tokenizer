@@ -216,6 +216,7 @@
 əxlaqsız|isim|
 əxlaqsızcasına|isim|
 əxlaqsızlıq|isim|q→ğ
+əxz|isim|
 əjdaha|isim|
 əjdahalıq|isim|q→ğ
 ək|fiil|
@@ -862,6 +863,7 @@
 əruz|isim|
 əruzşünas|isim|
 əruzşünaslıq|isim|q→ğ
+ərz|isim|
 ərzaq|isim|q→ğ
 ərzaqçı|isim|
 ərzaqçılıq|isim|q→ğ
