@@ -13,14 +13,11 @@
                      "issent", "usse", "usses", "ût", "ussions", "ussiez", "ussent", "sse", "sses", "ssions", "ssiez",
                      "ssent"],
     "ikinci_grup":  ["iss"],
-    "ortaç":        ["é", "ée", "és", "ées", "i", "ie", "ies", "u", "ue", "ues", "û", "te", "ts", "tes", "ise", "ises", "use", "uses",
+    "ortaç":        ["é", "ée", "és", "ées", "i", "ie", "ies", "u", "ue", "ues", "û", "te", "ts", "tes", "ise", "ises", "use", "uses", "se", "ses",
                      "us"],
     "ulaç":         ["ant"]
   },
   "önekler": {
-    "re":   ["fiil"],
-    "ré":   ["fiil"],
-    "dé":   ["fiil"],
     "in":   ["sıfat"],
     "im":   ["sıfat"],
     "anti": ["isim", "sıfat"],

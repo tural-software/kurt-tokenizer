@@ -109,10 +109,15 @@ def sıra_anahtarı(s: str) -> tuple:
 
 def kökleri_yükle(yol: str | Path, sınıflar: dict) -> dict[str, FrKök]:
     """kokler.txt: 'sözcük|tür[,ek_tür…]|bayrak[,bayrak…]' satırları, # yorum. Sözcük küçük FR harfleri, sıralı."""
+    return kökleri_çöz(Path(yol).read_text(encoding="utf-8").splitlines(), sınıflar)
+
+
+def kökleri_çöz(satırlar, sınıflar: dict) -> dict[str, FrKök]:
+    """kokler.txt satırlarını doğrular ve {sözcük: FrKök} döndürür (FrVeriHatası)."""
     sözlük: dict[str, FrKök] = {}
     hatalar: list[str] = []
     önceki = None
-    for no, satır in enumerate(Path(yol).read_text(encoding="utf-8").splitlines(), 1):
+    for no, satır in enumerate(satırlar, 1):
         satır = satır.strip()
         if not satır or satır.startswith("#"):
             continue
@@ -501,8 +506,10 @@ def en_iyi(çözümler: list[Çözüm], kökler=None, ad_okuma: bool = False) ->
 
 
 def _gövde_değişti(ç: Çözüm) -> bool:
+    """Gövde + ek okumasında gövde tokenı lemmadan farklı mı (port+es ← porter)? Tek tokenlı düzensiz biçim (sommes,
+    suis) gövde değişimi sayılmaz: nous sommes = être biçimi, somme+s değil."""
     önek = sum(e.startswith("önek_") for e in ç.ekler)
-    return ç.tokens[önek] != ç.kök
+    return len(ç.tokens) - önek > 1 and ç.tokens[önek] != ç.kök
 
 
 # ── yedek heceleme ──────────────────────────────────────────────────────────────────────────
