@@ -4308,13 +4308,6 @@
    ],
    "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
   },
-  "vie": {
-   "tokens": [
-    "vi",
-    "e"
-   ],
-   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
-  },
   "viième": {
    "tokens": [
     "vii",

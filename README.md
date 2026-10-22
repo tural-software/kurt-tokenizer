@@ -6,7 +6,8 @@ Kurt Tokenizer; Türkçe'yi birinci sınıf dil olarak ele alan **Kurt** dil mod
 projesinin temel taşıdır. İstatistiksel (BPE/WordPiece gibi) değil; Türkçe'nin
 morfolojisini elle modellenmiş kök sözlüğü, ek listesi ve birleştirme kurallarıyla
 çözen **deterministik** bir sistemdir. Aynı motor Azerbaycan Türkçesini de kendi
-kök sözlüğü ve ek kurallarıyla çözer.
+kök sözlüğü ve ek kurallarıyla çözer; İngilizce ve Fransızca için aynı ilkeyle (kök sözlüğü + ek kuralı +
+üret-doğrula) yazılmış kendi çözümleyicileri vardır.
 
 > Bu bileşen, "vatana millete hayırlı uğurlu olsun" niyetiyle **MIT lisansıyla
 > herkese açık** bırakılmıştır.
@@ -41,6 +42,12 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   kısaltma, web parçası (`www`, `5th = 5+th`) ve konuşma kalıbı (`gonna`) bütün token. Yazım bayrakları ve eşsesli kök
   kararları korpus kanıtıyla. 5.000 tokenlık `en-1` bölümü (ekler, sık gövdeler bütün, yedek yazım heceleri):
   İngilizce web metninde 0,47 token/karakter (Türkçe kipte 0,74).
+- **Fransızca** (`dil="fr"`): çekim üreteçli kendi çözümleyicisi (`tokenizer/fr.py`) — her kökün biçimleri kendi
+  kurallarımızla üretilir (1. grup ç/ge/è/ikizleşme, 2. grup -iss-, 3. grup 60 çekim sınıfı, dişil/çoğul/zarf);
+  gövde değişimi gövde tokenında, ek tek token (`commenç+ons`, `parl+ées`, `viendr+ai`), elizyon solda ayrı
+  (`l'+homme`, `qu’+il`), düzensiz biçim bütün (`est`, `sont`). ~26.000 kök (Wikidata Lexemes CC0 + elle), ~3.300
+  özel ad, sıra sayısı/Roma rakamı (`deux+ième`, `xix+e`). 3.500 tokenlık `fr-1` bölümü (ekler, elizyonlar, œ Œ ÿ Ÿ,
+  sık gövdeler bütün, yedek heceler): Fransızca web metninde 0,45 token/karakter (Türkçe kipte 0,70).
 - **Kod kipi** (`kip="kod"`, `dil="python"`): boşluk/satır birebir korunur; kendi Python lexer'ı,
   tanımlayıcı bölme ve kod sözlüğü.
 - **17.011 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
@@ -91,9 +98,11 @@ veri/           Türkçe kök sözlüğü (harf başına), ek/istisna/zamir/işl
 veri/az/        Azerbaycan Türkçesi: kök sözlüğü, ekler, istisnalar, vocab bölümü (az-1),
                 altın liste ve doğrulama metni
 veri/en/        İngilizce: kök sözlüğü (kokler.txt), ekler, istisnalar (düzensiz/kısaltma), altın liste
+veri/fr/        Fransızca: kök sözlüğü (kokler.txt), çekim sınıfları (cekim.json), ekler, istisnalar,
+                vocab bölümü (fr-1), altın liste ve doğrulama metni
 araclar/        kaynak → JSON üretici (uret), vocab üretici (vocab_uret), korpus doğrulayıcı
                 (dogrula_korpus), regresyon karşılaştırıcı (regresyon), kod doğrulayıcı (kod_dogrula)
-testler/        stdlib unittest (272 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
+testler/        stdlib unittest (302 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
 ```
 
 ## Veri kaynakları (Azerbaycan Türkçesi)
@@ -116,6 +125,16 @@ testler/        stdlib unittest (272 test) — round-trip, sahte bölme, regresy
 - **Korpus kanıtı:** FineWeb `sample-10BT` (ODC-By). Yazım bayrakları (çift ünsüz, -es, -ves), eşsesli kök
   kararları ve elle denetlenen özel ad/sözcük adayları bu korpustaki gerçek kullanımla bir kez verilip veri dosyasına
   işlendi; çalışma anında frekans kullanılmaz. Korpus metni depoda yoktur.
+
+## Veri kaynakları (Fransızca)
+
+- **Kök listesi:** [Wikidata Lexemes](https://www.wikidata.org/wiki/Wikidata:Lexicographical_data) (CC0) — Fransızca
+  lemma, tür ve biçimler (biçimler yalnız bayrak kanıtı: çoğul -x/-aux, dişil, -iss-). Çekim kuralları, çekim
+  sınıfları, istisnalar, özel ad listesi ve eksik sözcükler bizim (elle). Copyleft ya da kısıtlı şartlı sözlük
+  kullanılmadı.
+- **Korpus kanıtı:** FineWeb-2 `fra_Latn` (ODC-By). Eşsesli kök kararları, elle denetlenen sözcük/özel ad adayları ve
+  vocab bölümü seçimi bu korpustaki gerçek kullanımla bir kez verilip veri dosyasına işlendi; çalışma anında frekans
+  kullanılmaz. Korpus metni depoda yoktur.
 
 ## Veriyi yeniden üretme
 
