@@ -127,6 +127,35 @@ class SahteBölmeYok(unittest.TestCase):
         self.assertEqual(okuma("céderai"), ["céder", "ai"])
 
 
+class Triyaj(unittest.TestCase):
+    def test_sıra_ve_roma(self):
+        self.assertEqual(kodla("deuxième"), ["deux", "ième"])
+        self.assertEqual(kodla("cinquièmes"), ["cinqu", "ième", "s"])
+        self.assertEqual(kodla("xixe"), ["xix", "e"])                # XIXe karışık biçim: bütün (casing kuralı)
+        self.assertEqual(kodla("1er"), ["1", "er"])
+        self.assertEqual(kodla("Louis XIV")[-2:], [ASCII_HEP, "xiv"])
+
+    def test_istisna_grupları(self):
+        for w, grup in (("afin", "işlev_ek"), ("instar", "kalıp_parçası"), ("km", "kısaltma"), ("www", "web"),
+                        ("the", "yabancı"), ("anti", "önek_parça"), ("b", "harf"), ("qu", "elizyon_parça")):
+            self.assertEqual(V.istisnalar[w].grup, grup)
+
+    def test_emir_ve_1990(self):
+        self.assertEqual(okuma("veuillez"), ["veuill", "ez"])
+        self.assertEqual(okuma("sachez"), ["sach", "ez"])
+        self.assertEqual(okuma("plait"), ["plai", "t"])
+
+    def test_özel_ad(self):
+        self.assertEqual(V.kökler["lyon"].tür, "özel")
+        self.assertEqual(kodla("Lyon"), [ASCII_BAŞ, "lyon"])
+        self.assertEqual(kodla("ONU"), [ASCII_HEP, "onu"])
+
+    def test_dişil(self):
+        self.assertEqual(okuma("neuve"), ["neuv", "e"])
+        self.assertEqual(okuma("aiguës"), ["aiguë", "s"])
+        self.assertEqual(okuma("idéales"), ["idéal", "es"])
+
+
 class Elizyon(unittest.TestCase):
     def test_elizyon_solda_ayrı(self):
         self.assertEqual(kodla("l'homme"), ["l'", "homme"])

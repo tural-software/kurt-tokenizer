@@ -1610,5 +1610,3277 @@
    ],
    "not": "ses türemesi -t- (a-t-il, va-t-on): tireli kalıpta tek başına"
   }
+ },
+ "sıra": {
+  "deuxième": {
+   "tokens": [
+    "deux",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "troisième": {
+   "tokens": [
+    "trois",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quatrième": {
+   "tokens": [
+    "quatr",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "cinquième": {
+   "tokens": [
+    "cinqu",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "sixième": {
+   "tokens": [
+    "six",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "septième": {
+   "tokens": [
+    "sept",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "huitième": {
+   "tokens": [
+    "huit",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "neuvième": {
+   "tokens": [
+    "neuv",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "dixième": {
+   "tokens": [
+    "dix",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "onzième": {
+   "tokens": [
+    "onz",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "douzième": {
+   "tokens": [
+    "douz",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "treizième": {
+   "tokens": [
+    "treiz",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quatorzième": {
+   "tokens": [
+    "quatorz",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quinzième": {
+   "tokens": [
+    "quinz",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "seizième": {
+   "tokens": [
+    "seiz",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "vingtième": {
+   "tokens": [
+    "vingt",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "trentième": {
+   "tokens": [
+    "trent",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quarantième": {
+   "tokens": [
+    "quarant",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "cinquantième": {
+   "tokens": [
+    "cinquant",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "soixantième": {
+   "tokens": [
+    "soixant",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "centième": {
+   "tokens": [
+    "cent",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "millième": {
+   "tokens": [
+    "mill",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "millionième": {
+   "tokens": [
+    "million",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "milliardième": {
+   "tokens": [
+    "milliard",
+    "ième"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "deuxièmes": {
+   "tokens": [
+    "deux",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "troisièmes": {
+   "tokens": [
+    "trois",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quatrièmes": {
+   "tokens": [
+    "quatr",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "cinquièmes": {
+   "tokens": [
+    "cinqu",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "sixièmes": {
+   "tokens": [
+    "six",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "septièmes": {
+   "tokens": [
+    "sept",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "huitièmes": {
+   "tokens": [
+    "huit",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "neuvièmes": {
+   "tokens": [
+    "neuv",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "dixièmes": {
+   "tokens": [
+    "dix",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "onzièmes": {
+   "tokens": [
+    "onz",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "douzièmes": {
+   "tokens": [
+    "douz",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "treizièmes": {
+   "tokens": [
+    "treiz",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quatorzièmes": {
+   "tokens": [
+    "quatorz",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quinzièmes": {
+   "tokens": [
+    "quinz",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "seizièmes": {
+   "tokens": [
+    "seiz",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "vingtièmes": {
+   "tokens": [
+    "vingt",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "trentièmes": {
+   "tokens": [
+    "trent",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "quarantièmes": {
+   "tokens": [
+    "quarant",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "cinquantièmes": {
+   "tokens": [
+    "cinquant",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "soixantièmes": {
+   "tokens": [
+    "soixant",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "centièmes": {
+   "tokens": [
+    "cent",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "millièmes": {
+   "tokens": [
+    "mill",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "millionièmes": {
+   "tokens": [
+    "million",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  },
+  "milliardièmes": {
+   "tokens": [
+    "milliard",
+    "ième",
+    "s"
+   ],
+   "not": "sıra sayısı: sayı gövdesi + ième (+ s çoğul)"
+  }
+ },
+ "sıra_eki": {
+  "e": {
+   "tokens": [
+    "e"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "er": {
+   "tokens": [
+    "er"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "re": {
+   "tokens": [
+    "re"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "ère": {
+   "tokens": [
+    "ère"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "ème": {
+   "tokens": [
+    "ème"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "èmes": {
+   "tokens": [
+    "èmes"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "ième": {
+   "tokens": [
+    "ième"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "ièmes": {
+   "tokens": [
+    "ièmes"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "nd": {
+   "tokens": [
+    "nd"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "nde": {
+   "tokens": [
+    "nde"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "nds": {
+   "tokens": [
+    "nds"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "ndes": {
+   "tokens": [
+    "ndes"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "ers": {
+   "tokens": [
+    "ers"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "res": {
+   "tokens": [
+    "res"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  },
+  "es": {
+   "tokens": [
+    "es"
+   ],
+   "not": "rakam sonrası sıra/kısaltma eki (1er, 2e, 3ème, 2nd): rakamdan ayrı tek token"
+  }
+ },
+ "harf": {
+  "b": {
+   "tokens": [
+    "b"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "c": {
+   "tokens": [
+    "c"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "d": {
+   "tokens": [
+    "d"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "f": {
+   "tokens": [
+    "f"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "g": {
+   "tokens": [
+    "g"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "h": {
+   "tokens": [
+    "h"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "i": {
+   "tokens": [
+    "i"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "j": {
+   "tokens": [
+    "j"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "k": {
+   "tokens": [
+    "k"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "l": {
+   "tokens": [
+    "l"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "m": {
+   "tokens": [
+    "m"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "n": {
+   "tokens": [
+    "n"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "o": {
+   "tokens": [
+    "o"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "p": {
+   "tokens": [
+    "p"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "q": {
+   "tokens": [
+    "q"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "r": {
+   "tokens": [
+    "r"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "s": {
+   "tokens": [
+    "s"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "u": {
+   "tokens": [
+    "u"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "v": {
+   "tokens": [
+    "v"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "w": {
+   "tokens": [
+    "w"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "x": {
+   "tokens": [
+    "x"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  },
+  "z": {
+   "tokens": [
+    "z"
+   ],
+   "not": "Latin harfi tek başına (vitamine C, plan B, axe x)"
+  }
+ },
+ "kısaltma": {
+  "cm": {
+   "tokens": [
+    "cm"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "km": {
+   "tokens": [
+    "km"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "mm": {
+   "tokens": [
+    "mm"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "kg": {
+   "tokens": [
+    "kg"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "mg": {
+   "tokens": [
+    "mg"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ml": {
+   "tokens": [
+    "ml"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "cl": {
+   "tokens": [
+    "cl"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "dl": {
+   "tokens": [
+    "dl"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "min": {
+   "tokens": [
+    "min"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "mme": {
+   "tokens": [
+    "mme"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "mmes": {
+   "tokens": [
+    "mmes"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "mlle": {
+   "tokens": [
+    "mlle"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "mlles": {
+   "tokens": [
+    "mlles"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "dr": {
+   "tokens": [
+    "dr"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "pr": {
+   "tokens": [
+    "pr"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "st": {
+   "tokens": [
+    "st"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ste": {
+   "tokens": [
+    "ste"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "etc": {
+   "tokens": [
+    "etc"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "env": {
+   "tokens": [
+    "env"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "tél": {
+   "tokens": [
+    "tél"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "fax": {
+   "tokens": [
+    "fax"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "nb": {
+   "tokens": [
+    "nb"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ps": {
+   "tokens": [
+    "ps"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "cf": {
+   "tokens": [
+    "cf"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ex": {
+   "tokens": [
+    "ex"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "éd": {
+   "tokens": [
+    "éd"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "vol": {
+   "tokens": [
+    "vol"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "chap": {
+   "tokens": [
+    "chap"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "tv": {
+   "tokens": [
+    "tv"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "pc": {
+   "tokens": [
+    "pc"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "cv": {
+   "tokens": [
+    "cv"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "pdf": {
+   "tokens": [
+    "pdf"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ue": {
+   "tokens": [
+    "ue"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "edf": {
+   "tokens": [
+    "edf"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "sncf": {
+   "tokens": [
+    "sncf"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ttc": {
+   "tokens": [
+    "ttc"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ht": {
+   "tokens": [
+    "ht"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "tva": {
+   "tokens": [
+    "tva"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "rdv": {
+   "tokens": [
+    "rdv"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "ssi": {
+   "tokens": [
+    "ssi"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  },
+  "svp": {
+   "tokens": [
+    "svp"
+   ],
+   "not": "yaygın kısaltma ve birim (gerçek sözcükle çakışanlar alınmadı)"
+  }
+ },
+ "web": {
+  "www": {
+   "tokens": [
+    "www"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "com": {
+   "tokens": [
+    "com"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "fr": {
+   "tokens": [
+    "fr"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "org": {
+   "tokens": [
+    "org"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "net": {
+   "tokens": [
+    "net"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "http": {
+   "tokens": [
+    "http"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "https": {
+   "tokens": [
+    "https"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "html": {
+   "tokens": [
+    "html"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "php": {
+   "tokens": [
+    "php"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "jpg": {
+   "tokens": [
+    "jpg"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "png": {
+   "tokens": [
+    "png"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "gif": {
+   "tokens": [
+    "gif"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "mp": {
+   "tokens": [
+    "mp"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "usb": {
+   "tokens": [
+    "usb"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "ip": {
+   "tokens": [
+    "ip"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "hd": {
+   "tokens": [
+    "hd"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  },
+  "wifi": {
+   "tokens": [
+    "wifi"
+   ],
+   "not": "web adresi, dosya biçimi, teknik kısaltma"
+  }
+ },
+ "işlev_ek": {
+  "afin": {
+   "tokens": [
+    "afin"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "sauf": {
+   "tokens": [
+    "sauf"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "delà": {
+   "tokens": [
+    "delà"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "sinon": {
+   "tokens": [
+    "sinon"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "hormis": {
+   "tokens": [
+    "hormis"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "dorénavant": {
+   "tokens": [
+    "dorénavant"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "quiconque": {
+   "tokens": [
+    "quiconque"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "voire": {
+   "tokens": [
+    "voire"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "aucunement": {
+   "tokens": [
+    "aucunement"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "nonobstant": {
+   "tokens": [
+    "nonobstant"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "antan": {
+   "tokens": [
+    "antan"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "maintes": {
+   "tokens": [
+    "maintes"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "surcroît": {
+   "tokens": [
+    "surcroît"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "parmis": {
+   "tokens": [
+    "parmis"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "mien": {
+   "tokens": [
+    "mien"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "mienne": {
+   "tokens": [
+    "mienne"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "miens": {
+   "tokens": [
+    "miens"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "miennes": {
+   "tokens": [
+    "miennes"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "tien": {
+   "tokens": [
+    "tien"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "tienne": {
+   "tokens": [
+    "tienne"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "tiens": {
+   "tokens": [
+    "tiens"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "tiennes": {
+   "tokens": [
+    "tiennes"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "sien": {
+   "tokens": [
+    "sien"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "sienne": {
+   "tokens": [
+    "sienne"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "siens": {
+   "tokens": [
+    "siens"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "siennes": {
+   "tokens": [
+    "siennes"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "nôtre": {
+   "tokens": [
+    "nôtre"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "nôtres": {
+   "tokens": [
+    "nôtres"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "vôtre": {
+   "tokens": [
+    "vôtre"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "vôtres": {
+   "tokens": [
+    "vôtres"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "lès": {
+   "tokens": [
+    "lès"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  },
+  "ès": {
+   "tokens": [
+    "ès"
+   ],
+   "not": "işlev sözcüğü (edat/bağlaç/zamir/zarf): kapalı sınıf"
+  }
+ },
+ "kalıp_parçası": {
+  "instar": {
+   "tokens": [
+    "instar"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "encontre": {
+   "tokens": [
+    "encontre"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "emblée": {
+   "tokens": [
+    "emblée"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "égard": {
+   "tokens": [
+    "égard"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "exergue": {
+   "tokens": [
+    "exergue"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "contrario": {
+   "tokens": [
+    "contrario"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "priori": {
+   "tokens": [
+    "priori"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "posteriori": {
+   "tokens": [
+    "posteriori"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "facto": {
+   "tokens": [
+    "facto"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "hoc": {
+   "tokens": [
+    "hoc"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "situ": {
+   "tokens": [
+    "situ"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "vitae": {
+   "tokens": [
+    "vitae"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "versa": {
+   "tokens": [
+    "versa"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "fortiori": {
+   "tokens": [
+    "fortiori"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "minima": {
+   "tokens": [
+    "minima"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "maxima": {
+   "tokens": [
+    "maxima"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  },
+  "ipso": {
+   "tokens": [
+    "ipso"
+   ],
+   "not": "yalnız sabit kalıpta geçen parça (à l'instar, à l'encontre, d'emblée, a priori, de facto, ad hoc)"
+  }
+ },
+ "ünlem_ek": {
+  "hein": {
+   "tokens": [
+    "hein"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "euh": {
+   "tokens": [
+    "euh"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "ouf": {
+   "tokens": [
+    "ouf"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "bah": {
+   "tokens": [
+    "bah"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "bof": {
+   "tokens": [
+    "bof"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "hop": {
+   "tokens": [
+    "hop"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "hé": {
+   "tokens": [
+    "hé"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "ha": {
+   "tokens": [
+    "ha"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "zut": {
+   "tokens": [
+    "zut"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "chut": {
+   "tokens": [
+    "chut"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "ok": {
+   "tokens": [
+    "ok"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "okay": {
+   "tokens": [
+    "okay"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "lol": {
+   "tokens": [
+    "lol"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "mdr": {
+   "tokens": [
+    "mdr"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  }
+ },
+ "yabancı": {
+  "the": {
+   "tokens": [
+    "the"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "of": {
+   "tokens": [
+    "of"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "and": {
+   "tokens": [
+    "and"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "to": {
+   "tokens": [
+    "to"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "is": {
+   "tokens": [
+    "is"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "you": {
+   "tokens": [
+    "you"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "it": {
+   "tokens": [
+    "it"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "by": {
+   "tokens": [
+    "by"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "with": {
+   "tokens": [
+    "with"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "be": {
+   "tokens": [
+    "be"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "this": {
+   "tokens": [
+    "this"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "that": {
+   "tokens": [
+    "that"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "up": {
+   "tokens": [
+    "up"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "at": {
+   "tokens": [
+    "at"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "from": {
+   "tokens": [
+    "from"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "my": {
+   "tokens": [
+    "my"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "can": {
+   "tokens": [
+    "can"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "not": {
+   "tokens": [
+    "not"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "will": {
+   "tokens": [
+    "will"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "do": {
+   "tokens": [
+    "do"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "out": {
+   "tokens": [
+    "out"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "our": {
+   "tokens": [
+    "our"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "so": {
+   "tokens": [
+    "so"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "if": {
+   "tokens": [
+    "if"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "what": {
+   "tokens": [
+    "what"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "like": {
+   "tokens": [
+    "like"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "may": {
+   "tokens": [
+    "may"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "they": {
+   "tokens": [
+    "they"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "which": {
+   "tokens": [
+    "which"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "their": {
+   "tokens": [
+    "their"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "good": {
+   "tokens": [
+    "good"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "over": {
+   "tokens": [
+    "over"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "how": {
+   "tokens": [
+    "how"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "get": {
+   "tokens": [
+    "get"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "also": {
+   "tokens": [
+    "also"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "who": {
+   "tokens": [
+    "who"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "just": {
+   "tokens": [
+    "just"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "any": {
+   "tokens": [
+    "any"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "there": {
+   "tokens": [
+    "there"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "other": {
+   "tokens": [
+    "other"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "only": {
+   "tokens": [
+    "only"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "when": {
+   "tokens": [
+    "when"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "very": {
+   "tokens": [
+    "very"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "now": {
+   "tokens": [
+    "now"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "these": {
+   "tokens": [
+    "these"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "after": {
+   "tokens": [
+    "after"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "way": {
+   "tokens": [
+    "way"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "been": {
+   "tokens": [
+    "been"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "per": {
+   "tokens": [
+    "per"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "must": {
+   "tokens": [
+    "must"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "some": {
+   "tokens": [
+    "some"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "two": {
+   "tokens": [
+    "two"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "most": {
+   "tokens": [
+    "most"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "her": {
+   "tokens": [
+    "her"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "were": {
+   "tokens": [
+    "were"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "into": {
+   "tokens": [
+    "into"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "where": {
+   "tokens": [
+    "where"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "well": {
+   "tokens": [
+    "well"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "than": {
+   "tokens": [
+    "than"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "them": {
+   "tokens": [
+    "them"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "through": {
+   "tokens": [
+    "through"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "had": {
+   "tokens": [
+    "had"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "down": {
+   "tokens": [
+    "down"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "need": {
+   "tokens": [
+    "need"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "would": {
+   "tokens": [
+    "would"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "she": {
+   "tokens": [
+    "she"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "right": {
+   "tokens": [
+    "right"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "many": {
+   "tokens": [
+    "many"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "know": {
+   "tokens": [
+    "know"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "want": {
+   "tokens": [
+    "want"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "small": {
+   "tokens": [
+    "small"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "between": {
+   "tokens": [
+    "between"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "under": {
+   "tokens": [
+    "under"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "then": {
+   "tokens": [
+    "then"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "such": {
+   "tokens": [
+    "such"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "think": {
+   "tokens": [
+    "think"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "are": {
+   "tokens": [
+    "are"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "for": {
+   "tokens": [
+    "for"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "your": {
+   "tokens": [
+    "your"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "have": {
+   "tokens": [
+    "have"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "has": {
+   "tokens": [
+    "has"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "was": {
+   "tokens": [
+    "was"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "all": {
+   "tokens": [
+    "all"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "more": {
+   "tokens": [
+    "more"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "new": {
+   "tokens": [
+    "new"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "free": {
+   "tokens": [
+    "free"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "one": {
+   "tokens": [
+    "one"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "his": {
+   "tokens": [
+    "his"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "him": {
+   "tokens": [
+    "him"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "its": {
+   "tokens": [
+    "its"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "we": {
+   "tokens": [
+    "we"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "about": {
+   "tokens": [
+    "about"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "because": {
+   "tokens": [
+    "because"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "could": {
+   "tokens": [
+    "could"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "should": {
+   "tokens": [
+    "should"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "every": {
+   "tokens": [
+    "every"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "being": {
+   "tokens": [
+    "being"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "never": {
+   "tokens": [
+    "never"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "always": {
+   "tokens": [
+    "always"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "without": {
+   "tokens": [
+    "without"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "while": {
+   "tokens": [
+    "while"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "again": {
+   "tokens": [
+    "again"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "much": {
+   "tokens": [
+    "much"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "those": {
+   "tokens": [
+    "those"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "both": {
+   "tokens": [
+    "both"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "each": {
+   "tokens": [
+    "each"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "still": {
+   "tokens": [
+    "still"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "too": {
+   "tokens": [
+    "too"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "even": {
+   "tokens": [
+    "even"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "against": {
+   "tokens": [
+    "against"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "around": {
+   "tokens": [
+    "around"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "another": {
+   "tokens": [
+    "another"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "others": {
+   "tokens": [
+    "others"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "during": {
+   "tokens": [
+    "during"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "before": {
+   "tokens": [
+    "before"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "since": {
+   "tokens": [
+    "since"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "until": {
+   "tokens": [
+    "until"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "within": {
+   "tokens": [
+    "within"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "using": {
+   "tokens": [
+    "using"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "including": {
+   "tokens": [
+    "including"
+   ],
+   "not": "Fransızca metinde sık İngilizce işlev sözcüğü (bütün tutulur; kök iddiası yok)"
+  }
+ },
+ "önek_parça": {
+  "anti": {
+   "tokens": [
+    "anti"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "ultra": {
+   "tokens": [
+    "ultra"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "multi": {
+   "tokens": [
+    "multi"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "hyper": {
+   "tokens": [
+    "hyper"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "semi": {
+   "tokens": [
+    "semi"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "néo": {
+   "tokens": [
+    "néo"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "co": {
+   "tokens": [
+    "co"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "mi": {
+   "tokens": [
+    "mi"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "mini": {
+   "tokens": [
+    "mini"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "maxi": {
+   "tokens": [
+    "maxi"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "super": {
+   "tokens": [
+    "super"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "méga": {
+   "tokens": [
+    "méga"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "inter": {
+   "tokens": [
+    "inter"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "post": {
+   "tokens": [
+    "post"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  },
+  "pré": {
+   "tokens": [
+    "pré"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (anti-âge, co-fondateur, mi-temps; EN önek_parça gibi)"
+  }
+ },
+ "elizyon_parça": {
+  "qu": {
+   "tokens": [
+    "qu"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  },
+  "jusqu": {
+   "tokens": [
+    "jusqu"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  },
+  "lorsqu": {
+   "tokens": [
+    "lorsqu"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  },
+  "puisqu": {
+   "tokens": [
+    "puisqu"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  },
+  "quoiqu": {
+   "tokens": [
+    "quoiqu"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  },
+  "quelqu": {
+   "tokens": [
+    "quelqu"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  },
+  "aujourd": {
+   "tokens": [
+    "aujourd"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  },
+  "presqu": {
+   "tokens": [
+    "presqu"
+   ],
+   "not": "standart dışı kesmeyle (´ ` ʼ) ya da kesmesiz kalan elizyon parçası: bütün token"
+  }
+ },
+ "yabancı_içerik": {
+  "in": {
+   "tokens": [
+    "in"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "week": {
+   "tokens": [
+    "week"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "end": {
+   "tokens": [
+    "end"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "news": {
+   "tokens": [
+    "news"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "world": {
+   "tokens": [
+    "world"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "online": {
+   "tokens": [
+    "online"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "big": {
+   "tokens": [
+    "big"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "hard": {
+   "tokens": [
+    "hard"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "made": {
+   "tokens": [
+    "made"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "watch": {
+   "tokens": [
+    "watch"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "call": {
+   "tokens": [
+    "call"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "center": {
+   "tokens": [
+    "center"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "man": {
+   "tokens": [
+    "man"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "girl": {
+   "tokens": [
+    "girl"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "girls": {
+   "tokens": [
+    "girls"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "teen": {
+   "tokens": [
+    "teen"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "sex": {
+   "tokens": [
+    "sex"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "porn": {
+   "tokens": [
+    "porn"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "video": {
+   "tokens": [
+    "video"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "videos": {
+   "tokens": [
+    "videos"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "shirt": {
+   "tokens": [
+    "shirt"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "home": {
+   "tokens": [
+    "home"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "life": {
+   "tokens": [
+    "life"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "love": {
+   "tokens": [
+    "love"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "best": {
+   "tokens": [
+    "best"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "top": {
+   "tokens": [
+    "top"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "live": {
+   "tokens": [
+    "live"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "play": {
+   "tokens": [
+    "play"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "game": {
+   "tokens": [
+    "game"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "games": {
+   "tokens": [
+    "games"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "music": {
+   "tokens": [
+    "music"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "city": {
+   "tokens": [
+    "city"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "street": {
+   "tokens": [
+    "street"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "school": {
+   "tokens": [
+    "school"
+   ],
+   "not": "Fransızca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  }
+ },
+ "roma": {
+  "ii": {
+   "tokens": [
+    "ii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "iii": {
+   "tokens": [
+    "iii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "iv": {
+   "tokens": [
+    "iv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "vi": {
+   "tokens": [
+    "vi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "vii": {
+   "tokens": [
+    "vii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "viii": {
+   "tokens": [
+    "viii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "ix": {
+   "tokens": [
+    "ix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xi": {
+   "tokens": [
+    "xi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xii": {
+   "tokens": [
+    "xii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xiii": {
+   "tokens": [
+    "xiii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xiv": {
+   "tokens": [
+    "xiv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xv": {
+   "tokens": [
+    "xv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xvi": {
+   "tokens": [
+    "xvi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xvii": {
+   "tokens": [
+    "xvii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xviii": {
+   "tokens": [
+    "xviii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xix": {
+   "tokens": [
+    "xix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xx": {
+   "tokens": [
+    "xx"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxi": {
+   "tokens": [
+    "xxi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxii": {
+   "tokens": [
+    "xxii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxiii": {
+   "tokens": [
+    "xxiii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxiv": {
+   "tokens": [
+    "xxiv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxv": {
+   "tokens": [
+    "xxv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxvi": {
+   "tokens": [
+    "xxvi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxvii": {
+   "tokens": [
+    "xxvii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxviii": {
+   "tokens": [
+    "xxviii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxix": {
+   "tokens": [
+    "xxix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxx": {
+   "tokens": [
+    "xxx"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxi": {
+   "tokens": [
+    "xxxi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxii": {
+   "tokens": [
+    "xxxii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxiii": {
+   "tokens": [
+    "xxxiii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxiv": {
+   "tokens": [
+    "xxxiv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxv": {
+   "tokens": [
+    "xxxv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxvi": {
+   "tokens": [
+    "xxxvi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxvii": {
+   "tokens": [
+    "xxxvii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxviii": {
+   "tokens": [
+    "xxxviii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxix": {
+   "tokens": [
+    "xxxix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  }
+ },
+ "roma_sıra": {
+  "ie": {
+   "tokens": [
+    "i",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "iième": {
+   "tokens": [
+    "ii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "iie": {
+   "tokens": [
+    "ii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "iiième": {
+   "tokens": [
+    "iii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "iiie": {
+   "tokens": [
+    "iii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "iiiième": {
+   "tokens": [
+    "iii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ive": {
+   "tokens": [
+    "iv",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ivème": {
+   "tokens": [
+    "iv",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ivième": {
+   "tokens": [
+    "iv",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ve": {
+   "tokens": [
+    "v",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "vème": {
+   "tokens": [
+    "v",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "vième": {
+   "tokens": [
+    "vi",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "vie": {
+   "tokens": [
+    "vi",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "viième": {
+   "tokens": [
+    "vii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "viie": {
+   "tokens": [
+    "vii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "viiième": {
+   "tokens": [
+    "viii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "viiie": {
+   "tokens": [
+    "viii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "viiiième": {
+   "tokens": [
+    "viii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ixe": {
+   "tokens": [
+    "ix",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ixème": {
+   "tokens": [
+    "ix",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ixième": {
+   "tokens": [
+    "ix",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xe": {
+   "tokens": [
+    "x",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xème": {
+   "tokens": [
+    "x",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xième": {
+   "tokens": [
+    "xi",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xie": {
+   "tokens": [
+    "xi",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xiième": {
+   "tokens": [
+    "xii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xiie": {
+   "tokens": [
+    "xii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xiiième": {
+   "tokens": [
+    "xiii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xiiie": {
+   "tokens": [
+    "xiii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xiiiième": {
+   "tokens": [
+    "xiii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xive": {
+   "tokens": [
+    "xiv",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xivème": {
+   "tokens": [
+    "xiv",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xivième": {
+   "tokens": [
+    "xiv",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xve": {
+   "tokens": [
+    "xv",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xvème": {
+   "tokens": [
+    "xv",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xvième": {
+   "tokens": [
+    "xvi",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xvie": {
+   "tokens": [
+    "xvi",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xviième": {
+   "tokens": [
+    "xvii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xviie": {
+   "tokens": [
+    "xvii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xviiième": {
+   "tokens": [
+    "xviii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xviiie": {
+   "tokens": [
+    "xviii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xviiiième": {
+   "tokens": [
+    "xviii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xixe": {
+   "tokens": [
+    "xix",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xixème": {
+   "tokens": [
+    "xix",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xixième": {
+   "tokens": [
+    "xix",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxe": {
+   "tokens": [
+    "xx",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxème": {
+   "tokens": [
+    "xx",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxième": {
+   "tokens": [
+    "xxi",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxie": {
+   "tokens": [
+    "xxi",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxiième": {
+   "tokens": [
+    "xxii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxiie": {
+   "tokens": [
+    "xxii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxiiième": {
+   "tokens": [
+    "xxiii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxiiie": {
+   "tokens": [
+    "xxiii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxiiiième": {
+   "tokens": [
+    "xxiii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxive": {
+   "tokens": [
+    "xxiv",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxivème": {
+   "tokens": [
+    "xxiv",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxivième": {
+   "tokens": [
+    "xxiv",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxve": {
+   "tokens": [
+    "xxv",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxvème": {
+   "tokens": [
+    "xxv",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxvième": {
+   "tokens": [
+    "xxvi",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxvie": {
+   "tokens": [
+    "xxvi",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxviième": {
+   "tokens": [
+    "xxvii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxviie": {
+   "tokens": [
+    "xxvii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxviiième": {
+   "tokens": [
+    "xxviii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxviiie": {
+   "tokens": [
+    "xxviii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxviiiième": {
+   "tokens": [
+    "xxviii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxixe": {
+   "tokens": [
+    "xxix",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxixème": {
+   "tokens": [
+    "xxix",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxixième": {
+   "tokens": [
+    "xxix",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxe": {
+   "tokens": [
+    "xxx",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxème": {
+   "tokens": [
+    "xxx",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxième": {
+   "tokens": [
+    "xxxi",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxie": {
+   "tokens": [
+    "xxxi",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxiième": {
+   "tokens": [
+    "xxxii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxiie": {
+   "tokens": [
+    "xxxii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxiiième": {
+   "tokens": [
+    "xxxiii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxiiie": {
+   "tokens": [
+    "xxxiii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxiiiième": {
+   "tokens": [
+    "xxxiii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxive": {
+   "tokens": [
+    "xxxiv",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxivème": {
+   "tokens": [
+    "xxxiv",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxivième": {
+   "tokens": [
+    "xxxiv",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxve": {
+   "tokens": [
+    "xxxv",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxvème": {
+   "tokens": [
+    "xxxv",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxvième": {
+   "tokens": [
+    "xxxvi",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxvie": {
+   "tokens": [
+    "xxxvi",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxviième": {
+   "tokens": [
+    "xxxvii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxviie": {
+   "tokens": [
+    "xxxvii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxviiième": {
+   "tokens": [
+    "xxxviii",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxviiie": {
+   "tokens": [
+    "xxxviii",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxviiiième": {
+   "tokens": [
+    "xxxviii",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxixe": {
+   "tokens": [
+    "xxxix",
+    "e"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxixème": {
+   "tokens": [
+    "xxxix",
+    "ème"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "xxxixième": {
+   "tokens": [
+    "xxxix",
+    "ième"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  },
+  "ier": {
+   "tokens": [
+    "i",
+    "er"
+   ],
+   "not": "Roma rakamı + sıra eki (XIXe = xix + e, Ier = i + er)"
+  }
  }
 }

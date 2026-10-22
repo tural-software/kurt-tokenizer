@@ -177,7 +177,7 @@ def sınıfları_yükle(yol: str | Path) -> dict:
     """cekim.json: 3. grup (ve düzensiz) fiil çekim sınıfları. Her sınıf: son (mastardan atılan; kalan TABAN), gövdeler
     tabana EKLENEN dizgiler. Alanlar: şimdiki {tür, gövdeler[tekil, 1-2 çoğul, 3 çoğul]} ya da 6'lı [gövde, ek] listesi,
     sürekli, dilek [tekil+3ç, 1-2ç] ya da 6'lı liste, basit [gövde, tür a|i|u|in], gelecek, ortaç [[gövde, ek(, uyum)]],
-    ulaç."""
+    ulaç; isteğe bağlı ek_biçimler [[gövde, ek, kip]] (emir: sachez, veuillez; 1990 yazımı: plait)."""
     ham = json.loads(Path(yol).read_text(encoding="utf-8"))
     hatalar = []
     for ad, s in ham.items():
@@ -259,8 +259,8 @@ def dişil(ad: str, kök: FrKök) -> str | None:
         return ad + ad[-1] + "e"                         # gros → grosse, cruel → cruelle, bon → bonne, net → nette
     if ad.endswith("eux"):
         return ad[:-1] + "se"                            # heureux → heureuse
-    if ad.endswith("if"):
-        return ad[:-1] + "ve"                            # actif → active
+    if ad.endswith("f"):
+        return ad[:-1] + "ve"                            # actif → active, neuf → neuve
     if ad.endswith("er"):
         return ad[:-2] + "ère"                           # premier → première
     if ad.endswith("g"):
@@ -272,12 +272,18 @@ def _sıfat(ad: str, kök: FrKök) -> list[tuple[tuple, str]]:
     sonuç = _çoğul(ad, kök)
     d = dişil(ad, kök)
     if d is not None:
-        g = d[:-1]
-        sonuç += [((g, "e"), "dişil"), ((g, "es"), "dişil_çoğul")]
+        sonuç += _dişil_biçimleri(d)
     zarf = _zarf(ad, d)
     if zarf:
         sonuç.append((zarf, "zarf"))
     return sonuç
+
+
+def _dişil_biçimleri(d: str) -> list[tuple[tuple, str]]:
+    """Dişil gövde + e/es (grand+e); -e ile bitmeyen dişil (aiguë) bütün + s."""
+    if d.endswith("e"):
+        return [((d[:-1], "e"), "dişil"), ((d[:-1], "es"), "dişil_çoğul")]
+    return [((d,), "dişil"), ((d, "s"), "dişil_çoğul")]
 
 
 def _zarf(ad: str, d: str | None) -> tuple | None:
@@ -408,6 +414,8 @@ def _sınıf_biçimleri(ad: str, s: dict) -> list[tuple[tuple, str]]:
     for o in s["ortaç"]:
         sonuç += _ortaç(taban + o[0], o[1], bool(o[2]) if len(o) > 2 else True)
     sonuç.append(((taban + s["ulaç"], "ant"), "ulaç"))
+    # şimdiki/dilekten farklı ek biçimler: emir (sachez, veuillez), 1990 yazımı (plait, connait)
+    sonuç += [((taban + g, e) if e else (taban + g,), etiket) for g, e, etiket in s.get("ek_biçimler", ())]
     return sonuç
 
 
@@ -428,8 +436,7 @@ def biçimler(ad: str, kök: FrKök, ekler: FrEkler) -> list[tuple[tuple, str]]:
         elif sınıf in ("isim", "özel"):
             sonuç += _çoğul(ad, kök)
             if kök.dişil:                                 # cinsiyet çifti olan ad (acteur → actrice)
-                g = kök.dişil[:-1]
-                sonuç += [((g, "e"), "dişil"), ((g, "es"), "dişil_çoğul")]
+                sonuç += _dişil_biçimleri(kök.dişil)
     görülen, benzersiz = set(), []
     for b in sonuç:
         if b not in görülen and "".join(b[0]) != ad:
