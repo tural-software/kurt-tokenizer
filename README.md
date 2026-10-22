@@ -29,12 +29,15 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
 - **Saf Python, sıfır bağımlılık** (yalnız standart kütüphane).
 - **Türkçe:** ~44.500 kök (TDK tabanlı), 74 ek; ünlü uyumu, ünsüz yumuşaması (t→d, k→ğ, p→b, ç→c),
   ünlü düşmesi, kaynaştırma/tampon sesler — hepsi kural tabanlı.
-- **Azerbaycan Türkçesi** (`dil="az"`): 65.315 kök, 88 ek; kendi ses kuralları (ə, q~ğ / k~y yumuşaması,
-  -(y)Ar geniş zaman, -mAlI, çift ünsüz tekleşmesi). Türkçe metnin çıktısı AZ desteğinden etkilenmez.
+- **Azerbaycan Türkçesi** (`dil="az"`): 65.740 kök (400 özel ad dahil), 96 ek; kendi ses kuralları (ə, q~ğ / k~y
+  yumuşaması, -(y)Ar geniş zaman, -mAlI, çift ünsüz tekleşmesi). Özel adlar Başlık biçiminde ad olarak okunur
+  (`Gəncə`), küçük harfte sıradan sözcük olarak (`gəncə` = gənc+ə); soyadlar ad + ek (`Əliyev`, `Məmmədova`).
+  Konuşma yazımı da çözülür (`burda`, `edəcəm`, `bilərsiz`, `şəkili`); normatif okuma varsa o seçilir.
+  Türkçe metnin çıktısı AZ desteğinden etkilenmez.
 - **Kod kipi** (`kip="kod"`, `dil="python"`): boşluk/satır birebir korunur; kendi Python lexer'ı,
   tanımlayıcı bölme ve kod sözlüğü.
-- **8.472 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
-  harf, sembol, kod, `az-1`…) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir dilin
+- **8.511 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
+  harf, sembol, kod, `az-1`, `az-2`…) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir dilin
   bölümü yalnız o dilin metin kipinde kullanılır.
 - **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): metin kipinde
   `decode(encode(x)) == metin_kanonik(x)` — satır içi boşluk tek boşluğa iner, **satır sonları ve
@@ -81,7 +84,7 @@ veri/az/        Azerbaycan Türkçesi: kök sözlüğü, ekler, istisnalar, voca
                 altın liste ve doğrulama metni
 araclar/        kaynak → JSON üretici (uret), vocab üretici (vocab_uret), korpus doğrulayıcı
                 (dogrula_korpus), regresyon karşılaştırıcı (regresyon), kod doğrulayıcı (kod_dogrula)
-testler/        stdlib unittest (246 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
+testler/        stdlib unittest (251 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
 ```
 
 ## Veri kaynakları (Azerbaycan Türkçesi)

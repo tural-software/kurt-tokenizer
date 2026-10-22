@@ -216,6 +216,19 @@ def _geri_cezalı(çözümler, kökler) -> set[str]:
     return cezalı
 
 
+_KİŞİ_İYELİK = frozenset({"iyelik_1tekil", "iyelik_2tekil", "iyelik_1çoğul", "iyelik_2çoğul"})
+
+
+def _özel(çöz, kökler, ad_okuma=False) -> int:
+    """Özel ad kökü okuması mı (tür 'özel', AZ ozel_adlar.json)? Küçük harfli sözcükte ceza: sıradan kökün okuması
+    yeğlenir (əli = əl+i). ad_okuma (Başlık biçimi) için tercih ölçüsü: 1./2. kişi iyelikli ad okuması sayılmaz —
+    ad bunları nadiren alır, cümle başı sıradan sözcük öyle okunur (Əlimdə = əl+im+də, Əli+m+də değil)."""
+    kök = kökler.get(çöz.kök)
+    if kök is None or kök.tür != "özel":
+        return 0
+    return int(not (ad_okuma and _KİŞİ_İYELİK & set(çöz.ekler)))
+
+
 def _seyrek(ek_adları, seyrek, seyrek_dizi) -> int:
     """Seyrek ek + seyrek ardışık ek çifti sayısı (profil.seyrek_ekler / seyrek_diziler)."""
     n = sum(e in seyrek for e in ek_adları)
@@ -229,7 +242,7 @@ def _zamir_değil(çöz, kökler) -> int:
     return 0 if kök is not None and kök.tür == "zamir" else 1
 
 
-def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
+def en_iyi_çözüm(çözümler, kökler, ekler, profil=None, ad_okuma=False):
     """Deterministik seçim: BÜTÜN-KÖK → en az token → en az öbek-uyumsuzluk → en uzun kök.
 
     BÜTÜN-KÖK önceliği (bilgi-tabanlı): kelime ZATEN sözlükte bir kök ise (ek yok) o okuma,
@@ -246,7 +259,11 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
     resmi+iyelik_2tekil [res,mi,n] tüm ölçütlerde berabere → [re,sm,in].
 
     profil (None = Türkçe) politikayı yalnız genişletir; Türkçe anahtar birebir aynıdır. AZ sırası:
-      1. seyrek ek/dizi (üretken dönüşlü, edebî istek kişileri, ortaç+idi): başka çözüm varsa seçilmez
+      0. ÖZEL ad kökü (tür 'özel'): küçük harfli sözcükte sıradan kökün her okuması yeğlenir (əli = əl+i, şəkili =
+         şəkil+i); Başlık biçimli sözcükte (ad_okuma) tersine, bütün-kök ölçütünden hemen sonra ad okuması öne
+         geçer (Gəncə, Quranın, Amerikanın = amerika+n+ın; Azəri bütün kalır);
+      1. seyrek ek/dizi (üretken dönüşlü, edebî istek kişileri, ortaç+idi) ve normatif dışı (ünlüsü düşmemiş
+         danışıq) okuma: başka çözüm varsa seçilmez
          (yerinə = yer+i+n+ə; atam = ata+m);
       2. TÜREMİŞ kök (bileşik biçimle eşsesli sözlük başlığı, sema.Kök.türemiş): bileşik okuma varsa
          seçilmez (çıplak 'gəlir' = gəl+ir; açmalımı = aç+malı+mı, açma+lı+m+ı değil); ardından GERİ kök
@@ -266,9 +283,10 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
         geri = _geri_cezalı(çözümler, kökler)
         return min(
             çözümler,
-            key=lambda ç: (_seyrek(ç.ekler, seyrek, seyrek_dizi), _türemiş(ç, kökler), ç.kök in geri,
+            key=lambda ç: (0 if ad_okuma else _özel(ç, kökler),
+                           _seyrek(ç.ekler, seyrek, seyrek_dizi) + ç.normatif_dışı, _türemiş(ç, kökler), ç.kök in geri,
                            sum(e in son_çare for e in ç.ekler),
-                           0 if not ç.ekler else 1,
+                           0 if not ç.ekler else 1, -_özel(ç, kökler, ad_okuma=True) if ad_okuma else 0,
                            _ikincil_okuma(ç, kökler, ekler) if ç.kök in çoklu else 0,
                            _birim(ç, kökler) if profil.birim_say else len(ç.tokens),
                            len(ç.ekler) if profil.az_ek_önce else 0,
@@ -291,11 +309,12 @@ def _altbirimler(parça):
         yield "".join(grup), bool(harf_mi)
 
 
-def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=None):
-    """(token_listesi, bilinmeyen_mi) döndürür. bilinmeyen_mi: çözülemedi → kuyruğa alındı."""
+def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=None, ad_okuma=False):
+    """(token_listesi, bilinmeyen_mi) döndürür. bilinmeyen_mi: çözülemedi → kuyruğa alındı.
+    ad_okuma: kelime Başlık biçiminde (profil.özel_ad_başlık) → özel ad okuması yeğlenir (Gəncə = gəncə, gənc+ə değil)."""
     çs = çözümle(kelime, kökler, ekler, istisnalar, profil)
     if çs:
-        return list(en_iyi_çözüm(çs, kökler, ekler, profil).tokens), False
+        return list(en_iyi_çözüm(çs, kökler, ekler, profil, ad_okuma).tokens), False
     if kuyruk is not None:                       # bilinmeyen → bize sorulur
         kuyruk.ekle(kelime, bağlam)
     return [kelime], True                        # BÜTÜN tut
@@ -457,7 +476,8 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
     dizgesindeki '\\nu' kaçış dizisidir, LaTeX değil.
 
     profil (None = Türkçe): doğal dil; önbellek anahtarı dil ayrımlıdır (aynı yüzey iki dilde
-    farklı tokenlanır): Türkçe anahtar düz 'kelime', diğer dil ('az', 'kelime')."""
+    farklı tokenlanır): Türkçe anahtar düz 'kelime', diğer dil ('az', 'kelime'); özel_ad_başlık profilinde Başlık
+    biçimli sözcük ('az', 'kelime', 'ad') — okuması küçük harfliden farklı olabilir (Gəncə ↔ gəncə)."""
     önceki_kesme = False                        # bir önceki altbirim kesme ile mi bitti?
     altbirimler = list(_altbirimler(parça))
     atla = False
@@ -502,14 +522,15 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
             continue
         if durum:                                # casing işaretçisi (Başlık / HEP BÜYÜK)
             tokenlar.append(durum)
-        anahtar = küçük if profil is None else (profil.kod, küçük)
+        ad_okuma = profil is not None and profil.özel_ad_başlık and durum == BAŞ_BÜYÜK
+        anahtar = küçük if profil is None else (profil.kod, küçük, "ad") if ad_okuma else (profil.kod, küçük)
         if önbellek is not None and anahtar in önbellek:
             _tk, _bilinmeyen = önbellek[anahtar]
             if _bilinmeyen and kuyruk is not None:   # isabet'te de kuyruğa al (frekans doğru)
                 kuyruk.ekle(küçük, metin)
             tokenlar.extend(_tk)
             continue
-        _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin, profil)
+        _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin, profil, ad_okuma)
         if önbellek is not None:
             önbellek[anahtar] = (_tk, _bilinmeyen)
         tokenlar.extend(_tk)

@@ -62,6 +62,9 @@ class DilProfili:
     #                                          -(y)Am/-(y)AlAr: atam = ata+m, at+am değil)
     zamir_önce: bool = False  # birim + ek sayısı eşitliğinde kapalı sınıf zamir kökü yeğlenir (AZ haraya =
     #                           hara+y+a, haray 'feryat'+a değil)
+    düşen_isteğe_bağlı: bool = False  # ünlü düşmesi kökü düşmeden de çözülür (AZ danışıq: şəkili ↔ normatif şəkli)
+    özel_ad_başlık: bool = False  # Başlık biçimli sözcükte (Gəncə, Quran) özel ad kökü okuması yeğlenir; küçük harflide
+    #                               (gəncə) sıradan kök. Önbellek anahtarı ayrı: (dil, kelime, "ad")
     birim_say: bool = False  # token sayısı yerine BİRİM (kök hecesi + ek sayısı): tampon tokenı (n/y/s)
     #                          morfem sayılmaz → ünlü-sonu kök cezalanmaz (AZ ata+n+ı = 3 birim, at+an+ı
     #                          = 3; eşitlikte az ek: ata). Token sayısı sonraki kırıcı.
@@ -163,13 +166,17 @@ AZ = DilProfili(
     son_çare_ekler=frozenset({"soru"}),
     az_ek_önce=True,
     birincil_önce=True,
+    # danışıq (konuşma) ekleri ve -(y)AsI ortacı da seyrek: normatif okuma varsa o seçilir (atası = ata+sı)
     seyrek_ekler=frozenset({"dönüşlü", "istek_1tekil", "istek_2tekil", "istek_2çoğul", "istek_3çoğul",
-                            "emir_2çoğul_kibar"}),
+                            "emir_2çoğul_kibar", "şahıs_2çoğul_k", "gelecek_1tekil_k", "ortaç_ası",
+                            "soyad_ov", "soyad_ova", "soyad_yev", "soyad_yeva", "soyad_zadə"}),
     seyrek_diziler=frozenset({("ortaç_an", "ek_fiil_idi"), ("ortaç_an", "ek_fiil_imiş"),
                               ("tamlayan", "ek_fiil_idi"), ("tamlayan", "ek_fiil_imiş"),
                               ("ortaç_an", "ek_fiil_di"), ("tamlayan", "ek_fiil_di"),
                               ("koşaç_3çoğul", "koşaç_ise")}),
     birim_say=True,
+    özel_ad_başlık=True,
+    düşen_isteğe_bağlı=True,
     zamir_önce=True,
     yeğlenmeyen_ekler=frozenset({"iyelik_2tekil", "iyelik_2çoğul", "edilgen", "ettirgen", "yapım_lı",
                                  "ek_fiil_idi", "ek_fiil_di"}),

@@ -45,7 +45,7 @@ def yükle(dil: str | None = None) -> DilVerisi:
         raise ValueError(f"bilinmeyen dil: {dil!r} (Türkçe için dil verilmez)")
     profil = None if dil is None else PROFİLLER[dil]
     dizin = veri_dizini(dil)
-    ek_dosyalar = [dizin / ad for ad in ("zamirler.json", "islev_kokleri.json")
+    ek_dosyalar = [dizin / ad for ad in ("zamirler.json", "islev_kokleri.json", "ozel_adlar.json")
                    if (dizin / ad).exists()]
     kökler = çalışma_sözlüğü(dizin / "kokler", *ek_dosyalar, profil=profil)
     ekler = ekleri_yükle(dizin / "ekler.json", profil)
