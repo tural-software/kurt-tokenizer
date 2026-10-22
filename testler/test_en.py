@@ -147,7 +147,13 @@ class CasingVeRoundTrip(unittest.TestCase):
         self.assertEqual(kodla("O'Brien"), [ASCII_BAŞ, "o", "'", ASCII_BAŞ, "brien"])
 
     def test_doğrulama_metni(self):
+        # EN-5: çok alanlı elle yazılmış metin (haber, bilim, sağlık, hukuk, teknoloji, spor, mutfak, edebiyat, finans,
+        # gündelik): bilinmeyen YOK; yeni bir çekim/sözlük boşluğu açılırsa kapı düşer
+        from tokenizer.onay import OnayKuyruğu
         metin = (VERİ / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")
+        kuyruk = OnayKuyruğu()
+        encode(metin, V.kökler, V.ekler, V.istisnalar, kuyruk, dil="en")
+        self.assertEqual(kuyruk.bekleyenler(), [])
         self.assertEqual(decode(kodla(metin)), metin_kanonik(metin))
         vocab = Vocab.yükle(KÖK / "veri" / "vocab.json")
         ids = vocab.encode_ids(metin, V.kökler, V.ekler, V.istisnalar, dil="en")

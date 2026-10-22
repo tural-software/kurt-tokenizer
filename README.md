@@ -34,7 +34,7 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   (`Gəncə`), küçük harfte sıradan sözcük olarak (`gəncə` = gənc+ə); soyadlar ad + ek (`Əliyev`, `Məmmədova`).
   Konuşma yazımı da çözülür (`burda`, `edəcəm`, `bilərsiz`, `şəkili`); normatif okuma varsa o seçilir.
   Türkçe metnin çıktısı AZ desteğinden etkilenmez.
-- **İngilizce** (`dil="en"`, geliştiriliyor): yazım kurallı kendi çözümleyicisi (`tokenizer/en.py`) — çekim ve yapım
+- **İngilizce** (`dil="en"`): yazım kurallı kendi çözümleyicisi (`tokenizer/en.py`) — çekim ve yapım
   ekleri (`running = run+n+ing`, `carried = carri+ed`, `knives = kniv+es`), önek (`un+happy`), klitik (`do+n't`), düzensiz
   biçimler bütün; büyük harf Unicode kuralıyla (`I` → `i`, `ı` değil). ~64.900 kök (Open English WordNet + elle güncel
   sözcükler), ~4.400'ü özel ad (`London`, `Kennedys = kennedy+s`; küçük harfte sıradan okuma yeğlenir). Tek harf,
