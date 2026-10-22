@@ -270,6 +270,10 @@ def _v1_kur(kökler, ekler, istisnalar) -> list[str]:
     return ÖZEL_TOKENLAR + atom + sıralı_morfem
 
 
+# Metin kipinde ASCII casing işaretçilerini (kod-tanimlayici bölümü) kullanan doğal diller (EN: Unicode casing).
+_ASCII_CASING_DİLLERİ = frozenset(k for k, p in PROFİLLER.items() if p.casing == "unicode")
+
+
 def dil_bölümü(ad: str) -> str | None:
     """Bölüm bir doğal dile mi ait? '<dil>-…' önekli bölüm (az-1, az-2…) → dil kodu, yoksa None."""
     dil = ad.split("-", 1)[0]
@@ -309,7 +313,8 @@ class Vocab:
         """Tokenın ID'si; metin kipinde kod bölümü tokenı, o dilin metin kipi dışında dil bölümü
         tokenı yok sayılır (None)."""
         tid = self.tok2id.get(t)
-        if tid is not None and kip != "kod" and tid in self._yalnız_kod:
+        if tid is not None and kip != "kod" and tid in self._yalnız_kod and not (
+                t in ASCII_İŞARET and dil in _ASCII_CASING_DİLLERİ):   # EN metin kipi: <|Ab|> <|AA|> casing
             return None
         if tid is not None and self._dil_izni:
             izin = self._dil_izni.get(tid)
