@@ -128,6 +128,43 @@ class SahteBölmeYok(unittest.TestCase):
         self.assertEqual(okuma("anzufangen"), ["an", "zu", "fangen"])
 
 
+class Triyaj(unittest.TestCase):
+    """DE-3: sık bilinmeyen triyajında eklenen kurallar."""
+
+    def test_yazım_varyantı(self):
+        self.assertEqual(okuma("grosse"), ["gross", "e"])                    # İsviçre yazımı ← groß
+        self.assertEqual(okuma("mußte"), ["muß", "te"])                      # 1996 öncesi ← musste
+        self.assertEqual(okuma("iſt"), ["iſt"])                              # uzun s ← ist
+        self.assertEqual(okuma("zollstrasse"), [])                           # zoll+s+trasse / zoll+strasse: belirsiz
+
+    def test_ad_çekimi(self):
+        self.assertEqual(okuma("herrn", True), ["herr", "n"])                # zayıf tekil -n, çoğul -en
+        self.assertEqual(okuma("ergebnisses", True), ["ergebniss", "es"])    # -nis ikizleşir
+        self.assertEqual(okuma("instituts", True), ["institut", "s"])        # tamlayan (e)s
+        self.assertEqual(okuma("leistungs", True), ["leistung", "s"])        # Fugen-s ön parça (Leistungs- und …)
+
+    def test_fiil(self):
+        self.assertEqual(okuma("bezeichnet"), ["bezeichn", "et"])            # ch + n: ek ünlüsü
+        self.assertEqual(okuma("ausgestattet"), ["aus", "ge", "statt", "et"])   # bağlı taban (statten sözcük değil)
+        self.assertEqual(okuma("geschaffen"), ["ge", "schaff", "en"])        # zayıf_da: schuf/geschaffen
+        self.assertEqual(okuma("geschafft"), ["ge", "schaff", "t"])          # + schaffte/geschafft
+        self.assertEqual(okuma("übersetzt"), ["übersetz", "t"])              # iki yönlü önek: korpus kanıtı
+        self.assertEqual(okuma("geeignetsten"), ["geeignet", "st", "en"])    # vurgusuz -et en üstünlük
+
+    def test_bileşik_kuralları(self):
+        self.assertEqual(okuma("urheberrecht"), ["urheber", "recht"])        # baş çekimli fiil olamaz (rech+t)
+        self.assertEqual(okuma("nichttragende"), ["nicht", "trag", "end", "e"])   # ortaç baş olur
+        self.assertEqual(okuma("benutzeroberfläche"), ["benutzer", "ober", "fläche"])   # az fiil gövdesi
+        self.assertEqual(okuma("bundesamt"), ["bund", "es", "amt"])          # Fugen bileşenin çekimine uyar
+        okumalar = {a[0] for a in de._bileşik("frohnhauser", V.kökler, V.ekler, V.istisnalar)}
+        self.assertFalse({o for o in okumalar if o[:2] == ("froh", "n")})    # sıfat bileşen Fugen almaz
+
+    def test_istisna_grupları(self):
+        self.assertEqual(kodla("dreiundzwanzig"), ["drei", "und", "zwanzig"])
+        self.assertEqual(V.istisnalar["entweder"].grup, "bağlaç_ek")
+        self.assertEqual(V.istisnalar["the"].grup, "yabancı")
+
+
 class CasingVeRoundTrip(unittest.TestCase):
     def test_round_trip(self):
         for m in ("Die Häuser der Kinder", "STRASSE und Straße und STRAßE", "Größte ẞ Probleme", "iPhone-Nutzer"):

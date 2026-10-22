@@ -2580,5 +2580,3037 @@
    ],
    "not": "yaygın kısaltma: bütün"
   }
+ },
+ "bağlaç_ek": {
+  "entweder": {
+   "tokens": [
+    "entweder"
+   ],
+   "not": "bağlaç (iki parçalı: entweder … oder, je … desto)"
+  },
+  "weder": {
+   "tokens": [
+    "weder"
+   ],
+   "not": "bağlaç (iki parçalı: entweder … oder, je … desto)"
+  },
+  "desto": {
+   "tokens": [
+    "desto"
+   ],
+   "not": "bağlaç (iki parçalı: entweder … oder, je … desto)"
+  },
+  "umso": {
+   "tokens": [
+    "umso"
+   ],
+   "not": "bağlaç (iki parçalı: entweder … oder, je … desto)"
+  },
+  "wenngleich": {
+   "tokens": [
+    "wenngleich"
+   ],
+   "not": "bağlaç (iki parçalı: entweder … oder, je … desto)"
+  },
+  "wohingegen": {
+   "tokens": [
+    "wohingegen"
+   ],
+   "not": "bağlaç (iki parçalı: entweder … oder, je … desto)"
+  }
+ },
+ "edat_ek": {
+  "hinsichtlich": {
+   "tokens": [
+    "hinsichtlich"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "zufolge": {
+   "tokens": [
+    "zufolge"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "bezüglich": {
+   "tokens": [
+    "bezüglich"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "seitens": {
+   "tokens": [
+    "seitens"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "anlässlich": {
+   "tokens": [
+    "anlässlich"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "zuzüglich": {
+   "tokens": [
+    "zuzüglich"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "abzüglich": {
+   "tokens": [
+    "abzüglich"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "versus": {
+   "tokens": [
+    "versus"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "puncto": {
+   "tokens": [
+    "puncto"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  },
+  "qua": {
+   "tokens": [
+    "qua"
+   ],
+   "not": "edat: kapalı sınıf (tamlayan yöneten edatlar)"
+  }
+ },
+ "zarf_ek": {
+  "nochmal": {
+   "tokens": [
+    "nochmal"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "schonmal": {
+   "tokens": [
+    "schonmal"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "infrage": {
+   "tokens": [
+    "infrage"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "zuviel": {
+   "tokens": [
+    "zuviel"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "soviel": {
+   "tokens": [
+    "soviel"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "drüber": {
+   "tokens": [
+    "drüber"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "allesamt": {
+   "tokens": [
+    "allesamt"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "vielerlei": {
+   "tokens": [
+    "vielerlei"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "mancherlei": {
+   "tokens": [
+    "mancherlei"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "derlei": {
+   "tokens": [
+    "derlei"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "hindurch": {
+   "tokens": [
+    "hindurch"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "desweiteren": {
+   "tokens": [
+    "desweiteren"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "irgendwer": {
+   "tokens": [
+    "irgendwer"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "irgendwas": {
+   "tokens": [
+    "irgendwas"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "irgendetwas": {
+   "tokens": [
+    "irgendetwas"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "irgendjemand": {
+   "tokens": [
+    "irgendjemand"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  },
+  "sowas": {
+   "tokens": [
+    "sowas"
+   ],
+   "not": "değişmez zarf/belgisiz: kapalı sınıf (drüber = darüber, sowas = so etwas: yazımda tek sözcük)"
+  }
+ },
+ "belirteç_ek": {
+  "solch": {
+   "tokens": [
+    "solch"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "manch": {
+   "tokens": [
+    "manch"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "welch": {
+   "tokens": [
+    "welch"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "etliche": {
+   "tokens": [
+    "etliche"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "etlichen": {
+   "tokens": [
+    "etlichen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "etlicher": {
+   "tokens": [
+    "etlicher"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "etliches": {
+   "tokens": [
+    "etliches"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "etlichem": {
+   "tokens": [
+    "etlichem"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "jegliche": {
+   "tokens": [
+    "jegliche"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "jeglicher": {
+   "tokens": [
+    "jeglicher"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "jeglichen": {
+   "tokens": [
+    "jeglichen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "jegliches": {
+   "tokens": [
+    "jegliches"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "jeglichem": {
+   "tokens": [
+    "jeglichem"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendwelche": {
+   "tokens": [
+    "irgendwelche"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendwelchen": {
+   "tokens": [
+    "irgendwelchen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendwelcher": {
+   "tokens": [
+    "irgendwelcher"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendwelches": {
+   "tokens": [
+    "irgendwelches"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendein": {
+   "tokens": [
+    "irgendein"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendeine": {
+   "tokens": [
+    "irgendeine"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendeinen": {
+   "tokens": [
+    "irgendeinen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendeinem": {
+   "tokens": [
+    "irgendeinem"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendeiner": {
+   "tokens": [
+    "irgendeiner"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "irgendeines": {
+   "tokens": [
+    "irgendeines"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "derer": {
+   "tokens": [
+    "derer"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "derselben": {
+   "tokens": [
+    "derselben"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "dieselben": {
+   "tokens": [
+    "dieselben"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "dergleichen": {
+   "tokens": [
+    "dergleichen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "derjenigen": {
+   "tokens": [
+    "derjenigen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "denjenigen": {
+   "tokens": [
+    "denjenigen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "demjenigen": {
+   "tokens": [
+    "demjenigen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "desjenigen": {
+   "tokens": [
+    "desjenigen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "ebendiese": {
+   "tokens": [
+    "ebendiese"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "ebendieser": {
+   "tokens": [
+    "ebendieser"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "ebendiesen": {
+   "tokens": [
+    "ebendiesen"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "ebendieses": {
+   "tokens": [
+    "ebendieses"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "ebendiesem": {
+   "tokens": [
+    "ebendiesem"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "beides": {
+   "tokens": [
+    "beides"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "jedermann": {
+   "tokens": [
+    "jedermann"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  },
+  "jedermanns": {
+   "tokens": [
+    "jedermanns"
+   ],
+   "not": "belirteç/belgisiz zamir: kapalı sınıf, her biçim ayrı"
+  }
+ },
+ "kaynaşma_ek": {
+  "unterm": {
+   "tokens": [
+    "unterm"
+   ],
+   "not": "edat + tanımlık kaynaşması (unterm = unter dem)"
+  },
+  "vorm": {
+   "tokens": [
+    "vorm"
+   ],
+   "not": "edat + tanımlık kaynaşması (unterm = unter dem)"
+  },
+  "hinterm": {
+   "tokens": [
+    "hinterm"
+   ],
+   "not": "edat + tanımlık kaynaşması (unterm = unter dem)"
+  },
+  "überm": {
+   "tokens": [
+    "überm"
+   ],
+   "not": "edat + tanımlık kaynaşması (unterm = unter dem)"
+  }
+ },
+ "sayı_ek": {
+  "eineinhalb": {
+   "tokens": [
+    "eineinhalb"
+   ],
+   "not": "kesirli sayı adı: değişmez"
+  },
+  "zweieinhalb": {
+   "tokens": [
+    "zweieinhalb"
+   ],
+   "not": "kesirli sayı adı: değişmez"
+  },
+  "dreieinhalb": {
+   "tokens": [
+    "dreieinhalb"
+   ],
+   "not": "kesirli sayı adı: değişmez"
+  },
+  "anderthalb": {
+   "tokens": [
+    "anderthalb"
+   ],
+   "not": "kesirli sayı adı: değişmez"
+  }
+ },
+ "sayı_bileşik": {
+  "einundzwanzig": {
+   "tokens": [
+    "ein",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiundzwanzig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiundzwanzig": {
+   "tokens": [
+    "drei",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierundzwanzig": {
+   "tokens": [
+    "vier",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfundzwanzig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsundzwanzig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenundzwanzig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtundzwanzig": {
+   "tokens": [
+    "acht",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neunundzwanzig": {
+   "tokens": [
+    "neun",
+    "und",
+    "zwanzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "einunddreißig": {
+   "tokens": [
+    "ein",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiunddreißig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiunddreißig": {
+   "tokens": [
+    "drei",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierunddreißig": {
+   "tokens": [
+    "vier",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfunddreißig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsunddreißig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenunddreißig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtunddreißig": {
+   "tokens": [
+    "acht",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neununddreißig": {
+   "tokens": [
+    "neun",
+    "und",
+    "dreißig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "einundvierzig": {
+   "tokens": [
+    "ein",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiundvierzig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiundvierzig": {
+   "tokens": [
+    "drei",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierundvierzig": {
+   "tokens": [
+    "vier",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfundvierzig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsundvierzig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenundvierzig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtundvierzig": {
+   "tokens": [
+    "acht",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neunundvierzig": {
+   "tokens": [
+    "neun",
+    "und",
+    "vierzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "einundfünfzig": {
+   "tokens": [
+    "ein",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiundfünfzig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiundfünfzig": {
+   "tokens": [
+    "drei",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierundfünfzig": {
+   "tokens": [
+    "vier",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfundfünfzig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsundfünfzig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenundfünfzig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtundfünfzig": {
+   "tokens": [
+    "acht",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neunundfünfzig": {
+   "tokens": [
+    "neun",
+    "und",
+    "fünfzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "einundsechzig": {
+   "tokens": [
+    "ein",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiundsechzig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiundsechzig": {
+   "tokens": [
+    "drei",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierundsechzig": {
+   "tokens": [
+    "vier",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfundsechzig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsundsechzig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenundsechzig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtundsechzig": {
+   "tokens": [
+    "acht",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neunundsechzig": {
+   "tokens": [
+    "neun",
+    "und",
+    "sechzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "einundsiebzig": {
+   "tokens": [
+    "ein",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiundsiebzig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiundsiebzig": {
+   "tokens": [
+    "drei",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierundsiebzig": {
+   "tokens": [
+    "vier",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfundsiebzig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsundsiebzig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenundsiebzig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtundsiebzig": {
+   "tokens": [
+    "acht",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neunundsiebzig": {
+   "tokens": [
+    "neun",
+    "und",
+    "siebzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "einundachtzig": {
+   "tokens": [
+    "ein",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiundachtzig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiundachtzig": {
+   "tokens": [
+    "drei",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierundachtzig": {
+   "tokens": [
+    "vier",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfundachtzig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsundachtzig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenundachtzig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtundachtzig": {
+   "tokens": [
+    "acht",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neunundachtzig": {
+   "tokens": [
+    "neun",
+    "und",
+    "achtzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "einundneunzig": {
+   "tokens": [
+    "ein",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "zweiundneunzig": {
+   "tokens": [
+    "zwei",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "dreiundneunzig": {
+   "tokens": [
+    "drei",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "vierundneunzig": {
+   "tokens": [
+    "vier",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "fünfundneunzig": {
+   "tokens": [
+    "fünf",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "sechsundneunzig": {
+   "tokens": [
+    "sechs",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "siebenundneunzig": {
+   "tokens": [
+    "sieben",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "achtundneunzig": {
+   "tokens": [
+    "acht",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  },
+  "neunundneunzig": {
+   "tokens": [
+    "neun",
+    "und",
+    "neunzig"
+   ],
+   "not": "bileşik sayı adı 21–99: birler + und + onlar (drei+und+zwanzig)"
+  }
+ },
+ "ünlem_ek": {
+  "naja": {
+   "tokens": [
+    "naja"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "nö": {
+   "tokens": [
+    "nö"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "oje": {
+   "tokens": [
+    "oje"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "aha": {
+   "tokens": [
+    "aha"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "hm": {
+   "tokens": [
+    "hm"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "hmm": {
+   "tokens": [
+    "hmm"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "ok": {
+   "tokens": [
+    "ok"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  },
+  "moin": {
+   "tokens": [
+    "moin"
+   ],
+   "not": "ünlem ve konuşma kalıbı"
+  }
+ },
+ "ayrılabilir_parça": {
+  "dar": {
+   "tokens": [
+    "dar"
+   ],
+   "not": "cümle sonunda tek başına kalan ayrılabilir önek (stellt … dar)"
+  },
+  "zurecht": {
+   "tokens": [
+    "zurecht"
+   ],
+   "not": "cümle sonunda tek başına kalan ayrılabilir önek (stellt … dar)"
+  },
+  "vonstatten": {
+   "tokens": [
+    "vonstatten"
+   ],
+   "not": "cümle sonunda tek başına kalan ayrılabilir önek (stellt … dar)"
+  }
+ },
+ "harf": {
+  "a": {
+   "tokens": [
+    "a"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "b": {
+   "tokens": [
+    "b"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "c": {
+   "tokens": [
+    "c"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "d": {
+   "tokens": [
+    "d"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "e": {
+   "tokens": [
+    "e"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "f": {
+   "tokens": [
+    "f"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "g": {
+   "tokens": [
+    "g"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "h": {
+   "tokens": [
+    "h"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "i": {
+   "tokens": [
+    "i"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "j": {
+   "tokens": [
+    "j"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "k": {
+   "tokens": [
+    "k"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "l": {
+   "tokens": [
+    "l"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "m": {
+   "tokens": [
+    "m"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "n": {
+   "tokens": [
+    "n"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "o": {
+   "tokens": [
+    "o"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "p": {
+   "tokens": [
+    "p"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "q": {
+   "tokens": [
+    "q"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "r": {
+   "tokens": [
+    "r"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "s": {
+   "tokens": [
+    "s"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "t": {
+   "tokens": [
+    "t"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "u": {
+   "tokens": [
+    "u"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "v": {
+   "tokens": [
+    "v"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "w": {
+   "tokens": [
+    "w"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "x": {
+   "tokens": [
+    "x"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "y": {
+   "tokens": [
+    "y"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "z": {
+   "tokens": [
+    "z"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "ä": {
+   "tokens": [
+    "ä"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "ö": {
+   "tokens": [
+    "ö"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "ü": {
+   "tokens": [
+    "ü"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  },
+  "ß": {
+   "tokens": [
+    "ß"
+   ],
+   "not": "Latin harfi tek başına (Vitamin C, Plan B, x-Achse)"
+  }
+ },
+ "kısaltma_ek": {
+  "etc": {
+   "tokens": [
+    "etc"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "dpa": {
+   "tokens": [
+    "dpa"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "ff": {
+   "tokens": [
+    "ff"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "bspw": {
+   "tokens": [
+    "bspw"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "qm": {
+   "tokens": [
+    "qm"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "uvm": {
+   "tokens": [
+    "uvm"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "engl": {
+   "tokens": [
+    "engl"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "incl": {
+   "tokens": [
+    "incl"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "bzgl": {
+   "tokens": [
+    "bzgl"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "kcal": {
+   "tokens": [
+    "kcal"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "mwst": {
+   "tokens": [
+    "mwst"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "eur": {
+   "tokens": [
+    "eur"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "chf": {
+   "tokens": [
+    "chf"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "usd": {
+   "tokens": [
+    "usd"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "gb": {
+   "tokens": [
+    "gb"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "mb": {
+   "tokens": [
+    "mb"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "kb": {
+   "tokens": [
+    "kb"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "hd": {
+   "tokens": [
+    "hd"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "ps": {
+   "tokens": [
+    "ps"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "st": {
+   "tokens": [
+    "st"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "fc": {
+   "tokens": [
+    "fc"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "tg": {
+   "tokens": [
+    "tg"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "sv": {
+   "tokens": [
+    "sv"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "din": {
+   "tokens": [
+    "din"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "agb": {
+   "tokens": [
+    "agb"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "dsgvo": {
+   "tokens": [
+    "dsgvo"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "afd": {
+   "tokens": [
+    "afd"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "rtl": {
+   "tokens": [
+    "rtl"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "zdf": {
+   "tokens": [
+    "zdf"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "ard": {
+   "tokens": [
+    "ard"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "sgb": {
+   "tokens": [
+    "sgb"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "mrd": {
+   "tokens": [
+    "mrd"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "std": {
+   "tokens": [
+    "std"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "kw": {
+   "tokens": [
+    "kw"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "gr": {
+   "tokens": [
+    "gr"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  },
+  "uk": {
+   "tokens": [
+    "uk"
+   ],
+   "not": "yaygın kısaltma (birim, para, kurum, yayın): bütün"
+  }
+ },
+ "web": {
+  "com": {
+   "tokens": [
+    "com"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "de": {
+   "tokens": [
+    "de"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "org": {
+   "tokens": [
+    "org"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "net": {
+   "tokens": [
+    "net"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "html": {
+   "tokens": [
+    "html"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "htm": {
+   "tokens": [
+    "htm"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "php": {
+   "tokens": [
+    "php"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "jpg": {
+   "tokens": [
+    "jpg"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "png": {
+   "tokens": [
+    "png"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "https": {
+   "tokens": [
+    "https"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "ip": {
+   "tokens": [
+    "ip"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "ch": {
+   "tokens": [
+    "ch"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "fr": {
+   "tokens": [
+    "fr"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "nl": {
+   "tokens": [
+    "nl"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  },
+  "io": {
+   "tokens": [
+    "io"
+   ],
+   "not": "web adresi, ülke alan adı, dosya biçimi, teknik kısaltma"
+  }
+ },
+ "yabancı": {
+  "the": {
+   "tokens": [
+    "the"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "of": {
+   "tokens": [
+    "of"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "and": {
+   "tokens": [
+    "and"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "to": {
+   "tokens": [
+    "to"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "is": {
+   "tokens": [
+    "is"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "you": {
+   "tokens": [
+    "you"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "by": {
+   "tokens": [
+    "by"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "with": {
+   "tokens": [
+    "with"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "this": {
+   "tokens": [
+    "this"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "that": {
+   "tokens": [
+    "that"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "up": {
+   "tokens": [
+    "up"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "at": {
+   "tokens": [
+    "at"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "from": {
+   "tokens": [
+    "from"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "can": {
+   "tokens": [
+    "can"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "do": {
+   "tokens": [
+    "do"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "our": {
+   "tokens": [
+    "our"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "if": {
+   "tokens": [
+    "if"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "what": {
+   "tokens": [
+    "what"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "they": {
+   "tokens": [
+    "they"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "which": {
+   "tokens": [
+    "which"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "their": {
+   "tokens": [
+    "their"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "good": {
+   "tokens": [
+    "good"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "over": {
+   "tokens": [
+    "over"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "how": {
+   "tokens": [
+    "how"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "get": {
+   "tokens": [
+    "get"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "who": {
+   "tokens": [
+    "who"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "any": {
+   "tokens": [
+    "any"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "there": {
+   "tokens": [
+    "there"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "other": {
+   "tokens": [
+    "other"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "only": {
+   "tokens": [
+    "only"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "when": {
+   "tokens": [
+    "when"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "very": {
+   "tokens": [
+    "very"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "now": {
+   "tokens": [
+    "now"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "been": {
+   "tokens": [
+    "been"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "some": {
+   "tokens": [
+    "some"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "two": {
+   "tokens": [
+    "two"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "were": {
+   "tokens": [
+    "were"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "into": {
+   "tokens": [
+    "into"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "where": {
+   "tokens": [
+    "where"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "than": {
+   "tokens": [
+    "than"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "them": {
+   "tokens": [
+    "them"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "through": {
+   "tokens": [
+    "through"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "had": {
+   "tokens": [
+    "had"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "would": {
+   "tokens": [
+    "would"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "she": {
+   "tokens": [
+    "she"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "right": {
+   "tokens": [
+    "right"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "many": {
+   "tokens": [
+    "many"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "know": {
+   "tokens": [
+    "know"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "think": {
+   "tokens": [
+    "think"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "for": {
+   "tokens": [
+    "for"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "your": {
+   "tokens": [
+    "your"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "have": {
+   "tokens": [
+    "have"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "has": {
+   "tokens": [
+    "has"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "more": {
+   "tokens": [
+    "more"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "new": {
+   "tokens": [
+    "new"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "free": {
+   "tokens": [
+    "free"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "one": {
+   "tokens": [
+    "one"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "his": {
+   "tokens": [
+    "his"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "him": {
+   "tokens": [
+    "him"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "its": {
+   "tokens": [
+    "its"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "we": {
+   "tokens": [
+    "we"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "about": {
+   "tokens": [
+    "about"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "because": {
+   "tokens": [
+    "because"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "could": {
+   "tokens": [
+    "could"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "should": {
+   "tokens": [
+    "should"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "every": {
+   "tokens": [
+    "every"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "being": {
+   "tokens": [
+    "being"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "never": {
+   "tokens": [
+    "never"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "always": {
+   "tokens": [
+    "always"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "without": {
+   "tokens": [
+    "without"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "while": {
+   "tokens": [
+    "while"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "again": {
+   "tokens": [
+    "again"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "much": {
+   "tokens": [
+    "much"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "those": {
+   "tokens": [
+    "those"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "both": {
+   "tokens": [
+    "both"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "each": {
+   "tokens": [
+    "each"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "too": {
+   "tokens": [
+    "too"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "even": {
+   "tokens": [
+    "even"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "against": {
+   "tokens": [
+    "against"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "around": {
+   "tokens": [
+    "around"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "another": {
+   "tokens": [
+    "another"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "during": {
+   "tokens": [
+    "during"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "before": {
+   "tokens": [
+    "before"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "since": {
+   "tokens": [
+    "since"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "within": {
+   "tokens": [
+    "within"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "using": {
+   "tokens": [
+    "using"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "including": {
+   "tokens": [
+    "including"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "example": {
+   "tokens": [
+    "example"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "here": {
+   "tokens": [
+    "here"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "people": {
+   "tokens": [
+    "people"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "experience": {
+   "tokens": [
+    "experience"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "great": {
+   "tokens": [
+    "great"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "help": {
+   "tokens": [
+    "help"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "place": {
+   "tokens": [
+    "place"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "year": {
+   "tokens": [
+    "year"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "number": {
+   "tokens": [
+    "number"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "available": {
+   "tokens": [
+    "available"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "used": {
+   "tokens": [
+    "used"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "years": {
+   "tokens": [
+    "years"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "article": {
+   "tokens": [
+    "article"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "based": {
+   "tokens": [
+    "based"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "come": {
+   "tokens": [
+    "come"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "today": {
+   "tokens": [
+    "today"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "perfect": {
+   "tokens": [
+    "perfect"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "local": {
+   "tokens": [
+    "local"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "three": {
+   "tokens": [
+    "three"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "better": {
+   "tokens": [
+    "better"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "give": {
+   "tokens": [
+    "give"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "questions": {
+   "tokens": [
+    "questions"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "own": {
+   "tokens": [
+    "own"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "working": {
+   "tokens": [
+    "working"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "ago": {
+   "tokens": [
+    "ago"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "third": {
+   "tokens": [
+    "third"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "strong": {
+   "tokens": [
+    "strong"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "really": {
+   "tokens": [
+    "really"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "following": {
+   "tokens": [
+    "following"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "possible": {
+   "tokens": [
+    "possible"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "everything": {
+   "tokens": [
+    "everything"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "yourself": {
+   "tokens": [
+    "yourself"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "once": {
+   "tokens": [
+    "once"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "due": {
+   "tokens": [
+    "due"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "works": {
+   "tokens": [
+    "works"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "published": {
+   "tokens": [
+    "published"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "current": {
+   "tokens": [
+    "current"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "latest": {
+   "tokens": [
+    "latest"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "children": {
+   "tokens": [
+    "children"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "provide": {
+   "tokens": [
+    "provide"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "complete": {
+   "tokens": [
+    "complete"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "industry": {
+   "tokens": [
+    "industry"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "visit": {
+   "tokens": [
+    "visit"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "unique": {
+   "tokens": [
+    "unique"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "beautiful": {
+   "tokens": [
+    "beautiful"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "necessary": {
+   "tokens": [
+    "necessary"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "got": {
+   "tokens": [
+    "got"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "left": {
+   "tokens": [
+    "left"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "comment": {
+   "tokens": [
+    "comment"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "ready": {
+   "tokens": [
+    "ready"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "feel": {
+   "tokens": [
+    "feel"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "together": {
+   "tokens": [
+    "together"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "looking": {
+   "tokens": [
+    "looking"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "enjoy": {
+   "tokens": [
+    "enjoy"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "study": {
+   "tokens": [
+    "study"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "why": {
+   "tokens": [
+    "why"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "keep": {
+   "tokens": [
+    "keep"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "found": {
+   "tokens": [
+    "found"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "try": {
+   "tokens": [
+    "try"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "results": {
+   "tokens": [
+    "results"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "offers": {
+   "tokens": [
+    "offers"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "offer": {
+   "tokens": [
+    "offer"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "protected": {
+   "tokens": [
+    "protected"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "function": {
+   "tokens": [
+    "function"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  },
+  "playing": {
+   "tokens": [
+    "playing"
+   ],
+   "not": "Almanca metinde sık İngilizce sözcük (bütün tutulur; kök iddiası yok)"
+  }
+ },
+ "yabancı_içerik": {
+  "book": {
+   "tokens": [
+    "book"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "play": {
+   "tokens": [
+    "play"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "league": {
+   "tokens": [
+    "league"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "home": {
+   "tokens": [
+    "home"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "world": {
+   "tokens": [
+    "world"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "social": {
+   "tokens": [
+    "social"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "line": {
+   "tokens": [
+    "line"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "big": {
+   "tokens": [
+    "big"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "search": {
+   "tokens": [
+    "search"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "air": {
+   "tokens": [
+    "air"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "anonymous": {
+   "tokens": [
+    "anonymous"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "open": {
+   "tokens": [
+    "open"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "group": {
+   "tokens": [
+    "group"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "view": {
+   "tokens": [
+    "view"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "hidden": {
+   "tokens": [
+    "hidden"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "full": {
+   "tokens": [
+    "full"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "room": {
+   "tokens": [
+    "room"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "black": {
+   "tokens": [
+    "black"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "street": {
+   "tokens": [
+    "street"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "watch": {
+   "tokens": [
+    "watch"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "audio": {
+   "tokens": [
+    "audio"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "deluxe": {
+   "tokens": [
+    "deluxe"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "read": {
+   "tokens": [
+    "read"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "next": {
+   "tokens": [
+    "next"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "classic": {
+   "tokens": [
+    "classic"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "food": {
+   "tokens": [
+    "food"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "privacy": {
+   "tokens": [
+    "privacy"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "inside": {
+   "tokens": [
+    "inside"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "customer": {
+   "tokens": [
+    "customer"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "silver": {
+   "tokens": [
+    "silver"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "long": {
+   "tokens": [
+    "long"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "care": {
+   "tokens": [
+    "care"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "life": {
+   "tokens": [
+    "life"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "make": {
+   "tokens": [
+    "make"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "use": {
+   "tokens": [
+    "use"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "reviews": {
+   "tokens": [
+    "reviews"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "science": {
+   "tokens": [
+    "science"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "machine": {
+   "tokens": [
+    "machine"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "night": {
+   "tokens": [
+    "night"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "highlights": {
+   "tokens": [
+    "highlights"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "win": {
+   "tokens": [
+    "win"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "cam": {
+   "tokens": [
+    "cam"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  },
+  "cams": {
+   "tokens": [
+    "cams"
+   ],
+   "not": "Almanca metinde sık İngilizce içerik sözcüğü (bütün tutulur; kök iddiası yok)"
+  }
+ },
+ "düzensiz_ek": {
+  "ward": {
+   "tokens": [
+    "ward"
+   ],
+   "not": "eskimiş geçmiş zaman (ward = wurde): bütün"
+  }
+ },
+ "roma": {
+  "ii": {
+   "tokens": [
+    "ii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "iii": {
+   "tokens": [
+    "iii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "iv": {
+   "tokens": [
+    "iv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "vi": {
+   "tokens": [
+    "vi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "vii": {
+   "tokens": [
+    "vii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "viii": {
+   "tokens": [
+    "viii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "ix": {
+   "tokens": [
+    "ix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xi": {
+   "tokens": [
+    "xi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xii": {
+   "tokens": [
+    "xii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xiii": {
+   "tokens": [
+    "xiii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xiv": {
+   "tokens": [
+    "xiv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xv": {
+   "tokens": [
+    "xv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xvi": {
+   "tokens": [
+    "xvi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xvii": {
+   "tokens": [
+    "xvii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xviii": {
+   "tokens": [
+    "xviii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xix": {
+   "tokens": [
+    "xix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xx": {
+   "tokens": [
+    "xx"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxi": {
+   "tokens": [
+    "xxi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxii": {
+   "tokens": [
+    "xxii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxiii": {
+   "tokens": [
+    "xxiii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxiv": {
+   "tokens": [
+    "xxiv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxv": {
+   "tokens": [
+    "xxv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxvi": {
+   "tokens": [
+    "xxvi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxvii": {
+   "tokens": [
+    "xxvii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxviii": {
+   "tokens": [
+    "xxviii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxix": {
+   "tokens": [
+    "xxix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxx": {
+   "tokens": [
+    "xxx"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxi": {
+   "tokens": [
+    "xxxi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxii": {
+   "tokens": [
+    "xxxii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxiii": {
+   "tokens": [
+    "xxxiii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxiv": {
+   "tokens": [
+    "xxxiv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxv": {
+   "tokens": [
+    "xxxv"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxvi": {
+   "tokens": [
+    "xxxvi"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxvii": {
+   "tokens": [
+    "xxxvii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxviii": {
+   "tokens": [
+    "xxxviii"
+   ],
+   "not": "Roma rakamı (bütün)"
+  },
+  "xxxix": {
+   "tokens": [
+    "xxxix"
+   ],
+   "not": "Roma rakamı (bütün)"
+  }
  }
 }
