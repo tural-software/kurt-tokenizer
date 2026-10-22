@@ -144,11 +144,47 @@
    ],
    "not": "agouti+isim (düzensiz, OEWN)"
   },
+  "aircraftmen": {
+   "tokens": [
+    "aircraftmen"
+   ],
+   "not": "aircraftman+isim (düzensiz -men, korpus aircraftmen 1 / aircraftmans 0)"
+  },
+  "aircraftsmen": {
+   "tokens": [
+    "aircraftsmen"
+   ],
+   "not": "aircraftsman+isim (düzensiz -men, korpus aircraftsmen 1 / aircraftsmans 0)"
+  },
+  "aircraftswomen": {
+   "tokens": [
+    "aircraftswomen"
+   ],
+   "not": "aircraftswoman+isim (düzensiz -men, korpus aircraftswomen 1 / aircraftswomans 0)"
+  },
+  "aircrewmen": {
+   "tokens": [
+    "aircrewmen"
+   ],
+   "not": "aircrewman+isim (düzensiz -men, korpus aircrewmen 2 / aircrewmans 0)"
+  },
+  "airmen": {
+   "tokens": [
+    "airmen"
+   ],
+   "not": "airman+isim (düzensiz -men, korpus airmen 594 / airmans 0)"
+  },
   "alae": {
    "tokens": [
     "alae"
    ],
    "not": "ala+isim (düzensiz, OEWN)"
+  },
+  "aldermen": {
+   "tokens": [
+    "aldermen"
+   ],
+   "not": "alderman+isim (düzensiz -men, korpus aldermen 235 / aldermans 1)"
   },
   "alkalies": {
    "tokens": [
@@ -317,6 +353,18 @@
     "anastomoses"
    ],
    "not": "anastomosis+isim (düzensiz, OEWN)"
+  },
+  "anchormen": {
+   "tokens": [
+    "anchormen"
+   ],
+   "not": "anchorman+isim (düzensiz -men, korpus anchormen 14 / anchormans 0)"
+  },
+  "anchorwomen": {
+   "tokens": [
+    "anchorwomen"
+   ],
+   "not": "anchorwoman+isim (düzensiz -men, korpus anchorwomen 1 / anchorwomans 0)"
   },
   "androecia": {
    "tokens": [
@@ -588,6 +636,12 @@
    ],
    "not": "arteriosclerosis+isim (düzensiz, OEWN)"
   },
+  "artillerymen": {
+   "tokens": [
+    "artillerymen"
+   ],
+   "not": "artilleryman+isim (düzensiz -men, korpus artillerymen 10 / artillerymans 0)"
+  },
   "asceses": {
    "tokens": [
     "asceses"
@@ -617,6 +671,18 @@
     "assegais"
    ],
    "not": "assagai+isim (düzensiz, OEWN)"
+  },
+  "assemblymen": {
+   "tokens": [
+    "assemblymen"
+   ],
+   "not": "assemblyman+isim (düzensiz -men, korpus assemblymen 23 / assemblymans 0)"
+  },
+  "assemblywomen": {
+   "tokens": [
+    "assemblywomen"
+   ],
+   "not": "assemblywoman+isim (düzensiz -men, korpus assemblywomen 2 / assemblywomans 0)"
   },
   "astragali": {
    "tokens": [
@@ -774,6 +840,12 @@
    ],
    "not": "backslide+fiil (düzensiz, OEWN)"
   },
+  "backwoodsmen": {
+   "tokens": [
+    "backwoodsmen"
+   ],
+   "not": "backwoodsman+isim (düzensiz -men, korpus backwoodsmen 8 / backwoodsmans 0)"
+  },
   "bacteriostases": {
    "tokens": [
     "bacteriostases"
@@ -785,6 +857,12 @@
     "bade"
    ],
    "not": "bid+fiil (düzensiz, OEWN)"
+  },
+  "bagmen": {
+   "tokens": [
+    "bagmen"
+   ],
+   "not": "bagman+isim (düzensiz -men, korpus bagmen 2 / bagmans 0)"
   },
   "ballistae": {
    "tokens": [
@@ -810,11 +888,29 @@
    ],
    "not": "bandit+isim (düzensiz, OEWN)"
   },
+  "bandsmen": {
+   "tokens": [
+    "bandsmen"
+   ],
+   "not": "bandsman+isim (düzensiz -men, korpus bandsmen 9 / bandsmans 0)"
+  },
   "bani": {
    "tokens": [
     "bani"
    ],
    "not": "ban+isim (düzensiz, OEWN)"
+  },
+  "bargemen": {
+   "tokens": [
+    "bargemen"
+   ],
+   "not": "bargeman+isim (düzensiz -men, korpus bargemen 3 / bargemans 0)"
+  },
+  "barmen": {
+   "tokens": [
+    "barmen"
+   ],
+   "not": "barman+isim (düzensiz -men, korpus barmen 25 / barmans 2)"
   },
   "bases": {
    "tokens": [
@@ -839,6 +935,24 @@
     "bassi"
    ],
    "not": "basso+isim (düzensiz, OEWN)"
+  },
+  "batmen": {
+   "tokens": [
+    "batmen"
+   ],
+   "not": "batman+isim (düzensiz -men, korpus batmen 20 / batmans 17)"
+  },
+  "batsmen": {
+   "tokens": [
+    "batsmen"
+   ],
+   "not": "batsman+isim (düzensiz -men, korpus batsmen 554 / batsmans 2)"
+  },
+  "batswomen": {
+   "tokens": [
+    "batswomen"
+   ],
+   "not": "batswoman+isim (düzensiz -men, korpus batswomen 2 / batswomans 0)"
   },
   "beadsmen": {
    "tokens": [
@@ -929,6 +1043,12 @@
     "being"
    ],
    "not": "be+fiil (düzensiz, elle)"
+  },
+  "bellmen": {
+   "tokens": [
+    "bellmen"
+   ],
+   "not": "bellman+isim (düzensiz -men, korpus bellmen 14 / bellmans 0)"
   },
   "bent": {
    "tokens": [
@@ -1080,17 +1200,65 @@
    ],
    "not": "blow+fiil (düzensiz, OEWN)"
   },
+  "boatmen": {
+   "tokens": [
+    "boatmen"
+   ],
+   "not": "boatman+isim (düzensiz -men, korpus boatmen 58 / boatmans 1)"
+  },
+  "boatwomen": {
+   "tokens": [
+    "boatwomen"
+   ],
+   "not": "boatwoman+isim (düzensiz -men, korpus boatwomen 1 / boatwomans 0)"
+  },
+  "bogeymen": {
+   "tokens": [
+    "bogeymen"
+   ],
+   "not": "bogeyman+isim (düzensiz -men, korpus bogeymen 28 / bogeymans 0)"
+  },
   "bolivares": {
    "tokens": [
     "bolivares"
    ],
    "not": "bolivar+isim (düzensiz, OEWN)"
   },
+  "bondmen": {
+   "tokens": [
+    "bondmen"
+   ],
+   "not": "bondman+isim (düzensiz -men, korpus bondmen 15 / bondmans 0)"
+  },
+  "bondsmen": {
+   "tokens": [
+    "bondsmen"
+   ],
+   "not": "bondsman+isim (düzensiz -men, korpus bondsmen 80 / bondsmans 0)"
+  },
+  "bondwomen": {
+   "tokens": [
+    "bondwomen"
+   ],
+   "not": "bondwoman+isim (düzensiz -men, korpus bondwomen 4 / bondwomans 0)"
+  },
+  "boogeymen": {
+   "tokens": [
+    "boogeymen"
+   ],
+   "not": "boogeyman+isim (düzensiz -men, korpus boogeymen 14 / boogeymans 0)"
+  },
   "booklice": {
    "tokens": [
     "booklice"
    ],
    "not": "booklouse+isim (düzensiz, OEWN)"
+  },
+  "bookwomen": {
+   "tokens": [
+    "bookwomen"
+   ],
+   "not": "bookwoman+isim (düzensiz -men, korpus bookwomen 1 / bookwomans 0)"
   },
   "boraces": {
    "tokens": [
@@ -1128,6 +1296,12 @@
    ],
    "not": "bind+fiil (düzensiz, OEWN)"
   },
+  "bowmen": {
+   "tokens": [
+    "bowmen"
+   ],
+   "not": "bowman+isim (düzensiz -men, korpus bowmen 27 / bowmans 15)"
+  },
   "brachia": {
    "tokens": [
     "brachia"
@@ -1139,6 +1313,18 @@
     "brainchildren"
    ],
    "not": "brainchild+isim (düzensiz, OEWN)"
+  },
+  "brakemen": {
+   "tokens": [
+    "brakemen"
+   ],
+   "not": "brakeman+isim (düzensiz -men, korpus brakemen 3 / brakemans 0)"
+  },
+  "brakewomen": {
+   "tokens": [
+    "brakewomen"
+   ],
+   "not": "brakewoman+isim (düzensiz -men, korpus brakewomen 1 / brakewomans 0)"
   },
   "branchiae": {
    "tokens": [
@@ -1242,6 +1428,18 @@
    ],
    "not": "bursa+isim (düzensiz, OEWN)"
   },
+  "bushmen": {
+   "tokens": [
+    "bushmen"
+   ],
+   "not": "bushman+isim (düzensiz -men, korpus bushmen 82 / bushmans 19)"
+  },
+  "businesswomen": {
+   "tokens": [
+    "businesswomen"
+   ],
+   "not": "businesswoman+isim (düzensiz -men, korpus businesswomen 87 / businesswomans 1)"
+  },
   "busses": {
    "tokens": [
     "busses"
@@ -1259,6 +1457,12 @@
     "byssi"
    ],
    "not": "byssus+isim (düzensiz, OEWN)"
+  },
+  "cabmen": {
+   "tokens": [
+    "cabmen"
+   ],
+   "not": "cabman+isim (düzensiz -men, korpus cabmen 2 / cabmans 1)"
   },
   "cacti": {
    "tokens": [
@@ -1349,6 +1553,12 @@
     "camerae"
    ],
    "not": "camera+isim (düzensiz, OEWN)"
+  },
+  "cameramen": {
+   "tokens": [
+    "cameramen"
+   ],
+   "not": "cameraman+isim (düzensiz -men, korpus cameramen 120 / cameramans 1)"
   },
   "canaliculi": {
    "tokens": [
@@ -1446,6 +1656,18 @@
    ],
    "not": "cathexis+isim (düzensiz, OEWN)"
   },
+  "cattlemen": {
+   "tokens": [
+    "cattlemen"
+   ],
+   "not": "cattleman+isim (düzensiz -men, korpus cattlemen 169 / cattlemans 3)"
+  },
+  "cattlewomen": {
+   "tokens": [
+    "cattlewomen"
+   ],
+   "not": "cattlewoman+isim (düzensiz -men, korpus cattlewomen 9 / cattlewomans 0)"
+  },
   "caudices": {
    "tokens": [
     "caudices"
@@ -1458,11 +1680,29 @@
    ],
    "not": "catch+fiil (düzensiz, OEWN)"
   },
+  "cavalrymen": {
+   "tokens": [
+    "cavalrymen"
+   ],
+   "not": "cavalryman+isim (düzensiz -men, korpus cavalrymen 24 / cavalrymans 0)"
+  },
+  "cavemen": {
+   "tokens": [
+    "cavemen"
+   ],
+   "not": "caveman+isim (düzensiz -men, korpus cavemen 127 / cavemans 0)"
+  },
   "cavetti": {
    "tokens": [
     "cavetti"
    ],
    "not": "cavetto+isim (düzensiz, OEWN)"
+  },
+  "cavewomen": {
+   "tokens": [
+    "cavewomen"
+   ],
+   "not": "cavewoman+isim (düzensiz -men, korpus cavewomen 4 / cavewomans 0)"
   },
   "ceca": {
    "tokens": [
@@ -1524,6 +1764,18 @@
    ],
    "not": "chaeta+isim (düzensiz, OEWN)"
   },
+  "chairmen": {
+   "tokens": [
+    "chairmen"
+   ],
+   "not": "chairman+isim (düzensiz -men, korpus chairmen 378 / chairmans 6)"
+  },
+  "chairwomen": {
+   "tokens": [
+    "chairwomen"
+   ],
+   "not": "chairwoman+isim (düzensiz -men, korpus chairwomen 3 / chairwomans 0)"
+  },
   "chalazae": {
    "tokens": [
     "chalazae"
@@ -1577,6 +1829,12 @@
     "cherubim"
    ],
    "not": "cherub+isim (düzensiz, OEWN)"
+  },
+  "chessmen": {
+   "tokens": [
+    "chessmen"
+   ],
+   "not": "chessman+isim (düzensiz -men, korpus chessmen 25 / chessmans 0)"
   },
   "chevied": {
    "tokens": [
@@ -1692,6 +1950,18 @@
    ],
    "not": "chrysalis+isim (düzensiz, OEWN)"
   },
+  "churchmen": {
+   "tokens": [
+    "churchmen"
+   ],
+   "not": "churchman+isim (düzensiz -men, korpus churchmen 85 / churchmans 2)"
+  },
+  "churchwomen": {
+   "tokens": [
+    "churchwomen"
+   ],
+   "not": "churchwoman+isim (düzensiz -men, korpus churchwomen 2 / churchwomans 0)"
+  },
   "cicadae": {
    "tokens": [
     "cicadae"
@@ -1764,6 +2034,18 @@
    ],
    "not": "clothe+fiil (düzensiz, OEWN)"
   },
+  "clansmen": {
+   "tokens": [
+    "clansmen"
+   ],
+   "not": "clansman+isim (düzensiz -men, korpus clansmen 26 / clansmans 0)"
+  },
+  "clanswomen": {
+   "tokens": [
+    "clanswomen"
+   ],
+   "not": "clanswoman+isim (düzensiz -men, korpus clanswomen 1 / clanswomans 0)"
+  },
   "cleft": {
    "tokens": [
     "cleft"
@@ -1775,6 +2057,18 @@
     "clepsydrae"
    ],
    "not": "clepsydra+isim (düzensiz, OEWN)"
+  },
+  "clergymen": {
+   "tokens": [
+    "clergymen"
+   ],
+   "not": "clergyman+isim (düzensiz -men, korpus clergymen 156 / clergymans 0)"
+  },
+  "clergywomen": {
+   "tokens": [
+    "clergywomen"
+   ],
+   "not": "clergywoman+isim (düzensiz -men, korpus clergywomen 6 / clergywomans 0)"
   },
   "cloacae": {
    "tokens": [
@@ -1812,11 +2106,29 @@
    ],
    "not": "clypeus+isim (düzensiz, OEWN)"
   },
+  "coachmen": {
+   "tokens": [
+    "coachmen"
+   ],
+   "not": "coachman+isim (düzensiz -men, korpus coachmen 23 / coachmans 1)"
+  },
   "coagula": {
    "tokens": [
     "coagula"
    ],
    "not": "coagulum+isim (düzensiz, OEWN)"
+  },
+  "coalmen": {
+   "tokens": [
+    "coalmen"
+   ],
+   "not": "coalman+isim (düzensiz -men, korpus coalmen 2 / coalmans 0)"
+  },
+  "coastguardsmen": {
+   "tokens": [
+    "coastguardsmen"
+   ],
+   "not": "coastguardsman+isim (düzensiz -men, korpus coastguardsmen 1 / coastguardsmans 0)"
   },
   "cocci": {
    "tokens": [
@@ -1908,6 +2220,12 @@
    ],
    "not": "comedo+isim (düzensiz, OEWN)"
   },
+  "committeemen": {
+   "tokens": [
+    "committeemen"
+   ],
+   "not": "committeeman+isim (düzensiz -men, korpus committeemen 17 / committeemans 0)"
+  },
   "concerti": {
    "tokens": [
     "concerti"
@@ -1931,6 +2249,18 @@
     "congii"
    ],
    "not": "congius+isim (düzensiz, OEWN)"
+  },
+  "congressmen": {
+   "tokens": [
+    "congressmen"
+   ],
+   "not": "congressman+isim (düzensiz -men, korpus congressmen 572 / congressmans 1)"
+  },
+  "congresswomen": {
+   "tokens": [
+    "congresswomen"
+   ],
+   "not": "congresswoman+isim (düzensiz -men, korpus congresswomen 62 / congresswomans 0)"
   },
   "conidia": {
    "tokens": [
@@ -2034,6 +2364,24 @@
    ],
    "not": "costa+isim (düzensiz, OEWN)"
   },
+  "councilmen": {
+   "tokens": [
+    "councilmen"
+   ],
+   "not": "councilman+isim (düzensiz -men, korpus councilmen 109 / councilmans 0)"
+  },
+  "councilwomen": {
+   "tokens": [
+    "councilwomen"
+   ],
+   "not": "councilwoman+isim (düzensiz -men, korpus councilwomen 6 / councilwomans 0)"
+  },
+  "countermen": {
+   "tokens": [
+    "countermen"
+   ],
+   "not": "counterman+isim (düzensiz -men, korpus countermen 6 / countermans 0)"
+  },
   "countersank": {
    "tokens": [
     "countersank"
@@ -2046,11 +2394,53 @@
    ],
    "not": "countersink+fiil (düzensiz, OEWN)"
   },
+  "counterwomen": {
+   "tokens": [
+    "counterwomen"
+   ],
+   "not": "counterwoman+isim (düzensiz -men, korpus counterwomen 1 / counterwomans 0)"
+  },
+  "countrymen": {
+   "tokens": [
+    "countrymen"
+   ],
+   "not": "countryman+isim (düzensiz -men, korpus countrymen 591 / countrymans 1)"
+  },
+  "countrywomen": {
+   "tokens": [
+    "countrywomen"
+   ],
+   "not": "countrywoman+isim (düzensiz -men, korpus countrywomen 11 / countrywomans 0)"
+  },
+  "cowmen": {
+   "tokens": [
+    "cowmen"
+   ],
+   "not": "cowman+isim (düzensiz -men, korpus cowmen 12 / cowmans 0)"
+  },
   "coxae": {
    "tokens": [
     "coxae"
    ],
    "not": "coxa+isim (düzensiz, OEWN)"
+  },
+  "cracksmen": {
+   "tokens": [
+    "cracksmen"
+   ],
+   "not": "cracksman+isim (düzensiz -men, korpus cracksmen 1 / cracksmans 0)"
+  },
+  "craftsmen": {
+   "tokens": [
+    "craftsmen"
+   ],
+   "not": "craftsman+isim (düzensiz -men, korpus craftsmen 1193 / craftsmans 2)"
+  },
+  "craftswomen": {
+   "tokens": [
+    "craftswomen"
+   ],
+   "not": "craftswoman+isim (düzensiz -men, korpus craftswomen 25 / craftswomans 0)"
   },
   "crania": {
    "tokens": [
@@ -2081,6 +2471,12 @@
     "crescendi"
    ],
    "not": "crescendo+isim (düzensiz, OEWN)"
+  },
+  "crewmen": {
+   "tokens": [
+    "crewmen"
+   ],
+   "not": "crewman+isim (düzensiz -men, korpus crewmen 104 / crewmans 0)"
   },
   "crises": {
    "tokens": [
@@ -2208,6 +2604,12 @@
    ],
    "not": "cymatium+isim (düzensiz, OEWN)"
   },
+  "dairymen": {
+   "tokens": [
+    "dairymen"
+   ],
+   "not": "dairyman+isim (düzensiz -men, korpus dairymen 25 / dairymans 1)"
+  },
   "data": {
    "tokens": [
     "data"
@@ -2243,6 +2645,12 @@
     "degasses"
    ],
    "not": "degas+fiil (düzensiz, OEWN)"
+  },
+  "deliverymen": {
+   "tokens": [
+    "deliverymen"
+   ],
+   "not": "deliveryman+isim (düzensiz -men, korpus deliverymen 7 / deliverymans 0)"
   },
   "delphinia": {
    "tokens": [
@@ -2430,6 +2838,12 @@
    ],
    "not": "do+fiil (düzensiz, OEWN)"
   },
+  "doormen": {
+   "tokens": [
+    "doormen"
+   ],
+   "not": "doorman+isim (düzensiz -men, korpus doormen 54 / doormans 1)"
+  },
   "dopier": {
    "tokens": [
     "dopier"
@@ -2454,6 +2868,12 @@
    ],
    "not": "dorsum+isim (düzensiz, OEWN)"
   },
+  "doth": {
+   "tokens": [
+    "doth"
+   ],
+   "not": "do+fiil (düzensiz, elle)"
+  },
   "dove": {
    "tokens": [
     "dove"
@@ -2466,11 +2886,23 @@
    ],
    "not": "drachma+isim (düzensiz, OEWN)"
   },
+  "draftsmen": {
+   "tokens": [
+    "draftsmen"
+   ],
+   "not": "draftsman+isim (düzensiz -men, korpus draftsmen 35 / draftsmans 0)"
+  },
   "drank": {
    "tokens": [
     "drank"
    ],
    "not": "drink+fiil (düzensiz, OEWN)"
+  },
+  "draughtsmen": {
+   "tokens": [
+    "draughtsmen"
+   ],
+   "not": "draughtsman+isim (düzensiz -men, korpus draughtsmen 12 / draughtsmans 1)"
   },
   "drawn": {
    "tokens": [
@@ -2550,6 +2982,12 @@
    ],
    "not": "duodenum+isim (düzensiz, OEWN)"
   },
+  "dustmen": {
+   "tokens": [
+    "dustmen"
+   ],
+   "not": "dustman+isim (düzensiz -men, korpus dustmen 2 / dustmans 0)"
+  },
   "dwelt": {
    "tokens": [
     "dwelt"
@@ -2561,6 +2999,18 @@
     "dybbukkim"
    ],
    "not": "dybbuk+isim (düzensiz, OEWN)"
+  },
+  "earthmen": {
+   "tokens": [
+    "earthmen"
+   ],
+   "not": "earthman+isim (düzensiz -men, korpus earthmen 6 / earthmans 0)"
+  },
+  "earthwomen": {
+   "tokens": [
+    "earthwomen"
+   ],
+   "not": "earthwoman+isim (düzensiz -men, korpus earthwomen 1 / earthwomans 0)"
   },
   "eaten": {
    "tokens": [
@@ -2886,11 +3336,23 @@
    ],
    "not": "eucalyptus+isim (düzensiz, OEWN)"
   },
+  "everymen": {
+   "tokens": [
+    "everymen"
+   ],
+   "not": "everyman+isim (düzensiz -men, korpus everymen 2 / everymans 1)"
+  },
   "exanthemata": {
    "tokens": [
     "exanthemata"
    ],
    "not": "exanthema+isim (düzensiz, OEWN)"
+  },
+  "excisemen": {
+   "tokens": [
+    "excisemen"
+   ],
+   "not": "exciseman+isim (düzensiz -men, korpus excisemen 3 / excisemans 1)"
   },
   "executrices": {
    "tokens": [
@@ -3048,6 +3510,12 @@
    ],
    "not": "fermata+isim (düzensiz, OEWN)"
   },
+  "ferrymen": {
+   "tokens": [
+    "ferrymen"
+   ],
+   "not": "ferryman+isim (düzensiz -men, korpus ferrymen 10 / ferrymans 0)"
+  },
   "festschriften": {
    "tokens": [
     "festschriften"
@@ -3078,6 +3546,12 @@
    ],
    "not": "fieldmouse+isim (düzensiz, OEWN)"
   },
+  "fieldsmen": {
+   "tokens": [
+    "fieldsmen"
+   ],
+   "not": "fieldsman+isim (düzensiz -men, korpus fieldsmen 1 / fieldsmans 0)"
+  },
   "fila": {
    "tokens": [
     "fila"
@@ -3095,6 +3569,24 @@
     "fimbriae"
    ],
    "not": "fimbria+isim (düzensiz, OEWN)"
+  },
+  "firemen": {
+   "tokens": [
+    "firemen"
+   ],
+   "not": "fireman+isim (düzensiz -men, korpus firemen 530 / firemans 11)"
+  },
+  "fishermen": {
+   "tokens": [
+    "fishermen"
+   ],
+   "not": "fisherman+isim (düzensiz -men, korpus fishermen 2451 / fishermans 50)"
+  },
+  "fisherwomen": {
+   "tokens": [
+    "fisherwomen"
+   ],
+   "not": "fisherwoman+isim (düzensiz -men, korpus fisherwomen 7 / fisherwomans 0)"
   },
   "fistulae": {
    "tokens": [
@@ -3180,11 +3672,23 @@
    ],
    "not": "focus+isim (düzensiz, OEWN)"
   },
+  "foemen": {
+   "tokens": [
+    "foemen"
+   ],
+   "not": "foeman+isim (düzensiz -men, korpus foemen 6 / foemans 0)"
+  },
   "folia": {
    "tokens": [
     "folia"
    ],
    "not": "folium+isim (düzensiz, OEWN)"
+  },
+  "footmen": {
+   "tokens": [
+    "footmen"
+   ],
+   "not": "footman+isim (düzensiz -men, korpus footmen 52 / footmans 1)"
   },
   "fora": {
    "tokens": [
@@ -3252,6 +3756,12 @@
    ],
    "not": "foreknow+fiil (düzensiz, OEWN)"
   },
+  "foremen": {
+   "tokens": [
+    "foremen"
+   ],
+   "not": "foreman+isim (düzensiz -men, korpus foremen 80 / foremans 4)"
+  },
   "foresaw": {
    "tokens": [
     "foresaw"
@@ -3281,6 +3791,12 @@
     "forewent"
    ],
    "not": "forego+fiil (düzensiz, OEWN)"
+  },
+  "forewomen": {
+   "tokens": [
+    "forewomen"
+   ],
+   "not": "forewoman+isim (düzensiz -men, korpus forewomen 1 / forewomans 0)"
   },
   "forgave": {
    "tokens": [
@@ -3378,6 +3894,36 @@
    ],
    "not": "fovea+isim (düzensiz, OEWN)"
   },
+  "freedmen": {
+   "tokens": [
+    "freedmen"
+   ],
+   "not": "freedman+isim (düzensiz -men, korpus freedmen 151 / freedmans 1)"
+  },
+  "freedwomen": {
+   "tokens": [
+    "freedwomen"
+   ],
+   "not": "freedwoman+isim (düzensiz -men, korpus freedwomen 3 / freedwomans 0)"
+  },
+  "freemen": {
+   "tokens": [
+    "freemen"
+   ],
+   "not": "freeman+isim (düzensiz -men, korpus freemen 114 / freemans 18)"
+  },
+  "freewomen": {
+   "tokens": [
+    "freewomen"
+   ],
+   "not": "freewoman+isim (düzensiz -men, korpus freewomen 2 / freewomans 0)"
+  },
+  "freshmen": {
+   "tokens": [
+    "freshmen"
+   ],
+   "not": "freshman+isim (düzensiz -men, korpus freshmen 1990 / freshmans 0)"
+  },
   "fricandeaux": {
    "tokens": [
     "fricandeaux"
@@ -3390,6 +3936,12 @@
    ],
    "not": "frijol+isim (düzensiz, OEWN)"
   },
+  "frogmen": {
+   "tokens": [
+    "frogmen"
+   ],
+   "not": "frogman+isim (düzensiz -men, korpus frogmen 18 / frogmans 0)"
+  },
   "frolicked": {
    "tokens": [
     "frolicked"
@@ -3401,6 +3953,12 @@
     "frolicking"
    ],
    "not": "frolic+fiil (düzensiz, OEWN)"
+  },
+  "frontiersmen": {
+   "tokens": [
+    "frontiersmen"
+   ],
+   "not": "frontiersman+isim (düzensiz -men, korpus frontiersmen 24 / frontiersmans 1)"
   },
   "froze": {
    "tokens": [
@@ -3498,6 +4056,24 @@
    ],
    "not": "ganglion+isim (düzensiz, OEWN)"
   },
+  "garbagemen": {
+   "tokens": [
+    "garbagemen"
+   ],
+   "not": "garbageman+isim (düzensiz -men, korpus garbagemen 5 / garbagemans 0)"
+  },
+  "garbagewomen": {
+   "tokens": [
+    "garbagewomen"
+   ],
+   "not": "garbagewoman+isim (düzensiz -men, korpus garbagewomen 1 / garbagewomans 0)"
+  },
+  "gasmen": {
+   "tokens": [
+    "gasmen"
+   ],
+   "not": "gasman+isim (düzensiz -men, korpus gasmen 3 / gasmans 0)"
+  },
   "gasses": {
    "tokens": [
     "gasses"
@@ -3575,6 +4151,18 @@
     "gentes"
    ],
    "not": "gens+isim (düzensiz, OEWN)"
+  },
+  "gentlemen": {
+   "tokens": [
+    "gentlemen"
+   ],
+   "not": "gentleman+isim (düzensiz -men, korpus gentlemen 3391 / gentlemans 23)"
+  },
+  "gentlewomen": {
+   "tokens": [
+    "gentlewomen"
+   ],
+   "not": "gentlewoman+isim (düzensiz -men, korpus gentlewomen 13 / gentlewomans 0)"
   },
   "genua": {
    "tokens": [
@@ -3804,6 +4392,12 @@
    ],
    "not": "grip+fiil (düzensiz, OEWN)"
   },
+  "groomsmen": {
+   "tokens": [
+    "groomsmen"
+   ],
+   "not": "groomsman+isim (düzensiz -men, korpus groomsmen 355 / groomsmans 0)"
+  },
   "groszy": {
    "tokens": [
     "groszy"
@@ -3816,17 +4410,35 @@
    ],
    "not": "grind+fiil (düzensiz, OEWN)"
   },
+  "groundsmen": {
+   "tokens": [
+    "groundsmen"
+   ],
+   "not": "groundsman+isim (düzensiz -men, korpus groundsmen 10 / groundsmans 0)"
+  },
   "grown": {
    "tokens": [
     "grown"
    ],
    "not": "grow+fiil (düzensiz, OEWN)"
   },
+  "guardsmen": {
+   "tokens": [
+    "guardsmen"
+   ],
+   "not": "guardsman+isim (düzensiz -men, korpus guardsmen 181 / guardsmans 0)"
+  },
   "gummata": {
    "tokens": [
     "gummata"
    ],
    "not": "gumma+isim (düzensiz, OEWN)"
+  },
+  "gunmen": {
+   "tokens": [
+    "gunmen"
+   ],
+   "not": "gunman+isim (düzensiz -men, korpus gunmen 758 / gunmans 2)"
   },
   "gymnasia": {
    "tokens": [
@@ -3948,6 +4560,30 @@
    ],
    "not": "hamstring+fiil (düzensiz, OEWN)"
   },
+  "handymen": {
+   "tokens": [
+    "handymen"
+   ],
+   "not": "handyman+isim (düzensiz -men, korpus handymen 97 / handymans 0)"
+  },
+  "handywomen": {
+   "tokens": [
+    "handywomen"
+   ],
+   "not": "handywoman+isim (düzensiz -men, korpus handywomen 4 / handywomans 0)"
+  },
+  "hanged": {
+   "tokens": [
+    "hanged"
+   ],
+   "not": "hang+fiil (düzensiz, elle)"
+  },
+  "hangmen": {
+   "tokens": [
+    "hangmen"
+   ],
+   "not": "hangman+isim (düzensiz -men, korpus hangmen 32 / hangmans 2)"
+  },
   "harder": {
    "tokens": [
     "harder"
@@ -3960,17 +4596,35 @@
    ],
    "not": "hard+zarf (düzensiz, OEWN)"
   },
+  "harvestmen": {
+   "tokens": [
+    "harvestmen"
+   ],
+   "not": "harvestman+isim (düzensiz -men, korpus harvestmen 11 / harvestmans 0)"
+  },
   "has": {
    "tokens": [
     "has"
    ],
    "not": "have+fiil (düzensiz, OEWN)"
   },
+  "hath": {
+   "tokens": [
+    "hath"
+   ],
+   "not": "have+fiil (düzensiz, elle)"
+  },
   "haustoria": {
    "tokens": [
     "haustoria"
    ],
    "not": "haustorium+isim (düzensiz, OEWN)"
+  },
+  "headmen": {
+   "tokens": [
+    "headmen"
+   ],
+   "not": "headman+isim (düzensiz -men, korpus headmen 21 / headmans 0)"
   },
   "heard": {
    "tokens": [
@@ -3995,6 +4649,12 @@
     "heliozoa"
    ],
    "not": "heliozoan+isim (düzensiz, OEWN)"
+  },
+  "helmsmen": {
+   "tokens": [
+    "helmsmen"
+   ],
+   "not": "helmsman+isim (düzensiz -men, korpus helmsmen 14 / helmsmans 0)"
   },
   "hematolyses": {
    "tokens": [
@@ -4026,11 +4686,29 @@
    ],
    "not": "hemoptysis+isim (düzensiz, OEWN)"
   },
+  "henchmen": {
+   "tokens": [
+    "henchmen"
+   ],
+   "not": "henchman+isim (düzensiz -men, korpus henchmen 292 / henchmans 0)"
+  },
+  "henchwomen": {
+   "tokens": [
+    "henchwomen"
+   ],
+   "not": "henchwoman+isim (düzensiz -men, korpus henchwomen 3 / henchwomans 0)"
+  },
   "herbaria": {
    "tokens": [
     "herbaria"
    ],
    "not": "herbarium+isim (düzensiz, OEWN)"
+  },
+  "herdsmen": {
+   "tokens": [
+    "herdsmen"
+   ],
+   "not": "herdsman+isim (düzensiz -men, korpus herdsmen 126 / herdsmans 1)"
   },
   "hermae": {
    "tokens": [
@@ -4062,6 +4740,12 @@
    ],
    "not": "hide+fiil (düzensiz, OEWN)"
   },
+  "highwaymen": {
+   "tokens": [
+    "highwaymen"
+   ],
+   "not": "highwayman+isim (düzensiz -men, korpus highwaymen 43 / highwaymans 0)"
+  },
   "hila": {
    "tokens": [
     "hila"
@@ -4085,6 +4769,12 @@
     "hippopotami"
    ],
    "not": "hippopotamus+isim (düzensiz, OEWN)"
+  },
+  "hitmen": {
+   "tokens": [
+    "hitmen"
+   ],
+   "not": "hitman+isim (düzensiz -men, korpus hitmen 114 / hitmans 1)"
   },
   "homier": {
    "tokens": [
@@ -4116,6 +4806,30 @@
    ],
    "not": "honorarium+isim (düzensiz, OEWN)"
   },
+  "horsemen": {
+   "tokens": [
+    "horsemen"
+   ],
+   "not": "horseman+isim (düzensiz -men, korpus horsemen 514 / horsemans 5)"
+  },
+  "horsewomen": {
+   "tokens": [
+    "horsewomen"
+   ],
+   "not": "horsewoman+isim (düzensiz -men, korpus horsewomen 8 / horsewomans 0)"
+  },
+  "hotelmen": {
+   "tokens": [
+    "hotelmen"
+   ],
+   "not": "hotelman+isim (düzensiz -men, korpus hotelmen 1 / hotelmans 0)"
+  },
+  "housemen": {
+   "tokens": [
+    "housemen"
+   ],
+   "not": "houseman+isim (düzensiz -men, korpus housemen 3 / housemans 1)"
+  },
   "hove": {
    "tokens": [
     "hove"
@@ -4133,6 +4847,18 @@
     "hung"
    ],
    "not": "hang+fiil (düzensiz, OEWN)"
+  },
+  "huntsmen": {
+   "tokens": [
+    "huntsmen"
+   ],
+   "not": "huntsman+isim (düzensiz -men, korpus huntsmen 43 / huntsmans 5)"
+  },
+  "husbandmen": {
+   "tokens": [
+    "husbandmen"
+   ],
+   "not": "husbandman+isim (düzensiz -men, korpus husbandmen 13 / husbandmans 0)"
   },
   "hydrae": {
    "tokens": [
@@ -4224,6 +4950,12 @@
    ],
    "not": "ibex+isim (düzensiz, OEWN)"
   },
+  "icemen": {
+   "tokens": [
+    "icemen"
+   ],
+   "not": "iceman+isim (düzensiz -men, korpus icemen 25 / icemans 0)"
+  },
   "ichthyosauri": {
    "tokens": [
     "ichthyosauri"
@@ -4295,6 +5027,12 @@
     "indwelt"
    ],
    "not": "indwell+fiil (düzensiz, OEWN)"
+  },
+  "infantrymen": {
+   "tokens": [
+    "infantrymen"
+   ],
+   "not": "infantryman+isim (düzensiz -men, korpus infantrymen 60 / infantrymans 2)"
   },
   "infundibula": {
    "tokens": [
@@ -4380,6 +5118,12 @@
    ],
    "not": "iris+isim (düzensiz, OEWN)"
   },
+  "ironmen": {
+   "tokens": [
+    "ironmen"
+   ],
+   "not": "ironman+isim (düzensiz -men, korpus ironmen 29 / ironmans 3)"
+  },
   "is": {
    "tokens": [
     "is"
@@ -4404,11 +5148,29 @@
    ],
    "not": "jambeau+isim (düzensiz, OEWN)"
   },
+  "jazzmen": {
+   "tokens": [
+    "jazzmen"
+   ],
+   "not": "jazzman+isim (düzensiz -men, korpus jazzmen 22 / jazzmans 0)"
+  },
   "jinn": {
    "tokens": [
     "jinn"
    ],
    "not": "jinni+isim (düzensiz, OEWN)"
+  },
+  "journeymen": {
+   "tokens": [
+    "journeymen"
+   ],
+   "not": "journeyman+isim (düzensiz -men, korpus journeymen 98 / journeymans 0)"
+  },
+  "jurymen": {
+   "tokens": [
+    "jurymen"
+   ],
+   "not": "juryman+isim (düzensiz -men, korpus jurymen 4 / jurymans 0)"
   },
   "keeshonden": {
    "tokens": [
@@ -4427,6 +5189,18 @@
     "kibbutzim"
    ],
    "not": "kibbutz+isim (düzensiz, OEWN)"
+  },
+  "kinsmen": {
+   "tokens": [
+    "kinsmen"
+   ],
+   "not": "kinsman+isim (düzensiz -men, korpus kinsmen 152 / kinsmans 1)"
+  },
+  "kinswomen": {
+   "tokens": [
+    "kinswomen"
+   ],
+   "not": "kinswoman+isim (düzensiz -men, korpus kinswomen 1 / kinswomans 0)"
   },
   "knelt": {
    "tokens": [
@@ -4542,6 +5316,18 @@
    ],
    "not": "lamina+isim (düzensiz, OEWN)"
   },
+  "landmen": {
+   "tokens": [
+    "landmen"
+   ],
+   "not": "landman+isim (düzensiz -men, korpus landmen 9 / landmans 1)"
+  },
+  "landsmen": {
+   "tokens": [
+    "landsmen"
+   ],
+   "not": "landsman+isim (düzensiz -men, korpus landsmen 1 / landsmans 0)"
+  },
   "larvae": {
    "tokens": [
     "larvae"
@@ -4572,11 +5358,41 @@
    ],
    "not": "lat+isim (düzensiz, OEWN)"
   },
+  "laundrymen": {
+   "tokens": [
+    "laundrymen"
+   ],
+   "not": "laundryman+isim (düzensiz -men, korpus laundrymen 1 / laundrymans 0)"
+  },
+  "laundrywomen": {
+   "tokens": [
+    "laundrywomen"
+   ],
+   "not": "laundrywoman+isim (düzensiz -men, korpus laundrywomen 1 / laundrywomans 0)"
+  },
+  "lawmen": {
+   "tokens": [
+    "lawmen"
+   ],
+   "not": "lawman+isim (düzensiz -men, korpus lawmen 108 / lawmans 1)"
+  },
   "lay": {
    "tokens": [
     "lay"
    ],
    "not": "lie+fiil (düzensiz, OEWN)"
+  },
+  "laymen": {
+   "tokens": [
+    "laymen"
+   ],
+   "not": "layman+isim (düzensiz -men, korpus laymen 207 / laymans 10)"
+  },
+  "laywomen": {
+   "tokens": [
+    "laywomen"
+   ],
+   "not": "laywoman+isim (düzensiz -men, korpus laywomen 3 / laywomans 0)"
   },
   "leant": {
    "tokens": [
@@ -4626,6 +5442,12 @@
    ],
    "not": "lemniscus+isim (düzensiz, OEWN)"
   },
+  "lensmen": {
+   "tokens": [
+    "lensmen"
+   ],
+   "not": "lensman+isim (düzensiz -men, korpus lensmen 10 / lensmans 0)"
+  },
   "lent": {
    "tokens": [
     "lent"
@@ -4655,6 +5477,12 @@
     "leptocephali"
    ],
    "not": "leptocephalus+isim (düzensiz, OEWN)"
+  },
+  "lettermen": {
+   "tokens": [
+    "lettermen"
+   ],
+   "not": "letterman+isim (düzensiz -men, korpus lettermen 27 / lettermans 0)"
   },
   "leucocytozoa": {
    "tokens": [
@@ -4686,6 +5514,18 @@
    ],
    "not": "lied+isim (düzensiz, OEWN)"
   },
+  "liegemen": {
+   "tokens": [
+    "liegemen"
+   ],
+   "not": "liegeman+isim (düzensiz -men, korpus liegemen 1 / liegemans 0)"
+  },
+  "lightermen": {
+   "tokens": [
+    "lightermen"
+   ],
+   "not": "lighterman+isim (düzensiz -men, korpus lightermen 5 / lightermans 0)"
+  },
   "limbi": {
    "tokens": [
     "limbi"
@@ -4697,6 +5537,12 @@
     "limina"
    ],
    "not": "limen+isim (düzensiz, OEWN)"
+  },
+  "linesmen": {
+   "tokens": [
+    "linesmen"
+   ],
+   "not": "linesman+isim (düzensiz -men, korpus linesmen 35 / linesmans 0)"
   },
   "linguae": {
    "tokens": [
@@ -4746,6 +5592,24 @@
    ],
    "not": "litas+isim (düzensiz, OEWN)"
   },
+  "liverymen": {
+   "tokens": [
+    "liverymen"
+   ],
+   "not": "liveryman+isim (düzensiz -men, korpus liverymen 12 / liverymans 0)"
+  },
+  "lobstermen": {
+   "tokens": [
+    "lobstermen"
+   ],
+   "not": "lobsterman+isim (düzensiz -men, korpus lobstermen 23 / lobstermans 0)"
+  },
+  "lobsterwomen": {
+   "tokens": [
+    "lobsterwomen"
+   ],
+   "not": "lobsterwoman+isim (düzensiz -men, korpus lobsterwomen 1 / lobsterwomans 0)"
+  },
   "loci": {
    "tokens": [
     "loci"
@@ -4770,6 +5634,18 @@
    ],
    "not": "logion+isim (düzensiz, OEWN)"
   },
+  "longbowmen": {
+   "tokens": [
+    "longbowmen"
+   ],
+   "not": "longbowman+isim (düzensiz -men, korpus longbowmen 7 / longbowmans 0)"
+  },
+  "longshoremen": {
+   "tokens": [
+    "longshoremen"
+   ],
+   "not": "longshoreman+isim (düzensiz -men, korpus longshoremen 113 / longshoremans 0)"
+  },
   "loricae": {
    "tokens": [
     "loricae"
@@ -4781,6 +5657,18 @@
     "lost"
    ],
    "not": "lose+fiil (düzensiz, OEWN)"
+  },
+  "lowerclassmen": {
+   "tokens": [
+    "lowerclassmen"
+   ],
+   "not": "lowerclassman+isim (düzensiz -men, korpus lowerclassmen 1 / lowerclassmans 0)"
+  },
+  "lumbermen": {
+   "tokens": [
+    "lumbermen"
+   ],
+   "not": "lumberman+isim (düzensiz -men, korpus lumbermen 16 / lumbermans 0)"
   },
   "lumbi": {
    "tokens": [
@@ -4860,11 +5748,23 @@
    ],
    "not": "make+fiil (düzensiz, OEWN)"
   },
+  "madmen": {
+   "tokens": [
+    "madmen"
+   ],
+   "not": "madman+isim (düzensiz -men, korpus madmen 133 / madmans 0)"
+  },
   "madornos": {
    "tokens": [
     "madornos"
    ],
    "not": "madrono+isim (düzensiz, OEWN)"
+  },
+  "madwomen": {
+   "tokens": [
+    "madwomen"
+   ],
+   "not": "madwoman+isim (düzensiz -men, korpus madwomen 5 / madwomans 0)"
   },
   "maestri": {
    "tokens": [
@@ -4889,6 +5789,12 @@
     "magmata"
    ],
    "not": "magma+isim (düzensiz, OEWN)"
+  },
+  "mailmen": {
+   "tokens": [
+    "mailmen"
+   ],
+   "not": "mailman+isim (düzensiz -men, korpus mailmen 9 / mailmans 0)"
   },
   "makuta": {
    "tokens": [
@@ -4944,11 +5850,23 @@
    ],
    "not": "markka+isim (düzensiz, OEWN)"
   },
+  "marksmen": {
+   "tokens": [
+    "marksmen"
+   ],
+   "not": "marksman+isim (düzensiz -men, korpus marksmen 59 / marksmans 0)"
+  },
   "marsupia": {
    "tokens": [
     "marsupia"
    ],
    "not": "marsupium+isim (düzensiz, OEWN)"
+  },
+  "matmen": {
+   "tokens": [
+    "matmen"
+   ],
+   "not": "matman+isim (düzensiz -men, korpus matmen 2 / matmans 0)"
   },
   "matrices": {
    "tokens": [
@@ -4985,6 +5903,12 @@
     "meant"
    ],
    "not": "mean+fiil (düzensiz, OEWN)"
+  },
+  "meatmen": {
+   "tokens": [
+    "meatmen"
+   ],
+   "not": "meatman+isim (düzensiz -men, korpus meatmen 2 / meatmans 0)"
   },
   "media": {
    "tokens": [
@@ -5063,6 +5987,18 @@
     "menstrua"
    ],
    "not": "menstruum+isim (düzensiz, OEWN)"
+  },
+  "merchantmen": {
+   "tokens": [
+    "merchantmen"
+   ],
+   "not": "merchantman+isim (düzensiz -men, korpus merchantmen 25 / merchantmans 0)"
+  },
+  "mermen": {
+   "tokens": [
+    "mermen"
+   ],
+   "not": "merman+isim (düzensiz -men, korpus mermen 13 / mermans 0)"
   },
   "mesdames": {
    "tokens": [
@@ -5154,6 +6090,24 @@
    ],
    "not": "microsporangium+isim (düzensiz, OEWN)"
   },
+  "middlemen": {
+   "tokens": [
+    "middlemen"
+   ],
+   "not": "middleman+isim (düzensiz -men, korpus middlemen 268 / middlemans 3)"
+  },
+  "middlewomen": {
+   "tokens": [
+    "middlewomen"
+   ],
+   "not": "middlewoman+isim (düzensiz -men, korpus middlewomen 1 / middlewomans 0)"
+  },
+  "midshipmen": {
+   "tokens": [
+    "midshipmen"
+   ],
+   "not": "midshipman+isim (düzensiz -men, korpus midshipmen 151 / midshipmans 1)"
+  },
   "milia": {
    "tokens": [
     "milia"
@@ -5165,6 +6119,18 @@
     "milieux"
    ],
    "not": "milieu+isim (düzensiz, OEWN)"
+  },
+  "militiamen": {
+   "tokens": [
+    "militiamen"
+   ],
+   "not": "militiaman+isim (düzensiz -men, korpus militiamen 150 / militiamans 0)"
+  },
+  "milkmen": {
+   "tokens": [
+    "milkmen"
+   ],
+   "not": "milkman+isim (düzensiz -men, korpus milkmen 33 / milkmans 0)"
   },
   "millennia": {
    "tokens": [
@@ -5316,6 +6282,12 @@
    ],
    "not": "monad+isim (düzensiz, OEWN)"
   },
+  "moneymen": {
+   "tokens": [
+    "moneymen"
+   ],
+   "not": "moneyman+isim (düzensiz -men, korpus moneymen 8 / moneymans 0)"
+  },
   "moratoria": {
    "tokens": [
     "moratoria"
@@ -5346,6 +6318,12 @@
    ],
    "not": "moshav+isim (düzensiz, OEWN)"
   },
+  "motormen": {
+   "tokens": [
+    "motormen"
+   ],
+   "not": "motorman+isim (düzensiz -men, korpus motormen 4 / motormans 0)"
+  },
   "mown": {
    "tokens": [
     "mown"
@@ -5357,6 +6335,12 @@
     "mucosae"
    ],
    "not": "mucosa+isim (düzensiz, OEWN)"
+  },
+  "musclemen": {
+   "tokens": [
+    "musclemen"
+   ],
+   "not": "muscleman+isim (düzensiz -men, korpus musclemen 9 / musclemans 0)"
   },
   "muskallunge": {
    "tokens": [
@@ -5478,6 +6462,12 @@
    ],
    "not": "necropolis+isim (düzensiz, OEWN)"
   },
+  "needlewomen": {
+   "tokens": [
+    "needlewomen"
+   ],
+   "not": "needlewoman+isim (düzensiz -men, korpus needlewomen 4 / needlewomans 0)"
+  },
   "nemeses": {
    "tokens": [
     "nemeses"
@@ -5514,6 +6504,24 @@
    ],
    "not": "nevus+isim (düzensiz, OEWN)"
   },
+  "newsmen": {
+   "tokens": [
+    "newsmen"
+   ],
+   "not": "newsman+isim (düzensiz -men, korpus newsmen 92 / newsmans 0)"
+  },
+  "newspapermen": {
+   "tokens": [
+    "newspapermen"
+   ],
+   "not": "newspaperman+isim (düzensiz -men, korpus newspapermen 20 / newspapermans 0)"
+  },
+  "newswomen": {
+   "tokens": [
+    "newswomen"
+   ],
+   "not": "newswoman+isim (düzensiz -men, korpus newswomen 2 / newswomans 0)"
+  },
   "nidi": {
    "tokens": [
     "nidi"
@@ -5525,6 +6533,18 @@
     "nimbi"
    ],
    "not": "nimbus+isim (düzensiz, OEWN)"
+  },
+  "noblemen": {
+   "tokens": [
+    "noblemen"
+   ],
+   "not": "nobleman+isim (düzensiz -men, korpus noblemen 98 / noblemans 0)"
+  },
+  "noblewomen": {
+   "tokens": [
+    "noblewomen"
+   ],
+   "not": "noblewoman+isim (düzensiz -men, korpus noblewomen 10 / noblewomans 0)"
   },
   "noctilucae": {
    "tokens": [
@@ -5598,6 +6618,24 @@
    ],
    "not": "numen+isim (düzensiz, OEWN)"
   },
+  "nurserymen": {
+   "tokens": [
+    "nurserymen"
+   ],
+   "not": "nurseryman+isim (düzensiz -men, korpus nurserymen 12 / nurserymans 0)"
+  },
+  "oarsmen": {
+   "tokens": [
+    "oarsmen"
+   ],
+   "not": "oarsman+isim (düzensiz -men, korpus oarsmen 23 / oarsmans 0)"
+  },
+  "oarswomen": {
+   "tokens": [
+    "oarswomen"
+   ],
+   "not": "oarswoman+isim (düzensiz -men, korpus oarswomen 1 / oarswomans 0)"
+  },
   "oases": {
    "tokens": [
     "oases"
@@ -5658,11 +6696,23 @@
    ],
    "not": "esophagus+isim (düzensiz, OEWN)"
   },
+  "oilmen": {
+   "tokens": [
+    "oilmen"
+   ],
+   "not": "oilman+isim (düzensiz -men, korpus oilmen 13 / oilmans 0)"
+  },
   "omasa": {
    "tokens": [
     "omasa"
    ],
    "not": "omasum+isim (düzensiz, OEWN)"
+  },
+  "ombudsmen": {
+   "tokens": [
+    "ombudsmen"
+   ],
+   "not": "ombudsman+isim (düzensiz -men, korpus ombudsmen 47 / ombudsmans 3)"
   },
   "omenta": {
    "tokens": [
@@ -5747,6 +6797,18 @@
     "outdone"
    ],
    "not": "outdo+fiil (düzensiz, OEWN)"
+  },
+  "outdoorsmen": {
+   "tokens": [
+    "outdoorsmen"
+   ],
+   "not": "outdoorsman+isim (düzensiz -men, korpus outdoorsmen 55 / outdoorsmans 0)"
+  },
+  "outdoorswomen": {
+   "tokens": [
+    "outdoorswomen"
+   ],
+   "not": "outdoorswoman+isim (düzensiz -men, korpus outdoorswomen 1 / outdoorswomans 0)"
   },
   "outdrawn": {
    "tokens": [
@@ -6240,6 +7302,12 @@
    ],
    "not": "paterfamilias+isim (düzensiz, OEWN)"
   },
+  "patrolmen": {
+   "tokens": [
+    "patrolmen"
+   ],
+   "not": "patrolman+isim (düzensiz -men, korpus patrolmen 44 / patrolmans 1)"
+  },
   "pease": {
    "tokens": [
     "pease"
@@ -6276,6 +7344,12 @@
    ],
    "not": "penetralium+isim (düzensiz, OEWN)"
   },
+  "penmen": {
+   "tokens": [
+    "penmen"
+   ],
+   "not": "penman+isim (düzensiz -men, korpus penmen 8 / penmans 0)"
+  },
   "pennia": {
    "tokens": [
     "pennia"
@@ -6305,6 +7379,12 @@
     "penumbrae"
    ],
    "not": "penumbra+isim (düzensiz, OEWN)"
+  },
+  "penwomen": {
+   "tokens": [
+    "penwomen"
+   ],
+   "not": "penwoman+isim (düzensiz -men, korpus penwomen 1 / penwomans 0)"
   },
   "pepla": {
    "tokens": [
@@ -6450,6 +7530,12 @@
    ],
    "not": "picnic+fiil (düzensiz, OEWN)"
   },
+  "pigmen": {
+   "tokens": [
+    "pigmen"
+   ],
+   "not": "pigman+isim (düzensiz -men, korpus pigmen 19 / pigmans 0)"
+  },
   "pilei": {
    "tokens": [
     "pilei"
@@ -6468,17 +7554,53 @@
    ],
    "not": "pinna+isim (düzensiz, OEWN)"
   },
+  "pitchmen": {
+   "tokens": [
+    "pitchmen"
+   ],
+   "not": "pitchman+isim (düzensiz -men, korpus pitchmen 8 / pitchmans 0)"
+  },
+  "pitmen": {
+   "tokens": [
+    "pitmen"
+   ],
+   "not": "pitman+isim (düzensiz -men, korpus pitmen 12 / pitmans 3)"
+  },
+  "placemen": {
+   "tokens": [
+    "placemen"
+   ],
+   "not": "placeman+isim (düzensiz -men, korpus placemen 7 / placemans 0)"
+  },
   "placentae": {
    "tokens": [
     "placentae"
    ],
    "not": "placenta+isim (düzensiz, OEWN)"
   },
+  "plainclothesmen": {
+   "tokens": [
+    "plainclothesmen"
+   ],
+   "not": "plainclothesman+isim (düzensiz -men, korpus plainclothesmen 1 / plainclothesmans 0)"
+  },
+  "plainsmen": {
+   "tokens": [
+    "plainsmen"
+   ],
+   "not": "plainsman+isim (düzensiz -men, korpus plainsmen 27 / plainsmans 0)"
+  },
   "planetaria": {
    "tokens": [
     "planetaria"
    ],
    "not": "planetarium+isim (düzensiz, OEWN)"
+  },
+  "plantsmen": {
+   "tokens": [
+    "plantsmen"
+   ],
+   "not": "plantsman+isim (düzensiz -men, korpus plantsmen 6 / plantsmans 0)"
   },
   "planulae": {
    "tokens": [
@@ -6552,6 +7674,18 @@
    ],
    "not": "podium+isim (düzensiz, OEWN)"
   },
+  "policemen": {
+   "tokens": [
+    "policemen"
+   ],
+   "not": "policeman+isim (düzensiz -men, korpus policemen 1077 / policemans 7)"
+  },
+  "policewomen": {
+   "tokens": [
+    "policewomen"
+   ],
+   "not": "policewoman+isim (düzensiz -men, korpus policewomen 18 / policewomans 1)"
+  },
   "pollices": {
    "tokens": [
     "pollices"
@@ -6600,6 +7734,24 @@
    ],
    "not": "portmanteau+isim (düzensiz, OEWN)"
   },
+  "postmen": {
+   "tokens": [
+    "postmen"
+   ],
+   "not": "postman+isim (düzensiz -men, korpus postmen 24 / postmans 3)"
+  },
+  "postwomen": {
+   "tokens": [
+    "postwomen"
+   ],
+   "not": "postwoman+isim (düzensiz -men, korpus postwomen 1 / postwomans 0)"
+  },
+  "poultrymen": {
+   "tokens": [
+    "poultrymen"
+   ],
+   "not": "poultryman+isim (düzensiz -men, korpus poultrymen 1 / poultrymans 0)"
+  },
   "praenomina": {
    "tokens": [
     "praenomina"
@@ -6617,6 +7769,12 @@
     "prepaid"
    ],
    "not": "prepay+fiil (düzensiz, OEWN)"
+  },
+  "pressmen": {
+   "tokens": [
+    "pressmen"
+   ],
+   "not": "pressman+isim (düzensiz -men, korpus pressmen 28 / pressmans 0)"
   },
   "primi": {
    "tokens": [
@@ -6834,6 +7992,12 @@
    ],
    "not": "quantum+isim (düzensiz, OEWN)"
   },
+  "quarrymen": {
+   "tokens": [
+    "quarrymen"
+   ],
+   "not": "quarryman+isim (düzensiz -men, korpus quarrymen 24 / quarrymans 2)"
+  },
   "quarterstaves": {
    "tokens": [
     "quarterstaves"
@@ -6869,6 +8033,24 @@
     "radii"
    ],
    "not": "radius+isim (düzensiz, OEWN)"
+  },
+  "raftmen": {
+   "tokens": [
+    "raftmen"
+   ],
+   "not": "raftman+isim (düzensiz -men, korpus raftmen 6 / raftmans 0)"
+  },
+  "raftsmen": {
+   "tokens": [
+    "raftsmen"
+   ],
+   "not": "raftsman+isim (düzensiz -men, korpus raftsmen 1 / raftsmans 0)"
+  },
+  "railwaymen": {
+   "tokens": [
+    "railwaymen"
+   ],
+   "not": "railwayman+isim (düzensiz -men, korpus railwaymen 19 / railwaymans 0)"
   },
   "rami": {
    "tokens": [
@@ -6983,6 +8165,12 @@
     "repaid"
    ],
    "not": "repay+fiil (düzensiz, OEWN)"
+  },
+  "repairmen": {
+   "tokens": [
+    "repairmen"
+   ],
+   "not": "repairman+isim (düzensiz -men, korpus repairmen 305 / repairmans 0)"
   },
   "reran": {
    "tokens": [
@@ -7110,6 +8298,12 @@
    ],
    "not": "ride+fiil (düzensiz, OEWN)"
   },
+  "riflemen": {
+   "tokens": [
+    "riflemen"
+   ],
+   "not": "rifleman+isim (düzensiz -men, korpus riflemen 93 / riflemans 2)"
+  },
   "rilievi": {
    "tokens": [
     "rilievi"
@@ -7133,6 +8327,12 @@
     "riven"
    ],
    "not": "rive+fiil (düzensiz, OEWN)"
+  },
+  "roadmen": {
+   "tokens": [
+    "roadmen"
+   ],
+   "not": "roadman+isim (düzensiz -men, korpus roadmen 1 / roadmans 0)"
   },
   "rode": {
    "tokens": [
@@ -7206,11 +8406,23 @@
    ],
    "not": "say+fiil (düzensiz, OEWN)"
   },
+  "salesmen": {
+   "tokens": [
+    "salesmen"
+   ],
+   "not": "salesman+isim (düzensiz -men, korpus salesmen 382 / salesmans 1)"
+  },
   "salespeople": {
    "tokens": [
     "salespeople"
    ],
    "not": "salesperson+isim (düzensiz, OEWN)"
+  },
+  "saleswomen": {
+   "tokens": [
+    "saleswomen"
+   ],
+   "not": "saleswoman+isim (düzensiz -men, korpus saleswomen 19 / saleswomans 0)"
   },
   "salmonellae": {
    "tokens": [
@@ -7235,6 +8447,12 @@
     "sancta"
    ],
    "not": "sanctum+isim (düzensiz, OEWN)"
+  },
+  "sandmen": {
+   "tokens": [
+    "sandmen"
+   ],
+   "not": "sandman+isim (düzensiz -men, korpus sandmen 6 / sandmans 0)"
   },
   "sang": {
    "tokens": [
@@ -7326,6 +8544,12 @@
    ],
    "not": "scholium+isim (düzensiz, OEWN)"
   },
+  "schoolmen": {
+   "tokens": [
+    "schoolmen"
+   ],
+   "not": "schoolman+isim (düzensiz -men, korpus schoolmen 12 / schoolmans 0)"
+  },
   "scleroses": {
    "tokens": [
     "scleroses"
@@ -7374,11 +8598,23 @@
    ],
    "not": "scyphozoan+isim (düzensiz, OEWN)"
   },
+  "seamen": {
+   "tokens": [
+    "seamen"
+   ],
+   "not": "seaman+isim (düzensiz -men, korpus seamen 292 / seamans 31)"
+  },
   "secondi": {
    "tokens": [
     "secondi"
    ],
    "not": "secondo+isim (düzensiz, OEWN)"
+  },
+  "seedsmen": {
+   "tokens": [
+    "seedsmen"
+   ],
+   "not": "seedsman+isim (düzensiz -men, korpus seedsmen 5 / seedsmans 0)"
   },
   "seen": {
    "tokens": [
@@ -7391,6 +8627,12 @@
     "segni"
    ],
    "not": "segno+isim (düzensiz, OEWN)"
+  },
+  "selectmen": {
+   "tokens": [
+    "selectmen"
+   ],
+   "not": "selectman+isim (düzensiz -men, korpus selectmen 289 / selectmans 0)"
   },
   "sent": {
    "tokens": [
@@ -7434,6 +8676,18 @@
    ],
    "not": "seraph+isim (düzensiz, OEWN)"
   },
+  "servicemen": {
+   "tokens": [
+    "servicemen"
+   ],
+   "not": "serviceman+isim (düzensiz -men, korpus servicemen 613 / servicemans 2)"
+  },
+  "servicewomen": {
+   "tokens": [
+    "servicewomen"
+   ],
+   "not": "servicewoman+isim (düzensiz -men, korpus servicewomen 31 / servicewomans 0)"
+  },
   "setae": {
    "tokens": [
     "setae"
@@ -7458,6 +8712,12 @@
    ],
    "not": "shake+fiil (düzensiz, OEWN)"
   },
+  "shalt": {
+   "tokens": [
+    "shalt"
+   ],
+   "not": "shall+fiil (düzensiz, elle)"
+  },
   "shat": {
    "tokens": [
     "shat"
@@ -7469,6 +8729,12 @@
     "shaven"
    ],
    "not": "shave+fiil (düzensiz, OEWN)"
+  },
+  "sheepmen": {
+   "tokens": [
+    "sheepmen"
+   ],
+   "not": "sheepman+isim (düzensiz -men, korpus sheepmen 1 / sheepmans 0)"
   },
   "shellacked": {
    "tokens": [
@@ -7529,6 +8795,12 @@
     "shot"
    ],
    "not": "shoot+fiil (düzensiz, OEWN)"
+  },
+  "showmen": {
+   "tokens": [
+    "showmen"
+   ],
+   "not": "showman+isim (düzensiz -men, korpus showmen 34 / showmans 0)"
   },
   "shown": {
    "tokens": [
@@ -7607,6 +8879,12 @@
     "sightseen"
    ],
    "not": "sightsee+fiil (düzensiz, OEWN)"
+  },
+  "signalmen": {
+   "tokens": [
+    "signalmen"
+   ],
+   "not": "signalman+isim (düzensiz -men, korpus signalmen 6 / signalmans 0)"
   },
   "signore": {
    "tokens": [
@@ -7740,6 +9018,12 @@
    ],
    "not": "smite+fiil (düzensiz, OEWN)"
   },
+  "snowmen": {
+   "tokens": [
+    "snowmen"
+   ],
+   "not": "snowman+isim (düzensiz -men, korpus snowmen 261 / snowmans 1)"
+  },
   "snuck": {
    "tokens": [
     "snuck"
@@ -7812,11 +9096,23 @@
    ],
    "not": "seek+fiil (düzensiz, OEWN)"
   },
+  "soundmen": {
+   "tokens": [
+    "soundmen"
+   ],
+   "not": "soundman+isim (düzensiz -men, korpus soundmen 1 / soundmans 0)"
+  },
   "sown": {
    "tokens": [
     "sown"
    ],
    "not": "sow+fiil (düzensiz, OEWN)"
+  },
+  "spacemen": {
+   "tokens": [
+    "spacemen"
+   ],
+   "not": "spaceman+isim (düzensiz -men, korpus spacemen 45 / spacemans 0)"
   },
   "spadices": {
    "tokens": [
@@ -7926,6 +9222,18 @@
    ],
    "not": "speak+fiil (düzensiz, OEWN)"
   },
+  "spokesmen": {
+   "tokens": [
+    "spokesmen"
+   ],
+   "not": "spokesman+isim (düzensiz -men, korpus spokesmen 228 / spokesmans 1)"
+  },
+  "spokeswomen": {
+   "tokens": [
+    "spokeswomen"
+   ],
+   "not": "spokeswoman+isim (düzensiz -men, korpus spokeswomen 14 / spokeswomans 0)"
+  },
   "sporangia": {
    "tokens": [
     "sporangia"
@@ -7937,6 +9245,18 @@
     "sporozoa"
    ],
    "not": "sporozoan+isim (düzensiz, OEWN)"
+  },
+  "sportsmen": {
+   "tokens": [
+    "sportsmen"
+   ],
+   "not": "sportsman+isim (düzensiz -men, korpus sportsmen 468 / sportsmans 31)"
+  },
+  "sportswomen": {
+   "tokens": [
+    "sportswomen"
+   ],
+   "not": "sportswoman+isim (düzensiz -men, korpus sportswomen 34 / sportswomans 0)"
   },
   "spotlit": {
    "tokens": [
@@ -7986,6 +9306,12 @@
    ],
    "not": "squilla+isim (düzensiz, OEWN)"
   },
+  "stablemen": {
+   "tokens": [
+    "stablemen"
+   ],
+   "not": "stableman+isim (düzensiz -men, korpus stablemen 3 / stablemans 0)"
+  },
   "stadia": {
    "tokens": [
     "stadia"
@@ -8028,6 +9354,30 @@
    ],
    "not": "starets+isim (düzensiz, OEWN)"
   },
+  "statesmen": {
+   "tokens": [
+    "statesmen"
+   ],
+   "not": "statesman+isim (düzensiz -men, korpus statesmen 324 / statesmans 0)"
+  },
+  "stateswomen": {
+   "tokens": [
+    "stateswomen"
+   ],
+   "not": "stateswoman+isim (düzensiz -men, korpus stateswomen 4 / stateswomans 0)"
+  },
+  "steelmen": {
+   "tokens": [
+    "steelmen"
+   ],
+   "not": "steelman+isim (düzensiz -men, korpus steelmen 25 / steelmans 0)"
+  },
+  "steersmen": {
+   "tokens": [
+    "steersmen"
+   ],
+   "not": "steersman+isim (düzensiz -men, korpus steersmen 3 / steersmans 0)"
+  },
   "stelae": {
    "tokens": [
     "stelae"
@@ -8069,6 +9419,12 @@
     "stimuli"
    ],
    "not": "stimulus+isim (düzensiz, OEWN)"
+  },
+  "stockmen": {
+   "tokens": [
+    "stockmen"
+   ],
+   "not": "stockman+isim (düzensiz -men, korpus stockmen 34 / stockmans 11)"
   },
   "stole": {
    "tokens": [
@@ -8124,6 +9480,12 @@
    ],
    "not": "stratus+isim (düzensiz, OEWN)"
   },
+  "strawmen": {
+   "tokens": [
+    "strawmen"
+   ],
+   "not": "strawman+isim (düzensiz -men, korpus strawmen 11 / strawmans 1)"
+  },
   "streptococci": {
    "tokens": [
     "streptococci"
@@ -8171,6 +9533,18 @@
     "stromata"
    ],
    "not": "stroma+isim (düzensiz, OEWN)"
+  },
+  "strongmen": {
+   "tokens": [
+    "strongmen"
+   ],
+   "not": "strongman+isim (düzensiz -men, korpus strongmen 67 / strongmans 0)"
+  },
+  "strongwomen": {
+   "tokens": [
+    "strongwomen"
+   ],
+   "not": "strongwoman+isim (düzensiz -men, korpus strongwomen 1 / strongwomans 0)"
   },
   "strove": {
    "tokens": [
@@ -8292,6 +9666,12 @@
    ],
    "not": "sink+fiil (düzensiz, OEWN)"
   },
+  "supermen": {
+   "tokens": [
+    "supermen"
+   ],
+   "not": "superman+isim (düzensiz -men, korpus supermen 39 / supermans 9)"
+  },
   "supernovae": {
    "tokens": [
     "supernovae"
@@ -8303,6 +9683,12 @@
     "superstrata"
    ],
    "not": "superstratum+isim (düzensiz, OEWN)"
+  },
+  "swagmen": {
+   "tokens": [
+    "swagmen"
+   ],
+   "not": "swagman+isim (düzensiz -men, korpus swagmen 1 / swagmans 0)"
   },
   "swam": {
    "tokens": [
@@ -8321,6 +9707,12 @@
     "swept"
    ],
    "not": "sweep+fiil (düzensiz, OEWN)"
+  },
+  "switchmen": {
+   "tokens": [
+    "switchmen"
+   ],
+   "not": "switchman+isim (düzensiz -men, korpus switchmen 11 / switchmans 0)"
   },
   "swollen": {
    "tokens": [
@@ -8345,6 +9737,18 @@
     "swops"
    ],
    "not": "swap+fiil (düzensiz, OEWN)"
+  },
+  "swordsmen": {
+   "tokens": [
+    "swordsmen"
+   ],
+   "not": "swordsman+isim (düzensiz -men, korpus swordsmen 85 / swordsmans 0)"
+  },
+  "swordswomen": {
+   "tokens": [
+    "swordswomen"
+   ],
+   "not": "swordswoman+isim (düzensiz -men, korpus swordswomen 5 / swordswomans 0)"
   },
   "swore": {
    "tokens": [
@@ -8490,6 +9894,12 @@
    ],
    "not": "tallith+isim (düzensiz, OEWN)"
   },
+  "tallymen": {
+   "tokens": [
+    "tallymen"
+   ],
+   "not": "tallyman+isim (düzensiz -men, korpus tallymen 1 / tallymans 0)"
+  },
   "tarantulae": {
    "tokens": [
     "tarantulae"
@@ -8525,6 +9935,18 @@
     "taxies"
    ],
    "not": "taxi+isim (düzensiz, OEWN)"
+  },
+  "taximen": {
+   "tokens": [
+    "taximen"
+   ],
+   "not": "taximan+isim (düzensiz -men, korpus taximen 1 / taximans 0)"
+  },
+  "taxmen": {
+   "tokens": [
+    "taxmen"
+   ],
+   "not": "taxman+isim (düzensiz -men, korpus taxmen 8 / taxmans 0)"
   },
   "taxying": {
    "tokens": [
@@ -8724,6 +10146,12 @@
    ],
    "not": "tibia+isim (düzensiz, OEWN)"
   },
+  "timbermen": {
+   "tokens": [
+    "timbermen"
+   ],
+   "not": "timberman+isim (düzensiz -men, korpus timbermen 3 / timbermans 0)"
+  },
   "titmice": {
    "tokens": [
     "titmice"
@@ -8735,6 +10163,12 @@
     "told"
    ],
    "not": "tell+fiil (düzensiz, OEWN)"
+  },
+  "tollmen": {
+   "tokens": [
+    "tollmen"
+   ],
+   "not": "tollman+isim (düzensiz -men, korpus tollmen 2 / tollmans 1)"
   },
   "tomenta": {
    "tokens": [
@@ -8790,6 +10224,18 @@
    ],
    "not": "turaco+isim (düzensiz, OEWN)"
   },
+  "townsmen": {
+   "tokens": [
+    "townsmen"
+   ],
+   "not": "townsman+isim (düzensiz -men, korpus townsmen 34 / townsmans 0)"
+  },
+  "townswomen": {
+   "tokens": [
+    "townswomen"
+   ],
+   "not": "townswoman+isim (düzensiz -men, korpus townswomen 2 / townswomans 0)"
+  },
   "trabeculae": {
    "tokens": [
     "trabeculae"
@@ -8801,6 +10247,18 @@
     "tracheae"
    ],
    "not": "trachea+isim (düzensiz, OEWN)"
+  },
+  "tradesmen": {
+   "tokens": [
+    "tradesmen"
+   ],
+   "not": "tradesman+isim (düzensiz -men, korpus tradesmen 425 / tradesmans 0)"
+  },
+  "tradeswomen": {
+   "tokens": [
+    "tradeswomen"
+   ],
+   "not": "tradeswoman+isim (düzensiz -men, korpus tradeswomen 2 / tradeswomans 0)"
   },
   "trafficked": {
    "tokens": [
@@ -8819,6 +10277,12 @@
     "tragi"
    ],
    "not": "tragus+isim (düzensiz, OEWN)"
+  },
+  "trainmen": {
+   "tokens": [
+    "trainmen"
+   ],
+   "not": "trainman+isim (düzensiz -men, korpus trainmen 7 / trainmans 0)"
   },
   "trameled": {
    "tokens": [
@@ -8880,11 +10344,29 @@
    ],
    "not": "trauma+isim (düzensiz, OEWN)"
   },
+  "trenchermen": {
+   "tokens": [
+    "trenchermen"
+   ],
+   "not": "trencherman+isim (düzensiz -men, korpus trenchermen 2 / trenchermans 0)"
+  },
   "treponemata": {
    "tokens": [
     "treponemata"
    ],
    "not": "treponema+isim (düzensiz, OEWN)"
+  },
+  "tribesmen": {
+   "tokens": [
+    "tribesmen"
+   ],
+   "not": "tribesman+isim (düzensiz -men, korpus tribesmen 205 / tribesmans 0)"
+  },
+  "tribeswomen": {
+   "tokens": [
+    "tribeswomen"
+   ],
+   "not": "tribeswoman+isim (düzensiz -men, korpus tribeswomen 3 / tribeswomans 0)"
   },
   "trichinae": {
    "tokens": [
@@ -8897,6 +10379,12 @@
     "triclinia"
    ],
    "not": "triclinium+isim (düzensiz, OEWN)"
+  },
+  "triggermen": {
+   "tokens": [
+    "triggermen"
+   ],
+   "not": "triggerman+isim (düzensiz -men, korpus triggermen 7 / triggermans 0)"
   },
   "triskelia": {
    "tokens": [
@@ -9023,6 +10511,12 @@
     "unclad"
    ],
    "not": "unclothe+fiil (düzensiz, OEWN)"
+  },
+  "underclassmen": {
+   "tokens": [
+    "underclassmen"
+   ],
+   "not": "underclassman+isim (düzensiz -men, korpus underclassmen 151 / underclassmans 0)"
   },
   "undergirt": {
    "tokens": [
@@ -9312,6 +10806,12 @@
    ],
    "not": "vesica+isim (düzensiz, OEWN)"
   },
+  "vestrymen": {
+   "tokens": [
+    "vestrymen"
+   ],
+   "not": "vestryman+isim (düzensiz -men, korpus vestrymen 6 / vestrymans 0)"
+  },
   "vibrissae": {
    "tokens": [
     "vibrissae"
@@ -9372,17 +10872,47 @@
    ],
    "not": "vulva+isim (düzensiz, OEWN)"
   },
+  "warehousemen": {
+   "tokens": [
+    "warehousemen"
+   ],
+   "not": "warehouseman+isim (düzensiz -men, korpus warehousemen 16 / warehousemans 1)"
+  },
   "was": {
    "tokens": [
     "was"
    ],
    "not": "be+fiil (düzensiz, OEWN)"
   },
+  "washerwomen": {
+   "tokens": [
+    "washerwomen"
+   ],
+   "not": "washerwoman+isim (düzensiz -men, korpus washerwomen 7 / washerwomans 0)"
+  },
+  "watchmen": {
+   "tokens": [
+    "watchmen"
+   ],
+   "not": "watchman+isim (düzensiz -men, korpus watchmen 444 / watchmans 2)"
+  },
+  "watermen": {
+   "tokens": [
+    "watermen"
+   ],
+   "not": "waterman+isim (düzensiz -men, korpus watermen 53 / watermans 10)"
+  },
   "waylaid": {
    "tokens": [
     "waylaid"
    ],
    "not": "waylay+fiil (düzensiz, OEWN)"
+  },
+  "weathermen": {
+   "tokens": [
+    "weathermen"
+   ],
+   "not": "weatherman+isim (düzensiz -men, korpus weathermen 55 / weathermans 1)"
   },
   "went": {
    "tokens": [
@@ -9413,6 +10943,18 @@
     "whizzes"
    ],
    "not": "whiz+fiil (düzensiz, OEWN)"
+  },
+  "wingmen": {
+   "tokens": [
+    "wingmen"
+   ],
+   "not": "wingman+isim (düzensiz -men, korpus wingmen 30 / wingmans 0)"
+  },
+  "wiremen": {
+   "tokens": [
+    "wiremen"
+   ],
+   "not": "wireman+isim (düzensiz -men, korpus wiremen 2 / wiremans 0)"
   },
   "withdrawn": {
    "tokens": [
@@ -9450,6 +10992,12 @@
    ],
    "not": "wake+fiil (düzensiz, OEWN)"
   },
+  "wolfmen": {
+   "tokens": [
+    "wolfmen"
+   ],
+   "not": "wolfman+isim (düzensiz -men, korpus wolfmen 3 / wolfmans 0)"
+  },
   "women": {
    "tokens": [
     "women"
@@ -9468,11 +11016,41 @@
    ],
    "not": "woodlouse+isim (düzensiz, OEWN)"
   },
+  "woodmen": {
+   "tokens": [
+    "woodmen"
+   ],
+   "not": "woodman+isim (düzensiz -men, korpus woodmen 68 / woodmans 7)"
+  },
+  "woodsmen": {
+   "tokens": [
+    "woodsmen"
+   ],
+   "not": "woodsman+isim (düzensiz -men, korpus woodsmen 25 / woodsmans 1)"
+  },
   "wore": {
    "tokens": [
     "wore"
    ],
    "not": "wear+fiil (düzensiz, OEWN)"
+  },
+  "workingmen": {
+   "tokens": [
+    "workingmen"
+   ],
+   "not": "workingman+isim (düzensiz -men, korpus workingmen 47 / workingmans 0)"
+  },
+  "workingwomen": {
+   "tokens": [
+    "workingwomen"
+   ],
+   "not": "workingwoman+isim (düzensiz -men, korpus workingwomen 1 / workingwomans 0)"
+  },
+  "workmen": {
+   "tokens": [
+    "workmen"
+   ],
+   "not": "workman+isim (düzensiz -men, korpus workmen 405 / workmans 5)"
   },
   "worn": {
    "tokens": [
@@ -9546,6 +11124,24 @@
    ],
    "not": "wry+sıfat (düzensiz, OEWN)"
   },
+  "yachtsmen": {
+   "tokens": [
+    "yachtsmen"
+   ],
+   "not": "yachtsman+isim (düzensiz -men, korpus yachtsmen 31 / yachtsmans 0)"
+  },
+  "yachtswomen": {
+   "tokens": [
+    "yachtswomen"
+   ],
+   "not": "yachtswoman+isim (düzensiz -men, korpus yachtswomen 2 / yachtswomans 0)"
+  },
+  "yardmen": {
+   "tokens": [
+    "yardmen"
+   ],
+   "not": "yardman+isim (düzensiz -men, korpus yardmen 1 / yardmans 0)"
+  },
   "yeshivahs": {
    "tokens": [
     "yeshivahs"
@@ -9569,6 +11165,202 @@
     "zoonoses"
    ],
    "not": "zoonosis+isim (düzensiz, OEWN)"
+  }
+ },
+ "harf": {
+  "b": {
+   "tokens": [
+    "b"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "c": {
+   "tokens": [
+    "c"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "d": {
+   "tokens": [
+    "d"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "e": {
+   "tokens": [
+    "e"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "f": {
+   "tokens": [
+    "f"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "g": {
+   "tokens": [
+    "g"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "h": {
+   "tokens": [
+    "h"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "j": {
+   "tokens": [
+    "j"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "k": {
+   "tokens": [
+    "k"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "l": {
+   "tokens": [
+    "l"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "m": {
+   "tokens": [
+    "m"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "n": {
+   "tokens": [
+    "n"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "o": {
+   "tokens": [
+    "o"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "p": {
+   "tokens": [
+    "p"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "q": {
+   "tokens": [
+    "q"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "r": {
+   "tokens": [
+    "r"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "s": {
+   "tokens": [
+    "s"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "t": {
+   "tokens": [
+    "t"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "u": {
+   "tokens": [
+    "u"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "v": {
+   "tokens": [
+    "v"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "w": {
+   "tokens": [
+    "w"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "x": {
+   "tokens": [
+    "x"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "y": {
+   "tokens": [
+    "y"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  },
+  "z": {
+   "tokens": [
+    "z"
+   ],
+   "not": "Latin harfi tek başına (vitamin C, plan B, x ekseni; 'a' ve 'i' sözcük kök)"
+  }
+ },
+ "konuşma": {
+  "cuz": {
+   "tokens": [
+    "cuz"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
+  },
+  "gonna": {
+   "tokens": [
+    "gonna"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
+  },
+  "gotta": {
+   "tokens": [
+    "gotta"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
+  },
+  "tho": {
+   "tokens": [
+    "tho"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
+  },
+  "thru": {
+   "tokens": [
+    "thru"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
+  },
+  "til": {
+   "tokens": [
+    "til"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
+  },
+  "wanna": {
+   "tokens": [
+    "wanna"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
+  },
+  "ya": {
+   "tokens": [
+    "ya"
+   ],
+   "not": "konuşma dili kalıbı (gonna = going to)"
   }
  },
  "kısaltma": {
@@ -9633,7 +11425,793 @@
     "can",
     "not"
    ],
-   "not": "klitikli kalıp (taban sözcük değil)"
+   "not": "bitişik yazılan can not (iki sözcük token)"
+  },
+  "aka": {
+   "tokens": [
+    "aka"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "al": {
+   "tokens": [
+    "al"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "approx": {
+   "tokens": [
+    "approx"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "apr": {
+   "tokens": [
+    "apr"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "aug": {
+   "tokens": [
+    "aug"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "ave": {
+   "tokens": [
+    "ave"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "blvd": {
+   "tokens": [
+    "blvd"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "bn": {
+   "tokens": [
+    "bn"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "capt": {
+   "tokens": [
+    "capt"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "co": {
+   "tokens": [
+    "co"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "dc": {
+   "tokens": [
+    "dc"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "dr": {
+   "tokens": [
+    "dr"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "ed": {
+   "tokens": [
+    "ed"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "eds": {
+   "tokens": [
+    "eds"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "eg": {
+   "tokens": [
+    "eg"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "et": {
+   "tokens": [
+    "et"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "etc": {
+   "tokens": [
+    "etc"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "eu": {
+   "tokens": [
+    "eu"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "feb": {
+   "tokens": [
+    "feb"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "fla": {
+   "tokens": [
+    "fla"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "fps": {
+   "tokens": [
+    "fps"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "fri": {
+   "tokens": [
+    "fri"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "gb": {
+   "tokens": [
+    "gb"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "ghz": {
+   "tokens": [
+    "ghz"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "gmbh": {
+   "tokens": [
+    "gmbh"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "hwy": {
+   "tokens": [
+    "hwy"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "hz": {
+   "tokens": [
+    "hz"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "inc": {
+   "tokens": [
+    "inc"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "jan": {
+   "tokens": [
+    "jan"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "jr": {
+   "tokens": [
+    "jr"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "jul": {
+   "tokens": [
+    "jul"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "jun": {
+   "tokens": [
+    "jun"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "kcal": {
+   "tokens": [
+    "kcal"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "lbs": {
+   "tokens": [
+    "lbs"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "llc": {
+   "tokens": [
+    "llc"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "llp": {
+   "tokens": [
+    "llp"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "ltd": {
+   "tokens": [
+    "ltd"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "mb": {
+   "tokens": [
+    "mb"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "mbps": {
+   "tokens": [
+    "mbps"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "mhz": {
+   "tokens": [
+    "mhz"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "mpg": {
+   "tokens": [
+    "mpg"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "mr": {
+   "tokens": [
+    "mr"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "mrs": {
+   "tokens": [
+    "mrs"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "nd": {
+   "tokens": [
+    "nd"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "nov": {
+   "tokens": [
+    "nov"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "ny": {
+   "tokens": [
+    "ny"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "oct": {
+   "tokens": [
+    "oct"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "oz": {
+   "tokens": [
+    "oz"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "pp": {
+   "tokens": [
+    "pp"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "px": {
+   "tokens": [
+    "px"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "rd": {
+   "tokens": [
+    "rd"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "rsvp": {
+   "tokens": [
+    "rsvp"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "sep": {
+   "tokens": [
+    "sep"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "sgt": {
+   "tokens": [
+    "sgt"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "sq": {
+   "tokens": [
+    "sq"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "st": {
+   "tokens": [
+    "st"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "tb": {
+   "tokens": [
+    "tb"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "tbsp": {
+   "tokens": [
+    "tbsp"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "th": {
+   "tokens": [
+    "th"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "thu": {
+   "tokens": [
+    "thu"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "tsp": {
+   "tokens": [
+    "tsp"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "tue": {
+   "tokens": [
+    "tue"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "uk": {
+   "tokens": [
+    "uk"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "un": {
+   "tokens": [
+    "un"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "usa": {
+   "tokens": [
+    "usa"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "viz": {
+   "tokens": [
+    "viz"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "vol": {
+   "tokens": [
+    "vol"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  },
+  "vs": {
+   "tokens": [
+    "vs"
+   ],
+   "not": "yaygın kısaltma, unvan, ölçü birimi, ay/gün kısaltması, sıra eki (5th = 5 + th)"
+  }
+ },
+ "web": {
+  "aspx": {
+   "tokens": [
+    "aspx"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "com": {
+   "tokens": [
+    "com"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "css": {
+   "tokens": [
+    "css"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "doi": {
+   "tokens": [
+    "doi"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "edu": {
+   "tokens": [
+    "edu"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "exe": {
+   "tokens": [
+    "exe"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "gif": {
+   "tokens": [
+    "gif"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "gov": {
+   "tokens": [
+    "gov"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "href": {
+   "tokens": [
+    "href"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "htm": {
+   "tokens": [
+    "htm"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "html": {
+   "tokens": [
+    "html"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "http": {
+   "tokens": [
+    "http"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "https": {
+   "tokens": [
+    "https"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "io": {
+   "tokens": [
+    "io"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "jpeg": {
+   "tokens": [
+    "jpeg"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "jpg": {
+   "tokens": [
+    "jpg"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "js": {
+   "tokens": [
+    "js"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "nbsp": {
+   "tokens": [
+    "nbsp"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "org": {
+   "tokens": [
+    "org"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "pdf": {
+   "tokens": [
+    "pdf"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "php": {
+   "tokens": [
+    "php"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "png": {
+   "tokens": [
+    "png"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "quot": {
+   "tokens": [
+    "quot"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "txt": {
+   "tokens": [
+    "txt"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "url": {
+   "tokens": [
+    "url"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "www": {
+   "tokens": [
+    "www"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  },
+  "xml": {
+   "tokens": [
+    "xml"
+   ],
+   "not": "web adresi ve dosya biçimi parçası (www, com, pdf)"
+  }
+ },
+ "yabancı": {
+  "avant": {
+   "tokens": [
+    "avant"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "bona": {
+   "tokens": [
+    "bona"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "da": {
+   "tokens": [
+    "da"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "de": {
+   "tokens": [
+    "de"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "dei": {
+   "tokens": [
+    "dei"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "del": {
+   "tokens": [
+    "del"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "della": {
+   "tokens": [
+    "della"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "der": {
+   "tokens": [
+    "der"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "des": {
+   "tokens": [
+    "des"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "di": {
+   "tokens": [
+    "di"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "du": {
+   "tokens": [
+    "du"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "facto": {
+   "tokens": [
+    "facto"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "fide": {
+   "tokens": [
+    "fide"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "garde": {
+   "tokens": [
+    "garde"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "hoc": {
+   "tokens": [
+    "hoc"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "las": {
+   "tokens": [
+    "las"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "le": {
+   "tokens": [
+    "le"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "los": {
+   "tokens": [
+    "los"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "quo": {
+   "tokens": [
+    "quo"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "versa": {
+   "tokens": [
+    "versa"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "vitro": {
+   "tokens": [
+    "vitro"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "vivo": {
+   "tokens": [
+    "vivo"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  },
+  "von": {
+   "tokens": [
+    "von"
+   ],
+   "not": "İngilizce metinde yaygın yabancı ad edatı ve Latince/Fransızca kalıp parçası (de la, von, in vitro, de facto)"
+  }
+ },
+ "önek_parça": {
+  "aero": {
+   "tokens": [
+    "aero"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "contra": {
+   "tokens": [
+    "contra"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "eco": {
+   "tokens": [
+    "eco"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "electro": {
+   "tokens": [
+    "electro"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "hydro": {
+   "tokens": [
+    "hydro"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "intra": {
+   "tokens": [
+    "intra"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "mega": {
+   "tokens": [
+    "mega"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "multi": {
+   "tokens": [
+    "multi"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "poly": {
+   "tokens": [
+    "poly"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "pre": {
+   "tokens": [
+    "pre"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "socio": {
+   "tokens": [
+    "socio"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
+  },
+  "trans": {
+   "tokens": [
+    "trans"
+   ],
+   "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
   }
  }
 }

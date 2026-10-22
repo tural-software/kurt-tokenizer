@@ -67,7 +67,9 @@ class AltınListe(unittest.TestCase):
 
 class SahteBölmeYok(unittest.TestCase):
     def test_kök_bütünlüğü(self):
-        bölünen = [ad for ad in V.kökler if kodla(ad) != [ad]]
+        # özel ad kökü Başlık biçiminde bütün (küçük harfte sıradan okuma yeğlenir: wells = well+s)
+        bölünen = [ad for ad, k in V.kökler.items()
+                   if (kodla(ad.capitalize()) != [ASCII_BAŞ, ad] if k.tür == "özel" else kodla(ad) != [ad])]
         self.assertEqual(bölünen, [])
 
     def test_üret_çözümle_geri_kazanımı(self):
@@ -102,6 +104,28 @@ class SahteBölmeYok(unittest.TestCase):
         self.assertTrue(V.kökler["doe"].geri)
         self.assertEqual(kodla("does"), ["do", "es"])          # doe+s değil
         self.assertEqual(kodla("doe"), ["doe"])                # tek okumada geri etkisiz
+
+    def test_özel_ad(self):
+        self.assertEqual(V.kökler["london"].tür, "özel")
+        self.assertEqual(kodla("Londoners")[:1], [ASCII_BAŞ])
+        self.assertEqual(kodla("Kennedys"), [ASCII_BAŞ, "kennedy", "s"])     # özel ad çoğulu -ys (Kennedies değil)
+        self.assertEqual(kodla("Americans"), [ASCII_BAŞ, "american", "s"])
+        self.assertEqual(kodla("Bayer"), [ASCII_BAŞ, "bayer"])               # Başlık: ad bütün
+        self.assertEqual(kodla("bayer"), ["bay", "er"])                     # küçük harf: sıradan okuma
+        self.assertEqual(kodla("mister"), ["mister"])                       # mist+er değil
+        çs, _ = en.çözümle("londonly", V.kökler, V.ekler, V.istisnalar, EN.klitikler)
+        self.assertEqual(çs, [])                                             # özel ad yalnız çoğul alır
+
+    def test_istisna_grupları(self):
+        for w, grup in (("x", "harf"), ("th", "kısaltma"), ("www", "web"), ("von", "yabancı"),
+                        ("multi", "önek_parça"), ("gonna", "konuşma")):
+            self.assertEqual(V.istisnalar[w].grup, grup)
+        self.assertEqual(kodla("5th"), ["5", "th"])
+        self.assertEqual(kodla("won't"), ["wo", "n't"])                     # klitik kalıp grubu korunur
+        self.assertEqual(kodla("cannot"), ["can", "not"])
+        self.assertEqual(kodla("freshmen"), ["freshmen"])                    # -man → -men düzensiz
+        self.assertEqual(kodla("penned"), ["pen", "n", "ed"])               # pent düzensizi düzenliyi engellemez
+        self.assertEqual(kodla("ups"), ["up", "s"])                          # kapalı sınıf + ad okuması
 
     def test_ek_sınıf_kısıtı(self):
         self.assertEqual(kodla("corner"), ["corner"])         # corn (isim) + -er (sıfat/fiil eki) yok
