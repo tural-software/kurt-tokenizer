@@ -905,6 +905,7 @@
   "operasevərlik": {"tokens": ["o", "pe", "ra", "se", "vər", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
   "opportunistləşmə": {"tokens": ["op", "por", "tu", "nist", "ləş", "mə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null, "türemiş": "ekli"},
   "optimistcəsinə": {"tokens": ["op", "ti", "mist", "cə", "si", "nə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
+  "optimizasiya": {"tokens": ["op", "ti", "mi", "za", "si", "ya"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "oranjereyalı": {"tokens": ["o", "ran", "je", "re", "ya", "lı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
   "oriyentasiya": {"tokens": ["o", "ri", "yen", "ta", "si", "ya"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "oriyentirləmə": {"tokens": ["o", "ri", "yen", "tir", "lə", "mə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},

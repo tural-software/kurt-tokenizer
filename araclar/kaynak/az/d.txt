@@ -543,7 +543,7 @@ dastanlaş|fiil|
 dastanlaşma|isim|türemiş_ekli
 dastanşünas|isim|
 dastanşünaslıq|isim|q→ğ
-daş|isim|
+daş|isim||fiil
 daşabasma|isim|
 daşabənzər|isim|
 daşadöyən|isim|
@@ -587,7 +587,7 @@ daşınıq|isim|q→ğ
 daşıntı|isim|
 daşıntılı|isim|
 daşıntısız|isim|
-daşır|fiil|
+daşır|fiil|türemiş_çıplak
 daşırma|isim|türemiş_ekli
 daşıyıcı|isim|
 daşıyıcılıq|isim|q→ğ
@@ -609,7 +609,7 @@ daşlaş|fiil|
 daşlaşma|isim|türemiş_ekli
 daşlı|isim|
 daşlıq|isim|q→ğ
-daşma|isim|
+daşma|isim|türemiş_ekli
 daşmeyvə|isim|
 daşmişarlayan|isim|
 daşnak|isim|
@@ -2578,6 +2578,7 @@ disharmoniya|isim|
 disharmoniyalıq|isim|q→ğ
 disillab|isim|
 disinodont|isim|
+disiplin|isim|
 disk|isim|
 diskant|isim|
 disket|isim|
@@ -4027,7 +4028,7 @@ dürməklə|fiil|
 dürməkləmə|isim|türemiş_ekli
 dürmələ|fiil|
 dürmələmə|isim|türemiş_ekli
-dürr|isim|
+dürr|isim|qoşa_tek
 dürrani|isim|
 dürt|fiil|
 dürtmə|isim|türemiş_ekli

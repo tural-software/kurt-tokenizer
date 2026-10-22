@@ -403,7 +403,7 @@ zibilyandıran|isim|
 zibilyandırma|isim|
 zibilyığan|isim|
 zibilyığma|isim|
-zidd|isim|
+zidd|isim|qoşa_tek
 ziddinə|isim|türemiş
 ziddiyyət|isim|
 ziddiyyətli|isim|
@@ -744,5 +744,6 @@ zümzümə|isim|
 zümzümələ|fiil|
 zümzümələmə|isim|türemiş_ekli
 zürafə|isim|
+züy|isim|
 züyçü|isim|
 züytutan|isim|

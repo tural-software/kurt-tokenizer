@@ -106,6 +106,7 @@ naxoşluq|isim|q→ğ
 naxua|isim|
 naib|isim|
 naiblik|isim|k→y
+nail|isim|
 nailiyyət|isim|
 nailiyyətli|isim|
 nailiyyətsiz|isim|
@@ -516,6 +517,7 @@ neftvuran|isim|
 neftvurma|isim|
 neftyığan|isim|
 neftyığma|isim|
+negativ|isim|
 negidal|isim|
 nehrə|isim|
 nehrəli|isim|
@@ -661,6 +663,7 @@ neştərlə|fiil|
 neştərləmə|isim|türemiş_ekli
 neştərli|isim|
 neştərsiz|isim|
+netbol|isim|
 nettinq|isim|q→ğ
 netto|isim|
 nevar|isim|
@@ -1389,6 +1392,7 @@ notoqrafiya|isim|
 notsuz|isim|
 noumen|isim|
 noumenal|isim|
+noutbuk|isim|
 nov|isim|
 novarası|isim|
 novasiya|isim|

@@ -777,6 +777,7 @@
 şifraçma|isim|
 şifrator|isim|
 şifrçi|isim|
+şifrə|isim|
 şifrlə|fiil|
 şifrləmə|isim|türemiş_ekli
 şifrləyici|isim|
@@ -1190,6 +1191,7 @@
 şotlandca|isim|
 şotlandiyalı|isim|
 şotlandka|isim|
+şou|isim|
 şouçu|isim|
 şoulaş|fiil|
 şoulaşma|isim|türemiş_ekli

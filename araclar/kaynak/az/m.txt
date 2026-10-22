@@ -491,6 +491,7 @@ mandolina|isim|
 mandolinaçı|isim|
 mandraqora|isim|
 mandril|isim|
+mane|isim|
 maneçilik|isim|k→y
 maneə|isim|
 maneəli|isim|
@@ -1584,6 +1585,7 @@ meyitxana|isim|
 meyitsifət|isim|
 meyityaran|isim|
 meyityuyan|isim|
+meyl|isim|
 meymun|isim|
 meymunabənzər|isim|
 meymunağacı|isim|
@@ -2088,7 +2090,7 @@ məmurcasına|isim|
 məmurluq|isim|q→ğ
 məna|isim|
 mənaca|isim|
-mənafe|isim|
+mənafe|isim|y_tampon
 mənalan|fiil|
 mənalanma|isim|türemiş_ekli
 mənalı|isim|
@@ -2097,7 +2099,7 @@ mənasız|isim|
 mənasızca|isim|
 mənasızcasına|isim|türemiş
 mənasızlıq|isim|q→ğ
-mənbə|isim|
+mənbə|isim|y_tampon
 mənbəşünas|isim|
 mənbəşünaslıq|isim|q→ğ
 məncə|isim|
@@ -2152,7 +2154,7 @@ mənsub|isim|
 mənsubiyyət|isim|
 mənsubluq|isim|q→ğ
 mənsur|isim|
-mənşə|isim|
+mənşə|isim|y_tampon
 mənşəcə|isim|
 mənşəli|isim|
 mənşəlilik|isim|k→y
@@ -2615,6 +2617,7 @@ mırıldaş|fiil|
 mırıldaşma|isim|türemiş_ekli
 mırıltı|isim|
 mırmırı|isim|
+mırt|isim|
 mırtamırt|isim|
 mırtılda|fiil|
 mırtıldama|isim|türemiş_ekli
@@ -2708,6 +2711,7 @@ mikotrofizm|isim|
 mikotrofluq|isim|q→ğ
 mikoz|isim|
 mikozin|isim|
+mikro|isim|
 mikroaerodrom|isim|
 mikroaləm|isim|
 mikroalət|isim|
@@ -3206,7 +3210,7 @@ mimitizm|isim|
 mimlə|fiil|
 mimləmə|isim|türemiş_ekli
 mimoza|isim|
-min|sıfat|
+min|sıfat||fiil
 mina|isim|
 minaaxtaran|isim|
 minaaxtarma|isim|
@@ -3320,7 +3324,7 @@ minizavod|isim|
 minlərcə|isim|türemiş
 minlərlə|isim|türemiş
 minlik|isim|k→y
-minmə|isim|
+minmə|isim|türemiş_ekli
 minnət|isim|
 minnətçi|isim|
 minnətçilik|isim|k→y
@@ -4035,7 +4039,7 @@ mövhumatçılıq|isim|q→ğ
 mövhumatpərəst|isim|
 mövhumatpərəstlik|isim|k→y
 mövhumi|isim|
-mövqe|isim|
+mövqe|isim|y_tampon
 mövqedəyişmə|isim|
 mövqeli|isim|
 mövqeseçmə|isim|

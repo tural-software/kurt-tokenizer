@@ -435,7 +435,7 @@ fənərçi|isim|
 fənərli|isim|
 fənərsiz|isim|
 fənlərarası|isim|
-fənn|isim|
+fənn|isim|qoşa_tek
 fənni|isim|türemiş_ekli
 fərari|isim|
 fərarilik|isim|k→y
@@ -918,6 +918,7 @@ floema|isim|
 flomaster|isim|
 flor|isim|
 flora|isim|
+florbol|isim|
 florin|isim|
 florist|isim|
 floristik|isim|k→y

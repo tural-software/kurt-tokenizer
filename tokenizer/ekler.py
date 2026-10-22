@@ -122,8 +122,12 @@ class Ek:
     #                            → gəlmisən: ş, s önünde yazılmaz)
     önce_olamaz: tuple = ()    # bu eklerden HEMEN sonra gelemez (AZ yapım_lı ← fiil_isim_ma: -mAlI
     #                            gereklilik ekidir, -mA + -lI diye bölünmez)
-    yalnız_kökler: frozenset = frozenset()  # boş değilse ek YALNIZ bu köklere doğrudan gelir (AZ sıra
-    #                            sayısı -(I)ncI: sayılar; altıncı = altı+ncı, alt+ıncı değil)
+    yalnız_kökler: frozenset = frozenset()  # boş değilse ek YALNIZ bu köklerin zincirinde bulunur (AZ sıra
+    #                            sayısı -(I)ncI: sayılar, altıncı = altı+ncı; belirsizlik -sA: zamirler, nəyisə)
+    yalnız_sonra: frozenset = frozenset()   # boş değilse ek YALNIZ bu eklerden HEMEN sonra gelir (AZ kişi
+    #                            eki + -sA: deyilsinizsə, oldularsa)
+    ünlü_sonra: bool = False   # ek yalnız ÜNLÜYLE biten gövdeye gelir (AZ y'siz ek-fiil -dI: yaxşıdı; ünsüzden
+    #                            sonra zaten ek_fiil_idi aynı yüzeyi verir — hədd+i 'həddi' gölgelenmesin)
 
 
 class EkŞemaHatası(Exception):
@@ -169,7 +173,9 @@ def yükle(yol: str | Path, profil=None) -> dict[str, Ek]:
                 değişim=girdi.get("değişim"),
                 son_düşer=girdi.get("son_düşer", ""),
                 önce_olamaz=tuple(girdi.get("önce_olamaz", ())),
-                yalnız_kökler=frozenset(girdi.get("yalnız_kökler", ())))
+                yalnız_kökler=frozenset(girdi.get("yalnız_kökler", ())),
+                yalnız_sonra=frozenset(girdi.get("yalnız_sonra", ())),
+                ünlü_sonra=girdi.get("ünlü_sonra", False))
         g = doğrula(ad, ek, profil)
         hatalar.extend(g) if g else sözlük.update({ad: ek})
     if hatalar:

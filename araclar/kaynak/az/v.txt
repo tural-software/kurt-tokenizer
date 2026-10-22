@@ -52,7 +52,9 @@ vaiz|isim|
 vaizlik|isim|k→y
 vakansiya|isim|
 vakansiyalı|isim|
+vakant|isim|
 vaksin|isim|
+vaksinasiya|isim|
 vaksinlə|fiil|
 vaksinləmə|isim|türemiş_ekli
 vaksinoterapiya|isim|
@@ -62,6 +64,7 @@ vakuum|isim|
 vakuumlayıcı|isim|
 vakuummetr|isim|
 vakuummetriya|isim|
+vaqe|isim|
 vaqiə|isim|
 vaqif|isim|
 vaqifşünas|isim|
@@ -167,6 +170,7 @@ variasiya|isim|
 variativ|isim|
 variativlik|isim|k→y
 variator|isim|
+varid|isim|
 varidat|isim|
 varikosele|isim|
 varikoz|isim|
@@ -197,6 +201,7 @@ varsaqlama|isim|türemiş_ekli
 varvarizm|isim|
 varyaq|isim|q→ğ
 varyete|isim|
+vasil|isim|
 vasitə|isim|
 vasitəçi|isim|
 vasitəçilik|isim|k→y
@@ -240,6 +245,7 @@ vayqanlı|isim|
 vaylı|isim|
 vaysın|fiil|
 vaysınma|isim|türemiş_ekli
+vaz|isim|
 vaza|isim|
 vazehşünas|isim|
 vazehşünaslıq|isim|q→ğ
@@ -247,8 +253,10 @@ vazelin|isim|
 vazelinlə|fiil|
 vazelinləmə|isim|türemiş_ekli
 vazelinli|isim|
+veb|isim|
 vebermetr|isim|
 vebinar|isim|
+vebsayt|isim|
 vec|isim|
 vecsiz|isim|
 vecsizlik|isim|k→y
@@ -752,6 +760,7 @@ vitrin|isim|
 vitrobazalt|isim|
 vitrofir|isim|
 vitrometr|isim|
+vitse|isim|
 vivaçe|isim|
 vivianit|isim|
 vividiffuziya|isim|

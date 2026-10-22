@@ -55,6 +55,7 @@ bacılaşma|isim|türemiş_ekli
 bacılıq|isim|q→ğ
 bacınəvəsi|isim|
 bacıoğlu|isim|
+bada|isim|
 badaq|isim|q→ğ
 badaqçeşni|isim|
 badaqla|fiil|
@@ -1664,6 +1665,7 @@ bərpaedilmə|isim|
 bərpaetmə|isim|
 bərpaolunma|isim|
 bərzəx|isim|
+bəs|isim|
 bəsirət|isim|
 bəsirətli|isim|
 bəsirətlilik|isim|k→y
@@ -2631,6 +2633,7 @@ blokada|isim|
 blokaltı|isim|
 blokaoxşar|isim|
 blokbaster|isim|
+blokçeyn|isim|
 blokla|fiil|
 bloklama|isim|türemiş_ekli
 bloklaşdır|fiil|
@@ -2753,6 +2756,7 @@ bonistika|isim|
 bonitet|isim|
 bonitetləşdir|fiil|
 bonitetləşdirmə|isim|türemiş_ekli
+bonitirə|isim|
 bonus|isim|
 bonza|isim|
 bor|isim|
@@ -3668,6 +3672,7 @@ bürokratizm|isim|
 bürokratlaş|fiil|
 bürokratlaşma|isim|türemiş_ekli
 bürokratlıq|isim|q→ğ
+büruzə|isim|
 bürü|fiil|
 bürümə|isim|türemiş_ekli
 bürünc|isim|

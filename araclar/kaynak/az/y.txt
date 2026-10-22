@@ -332,9 +332,9 @@ yamyastı|isim|
 yamyastılıq|isim|q→ğ
 yamyaşıl|isim|
 yamyaşıllıq|isim|q→ğ
-yan|isim|
+yan|isim||fiil
 yana|isim|
-yanacaq|isim|q→ğ
+yanacaq|isim|q→ğ,türemiş
 yanacaqçı|isim|
 yanacaqdolduran|isim|
 yanacaqdoldurma|isim|
@@ -353,7 +353,7 @@ yanakı|isim|
 yanaq|isim|q→ğ
 yanaqlı|isim|
 yanalma|isim|
-yanar|isim|
+yanar|isim|türemiş
 yanardağ|isim|
 yanaş|fiil|
 yanaşı|isim|
@@ -412,8 +412,8 @@ yanlış|isim|
 yanlışlı|isim|
 yanlışlıq|isim|q→ğ
 yanlışsız|isim|
-yanma|isim|
-yanmaz|isim|
+yanma|isim|türemiş_ekli
+yanmaz|isim|türemiş
 yanmazlıq|isim|q→ğ
 yanötürücü|isim|
 yanpörtü|isim|
@@ -1918,7 +1918,7 @@ yoxuşsuz|isim|
 yoq|isim|
 yoqa|isim|
 yoqluq|isim|q→ğ
-yol|isim|
+yol|isim||fiil
 yolabaxan|isim|
 yolaçıxan|isim|
 yolagedən|isim|
@@ -1988,7 +1988,7 @@ yollayışlı|isim|
 yollayışsız|isim|
 yollu|isim|
 yolluq|isim|q→ğ
-yolma|isim|
+yolma|isim|türemiş_ekli
 yolotu|isim|
 yolölçən|isim|
 yolölçmə|isim|

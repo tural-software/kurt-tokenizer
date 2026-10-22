@@ -1160,6 +1160,7 @@ petrurgiya|isim|
 petuniya|isim|
 peycer|isim|
 peycinq|isim|q→ğ
+peyda|isim|
 peyğəmbər|isim|
 peyğəmbərcəsinə|isim|
 peyğəmbərçiçəyi|isim|
@@ -1207,6 +1208,7 @@ pəhrizli|isim|
 pəhrizlik|isim|k→y
 pəjmürdə|isim|
 pəjmürdəlik|isim|k→y
+pəl|isim|
 pələ|isim|
 pələbığ|isim|
 pələbığlı|isim|
@@ -2536,7 +2538,7 @@ preslə|fiil|
 presləmə|isim|türemiş_ekli
 presləyici|isim|
 presoterapiya|isim|
-press|isim|
+press|isim|qoşa_tek
 pressinq|isim|
 presşpan|isim|
 prestij|isim|
@@ -2978,6 +2980,7 @@ publisist|isim|
 publisistik|isim|k→y
 publisistika|isim|
 publisistlik|isim|k→y
+puç|isim|
 puçal|isim|
 puçluq|isim|q→ğ
 puçur|isim|

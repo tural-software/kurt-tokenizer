@@ -476,6 +476,7 @@ optimist|isim|
 optimistcəsinə|isim|
 optimistik|isim|k→y
 optimistlik|isim|k→y
+optimizasiya|isim|
 optimizator|isim|
 optimizm|isim|
 optoelektronika|isim|

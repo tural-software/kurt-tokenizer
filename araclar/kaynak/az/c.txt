@@ -261,7 +261,7 @@ cəbr|isim|
 cəbrayılotu|isim|
 cəbri|isim|
 cəbrşünas|isim|
-cədd|isim|
+cədd|isim|qoşa_tek
 cədvəl|isim|
 cəfa|isim|
 cəfaçı|isim|
@@ -753,6 +753,7 @@ ciyərsiz|isim|
 ciyəryarpaq|isim|q→ğ
 ciyil|isim|
 ciyillik|isim|k→y
+cizgi|isim|
 cizgilə|fiil|
 cizgiləmə|isim|türemiş_ekli
 cizgili|isim|
@@ -827,6 +828,7 @@ cunalı|isim|
 cunalıq|isim|q→ğ
 cunasız|isim|
 cunayı|isim|
+cur|isim|
 curlaş|fiil|
 curlaşma|isim|türemiş_ekli
 curluq|isim|q→ğ
@@ -931,6 +933,7 @@ cüyürotu|isim|
 cüz|isim|
 cüzam|isim|
 cüzamlı|isim|
+cüzdan|isim|
 cüzi|isim|
 cüzicə|isim|
 cüzilik|isim|k→y

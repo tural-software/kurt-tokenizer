@@ -282,7 +282,7 @@ talassofobiya|isim|
 talassoterapiya|isim|
 talaşa|isim|
 talaşalıq|isim|q→ğ
-tale|isim|
+tale|isim|y_tampon
 taleli|isim|
 talesiz|isim|
 talesizlik|isim|k→y
@@ -1040,6 +1040,7 @@ telşəkilli|isim|
 teluq|isim|
 telvari|isim|
 tema|isim|
+tematik|isim|
 tematika|isim|
 tembr|isim|
 tembrli|isim|
@@ -2924,7 +2925,7 @@ tilda|isim|
 tilişkə|isim|
 tilişkəli|isim|
 tilişkəsiz|isim|
-till|isim|
+till|isim|qoşa_tek
 tillə|fiil|
 tilləmə|isim|türemiş_ekli
 tilli|isim|
@@ -4216,6 +4217,7 @@ turbin|isim|
 turbinçi|isim|
 turbinqayıran|isim|
 turbinqayırma|isim|
+turbo|isim|
 turboaqreqat|isim|
 turbobalta|isim|
 turbobur|isim|
@@ -4267,7 +4269,7 @@ turşlaşma|isim|türemiş_ekli
 turşluq|isim|q→ğ
 turşməzə|isim|
 turşməzəlik|isim|k→y
-turşsu|isim|
+turşsu|isim|y_tampon
 turştəhər|isim|
 turşu|isim||fiil|
 turşuducu|isim|

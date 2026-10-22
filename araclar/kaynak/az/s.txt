@@ -1301,6 +1301,7 @@ səbirsizləş|fiil|
 səbirsizləşmə|isim|türemiş_ekli
 səbirsizlik|isim|k→y
 səbirsizliklə|isim|
+səbr|isim|
 səbzə|isim|
 səbzəli|isim|
 səbzəsiz|isim|
@@ -1333,7 +1334,7 @@ sədarət|isim|
 sədasız|isim|
 sədasızlıq|isim|q→ğ
 sədçəkmə|isim|
-sədd|isim|
+sədd|isim|qoşa_tek
 sədəf|isim|
 sədəfgülü|isim|
 sədəfli|isim|
@@ -2322,6 +2323,7 @@ silikatla|fiil|
 silikatlama|isim|türemiş_ekli
 silikatlaşdır|fiil|
 silikatlaşdırma|isim|türemiş_ekli
+silikon|isim|
 silindr|isim|
 silindrik|isim|k→y
 silindriklik|isim|k→y
@@ -2505,6 +2507,7 @@ sinxrondroz|isim|
 sinxronik|isim|k→y
 sinxroniklik|isim|k→y
 sinxroniya|isim|
+sinxronizasiya|isim|
 sinxronizator|isim|
 sinxronizm|isim|
 sinxronla|fiil|
@@ -2557,7 +2560,7 @@ sinli|isim|
 sinlilik|isim|k→y
 sinmə|isim|türemiş_ekli
 sinmorfologiya|isim|
-sinn|isim|
+sinn|isim|qoşa_tek
 sinod|isim|
 sinofobiya|isim|
 sinologiya|isim|
@@ -2639,7 +2642,7 @@ sirkulyator|isim|
 sirkumfleks|isim|
 sirli|isim|
 sirlilik|isim|k→y
-sirr|isim|
+sirr|isim|qoşa_tek
 sirroz|isim|
 sirrozlu|isim|
 sirrozsuz|isim|
@@ -2815,6 +2818,7 @@ skalyar|isim|
 skamya|isim|
 skamyalı|isim|
 skamyasız|isim|
+skan|isim|
 skandium|isim|
 skaner|isim|
 skanerlə|fiil|
@@ -2873,6 +2877,7 @@ skripkaçı|isim|
 skripkaçılıq|isim|q→ğ
 skripkalı|isim|
 skripkasız|isim|
+skript|isim|
 skumbriya|isim|
 skuns|isim|
 skuter|isim|
@@ -3192,6 +3197,7 @@ soyğuntu|isim|
 soyğuntulu|isim|
 soyhasoy|isim|
 soykökü|isim|
+soyqırım|isim|
 soyqırımı|isim|
 soylu|isim|
 soyluluq|isim|q→ğ
@@ -3712,6 +3718,7 @@ streptokok|isim|k→y
 stres|isim|
 streslən|fiil|
 streslənmə|isim|türemiş_ekli
+stress|isim|
 strixnin|isim|
 strofant|isim|
 stronsium|isim|

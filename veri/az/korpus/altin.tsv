@@ -5,7 +5,7 @@
 # Test: en iyi çözümün tokenları birebir + beklenen çözümleme çözüm kümesinde (etiket eşseslisi serbest).
 # AZ-3 (tam sözlük): sözlükte kök olan eşsesli BÜTÜN okunur (alaq 'yabani ot', gəlin 'gelin'); bilinen
 # eşsesli seçim sınırları (dilbilgisel ikinci okuma kazanır, kayıp yok): oxundu = ox+u+n+du, oxudur = ox+u+dur,
-# siyahımıza = siyah+ı+mız+a, bacım = bac+ı+m, anda = and+a.
+# siyahımıza = siyah+ı+mız+a, bacım = bac+ı+m, anda = and+a, alındı = alın 'alın'+dı.
 
 # ── isim: çoğul, iyelik, hâl ─────────────────────────────────────────────────────────────────
 evlər	ev lər	ev+çoğul
@@ -418,3 +418,47 @@ daimidir	da i mi dir	daimi+ek_fiil_dir
 xidmətinin	xid mət i n in	xidmət+iyelik_3tekil+tamlayan
 yaradılıb	ya rad ı l ıb	yarat+edilgen+geçmiş_ib
 artırdı	ar tır dı	artır+görülen_geçmiş
+
+# ── AZ-4: y tamponu, çift ünsüz, -dIr+sA, kişi+sA, y'siz ek-fiil, -mAzdAn, -lA, belirsizlik -sA, deyim adı ──
+mövqeyi	möv qe y i	mövqe+belirtme
+mənbəyinə	mən bə y i n ə	mənbə+iyelik_3tekil+yönelme
+taleyini	ta le y i n i	tale+iyelik_3tekil+belirtme
+xətləri	xət ləri	xətt+iyelik_3çoğul
+xətdə	xət də	xətt+bulunma
+xətti	xət ti	xətti
+həddən	həd dən	hədd+ayrılma
+fənlər	fən lər	fənn+koşaç_3çoğul
+haqları	haq ları	haqq+iyelik_3çoğul
+ziddir	zid dir	zidd+ek_fiil_dir
+hisslər	hiss lər	hiss+koşaç_3çoğul
+tibbdə	tibb də	tibb+bulunma
+həlli	həll i	həll+belirtme
+həllər	həl lər	həll+koşaç_3çoğul
+yoxdursa	yox dur sa	yox+ek_fiil_dir+ek_fiil_ise
+lazımdırsa	la zım dır sa	lazım+ek_fiil_dir+ek_fiil_ise
+deyilsinizsə	de yil siniz sə	deyil+koşaç_2çoğul_t1+koşaç_ise
+oldularsa	ol du lar sa	ol+görülen_geçmiş+şahıs_3çoğul+ek_fiil_ise
+varsa	var sa	var+ek_fiil_ise
+idisə	idi sə	idisə
+yaxşıdı	yax şı dı	yaxşı+ek_fiil_di
+başlamazdan	baş la mazdan	başla+ulaç_mazdan
+olmamışdan	ol mamışdan	ol+ulaç_mamışdan
+klikləyin	klik lə y in	klik+yapım_la+emir_2çoğul
+şifrələmə	şif rə lə mə	şifrə+yapım_la+fiil_isim_ma
+nəyisə	nə y i sə	nə+belirtme+belgisiz_sa
+kiməsə	kim ə sə	kim+yönelme+belgisiz_sa
+hansısa	han sı sa	hansı+belgisiz_sa
+nail	na il	nail
+ərzində	ərz i n də	ərz+iyelik_3tekil+bulunma
+odur	o dur	odur
+haqda	haq da	haqda
+yanıb	yan ıb	yan+geçmiş_ib
+qızır	qız ır	qız+şimdiki_zaman
+minib	min ib	min+geçmiş_ib
+daşır	daş ır	daş+şimdiki_zaman
+həddi	hədd i	hədd+belirtme
+yarandı	ya ra n dı	yara+edilgen+görülen_geçmiş
+vebsaytın	veb sayt ın	vebsayt+tamlayan
+noutbuku	no ut buk u	noutbuk+belirtme
+hörümçəyi	hö rüm çəy i	hörümçək+belirtme
+qızına	qız ı n a	qız+iyelik_3tekil+yönelme

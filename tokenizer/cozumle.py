@@ -83,7 +83,7 @@ KİŞİ_TİP = {
 #   VEYA ad-yüklem present-zero (güzeller K); çıplak fiilden sonra gelmez.
 # Koşaç/ek-fiil işaretçisi çıplak fiile bağlanmaz (önce fiil zamanı gerekir):
 KOŞAÇ_İŞARET = frozenset({"ek_fiil_idi", "ek_fiil_imiş", "ek_fiil_ise", "ek_fiil_dir",
-                          "ek_fiil_ken"})
+                          "ek_fiil_ken", "ek_fiil_di"})   # ek_fiil_di: AZ y'siz -dI (yaxşıdı)
 # Yüklem olamayan hâller: present-koşaç (işaretçisiz) bunlardan sonra gelmez
 # (bulunma HARİÇ: "evdeyim" geçerli ad-yüklem; araç/belirtme/yönelme/ayrılma/tamlayan değil)
 TAHMİN_DIŞI_HAL = {"belirtme", "yönelme", "ayrılma", "tamlayan", "araç"}
@@ -148,7 +148,11 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
             continue
         if ek_dizi and ek.önce_olamaz and ek_dizi[-1] in ek.önce_olamaz:
             continue
-        if ek.yalnız_kökler and (ek_dizi or kök_ad not in ek.yalnız_kökler):
+        if ek.yalnız_kökler and kök_ad not in ek.yalnız_kökler:
+            continue
+        if ek.yalnız_sonra and not (ek_dizi and ek_dizi[-1] in ek.yalnız_sonra):
+            continue
+        if ek.ünlü_sonra and yüzey[-1] not in (sesler.ÜNLÜLER if profil is None else profil.ünlüler):
             continue
         # sadece-koşaç kökler (mı/değil) isim eki almaz; yalnız koşaç/ek-fiil ('her')
         # → "mide" yanlışlıkla mi+bulunma diye bölünmez

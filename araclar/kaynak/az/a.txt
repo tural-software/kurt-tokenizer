@@ -1839,7 +1839,7 @@ anabioz|isim|
 anabir|isim|
 anabolizm|isim|
 anac|isim|
-anacan|isim|
+anacan|isim|türemiş
 anaclan|fiil|
 anaclanma|isim|türemiş_ekli
 anaclaş|fiil|
@@ -2336,7 +2336,7 @@ aptekçə|isim|
 aptekçi|isim|
 aptekçilik|isim|k→y
 ar|isim|
-ara|isim|
+ara|isim||fiil
 araba|isim|
 arababənd|isim|
 arababəndlik|isim|k→y
@@ -2375,7 +2375,7 @@ aralı|isim|
 aralıq|isim|q→ğ
 aralıqçı|isim|
 aram|isim|
-arama|isim|
+arama|isim|türemiş_ekli
 arami|isim|
 aramicə|isim|
 aramla|isim|
@@ -2412,7 +2412,7 @@ aravuruşduran|isim|
 arayatı|isim|
 arayıcı|isim|
 arayıcılıq|isim|q→ğ
-arayış|isim|
+arayış|isim|türemiş
 arbitr|isim|
 arbitraj|isim|
 arbitron|isim|
@@ -3924,7 +3924,7 @@ ayüzlü|isim|
 ayüzlülük|isim|k→y
 ayyarım|isim|
 ayyarımlıq|isim|q→ğ
-az|sıfat|
+az|sıfat||fiil
 azacıq|isim|q→ğ
 azad|isim|
 azadca|isim|
@@ -4027,7 +4027,7 @@ azqazanclı|isim|
 azqidalı|isim|
 azqüvvəli|isim|
 azlıq|isim|q→ğ
-azma|isim|
+azma|isim|türemiş_ekli
 azman|isim|
 azmanlıq|isim|q→ğ
 azmetrajlı|isim|
@@ -4038,7 +4038,7 @@ azməlumatlı|isim|
 azməlumatlılıq|isim|q→ğ
 azmənfəətli|isim|
 azmərtəbəli|isim|
-azmış|isim|
+azmış|isim|türemiş
 azmüddətli|isim|
 azmütaliəli|isim|
 azoamin|isim|

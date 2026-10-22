@@ -406,6 +406,7 @@ rakurs|isim|
 raqa|isim|
 raqu|isim|
 ralli|isim|
+ram|isim|
 rama|isim|
 ramalı|isim|
 ramasız|isim|
@@ -419,6 +420,7 @@ rami|isim|
 ranço|isim|
 rand|isim|
 randomizasiya|isim|
+randomizə|isim|
 ranet|isim|
 ranq|isim|
 ranqlaşdır|fiil|
@@ -1488,7 +1490,7 @@ roksolan|isim|
 rol|isim|
 rolik|isim|
 rolqanq|isim|q→ğ
-roll|isim|
+roll|isim|qoşa_tek
 roller|isim|
 rolli|isim|
 rollu|isim|

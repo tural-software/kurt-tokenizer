@@ -252,6 +252,7 @@ eksponent|isim|
 eksponometr|isim|
 ekspozisiya|isim|
 ekspres|isim|
+ekspress|isim|
 ekspressionist|isim|
 ekspressionistlik|isim|k→y
 ekspressionizm|isim|
