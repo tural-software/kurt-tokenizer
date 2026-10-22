@@ -43,8 +43,8 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   İngilizce web metninde 0,47 token/karakter (Türkçe kipte 0,74).
 - **Kod kipi** (`kip="kod"`, `dil="python"`): boşluk/satır birebir korunur; kendi Python lexer'ı,
   tanımlayıcı bölme ve kod sözlüğü.
-- **13.511 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
-  harf, sembol, kod, `az-1`, `az-2`, `en-1`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
+- **17.011 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
+  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
   dilin bölümü yalnız o dilin metin kipinde kullanılır; İngilizce metin kipi kod sözlüğündeki (`time`, `data`) ve AZ
   bölümündeki aynı yazımlı tokenları da paylaşır (aynı dizgi iki kez eklenemez).
 - **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): metin kipinde
