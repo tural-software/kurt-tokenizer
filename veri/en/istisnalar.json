@@ -1,0 +1,897 @@
+{
+ "düzensiz": {
+  "am": {
+   "tokens": [
+    "am"
+   ],
+   "not": "be+geçmiş (düzensiz)"
+  },
+  "are": {
+   "tokens": [
+    "are"
+   ],
+   "not": "be+geçmiş (düzensiz)"
+  },
+  "ate": {
+   "tokens": [
+    "ate"
+   ],
+   "not": "eat+geçmiş (düzensiz)"
+  },
+  "became": {
+   "tokens": [
+    "became"
+   ],
+   "not": "become+geçmiş (düzensiz)"
+  },
+  "been": {
+   "tokens": [
+    "been"
+   ],
+   "not": "be+geçmiş (düzensiz)"
+  },
+  "began": {
+   "tokens": [
+    "began"
+   ],
+   "not": "begin+geçmiş (düzensiz)"
+  },
+  "begun": {
+   "tokens": [
+    "begun"
+   ],
+   "not": "begin+geçmiş (düzensiz)"
+  },
+  "being": {
+   "tokens": [
+    "being"
+   ],
+   "not": "be+ing (e düşmez; düzensiz)"
+  },
+  "best": {
+   "tokens": [
+    "best"
+   ],
+   "not": "good+karşılaştırma (düzensiz)"
+  },
+  "better": {
+   "tokens": [
+    "better"
+   ],
+   "not": "good+karşılaştırma (düzensiz)"
+  },
+  "bitten": {
+   "tokens": [
+    "bitten"
+   ],
+   "not": "bite+geçmiş (düzensiz)"
+  },
+  "blew": {
+   "tokens": [
+    "blew"
+   ],
+   "not": "blow+geçmiş (düzensiz)"
+  },
+  "blown": {
+   "tokens": [
+    "blown"
+   ],
+   "not": "blow+geçmiş (düzensiz)"
+  },
+  "bought": {
+   "tokens": [
+    "bought"
+   ],
+   "not": "buy+geçmiş (düzensiz)"
+  },
+  "broke": {
+   "tokens": [
+    "broke"
+   ],
+   "not": "break+geçmiş (düzensiz)"
+  },
+  "broken": {
+   "tokens": [
+    "broken"
+   ],
+   "not": "break+geçmiş (düzensiz)"
+  },
+  "brought": {
+   "tokens": [
+    "brought"
+   ],
+   "not": "bring+geçmiş (düzensiz)"
+  },
+  "built": {
+   "tokens": [
+    "built"
+   ],
+   "not": "build+geçmiş (düzensiz)"
+  },
+  "came": {
+   "tokens": [
+    "came"
+   ],
+   "not": "come+geçmiş (düzensiz)"
+  },
+  "caught": {
+   "tokens": [
+    "caught"
+   ],
+   "not": "catch+geçmiş (düzensiz)"
+  },
+  "children": {
+   "tokens": [
+    "children"
+   ],
+   "not": "child+çoğul (düzensiz)"
+  },
+  "chose": {
+   "tokens": [
+    "chose"
+   ],
+   "not": "choose+geçmiş (düzensiz)"
+  },
+  "chosen": {
+   "tokens": [
+    "chosen"
+   ],
+   "not": "choose+geçmiş (düzensiz)"
+  },
+  "dealt": {
+   "tokens": [
+    "dealt"
+   ],
+   "not": "deal+geçmiş (düzensiz)"
+  },
+  "did": {
+   "tokens": [
+    "did"
+   ],
+   "not": "do+geçmiş (düzensiz)"
+  },
+  "done": {
+   "tokens": [
+    "done"
+   ],
+   "not": "do+geçmiş (düzensiz)"
+  },
+  "drank": {
+   "tokens": [
+    "drank"
+   ],
+   "not": "drink+geçmiş (düzensiz)"
+  },
+  "drawn": {
+   "tokens": [
+    "drawn"
+   ],
+   "not": "draw+geçmiş (düzensiz)"
+  },
+  "drew": {
+   "tokens": [
+    "drew"
+   ],
+   "not": "draw+geçmiş (düzensiz)"
+  },
+  "driven": {
+   "tokens": [
+    "driven"
+   ],
+   "not": "drive+geçmiş (düzensiz)"
+  },
+  "drove": {
+   "tokens": [
+    "drove"
+   ],
+   "not": "drive+geçmiş (düzensiz)"
+  },
+  "drunk": {
+   "tokens": [
+    "drunk"
+   ],
+   "not": "drink+geçmiş (düzensiz)"
+  },
+  "eaten": {
+   "tokens": [
+    "eaten"
+   ],
+   "not": "eat+geçmiş (düzensiz)"
+  },
+  "fallen": {
+   "tokens": [
+    "fallen"
+   ],
+   "not": "fall+geçmiş (düzensiz)"
+  },
+  "farther": {
+   "tokens": [
+    "farther"
+   ],
+   "not": "far+karşılaştırma (düzensiz)"
+  },
+  "farthest": {
+   "tokens": [
+    "farthest"
+   ],
+   "not": "far+karşılaştırma (düzensiz)"
+  },
+  "fed": {
+   "tokens": [
+    "fed"
+   ],
+   "not": "feed+geçmiş (düzensiz)"
+  },
+  "feet": {
+   "tokens": [
+    "feet"
+   ],
+   "not": "foot+çoğul (düzensiz)"
+  },
+  "fell": {
+   "tokens": [
+    "fell"
+   ],
+   "not": "fall+geçmiş (düzensiz)"
+  },
+  "felt": {
+   "tokens": [
+    "felt"
+   ],
+   "not": "feel+geçmiş (düzensiz)"
+  },
+  "flew": {
+   "tokens": [
+    "flew"
+   ],
+   "not": "fly+geçmiş (düzensiz)"
+  },
+  "flown": {
+   "tokens": [
+    "flown"
+   ],
+   "not": "fly+geçmiş (düzensiz)"
+  },
+  "forgot": {
+   "tokens": [
+    "forgot"
+   ],
+   "not": "forget+geçmiş (düzensiz)"
+  },
+  "forgotten": {
+   "tokens": [
+    "forgotten"
+   ],
+   "not": "forget+geçmiş (düzensiz)"
+  },
+  "fought": {
+   "tokens": [
+    "fought"
+   ],
+   "not": "fight+geçmiş (düzensiz)"
+  },
+  "found": {
+   "tokens": [
+    "found"
+   ],
+   "not": "find+geçmiş (düzensiz)"
+  },
+  "froze": {
+   "tokens": [
+    "froze"
+   ],
+   "not": "freeze+geçmiş (düzensiz)"
+  },
+  "frozen": {
+   "tokens": [
+    "frozen"
+   ],
+   "not": "freeze+geçmiş (düzensiz)"
+  },
+  "further": {
+   "tokens": [
+    "further"
+   ],
+   "not": "far+karşılaştırma (düzensiz)"
+  },
+  "furthest": {
+   "tokens": [
+    "furthest"
+   ],
+   "not": "far+karşılaştırma (düzensiz)"
+  },
+  "gave": {
+   "tokens": [
+    "gave"
+   ],
+   "not": "give+geçmiş (düzensiz)"
+  },
+  "geese": {
+   "tokens": [
+    "geese"
+   ],
+   "not": "goose+çoğul (düzensiz)"
+  },
+  "given": {
+   "tokens": [
+    "given"
+   ],
+   "not": "give+geçmiş (düzensiz)"
+  },
+  "gone": {
+   "tokens": [
+    "gone"
+   ],
+   "not": "go+geçmiş (düzensiz)"
+  },
+  "got": {
+   "tokens": [
+    "got"
+   ],
+   "not": "get+geçmiş (düzensiz)"
+  },
+  "gotten": {
+   "tokens": [
+    "gotten"
+   ],
+   "not": "get+geçmiş (düzensiz)"
+  },
+  "grew": {
+   "tokens": [
+    "grew"
+   ],
+   "not": "grow+geçmiş (düzensiz)"
+  },
+  "grown": {
+   "tokens": [
+    "grown"
+   ],
+   "not": "grow+geçmiş (düzensiz)"
+  },
+  "had": {
+   "tokens": [
+    "had"
+   ],
+   "not": "have+geçmiş (düzensiz)"
+  },
+  "has": {
+   "tokens": [
+    "has"
+   ],
+   "not": "have+geçmiş (düzensiz)"
+  },
+  "heard": {
+   "tokens": [
+    "heard"
+   ],
+   "not": "hear+geçmiş (düzensiz)"
+  },
+  "held": {
+   "tokens": [
+    "held"
+   ],
+   "not": "hold+geçmiş (düzensiz)"
+  },
+  "hid": {
+   "tokens": [
+    "hid"
+   ],
+   "not": "hide+geçmiş (düzensiz)"
+  },
+  "hidden": {
+   "tokens": [
+    "hidden"
+   ],
+   "not": "hide+geçmiş (düzensiz)"
+  },
+  "is": {
+   "tokens": [
+    "is"
+   ],
+   "not": "be+geçmiş (düzensiz)"
+  },
+  "kept": {
+   "tokens": [
+    "kept"
+   ],
+   "not": "keep+geçmiş (düzensiz)"
+  },
+  "knew": {
+   "tokens": [
+    "knew"
+   ],
+   "not": "know+geçmiş (düzensiz)"
+  },
+  "known": {
+   "tokens": [
+    "known"
+   ],
+   "not": "know+geçmiş (düzensiz)"
+  },
+  "laid": {
+   "tokens": [
+    "laid"
+   ],
+   "not": "lay+geçmiş (düzensiz)"
+  },
+  "lain": {
+   "tokens": [
+    "lain"
+   ],
+   "not": "lie+geçmiş (düzensiz)"
+  },
+  "lay": {
+   "tokens": [
+    "lay"
+   ],
+   "not": "lie+geçmiş (düzensiz)"
+  },
+  "least": {
+   "tokens": [
+    "least"
+   ],
+   "not": "little+karşılaştırma (düzensiz)"
+  },
+  "led": {
+   "tokens": [
+    "led"
+   ],
+   "not": "lead+geçmiş (düzensiz)"
+  },
+  "left": {
+   "tokens": [
+    "left"
+   ],
+   "not": "leave+geçmiş (düzensiz)"
+  },
+  "less": {
+   "tokens": [
+    "less"
+   ],
+   "not": "little+karşılaştırma (düzensiz)"
+  },
+  "lit": {
+   "tokens": [
+    "lit"
+   ],
+   "not": "light+geçmiş (düzensiz)"
+  },
+  "lost": {
+   "tokens": [
+    "lost"
+   ],
+   "not": "lose+geçmiş (düzensiz)"
+  },
+  "made": {
+   "tokens": [
+    "made"
+   ],
+   "not": "make+geçmiş (düzensiz)"
+  },
+  "meant": {
+   "tokens": [
+    "meant"
+   ],
+   "not": "mean+geçmiş (düzensiz)"
+  },
+  "men": {
+   "tokens": [
+    "men"
+   ],
+   "not": "man+çoğul (düzensiz)"
+  },
+  "met": {
+   "tokens": [
+    "met"
+   ],
+   "not": "meet+geçmiş (düzensiz)"
+  },
+  "mice": {
+   "tokens": [
+    "mice"
+   ],
+   "not": "mouse+çoğul (düzensiz)"
+  },
+  "more": {
+   "tokens": [
+    "more"
+   ],
+   "not": "many+karşılaştırma (düzensiz)"
+  },
+  "most": {
+   "tokens": [
+    "most"
+   ],
+   "not": "many+karşılaştırma (düzensiz)"
+  },
+  "paid": {
+   "tokens": [
+    "paid"
+   ],
+   "not": "pay+geçmiş (düzensiz)"
+  },
+  "people": {
+   "tokens": [
+    "people"
+   ],
+   "not": "person+çoğul (düzensiz)"
+  },
+  "ran": {
+   "tokens": [
+    "ran"
+   ],
+   "not": "run+geçmiş (düzensiz)"
+  },
+  "rang": {
+   "tokens": [
+    "rang"
+   ],
+   "not": "ring+geçmiş (düzensiz)"
+  },
+  "ridden": {
+   "tokens": [
+    "ridden"
+   ],
+   "not": "ride+geçmiş (düzensiz)"
+  },
+  "risen": {
+   "tokens": [
+    "risen"
+   ],
+   "not": "rise+geçmiş (düzensiz)"
+  },
+  "rode": {
+   "tokens": [
+    "rode"
+   ],
+   "not": "ride+geçmiş (düzensiz)"
+  },
+  "rose": {
+   "tokens": [
+    "rose"
+   ],
+   "not": "rise+geçmiş (düzensiz)"
+  },
+  "rung": {
+   "tokens": [
+    "rung"
+   ],
+   "not": "ring+geçmiş (düzensiz)"
+  },
+  "said": {
+   "tokens": [
+    "said"
+   ],
+   "not": "say+geçmiş (düzensiz)"
+  },
+  "sang": {
+   "tokens": [
+    "sang"
+   ],
+   "not": "sing+geçmiş (düzensiz)"
+  },
+  "sat": {
+   "tokens": [
+    "sat"
+   ],
+   "not": "sit+geçmiş (düzensiz)"
+  },
+  "saw": {
+   "tokens": [
+    "saw"
+   ],
+   "not": "see+geçmiş (düzensiz)"
+  },
+  "seen": {
+   "tokens": [
+    "seen"
+   ],
+   "not": "see+geçmiş (düzensiz)"
+  },
+  "sent": {
+   "tokens": [
+    "sent"
+   ],
+   "not": "send+geçmiş (düzensiz)"
+  },
+  "shaken": {
+   "tokens": [
+    "shaken"
+   ],
+   "not": "shake+geçmiş (düzensiz)"
+  },
+  "shook": {
+   "tokens": [
+    "shook"
+   ],
+   "not": "shake+geçmiş (düzensiz)"
+  },
+  "shown": {
+   "tokens": [
+    "shown"
+   ],
+   "not": "show+geçmiş (düzensiz)"
+  },
+  "slept": {
+   "tokens": [
+    "slept"
+   ],
+   "not": "sleep+geçmiş (düzensiz)"
+  },
+  "sold": {
+   "tokens": [
+    "sold"
+   ],
+   "not": "sell+geçmiş (düzensiz)"
+  },
+  "sought": {
+   "tokens": [
+    "sought"
+   ],
+   "not": "seek+geçmiş (düzensiz)"
+  },
+  "spent": {
+   "tokens": [
+    "spent"
+   ],
+   "not": "spend+geçmiş (düzensiz)"
+  },
+  "spoke": {
+   "tokens": [
+    "spoke"
+   ],
+   "not": "speak+geçmiş (düzensiz)"
+  },
+  "spoken": {
+   "tokens": [
+    "spoken"
+   ],
+   "not": "speak+geçmiş (düzensiz)"
+  },
+  "stole": {
+   "tokens": [
+    "stole"
+   ],
+   "not": "steal+geçmiş (düzensiz)"
+  },
+  "stolen": {
+   "tokens": [
+    "stolen"
+   ],
+   "not": "steal+geçmiş (düzensiz)"
+  },
+  "stood": {
+   "tokens": [
+    "stood"
+   ],
+   "not": "stand+geçmiş (düzensiz)"
+  },
+  "sung": {
+   "tokens": [
+    "sung"
+   ],
+   "not": "sing+geçmiş (düzensiz)"
+  },
+  "swam": {
+   "tokens": [
+    "swam"
+   ],
+   "not": "swim+geçmiş (düzensiz)"
+  },
+  "swum": {
+   "tokens": [
+    "swum"
+   ],
+   "not": "swim+geçmiş (düzensiz)"
+  },
+  "taken": {
+   "tokens": [
+    "taken"
+   ],
+   "not": "take+geçmiş (düzensiz)"
+  },
+  "taught": {
+   "tokens": [
+    "taught"
+   ],
+   "not": "teach+geçmiş (düzensiz)"
+  },
+  "teeth": {
+   "tokens": [
+    "teeth"
+   ],
+   "not": "tooth+çoğul (düzensiz)"
+  },
+  "thought": {
+   "tokens": [
+    "thought"
+   ],
+   "not": "think+geçmiş (düzensiz)"
+  },
+  "threw": {
+   "tokens": [
+    "threw"
+   ],
+   "not": "throw+geçmiş (düzensiz)"
+  },
+  "thrown": {
+   "tokens": [
+    "thrown"
+   ],
+   "not": "throw+geçmiş (düzensiz)"
+  },
+  "told": {
+   "tokens": [
+    "told"
+   ],
+   "not": "tell+geçmiş (düzensiz)"
+  },
+  "took": {
+   "tokens": [
+    "took"
+   ],
+   "not": "take+geçmiş (düzensiz)"
+  },
+  "tore": {
+   "tokens": [
+    "tore"
+   ],
+   "not": "tear+geçmiş (düzensiz)"
+  },
+  "torn": {
+   "tokens": [
+    "torn"
+   ],
+   "not": "tear+geçmiş (düzensiz)"
+  },
+  "understood": {
+   "tokens": [
+    "understood"
+   ],
+   "not": "understand+geçmiş (düzensiz)"
+  },
+  "was": {
+   "tokens": [
+    "was"
+   ],
+   "not": "be+geçmiş (düzensiz)"
+  },
+  "went": {
+   "tokens": [
+    "went"
+   ],
+   "not": "go+geçmiş (düzensiz)"
+  },
+  "were": {
+   "tokens": [
+    "were"
+   ],
+   "not": "be+geçmiş (düzensiz)"
+  },
+  "woke": {
+   "tokens": [
+    "woke"
+   ],
+   "not": "wake+geçmiş (düzensiz)"
+  },
+  "woken": {
+   "tokens": [
+    "woken"
+   ],
+   "not": "wake+geçmiş (düzensiz)"
+  },
+  "women": {
+   "tokens": [
+    "women"
+   ],
+   "not": "woman+çoğul (düzensiz)"
+  },
+  "won": {
+   "tokens": [
+    "won"
+   ],
+   "not": "win+geçmiş (düzensiz)"
+  },
+  "wore": {
+   "tokens": [
+    "wore"
+   ],
+   "not": "wear+geçmiş (düzensiz)"
+  },
+  "worn": {
+   "tokens": [
+    "worn"
+   ],
+   "not": "wear+geçmiş (düzensiz)"
+  },
+  "worse": {
+   "tokens": [
+    "worse"
+   ],
+   "not": "bad+karşılaştırma (düzensiz)"
+  },
+  "worst": {
+   "tokens": [
+    "worst"
+   ],
+   "not": "bad+karşılaştırma (düzensiz)"
+  },
+  "written": {
+   "tokens": [
+    "written"
+   ],
+   "not": "write+geçmiş (düzensiz)"
+  },
+  "wrote": {
+   "tokens": [
+    "wrote"
+   ],
+   "not": "write+geçmiş (düzensiz)"
+  }
+ },
+ "kısaltma": {
+  "can't": {
+   "tokens": [
+    "ca",
+    "n't"
+   ],
+   "not": "klitikli kalıp (taban sözcük değil)"
+  },
+  "can’t": {
+   "tokens": [
+    "ca",
+    "n’t"
+   ],
+   "not": "klitikli kalıp (’)"
+  },
+  "won't": {
+   "tokens": [
+    "wo",
+    "n't"
+   ],
+   "not": "klitikli kalıp (taban sözcük değil)"
+  },
+  "won’t": {
+   "tokens": [
+    "wo",
+    "n’t"
+   ],
+   "not": "klitikli kalıp (’)"
+  },
+  "shan't": {
+   "tokens": [
+    "sha",
+    "n't"
+   ],
+   "not": "klitikli kalıp (taban sözcük değil)"
+  },
+  "shan’t": {
+   "tokens": [
+    "sha",
+    "n’t"
+   ],
+   "not": "klitikli kalıp (’)"
+  },
+  "ain't": {
+   "tokens": [
+    "ai",
+    "n't"
+   ],
+   "not": "klitikli kalıp (taban sözcük değil)"
+  },
+  "ain’t": {
+   "tokens": [
+    "ai",
+    "n’t"
+   ],
+   "not": "klitikli kalıp (’)"
+  },
+  "cannot": {
+   "tokens": [
+    "can",
+    "not"
+   ],
+   "not": "klitikli kalıp (taban sözcük değil)"
+  }
+ }
+}

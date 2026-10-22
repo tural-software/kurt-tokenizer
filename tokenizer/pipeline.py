@@ -309,9 +309,45 @@ def _altbirimler(parça):
         yield "".join(grup), bool(harf_mi)
 
 
+def _klitik_birleştir(altbirimler, profil):
+    """Kesmeli klitiği sözcükle tek birime birleştirir (EN don't, it’s, we're): [harf, kesme, harf] üçlüsünde kesme
+    sonrası harf koşusu bir klitiğin kesme sonrası kısmıysa (n't'de önceki koşu 'n' ile bitmeli). Diğer kesmeler
+    (O'Brien, rock'n'roll) dokunulmaz → harf koşuları ayrı sözcük kalır."""
+    sonuç, j = [], 0
+    while j < len(altbirimler):
+        a, h = altbirimler[j]
+        if (not h and len(a) == 1 and a in KESME and sonuç and sonuç[-1][1]
+                and j + 1 < len(altbirimler) and altbirimler[j + 1][1]):
+            önce, sonra = sonuç[-1][0], altbirimler[j + 1][0]
+            ö, s = profil.küçült(önce), profil.küçült(sonra)
+            for kl in profil.klitikler:
+                kö, ks = kl.split("'")
+                if s == ks and ö.endswith(kö) and len(ö) > len(kö):
+                    sonuç[-1] = (önce + a + sonra, True)
+                    j += 2
+                    break
+            else:
+                sonuç.append((a, h))
+                j += 1
+            continue
+        sonuç.append((a, h))
+        j += 1
+    return sonuç
+
+
 def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=None, ad_okuma=False):
     """(token_listesi, bilinmeyen_mi) döndürür. bilinmeyen_mi: çözülemedi → kuyruğa alındı.
     ad_okuma: kelime Başlık biçiminde (profil.özel_ad_başlık) → özel ad okuması yeğlenir (Gəncə = gəncə, gənc+ə değil)."""
+    if profil is not None and profil.motor == "en":
+        from tokenizer import en                 # İngilizce yazım kurallı çözümleyici (EN-1)
+        çs, taban = en.çözümle(kelime, kökler, ekler, istisnalar, profil.klitikler)
+        if taban is not None and kuyruk is not None:   # klitikli bilinmeyen: taban sorulur (Mary's → mary)
+            kuyruk.ekle(taban, bağlam)
+        if çs:
+            return list(en.en_iyi(çs).tokens), taban is not None
+        if kuyruk is not None:
+            kuyruk.ekle(kelime, bağlam)
+        return [kelime], True
     çs = çözümle(kelime, kökler, ekler, istisnalar, profil)
     if çs:
         return list(en_iyi_çözüm(çs, kökler, ekler, profil, ad_okuma).tokens), False
@@ -480,6 +516,9 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
     biçimli sözcük ('az', 'kelime', 'ad') — okuması küçük harfliden farklı olabilir (Gəncə ↔ gəncə)."""
     önceki_kesme = False                        # bir önceki altbirim kesme ile mi bitti?
     altbirimler = list(_altbirimler(parça))
+    if profil is not None and profil.klitikler:
+        altbirimler = _klitik_birleştir(altbirimler, profil)
+    kesme_eki = profil is None or profil.kesme_eki
     atla = False
     for j, (altbirim, kelime_mi) in enumerate(altbirimler):
         if atla:
@@ -496,7 +535,7 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
         if not kelime_mi:                        # noktalama: her karakter ayrı token
             for c in altbirim:                   # HARFİYEN '▁' boşluk tokenıyla karışmasın → bayt
                 tokenlar.extend(bayt_tokenları(c) if c == BOŞLUK else c)
-            önceki_kesme = altbirim[-1] in KESME or (
+            önceki_kesme = (kesme_eki and altbirim[-1] in KESME) or (
                 profil is not None and profil.rakam_tire_eki and altbirim[-1] == "-"
                 and len(altbirim) > 1 and (altbirim[-2].isdigit() or altbirim[-2] in RAKAM_İŞARET))
             #                                            AZ: 2024-cü, 5-də, 30%-i, km²-dir
@@ -517,6 +556,11 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
             continue
         küçük = sesler.türkçe_küçült(altbirim) if profil is None else profil.küçült(altbirim)
         durum = _harf_durumu(altbirim, küçük, profil)
+        if profil is not None and profil.casing == "unicode" and durum in BÜYÜK:
+            # EN: Python casing'i, decode'un ASCII işaretçisiyle aynı kural (str.upper; 'I' → 'i', 'ı' değil).
+            # Klitikli HEP BÜYÜK sözcük (DON'T) bütün: decode'da kesme koşuyu bitirir, klitik büyütülemezdi.
+            durum = ("düz" if durum == HEP_BÜYÜK and any(c in KESME for c in altbirim)
+                     else ASCII_BAŞ if durum == BAŞ_BÜYÜK else ASCII_HEP)
         if durum == "düz":                       # karışık biçim → bütün-token, koru
             tokenlar.append(altbirim)
             continue

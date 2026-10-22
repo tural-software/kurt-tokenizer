@@ -34,6 +34,9 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   (`Gəncə`), küçük harfte sıradan sözcük olarak (`gəncə` = gənc+ə); soyadlar ad + ek (`Əliyev`, `Məmmədova`).
   Konuşma yazımı da çözülür (`burda`, `edəcəm`, `bilərsiz`, `şəkili`); normatif okuma varsa o seçilir.
   Türkçe metnin çıktısı AZ desteğinden etkilenmez.
+- **İngilizce** (`dil="en"`, geliştiriliyor): yazım kurallı kendi çözümleyicisi (`tokenizer/en.py`) — çekim ve yapım
+  ekleri (`running = run+n+ing`, `carried = carri+ed`, `knives = kniv+es`), önek (`un+happy`), klitik (`do+n't`), düzensiz
+  biçimler bütün; büyük harf Unicode kuralıyla (`I` → `i`, `ı` değil). Şu an tohum sözlük; tam sözlük ve vocab bölümü sonraki fazlarda.
 - **Kod kipi** (`kip="kod"`, `dil="python"`): boşluk/satır birebir korunur; kendi Python lexer'ı,
   tanımlayıcı bölme ve kod sözlüğü.
 - **8.511 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
@@ -82,9 +85,10 @@ veri/           Türkçe kök sözlüğü (harf başına), ek/istisna/zamir/işl
                 vocab.json, kod sözlüğü, doğrulama korpusu
 veri/az/        Azerbaycan Türkçesi: kök sözlüğü, ekler, istisnalar, vocab bölümü (az-1),
                 altın liste ve doğrulama metni
+veri/en/        İngilizce: kök sözlüğü (kokler.txt), ekler, istisnalar (düzensiz/kısaltma), altın liste
 araclar/        kaynak → JSON üretici (uret), vocab üretici (vocab_uret), korpus doğrulayıcı
                 (dogrula_korpus), regresyon karşılaştırıcı (regresyon), kod doğrulayıcı (kod_dogrula)
-testler/        stdlib unittest (251 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
+testler/        stdlib unittest (266 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
 ```
 
 ## Veri kaynakları (Azerbaycan Türkçesi)

@@ -1,0 +1,96 @@
+# İngilizce altın liste (EN-1, elle): sözcük<TAB>beklenen tokenlar (boşlukla). test_en birebir kilitler.
+# Yazım değişimi kök tokenında (mak+ing, carri+ed), ikiz ünsüz ayrı (run+n+ing), önek/klitik ayrı, düzensiz bütün.
+# çekim
+books	book s
+boxes	box es
+watches	watch es
+studies	studi es
+plays	play s
+goes	go es
+does	do es
+heroes	hero es
+photos	photo s
+knives	kniv es
+wives	wiv es
+shelves	shelv es
+leaves	leave s
+roofs	roof s
+cities	citi es
+walked	walk ed
+liked	lik ed
+carried	carri ed
+enjoyed	enjoy ed
+stopped	stop p ed
+planned	plan n ed
+agreed	agre ed
+died	di ed
+walking	walk ing
+making	mak ing
+running	run n ing
+dying	dy ing
+seeing	see ing
+carrying	carry ing
+beginning	begin n ing
+preferred	prefer r ed
+controlled	control l ed
+bigger	big g er
+biggest	big g est
+happier	happi er
+happiest	happi est
+hottest	hot t est
+larger	larg er
+# yapım + yığılma
+happily	happi ly
+happiness	happi ness
+careless	care less
+carelessness	care less ness
+helpful	help ful
+beautifully	beautiful ly
+payment	pay ment
+readable	read able
+runner	run n er
+maker	mak er
+buildings	build ing s
+marketing	market ing
+# önek
+unhappy	un happy
+unhappiness	un happi ness
+redo	re do
+reopened	re open ed
+disagree	dis agree
+misread	mis read
+nonstop	non stop
+overcome	over come
+# klitik
+don't	do n't
+doesn't	do es n't
+isn't	is n't
+it's	it 's
+i'm	i 'm
+we're	we 're
+they've	they 've
+you'll	you 'll
+she'd	she 'd
+children's	children 's
+can't	ca n't
+won't	wo n't
+it’s	it ’s
+# düzensiz + kapalı sınıf + bütün kök (sahte bölme yok)
+went	went
+children	children
+better	better
+people	people
+since	since
+time	time
+life	life
+video	video
+site	site
+corner	corner
+news	news
+ever	ever
+done	done
+program	program
+general	general
+problem	problem
+teacher	teacher
+being	being

@@ -1,0 +1,22 @@
+{
+  "çoğul":            {"yüzey": "s",    "öbek": ["isim"],          "yuva": 2, "s_eki": true},
+  "şimdiki_3tekil":   {"yüzey": "s",    "öbek": ["fiil"],          "yuva": 2, "s_eki": true},
+  "geçmiş":           {"yüzey": "ed",   "öbek": ["fiil"],          "yuva": 2},
+  "ortaç_ing":        {"yüzey": "ing",  "öbek": ["fiil"],          "yuva": 2, "çıkış": "isim"},
+  "karşılaştırma":    {"yüzey": "er",   "öbek": ["sıfat"],         "yuva": 2},
+  "üstünlük":         {"yüzey": "est",  "öbek": ["sıfat"],         "yuva": 2},
+  "yapım_ly":         {"yüzey": "ly",   "öbek": ["sıfat"],         "yuva": 1, "çıkış": "zarf"},
+  "yapım_ness":       {"yüzey": "ness", "öbek": ["sıfat"],         "yuva": 1, "çıkış": "isim"},
+  "yapım_ment":       {"yüzey": "ment", "öbek": ["fiil"],          "yuva": 1, "çıkış": "isim"},
+  "yapım_ful":        {"yüzey": "ful",  "öbek": ["isim"],          "yuva": 1, "çıkış": "sıfat"},
+  "yapım_less":       {"yüzey": "less", "öbek": ["isim"],          "yuva": 1, "çıkış": "sıfat"},
+  "yapım_able":       {"yüzey": "able", "öbek": ["fiil"],          "yuva": 1, "çıkış": "sıfat"},
+  "yapım_er":         {"yüzey": "er",   "öbek": ["fiil"],          "yuva": 1, "çıkış": "isim"},
+  "önek_un":          {"yüzey": "un",   "öbek": ["sıfat", "fiil"], "önek": true},
+  "önek_re":          {"yüzey": "re",   "öbek": ["fiil"],          "önek": true},
+  "önek_dis":         {"yüzey": "dis",  "öbek": ["fiil", "sıfat"], "önek": true},
+  "önek_mis":         {"yüzey": "mis",  "öbek": ["fiil"],          "önek": true},
+  "önek_pre":         {"yüzey": "pre",  "öbek": ["fiil"],          "önek": true},
+  "önek_non":         {"yüzey": "non",  "öbek": ["sıfat", "isim"], "önek": true},
+  "önek_over":        {"yüzey": "over", "öbek": ["fiil"],          "önek": true}
+}

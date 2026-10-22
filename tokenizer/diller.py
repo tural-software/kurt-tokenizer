@@ -45,6 +45,9 @@ def yükle(dil: str | None = None) -> DilVerisi:
         raise ValueError(f"bilinmeyen dil: {dil!r} (Türkçe için dil verilmez)")
     profil = None if dil is None else PROFİLLER[dil]
     dizin = veri_dizini(dil)
+    if profil is not None and profil.motor == "en":   # İngilizce: kendi veri biçimi (kokler.txt, tokenizer/en.py)
+        from tokenizer import en
+        return DilVerisi(*en.veri_yükle(dizin))
     ek_dosyalar = [dizin / ad for ad in ("zamirler.json", "islev_kokleri.json", "ozel_adlar.json")
                    if (dizin / ad).exists()]
     kökler = çalışma_sözlüğü(dizin / "kokler", *ek_dosyalar, profil=profil)

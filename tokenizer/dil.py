@@ -71,6 +71,14 @@ class DilProfili:
     seyrek_diziler: frozenset = frozenset()  # seyrek_ekler ile aynı katman: bu ARDIŞIK ek çiftleri
     #                                          (AZ ortaç -An + idi/imiş: yenilənmiş = yenilə+n+miş, yen+il+ən+miş
     #                                          değil; tamlayan + idi: oxundu = oxu+n+du, ox+un+du değil)
+    # Dil ailesi (EN-1): Türk dilleri ünlü uyumlu üreteci (birlestir/cozumle) paylaşır; İngilizce yazım
+    # kurallı kendi üretecini (tokenizer/en.py) kullanır. Hat, casing, vocab, kuyruk ve seçim ortak.
+    motor: str = "türk"         # "türk" | "en" (sözcük çözümleyicisi)
+    casing: str = "türk"        # "türk": İ/i I/ı, işaretçi <|Bb|>/<|BB|> | "unicode": str.lower/upper,
+    #                             işaretçi <|Ab|>/<|AA|> (İngilizce 'I' → 'ı' olmaz)
+    hece: str = "türk"          # yedek heceleme kuralı: "türk" (hece.py) | "en" (en.hecele)
+    kesme_eki: bool = True      # kesme sonrası harf koşusu EK (Türkçe İstanbul'da); EN'de kapalı (O'Brien)
+    klitikler: tuple = ()       # kesmeli klitikler (EN 's 're n't …): sözcükle birleşik okunur (en.py)
     yeğlenmeyen_ekler: frozenset = frozenset()  # aynı token sayısında bu ekleri içermeyen çözüm
     #                             yeğlenir (AZ 2. kişi iyelik: altından = alt+ı+n+dan, altı+n+dan değil;
     #                             edilgen/ettirgen: yerinə = yer+i+n+ə, yeri+n+ə değil; yapım -lI: həlli =
@@ -100,15 +108,15 @@ class DilProfili:
     def ince_çevir(self, ünlü: str) -> str:
         return dict(self.ince_karşılık).get(ünlü, ünlü)
 
-    # ── yazım (casing: Türk dilleri İ/i, I/ı) ───────────────────────────────────────────────
+    # ── yazım (casing: Türk dilleri İ/i, I/ı; unicode = Python varsayılanı, decode ASCII işaretçisiyle aynı) ──
     def küçült(self, s: str) -> str:
-        return sesler.türkçe_küçült(s)
+        return s.lower() if self.casing == "unicode" else sesler.türkçe_küçült(s)
 
     def büyült(self, s: str) -> str:
-        return sesler.türkçe_büyült(s)
+        return s.upper() if self.casing == "unicode" else sesler.türkçe_büyült(s)
 
     def başlık(self, s: str) -> str:
-        return sesler.türkçe_başlık(s)
+        return s[:1].upper() + s[1:] if self.casing == "unicode" else sesler.türkçe_başlık(s)
 
     # ── sıralama ─────────────────────────────────────────────────────────────────────────────
     def alfabetik_anahtar(self, s: str) -> list[int]:
@@ -182,6 +190,29 @@ AZ = DilProfili(
                                  "ek_fiil_idi", "ek_fiil_di"}),
 )
 
-PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ}
+# İngilizce (EN-1): ünlü uyumu yok; ek yüzeyleri sabit, yazım değişimi (çift ünsüz, e düşmesi, y→i) en.py'de.
+# Ses alanları (kalın/ince…) Türk üretecine aittir, EN'de kullanılmaz. y yazımda ünlü de olabilir (hece/kural).
+EN = DilProfili(
+    kod="en",
+    alfabe="abcdefghijklmnopqrstuvwxyz",
+    ünlüler=frozenset("aeiou"),
+    kalın=frozenset(),
+    ince=frozenset(),
+    düz=frozenset(),
+    yuvarlak=frozenset(),
+    sert=frozenset(),
+    geniş_ince="",
+    ince_karşılık=(),
+    değişken_son="",
+    daralan_son="",
+    daraltma="",
+    motor="en",
+    casing="unicode",
+    hece="en",
+    kesme_eki=False,
+    klitikler=("n't", "'s", "'re", "'ve", "'ll", "'d", "'m"),
+)
+
+PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ, "en": EN}
 # Metin kipinde seçilebilen doğal diller (None = Türkçe). Kod kipindeki 'dil' programlama dilidir.
 DOĞAL_DİLLER = frozenset(k for k in PROFİLLER if k != "tr")
