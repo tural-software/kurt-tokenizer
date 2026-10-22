@@ -204,6 +204,23 @@ class CasingVeRoundTrip(unittest.TestCase):
             (KÖK / "veri" / "en" / "vocab_en1.json").read_text(encoding="utf-8"))["tokenlar"] if t in v.tok2id}
         self.assertTrue(en_bölümü & set(ids))                     # ortak dizgi (EN bölümü) FR'de açık
 
+    def test_fr1_bölümü_dil_kapısı(self):
+        # fr-1 tokenları YALNIZ dil="fr" metin kipinde; EN (önce eklenmiş ortak dil) fr-1'i göremez.
+        from tokenizer.vocab import EK_BÖLÜMLER
+        v = Vocab.yükle(KÖK / "veri" / "vocab.json")
+        fr1 = {v.tok2id[t] for ad, b in EK_BÖLÜMLER if ad == "fr-1" for t in b}
+        self.assertEqual(len(fr1), 3500)
+        metin = (VERİ / "korpus" / "dogrulama.txt").read_text(encoding="utf-8") + " Œuvre cœur L’Haÿ"
+        ids = v.encode_ids(metin, V.kökler, V.ekler, V.istisnalar, dil="fr")
+        self.assertTrue(fr1 & set(ids))
+        self.assertEqual(v.decode_ids(ids), metin_kanonik(metin))
+        self.assertIn(v.tok2id["œ"], v.encode_ids("œ", V.kökler, V.ekler, V.istisnalar, dil="fr"))
+        tr, az, en = diller.yükle(), diller.yükle("az"), diller.yükle("en")
+        self.assertFalse(fr1 & set(v.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar)))
+        self.assertFalse(fr1 & set(v.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar, kip="kod")))
+        self.assertFalse(fr1 & set(v.encode_ids(metin, az.kökler, az.ekler, az.istisnalar, dil="az")))
+        self.assertFalse(fr1 & set(v.encode_ids(metin, en.kökler, en.ekler, en.istisnalar, dil="en")))
+
     def test_türkçe_kipi_değişmez(self):
         tr = diller.yükle()
         self.assertEqual(encode("l'homme", tr.kökler, tr.ekler, tr.istisnalar)[:2], ["l", "'"])

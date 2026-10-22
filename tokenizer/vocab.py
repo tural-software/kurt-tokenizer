@@ -146,6 +146,9 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # EN-4 — İngilizce: EN motor tokenları − mevcut vocab (ek/önek/klitik hepsi + FineWeb'de kazancı en yüksek bütün
     # gövdeler + yedek yazım heceleri; pay 5.000). Yalnız dil="en" metin kipinde açık.
     ("en-1", _statik_bölüm(_VERİ / "en" / "vocab_en1.json")),
+    # FR-4 — Fransızca: FR motor tokenları − mevcut vocab (ek/önek/elizyon/istisna parçası + œ Œ ÿ Ÿ hepsi + FineWeb-2
+    # train'de kazancı en yüksek bütün gövdeler + yedek yazım heceleri; pay 3.500). Yalnız dil="fr" metin kipinde açık.
+    ("fr-1", _statik_bölüm(_VERİ / "fr" / "vocab_fr1.json")),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -169,6 +172,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("az-1", 1835, "cdb901d0ac52cc598eb11983f2a8e973032db66dcdbd6020f3dc40d363aa07d9"),
     ("az-2", 39, "87a9d197aa20b2e7f585d4e6c1a54fb4eb54f13f96189aba27c060f671b54d3a"),
     ("en-1", 5000, "ff21a7d8b7530ebc407724110d5ad35830351951c512c24b1a39a14c11ba613f"),
+    ("fr-1", 3500, "aed960a28afc27e1332de5d39b387b8019ea854e3e0111a36d5e2aed2d6f44b6"),
 ]
 
 
@@ -314,6 +318,17 @@ class Vocab:
         self._dil_izni: dict[int, frozenset[str]] = {
             self.tok2id[t]: frozenset({dil}) for ad, bölüm in bölümler
             if (dil := dil_bölümü(ad)) for t in bölüm if t in self.tok2id}
+        # FR-4: ortak kullanan dil (EN, FR) yalnız KENDİ ilk bölümünden ÖNCE eklenmiş dil bölümlerini paylaşır → sonradan
+        # eklenen dil (fr-1) önceki dilin (EN) çıktısını değiştirmez; FR en-1/az-1 dizgilerini kullanmaya devam eder.
+        sıra = {ad: i for i, (ad, _) in enumerate(bölümler)}
+        ilk: dict[str, int] = {}
+        for ad, _ in bölümler:
+            if (dil := dil_bölümü(ad)):
+                ilk.setdefault(dil, sıra[ad])
+        self._dil_sırası: dict[int, int] = {
+            self.tok2id[t]: sıra[ad] for ad, bölüm in bölümler
+            if dil_bölümü(ad) for t in bölüm if t in self.tok2id}
+        self._dil_ilk = ilk
         # Bütün-sözcük tokenları (matematik-sozcuk): hece yedeğinde kullanılmaz.
         self._yalnız_bütün = frozenset(self.tok2id[t] for t in _MATEMATİK_SÖZCÜK
                                        if t in self.tok2id)
@@ -332,7 +347,8 @@ class Vocab:
             return None
         if tid is not None and self._dil_izni:
             izin = self._dil_izni.get(tid)
-            if izin is not None and (kip != "metin" or (dil not in izin and not ortak)):
+            if izin is not None and (kip != "metin" or (dil not in izin and not (
+                    ortak and self._dil_sırası[tid] < self._dil_ilk.get(dil, len(self.id2tok))))):
                 return None
         return tid
 
@@ -348,6 +364,8 @@ class Vocab:
                 continue
             for ch in hece:
                 tid = self.tok2id.get(ch)
+                if tid is not None and tid in self._dil_izni:       # dil bölümü harfi (fr-1 œ) yalnız o dilde
+                    tid = self._id(ch, kip, dil)
                 if tid is not None:
                     ids.append(tid)
                 elif self._baytlı:
