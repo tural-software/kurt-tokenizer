@@ -21,7 +21,7 @@ döndürebilir; düzensizler (geniş zaman, gelmiyor, ek-fiil) kapsam dışı.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from tokenizer import sesler
 from tokenizer.birlestir import birleştir
@@ -70,6 +70,7 @@ def _lisanslar(profil) -> dict:
 KİŞİ_TİP = {
     "şahıs_1tekil_t1": (1, "V"), "şahıs_2tekil_t1": (1, "V"),
     "şahıs_1çoğul_t1": (1, "V"), "şahıs_2çoğul_t1": (1, "V"),
+    "şahıs_2çoğul_k": (1, "V"),                  # AZ danışıq -sIz (bilərsiz): -sInIz ile aynı bağlam
     "şahıs_3çoğul": ("T", "V"),
     "şahıs_1tekil_t2": (2, "V"), "şahıs_2tekil_t2": (2, "V"),
     "şahıs_1çoğul_t2": (2, "V"), "şahıs_2çoğul_t2": (2, "V"),
@@ -130,6 +131,7 @@ class Çözüm:
     tokens: list[str]
     kök: str
     ekler: list[str]
+    normatif_dışı: bool = False   # danışıq okuması (ünlüsü düşmemiş: şəkili); seçimde seyrek ek gibi en sona
 
 
 def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, profil=None):
@@ -197,6 +199,12 @@ def çözümle(kelime, kökler, ekler, istisnalar=None, profil=None) -> list[Ç�
         sınıflar = {"fiil" if t == "fiil" else "isim" for t in türler}
         for sınıf in sınıflar:
             _ara(kök_ad, kök, [], 0, sınıf, hedef, ekler, çözümler, profil)
+            if kök.düşen and profil is not None and profil.düşen_isteğe_bağlı:
+                # danışıq/normatif olmayan yazım: ünlüsü düşmeden (şəkili, ağızı); yüzey normatifinden farklı
+                # olduğundan (şəkli) iki okuma aynı sözcükte yarışmaz
+                geçici: list[Çözüm] = []
+                _ara(kök_ad, replace(kök, düşen=False), [], 0, sınıf, hedef, ekler, geçici, profil)
+                çözümler.extend(replace(ç, normatif_dışı=True) for ç in geçici)
 
     # aynı (token, kök, ek) çözümünü tekilleştir (eşseslide çıplak kök yinelenebilir)
     görülen, benzersiz = set(), []

@@ -87,5 +87,10 @@
     "mlrd": {"tokens": ["mlrd"], "not": "milyard"},
     "səh": {"tokens": ["səh"], "not": "səhifə"},
     "dəq": {"tokens": ["dəq"], "not": "dəqiqə"}
+  },
+  "danışıq": {
+    "biraz": {"tokens": ["bir", "az"], "not": "danışıq: bitişik 'bir az'"},
+    "birazdan": {"tokens": ["bir", "az", "dan"], "not": "danışıq: bitişik 'bir azdan'"},
+    "bugün": {"tokens": ["bu", "gün"], "not": "danışıq: bitişik 'bu gün'"}
   }
 }

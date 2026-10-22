@@ -15,8 +15,8 @@ from dataclasses import dataclass, field
 from tokenizer import sesler
 
 İZİNLİ_TÜRLER: frozenset[str] = frozenset(
-    {"fiil", "isim", "sıfat", "zarf", "zamir", "edat", "bağlaç", "ünlem"}
-)
+    {"fiil", "isim", "sıfat", "zarf", "zamir", "edat", "bağlaç", "ünlem", "özel"}
+)  # özel: özel ad (AZ veri/az/ozel_adlar.json) — ad sınıfında çekimlenir, seçimde sıradan köke yenilir
 İZİNLİ_SON_SES: frozenset[str] = frozenset({"ünlü", "ünsüz"})
 
 

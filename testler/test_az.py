@@ -73,9 +73,9 @@ class AzMotor(unittest.TestCase):
     def setUpClass(cls):
         cls.v = diller.yükle("az")
 
-    def en_iyi(self, w):
+    def en_iyi(self, w, ad_okuma=False):
         çs = çözümle(w, self.v.kökler, self.v.ekler, self.v.istisnalar, AZ)
-        return çs, (en_iyi_çözüm(çs, self.v.kökler, self.v.ekler, AZ) if çs else None)
+        return çs, (en_iyi_çözüm(çs, self.v.kökler, self.v.ekler, AZ, ad_okuma) if çs else None)
 
     def test_altın_liste(self):
         satır = 0
@@ -91,11 +91,12 @@ class AzMotor(unittest.TestCase):
 
     def test_kök_bütün_okunur(self):
         # İlke #1: hiçbir kök kendi başına bölünmez; türemiş (hep/çıplak) başlık bilinçli olarak bileşik okunur
-        # (sözlükte üretken fiil biçimi olan başlık: olan = ol+an) — o zaman da tokenlar köke birleşir.
+        # (sözlükte üretken fiil biçimi olan başlık: olan = ol+an) — o zaman da tokenlar köke birleşir. Özel ad
+        # (AZ-7) Başlık biçiminde bütün okunur (Gəncə); küçük harfte sıradan okuma bilinçli (gəncə = gənc+ə).
         bileşik = 0
         for ad, kök in self.v.kökler.items():
             with self.subTest(kök=ad):
-                _, b = self.en_iyi(ad)
+                _, b = self.en_iyi(ad, ad_okuma=kök.tür == "özel")
                 self.assertEqual("".join(b.tokens), ad)
                 if kök.türemiş in ("hep", "çıplak"):
                     bileşik += bool(b.ekler)
@@ -176,8 +177,11 @@ class AzHat(unittest.TestCase):
     def test_az1_bölümü_dil_kapısı(self):
         # az-1 tokenları YALNIZ dil="az" metin kipinde: AZ metni Türkçe kipte ve kod kipinde onları üretmez,
         # Türkçe metin hiç üretmez; AZ kipte üretir ve ID round-trip kayıpsız kalır.
-        az1 = {self.vocab.tok2id[t] for ad, b in EK_BÖLÜMLER if ad == "az-1" for t in b}
-        self.assertGreater(len(az1), 1500)
+        az1 = {self.vocab.tok2id[t] for ad, b in EK_BÖLÜMLER if ad.startswith("az-") for t in b}   # az-1 + az-2
+        self.assertGreater(len(az1), 1850)
+        az2 = {self.vocab.tok2id[t] for ad, b in EK_BÖLÜMLER if ad == "az-2" for t in b}
+        self.assertTrue(az2 & set(self.vocab.encode_ids("Məmmədova gedəcəm, Əliyeva görüləsi işi edəcək.",
+                                                         self.v.kökler, self.v.ekler, self.v.istisnalar, dil="az")))
         az = self.vocab.encode_ids(self.metin, self.v.kökler, self.v.ekler, self.v.istisnalar, dil="az")
         self.assertTrue(az1 & set(az))
         self.assertEqual(self.vocab.decode_ids(az), metin_kanonik(self.metin))
@@ -192,6 +196,56 @@ class AzHat(unittest.TestCase):
         önce = encode("Evlerimizde 2024-cü yıl", tr.kökler, tr.ekler, tr.istisnalar)
         self.assertEqual(önce[:4], [BAŞ_BÜYÜK, "ev", "ler", "i"])
         self.assertIn("cü", önce)                    # Türkçe kipte rakam-tire kuralı yok
+
+
+class AzDanışıqVeÖzelAd(unittest.TestCase):
+    """AZ-7: danışıq (konuşma) yazımı, özel ad listesi, soyad eki, -(y)AsI ortacı."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.v = diller.yükle("az")
+
+    def az(self, metin):
+        return encode(metin, self.v.kökler, self.v.ekler, self.v.istisnalar, dil="az")
+
+    def test_danışıq_biçimleri(self):
+        for metin, beklenen in (("burda", ["bur", "da"]), ("hardansa", ["har", "dan", "sa"]),
+                                ("burdayam", ["bur", "da", "y", "am"]), ("biraz", ["bir", "az"]),
+                                ("bugün", ["bu", "gün"]), ("bilərsiz", ["bil", "ər", "siz"]),
+                                ("edəcəm", ["ed", "əcəm"]), ("bilməyəcəm", ["bil", "mə", "y", "əcəm"]),
+                                ("şəkili", ["şə", "kil", "i"]), ("şəkli", ["şə", "kl", "i"])):
+            self.assertEqual(self.az(metin), beklenen, metin)
+
+    def test_seyrek_danışıq_ve_ortaç_normatife_yenilir(self):
+        # normatif okuma varsa danışıq/seyrek okuma seçilmez: alına bilər (al+ın+a, 'alına' alın+a değil),
+        # atası = ata+sı (at + -(y)AsI değil), şəkərsiz = şəkər+siz (2.çoğul -sIz değil)
+        self.assertEqual(self.az("alına"), ["al", "ı", "n", "a"])
+        self.assertEqual(self.az("atası"), ["a", "ta", "s", "ı"])
+        self.assertEqual(self.az("şəkərsiz"), ["şə", "kər", "siz"])
+        self.assertEqual(self.az("görüləsi"), ["gör", "ü", "l", "əsi"])
+
+    def test_özel_ad_harf_büyüklüğüne_göre(self):
+        # Başlık biçimi → ad okuması; küçük harf → sıradan kök (kayıpsız her iki yönde)
+        self.assertEqual(self.az("Gəncə"), [BAŞ_BÜYÜK, "gən", "cə"])
+        self.assertEqual(self.az("gəncə"), ["gənc", "ə"])
+        self.assertEqual(self.az("Quranın"), [BAŞ_BÜYÜK, "qu", "ran", "ın"])
+        self.assertEqual(self.az("Amerikanın"), [BAŞ_BÜYÜK, "a", "me", "ri", "ka", "n", "ın"])
+        self.assertEqual(self.az("Azəri"), [BAŞ_BÜYÜK, "a", "zə", "ri"])            # bütün kök korunur
+        self.assertEqual(self.az("Əlimdə"), [BAŞ_BÜYÜK, "əl", "i", "m", "də"])      # 1.kişi iyelikli ad okuması yok
+        self.assertEqual(self.az("əli"), ["əl", "i"])
+        self.assertEqual(self.az("şəkili"), ["şə", "kil", "i"])                       # Şəki+li değil
+        self.assertEqual(self.az("türkiyəli"), ["tür", "ki", "yə", "li"])
+        for metin in ("Bakıda", "Bakının", "Qarabağımız", "Tanrıya", "Ərdoğanın"):
+            kuyruk = OnayKuyruğu()
+            t = encode(metin, self.v.kökler, self.v.ekler, self.v.istisnalar, kuyruk, dil="az")
+            self.assertEqual(decode(t), metin)
+            self.assertEqual(len(kuyruk), 0, metin)
+
+    def test_soyad_eki(self):
+        for metin, son in (("Əliyev", ["ə", "li", "yev"]), ("Məmmədova", ["məm", "məd", "ova"]),
+                           ("Rəsulzadə", ["rə", "sul", "zadə"]), ("Qurbanovun", ["qur", "ban", "ov", "un"]),
+                           ("Əliyevanın", ["ə", "li", "yeva", "n", "ın"])):
+            self.assertEqual(self.az(metin)[1:], son, metin)
 
 
 if __name__ == "__main__":

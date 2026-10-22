@@ -12,5 +12,10 @@
   "hamı": {"tokens": ["ha", "mı"], "tür": "zamir", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
   "öz": {"tokens": ["öz"], "tür": "zamir", "son_ünlü": "ö", "son_ses": "ünsüz", "değişim": null},
   "kimsə": {"tokens": ["kim", "sə"], "tür": "zamir", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null},
-  "həmin": {"tokens": ["hə", "min"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null}
+  "həmin": {"tokens": ["hə", "min"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "burda": {"tokens": ["bur", "da"], "tür": "zamir", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "harda": {"tokens": ["har", "da"], "tür": "zamir", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
+  "burdan": {"tokens": ["bur", "dan"], "tür": "zamir", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "ordan": {"tokens": ["or", "dan"], "tür": "zamir", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "hardan": {"tokens": ["har", "dan"], "tür": "zamir", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null}
 }
