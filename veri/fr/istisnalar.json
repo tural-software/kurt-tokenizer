@@ -1,0 +1,1614 @@
+{
+ "elizyon": {
+  "l'": {
+   "tokens": [
+    "l'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "d'": {
+   "tokens": [
+    "d'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "j'": {
+   "tokens": [
+    "j'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "m'": {
+   "tokens": [
+    "m'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "t'": {
+   "tokens": [
+    "t'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "s'": {
+   "tokens": [
+    "s'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "n'": {
+   "tokens": [
+    "n'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "c'": {
+   "tokens": [
+    "c'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "ç'": {
+   "tokens": [
+    "ç'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "qu'": {
+   "tokens": [
+    "qu'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "jusqu'": {
+   "tokens": [
+    "jusqu'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "lorsqu'": {
+   "tokens": [
+    "lorsqu'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "puisqu'": {
+   "tokens": [
+    "puisqu'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "quoiqu'": {
+   "tokens": [
+    "quoiqu'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  },
+  "quelqu'": {
+   "tokens": [
+    "quelqu'"
+   ],
+   "not": "elizyon: kesmeyle birlikte tek token, sonraki sözcükten AYRI (l'homme = l' + homme); ’ biçimi aynı kuralla"
+  }
+ },
+ "bütün": {
+  "aujourd'hui": {
+   "tokens": [
+    "aujourd'hui"
+   ],
+   "not": "kesmeli tek sözcük: elizyon değil, bütün tutulur"
+  },
+  "prud'homme": {
+   "tokens": [
+    "prud'homme"
+   ],
+   "not": "kesmeli tek sözcük: elizyon değil, bütün tutulur"
+  },
+  "prud'hommes": {
+   "tokens": [
+    "prud'hommes"
+   ],
+   "not": "kesmeli tek sözcük: elizyon değil, bütün tutulur"
+  },
+  "presqu'île": {
+   "tokens": [
+    "presqu'île"
+   ],
+   "not": "kesmeli tek sözcük: elizyon değil, bütün tutulur"
+  },
+  "presqu'îles": {
+   "tokens": [
+    "presqu'îles"
+   ],
+   "not": "kesmeli tek sözcük: elizyon değil, bütün tutulur"
+  }
+ },
+ "belirteç": {
+  "le": {
+   "tokens": [
+    "le"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "la": {
+   "tokens": [
+    "la"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "les": {
+   "tokens": [
+    "les"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "un": {
+   "tokens": [
+    "un"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "une": {
+   "tokens": [
+    "une"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "des": {
+   "tokens": [
+    "des"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "du": {
+   "tokens": [
+    "du"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "au": {
+   "tokens": [
+    "au"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "aux": {
+   "tokens": [
+    "aux"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ce": {
+   "tokens": [
+    "ce"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "cet": {
+   "tokens": [
+    "cet"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "cette": {
+   "tokens": [
+    "cette"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ces": {
+   "tokens": [
+    "ces"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "mon": {
+   "tokens": [
+    "mon"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ma": {
+   "tokens": [
+    "ma"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "mes": {
+   "tokens": [
+    "mes"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ton": {
+   "tokens": [
+    "ton"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ta": {
+   "tokens": [
+    "ta"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "tes": {
+   "tokens": [
+    "tes"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "son": {
+   "tokens": [
+    "son"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "sa": {
+   "tokens": [
+    "sa"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ses": {
+   "tokens": [
+    "ses"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "notre": {
+   "tokens": [
+    "notre"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "nos": {
+   "tokens": [
+    "nos"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "votre": {
+   "tokens": [
+    "votre"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "vos": {
+   "tokens": [
+    "vos"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "leur": {
+   "tokens": [
+    "leur"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "leurs": {
+   "tokens": [
+    "leurs"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "quel": {
+   "tokens": [
+    "quel"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "quelle": {
+   "tokens": [
+    "quelle"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "quels": {
+   "tokens": [
+    "quels"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "quelles": {
+   "tokens": [
+    "quelles"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "chaque": {
+   "tokens": [
+    "chaque"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "plusieurs": {
+   "tokens": [
+    "plusieurs"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "quelque": {
+   "tokens": [
+    "quelque"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "quelques": {
+   "tokens": [
+    "quelques"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "aucun": {
+   "tokens": [
+    "aucun"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "aucune": {
+   "tokens": [
+    "aucune"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "aucuns": {
+   "tokens": [
+    "aucuns"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "aucunes": {
+   "tokens": [
+    "aucunes"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "tout": {
+   "tokens": [
+    "tout"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "toute": {
+   "tokens": [
+    "toute"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "tous": {
+   "tokens": [
+    "tous"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "toutes": {
+   "tokens": [
+    "toutes"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  }
+ },
+ "zamir": {
+  "je": {
+   "tokens": [
+    "je"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "tu": {
+   "tokens": [
+    "tu"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "il": {
+   "tokens": [
+    "il"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "elle": {
+   "tokens": [
+    "elle"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "on": {
+   "tokens": [
+    "on"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "nous": {
+   "tokens": [
+    "nous"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "vous": {
+   "tokens": [
+    "vous"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "ils": {
+   "tokens": [
+    "ils"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "elles": {
+   "tokens": [
+    "elles"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "me": {
+   "tokens": [
+    "me"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "te": {
+   "tokens": [
+    "te"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "se": {
+   "tokens": [
+    "se"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "moi": {
+   "tokens": [
+    "moi"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "toi": {
+   "tokens": [
+    "toi"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "soi": {
+   "tokens": [
+    "soi"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "lui": {
+   "tokens": [
+    "lui"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "eux": {
+   "tokens": [
+    "eux"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "y": {
+   "tokens": [
+    "y"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "en": {
+   "tokens": [
+    "en"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "ceci": {
+   "tokens": [
+    "ceci"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "cela": {
+   "tokens": [
+    "cela"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "ça": {
+   "tokens": [
+    "ça"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "celui": {
+   "tokens": [
+    "celui"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "celle": {
+   "tokens": [
+    "celle"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "ceux": {
+   "tokens": [
+    "ceux"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "celles": {
+   "tokens": [
+    "celles"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "qui": {
+   "tokens": [
+    "qui"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "que": {
+   "tokens": [
+    "que"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "quoi": {
+   "tokens": [
+    "quoi"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "dont": {
+   "tokens": [
+    "dont"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "où": {
+   "tokens": [
+    "où"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "lequel": {
+   "tokens": [
+    "lequel"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "laquelle": {
+   "tokens": [
+    "laquelle"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "lesquels": {
+   "tokens": [
+    "lesquels"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "lesquelles": {
+   "tokens": [
+    "lesquelles"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "auquel": {
+   "tokens": [
+    "auquel"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "auxquels": {
+   "tokens": [
+    "auxquels"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "auxquelles": {
+   "tokens": [
+    "auxquelles"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "duquel": {
+   "tokens": [
+    "duquel"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "desquels": {
+   "tokens": [
+    "desquels"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "desquelles": {
+   "tokens": [
+    "desquelles"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "rien": {
+   "tokens": [
+    "rien"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "chacun": {
+   "tokens": [
+    "chacun"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "chacune": {
+   "tokens": [
+    "chacune"
+   ],
+   "not": "zamir: kapalı sınıf"
+  }
+ },
+ "edat": {
+  "à": {
+   "tokens": [
+    "à"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "de": {
+   "tokens": [
+    "de"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "dans": {
+   "tokens": [
+    "dans"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "par": {
+   "tokens": [
+    "par"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "pour": {
+   "tokens": [
+    "pour"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "sur": {
+   "tokens": [
+    "sur"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "sous": {
+   "tokens": [
+    "sous"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "avec": {
+   "tokens": [
+    "avec"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "sans": {
+   "tokens": [
+    "sans"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "chez": {
+   "tokens": [
+    "chez"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "vers": {
+   "tokens": [
+    "vers"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "entre": {
+   "tokens": [
+    "entre"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "contre": {
+   "tokens": [
+    "contre"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "depuis": {
+   "tokens": [
+    "depuis"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "pendant": {
+   "tokens": [
+    "pendant"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "avant": {
+   "tokens": [
+    "avant"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "après": {
+   "tokens": [
+    "après"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "selon": {
+   "tokens": [
+    "selon"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "malgré": {
+   "tokens": [
+    "malgré"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "parmi": {
+   "tokens": [
+    "parmi"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "jusque": {
+   "tokens": [
+    "jusque"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "envers": {
+   "tokens": [
+    "envers"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "derrière": {
+   "tokens": [
+    "derrière"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "devant": {
+   "tokens": [
+    "devant"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "dès": {
+   "tokens": [
+    "dès"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "hors": {
+   "tokens": [
+    "hors"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "outre": {
+   "tokens": [
+    "outre"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "près": {
+   "tokens": [
+    "près"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "durant": {
+   "tokens": [
+    "durant"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "via": {
+   "tokens": [
+    "via"
+   ],
+   "not": "edat: kapalı sınıf"
+  }
+ },
+ "bağlaç": {
+  "et": {
+   "tokens": [
+    "et"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "ou": {
+   "tokens": [
+    "ou"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "mais": {
+   "tokens": [
+    "mais"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "donc": {
+   "tokens": [
+    "donc"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "or": {
+   "tokens": [
+    "or"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "ni": {
+   "tokens": [
+    "ni"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "car": {
+   "tokens": [
+    "car"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "si": {
+   "tokens": [
+    "si"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "comme": {
+   "tokens": [
+    "comme"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "quand": {
+   "tokens": [
+    "quand"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "lorsque": {
+   "tokens": [
+    "lorsque"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "puisque": {
+   "tokens": [
+    "puisque"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "quoique": {
+   "tokens": [
+    "quoique"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "parce": {
+   "tokens": [
+    "parce"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  }
+ },
+ "zarf": {
+  "ne": {
+   "tokens": [
+    "ne"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "pas": {
+   "tokens": [
+    "pas"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "plus": {
+   "tokens": [
+    "plus"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "moins": {
+   "tokens": [
+    "moins"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "très": {
+   "tokens": [
+    "très"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "aussi": {
+   "tokens": [
+    "aussi"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "encore": {
+   "tokens": [
+    "encore"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "déjà": {
+   "tokens": [
+    "déjà"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "toujours": {
+   "tokens": [
+    "toujours"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "jamais": {
+   "tokens": [
+    "jamais"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "souvent": {
+   "tokens": [
+    "souvent"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "ici": {
+   "tokens": [
+    "ici"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "là": {
+   "tokens": [
+    "là"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "alors": {
+   "tokens": [
+    "alors"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "ainsi": {
+   "tokens": [
+    "ainsi"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "puis": {
+   "tokens": [
+    "puis"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "enfin": {
+   "tokens": [
+    "enfin"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "oui": {
+   "tokens": [
+    "oui"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "non": {
+   "tokens": [
+    "non"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "peu": {
+   "tokens": [
+    "peu"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "beaucoup": {
+   "tokens": [
+    "beaucoup"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "trop": {
+   "tokens": [
+    "trop"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "assez": {
+   "tokens": [
+    "assez"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "tant": {
+   "tokens": [
+    "tant"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "tellement": {
+   "tokens": [
+    "tellement"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "comment": {
+   "tokens": [
+    "comment"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "pourquoi": {
+   "tokens": [
+    "pourquoi"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "combien": {
+   "tokens": [
+    "combien"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "ailleurs": {
+   "tokens": [
+    "ailleurs"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "partout": {
+   "tokens": [
+    "partout"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "dedans": {
+   "tokens": [
+    "dedans"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "dehors": {
+   "tokens": [
+    "dehors"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "hier": {
+   "tokens": [
+    "hier"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "demain": {
+   "tokens": [
+    "demain"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "maintenant": {
+   "tokens": [
+    "maintenant"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "bientôt": {
+   "tokens": [
+    "bientôt"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "tard": {
+   "tokens": [
+    "tard"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "tôt": {
+   "tokens": [
+    "tôt"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "longtemps": {
+   "tokens": [
+    "longtemps"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "vite": {
+   "tokens": [
+    "vite"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "surtout": {
+   "tokens": [
+    "surtout"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "presque": {
+   "tokens": [
+    "presque"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "environ": {
+   "tokens": [
+    "environ"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "plutôt": {
+   "tokens": [
+    "plutôt"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "cependant": {
+   "tokens": [
+    "cependant"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "pourtant": {
+   "tokens": [
+    "pourtant"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "néanmoins": {
+   "tokens": [
+    "néanmoins"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "toutefois": {
+   "tokens": [
+    "toutefois"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "autant": {
+   "tokens": [
+    "autant"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "voici": {
+   "tokens": [
+    "voici"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "voilà": {
+   "tokens": [
+    "voilà"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "ensuite": {
+   "tokens": [
+    "ensuite"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "parfois": {
+   "tokens": [
+    "parfois"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "désormais": {
+   "tokens": [
+    "désormais"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "aussitôt": {
+   "tokens": [
+    "aussitôt"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  },
+  "tantôt": {
+   "tokens": [
+    "tantôt"
+   ],
+   "not": "değişmez zarf/olumsuzluk: kapalı sınıf"
+  }
+ },
+ "sayı": {
+  "deux": {
+   "tokens": [
+    "deux"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "trois": {
+   "tokens": [
+    "trois"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "quatre": {
+   "tokens": [
+    "quatre"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "cinq": {
+   "tokens": [
+    "cinq"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "six": {
+   "tokens": [
+    "six"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "sept": {
+   "tokens": [
+    "sept"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "huit": {
+   "tokens": [
+    "huit"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "neuf": {
+   "tokens": [
+    "neuf"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "dix": {
+   "tokens": [
+    "dix"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "onze": {
+   "tokens": [
+    "onze"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "douze": {
+   "tokens": [
+    "douze"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "treize": {
+   "tokens": [
+    "treize"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "quatorze": {
+   "tokens": [
+    "quatorze"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "quinze": {
+   "tokens": [
+    "quinze"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "seize": {
+   "tokens": [
+    "seize"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "vingt": {
+   "tokens": [
+    "vingt"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "vingts": {
+   "tokens": [
+    "vingts"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "trente": {
+   "tokens": [
+    "trente"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "quarante": {
+   "tokens": [
+    "quarante"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "cinquante": {
+   "tokens": [
+    "cinquante"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "soixante": {
+   "tokens": [
+    "soixante"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "cent": {
+   "tokens": [
+    "cent"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "cents": {
+   "tokens": [
+    "cents"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "mille": {
+   "tokens": [
+    "mille"
+   ],
+   "not": "sayı adı: değişmez"
+  }
+ },
+ "ünlem": {
+  "ah": {
+   "tokens": [
+    "ah"
+   ],
+   "not": "ünlem"
+  },
+  "oh": {
+   "tokens": [
+    "oh"
+   ],
+   "not": "ünlem"
+  },
+  "hélas": {
+   "tokens": [
+    "hélas"
+   ],
+   "not": "ünlem"
+  },
+  "bravo": {
+   "tokens": [
+    "bravo"
+   ],
+   "not": "ünlem"
+  },
+  "merci": {
+   "tokens": [
+    "merci"
+   ],
+   "not": "ünlem"
+  },
+  "bonjour": {
+   "tokens": [
+    "bonjour"
+   ],
+   "not": "ünlem"
+  },
+  "bonsoir": {
+   "tokens": [
+    "bonsoir"
+   ],
+   "not": "ünlem"
+  },
+  "salut": {
+   "tokens": [
+    "salut"
+   ],
+   "not": "ünlem"
+  },
+  "adieu": {
+   "tokens": [
+    "adieu"
+   ],
+   "not": "ünlem"
+  }
+ },
+ "düzensiz": {
+  "faut": {
+   "tokens": [
+    "faut"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "fallait": {
+   "tokens": [
+    "fallait"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "faudra": {
+   "tokens": [
+    "faudra"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "faudrait": {
+   "tokens": [
+    "faudrait"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "fallu": {
+   "tokens": [
+    "fallu"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "faille": {
+   "tokens": [
+    "faille"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "fallut": {
+   "tokens": [
+    "fallut"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "falloir": {
+   "tokens": [
+    "falloir"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "pleut": {
+   "tokens": [
+    "pleut"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "pleuvait": {
+   "tokens": [
+    "pleuvait"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "pleuvra": {
+   "tokens": [
+    "pleuvra"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "pleuvoir": {
+   "tokens": [
+    "pleuvoir"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "bel": {
+   "tokens": [
+    "bel"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "nouvel": {
+   "tokens": [
+    "nouvel"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "vieil": {
+   "tokens": [
+    "vieil"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "fol": {
+   "tokens": [
+    "fol"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "mol": {
+   "tokens": [
+    "mol"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "yeux": {
+   "tokens": [
+    "yeux"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "cieux": {
+   "tokens": [
+    "cieux"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "aïeux": {
+   "tokens": [
+    "aïeux"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "messieurs": {
+   "tokens": [
+    "messieurs"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "mesdames": {
+   "tokens": [
+    "mesdames"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  },
+  "mesdemoiselles": {
+   "tokens": [
+    "mesdemoiselles"
+   ],
+   "not": "düzensiz biçim (kişisiz falloir/pleuvoir, ünlü önü eril sıfat, düzensiz çoğul): bütün"
+  }
+ },
+ "bağ": {
+  "t": {
+   "tokens": [
+    "t"
+   ],
+   "not": "ses türemesi -t- (a-t-il, va-t-on): tireli kalıpta tek başına"
+  }
+ }
+}

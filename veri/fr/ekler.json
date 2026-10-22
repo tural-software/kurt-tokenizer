@@ -1,0 +1,29 @@
+{
+  "not": "Fransızca ek tokenları (FR-1). Üreteç (tokenizer/fr.py + cekim.json) yalnız burada bildirilen ekleri üretebilir; vocab bölümü (FR-4) buradan beslenir. Gövde değişimi ve ikizleşme gövde tokenındadır (commenç+ons, appell+e, bonn+e).",
+  "ekler": {
+    "çoğul":        ["s", "x", "aux"],
+    "dişil":        ["e", "es"],
+    "zarf":         ["ment", "ement", "amment", "emment"],
+    "şimdiki":      ["e", "es", "ons", "ez", "ent", "s", "t", "x"],
+    "sürekli":      ["ais", "ait", "ions", "iez", "aient"],
+    "gelecek":      ["ai", "as", "a", "ont"],
+    "basit":        ["âmes", "âtes", "èrent", "is", "it", "îmes", "îtes", "irent", "us", "ut", "ûmes", "ûtes", "urent",
+                     "mes", "tes", "rent"],
+    "dilek_geçmiş": ["asse", "asses", "ât", "assions", "assiez", "assent", "isse", "isses", "ît", "issions", "issiez",
+                     "issent", "usse", "usses", "ût", "ussions", "ussiez", "ussent", "sse", "sses", "ssions", "ssiez",
+                     "ssent"],
+    "ikinci_grup":  ["iss"],
+    "ortaç":        ["é", "ée", "és", "ées", "i", "ie", "ies", "u", "ue", "ues", "û", "te", "ts", "tes", "ise", "ises", "use", "uses",
+                     "us"],
+    "ulaç":         ["ant"]
+  },
+  "önekler": {
+    "re":   ["fiil"],
+    "ré":   ["fiil"],
+    "dé":   ["fiil"],
+    "in":   ["sıfat"],
+    "im":   ["sıfat"],
+    "anti": ["isim", "sıfat"],
+    "non":  ["isim", "sıfat"]
+  }
+}

@@ -22,10 +22,13 @@ from tokenizer import sesler
 def hecele(kelime: str, profil=None) -> list[str]:
     """Bir kökü (ek almamış kelimeyi) hecelere böler. profil: dil profili (None = Türkçe);
     kural tüm Türk dillerinde aynı, yalnız ünlü kümesi profilden gelir (AZ: ə). İngilizce (profil.hece "en")
-    yazım hecesini kullanır (tokenizer.en.hecele)."""
+    yazım hecesini kullanır (tokenizer.en.hecele), Fransızca kendi yazım hecesini (tokenizer.fr.hecele)."""
     if profil is not None and profil.hece == "en":
         from tokenizer import en
         return en.hecele(kelime)
+    if profil is not None and profil.hece == "fr":
+        from tokenizer import fr
+        return fr.hecele(kelime)
     ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
     ünlü_yerleri = [i for i, harf in enumerate(kelime) if harf in ünlüler]
     if not ünlü_yerleri:

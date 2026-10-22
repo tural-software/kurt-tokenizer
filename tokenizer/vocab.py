@@ -278,8 +278,8 @@ def _v1_kur(kökler, ekler, istisnalar) -> list[str]:
 _ASCII_CASING_DİLLERİ = frozenset(k for k, p in PROFİLLER.items() if p.casing == "unicode")
 # Metin kipinde kod sözlüğü ve öteki dil bölümlerinin tokenlarını da kullanan diller (EN-4: İngilizce 'time', 'data'
 # kod sözlüğünde, 'very', 'hard' AZ hecesi olarak zaten var; yinelenen token eklenemez → paylaşılır). Bu dillerin
-# KENDİ bölümleri (en-1) yine yalnız kendi metin kipinde açıktır.
-_ORTAK_KULLANAN_DİLLER = frozenset({"en"})
+# KENDİ bölümleri (en-1) yine yalnız kendi metin kipinde açıktır. FR-1: Fransızca da (de, la, ment, tion ortak dizgi).
+_ORTAK_KULLANAN_DİLLER = frozenset({"en", "fr"})
 
 
 def dil_bölümü(ad: str) -> str | None:
