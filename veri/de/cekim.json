@@ -1,0 +1,972 @@
+{
+ "beginnen": {
+  "tür": "güçlü",
+  "geçmiş": "begann",
+  "ortaç": "begonn",
+  "konj2": "begänn"
+ },
+ "beißen": {
+  "tür": "güçlü",
+  "geçmiş": "biss",
+  "ortaç": "biss",
+  "konj2": "biss"
+ },
+ "biegen": {
+  "tür": "güçlü",
+  "geçmiş": "bog",
+  "ortaç": "bog",
+  "konj2": "bög"
+ },
+ "bieten": {
+  "tür": "güçlü",
+  "geçmiş": "bot",
+  "ortaç": "bot",
+  "konj2": "böt"
+ },
+ "binden": {
+  "tür": "güçlü",
+  "geçmiş": "band",
+  "ortaç": "bund",
+  "konj2": "bänd"
+ },
+ "bitten": {
+  "tür": "güçlü",
+  "geçmiş": "bat",
+  "ortaç": "bet",
+  "konj2": "bät"
+ },
+ "bleiben": {
+  "tür": "güçlü",
+  "geçmiş": "blieb",
+  "ortaç": "blieb",
+  "konj2": "blieb"
+ },
+ "brechen": {
+  "tür": "güçlü",
+  "geçmiş": "brach",
+  "ortaç": "broch",
+  "tekil23": "brich",
+  "konj2": "bräch",
+  "emir": "brich"
+ },
+ "brennen": {
+  "tür": "karışık",
+  "geçmiş": "brann",
+  "ortaç": "brann"
+ },
+ "bringen": {
+  "tür": "karışık",
+  "geçmiş": "brach",
+  "ortaç": "brach",
+  "konj2": "bräch"
+ },
+ "denken": {
+  "tür": "karışık",
+  "geçmiş": "dach",
+  "ortaç": "dach",
+  "konj2": "däch"
+ },
+ "dürfen": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "darf",
+    ""
+   ],
+   [
+    "darf",
+    "st"
+   ],
+   [
+    "darf",
+    ""
+   ],
+   [
+    "dürf",
+    "en"
+   ],
+   [
+    "dürf",
+    "t"
+   ],
+   [
+    "dürf",
+    "en"
+   ]
+  ],
+  "geçmiş": "durf",
+  "ortaç": "durf",
+  "konj2": "dürf"
+ },
+ "empfehlen": {
+  "tür": "güçlü",
+  "geçmiş": "empfahl",
+  "ortaç": "empfohl",
+  "tekil23": "empfiehl",
+  "konj2": "empföhl",
+  "emir": "empfiehl"
+ },
+ "essen": {
+  "tür": "güçlü",
+  "geçmiş": "aß",
+  "ortaç": "gess",
+  "tekil23": "iss",
+  "konj2": "äß",
+  "emir": "iss"
+ },
+ "fahren": {
+  "tür": "güçlü",
+  "geçmiş": "fuhr",
+  "ortaç": "fahr",
+  "tekil23": "fähr",
+  "konj2": "führ"
+ },
+ "fallen": {
+  "tür": "güçlü",
+  "geçmiş": "fiel",
+  "ortaç": "fall",
+  "tekil23": "fäll",
+  "konj2": "fiel"
+ },
+ "fangen": {
+  "tür": "güçlü",
+  "geçmiş": "fing",
+  "ortaç": "fang",
+  "tekil23": "fäng",
+  "konj2": "fing"
+ },
+ "finden": {
+  "tür": "güçlü",
+  "geçmiş": "fand",
+  "ortaç": "fund",
+  "konj2": "fänd"
+ },
+ "fliegen": {
+  "tür": "güçlü",
+  "geçmiş": "flog",
+  "ortaç": "flog",
+  "konj2": "flög"
+ },
+ "fliehen": {
+  "tür": "güçlü",
+  "geçmiş": "floh",
+  "ortaç": "floh",
+  "konj2": "flöh"
+ },
+ "fließen": {
+  "tür": "güçlü",
+  "geçmiş": "floss",
+  "ortaç": "floss",
+  "konj2": "flöss"
+ },
+ "frieren": {
+  "tür": "güçlü",
+  "geçmiş": "fror",
+  "ortaç": "fror",
+  "konj2": "frör"
+ },
+ "geben": {
+  "tür": "güçlü",
+  "geçmiş": "gab",
+  "ortaç": "geb",
+  "tekil23": "gib",
+  "konj2": "gäb",
+  "emir": "gib"
+ },
+ "gehen": {
+  "tür": "güçlü",
+  "geçmiş": "ging",
+  "ortaç": "gang",
+  "konj2": "ging"
+ },
+ "gelingen": {
+  "tür": "güçlü",
+  "geçmiş": "gelang",
+  "ortaç": "gelung",
+  "konj2": "geläng"
+ },
+ "gelten": {
+  "tür": "güçlü",
+  "geçmiş": "galt",
+  "ortaç": "golt",
+  "tekil23": "gilt",
+  "konj2": "gölt"
+ },
+ "genießen": {
+  "tür": "güçlü",
+  "geçmiş": "genoss",
+  "ortaç": "genoss",
+  "konj2": "genöss"
+ },
+ "geschehen": {
+  "tür": "güçlü",
+  "geçmiş": "geschah",
+  "ortaç": "gescheh",
+  "tekil23": "geschieh",
+  "konj2": "geschäh"
+ },
+ "gewinnen": {
+  "tür": "güçlü",
+  "geçmiş": "gewann",
+  "ortaç": "gewonn",
+  "konj2": "gewänn"
+ },
+ "gießen": {
+  "tür": "güçlü",
+  "geçmiş": "goss",
+  "ortaç": "goss",
+  "konj2": "göss"
+ },
+ "gleichen": {
+  "tür": "güçlü",
+  "geçmiş": "glich",
+  "ortaç": "glich",
+  "konj2": "glich"
+ },
+ "graben": {
+  "tür": "güçlü",
+  "geçmiş": "grub",
+  "ortaç": "grab",
+  "tekil23": "gräb",
+  "konj2": "grüb"
+ },
+ "greifen": {
+  "tür": "güçlü",
+  "geçmiş": "griff",
+  "ortaç": "griff",
+  "konj2": "griff"
+ },
+ "haben": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "hab",
+    "e"
+   ],
+   [
+    "hast",
+    ""
+   ],
+   [
+    "hat",
+    ""
+   ],
+   [
+    "hab",
+    "en"
+   ],
+   [
+    "hab",
+    "t"
+   ],
+   [
+    "hab",
+    "en"
+   ]
+  ],
+  "geçmiş": "hat",
+  "ortaç": "hab",
+  "konj2": "hät"
+ },
+ "halten": {
+  "tür": "güçlü",
+  "geçmiş": "hielt",
+  "ortaç": "halt",
+  "tekil23": "hält",
+  "konj2": "hielt"
+ },
+ "heben": {
+  "tür": "güçlü",
+  "geçmiş": "hob",
+  "ortaç": "hob",
+  "konj2": "höb"
+ },
+ "heißen": {
+  "tür": "güçlü",
+  "geçmiş": "hieß",
+  "ortaç": "heiß",
+  "konj2": "hieß"
+ },
+ "helfen": {
+  "tür": "güçlü",
+  "geçmiş": "half",
+  "ortaç": "holf",
+  "tekil23": "hilf",
+  "konj2": "hülf",
+  "emir": "hilf"
+ },
+ "kennen": {
+  "tür": "karışık",
+  "geçmiş": "kann",
+  "ortaç": "kann"
+ },
+ "klingen": {
+  "tür": "güçlü",
+  "geçmiş": "klang",
+  "ortaç": "klung",
+  "konj2": "kläng"
+ },
+ "kommen": {
+  "tür": "güçlü",
+  "geçmiş": "kam",
+  "ortaç": "komm",
+  "konj2": "käm"
+ },
+ "kriechen": {
+  "tür": "güçlü",
+  "geçmiş": "kroch",
+  "ortaç": "kroch",
+  "konj2": "kröch"
+ },
+ "können": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "kann",
+    ""
+   ],
+   [
+    "kann",
+    "st"
+   ],
+   [
+    "kann",
+    ""
+   ],
+   [
+    "könn",
+    "en"
+   ],
+   [
+    "könn",
+    "t"
+   ],
+   [
+    "könn",
+    "en"
+   ]
+  ],
+  "geçmiş": "konn",
+  "ortaç": "konn",
+  "konj2": "könn"
+ },
+ "lassen": {
+  "tür": "güçlü",
+  "geçmiş": "ließ",
+  "ortaç": "lass",
+  "tekil23": "läss",
+  "konj2": "ließ"
+ },
+ "laufen": {
+  "tür": "güçlü",
+  "geçmiş": "lief",
+  "ortaç": "lauf",
+  "tekil23": "läuf",
+  "konj2": "lief"
+ },
+ "leiden": {
+  "tür": "güçlü",
+  "geçmiş": "litt",
+  "ortaç": "litt",
+  "konj2": "litt"
+ },
+ "leihen": {
+  "tür": "güçlü",
+  "geçmiş": "lieh",
+  "ortaç": "lieh",
+  "konj2": "lieh"
+ },
+ "lesen": {
+  "tür": "güçlü",
+  "geçmiş": "las",
+  "ortaç": "les",
+  "tekil23": "lies",
+  "konj2": "läs",
+  "emir": "lies"
+ },
+ "liegen": {
+  "tür": "güçlü",
+  "geçmiş": "lag",
+  "ortaç": "leg",
+  "konj2": "läg"
+ },
+ "lügen": {
+  "tür": "güçlü",
+  "geçmiş": "log",
+  "ortaç": "log",
+  "konj2": "lög"
+ },
+ "meiden": {
+  "tür": "güçlü",
+  "geçmiş": "mied",
+  "ortaç": "mied",
+  "konj2": "mied"
+ },
+ "messen": {
+  "tür": "güçlü",
+  "geçmiş": "maß",
+  "ortaç": "mess",
+  "tekil23": "miss",
+  "konj2": "mäß",
+  "emir": "miss"
+ },
+ "mögen": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "mag",
+    ""
+   ],
+   [
+    "mag",
+    "st"
+   ],
+   [
+    "mag",
+    ""
+   ],
+   [
+    "mög",
+    "en"
+   ],
+   [
+    "mög",
+    "t"
+   ],
+   [
+    "mög",
+    "en"
+   ]
+  ],
+  "geçmiş": "moch",
+  "ortaç": "moch",
+  "konj2": "möch"
+ },
+ "müssen": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "muss",
+    ""
+   ],
+   [
+    "muss",
+    "t"
+   ],
+   [
+    "muss",
+    ""
+   ],
+   [
+    "müss",
+    "en"
+   ],
+   [
+    "müss",
+    "t"
+   ],
+   [
+    "müss",
+    "en"
+   ]
+  ],
+  "geçmiş": "muss",
+  "ortaç": "muss",
+  "konj2": "müss"
+ },
+ "nehmen": {
+  "tür": "güçlü",
+  "geçmiş": "nahm",
+  "ortaç": "nomm",
+  "tekil23": "nimm",
+  "konj2": "nähm",
+  "emir": "nimm"
+ },
+ "nennen": {
+  "tür": "karışık",
+  "geçmiş": "nann",
+  "ortaç": "nann"
+ },
+ "pfeifen": {
+  "tür": "güçlü",
+  "geçmiş": "pfiff",
+  "ortaç": "pfiff",
+  "konj2": "pfiff"
+ },
+ "reiten": {
+  "tür": "güçlü",
+  "geçmiş": "ritt",
+  "ortaç": "ritt",
+  "konj2": "ritt"
+ },
+ "reißen": {
+  "tür": "güçlü",
+  "geçmiş": "riss",
+  "ortaç": "riss",
+  "konj2": "riss"
+ },
+ "rennen": {
+  "tür": "karışık",
+  "geçmiş": "rann",
+  "ortaç": "rann"
+ },
+ "riechen": {
+  "tür": "güçlü",
+  "geçmiş": "roch",
+  "ortaç": "roch",
+  "konj2": "röch"
+ },
+ "rufen": {
+  "tür": "güçlü",
+  "geçmiş": "rief",
+  "ortaç": "ruf",
+  "konj2": "rief"
+ },
+ "scheinen": {
+  "tür": "güçlü",
+  "geçmiş": "schien",
+  "ortaç": "schien",
+  "konj2": "schien"
+ },
+ "schieben": {
+  "tür": "güçlü",
+  "geçmiş": "schob",
+  "ortaç": "schob",
+  "konj2": "schöb"
+ },
+ "schlafen": {
+  "tür": "güçlü",
+  "geçmiş": "schlief",
+  "ortaç": "schlaf",
+  "tekil23": "schläf",
+  "konj2": "schlief"
+ },
+ "schlagen": {
+  "tür": "güçlü",
+  "geçmiş": "schlug",
+  "ortaç": "schlag",
+  "tekil23": "schläg",
+  "konj2": "schlüg"
+ },
+ "schließen": {
+  "tür": "güçlü",
+  "geçmiş": "schloss",
+  "ortaç": "schloss",
+  "konj2": "schlöss"
+ },
+ "schneiden": {
+  "tür": "güçlü",
+  "geçmiş": "schnitt",
+  "ortaç": "schnitt",
+  "konj2": "schnitt"
+ },
+ "schreiben": {
+  "tür": "güçlü",
+  "geçmiş": "schrieb",
+  "ortaç": "schrieb",
+  "konj2": "schrieb"
+ },
+ "schreien": {
+  "tür": "güçlü",
+  "geçmiş": "schrie",
+  "geçmiş_ekler": [
+   "",
+   "st",
+   "",
+   "n",
+   "t",
+   "n"
+  ],
+  "ortaç": "schri",
+  "konj2": "schrie"
+ },
+ "schweigen": {
+  "tür": "güçlü",
+  "geçmiş": "schwieg",
+  "ortaç": "schwieg",
+  "konj2": "schwieg"
+ },
+ "schwimmen": {
+  "tür": "güçlü",
+  "geçmiş": "schwamm",
+  "ortaç": "schwomm",
+  "konj2": "schwämm"
+ },
+ "sehen": {
+  "tür": "güçlü",
+  "geçmiş": "sah",
+  "ortaç": "seh",
+  "tekil23": "sieh",
+  "konj2": "säh",
+  "emir": "sieh"
+ },
+ "sein": {
+  "tür": "güçlü",
+  "şimdiki": [
+   [
+    "bin",
+    ""
+   ],
+   [
+    "bist",
+    ""
+   ],
+   [
+    "ist",
+    ""
+   ],
+   [
+    "sind",
+    ""
+   ],
+   [
+    "seid",
+    ""
+   ],
+   [
+    "sind",
+    ""
+   ]
+  ],
+  "geçmiş": "war",
+  "ortaç": "wes",
+  "konj2": "wär",
+  "emir": "sei"
+ },
+ "singen": {
+  "tür": "güçlü",
+  "geçmiş": "sang",
+  "ortaç": "sung",
+  "konj2": "säng"
+ },
+ "sinken": {
+  "tür": "güçlü",
+  "geçmiş": "sank",
+  "ortaç": "sunk",
+  "konj2": "sänk"
+ },
+ "sitzen": {
+  "tür": "güçlü",
+  "geçmiş": "saß",
+  "ortaç": "sess",
+  "konj2": "säß"
+ },
+ "sollen": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "soll",
+    ""
+   ],
+   [
+    "soll",
+    "st"
+   ],
+   [
+    "soll",
+    ""
+   ],
+   [
+    "soll",
+    "en"
+   ],
+   [
+    "soll",
+    "t"
+   ],
+   [
+    "soll",
+    "en"
+   ]
+  ],
+  "geçmiş": "soll",
+  "ortaç": "soll"
+ },
+ "sprechen": {
+  "tür": "güçlü",
+  "geçmiş": "sprach",
+  "ortaç": "sproch",
+  "tekil23": "sprich",
+  "konj2": "spräch",
+  "emir": "sprich"
+ },
+ "springen": {
+  "tür": "güçlü",
+  "geçmiş": "sprang",
+  "ortaç": "sprung",
+  "konj2": "spräng"
+ },
+ "stehen": {
+  "tür": "güçlü",
+  "geçmiş": "stand",
+  "ortaç": "stand",
+  "konj2": "ständ"
+ },
+ "stehlen": {
+  "tür": "güçlü",
+  "geçmiş": "stahl",
+  "ortaç": "stohl",
+  "tekil23": "stiehl",
+  "konj2": "stähl",
+  "emir": "stiehl"
+ },
+ "steigen": {
+  "tür": "güçlü",
+  "geçmiş": "stieg",
+  "ortaç": "stieg",
+  "konj2": "stieg"
+ },
+ "sterben": {
+  "tür": "güçlü",
+  "geçmiş": "starb",
+  "ortaç": "storb",
+  "tekil23": "stirb",
+  "konj2": "stürb",
+  "emir": "stirb"
+ },
+ "stoßen": {
+  "tür": "güçlü",
+  "geçmiş": "stieß",
+  "ortaç": "stoß",
+  "tekil23": "stöß",
+  "konj2": "stieß"
+ },
+ "streiten": {
+  "tür": "güçlü",
+  "geçmiş": "stritt",
+  "ortaç": "stritt",
+  "konj2": "stritt"
+ },
+ "tragen": {
+  "tür": "güçlü",
+  "geçmiş": "trug",
+  "ortaç": "trag",
+  "tekil23": "träg",
+  "konj2": "trüg"
+ },
+ "treffen": {
+  "tür": "güçlü",
+  "geçmiş": "traf",
+  "ortaç": "troff",
+  "tekil23": "triff",
+  "konj2": "träf",
+  "emir": "triff"
+ },
+ "treiben": {
+  "tür": "güçlü",
+  "geçmiş": "trieb",
+  "ortaç": "trieb",
+  "konj2": "trieb"
+ },
+ "treten": {
+  "tür": "güçlü",
+  "geçmiş": "trat",
+  "ortaç": "tret",
+  "tekil23": "tritt",
+  "konj2": "trät",
+  "emir": "tritt"
+ },
+ "trinken": {
+  "tür": "güçlü",
+  "geçmiş": "trank",
+  "ortaç": "trunk",
+  "konj2": "tränk"
+ },
+ "tun": {
+  "tür": "güçlü",
+  "şimdiki": [
+   [
+    "tu",
+    "e"
+   ],
+   [
+    "tu",
+    "st"
+   ],
+   [
+    "tu",
+    "t"
+   ],
+   [
+    "tu",
+    "n"
+   ],
+   [
+    "tu",
+    "t"
+   ],
+   [
+    "tu",
+    "n"
+   ]
+  ],
+  "geçmiş": "tat",
+  "ortaç": "ta",
+  "ortaç_ek": "n",
+  "konj2": "tät",
+  "emir": "tu"
+ },
+ "vergessen": {
+  "tür": "güçlü",
+  "geçmiş": "vergaß",
+  "ortaç": "vergess",
+  "tekil23": "vergiss",
+  "konj2": "vergäß",
+  "emir": "vergiss"
+ },
+ "verlieren": {
+  "tür": "güçlü",
+  "geçmiş": "verlor",
+  "ortaç": "verlor",
+  "konj2": "verlör"
+ },
+ "wachsen": {
+  "tür": "güçlü",
+  "geçmiş": "wuchs",
+  "ortaç": "wachs",
+  "tekil23": "wächs",
+  "konj2": "wüchs"
+ },
+ "waschen": {
+  "tür": "güçlü",
+  "geçmiş": "wusch",
+  "ortaç": "wasch",
+  "tekil23": "wäsch",
+  "konj2": "wüsch"
+ },
+ "weichen": {
+  "tür": "güçlü",
+  "geçmiş": "wich",
+  "ortaç": "wich",
+  "konj2": "wich"
+ },
+ "werden": {
+  "tür": "güçlü",
+  "şimdiki": [
+   [
+    "werd",
+    "e"
+   ],
+   [
+    "wirst",
+    ""
+   ],
+   [
+    "wird",
+    ""
+   ],
+   [
+    "werd",
+    "en"
+   ],
+   [
+    "werd",
+    "et"
+   ],
+   [
+    "werd",
+    "en"
+   ]
+  ],
+  "geçmiş": "wurd",
+  "geçmiş_ekler": [
+   "e",
+   "est",
+   "e",
+   "en",
+   "et",
+   "en"
+  ],
+  "ortaç": "word",
+  "konj2": "würd"
+ },
+ "werfen": {
+  "tür": "güçlü",
+  "geçmiş": "warf",
+  "ortaç": "worf",
+  "tekil23": "wirf",
+  "konj2": "würf",
+  "emir": "wirf"
+ },
+ "wiegen": {
+  "tür": "güçlü",
+  "geçmiş": "wog",
+  "ortaç": "wog",
+  "konj2": "wög"
+ },
+ "wissen": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "weiß",
+    ""
+   ],
+   [
+    "weiß",
+    "t"
+   ],
+   [
+    "weiß",
+    ""
+   ],
+   [
+    "wiss",
+    "en"
+   ],
+   [
+    "wiss",
+    "t"
+   ],
+   [
+    "wiss",
+    "en"
+   ]
+  ],
+  "geçmiş": "wuss",
+  "ortaç": "wuss",
+  "konj2": "wüss"
+ },
+ "wollen": {
+  "tür": "karışık",
+  "şimdiki": [
+   [
+    "will",
+    ""
+   ],
+   [
+    "will",
+    "st"
+   ],
+   [
+    "will",
+    ""
+   ],
+   [
+    "woll",
+    "en"
+   ],
+   [
+    "woll",
+    "t"
+   ],
+   [
+    "woll",
+    "en"
+   ]
+  ],
+  "geçmiş": "woll",
+  "ortaç": "woll"
+ },
+ "ziehen": {
+  "tür": "güçlü",
+  "geçmiş": "zog",
+  "ortaç": "zog",
+  "konj2": "zög"
+ },
+ "zwingen": {
+  "tür": "güçlü",
+  "geçmiş": "zwang",
+  "ortaç": "zwung",
+  "konj2": "zwäng"
+ }
+}

@@ -73,7 +73,7 @@ class DilProfili:
     #                                          değil; tamlayan + idi: oxundu = oxu+n+du, ox+un+du değil)
     # Dil ailesi (EN-1): Türk dilleri ünlü uyumlu üreteci (birlestir/cozumle) paylaşır; İngilizce yazım
     # kurallı kendi üretecini (tokenizer/en.py) kullanır. Hat, casing, vocab, kuyruk ve seçim ortak.
-    motor: str = "türk"         # "türk" | "en" | "fr" (sözcük çözümleyicisi)
+    motor: str = "türk"         # "türk" | "en" | "fr" | "de" (sözcük çözümleyicisi)
     casing: str = "türk"        # "türk": İ/i I/ı, işaretçi <|Bb|>/<|BB|> | "unicode": str.lower/upper,
     #                             işaretçi <|Ab|>/<|AA|> (İngilizce 'I' → 'ı' olmaz)
     hece: str = "türk"          # yedek heceleme kuralı: "türk" (hece.py) | "en" (en.hecele) | "fr" (fr.hecele)
@@ -240,6 +240,29 @@ FR = DilProfili(
     özel_ad_başlık=True,
 )
 
-PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ, "en": EN, "fr": FR}
+# Almanca (DE-1): ünlü uyumu yok; çekim ve bileşik kendi üretecinde (tokenizer/de.py, veri/de/cekim.json). Harfler
+# a-z + ä ö ü ß. Her ad büyük yazıldığından Başlık biçimi özel ad işareti DEĞİL (özel_ad_başlık kapalı; kullanıcı
+# kararı 2026-10-22). Kesme sonrası ek kuralı kapalı (geht's, Peter's bütün kalır; DE-3 triyajında karar).
+DE = DilProfili(
+    kod="de",
+    alfabe="aäbcdefghijklmnoöpqrsßtuüvwxyz",
+    ünlüler=frozenset("aäeioöuüy"),
+    kalın=frozenset(),
+    ince=frozenset(),
+    düz=frozenset(),
+    yuvarlak=frozenset(),
+    sert=frozenset(),
+    geniş_ince="",
+    ince_karşılık=(),
+    değişken_son="",
+    daralan_son="",
+    daraltma="",
+    motor="de",
+    casing="unicode",
+    hece="de",
+    kesme_eki=False,
+)
+
+PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ, "en": EN, "fr": FR, "de": DE}
 # Metin kipinde seçilebilen doğal diller (None = Türkçe). Kod kipindeki 'dil' programlama dilidir.
 DOĞAL_DİLLER = frozenset(k for k in PROFİLLER if k != "tr")
