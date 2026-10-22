@@ -36,8 +36,10 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   Türkçe metnin çıktısı AZ desteğinden etkilenmez.
 - **İngilizce** (`dil="en"`, geliştiriliyor): yazım kurallı kendi çözümleyicisi (`tokenizer/en.py`) — çekim ve yapım
   ekleri (`running = run+n+ing`, `carried = carri+ed`, `knives = kniv+es`), önek (`un+happy`), klitik (`do+n't`), düzensiz
-  biçimler bütün; büyük harf Unicode kuralıyla (`I` → `i`, `ı` değil). ~60.400 kök (Open English WordNet); yazım bayrakları
-  ve eşsesli kök kararları korpus kanıtıyla. Vocab bölümü sonraki fazda.
+  biçimler bütün; büyük harf Unicode kuralıyla (`I` → `i`, `ı` değil). ~64.900 kök (Open English WordNet + elle güncel
+  sözcükler), ~4.400'ü özel ad (`London`, `Kennedys = kennedy+s`; küçük harfte sıradan okuma yeğlenir). Tek harf,
+  kısaltma, web parçası (`www`, `5th = 5+th`) ve konuşma kalıbı (`gonna`) bütün token. Yazım bayrakları ve eşsesli kök
+  kararları korpus kanıtıyla. Vocab bölümü sonraki fazda.
 - **Kod kipi** (`kip="kod"`, `dil="python"`): boşluk/satır birebir korunur; kendi Python lexer'ı,
   tanımlayıcı bölme ve kod sözlüğü.
 - **8.511 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
@@ -89,7 +91,7 @@ veri/az/        Azerbaycan Türkçesi: kök sözlüğü, ekler, istisnalar, voca
 veri/en/        İngilizce: kök sözlüğü (kokler.txt), ekler, istisnalar (düzensiz/kısaltma), altın liste
 araclar/        kaynak → JSON üretici (uret), vocab üretici (vocab_uret), korpus doğrulayıcı
                 (dogrula_korpus), regresyon karşılaştırıcı (regresyon), kod doğrulayıcı (kod_dogrula)
-testler/        stdlib unittest (269 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
+testler/        stdlib unittest (271 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
 ```
 
 ## Veri kaynakları (Azerbaycan Türkçesi)
@@ -107,10 +109,11 @@ testler/        stdlib unittest (269 test) — round-trip, sahte bölme, regresy
 
 - **Kök listesi:** [Open English WordNet](https://github.com/globalwordnet/english-wordnet) 2025 sürümü
   (CC BY 4.0), Princeton WordNet'ten türetilmiştir (WordNet License, © Princeton University). Yalnız başlık
-  sözcük, tür ve düzensiz biçimler alındı; tanım ve örnek alınmadı. Kapalı sınıf sözcükleri ve düzeltmeler bizim.
-- **Korpus kanıtı:** FineWeb `sample-10BT` (ODC-By). Yazım bayrakları (çift ünsüz, -es, -ves) ve eşsesli kök
-  kararları bu korpustaki gerçek kullanımla bir kez verilip veri dosyasına işlendi; çalışma anında frekans
-  kullanılmaz. Korpus metni depoda yoktur.
+  sözcük, tür ve düzensiz biçimler alındı; tanım ve örnek alınmadı. Büyük harfli lemmalar özel ad kökü olur.
+  Kapalı sınıf sözcükleri, güncel sözcükler, kısaltma listeleri ve düzeltmeler bizim.
+- **Korpus kanıtı:** FineWeb `sample-10BT` (ODC-By). Yazım bayrakları (çift ünsüz, -es, -ves), eşsesli kök
+  kararları ve elle denetlenen özel ad/sözcük adayları bu korpustaki gerçek kullanımla bir kez verilip veri dosyasına
+  işlendi; çalışma anında frekans kullanılmaz. Korpus metni depoda yoktur.
 
 ## Veriyi yeniden üretme
 

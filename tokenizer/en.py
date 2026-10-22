@@ -14,8 +14,10 @@ Token kuralları (plan docs/arastirma/en_plan.md §2):
   - Klitik ayrı token (kesme dahil): don't = [do, n't], it's = [it, 's].
   - Düzensiz biçim (went, children, better) bütün token (istisnalar.json 'düzensiz' grubu).
 
-Seçim (deterministik): BÜTÜN kök → en az ek/önek → en uzun kök → en az token → tam kırıcı. Eksik sözlükte sahte bölmeyi
-bütün-kök önceliği ve ek-sınıf kısıtı önler (corner ≠ corn+er: -er karşılaştırması sıfat, kişi -er fiil ister).
+Seçim (deterministik): (küçük harfte özel ad sonda) → BÜTÜN kök → en az ek/önek → en uzun kök → en az token → tam
+kırıcı. Özel ad kökü (tür 'özel', EN-3) yalnız çoğul alır (Kennedys = kennedy+s); Başlık biçiminde öne geçer. Eksik
+sözlükte sahte bölmeyi bütün-kök önceliği ve ek-sınıf kısıtı önler (corner ≠ corn+er: -er karşılaştırması sıfat, kişi
+-er fiil ister).
 """
 
 from __future__ import annotations
@@ -29,9 +31,9 @@ from tokenizer.cozumle import Çözüm
 from tokenizer.istisna import yükle as istisna_yükle
 
 ÜNLÜ = frozenset("aeiou")
-SINIFLAR = frozenset({"isim", "fiil", "sıfat", "zarf"})            # ek alan açık sınıflar
+SINIFLAR = frozenset({"isim", "fiil", "sıfat", "zarf", "özel"})   # ek alan sınıflar (özel ad yalnız çoğul alır)
 KAPALI = frozenset({"zamir", "belirteç", "edat", "bağlaç", "ünlem", "sayı", "yardımcı"})   # ek almaz (klitik alır)
-TÜRLER = SINIFLAR | KAPALI | {"özel"}
+TÜRLER = SINIFLAR | KAPALI
 BAYRAKLAR = frozenset({"çift", "çift2", "es", "ves", "dg", "dç", "dk", "geri"})
 # Düzensiz biçimi olan kökte düzenli ek YOK (see → saw: seed ≠ see+ed; be: bed ≠ be+ed; child → children)
 ENGEL = {"dg": "geçmiş", "dç": "çoğul", "dk": ("karşılaştırma", "üstünlük")}
@@ -55,8 +57,7 @@ class EnKök:
 
     def sınıflar(self) -> list[str]:
         sonuç = []
-        for t in (self.tür, *self.ek_tür):
-            s = "isim" if t == "özel" else t
+        for s in (self.tür, *self.ek_tür):
             if s in SINIFLAR and s not in sonuç:
                 sonuç.append(s)
         return sonuç
@@ -179,8 +180,8 @@ def üret(kök_ad: str, kök: EnKök, ek_adları, ekler, önek: str | None = Non
         if ek.s_eki:
             if gövde.endswith(_S_GRUBU) or (ilk and kök.es and gövde.endswith("o")):
                 s = "es"
-            elif _ünsüz_y(gövde):
-                son_değiştir(1, "i"); s = "es"         # study → studi+es
+            elif _ünsüz_y(gövde) and not (ilk and kök.tür == "özel"):
+                son_değiştir(1, "i"); s = "es"         # study → studi+es (özel ad: Kennedy → Kennedy+s)
             elif ilk and kök.ves:
                 son_değiştir(2 if gövde.endswith("fe") else 1, "v"); s = "es"   # knife → kniv+es
         elif s[0] in ÜNLÜ:
@@ -321,13 +322,16 @@ def çözümle(kelime: str, kökler, ekler, istisnalar=None, klitikler=()) -> tu
     return [Çözüm(tokens=ç.tokens + [kk], kök=ç.kök, ekler=ç.ekler + [ad]) for ç in çs], None
 
 
-def en_iyi(çözümler: list[Çözüm], kökler=None) -> Çözüm:
-    """BÜTÜN kök → en az ek/önek → öneksiz (missing = miss+ing, mis+sing değil) → GERİ kök (başka kök yarışıyorsa) →
-    en uzun kök → en az token → tam kırıcı."""
+def en_iyi(çözümler: list[Çözüm], kökler=None, ad_okuma: bool = False) -> Çözüm:
+    """(küçük harfte özel ad okuması EN SONA) → BÜTÜN kök → en az ek/önek → öneksiz (missing = miss+ing, mis+sing değil)
+    → GERİ kök (başka kök yarışıyorsa) → en uzun kök → en az token → tam kırıcı.
+    ad_okuma: sözcük Başlık biçiminde (Wells, Bates) → özel ad cezası yok, bütün-kök önceliği adı seçer; küçük harfte
+    (wells) sıradan okuma (well+s) yeğlenir. Türkçe/AZ özel_ad_başlık ile aynı düzen."""
     kökler = kökler or {}
     geri = {ç.kök for ç in çözümler if getattr(kökler.get(ç.kök), "geri", False)
             and any(d.kök != ç.kök for d in çözümler)}
     return min(çözümler, key=lambda ç: (
+        not ad_okuma and getattr(kökler.get(ç.kök), "tür", "") == "özel",
         0 if not [e for e in ç.ekler if not e.startswith("klitik_")] else 1,
         len(ç.ekler), sum(e.startswith("önek_") for e in ç.ekler), ç.kök in geri, -len(ç.kök), len(ç.tokens), tuple(ç.tokens), ç.kök, tuple(ç.ekler)))
 

@@ -211,6 +211,7 @@ EN = DilProfili(
     hece="en",
     kesme_eki=False,
     klitikler=("n't", "'s", "'re", "'ve", "'ll", "'d", "'m"),
+    özel_ad_başlık=True,
 )
 
 PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ, "en": EN}

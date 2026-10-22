@@ -1,5 +1,5 @@
 {
-  "çoğul":            {"yüzey": "s",    "öbek": ["isim"],          "yuva": 2, "s_eki": true},
+  "çoğul":            {"yüzey": "s",    "öbek": ["isim", "özel"],  "yuva": 2, "s_eki": true},
   "şimdiki_3tekil":   {"yüzey": "s",    "öbek": ["fiil"],          "yuva": 2, "s_eki": true},
   "geçmiş":           {"yüzey": "ed",   "öbek": ["fiil"],          "yuva": 2},
   "ortaç_ing":        {"yüzey": "ing",  "öbek": ["fiil"],          "yuva": 2, "çıkış": "isim"},
