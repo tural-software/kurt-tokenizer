@@ -148,6 +148,8 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
             continue
         if ek_dizi and ek.önce_olamaz and ek_dizi[-1] in ek.önce_olamaz:
             continue
+        if ek.yalnız_kökler and (ek_dizi or kök_ad not in ek.yalnız_kökler):
+            continue
         # sadece-koşaç kökler (mı/değil) isim eki almaz; yalnız koşaç/ek-fiil ('her')
         # → "mide" yanlışlıkla mi+bulunma diye bölünmez
         if getattr(kök, "sadece_koşaç", False) and ek.öbek != "her":

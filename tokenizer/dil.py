@@ -41,6 +41,9 @@ class DilProfili:
     geniş: str = "tr"           # geniş zaman kuralı: "tr" (-Ar/-Ir + GENİŞ_IR, olumsuz -z) |
     #                             "az" (-(y)Ar; olumsuz 1. kişide -r: gəlmərəm, diğerinde -z: gəlməz)
     ettirgen_ünsüz: str = "DIr" # ünsüz-sonu gövdede ettirgen şablonu (AZ: sertleşme yazılmaz → dIr)
+    edilgen_tek_heceli_y: bool = False  # tek heceli ünlü-sonu gövdede edilgen (y)Il (AZ deyil, yeyil)
+    ettirgen_çok_heceli_rl: bool = False  # -t yalnız ünlü + ÇOK heceli r/l sonrası (AZ oturt/azalt;
+                                          # tek heceli gördür/aldır). False: Türkçe (ünlü/r → t)
     rakam_tire_eki: bool = False  # rakamdan sonra tire + harf = ek (AZ 2024-cü, 5-də; kesme gibi)
     kişi_lisansı: tuple = ()    # ortak KİŞİ_LİSANS'a dile özgü ek: (ek_adı, tip, kaynak) üçlüleri
     # Seçim politikası eklentileri (pipeline.en_iyi_çözüm; Türkçe politika değişmez):
@@ -49,8 +52,21 @@ class DilProfili:
     az_ek_önce: bool = False    # token sayısı eşitse daha az ekli çözüm (gəl+məli+y+əm, gəl+mə+liy+əm değil)
     birincil_önce: bool = False # eşsesli kök birincil sınıfıyla okunabiliyorsa o okuma (yazsan = yaz+sa+n
     #                             'yazarsan', yaz [mevsim]+san değil)
+    seyrek_ekler: frozenset = frozenset()  # İLK ölçüt: bu (seyrek) ekleri içeren çözüm, başka çözüm varsa
+    #                                          seçilmez — türemiş kökten de önce (AZ üretken dönüşlü -(I)n:
+    #                                          yerinə = yer+i+n+ə, yeri+n+ə değil; edebî istek kişileri
+    #                                          -(y)Am/-(y)AlAr: atam = ata+m, at+am değil)
+    zamir_önce: bool = False  # birim + ek sayısı eşitliğinde kapalı sınıf zamir kökü yeğlenir (AZ haraya =
+    #                           hara+y+a, haray 'feryat'+a değil)
+    birim_say: bool = False  # token sayısı yerine BİRİM (kök hecesi + ek sayısı): tampon tokenı (n/y/s)
+    #                          morfem sayılmaz → ünlü-sonu kök cezalanmaz (AZ ata+n+ı = 3 birim, at+an+ı
+    #                          = 3; eşitlikte az ek: ata). Token sayısı sonraki kırıcı.
+    seyrek_diziler: frozenset = frozenset()  # seyrek_ekler ile aynı katman: bu ARDIŞIK ek çiftleri
+    #                                          (AZ ortaç -An + idi/imiş: yenilənmiş = yenilə+n+miş, yen+il+ən+miş
+    #                                          değil; tamlayan + idi: oxundu = oxu+n+du, ox+un+du değil)
     yeğlenmeyen_ekler: frozenset = frozenset()  # aynı token sayısında bu ekleri içermeyen çözüm
-    #                             yeğlenir (AZ 2. kişi iyelik: altından = alt+ı+n+dan, altı+n+dan değil)
+    #                             yeğlenir (AZ 2. kişi iyelik: altından = alt+ı+n+dan, altı+n+dan değil;
+    #                             edilgen/ettirgen: yerinə = yer+i+n+ə, yeri+n+ə değil)
 
     # ── ses ──────────────────────────────────────────────────────────────────────────────────
     def artlık(self, ünlü: str) -> str:
@@ -127,18 +143,27 @@ AZ = DilProfili(
     sert=frozenset("çfhxkpsşt"),
     geniş_ince="ə",
     ince_karşılık=(("a", "ə"), ("ı", "i"), ("o", "ö"), ("u", "ü")),
-    değişken_son="aəkqşz",         # ş: -mIş + sAn → gəlmisən (son_düşer); z: -mAz → -mAr (gəlmərəm)
+    değişken_son="aəkqşzt",         # ş: -mIş + sAn → gəlmisən (son_düşer); z: -mAz → -mAr (gəlmərəm);
+    #                                 t: ettirgen -t ünlü önünde d (oxu+t+ur → oxudur)
     daralan_son="aə",
     daraltma="olumsuz",
     geniş="az",
     ettirgen_ünsüz="dIr",
+    ettirgen_çok_heceli_rl=True,
+    edilgen_tek_heceli_y=True,
     rakam_tire_eki=True,
     # -(y)Ib geçmişi (gəlibsən, gəliblər) ve gereklilik (gəlməliyəm, gəlməliyik) kişi eki alır.
     kişi_lisansı=(("geçmiş_ib", 1, "V"), ("gereklilik", 1, "V")),
     son_çare_ekler=frozenset({"soru"}),
     az_ek_önce=True,
     birincil_önce=True,
-    yeğlenmeyen_ekler=frozenset({"iyelik_2tekil", "iyelik_2çoğul"}),
+    seyrek_ekler=frozenset({"dönüşlü", "istek_1tekil", "istek_2tekil", "istek_2çoğul", "istek_3çoğul",
+                            "emir_2çoğul_kibar"}),
+    seyrek_diziler=frozenset({("ortaç_an", "ek_fiil_idi"), ("ortaç_an", "ek_fiil_imiş"),
+                              ("tamlayan", "ek_fiil_idi"), ("tamlayan", "ek_fiil_imiş")}),
+    birim_say=True,
+    zamir_önce=True,
+    yeğlenmeyen_ekler=frozenset({"iyelik_2tekil", "iyelik_2çoğul", "edilgen", "ettirgen"}),
 )
 
 PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ}

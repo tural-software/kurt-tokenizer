@@ -43,17 +43,26 @@ def _geniş_şablon(gövde: str, ad: str, ünlüler=sesler.ÜNLÜLER) -> str:
     return "Ir" if ad in GENİŞ_IR else "Ar"
 
 
-def _edilgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER) -> str:
-    """Edilgen (pasif) çatı şablonu: ünlü/l-sonu → (I)n (okun/alın), ünsüz → (I)l (yapıl)."""
+def _edilgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER, tek_heceli_y: bool = False) -> str:
+    """Edilgen (pasif) çatı şablonu: ünlü/l-sonu → (I)n (okun/alın), ünsüz → (I)l (yapıl).
+    tek_heceli_y (AZ): tek heceli ünlü-sonu gövde → (y)Il (de→deyil, ye→yeyil, yu→yuyul)."""
     son = gövde[-1]
+    if tek_heceli_y and son in ünlüler and sum(c in ünlüler for c in gövde) == 1:
+        return "(y)Il"
     return "(I)n" if (son in ünlüler or son == "l") else "(I)l"
 
 
-def _ettirgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER, ünsüz_şablon: str = "DIr") -> str:
+def _ettirgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER, ünsüz_şablon: str = "DIr",
+                     çok_heceli_rl: bool = False) -> str:
     """Ettirgen (oldurgan) çatı şablonu: ünlü/r-sonu → t (okut/oturt), ünsüz → DIr (yaptır;
-    AZ dIr: yazdır, etdir — sertleşme yazılmaz)."""
+    AZ dIr: yazdır, etdir — sertleşme yazılmaz). çok_heceli_rl (AZ): r/l sonrası -t yalnız çok
+    heceli gövdede (oturt, azalt); tek hecelide dIr (gördür, aldır)."""
     son = gövde[-1]
-    return "t" if (son in ünlüler or son == "r") else ünsüz_şablon
+    if son in ünlüler:
+        return "t"
+    if çok_heceli_rl:
+        return "t" if son in "rl" and sum(c in ünlüler for c in gövde) > 1 else ünsüz_şablon
+    return "t" if son == "r" else ünsüz_şablon
 
 
 # AZ geniş zaman olumsuzu: 1. kişi eki önünde -mAr- (gəlmərəm, gəlmərik), diğerlerinde -mAz.
@@ -134,10 +143,12 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
             else:
                 şablon = "z" if olumsuz_bağlam else _geniş_şablon(gövde, ad, ünlüler)
         elif kural == "edilgen":
-            şablon = _edilgen_şablon(gövde, ünlüler)
+            şablon = (_edilgen_şablon(gövde, ünlüler) if profil is None
+                      else _edilgen_şablon(gövde, ünlüler, profil.edilgen_tek_heceli_y))
         elif kural == "ettirgen":
-            şablon = _ettirgen_şablon(gövde, ünlüler,
-                                      "DIr" if profil is None else profil.ettirgen_ünsüz)
+            şablon = (_ettirgen_şablon(gövde, ünlüler) if profil is None else
+                      _ettirgen_şablon(gövde, ünlüler, profil.ettirgen_ünsüz,
+                                       profil.ettirgen_çok_heceli_rl))
         else:
             şablon = ek.şablon
         # y_tampon kökü (AZ su, nə): ünlüyle başlayabilen ilk ekte araya y girer, kök ünsüz-sonu

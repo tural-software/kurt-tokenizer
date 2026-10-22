@@ -36,6 +36,7 @@
     "da": {"tokens": ["da"], "not": "ədat (dedim də), ayrı yazılır"},
     "də": {"tokens": ["də"], "not": "ədat"},
     "hətta": {"tokens": ["hətta"], "not": "ədat"},
+    "görəsən": {"tokens": ["görəsən"], "not": "ədat (sual: 'acaba'); görə+sən değil"},
     "belə": {"tokens": ["belə"], "not": "ədat/zərf"},
     "elə": {"tokens": ["elə"], "not": "ədat/zərf"},
     "hələ": {"tokens": ["hələ"], "not": "zərf"},

@@ -3,6 +3,9 @@
 # (NK 2021 №175), FineWeb-2 azj örneklemindeki gerçek yazım. Token kuralları Türkçe ile aynı: kök
 # heceleri; parantezli tampon (ünlü/ünsüz) AYRI token; ek gövdesi tek token; pronominal -n- ayrı.
 # Test: en iyi çözümün tokenları birebir + beklenen çözümleme çözüm kümesinde (etiket eşseslisi serbest).
+# AZ-3 (tam sözlük): sözlükte kök olan eşsesli BÜTÜN okunur (alaq 'yabani ot', gəlin 'gelin'); bilinen
+# eşsesli seçim sınırları (dilbilgisel ikinci okuma kazanır, kayıp yok): oxundu = ox+u+n+du, oxudur = ox+u+dur,
+# siyahımıza = siyah+ı+mız+a, bacım = bac+ı+m, anda = and+a.
 
 # ── isim: çoğul, iyelik, hâl ─────────────────────────────────────────────────────────────────
 evlər	ev lər	ev+çoğul
@@ -263,12 +266,12 @@ gələ	gəl ə	gəl+istek_3tekil
 gələk	gəl ək	gəl+istek_1çoğul
 gələsiniz	gəl əsiniz	gəl+istek_2çoğul
 gələlər	gəl ələr	gəl+istek_3çoğul
-alaq	al aq	al+istek_1çoğul
+alaq	a laq	alaq
 oxuyaq	o xu y aq	oxu+istek_1çoğul
 gəl	gəl	gəl
 gəlim	gəl im	gəl+emir_1tekil
 gəlsin	gəl sin	gəl+emir_3tekil
-gəlin	gəl in	gəl+emir_2çoğul
+gəlin	gə lin	gəlin
 gəliniz	gəl iniz	gəl+emir_2çoğul_kibar
 gəlsinlər	gəl sinlər	gəl+emir_3çoğul
 oxuyun	o xu y un	oxu+emir_2çoğul
@@ -283,7 +286,6 @@ işlət	iş lə t	işlə+ettirgen
 oturt	o tur t	otur+ettirgen
 etdirmək	et dir mək	et+ettirgen+mastar
 yazıldı	yaz ı l dı	yaz+edilgen+görülen_geçmiş
-oxundu	o xu n du	oxu+edilgen+görülen_geçmiş
 açıldı	aç ı l dı	aç+edilgen+görülen_geçmiş
 gətirildi	gə tir i l di	gətir+edilgen+görülen_geçmiş
 # ── mastar, isim-fiil, ortaç, ulaç ─────────────────────────────────────────────────────────
@@ -377,3 +379,42 @@ kimsən	kim sən	kim+koşaç_2tekil_t1
 atamı	a ta m ı	ata+iyelik_1tekil+belirtme
 ilki	ilk i	ilk+belirtme
 adam	a dam	adam
+
+# ── AZ-3 tam sözlük: türemiş başlık, eşsesli seçim, yeni dilbilgisi kuralları ───────────────────────────────
+yerinə	yer i n ə	yer+iyelik_3tekil+yönelme
+olmayan	ol ma y an	ol+olumsuz+ortaç_an
+edilən	ed i l ən	et+edilgen+ortaç_an
+yaradır	ya rad ır	yarat+şimdiki_zaman
+haqqında	haqq ı n da	haqq+iyelik_3tekil+bulunma
+öyrədir	öy rəd ir	öyrət+şimdiki_zaman
+unudur	u nud ur	unut+şimdiki_zaman
+ağlına	a ğl ı n a	ağıl+iyelik_3tekil+yönelme
+buranı	bu ra n ı	bura+belirtme
+qızına	qız ı n a	qız+iyelik_3tekil+yönelme
+üçündür	ü çün dür	üçün+ek_fiil_dir
+kimidir	ki mi dir	kimi+ek_fiil_dir
+deyilir	de y il ir	de+edilgen+şimdiki_zaman
+artır	art ır	art+şimdiki_zaman
+keçirməli	ke çir məli	keçir+gereklilik
+görünür	gö rün ür	görün+şimdiki_zaman
+kəsən	kəs ən	kəs+ortaç_an
+quruda	qu ru da	quru+bulunma
+dərəcəyə	də rə cə y ə	dərəcə+yönelme
+yenilənmiş	ye ni lə n miş	yenilə+edilgen+duyulan_geçmiş
+məktəbə	mək təb ə	məktəb+yönelme
+əmlakı	əm lak ı	əmlak+belirtme
+şəriki	şə rik i	şərik+belirtme
+olan	ol an	ol+ortaç_an
+gəliri	gə lir i	gəlir+belirtme
+tarixini	ta rix i n i	tarix+iyelik_3tekil+belirtme
+düymə	düy mə	düymə
+dəyər	də yər	dəyər
+asan	a san	asan
+sənə	sən ə	sən+yönelme
+banka	bank a	bank+yönelme
+gəldikdən	gəl dik dən	gəl+ortaç_dik+ayrılma
+rəsmidir	rəs mi dir	rəsmi+ek_fiil_dir
+daimidir	da i mi dir	daimi+ek_fiil_dir
+xidmətinin	xid mət i n in	xidmət+iyelik_3tekil+tamlayan
+yaradılıb	ya rad ı l ıb	yarat+edilgen+geçmiş_ib
+artırdı	ar tır dı	artır+görülen_geçmiş

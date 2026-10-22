@@ -15,6 +15,7 @@ from __future__ import annotations
 import itertools
 import re
 import unicodedata
+from collections import Counter
 
 from tokenizer import alfabe, sesler
 from tokenizer.cozumle import çözümle
@@ -173,6 +174,37 @@ def _ikincil_okuma(çöz, kökler, ekler) -> int:
     return int(okunan != birincil)
 
 
+def _birim(çöz, kökler) -> int:
+    """Çözümün BİRİM sayısı: kök hecesi + ek sayısı (tampon tokenı morfem sayılmaz). İstisna çözümünde
+    (kök sözlükte değil) token sayısı."""
+    kök = kökler.get(çöz.kök)
+    return (len(kök.tokens) if kök is not None else len(çöz.tokens)) + len(çöz.ekler)
+
+
+def _türemiş(çöz, kökler) -> int:
+    """Türemiş kök okuması cezası: "hep" 2; "ekli" 1 yalnız ekliyken; "çıplak" 1 yalnız eksizken. İki
+    türemiş okuma yarışırsa (görünür başlığı ↔ görün+ür) zayıf olan kazanır."""
+    kök = kökler.get(çöz.kök)
+    if kök is None or not kök.türemiş:
+        return 0
+    if kök.türemiş == "hep":
+        return 2
+    return int(bool(çöz.ekler) == (kök.türemiş == "ekli"))
+
+
+def _seyrek(ek_adları, seyrek, seyrek_dizi) -> int:
+    """Seyrek ek + seyrek ardışık ek çifti sayısı (profil.seyrek_ekler / seyrek_diziler)."""
+    n = sum(e in seyrek for e in ek_adları)
+    if seyrek_dizi:
+        n += sum(çift in seyrek_dizi for çift in zip(ek_adları, ek_adları[1:]))
+    return n
+
+
+def _zamir_değil(çöz, kökler) -> int:
+    kök = kökler.get(çöz.kök)
+    return 0 if kök is not None and kök.tür == "zamir" else 1
+
+
 def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
     """Deterministik seçim: BÜTÜN-KÖK → en az token → en az öbek-uyumsuzluk → en uzun kök.
 
@@ -189,17 +221,32 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None):
     hatta işçiden işçiye farklı çıktı). Örn. resmin: resim+tamlayan [re,sm,in] ile
     resmi+iyelik_2tekil [res,mi,n] tüm ölçütlerde berabere → [re,sm,in].
 
-    profil (None = Türkçe) politikayı yalnız genişletir: son_çare_ekler (AZ bitişik soru -mI)
-    içeren çözüm, başka çözüm varsa seçilmez; az_ek_önce ise token sayısı eşitliğinde daha az
-    ekli çözümü yeğler. Türkçe anahtar birebir aynıdır."""
-    if profil is not None and (profil.son_çare_ekler or profil.az_ek_önce
-                               or profil.birincil_önce or profil.yeğlenmeyen_ekler):
+    profil (None = Türkçe) politikayı yalnız genişletir; Türkçe anahtar birebir aynıdır. AZ sırası:
+      1. seyrek ek/dizi (üretken dönüşlü, edebî istek kişileri, ortaç+idi): başka çözüm varsa seçilmez
+         (yerinə = yer+i+n+ə; atam = ata+m);
+      2. TÜREMİŞ kök (bileşik biçimle eşsesli sözlük başlığı, sema.Kök.türemiş): bileşik okuma varsa
+         seçilmez (çıplak 'gəlir' = gəl+ir; açmalımı = aç+malı+mı, açma+lı+m+ı değil);
+      3. son_çare_ekler (bitişik soru -mI) → bütün-kök → birincil sınıf (yalnız aynı kökün okumaları);
+      4. BİRİM (kök hecesi + ek sayısı; tampon tokenı morfem sayılmaz) → az ek → zamir → token sayısı →
+         yeğlenmeyen ekler → öbek uyumu → en uzun kök → son kırıcı."""
+    if profil is not None and (profil.son_çare_ekler or profil.az_ek_önce or profil.seyrek_ekler
+                               or profil.seyrek_diziler
+                               or profil.birincil_önce or profil.yeğlenmeyen_ekler or profil.birim_say):
         son_çare, yeğlenmeyen = profil.son_çare_ekler, profil.yeğlenmeyen_ekler
+        seyrek, seyrek_dizi = profil.seyrek_ekler, profil.seyrek_diziler
+        # birincil sınıf ölçütü yalnız AYNI kökün birden çok okuması yarışırken (yazsan: yaz fiil+şart ↔ yaz
+        # ad+koşaç); farklı kökler arasında (kəs 'kişi' ad ↔ kəsən = kəs+ən) birim/ek sayısı karar verir
+        çoklu = ({k for k, n in Counter(ç.kök for ç in çözümler).items() if n > 1}
+                 if profil.birincil_önce else frozenset())
         return min(
             çözümler,
-            key=lambda ç: (sum(e in son_çare for e in ç.ekler), 0 if not ç.ekler else 1,
-                           _ikincil_okuma(ç, kökler, ekler) if profil.birincil_önce else 0,
-                           len(ç.tokens), len(ç.ekler) if profil.az_ek_önce else 0,
+            key=lambda ç: (_seyrek(ç.ekler, seyrek, seyrek_dizi), _türemiş(ç, kökler),
+                           sum(e in son_çare for e in ç.ekler),
+                           0 if not ç.ekler else 1,
+                           _ikincil_okuma(ç, kökler, ekler) if ç.kök in çoklu else 0,
+                           _birim(ç, kökler) if profil.birim_say else len(ç.tokens),
+                           len(ç.ekler) if profil.az_ek_önce else 0,
+                           _zamir_değil(ç, kökler) if profil.zamir_önce else 0, len(ç.tokens),
                            sum(e in yeğlenmeyen for e in ç.ekler),
                            _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök),
                            tuple(ç.tokens), ç.kök, tuple(ç.ekler)),

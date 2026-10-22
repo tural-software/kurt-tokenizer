@@ -1,5 +1,8 @@
 {
   "var": {"tokens": ["var"], "tür": "edat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "yox": {"tokens": ["yox"], "tür": "edat", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
-  "deyil": {"tokens": ["de", "yil"], "tür": "edat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "sadece_koşaç": true}
+  "deyil": {"tokens": ["de", "yil"], "tür": "edat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "sadece_koşaç": true},
+  "üçün": {"tokens": ["ü", "çün"], "tür": "edat", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null, "sadece_koşaç": true},
+  "kimi": {"tokens": ["ki", "mi"], "tür": "edat", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "sadece_koşaç": true},
+  "görə": {"tokens": ["gö", "rə"], "tür": "edat", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null, "sadece_koşaç": true}
 }

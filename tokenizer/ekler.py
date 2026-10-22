@@ -122,6 +122,8 @@ class Ek:
     #                            → gəlmisən: ş, s önünde yazılmaz)
     önce_olamaz: tuple = ()    # bu eklerden HEMEN sonra gelemez (AZ yapım_lı ← fiil_isim_ma: -mAlI
     #                            gereklilik ekidir, -mA + -lI diye bölünmez)
+    yalnız_kökler: frozenset = frozenset()  # boş değilse ek YALNIZ bu köklere doğrudan gelir (AZ sıra
+    #                            sayısı -(I)ncI: sayılar; altıncı = altı+ncı, alt+ıncı değil)
 
 
 class EkŞemaHatası(Exception):
@@ -166,7 +168,8 @@ def yükle(yol: str | Path, profil=None) -> dict[str, Ek]:
                 çıkış=girdi.get("çıkış", ""),
                 değişim=girdi.get("değişim"),
                 son_düşer=girdi.get("son_düşer", ""),
-                önce_olamaz=tuple(girdi.get("önce_olamaz", ())))
+                önce_olamaz=tuple(girdi.get("önce_olamaz", ())),
+                yalnız_kökler=frozenset(girdi.get("yalnız_kökler", ())))
         g = doğrula(ad, ek, profil)
         hatalar.extend(g) if g else sözlük.update({ad: ek})
     if hatalar:
