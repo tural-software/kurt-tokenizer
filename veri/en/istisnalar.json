@@ -12213,5 +12213,273 @@
    ],
    "not": "tireyle ayrılan bağımsız önek (multi-level, pre-order); kök olarak listelenmemiş olanlar"
   }
+ },
+ "kesmesiz": {
+  "dont": {
+   "tokens": [
+    "do",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "didnt": {
+   "tokens": [
+    "did",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "doesnt": {
+   "tokens": [
+    "does",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "isnt": {
+   "tokens": [
+    "is",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "wasnt": {
+   "tokens": [
+    "was",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "couldnt": {
+   "tokens": [
+    "could",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "wouldnt": {
+   "tokens": [
+    "would",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "shouldnt": {
+   "tokens": [
+    "should",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "havent": {
+   "tokens": [
+    "have",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "hasnt": {
+   "tokens": [
+    "has",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "hadnt": {
+   "tokens": [
+    "had",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "arent": {
+   "tokens": [
+    "are",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "werent": {
+   "tokens": [
+    "were",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "aint": {
+   "tokens": [
+    "ai",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "mustnt": {
+   "tokens": [
+    "must",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "neednt": {
+   "tokens": [
+    "need",
+    "nt"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "im": {
+   "tokens": [
+    "i",
+    "m"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "ive": {
+   "tokens": [
+    "i",
+    "ve"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "youre": {
+   "tokens": [
+    "you",
+    "re"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "youve": {
+   "tokens": [
+    "you",
+    "ve"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "youll": {
+   "tokens": [
+    "you",
+    "ll"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "youd": {
+   "tokens": [
+    "you",
+    "d"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "theyre": {
+   "tokens": [
+    "they",
+    "re"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "theyve": {
+   "tokens": [
+    "they",
+    "ve"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "theyll": {
+   "tokens": [
+    "they",
+    "ll"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "thats": {
+   "tokens": [
+    "that",
+    "s"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "whats": {
+   "tokens": [
+    "what",
+    "s"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "hes": {
+   "tokens": [
+    "he",
+    "s"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "shes": {
+   "tokens": [
+    "she",
+    "s"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "theres": {
+   "tokens": [
+    "there",
+    "s"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "wheres": {
+   "tokens": [
+    "where",
+    "s"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "heres": {
+   "tokens": [
+    "here",
+    "s"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "itll": {
+   "tokens": [
+    "it",
+    "ll"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "weve": {
+   "tokens": [
+    "we",
+    "ve"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "wouldve": {
+   "tokens": [
+    "would",
+    "ve"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "couldve": {
+   "tokens": [
+    "could",
+    "ve"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "shouldve": {
+   "tokens": [
+    "should",
+    "ve"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  },
+  "hed": {
+   "tokens": [
+    "he",
+    "d"
+   ],
+   "not": "kesmesiz klitikli biçim"
+  }
  }
 }

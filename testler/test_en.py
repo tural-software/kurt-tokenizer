@@ -123,6 +123,8 @@ class SahteBölmeYok(unittest.TestCase):
         self.assertEqual(kodla("5th"), ["5", "th"])
         self.assertEqual(kodla("won't"), ["wo", "n't"])                     # klitik kalıp grubu korunur
         self.assertEqual(kodla("cannot"), ["can", "not"])
+        self.assertEqual(kodla("dont"), ["do", "nt"])                       # kesmesiz klitik (kapalı liste)
+        self.assertEqual(kodla("wont"), ["wont"])                           # gerçek sözcük: listeye girmez
         self.assertEqual(kodla("freshmen"), ["freshmen"])                    # -man → -men düzensiz
         self.assertEqual(kodla("penned"), ["pen", "n", "ed"])               # pent düzensizi düzenliyi engellemez
         self.assertEqual(kodla("ups"), ["up", "s"])                          # kapalı sınıf + ad okuması
