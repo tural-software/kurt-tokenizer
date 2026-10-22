@@ -1013,6 +1013,7 @@ ambitionner|fiil
 ambler|fiil
 amblyope|sıfat
 amblyopie|isim
+ambre|isim|geri
 ambrer|fiil
 ambroise|özel
 ambulance|isim
@@ -1648,10 +1649,12 @@ ardemment|zarf|geri
 ardenne|özel
 ardent|sıfat
 ardeur|isim
+ardoise|isim|geri
 ardoiser|fiil
 ardu|sıfat
 are|isim|geri
 arena|özel
+arène|isim|geri
 aréner|fiil
 aréographie|isim
 arer|fiil
@@ -2080,6 +2083,7 @@ aumôner|fiil
 aumônerie|isim
 aumônier|isim
 aumônière|isim
+aune|isim|geri
 auner|fiil
 auparavant|zarf
 auprès|zarf
@@ -2281,6 +2285,7 @@ bac|isim
 baccalauréat|isim
 bach|özel
 bachar|özel
+bâche|isim|geri
 bachelier|isim
 bachelor|isim
 bâcher|fiil
@@ -2307,6 +2312,7 @@ bâfrer|fiil
 bagad|isim
 bagage|isim
 bagagiste|isim
+bagarre|isim|geri
 bagarrer|fiil
 bagatelle|isim
 bagdad|özel
@@ -3499,6 +3505,7 @@ briser|fiil
 britannique|sıfat
 britney|özel
 broadway|özel
+brocante|isim|geri
 brocanter|fiil
 brocanteur|isim
 brocarder|fiil
@@ -3663,6 +3670,7 @@ burrito|isim
 burton|özel
 burundi|özel
 bus|isim|geri
+buse|isim|geri
 buser|fiil
 bush|özel
 bushi|isim
@@ -4042,6 +4050,7 @@ caravane|isim
 caravelle|isim
 carbocentrisme|isim
 carbonatation|isim
+carbonate|isim|geri
 carbonater|fiil
 carbone|isim
 carboniser|fiil
@@ -4758,6 +4767,7 @@ chloroforme|isim|geri
 chloroformer|fiil
 chloroformiser|fiil
 chlorophylle|isim
+chlorure|isim|geri
 chlorurer|fiil
 choc|isim
 chocolat|isim
@@ -5875,6 +5885,7 @@ contrôler|fiil
 contrôleur|isim
 contrôleuse|isim
 controuver|fiil
+controverse|isim|geri
 controverser|fiil
 contusionner|fiil
 convaincant|sıfat
@@ -5906,6 +5917,7 @@ convoyer|fiil
 convoyeur|isim
 convoyeuse|isim
 convulser|fiil
+convulsion|isim
 convulsionner|fiil
 cook|özel
 cookie|isim
@@ -5933,6 +5945,7 @@ copernicium|isim
 copie|isim|geri
 copier|fiil
 copieux|sıfat
+copine|isim|geri
 copiner|fiil
 copiste|isim
 copropriétaire|isim
@@ -6074,6 +6087,7 @@ costaud|sıfat
 costume|isim
 costumier|isim|f=costumière
 cosy|sıfat
+cote|isim|geri
 côte|isim
 côté|isim
 coteau|isim
@@ -6345,6 +6359,7 @@ criminellement|zarf|geri
 criminologie|isim
 criminologue|isim
 crin|isim
+crique|isim|geri
 criquer|fiil
 criquet|isim
 crise|isim
@@ -6407,7 +6422,8 @@ croupissement|isim
 croupissoir|isim
 croupissure|isim
 crous|özel
-croustiller|fiil
+croustillant|sıfat
+croustiller|fiil|geri
 croute|isim
 croûte|isim|geri
 crouter|fiil
@@ -6566,6 +6582,7 @@ cyclotourisme|isim
 cyclotouriste|isim
 cygne|isim
 cylindre|isim|geri
+cylindrée|isim|geri
 cylindrer|fiil
 cymbale|isim
 cymbaliste|isim
@@ -6699,9 +6716,10 @@ débarbouiller|fiil
 débarder|fiil
 débarquement|isim
 débarquer|fiil
+débarras|isim|geri
 débarrassage|isim
 débarrasser|fiil
-débarrer|fiil
+débarrer|fiil|geri
 débarricader|fiil
 débat|isim|geri
 débâter|fiil
@@ -6897,6 +6915,7 @@ décolérer|fiil
 décollage|isim
 décollement|isim
 décoller|fiil
+décolleté|isim|geri
 décolleter|fiil
 décolonialité|isim
 décolonisation|isim
@@ -7332,6 +7351,7 @@ dénigrement|isim
 dénigrer|fiil
 denis|özel
 denise|özel
+dénivelé|isim|geri
 déniveler|fiil
 dénivellation|isim
 dénivèllement|isim
@@ -8053,6 +8073,7 @@ discographique|isim,sıfat
 discontinuer|fiil
 discontinuité|isim
 disconvenir|fiil|k=venir
+discorde|isim|geri
 discorder|fiil
 discothécaire|isim
 discothèque|isim
@@ -8294,6 +8315,7 @@ doudou|isim
 douer|fiil
 doug|özel
 douglas|özel
+douille|isim|geri
 douiller|fiil
 doula|isim
 douleur|isim
@@ -8513,6 +8535,7 @@ ecclésiologie|isim
 échapper|fiil
 échardonner|fiil
 écharner|fiil
+écharpe|isim|geri
 écharper|fiil
 écharpiller|fiil
 échasse|isim
@@ -9786,6 +9809,7 @@ escobarder|fiil
 escoffier|fiil
 escompter|fiil
 escort|isim
+escorte|isim|geri
 escorter|fiil
 escrime|isim|geri
 escrimer|fiil
@@ -10377,6 +10401,7 @@ façadier|isim
 face|isim
 facebook|özel
 facétieux|sıfat
+facette|isim|geri
 facetter|fiil
 fâcher|fiil
 fâcheux|sıfat
@@ -10994,6 +11019,7 @@ foreur|isim
 foreuse|isim
 forex|isim
 forfaire|fiil|k=faire
+forfait|isim|geri
 forfaitaire|sıfat
 forge|isim|geri
 forgeage|isim
@@ -11223,6 +11249,7 @@ frimas|isim|geri
 frime|isim|geri
 frimer|fiil
 frimousse|isim
+fringue|isim|geri
 fringuer|fiil
 friper|fiil
 fripon|isim
@@ -11296,7 +11323,8 @@ funèbre|sıfat
 funer|fiil
 funéraille|isim
 funéraire|sıfat
-funester|fiil
+funeste|sıfat
+funester|fiil|geri
 funk|isim
 fureter|fiil
 fureur|isim
@@ -11339,6 +11367,7 @@ gaël|özel
 gaélique|sıfat
 gaëlle|özel
 gaëtan|özel
+gaffe|isim|geri
 gaffer|fiil
 gag|isim
 gaga|sıfat
@@ -11796,6 +11825,7 @@ glucose|isim
 gluer|fiil
 gluten|isim
 glycémie|isim
+glycérine|isim|geri
 glycériner|fiil
 glycobiologie|isim
 glycogène|isim
@@ -11824,6 +11854,7 @@ gober|fiil
 gobeter|fiil
 gobinisme|isim
 godard|özel
+gode|isim|geri
 goder|fiil
 godiller|fiil
 godronner|fiil
@@ -11889,8 +11920,8 @@ goupiller|fiil
 goupillonner|fiil
 gourer|fiil
 gourgouran|isim
-gourmand|isim
-gourmander|fiil
+gourmand|isim,sıfat
+gourmander|fiil|geri
 gourmandise|isim
 gourmet|isim
 gourou|isim
@@ -11924,8 +11955,10 @@ gpu|özel
 grabeler|fiil
 grâce|isim
 gracier|fiil
-gracieusement|zarf
-gracieuser|fiil
+gracieusement|zarf|geri
+gracieuser|fiil|geri
+gracieux|sıfat
+grade|isim|geri
 grader|fiil
 graduer|fiil
 graffeur|isim
@@ -11959,8 +11992,11 @@ grandir|fiil
 grandissant|sıfat|geri
 grange|isim
 granit|isim
+granite|isim|geri
 graniter|fiil
 grant|özel
+granule|isim|geri
+granulé|isim|geri
 granuler|fiil
 graphe|isim
 graphème|isim
@@ -12062,6 +12098,7 @@ grigri|isim
 gril|isim
 grill|isim
 grillade|isim
+grillage|isim|geri
 grillager|fiil
 grille|isim|geri
 griller|fiil
@@ -12078,6 +12115,7 @@ gringotter|fiil
 grippe|isim|geri
 gripper|fiil
 gris|sıfat
+grisaille|isim|geri
 grisailler|fiil
 grisâtre|sıfat
 griser|fiil|geri
@@ -12266,6 +12304,7 @@ halluciner|fiil
 hallucinogène|isim
 hallyday|özel
 halogène|isim,sıfat
+halte|isim|geri
 halter|fiil
 haltère|isim
 haltérophile|isim
@@ -12286,6 +12325,7 @@ hana|özel
 hanafisme|isim
 hanbalisme|isim
 hanbalite|isim,sıfat
+hanche|isim|geri
 hanchement|isim
 hancher|fiil
 hancornia|isim
@@ -12367,6 +12407,7 @@ hashtag|isim
 hassan|özel
 hassidisme|isim
 hassium|isim
+hâte|isim|geri
 hâter|fiil
 hâtivement|zarf
 haubaner|fiil
@@ -12623,6 +12664,7 @@ homogène|sıfat
 homogénéiser|fiil
 homogénéité|isim
 homologation|isim
+homologue|sıfat,isim|geri
 homologuer|fiil
 homonyme|isim
 homonymie|isim
@@ -12696,6 +12738,7 @@ hourailler|fiil
 hourder|fiil
 house|isim
 houspiller|fiil
+housse|isim|geri
 housser|fiil
 houssiner|fiil
 houston|özel
@@ -12759,6 +12802,7 @@ hurling|isim
 hussard|isim
 hussein|özel
 hyaluronique|sıfat
+hybride|sıfat,isim|geri
 hybrider|fiil
 hydratant|sıfat
 hydratation|isim
@@ -12773,6 +12817,7 @@ hydrochimiste|isim
 hydrodynamique|isim
 hydroélectricité|isim
 hydroélectrique|sıfat
+hydrofuge|sıfat|geri
 hydrofuger|fiil
 hydrogel|isim
 hydrogène|isim|geri
@@ -14606,6 +14651,7 @@ lévitation|isim
 léviter|fiil
 levrauder|fiil
 lèvre|isim
+levrette|isim|geri
 levretter|fiil
 levure|isim
 levy|özel
@@ -14642,9 +14688,9 @@ libératoire|sıfat
 libérer|fiil
 libertaire|sıfat
 liberté|isim
-libertin|isim
+libertin|isim,sıfat
 libertinage|isim
-libertiner|fiil
+libertiner|fiil|geri
 libertinisme|isim
 libido|isim
 libraire|isim
@@ -14898,6 +14944,7 @@ loto|isim
 lou|özel
 louable|sıfat
 louage|isim
+louange|isim|geri
 louanger|fiil
 louche|isim|geri
 loucher|fiil
@@ -14958,6 +15005,7 @@ ludwig|özel
 lueur|isim
 luffy|özel
 lufthansa|özel
+luge|isim|geri
 luger|fiil
 lugeur|isim
 lugubre|sıfat
@@ -15147,9 +15195,10 @@ maigre|sıfat
 maigrir|fiil
 mail|isim
 maillage|isim
+maille|isim|geri
 mailler|fiil
 mailleter|fiil
-maillon|isim|geri
+maillon|isim
 maillot|isim
 main|isim
 maintenance|isim
@@ -15657,7 +15706,8 @@ méchamment|zarf|geri
 méchanceté|isim
 méchant|isim,sıfat
 méchantise|isim
-mécher|fiil
+mèche|isim|geri
+mécher|fiil|geri
 méconnaissable|sıfat
 méconnu|sıfat
 méconseiller|fiil
@@ -16071,6 +16121,7 @@ militer|fiil
 millau|özel
 millénaire|isim
 miller|özel
+millésime|isim|geri
 millésimer|fiil
 millet|isim
 milliampèremètre|isim
@@ -16655,6 +16706,7 @@ mythologue|isim
 mythonner|fiil
 nabi|isim
 nabil|özel
+nacre|isim|geri
 nacrer|fiil
 nadal|özel
 nadège|özel
@@ -16998,6 +17050,7 @@ nippe|isim|geri
 nipper|fiil
 niquer|fiil
 nissan|özel
+nitrate|isim|geri
 nitrater|fiil
 nitrer|fiil
 nitrifier|fiil
@@ -17623,6 +17676,7 @@ ottomane|isim|geri
 ottomaniste|isim
 où|zarf
 ouagadougou|özel
+ouate|isim|geri
 ouater|fiil
 ouatiner|fiil
 ouattara|özel
@@ -17655,6 +17709,7 @@ outiller|fiil
 outilleur|isim
 outilleuse|isim
 outlook|özel
+outrage|isim|geri
 outrager|fiil
 outrance|isim
 outrecuider|fiil
@@ -17832,6 +17887,7 @@ panneau|isim
 panneauter|fiil
 panoplie|isim
 panorama|isim
+panoramique|sıfat
 panoramiquer|fiil
 panoramiste|isim
 panosse|isim
@@ -17852,6 +17908,7 @@ panther|özel
 panthère|isim
 pantin|isim
 pantomime|isim
+pantoufle|isim|geri
 pantoufler|fiil
 paolo|özel
 papa|isim
@@ -17883,6 +17940,7 @@ paqueter|fiil
 parabène|isim
 paracétamol|isim
 parachever|fiil
+parachute|isim|geri
 parachuter|fiil
 parachutisme|isim
 parachutiste|isim
@@ -18040,6 +18098,7 @@ partir|fiil|k=sentir
 partisan|isim,sıfat
 partition|isim
 partout|zarf
+partouze|isim|geri
 partouzer|fiil
 parure|isim
 parution|isim
@@ -18093,6 +18152,7 @@ patauger|fiil
 patch|isim
 patchwork|isim
 pâte|isim|geri
+pâté|isim|geri
 pateliner|fiil
 patenter|fiil
 pater|isim
@@ -18593,6 +18653,7 @@ phonique|sıfat
 phonologie|isim
 phonologiste|isim
 phoque|isim
+phosphate|isim|geri
 phosphater|fiil
 phosphore|isim|geri
 phosphorer|fiil
@@ -19892,6 +19953,7 @@ puce|isim|geri
 puceau|isim
 pucelle|isim
 pucer|fiil
+puceron|isim
 puddler|fiil
 pudeur|isim
 pudique|sıfat
@@ -19911,6 +19973,7 @@ puits|isim
 pull|isim
 pulluler|fiil
 pulmonaire|sıfat|f=pulmonaires
+pulpe|isim|geri
 pulper|fiil
 pulpeux|sıfat
 pulsion|isim
@@ -20252,6 +20315,7 @@ rancœur|isim
 rançonner|fiil
 rancune|isim
 rando|isim
+randonnée|isim|geri
 randonner|fiil
 randonneur|isim
 randy|özel
@@ -20504,6 +20568,7 @@ receveur|isim
 receveuse|isim
 recevoir|fiil|k=recevoir
 réchampir|fiil
+rechange|isim|geri
 rechanger|fiil
 rechanter|fiil
 rechaper|fiil
@@ -21387,6 +21452,7 @@ rétracter|fiil
 rétraction|isim
 retrait|isim
 retraite|isim|geri
+retraité|isim|geri
 retraitement|isim
 retraiter|fiil
 retrancher|fiil
@@ -21722,6 +21788,8 @@ roquer|fiil
 roquette|isim
 rosalie|özel
 rose|isim,sıfat|geri
+rosé|isim|geri
+rosée|isim|geri
 roselyne|özel
 roser|fiil
 roseraie|isim
@@ -22028,7 +22096,8 @@ sandwich|isim
 sandy|özel
 sang|isim
 sanglant|sıfat
-sangler|fiil
+sangle|isim|geri
+sangler|fiil|geri
 sanglier|isim
 sanglot|isim
 sangloter|fiil
@@ -22116,6 +22185,7 @@ saudi|sıfat
 sauge|isim
 saumon|isim
 saumurer|fiil
+sauna|isim|geri
 sauner|fiil
 saupoudrer|fiil
 saurer|fiil|geri
@@ -22219,6 +22289,7 @@ scieuse|isim
 scinder|fiil
 scintiller|fiil
 scission|isim
+sclérose|isim|geri
 scléroser|fiil
 scolaire|sıfat
 scolarisation|isim
@@ -22469,6 +22540,7 @@ serigne|özel
 sérigraphe|isim
 sérigraphie|isim
 seriner|fiil
+seringue|isim|geri
 seringuer|fiil
 serment|isim
 sermon|isim
@@ -22624,6 +22696,7 @@ silicate|isim
 silice|isim
 silicium|isim
 silicon|özel
+silicone|isim|geri
 siliconer|fiil
 sillage|isim
 sillon|isim
@@ -23009,6 +23082,7 @@ soustraction|isim
 soustraire|fiil|k=traire
 soutacher|fiil
 soutane|isim
+soute|isim|geri
 soutenance|isim
 soutènement|isim
 soutenir|fiil|k=venir
@@ -23036,6 +23110,7 @@ spark|özel
 spatial|sıfat
 spatialiser|fiil
 spationef|isim
+spatule|isim|geri
 spatuler|fiil
 spé|isim
 speaker|isim
@@ -23242,6 +23317,7 @@ stratagème|isim
 stratège|isim
 stratégie|isim
 stratégique|sıfat
+stratifié|isim|geri
 stratifier|fiil
 stratigraphe|isim
 stratigraphie|isim
@@ -23385,6 +23461,7 @@ suite|isim
 suivant|sıfat
 suivre|fiil|k=suivre,geri
 sujet|isim,sıfat
+sulfate|isim|geri
 sulfater|fiil
 sulfiter|fiil
 sulfoner|fiil
@@ -23444,6 +23521,7 @@ supplier|fiil
 support|isim
 supportable|sıfat
 supporter|fiil,isim
+supporteur|isim
 supposer|fiil
 suppression|isim
 supprimer|fiil
@@ -23497,6 +23575,7 @@ surfer|fiil
 surfeur|isim
 surfeuse|isim
 surfiler|fiil
+surgelé|isim|geri
 surgeler|fiil
 surgeonner|fiil
 surgir|fiil
@@ -23895,6 +23974,7 @@ téléchargeable|sıfat
 téléchargement|isim
 télécharger|fiil
 telecom|özel
+télécommande|isim|geri
 télécommander|fiil
 télécommunication|isim
 téléconsultation|isim
@@ -24479,6 +24559,7 @@ traître|isim
 trajectoire|isim
 trajet|isim
 tram|isim
+trame|isim|geri
 tramer|fiil
 trampoline|isim
 trampoliniste|isim
@@ -24493,6 +24574,7 @@ tranquille|sıfat
 tranquillement|zarf|geri
 tranquilliser|fiil
 tranquillité|isim
+trans|sıfat,isim
 transaction|isim
 transat|isim
 transatlantique|sıfat
@@ -24777,6 +24859,7 @@ tsa|özel
 tshisekedi|özel
 tsiganologue|isim
 tsunami|isim
+tube|isim|geri
 tuber|fiil
 tubercule|isim
 tuberculiser|fiil
@@ -24872,6 +24955,7 @@ ukraine|özel
 ukrainien|isim,sıfat
 ukrainologue|isim
 ukulélé|isim
+ulcère|isim|geri
 ulcérer|fiil
 ulm|özel
 ulrich|özel
@@ -25167,6 +25251,7 @@ vélocipède|isim
 vélociste|isim
 vélocité|isim
 velours|isim
+velouté|isim|geri
 velouter|fiil
 velvet|özel
 vénal|sıfat
@@ -25203,6 +25288,7 @@ ventilation|isim
 ventiler|fiil
 ventilo|isim
 ventôse|isim
+ventouse|isim|geri
 ventouser|fiil
 ventoux|özel
 ventral|sıfat
@@ -25226,7 +25312,8 @@ verdâtre|sıfat
 verdict|isim
 verdir|fiil
 verdon|özel
-verdoyer|fiil
+verdoyant|sıfat
+verdoyer|fiil|geri
 verdun|özel
 verdure|isim
 véreux|sıfat
@@ -25257,6 +25344,7 @@ verne|özel
 vernien|isim
 vernienne|isim
 vernir|fiil
+vernis|isim|geri
 vernissage|isim
 vernisser|fiil|geri
 veronica|özel
@@ -25367,6 +25455,7 @@ videur|isim
 videuse|isim
 vidimer|fiil
 vidoir|isim
+vie|isim
 vieillard|isim
 vieillesse|isim
 vieillir|fiil
@@ -25503,6 +25592,7 @@ viticulture|isim
 vitrage|isim
 vitrailliste|isim
 vitraux|isim
+vitre|isim|geri
 vitrer|fiil
 vitrerie|isim
 vitrier|isim
@@ -25815,6 +25905,7 @@ zéphyr|isim
 zeptomètre|isim
 zeptoseconde|isim
 zéro|isim
+zeste|isim|geri
 zester|fiil
 zettabit|isim
 zettamètre|isim

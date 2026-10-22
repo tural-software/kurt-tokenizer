@@ -189,6 +189,12 @@ class CasingVeRoundTrip(unittest.TestCase):
         metin = (VERİ / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")
         self.assertEqual(decode(kodla(metin)), metin_kanonik(metin))
 
+    def test_doğrulama_metni_bilinmeyen_yok(self):
+        # FR-5 kapısı (10 alan, 64 cümle): bilinmeyen YOK; yeni bir çekim/sözlük boşluğu açılırsa kapı düşer
+        q = OnayKuyruğu()
+        kodla((VERİ / "korpus" / "dogrulama.txt").read_text(encoding="utf-8"), q)
+        self.assertEqual([b.kelime for b in q.bekleyenler()], [])
+
     def test_bilinmeyen_kuyruğa(self):
         q = OnayKuyruğu()
         self.assertEqual(kodla("xylophone", q), ["xylophone"])
