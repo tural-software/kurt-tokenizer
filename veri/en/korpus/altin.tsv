@@ -39,28 +39,32 @@ happier	happi er
 happiest	happi est
 hottest	hot t est
 larger	larg er
-# yapım + yığılma
-happily	happi ly
-happiness	happi ness
-careless	care less
-carelessness	care less ness
-helpful	help ful
-beautifully	beautiful ly
-payment	pay ment
-readable	read able
-runner	run n er
-maker	mak er
+# yapım + önek: sözlükte OLMAYAN türevler parçalanır (sözlüğe girmiş türev — happily, payment, unhappy — kök: Türkçe #6)
+enjoyments	enjoyment s
+payments	payment s
+rewrites	rewrite s
+reopened	reopen ed
+reprinted	reprint ed
+misreading	misread ing
+overcooked	overcook ed
+dislikes	dislike s
 buildings	build ing s
 marketing	market ing
-# önek
-unhappy	un happy
-unhappiness	un happi ness
-redo	re do
-reopened	re open ed
-disagree	dis agree
-misread	mis read
-nonstop	non stop
-overcome	over come
+teachers	teacher s
+# sözlüğe girmiş türev: bütün kök
+happily	happily
+happiness	happiness
+careless	careless
+payment	payment
+unhappy	unhappy
+redo	redo
+# eşsesli çakışma: korpus kararı (geri kök: doe, shelve, putt, programme)
+does	do es
+shelves	shelv es
+putting	put t ing
+programming	program m ing
+missing	miss ing
+after	after
 # klitik
 don't	do n't
 doesn't	do es n't

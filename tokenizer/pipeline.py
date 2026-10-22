@@ -344,7 +344,7 @@ def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=No
         if taban is not None and kuyruk is not None:   # klitikli bilinmeyen: taban sorulur (Mary's → mary)
             kuyruk.ekle(taban, bağlam)
         if çs:
-            return list(en.en_iyi(çs).tokens), taban is not None
+            return list(en.en_iyi(çs, kökler).tokens), taban is not None
         if kuyruk is not None:
             kuyruk.ekle(kelime, bağlam)
         return [kelime], True

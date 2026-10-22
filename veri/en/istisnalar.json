@@ -1,832 +1,9574 @@
 {
  "düzensiz": {
+  "abaci": {
+   "tokens": [
+    "abaci"
+   ],
+   "not": "abacus+isim (düzensiz, OEWN)"
+  },
+  "abode": {
+   "tokens": [
+    "abode"
+   ],
+   "not": "abide+fiil (düzensiz, OEWN)"
+  },
+  "abought": {
+   "tokens": [
+    "abought"
+   ],
+   "not": "aby+fiil (düzensiz, OEWN)"
+  },
+  "abscissae": {
+   "tokens": [
+    "abscissae"
+   ],
+   "not": "abscissa+isim (düzensiz, OEWN)"
+  },
+  "abye": {
+   "tokens": [
+    "abye"
+   ],
+   "not": "aby+fiil (düzensiz, OEWN)"
+  },
+  "acanthi": {
+   "tokens": [
+    "acanthi"
+   ],
+   "not": "acanthus+isim (düzensiz, OEWN)"
+  },
+  "acari": {
+   "tokens": [
+    "acari"
+   ],
+   "not": "acarus+isim (düzensiz, OEWN)"
+  },
+  "acciaccature": {
+   "tokens": [
+    "acciaccature"
+   ],
+   "not": "acciaccatura+isim (düzensiz, OEWN)"
+  },
+  "acetabula": {
+   "tokens": [
+    "acetabula"
+   ],
+   "not": "acetabulum+isim (düzensiz, OEWN)"
+  },
+  "aciculae": {
+   "tokens": [
+    "aciculae"
+   ],
+   "not": "acicula+isim (düzensiz, OEWN)"
+  },
+  "acini": {
+   "tokens": [
+    "acini"
+   ],
+   "not": "acinus+isim (düzensiz, OEWN)"
+  },
+  "acromia": {
+   "tokens": [
+    "acromia"
+   ],
+   "not": "acromion+isim (düzensiz, OEWN)"
+  },
+  "actiniae": {
+   "tokens": [
+    "actiniae"
+   ],
+   "not": "actinia+isim (düzensiz, OEWN)"
+  },
+  "actinozoa": {
+   "tokens": [
+    "actinozoa"
+   ],
+   "not": "actinozoan+isim (düzensiz, OEWN)"
+  },
+  "addenda": {
+   "tokens": [
+    "addenda"
+   ],
+   "not": "addendum+isim (düzensiz, OEWN)"
+  },
+  "addrest": {
+   "tokens": [
+    "addrest"
+   ],
+   "not": "address+fiil (düzensiz, OEWN)"
+  },
+  "adenocarcinomata": {
+   "tokens": [
+    "adenocarcinomata"
+   ],
+   "not": "adenocarcinoma+isim (düzensiz, OEWN)"
+  },
+  "adenomata": {
+   "tokens": [
+    "adenomata"
+   ],
+   "not": "adenoma+isim (düzensiz, OEWN)"
+  },
+  "adieux": {
+   "tokens": [
+    "adieux"
+   ],
+   "not": "adieu+isim (düzensiz, OEWN)"
+  },
+  "aecia": {
+   "tokens": [
+    "aecia"
+   ],
+   "not": "aecium+isim (düzensiz, OEWN)"
+  },
+  "agnomina": {
+   "tokens": [
+    "agnomina"
+   ],
+   "not": "agnomen+isim (düzensiz, OEWN)"
+  },
+  "agones": {
+   "tokens": [
+    "agones"
+   ],
+   "not": "agon+isim (düzensiz, OEWN)"
+  },
+  "agorae": {
+   "tokens": [
+    "agorae"
+   ],
+   "not": "agora+isim (düzensiz, OEWN)"
+  },
+  "agouties": {
+   "tokens": [
+    "agouties"
+   ],
+   "not": "agouti+isim (düzensiz, OEWN)"
+  },
+  "alae": {
+   "tokens": [
+    "alae"
+   ],
+   "not": "ala+isim (düzensiz, OEWN)"
+  },
+  "alkalies": {
+   "tokens": [
+    "alkalies"
+   ],
+   "not": "alkali+isim (düzensiz, OEWN)"
+  },
+  "alluvia": {
+   "tokens": [
+    "alluvia"
+   ],
+   "not": "alluvium+isim (düzensiz, OEWN)"
+  },
+  "altocumuli": {
+   "tokens": [
+    "altocumuli"
+   ],
+   "not": "altocumulus+isim (düzensiz, OEWN)"
+  },
+  "altostrati": {
+   "tokens": [
+    "altostrati"
+   ],
+   "not": "altostratus+isim (düzensiz, OEWN)"
+  },
+  "alulae": {
+   "tokens": [
+    "alulae"
+   ],
+   "not": "alula+isim (düzensiz, OEWN)"
+  },
+  "alumnae": {
+   "tokens": [
+    "alumnae"
+   ],
+   "not": "alumna+isim (düzensiz, OEWN)"
+  },
+  "alumni": {
+   "tokens": [
+    "alumni"
+   ],
+   "not": "alumnus+isim (düzensiz, OEWN)"
+  },
+  "alveoli": {
+   "tokens": [
+    "alveoli"
+   ],
+   "not": "alveolus+isim (düzensiz, OEWN)"
+  },
   "am": {
    "tokens": [
     "am"
    ],
-   "not": "be+geçmiş (düzensiz)"
+   "not": "be+fiil (düzensiz, OEWN)"
+  },
+  "amanuenses": {
+   "tokens": [
+    "amanuenses"
+   ],
+   "not": "amanuensis+isim (düzensiz, OEWN)"
+  },
+  "ambulacra": {
+   "tokens": [
+    "ambulacra"
+   ],
+   "not": "ambulacrum+isim (düzensiz, OEWN)"
+  },
+  "amebae": {
+   "tokens": [
+    "amebae"
+   ],
+   "not": "ameba+isim (düzensiz, OEWN)"
+  },
+  "amnia": {
+   "tokens": [
+    "amnia"
+   ],
+   "not": "amnion+isim (düzensiz, OEWN)"
+  },
+  "amniocenteses": {
+   "tokens": [
+    "amniocenteses"
+   ],
+   "not": "amniocentesis+isim (düzensiz, OEWN)"
+  },
+  "amoebae": {
+   "tokens": [
+    "amoebae"
+   ],
+   "not": "amoeba+isim (düzensiz, OEWN)"
+  },
+  "amoebiases": {
+   "tokens": [
+    "amoebiases"
+   ],
+   "not": "amoebiasis+isim (düzensiz, OEWN)"
+  },
+  "amoraim": {
+   "tokens": [
+    "amoraim"
+   ],
+   "not": "amora+isim (düzensiz, OEWN)"
+  },
+  "amphimixes": {
+   "tokens": [
+    "amphimixes"
+   ],
+   "not": "amphimixis+isim (düzensiz, OEWN)"
+  },
+  "amphioxi": {
+   "tokens": [
+    "amphioxi"
+   ],
+   "not": "amphioxus+isim (düzensiz, OEWN)"
+  },
+  "amphisbaenae": {
+   "tokens": [
+    "amphisbaenae"
+   ],
+   "not": "amphisbaena+isim (düzensiz, OEWN)"
+  },
+  "amphorae": {
+   "tokens": [
+    "amphorae"
+   ],
+   "not": "amphora+isim (düzensiz, OEWN)"
+  },
+  "ampullae": {
+   "tokens": [
+    "ampullae"
+   ],
+   "not": "ampulla+isim (düzensiz, OEWN)"
+  },
+  "amygdalae": {
+   "tokens": [
+    "amygdalae"
+   ],
+   "not": "amygdala+isim (düzensiz, OEWN)"
+  },
+  "anacolutha": {
+   "tokens": [
+    "anacolutha"
+   ],
+   "not": "anacoluthon+isim (düzensiz, OEWN)"
+  },
+  "analyses": {
+   "tokens": [
+    "analyses"
+   ],
+   "not": "analysis+isim (düzensiz, OEWN)"
+  },
+  "anamneses": {
+   "tokens": [
+    "anamneses"
+   ],
+   "not": "anamnesis+isim (düzensiz, OEWN)"
+  },
+  "anamorphoses": {
+   "tokens": [
+    "anamorphoses"
+   ],
+   "not": "anamorphosis+isim (düzensiz, OEWN)"
+  },
+  "anastomoses": {
+   "tokens": [
+    "anastomoses"
+   ],
+   "not": "anastomosis+isim (düzensiz, OEWN)"
+  },
+  "androecia": {
+   "tokens": [
+    "androecia"
+   ],
+   "not": "androecium+isim (düzensiz, OEWN)"
+  },
+  "andtheridia": {
+   "tokens": [
+    "andtheridia"
+   ],
+   "not": "antheridium+isim (düzensiz, OEWN)"
+  },
+  "angiomata": {
+   "tokens": [
+    "angiomata"
+   ],
+   "not": "angioma+isim (düzensiz, OEWN)"
+  },
+  "animalcula": {
+   "tokens": [
+    "animalcula"
+   ],
+   "not": "animalculum+isim (düzensiz, OEWN)"
+  },
+  "anlagen": {
+   "tokens": [
+    "anlagen"
+   ],
+   "not": "anlage+isim (düzensiz, OEWN)"
+  },
+  "annuli": {
+   "tokens": [
+    "annuli"
+   ],
+   "not": "annulus+isim (düzensiz, OEWN)"
+  },
+  "antefixa": {
+   "tokens": [
+    "antefixa"
+   ],
+   "not": "antefix+isim (düzensiz, OEWN)"
+  },
+  "antennae": {
+   "tokens": [
+    "antennae"
+   ],
+   "not": "antenna+isim (düzensiz, OEWN)"
+  },
+  "antheridia": {
+   "tokens": [
+    "antheridia"
+   ],
+   "not": "antheridium+isim (düzensiz, OEWN)"
+  },
+  "anthozoa": {
+   "tokens": [
+    "anthozoa"
+   ],
+   "not": "anthozoan+isim (düzensiz, OEWN)"
+  },
+  "anthraces": {
+   "tokens": [
+    "anthraces"
+   ],
+   "not": "anthrax+isim (düzensiz, OEWN)"
+  },
+  "antisera": {
+   "tokens": [
+    "antisera"
+   ],
+   "not": "antiserum+isim (düzensiz, OEWN)"
+  },
+  "antitheses": {
+   "tokens": [
+    "antitheses"
+   ],
+   "not": "antithesis+isim (düzensiz, OEWN)"
+  },
+  "antra": {
+   "tokens": [
+    "antra"
+   ],
+   "not": "antrum+isim (düzensiz, OEWN)"
+  },
+  "aortae": {
+   "tokens": [
+    "aortae"
+   ],
+   "not": "aorta+isim (düzensiz, OEWN)"
+  },
+  "aphelia": {
+   "tokens": [
+    "aphelia"
+   ],
+   "not": "aphelion+isim (düzensiz, OEWN)"
+  },
+  "apices": {
+   "tokens": [
+    "apices"
+   ],
+   "not": "apex+isim (düzensiz, OEWN)"
+  },
+  "apomixes": {
+   "tokens": [
+    "apomixes"
+   ],
+   "not": "apomixis+isim (düzensiz, OEWN)"
+  },
+  "aponeuroses": {
+   "tokens": [
+    "aponeuroses"
+   ],
+   "not": "aponeurosis+isim (düzensiz, OEWN)"
+  },
+  "apophyses": {
+   "tokens": [
+    "apophyses"
+   ],
+   "not": "apophysis+isim (düzensiz, OEWN)"
+  },
+  "aposiopeses": {
+   "tokens": [
+    "aposiopeses"
+   ],
+   "not": "aposiopesis+isim (düzensiz, OEWN)"
+  },
+  "apothecia": {
+   "tokens": [
+    "apothecia"
+   ],
+   "not": "apothecium+isim (düzensiz, OEWN)"
+  },
+  "apotheoses": {
+   "tokens": [
+    "apotheoses"
+   ],
+   "not": "apotheosis+isim (düzensiz, OEWN)"
+  },
+  "appendices": {
+   "tokens": [
+    "appendices"
+   ],
+   "not": "appendix+isim (düzensiz, OEWN)"
+  },
+  "appoggiature": {
+   "tokens": [
+    "appoggiature"
+   ],
+   "not": "appoggiatura+isim (düzensiz, OEWN)"
+  },
+  "apsides": {
+   "tokens": [
+    "apsides"
+   ],
+   "not": "apsis+isim (düzensiz, OEWN)"
+  },
+  "aquae": {
+   "tokens": [
+    "aquae"
+   ],
+   "not": "aqua+isim (düzensiz, OEWN)"
+  },
+  "aquaria": {
+   "tokens": [
+    "aquaria"
+   ],
+   "not": "aquarium+isim (düzensiz, OEWN)"
+  },
+  "araglis": {
+   "tokens": [
+    "araglis"
+   ],
+   "not": "argali+isim (düzensiz, OEWN)"
+  },
+  "arboreta": {
+   "tokens": [
+    "arboreta"
+   ],
+   "not": "arboretum+isim (düzensiz, OEWN)"
+  },
+  "arcana": {
+   "tokens": [
+    "arcana"
+   ],
+   "not": "arcanum+isim (düzensiz, OEWN)"
+  },
+  "archegonia": {
+   "tokens": [
+    "archegonia"
+   ],
+   "not": "archegonium+isim (düzensiz, OEWN)"
+  },
+  "archesporia": {
+   "tokens": [
+    "archesporia"
+   ],
+   "not": "archesporium+isim (düzensiz, OEWN)"
+  },
+  "arcked": {
+   "tokens": [
+    "arcked"
+   ],
+   "not": "arc+fiil (düzensiz, OEWN)"
+  },
+  "arcking": {
+   "tokens": [
+    "arcking"
+   ],
+   "not": "arc+fiil (düzensiz, OEWN)"
   },
   "are": {
    "tokens": [
     "are"
    ],
-   "not": "be+geçmiş (düzensiz)"
+   "not": "be+fiil (düzensiz, OEWN)"
+  },
+  "areolae": {
+   "tokens": [
+    "areolae"
+   ],
+   "not": "areola+isim (düzensiz, OEWN)"
+  },
+  "ariette": {
+   "tokens": [
+    "ariette"
+   ],
+   "not": "arietta+isim (düzensiz, OEWN)"
+  },
+  "arisen": {
+   "tokens": [
+    "arisen"
+   ],
+   "not": "arise+fiil (düzensiz, OEWN)"
+  },
+  "aristae": {
+   "tokens": [
+    "aristae"
+   ],
+   "not": "arista+isim (düzensiz, OEWN)"
+  },
+  "armamentaria": {
+   "tokens": [
+    "armamentaria"
+   ],
+   "not": "armamentarium+isim (düzensiz, OEWN)"
+  },
+  "arose": {
+   "tokens": [
+    "arose"
+   ],
+   "not": "arise+fiil (düzensiz, OEWN)"
+  },
+  "artal": {
+   "tokens": [
+    "artal"
+   ],
+   "not": "rotl+isim (düzensiz, OEWN)"
+  },
+  "artel": {
+   "tokens": [
+    "artel"
+   ],
+   "not": "rotl+isim (düzensiz, OEWN)"
+  },
+  "arterioscleroses": {
+   "tokens": [
+    "arterioscleroses"
+   ],
+   "not": "arteriosclerosis+isim (düzensiz, OEWN)"
+  },
+  "asceses": {
+   "tokens": [
+    "asceses"
+   ],
+   "not": "ascesis+isim (düzensiz, OEWN)"
+  },
+  "asci": {
+   "tokens": [
+    "asci"
+   ],
+   "not": "ascus+isim (düzensiz, OEWN)"
+  },
+  "aspergilloses": {
+   "tokens": [
+    "aspergilloses"
+   ],
+   "not": "aspergillosis+isim (düzensiz, OEWN)"
+  },
+  "aspersoria": {
+   "tokens": [
+    "aspersoria"
+   ],
+   "not": "aspersorium+isim (düzensiz, OEWN)"
+  },
+  "assegais": {
+   "tokens": [
+    "assegais"
+   ],
+   "not": "assagai+isim (düzensiz, OEWN)"
+  },
+  "astragali": {
+   "tokens": [
+    "astragali"
+   ],
+   "not": "astragalus+isim (düzensiz, OEWN)"
+  },
+  "asyndeta": {
+   "tokens": [
+    "asyndeta"
+   ],
+   "not": "asyndeton+isim (düzensiz, OEWN)"
   },
   "ate": {
    "tokens": [
     "ate"
    ],
-   "not": "eat+geçmiş (düzensiz)"
+   "not": "eat+fiil (düzensiz, OEWN)"
+  },
+  "atheromata": {
+   "tokens": [
+    "atheromata"
+   ],
+   "not": "atheroma+isim (düzensiz, OEWN)"
+  },
+  "atheroscleroses": {
+   "tokens": [
+    "atheroscleroses"
+   ],
+   "not": "atherosclerosis+isim (düzensiz, OEWN)"
+  },
+  "atria": {
+   "tokens": [
+    "atria"
+   ],
+   "not": "atrium+isim (düzensiz, OEWN)"
+  },
+  "auditoria": {
+   "tokens": [
+    "auditoria"
+   ],
+   "not": "auditorium+isim (düzensiz, OEWN)"
+  },
+  "aurae": {
+   "tokens": [
+    "aurae"
+   ],
+   "not": "aura+isim (düzensiz, OEWN)"
+  },
+  "aurar": {
+   "tokens": [
+    "aurar"
+   ],
+   "not": "eyrir+isim (düzensiz, OEWN)"
+  },
+  "auriculae": {
+   "tokens": [
+    "auriculae"
+   ],
+   "not": "auricula+isim (düzensiz, OEWN)"
+  },
+  "aurorae": {
+   "tokens": [
+    "aurorae"
+   ],
+   "not": "aurora+isim (düzensiz, OEWN)"
+  },
+  "auspices": {
+   "tokens": [
+    "auspices"
+   ],
+   "not": "auspex+isim (düzensiz, OEWN)"
+  },
+  "autocatalyses": {
+   "tokens": [
+    "autocatalyses"
+   ],
+   "not": "autocatalysis+isim (düzensiz, OEWN)"
+  },
+  "autochthones": {
+   "tokens": [
+    "autochthones"
+   ],
+   "not": "autochthon+isim (düzensiz, OEWN)"
+  },
+  "automata": {
+   "tokens": [
+    "automata"
+   ],
+   "not": "automaton+isim (düzensiz, OEWN)"
+  },
+  "avitaminoses": {
+   "tokens": [
+    "avitaminoses"
+   ],
+   "not": "avitaminosis+isim (düzensiz, OEWN)"
+  },
+  "awoke": {
+   "tokens": [
+    "awoke"
+   ],
+   "not": "awake+fiil (düzensiz, OEWN)"
+  },
+  "awoken": {
+   "tokens": [
+    "awoken"
+   ],
+   "not": "awake+fiil (düzensiz, OEWN)"
+  },
+  "axes": {
+   "tokens": [
+    "axes"
+   ],
+   "not": "axis+isim (düzensiz, OEWN)"
+  },
+  "axillae": {
+   "tokens": [
+    "axillae"
+   ],
+   "not": "axilla+isim (düzensiz, OEWN)"
+  },
+  "bacchantes": {
+   "tokens": [
+    "bacchantes"
+   ],
+   "not": "bacchant+isim (düzensiz, OEWN)"
+  },
+  "bacilli": {
+   "tokens": [
+    "bacilli"
+   ],
+   "not": "bacillus+isim (düzensiz, OEWN)"
+  },
+  "backbit": {
+   "tokens": [
+    "backbit"
+   ],
+   "not": "backbite+fiil (düzensiz, OEWN)"
+  },
+  "backbitten": {
+   "tokens": [
+    "backbitten"
+   ],
+   "not": "backbite+fiil (düzensiz, OEWN)"
+  },
+  "backslid": {
+   "tokens": [
+    "backslid"
+   ],
+   "not": "backslide+fiil (düzensiz, OEWN)"
+  },
+  "backslidden": {
+   "tokens": [
+    "backslidden"
+   ],
+   "not": "backslide+fiil (düzensiz, OEWN)"
+  },
+  "bacteriostases": {
+   "tokens": [
+    "bacteriostases"
+   ],
+   "not": "bacteriostasis+isim (düzensiz, OEWN)"
+  },
+  "bade": {
+   "tokens": [
+    "bade"
+   ],
+   "not": "bid+fiil (düzensiz, OEWN)"
+  },
+  "ballistae": {
+   "tokens": [
+    "ballistae"
+   ],
+   "not": "ballista+isim (düzensiz, OEWN)"
+  },
+  "bambini": {
+   "tokens": [
+    "bambini"
+   ],
+   "not": "bambino+isim (düzensiz, OEWN)"
+  },
+  "bandeaux": {
+   "tokens": [
+    "bandeaux"
+   ],
+   "not": "bandeau+isim (düzensiz, OEWN)"
+  },
+  "banditti": {
+   "tokens": [
+    "banditti"
+   ],
+   "not": "bandit+isim (düzensiz, OEWN)"
+  },
+  "bani": {
+   "tokens": [
+    "bani"
+   ],
+   "not": "ban+isim (düzensiz, OEWN)"
+  },
+  "bases": {
+   "tokens": [
+    "bases"
+   ],
+   "not": "basis+isim (düzensiz, OEWN)"
+  },
+  "basidia": {
+   "tokens": [
+    "basidia"
+   ],
+   "not": "basidium+isim (düzensiz, OEWN)"
+  },
+  "basileis": {
+   "tokens": [
+    "basileis"
+   ],
+   "not": "basileus+isim (düzensiz, OEWN)"
+  },
+  "bassi": {
+   "tokens": [
+    "bassi"
+   ],
+   "not": "basso+isim (düzensiz, OEWN)"
+  },
+  "beadsmen": {
+   "tokens": [
+    "beadsmen"
+   ],
+   "not": "beadsman+isim (düzensiz, OEWN)"
+  },
+  "beaten": {
+   "tokens": [
+    "beaten"
+   ],
+   "not": "beat+fiil (düzensiz, OEWN)"
+  },
+  "beaux": {
+   "tokens": [
+    "beaux"
+   ],
+   "not": "beau+isim (düzensiz, OEWN)"
   },
   "became": {
    "tokens": [
     "became"
    ],
-   "not": "become+geçmiş (düzensiz)"
+   "not": "become+fiil (düzensiz, OEWN)"
   },
   "been": {
    "tokens": [
     "been"
    ],
-   "not": "be+geçmiş (düzensiz)"
+   "not": "be+fiil (düzensiz, OEWN)"
+  },
+  "befallen": {
+   "tokens": [
+    "befallen"
+   ],
+   "not": "befall+fiil (düzensiz, OEWN)"
+  },
+  "befell": {
+   "tokens": [
+    "befell"
+   ],
+   "not": "befall+fiil (düzensiz, OEWN)"
   },
   "began": {
    "tokens": [
     "began"
    ],
-   "not": "begin+geçmiş (düzensiz)"
+   "not": "begin+fiil (düzensiz, OEWN)"
+  },
+  "begat": {
+   "tokens": [
+    "begat"
+   ],
+   "not": "beget+fiil (düzensiz, OEWN)"
+  },
+  "begot": {
+   "tokens": [
+    "begot"
+   ],
+   "not": "beget+fiil (düzensiz, OEWN)"
+  },
+  "begotten": {
+   "tokens": [
+    "begotten"
+   ],
+   "not": "beget+fiil (düzensiz, OEWN)"
   },
   "begun": {
    "tokens": [
     "begun"
    ],
-   "not": "begin+geçmiş (düzensiz)"
+   "not": "begin+fiil (düzensiz, OEWN)"
+  },
+  "beheld": {
+   "tokens": [
+    "beheld"
+   ],
+   "not": "behold+fiil (düzensiz, OEWN)"
+  },
+  "beholden": {
+   "tokens": [
+    "beholden"
+   ],
+   "not": "behold+fiil (düzensiz, OEWN)"
   },
   "being": {
    "tokens": [
     "being"
    ],
-   "not": "be+ing (e düşmez; düzensiz)"
+   "not": "be+fiil (düzensiz, elle)"
+  },
+  "bent": {
+   "tokens": [
+    "bent"
+   ],
+   "not": "bend+fiil (düzensiz, OEWN)"
+  },
+  "besought": {
+   "tokens": [
+    "besought"
+   ],
+   "not": "beseech+fiil (düzensiz, OEWN)"
+  },
+  "bespoke": {
+   "tokens": [
+    "bespoke"
+   ],
+   "not": "bespeak+fiil (düzensiz, OEWN)"
+  },
+  "bespoken": {
+   "tokens": [
+    "bespoken"
+   ],
+   "not": "bespeak+fiil (düzensiz, OEWN)"
   },
   "best": {
    "tokens": [
     "best"
    ],
-   "not": "good+karşılaştırma (düzensiz)"
+   "not": "good+sıfat (düzensiz, OEWN)"
+  },
+  "bestrewn": {
+   "tokens": [
+    "bestrewn"
+   ],
+   "not": "bestrew+fiil (düzensiz, OEWN)"
+  },
+  "bestrid": {
+   "tokens": [
+    "bestrid"
+   ],
+   "not": "bestride+fiil (düzensiz, OEWN)"
+  },
+  "bestridden": {
+   "tokens": [
+    "bestridden"
+   ],
+   "not": "bestride+fiil (düzensiz, OEWN)"
+  },
+  "bestrode": {
+   "tokens": [
+    "bestrode"
+   ],
+   "not": "bestride+fiil (düzensiz, OEWN)"
+  },
+  "bethought": {
+   "tokens": [
+    "bethought"
+   ],
+   "not": "bethink+fiil (düzensiz, OEWN)"
   },
   "better": {
    "tokens": [
     "better"
    ],
-   "not": "good+karşılaştırma (düzensiz)"
+   "not": "good+sıfat (düzensiz, OEWN)"
+  },
+  "bibliothecae": {
+   "tokens": [
+    "bibliothecae"
+   ],
+   "not": "bibliotheca+isim (düzensiz, OEWN)"
+  },
+  "bicennaries": {
+   "tokens": [
+    "bicennaries"
+   ],
+   "not": "bicentenary+isim (düzensiz, OEWN)"
+  },
+  "bidden": {
+   "tokens": [
+    "bidden"
+   ],
+   "not": "bid+fiil (düzensiz, OEWN)"
+  },
+  "bijoux": {
+   "tokens": [
+    "bijoux"
+   ],
+   "not": "bijou+isim (düzensiz, OEWN)"
+  },
+  "bit": {
+   "tokens": [
+    "bit"
+   ],
+   "not": "bite+fiil (düzensiz, OEWN)"
   },
   "bitten": {
    "tokens": [
     "bitten"
    ],
-   "not": "bite+geçmiş (düzensiz)"
+   "not": "bite+fiil (düzensiz, OEWN)"
+  },
+  "bivouacked": {
+   "tokens": [
+    "bivouacked"
+   ],
+   "not": "bivouac+fiil (düzensiz, OEWN)"
+  },
+  "bivouacking": {
+   "tokens": [
+    "bivouacking"
+   ],
+   "not": "bivouac+fiil (düzensiz, OEWN)"
+  },
+  "blastemata": {
+   "tokens": [
+    "blastemata"
+   ],
+   "not": "blastema+isim (düzensiz, OEWN)"
+  },
+  "blastulae": {
+   "tokens": [
+    "blastulae"
+   ],
+   "not": "blastula+isim (düzensiz, OEWN)"
+  },
+  "bled": {
+   "tokens": [
+    "bled"
+   ],
+   "not": "bleed+fiil (düzensiz, OEWN)"
+  },
+  "blest": {
+   "tokens": [
+    "blest"
+   ],
+   "not": "bless+fiil (düzensiz, OEWN)"
   },
   "blew": {
    "tokens": [
     "blew"
    ],
-   "not": "blow+geçmiş (düzensiz)"
+   "not": "blow+fiil (düzensiz, OEWN)"
   },
   "blown": {
    "tokens": [
     "blown"
    ],
-   "not": "blow+geçmiş (düzensiz)"
+   "not": "blow+fiil (düzensiz, OEWN)"
+  },
+  "bolivares": {
+   "tokens": [
+    "bolivares"
+   ],
+   "not": "bolivar+isim (düzensiz, OEWN)"
+  },
+  "booklice": {
+   "tokens": [
+    "booklice"
+   ],
+   "not": "booklouse+isim (düzensiz, OEWN)"
+  },
+  "boraces": {
+   "tokens": [
+    "boraces"
+   ],
+   "not": "borax+isim (düzensiz, OEWN)"
+  },
+  "bore": {
+   "tokens": [
+    "bore"
+   ],
+   "not": "bear+fiil (düzensiz, OEWN)"
+  },
+  "born": {
+   "tokens": [
+    "born"
+   ],
+   "not": "bear+fiil (düzensiz, OEWN)"
+  },
+  "borne": {
+   "tokens": [
+    "borne"
+   ],
+   "not": "bear+fiil (düzensiz, OEWN)"
   },
   "bought": {
    "tokens": [
     "bought"
    ],
-   "not": "buy+geçmiş (düzensiz)"
+   "not": "buy+fiil (düzensiz, OEWN)"
+  },
+  "bound": {
+   "tokens": [
+    "bound"
+   ],
+   "not": "bind+fiil (düzensiz, OEWN)"
+  },
+  "brachia": {
+   "tokens": [
+    "brachia"
+   ],
+   "not": "brachium+isim (düzensiz, OEWN)"
+  },
+  "brainchildren": {
+   "tokens": [
+    "brainchildren"
+   ],
+   "not": "brainchild+isim (düzensiz, OEWN)"
+  },
+  "branchiae": {
+   "tokens": [
+    "branchiae"
+   ],
+   "not": "branchia+isim (düzensiz, OEWN)"
+  },
+  "brants": {
+   "tokens": [
+    "brants"
+   ],
+   "not": "brent+isim (düzensiz, OEWN)"
+  },
+  "bred": {
+   "tokens": [
+    "bred"
+   ],
+   "not": "breed+fiil (düzensiz, OEWN)"
+  },
+  "bregmata": {
+   "tokens": [
+    "bregmata"
+   ],
+   "not": "bregma+isim (düzensiz, OEWN)"
+  },
+  "brethren": {
+   "tokens": [
+    "brethren"
+   ],
+   "not": "brother+isim (düzensiz, OEWN)"
   },
   "broke": {
    "tokens": [
     "broke"
    ],
-   "not": "break+geçmiş (düzensiz)"
+   "not": "break+fiil (düzensiz, OEWN)"
   },
   "broken": {
    "tokens": [
     "broken"
    ],
-   "not": "break+geçmiş (düzensiz)"
+   "not": "break+fiil (düzensiz, OEWN)"
+  },
+  "bronchi": {
+   "tokens": [
+    "bronchi"
+   ],
+   "not": "bronchus+isim (düzensiz, OEWN)"
   },
   "brought": {
    "tokens": [
     "brought"
    ],
-   "not": "bring+geçmiş (düzensiz)"
+   "not": "bring+fiil (düzensiz, OEWN)"
+  },
+  "browbeaten": {
+   "tokens": [
+    "browbeaten"
+   ],
+   "not": "browbeat+fiil (düzensiz, OEWN)"
+  },
+  "bryozoa": {
+   "tokens": [
+    "bryozoa"
+   ],
+   "not": "bryozoan+isim (düzensiz, OEWN)"
+  },
+  "buckteeth": {
+   "tokens": [
+    "buckteeth"
+   ],
+   "not": "bucktooth+isim (düzensiz, OEWN)"
   },
   "built": {
    "tokens": [
     "built"
    ],
-   "not": "build+geçmiş (düzensiz)"
+   "not": "build+fiil (düzensiz, OEWN)"
+  },
+  "bullae": {
+   "tokens": [
+    "bullae"
+   ],
+   "not": "bulla+isim (düzensiz, OEWN)"
+  },
+  "bureaux": {
+   "tokens": [
+    "bureaux"
+   ],
+   "not": "bureau+isim (düzensiz, OEWN)"
+  },
+  "burnt": {
+   "tokens": [
+    "burnt"
+   ],
+   "not": "burn+fiil (düzensiz, OEWN)"
+  },
+  "bursae": {
+   "tokens": [
+    "bursae"
+   ],
+   "not": "bursa+isim (düzensiz, OEWN)"
+  },
+  "busses": {
+   "tokens": [
+    "busses"
+   ],
+   "not": "bus+isim (düzensiz, OEWN)"
+  },
+  "bypast": {
+   "tokens": [
+    "bypast"
+   ],
+   "not": "bypass+fiil (düzensiz, OEWN)"
+  },
+  "byssi": {
+   "tokens": [
+    "byssi"
+   ],
+   "not": "byssus+isim (düzensiz, OEWN)"
+  },
+  "cacti": {
+   "tokens": [
+    "cacti"
+   ],
+   "not": "cactus+isim (düzensiz, OEWN)"
+  },
+  "caducei": {
+   "tokens": [
+    "caducei"
+   ],
+   "not": "caduceus+isim (düzensiz, OEWN)"
+  },
+  "caeca": {
+   "tokens": [
+    "caeca"
+   ],
+   "not": "caecum+isim (düzensiz, OEWN)"
+  },
+  "caesurae": {
+   "tokens": [
+    "caesurae"
+   ],
+   "not": "caesura+isim (düzensiz, OEWN)"
+  },
+  "cagier": {
+   "tokens": [
+    "cagier"
+   ],
+   "not": "cagey+sıfat (düzensiz, OEWN)"
+  },
+  "cagiest": {
+   "tokens": [
+    "cagiest"
+   ],
+   "not": "cagey+sıfat (düzensiz, OEWN)"
+  },
+  "calami": {
+   "tokens": [
+    "calami"
+   ],
+   "not": "calamus+isim (düzensiz, OEWN)"
+  },
+  "calcanei": {
+   "tokens": [
+    "calcanei"
+   ],
+   "not": "calcaneus+isim (düzensiz, OEWN)"
+  },
+  "calces": {
+   "tokens": [
+    "calces"
+   ],
+   "not": "calx+isim (düzensiz, OEWN)"
+  },
+  "calculi": {
+   "tokens": [
+    "calculi"
+   ],
+   "not": "calculus+isim (düzensiz, OEWN)"
+  },
+  "calli": {
+   "tokens": [
+    "calli"
+   ],
+   "not": "callus+isim (düzensiz, OEWN)"
+  },
+  "calyces": {
+   "tokens": [
+    "calyces"
+   ],
+   "not": "calyx+isim (düzensiz, OEWN)"
+  },
+  "cambia": {
+   "tokens": [
+    "cambia"
+   ],
+   "not": "cambium+isim (düzensiz, OEWN)"
   },
   "came": {
    "tokens": [
     "came"
    ],
-   "not": "come+geçmiş (düzensiz)"
+   "not": "come+fiil (düzensiz, OEWN)"
+  },
+  "camerae": {
+   "tokens": [
+    "camerae"
+   ],
+   "not": "camera+isim (düzensiz, OEWN)"
+  },
+  "canaliculi": {
+   "tokens": [
+    "canaliculi"
+   ],
+   "not": "canaliculus+isim (düzensiz, OEWN)"
+  },
+  "candelabra": {
+   "tokens": [
+    "candelabra"
+   ],
+   "not": "candelabrum+isim (düzensiz, OEWN)"
+  },
+  "canthi": {
+   "tokens": [
+    "canthi"
+   ],
+   "not": "canthus+isim (düzensiz, OEWN)"
+  },
+  "capita": {
+   "tokens": [
+    "capita"
+   ],
+   "not": "caput+isim (düzensiz, OEWN)"
+  },
+  "capitula": {
+   "tokens": [
+    "capitula"
+   ],
+   "not": "capitulum+isim (düzensiz, OEWN)"
+  },
+  "capricci": {
+   "tokens": [
+    "capricci"
+   ],
+   "not": "capriccio+isim (düzensiz, OEWN)"
+  },
+  "carcinomata": {
+   "tokens": [
+    "carcinomata"
+   ],
+   "not": "carcinoma+isim (düzensiz, OEWN)"
+  },
+  "carides": {
+   "tokens": [
+    "carides"
+   ],
+   "not": "caryatid+isim (düzensiz, OEWN)"
+  },
+  "carinae": {
+   "tokens": [
+    "carinae"
+   ],
+   "not": "carina+isim (düzensiz, OEWN)"
+  },
+  "carpi": {
+   "tokens": [
+    "carpi"
+   ],
+   "not": "carpus+isim (düzensiz, OEWN)"
+  },
+  "caryopses": {
+   "tokens": [
+    "caryopses"
+   ],
+   "not": "caryopsis+isim (düzensiz, OEWN)"
+  },
+  "caryopsides": {
+   "tokens": [
+    "caryopsides"
+   ],
+   "not": "caryopsis+isim (düzensiz, OEWN)"
+  },
+  "castrati": {
+   "tokens": [
+    "castrati"
+   ],
+   "not": "castrato+isim (düzensiz, OEWN)"
+  },
+  "catalyses": {
+   "tokens": [
+    "catalyses"
+   ],
+   "not": "catalysis+isim (düzensiz, OEWN)"
+  },
+  "catenae": {
+   "tokens": [
+    "catenae"
+   ],
+   "not": "catena+isim (düzensiz, OEWN)"
+  },
+  "cathexes": {
+   "tokens": [
+    "cathexes"
+   ],
+   "not": "cathexis+isim (düzensiz, OEWN)"
+  },
+  "caudices": {
+   "tokens": [
+    "caudices"
+   ],
+   "not": "caudex+isim (düzensiz, OEWN)"
   },
   "caught": {
    "tokens": [
     "caught"
    ],
-   "not": "catch+geçmiş (düzensiz)"
+   "not": "catch+fiil (düzensiz, OEWN)"
+  },
+  "cavetti": {
+   "tokens": [
+    "cavetti"
+   ],
+   "not": "cavetto+isim (düzensiz, OEWN)"
+  },
+  "ceca": {
+   "tokens": [
+    "ceca"
+   ],
+   "not": "cecum+isim (düzensiz, OEWN)"
+  },
+  "cembali": {
+   "tokens": [
+    "cembali"
+   ],
+   "not": "cembalo+isim (düzensiz, OEWN)"
+  },
+  "centesimi": {
+   "tokens": [
+    "centesimi"
+   ],
+   "not": "centesimo+isim (düzensiz, OEWN)"
+  },
+  "centra": {
+   "tokens": [
+    "centra"
+   ],
+   "not": "centrum+isim (düzensiz, OEWN)"
+  },
+  "cercariae": {
+   "tokens": [
+    "cercariae"
+   ],
+   "not": "cercaria+isim (düzensiz, OEWN)"
+  },
+  "cercariiae": {
+   "tokens": [
+    "cercariiae"
+   ],
+   "not": "cercaria+isim (düzensiz, OEWN)"
+  },
+  "cerebella": {
+   "tokens": [
+    "cerebella"
+   ],
+   "not": "cerebellum+isim (düzensiz, OEWN)"
+  },
+  "cerebra": {
+   "tokens": [
+    "cerebra"
+   ],
+   "not": "cerebrum+isim (düzensiz, OEWN)"
+  },
+  "cervices": {
+   "tokens": [
+    "cervices"
+   ],
+   "not": "cervix+isim (düzensiz, OEWN)"
+  },
+  "chaetae": {
+   "tokens": [
+    "chaetae"
+   ],
+   "not": "chaeta+isim (düzensiz, OEWN)"
+  },
+  "chalazae": {
+   "tokens": [
+    "chalazae"
+   ],
+   "not": "chalaza+isim (düzensiz, OEWN)"
+  },
+  "challoth": {
+   "tokens": [
+    "challoth"
+   ],
+   "not": "hallah+isim (düzensiz, OEWN)"
+  },
+  "chapaties": {
+   "tokens": [
+    "chapaties"
+   ],
+   "not": "chapati+isim (düzensiz, OEWN)"
+  },
+  "chapatties": {
+   "tokens": [
+    "chapatties"
+   ],
+   "not": "chapatti+isim (düzensiz, OEWN)"
+  },
+  "chapeaux": {
+   "tokens": [
+    "chapeaux"
+   ],
+   "not": "chapeau+isim (düzensiz, OEWN)"
+  },
+  "chateaux": {
+   "tokens": [
+    "chateaux"
+   ],
+   "not": "chateau+isim (düzensiz, OEWN)"
+  },
+  "chelae": {
+   "tokens": [
+    "chelae"
+   ],
+   "not": "chela+isim (düzensiz, OEWN)"
+  },
+  "chelicerae": {
+   "tokens": [
+    "chelicerae"
+   ],
+   "not": "chelicera+isim (düzensiz, OEWN)"
+  },
+  "cherubim": {
+   "tokens": [
+    "cherubim"
+   ],
+   "not": "cherub+isim (düzensiz, OEWN)"
+  },
+  "chevied": {
+   "tokens": [
+    "chevied"
+   ],
+   "not": "chivy+fiil (düzensiz, OEWN)"
+  },
+  "chevies": {
+   "tokens": [
+    "chevies"
+   ],
+   "not": "chivy+fiil (düzensiz, OEWN)"
+  },
+  "chevying": {
+   "tokens": [
+    "chevying"
+   ],
+   "not": "chivy+fiil (düzensiz, OEWN)"
+  },
+  "chiasmata": {
+   "tokens": [
+    "chiasmata"
+   ],
+   "not": "chiasma+isim (düzensiz, OEWN)"
+  },
+  "chiasmi": {
+   "tokens": [
+    "chiasmi"
+   ],
+   "not": "chiasmus+isim (düzensiz, OEWN)"
+  },
+  "chid": {
+   "tokens": [
+    "chid"
+   ],
+   "not": "chide+fiil (düzensiz, OEWN)"
+  },
+  "chidden": {
+   "tokens": [
+    "chidden"
+   ],
+   "not": "chide+fiil (düzensiz, OEWN)"
   },
   "children": {
    "tokens": [
     "children"
    ],
-   "not": "child+çoğul (düzensiz)"
+   "not": "child+isim (düzensiz, OEWN)"
+  },
+  "chillies": {
+   "tokens": [
+    "chillies"
+   ],
+   "not": "chilli+isim (düzensiz, OEWN)"
+  },
+  "chivvied": {
+   "tokens": [
+    "chivvied"
+   ],
+   "not": "chivy+fiil (düzensiz, OEWN)"
+  },
+  "chivvies": {
+   "tokens": [
+    "chivvies"
+   ],
+   "not": "chivy+fiil (düzensiz, OEWN)"
+  },
+  "chivvying": {
+   "tokens": [
+    "chivvying"
+   ],
+   "not": "chivy+fiil (düzensiz, OEWN)"
+  },
+  "chlamydes": {
+   "tokens": [
+    "chlamydes"
+   ],
+   "not": "chlamys+isim (düzensiz, OEWN)"
+  },
+  "chondromata": {
+   "tokens": [
+    "chondromata"
+   ],
+   "not": "chondroma+isim (düzensiz, OEWN)"
+  },
+  "choragi": {
+   "tokens": [
+    "choragi"
+   ],
+   "not": "choragus+isim (düzensiz, OEWN)"
   },
   "chose": {
    "tokens": [
     "chose"
    ],
-   "not": "choose+geçmiş (düzensiz)"
+   "not": "choose+fiil (düzensiz, OEWN)"
   },
   "chosen": {
    "tokens": [
     "chosen"
    ],
-   "not": "choose+geçmiş (düzensiz)"
+   "not": "choose+fiil (düzensiz, OEWN)"
+  },
+  "choux": {
+   "tokens": [
+    "choux"
+   ],
+   "not": "chou+isim (düzensiz, OEWN)"
+  },
+  "chrysalides": {
+   "tokens": [
+    "chrysalides"
+   ],
+   "not": "chrysalis+isim (düzensiz, OEWN)"
+  },
+  "cicadae": {
+   "tokens": [
+    "cicadae"
+   ],
+   "not": "cicada+isim (düzensiz, OEWN)"
+  },
+  "cicale": {
+   "tokens": [
+    "cicale"
+   ],
+   "not": "cicala+isim (düzensiz, OEWN)"
+  },
+  "cicatrices": {
+   "tokens": [
+    "cicatrices"
+   ],
+   "not": "cicatrix+isim (düzensiz, OEWN)"
+  },
+  "ciceroni": {
+   "tokens": [
+    "ciceroni"
+   ],
+   "not": "cicerone+isim (düzensiz, OEWN)"
+  },
+  "cilia": {
+   "tokens": [
+    "cilia"
+   ],
+   "not": "cilium+isim (düzensiz, OEWN)"
+  },
+  "cineraria": {
+   "tokens": [
+    "cineraria"
+   ],
+   "not": "cinerarium+isim (düzensiz, OEWN)"
+  },
+  "cingula": {
+   "tokens": [
+    "cingula"
+   ],
+   "not": "cingulum+isim (düzensiz, OEWN)"
+  },
+  "cirri": {
+   "tokens": [
+    "cirri"
+   ],
+   "not": "cirrus+isim (düzensiz, OEWN)"
+  },
+  "cirrocumuli": {
+   "tokens": [
+    "cirrocumuli"
+   ],
+   "not": "cirrocumulus+isim (düzensiz, OEWN)"
+  },
+  "cirrostrati": {
+   "tokens": [
+    "cirrostrati"
+   ],
+   "not": "cirrostratus+isim (düzensiz, OEWN)"
+  },
+  "cisternae": {
+   "tokens": [
+    "cisternae"
+   ],
+   "not": "cisterna+isim (düzensiz, OEWN)"
+  },
+  "clad": {
+   "tokens": [
+    "clad"
+   ],
+   "not": "clothe+fiil (düzensiz, OEWN)"
+  },
+  "cleft": {
+   "tokens": [
+    "cleft"
+   ],
+   "not": "cleave+fiil (düzensiz, OEWN)"
+  },
+  "clepsydrae": {
+   "tokens": [
+    "clepsydrae"
+   ],
+   "not": "clepsydra+isim (düzensiz, OEWN)"
+  },
+  "cloacae": {
+   "tokens": [
+    "cloacae"
+   ],
+   "not": "cloaca+isim (düzensiz, OEWN)"
+  },
+  "clostridia": {
+   "tokens": [
+    "clostridia"
+   ],
+   "not": "clostridium+isim (düzensiz, OEWN)"
+  },
+  "clove": {
+   "tokens": [
+    "clove"
+   ],
+   "not": "cleave+fiil (düzensiz, OEWN)"
+  },
+  "cloven": {
+   "tokens": [
+    "cloven"
+   ],
+   "not": "cleave+fiil (düzensiz, OEWN)"
+  },
+  "clung": {
+   "tokens": [
+    "clung"
+   ],
+   "not": "cling+fiil (düzensiz, OEWN)"
+  },
+  "clypei": {
+   "tokens": [
+    "clypei"
+   ],
+   "not": "clypeus+isim (düzensiz, OEWN)"
+  },
+  "coagula": {
+   "tokens": [
+    "coagula"
+   ],
+   "not": "coagulum+isim (düzensiz, OEWN)"
+  },
+  "cocci": {
+   "tokens": [
+    "cocci"
+   ],
+   "not": "coccus+isim (düzensiz, OEWN)"
+  },
+  "coccyges": {
+   "tokens": [
+    "coccyges"
+   ],
+   "not": "coccyx+isim (düzensiz, OEWN)"
+  },
+  "cochleae": {
+   "tokens": [
+    "cochleae"
+   ],
+   "not": "cochlea+isim (düzensiz, OEWN)"
+  },
+  "codices": {
+   "tokens": [
+    "codices"
+   ],
+   "not": "codex+isim (düzensiz, OEWN)"
+  },
+  "coelentera": {
+   "tokens": [
+    "coelentera"
+   ],
+   "not": "coelenteron+isim (düzensiz, OEWN)"
+  },
+  "cognomina": {
+   "tokens": [
+    "cognomina"
+   ],
+   "not": "cognomen+isim (düzensiz, OEWN)"
+  },
+  "cola": {
+   "tokens": [
+    "cola"
+   ],
+   "not": "colon+isim (düzensiz, OEWN)"
+  },
+  "colloquia": {
+   "tokens": [
+    "colloquia"
+   ],
+   "not": "colloquium+isim (düzensiz, OEWN)"
+  },
+  "collyria": {
+   "tokens": [
+    "collyria"
+   ],
+   "not": "collyrium+isim (düzensiz, OEWN)"
+  },
+  "colones": {
+   "tokens": [
+    "colones"
+   ],
+   "not": "colon+isim (düzensiz, OEWN)"
+  },
+  "colossi": {
+   "tokens": [
+    "colossi"
+   ],
+   "not": "colossus+isim (düzensiz, OEWN)"
+  },
+  "columbaria": {
+   "tokens": [
+    "columbaria"
+   ],
+   "not": "columbarium+isim (düzensiz, OEWN)"
+  },
+  "columellae": {
+   "tokens": [
+    "columellae"
+   ],
+   "not": "columella+isim (düzensiz, OEWN)"
+  },
+  "comae": {
+   "tokens": [
+    "comae"
+   ],
+   "not": "coma+isim (düzensiz, OEWN)"
+  },
+  "comedones": {
+   "tokens": [
+    "comedones"
+   ],
+   "not": "comedo+isim (düzensiz, OEWN)"
+  },
+  "concerti": {
+   "tokens": [
+    "concerti"
+   ],
+   "not": "concerto+isim (düzensiz, OEWN)"
+  },
+  "conchae": {
+   "tokens": [
+    "conchae"
+   ],
+   "not": "concha+isim (düzensiz, OEWN)"
+  },
+  "confervae": {
+   "tokens": [
+    "confervae"
+   ],
+   "not": "conferva+isim (düzensiz, OEWN)"
+  },
+  "congii": {
+   "tokens": [
+    "congii"
+   ],
+   "not": "congius+isim (düzensiz, OEWN)"
+  },
+  "conidia": {
+   "tokens": [
+    "conidia"
+   ],
+   "not": "conidium+isim (düzensiz, OEWN)"
+  },
+  "conjunctivae": {
+   "tokens": [
+    "conjunctivae"
+   ],
+   "not": "conjunctiva+isim (düzensiz, OEWN)"
+  },
+  "conquistadores": {
+   "tokens": [
+    "conquistadores"
+   ],
+   "not": "conquistador+isim (düzensiz, OEWN)"
+  },
+  "consortia": {
+   "tokens": [
+    "consortia"
+   ],
+   "not": "consortium+isim (düzensiz, OEWN)"
+  },
+  "continua": {
+   "tokens": [
+    "continua"
+   ],
+   "not": "continuum+isim (düzensiz, OEWN)"
+  },
+  "contralti": {
+   "tokens": [
+    "contralti"
+   ],
+   "not": "contralto+isim (düzensiz, OEWN)"
+  },
+  "convolvuli": {
+   "tokens": [
+    "convolvuli"
+   ],
+   "not": "convolvulus+isim (düzensiz, OEWN)"
+  },
+  "copulae": {
+   "tokens": [
+    "copulae"
+   ],
+   "not": "copula+isim (düzensiz, OEWN)"
+  },
+  "coria": {
+   "tokens": [
+    "coria"
+   ],
+   "not": "corium+isim (düzensiz, OEWN)"
+  },
+  "corneae": {
+   "tokens": [
+    "corneae"
+   ],
+   "not": "cornea+isim (düzensiz, OEWN)"
+  },
+  "cornua": {
+   "tokens": [
+    "cornua"
+   ],
+   "not": "cornu+isim (düzensiz, OEWN)"
+  },
+  "coronae": {
+   "tokens": [
+    "coronae"
+   ],
+   "not": "corona+isim (düzensiz, OEWN)"
+  },
+  "corpora": {
+   "tokens": [
+    "corpora"
+   ],
+   "not": "corpus+isim (düzensiz, OEWN)"
+  },
+  "corrigenda": {
+   "tokens": [
+    "corrigenda"
+   ],
+   "not": "corrigendum+isim (düzensiz, OEWN)"
+  },
+  "cortices": {
+   "tokens": [
+    "cortices"
+   ],
+   "not": "cortex+isim (düzensiz, OEWN)"
+  },
+  "cortinae": {
+   "tokens": [
+    "cortinae"
+   ],
+   "not": "cortina+isim (düzensiz, OEWN)"
+  },
+  "costae": {
+   "tokens": [
+    "costae"
+   ],
+   "not": "costa+isim (düzensiz, OEWN)"
+  },
+  "countersank": {
+   "tokens": [
+    "countersank"
+   ],
+   "not": "countersink+fiil (düzensiz, OEWN)"
+  },
+  "countersunk": {
+   "tokens": [
+    "countersunk"
+   ],
+   "not": "countersink+fiil (düzensiz, OEWN)"
+  },
+  "coxae": {
+   "tokens": [
+    "coxae"
+   ],
+   "not": "coxa+isim (düzensiz, OEWN)"
+  },
+  "crania": {
+   "tokens": [
+    "crania"
+   ],
+   "not": "cranium+isim (düzensiz, OEWN)"
+  },
+  "credenda": {
+   "tokens": [
+    "credenda"
+   ],
+   "not": "credendum+isim (düzensiz, OEWN)"
+  },
+  "crematoria": {
+   "tokens": [
+    "crematoria"
+   ],
+   "not": "crematorium+isim (düzensiz, OEWN)"
+  },
+  "crept": {
+   "tokens": [
+    "crept"
+   ],
+   "not": "creep+fiil (düzensiz, OEWN)"
+  },
+  "crescendi": {
+   "tokens": [
+    "crescendi"
+   ],
+   "not": "crescendo+isim (düzensiz, OEWN)"
+  },
+  "crises": {
+   "tokens": [
+    "crises"
+   ],
+   "not": "crisis+isim (düzensiz, OEWN)"
+  },
+  "criteria": {
+   "tokens": [
+    "criteria"
+   ],
+   "not": "criterion+isim (düzensiz, OEWN)"
+  },
+  "crossbred": {
+   "tokens": [
+    "crossbred"
+   ],
+   "not": "crossbreed+fiil (düzensiz, OEWN)"
+  },
+  "cruces": {
+   "tokens": [
+    "cruces"
+   ],
+   "not": "crux+isim (düzensiz, OEWN)"
+  },
+  "crura": {
+   "tokens": [
+    "crura"
+   ],
+   "not": "crus+isim (düzensiz, OEWN)"
+  },
+  "crying": {
+   "tokens": [
+    "crying"
+   ],
+   "not": "cry+isim (düzensiz, OEWN)"
+  },
+  "cryings": {
+   "tokens": [
+    "cryings"
+   ],
+   "not": "cry+isim (düzensiz, OEWN)"
+  },
+  "ctenidia": {
+   "tokens": [
+    "ctenidia"
+   ],
+   "not": "ctenidium+isim (düzensiz, OEWN)"
+  },
+  "culti": {
+   "tokens": [
+    "culti"
+   ],
+   "not": "cultus+isim (düzensiz, OEWN)"
+  },
+  "cumuli": {
+   "tokens": [
+    "cumuli"
+   ],
+   "not": "cumulus+isim (düzensiz, OEWN)"
+  },
+  "cumulonimbi": {
+   "tokens": [
+    "cumulonimbi"
+   ],
+   "not": "cumulonimbus+isim (düzensiz, OEWN)"
+  },
+  "curricula": {
+   "tokens": [
+    "curricula"
+   ],
+   "not": "curriculum+isim (düzensiz, OEWN)"
+  },
+  "curst": {
+   "tokens": [
+    "curst"
+   ],
+   "not": "curse+fiil (düzensiz, OEWN)"
+  },
+  "cutes": {
+   "tokens": [
+    "cutes"
+   ],
+   "not": "cutis+isim (düzensiz, OEWN)"
+  },
+  "cuticulae": {
+   "tokens": [
+    "cuticulae"
+   ],
+   "not": "cuticula+isim (düzensiz, OEWN)"
+  },
+  "cyclopes": {
+   "tokens": [
+    "cyclopes"
+   ],
+   "not": "cyclops+isim (düzensiz, OEWN)"
+  },
+  "cycloses": {
+   "tokens": [
+    "cycloses"
+   ],
+   "not": "cyclosis+isim (düzensiz, OEWN)"
+  },
+  "cylices": {
+   "tokens": [
+    "cylices"
+   ],
+   "not": "cylix+isim (düzensiz, OEWN)"
+  },
+  "cylikes": {
+   "tokens": [
+    "cylikes"
+   ],
+   "not": "cylix+isim (düzensiz, OEWN)"
+  },
+  "cymae": {
+   "tokens": [
+    "cymae"
+   ],
+   "not": "cyma+isim (düzensiz, OEWN)"
+  },
+  "cymatia": {
+   "tokens": [
+    "cymatia"
+   ],
+   "not": "cymatium+isim (düzensiz, OEWN)"
+  },
+  "data": {
+   "tokens": [
+    "data"
+   ],
+   "not": "datum+isim (düzensiz, OEWN)"
   },
   "dealt": {
    "tokens": [
     "dealt"
    ],
-   "not": "deal+geçmiş (düzensiz)"
+   "not": "deal+fiil (düzensiz, OEWN)"
+  },
+  "decennia": {
+   "tokens": [
+    "decennia"
+   ],
+   "not": "decennium+isim (düzensiz, OEWN)"
+  },
+  "deciduae": {
+   "tokens": [
+    "deciduae"
+   ],
+   "not": "decidua+isim (düzensiz, OEWN)"
+  },
+  "deeper": {
+   "tokens": [
+    "deeper"
+   ],
+   "not": "deeply+zarf (düzensiz, OEWN)"
+  },
+  "degasses": {
+   "tokens": [
+    "degasses"
+   ],
+   "not": "degas+fiil (düzensiz, OEWN)"
+  },
+  "delphinia": {
+   "tokens": [
+    "delphinia"
+   ],
+   "not": "delphinium+isim (düzensiz, OEWN)"
+  },
+  "dermatoses": {
+   "tokens": [
+    "dermatoses"
+   ],
+   "not": "dermatosis+isim (düzensiz, OEWN)"
+  },
+  "desiderata": {
+   "tokens": [
+    "desiderata"
+   ],
+   "not": "desideratum+isim (düzensiz, OEWN)"
+  },
+  "diaereses": {
+   "tokens": [
+    "diaereses"
+   ],
+   "not": "diaeresis+isim (düzensiz, OEWN)"
+  },
+  "diaerses": {
+   "tokens": [
+    "diaerses"
+   ],
+   "not": "diaeresis+isim (düzensiz, OEWN)"
+  },
+  "diagnoses": {
+   "tokens": [
+    "diagnoses"
+   ],
+   "not": "diagnosis+isim (düzensiz, OEWN)"
+  },
+  "dialyses": {
+   "tokens": [
+    "dialyses"
+   ],
+   "not": "dialysis+isim (düzensiz, OEWN)"
+  },
+  "diaphyses": {
+   "tokens": [
+    "diaphyses"
+   ],
+   "not": "diaphysis+isim (düzensiz, OEWN)"
+  },
+  "diarthroses": {
+   "tokens": [
+    "diarthroses"
+   ],
+   "not": "diarthrosis+isim (düzensiz, OEWN)"
+  },
+  "diastases": {
+   "tokens": [
+    "diastases"
+   ],
+   "not": "diastasis+isim (düzensiz, OEWN)"
+  },
+  "diastemata": {
+   "tokens": [
+    "diastemata"
+   ],
+   "not": "diastema+isim (düzensiz, OEWN)"
+  },
+  "diathses": {
+   "tokens": [
+    "diathses"
+   ],
+   "not": "diathesis+isim (düzensiz, OEWN)"
+  },
+  "dibbukkim": {
+   "tokens": [
+    "dibbukkim"
+   ],
+   "not": "dibbuk+isim (düzensiz, OEWN)"
+  },
+  "dicier": {
+   "tokens": [
+    "dicier"
+   ],
+   "not": "dicey+sıfat (düzensiz, OEWN)"
+  },
+  "diciest": {
+   "tokens": [
+    "diciest"
+   ],
+   "not": "dicey+sıfat (düzensiz, OEWN)"
+  },
+  "dicta": {
+   "tokens": [
+    "dicta"
+   ],
+   "not": "dictum+isim (düzensiz, OEWN)"
   },
   "did": {
    "tokens": [
     "did"
    ],
-   "not": "do+geçmiş (düzensiz)"
+   "not": "do+fiil (düzensiz, OEWN)"
+  },
+  "diereses": {
+   "tokens": [
+    "diereses"
+   ],
+   "not": "dieresis+isim (düzensiz, OEWN)"
+  },
+  "dieses": {
+   "tokens": [
+    "dieses"
+   ],
+   "not": "diesis+isim (düzensiz, OEWN)"
+  },
+  "differentiae": {
+   "tokens": [
+    "differentiae"
+   ],
+   "not": "differentia+isim (düzensiz, OEWN)"
+  },
+  "dilettanti": {
+   "tokens": [
+    "dilettanti"
+   ],
+   "not": "dilettante+isim (düzensiz, OEWN)"
+  },
+  "diplococci": {
+   "tokens": [
+    "diplococci"
+   ],
+   "not": "diplococcus+isim (düzensiz, OEWN)"
+  },
+  "disci": {
+   "tokens": [
+    "disci"
+   ],
+   "not": "discus+isim (düzensiz, OEWN)"
+  },
+  "dive": {
+   "tokens": [
+    "dive"
+   ],
+   "not": "diva+isim (düzensiz, OEWN)"
+  },
+  "diverticula": {
+   "tokens": [
+    "diverticula"
+   ],
+   "not": "diverticulum+isim (düzensiz, OEWN)"
+  },
+  "divertimenti": {
+   "tokens": [
+    "divertimenti"
+   ],
+   "not": "divertimento+isim (düzensiz, OEWN)"
+  },
+  "djinn": {
+   "tokens": [
+    "djinn"
+   ],
+   "not": "djinni+isim (düzensiz, OEWN)"
+  },
+  "dogmata": {
+   "tokens": [
+    "dogmata"
+   ],
+   "not": "dogma+isim (düzensiz, OEWN)"
+  },
+  "dogteeth": {
+   "tokens": [
+    "dogteeth"
+   ],
+   "not": "dogtooth+isim (düzensiz, OEWN)"
+  },
+  "domatia": {
+   "tokens": [
+    "domatia"
+   ],
+   "not": "domatium+isim (düzensiz, OEWN)"
   },
   "done": {
    "tokens": [
     "done"
    ],
-   "not": "do+geçmiş (düzensiz)"
+   "not": "do+fiil (düzensiz, OEWN)"
+  },
+  "dopier": {
+   "tokens": [
+    "dopier"
+   ],
+   "not": "dopey+sıfat (düzensiz, OEWN)"
+  },
+  "dopiest": {
+   "tokens": [
+    "dopiest"
+   ],
+   "not": "dopey+sıfat (düzensiz, OEWN)"
+  },
+  "dormice": {
+   "tokens": [
+    "dormice"
+   ],
+   "not": "dormouse+isim (düzensiz, OEWN)"
+  },
+  "dorsa": {
+   "tokens": [
+    "dorsa"
+   ],
+   "not": "dorsum+isim (düzensiz, OEWN)"
+  },
+  "dove": {
+   "tokens": [
+    "dove"
+   ],
+   "not": "dive+fiil (düzensiz, OEWN)"
+  },
+  "drachmae": {
+   "tokens": [
+    "drachmae"
+   ],
+   "not": "drachma+isim (düzensiz, OEWN)"
   },
   "drank": {
    "tokens": [
     "drank"
    ],
-   "not": "drink+geçmiş (düzensiz)"
+   "not": "drink+fiil (düzensiz, OEWN)"
   },
   "drawn": {
    "tokens": [
     "drawn"
    ],
-   "not": "draw+geçmiş (düzensiz)"
+   "not": "draw+fiil (düzensiz, OEWN)"
+  },
+  "dreamt": {
+   "tokens": [
+    "dreamt"
+   ],
+   "not": "dream+fiil (düzensiz, OEWN)"
   },
   "drew": {
    "tokens": [
     "drew"
    ],
-   "not": "draw+geçmiş (düzensiz)"
+   "not": "draw+fiil (düzensiz, OEWN)"
   },
   "driven": {
    "tokens": [
     "driven"
    ],
-   "not": "drive+geçmiş (düzensiz)"
+   "not": "drive+fiil (düzensiz, OEWN)"
+  },
+  "drosophilae": {
+   "tokens": [
+    "drosophilae"
+   ],
+   "not": "drosophila+isim (düzensiz, OEWN)"
   },
   "drove": {
    "tokens": [
     "drove"
    ],
-   "not": "drive+geçmiş (düzensiz)"
+   "not": "drive+fiil (düzensiz, OEWN)"
   },
   "drunk": {
    "tokens": [
     "drunk"
    ],
-   "not": "drink+geçmiş (düzensiz)"
+   "not": "drink+fiil (düzensiz, OEWN)"
+  },
+  "dryades": {
+   "tokens": [
+    "dryades"
+   ],
+   "not": "dryad+isim (düzensiz, OEWN)"
+  },
+  "dryer": {
+   "tokens": [
+    "dryer"
+   ],
+   "not": "dry+sıfat (düzensiz, OEWN)"
+  },
+  "dryest": {
+   "tokens": [
+    "dryest"
+   ],
+   "not": "dry+sıfat (düzensiz, OEWN)"
+  },
+  "dug": {
+   "tokens": [
+    "dug"
+   ],
+   "not": "dig+fiil (düzensiz, OEWN)"
+  },
+  "dui": {
+   "tokens": [
+    "dui"
+   ],
+   "not": "duo+isim (düzensiz, OEWN)"
+  },
+  "duodena": {
+   "tokens": [
+    "duodena"
+   ],
+   "not": "duodenum+isim (düzensiz, OEWN)"
+  },
+  "dwelt": {
+   "tokens": [
+    "dwelt"
+   ],
+   "not": "dwell+fiil (düzensiz, OEWN)"
+  },
+  "dybbukkim": {
+   "tokens": [
+    "dybbukkim"
+   ],
+   "not": "dybbuk+isim (düzensiz, OEWN)"
   },
   "eaten": {
    "tokens": [
     "eaten"
    ],
-   "not": "eat+geçmiş (düzensiz)"
+   "not": "eat+fiil (düzensiz, OEWN)"
+  },
+  "ecchymoses": {
+   "tokens": [
+    "ecchymoses"
+   ],
+   "not": "ecchymosis+isim (düzensiz, OEWN)"
+  },
+  "ecdyses": {
+   "tokens": [
+    "ecdyses"
+   ],
+   "not": "ecdysis+isim (düzensiz, OEWN)"
+  },
+  "echidnae": {
+   "tokens": [
+    "echidnae"
+   ],
+   "not": "echidna+isim (düzensiz, OEWN)"
+  },
+  "echini": {
+   "tokens": [
+    "echini"
+   ],
+   "not": "echinus+isim (düzensiz, OEWN)"
+  },
+  "echinococci": {
+   "tokens": [
+    "echinococci"
+   ],
+   "not": "echinococcus+isim (düzensiz, OEWN)"
+  },
+  "ectozoa": {
+   "tokens": [
+    "ectozoa"
+   ],
+   "not": "ectozoan+isim (düzensiz, OEWN)"
+  },
+  "edemata": {
+   "tokens": [
+    "edemata"
+   ],
+   "not": "edema+isim (düzensiz, OEWN)"
+  },
+  "effluvia": {
+   "tokens": [
+    "effluvia"
+   ],
+   "not": "effluvium+isim (düzensiz, OEWN)"
+  },
+  "eisegeses": {
+   "tokens": [
+    "eisegeses"
+   ],
+   "not": "eisegesis+isim (düzensiz, OEWN)"
+  },
+  "eisteddfodau": {
+   "tokens": [
+    "eisteddfodau"
+   ],
+   "not": "eisteddfod+isim (düzensiz, OEWN)"
+  },
+  "ellipses": {
+   "tokens": [
+    "ellipses"
+   ],
+   "not": "ellipsis+isim (düzensiz, OEWN)"
+  },
+  "elytra": {
+   "tokens": [
+    "elytra"
+   ],
+   "not": "elytron+isim (düzensiz, OEWN)"
+  },
+  "emboli": {
+   "tokens": [
+    "emboli"
+   ],
+   "not": "embolus+isim (düzensiz, OEWN)"
+  },
+  "emphases": {
+   "tokens": [
+    "emphases"
+   ],
+   "not": "emphasis+isim (düzensiz, OEWN)"
+  },
+  "emporia": {
+   "tokens": [
+    "emporia"
+   ],
+   "not": "emporium+isim (düzensiz, OEWN)"
+  },
+  "enarthroses": {
+   "tokens": [
+    "enarthroses"
+   ],
+   "not": "enarthrosis+isim (düzensiz, OEWN)"
+  },
+  "encephala": {
+   "tokens": [
+    "encephala"
+   ],
+   "not": "encephalon+isim (düzensiz, OEWN)"
+  },
+  "encephalitides": {
+   "tokens": [
+    "encephalitides"
+   ],
+   "not": "encephalitis+isim (düzensiz, OEWN)"
+  },
+  "enchiridia": {
+   "tokens": [
+    "enchiridia"
+   ],
+   "not": "enchiridion+isim (düzensiz, OEWN)"
+  },
+  "enchondromata": {
+   "tokens": [
+    "enchondromata"
+   ],
+   "not": "enchondroma+isim (düzensiz, OEWN)"
+  },
+  "encomia": {
+   "tokens": [
+    "encomia"
+   ],
+   "not": "encomium+isim (düzensiz, OEWN)"
+  },
+  "endamebae": {
+   "tokens": [
+    "endamebae"
+   ],
+   "not": "endameba+isim (düzensiz, OEWN)"
+  },
+  "endocardia": {
+   "tokens": [
+    "endocardia"
+   ],
+   "not": "endocardium+isim (düzensiz, OEWN)"
+  },
+  "endocrania": {
+   "tokens": [
+    "endocrania"
+   ],
+   "not": "endocranium+isim (düzensiz, OEWN)"
+  },
+  "endometria": {
+   "tokens": [
+    "endometria"
+   ],
+   "not": "endometrium+isim (düzensiz, OEWN)"
+  },
+  "endostea": {
+   "tokens": [
+    "endostea"
+   ],
+   "not": "endosteum+isim (düzensiz, OEWN)"
+  },
+  "endothelia": {
+   "tokens": [
+    "endothelia"
+   ],
+   "not": "endothelium+isim (düzensiz, OEWN)"
+  },
+  "endozoa": {
+   "tokens": [
+    "endozoa"
+   ],
+   "not": "endozoan+isim (düzensiz, OEWN)"
+  },
+  "enemata": {
+   "tokens": [
+    "enemata"
+   ],
+   "not": "enema+isim (düzensiz, OEWN)"
+  },
+  "entases": {
+   "tokens": [
+    "entases"
+   ],
+   "not": "entasis+isim (düzensiz, OEWN)"
+  },
+  "entera": {
+   "tokens": [
+    "entera"
+   ],
+   "not": "enteron+isim (düzensiz, OEWN)"
+  },
+  "entozoa": {
+   "tokens": [
+    "entozoa"
+   ],
+   "not": "entozoan+isim (düzensiz, OEWN)"
+  },
+  "epentheses": {
+   "tokens": [
+    "epentheses"
+   ],
+   "not": "epenthesis+isim (düzensiz, OEWN)"
+  },
+  "ephemera": {
+   "tokens": [
+    "ephemera"
+   ],
+   "not": "ephemeron+isim (düzensiz, OEWN)"
+  },
+  "ephemerae": {
+   "tokens": [
+    "ephemerae"
+   ],
+   "not": "ephemera+isim (düzensiz, OEWN)"
+  },
+  "ephemerides": {
+   "tokens": [
+    "ephemerides"
+   ],
+   "not": "ephemeris+isim (düzensiz, OEWN)"
+  },
+  "epicalyces": {
+   "tokens": [
+    "epicalyces"
+   ],
+   "not": "epicalyx+isim (düzensiz, OEWN)"
+  },
+  "epicanthi": {
+   "tokens": [
+    "epicanthi"
+   ],
+   "not": "epicanthus+isim (düzensiz, OEWN)"
+  },
+  "epicardia": {
+   "tokens": [
+    "epicardia"
+   ],
+   "not": "epicardium+isim (düzensiz, OEWN)"
+  },
+  "epididymides": {
+   "tokens": [
+    "epididymides"
+   ],
+   "not": "epididymis+isim (düzensiz, OEWN)"
+  },
+  "epigastria": {
+   "tokens": [
+    "epigastria"
+   ],
+   "not": "epigastrium+isim (düzensiz, OEWN)"
+  },
+  "epiglottides": {
+   "tokens": [
+    "epiglottides"
+   ],
+   "not": "epiglottis+isim (düzensiz, OEWN)"
+  },
+  "epiphenomena": {
+   "tokens": [
+    "epiphenomena"
+   ],
+   "not": "epiphenomenon+isim (düzensiz, OEWN)"
+  },
+  "epiphyses": {
+   "tokens": [
+    "epiphyses"
+   ],
+   "not": "epiphysis+isim (düzensiz, OEWN)"
+  },
+  "epithalamia": {
+   "tokens": [
+    "epithalamia"
+   ],
+   "not": "epithalamium+isim (düzensiz, OEWN)"
+  },
+  "epithelia": {
+   "tokens": [
+    "epithelia"
+   ],
+   "not": "epithelium+isim (düzensiz, OEWN)"
+  },
+  "epitheliomata": {
+   "tokens": [
+    "epitheliomata"
+   ],
+   "not": "epithelioma+isim (düzensiz, OEWN)"
+  },
+  "epizoa": {
+   "tokens": [
+    "epizoa"
+   ],
+   "not": "epizoan+isim (düzensiz, OEWN)"
+  },
+  "equilibria": {
+   "tokens": [
+    "equilibria"
+   ],
+   "not": "equilibrium+isim (düzensiz, OEWN)"
+  },
+  "errata": {
+   "tokens": [
+    "errata"
+   ],
+   "not": "erratum+isim (düzensiz, OEWN)"
+  },
+  "esophagi": {
+   "tokens": [
+    "esophagi"
+   ],
+   "not": "esophagus+isim (düzensiz, OEWN)"
+  },
+  "etyma": {
+   "tokens": [
+    "etyma"
+   ],
+   "not": "etymon+isim (düzensiz, OEWN)"
+  },
+  "eucalypti": {
+   "tokens": [
+    "eucalypti"
+   ],
+   "not": "eucalyptus+isim (düzensiz, OEWN)"
+  },
+  "exanthemata": {
+   "tokens": [
+    "exanthemata"
+   ],
+   "not": "exanthema+isim (düzensiz, OEWN)"
+  },
+  "executrices": {
+   "tokens": [
+    "executrices"
+   ],
+   "not": "executrix+isim (düzensiz, OEWN)"
+  },
+  "exegeses": {
+   "tokens": [
+    "exegeses"
+   ],
+   "not": "exegesis+isim (düzensiz, OEWN)"
+  },
+  "exordia": {
+   "tokens": [
+    "exordia"
+   ],
+   "not": "exordium+isim (düzensiz, OEWN)"
+  },
+  "exostoses": {
+   "tokens": [
+    "exostoses"
+   ],
+   "not": "exostosis+isim (düzensiz, OEWN)"
+  },
+  "extrema": {
+   "tokens": [
+    "extrema"
+   ],
+   "not": "extremum+isim (düzensiz, OEWN)"
+  },
+  "eyeteeth": {
+   "tokens": [
+    "eyeteeth"
+   ],
+   "not": "eyetooth+isim (düzensiz, OEWN)"
+  },
+  "faciae": {
+   "tokens": [
+    "faciae"
+   ],
+   "not": "facia+isim (düzensiz, OEWN)"
+  },
+  "faculae": {
+   "tokens": [
+    "faculae"
+   ],
+   "not": "facula+isim (düzensiz, OEWN)"
   },
   "fallen": {
    "tokens": [
     "fallen"
    ],
-   "not": "fall+geçmiş (düzensiz)"
+   "not": "fall+fiil (düzensiz, OEWN)"
+  },
+  "famuli": {
+   "tokens": [
+    "famuli"
+   ],
+   "not": "famulus+isim (düzensiz, OEWN)"
   },
   "farther": {
    "tokens": [
     "farther"
    ],
-   "not": "far+karşılaştırma (düzensiz)"
+   "not": "far+zarf (düzensiz, OEWN)"
   },
-  "farthest": {
+  "fasciae": {
    "tokens": [
-    "farthest"
+    "fasciae"
    ],
-   "not": "far+karşılaştırma (düzensiz)"
+   "not": "fascia+isim (düzensiz, OEWN)"
+  },
+  "fasciculi": {
+   "tokens": [
+    "fasciculi"
+   ],
+   "not": "fasciculus+isim (düzensiz, OEWN)"
+  },
+  "faunae": {
+   "tokens": [
+    "faunae"
+   ],
+   "not": "fauna+isim (düzensiz, OEWN)"
+  },
+  "feculae": {
+   "tokens": [
+    "feculae"
+   ],
+   "not": "fecula+isim (düzensiz, OEWN)"
   },
   "fed": {
    "tokens": [
     "fed"
    ],
-   "not": "feed+geçmiş (düzensiz)"
+   "not": "feed+fiil (düzensiz, OEWN)"
   },
   "feet": {
    "tokens": [
     "feet"
    ],
-   "not": "foot+çoğul (düzensiz)"
+   "not": "foot+isim (düzensiz, OEWN)"
   },
   "fell": {
    "tokens": [
     "fell"
    ],
-   "not": "fall+geçmiş (düzensiz)"
+   "not": "fall+fiil (düzensiz, OEWN)"
+  },
+  "fellaheen": {
+   "tokens": [
+    "fellaheen"
+   ],
+   "not": "fellah+isim (düzensiz, OEWN)"
+  },
+  "fellahin": {
+   "tokens": [
+    "fellahin"
+   ],
+   "not": "fellah+isim (düzensiz, OEWN)"
   },
   "felt": {
    "tokens": [
     "felt"
    ],
-   "not": "feel+geçmiş (düzensiz)"
+   "not": "feel+fiil (düzensiz, OEWN)"
+  },
+  "femora": {
+   "tokens": [
+    "femora"
+   ],
+   "not": "femur+isim (düzensiz, OEWN)"
+  },
+  "fenestellae": {
+   "tokens": [
+    "fenestellae"
+   ],
+   "not": "fenestella+isim (düzensiz, OEWN)"
+  },
+  "fenestrae": {
+   "tokens": [
+    "fenestrae"
+   ],
+   "not": "fenestra+isim (düzensiz, OEWN)"
+  },
+  "feriae": {
+   "tokens": [
+    "feriae"
+   ],
+   "not": "feria+isim (düzensiz, OEWN)"
+  },
+  "fermate": {
+   "tokens": [
+    "fermate"
+   ],
+   "not": "fermata+isim (düzensiz, OEWN)"
+  },
+  "festschriften": {
+   "tokens": [
+    "festschriften"
+   ],
+   "not": "festschrift+isim (düzensiz, OEWN)"
+  },
+  "fezzes": {
+   "tokens": [
+    "fezzes"
+   ],
+   "not": "fez+isim (düzensiz, OEWN)"
+  },
+  "fibromata": {
+   "tokens": [
+    "fibromata"
+   ],
+   "not": "fibroma+isim (düzensiz, OEWN)"
+  },
+  "fibulae": {
+   "tokens": [
+    "fibulae"
+   ],
+   "not": "fibula+isim (düzensiz, OEWN)"
+  },
+  "fieldmice": {
+   "tokens": [
+    "fieldmice"
+   ],
+   "not": "fieldmouse+isim (düzensiz, OEWN)"
+  },
+  "fila": {
+   "tokens": [
+    "fila"
+   ],
+   "not": "filum+isim (düzensiz, OEWN)"
+  },
+  "filariiae": {
+   "tokens": [
+    "filariiae"
+   ],
+   "not": "filaria+isim (düzensiz, OEWN)"
+  },
+  "fimbriae": {
+   "tokens": [
+    "fimbriae"
+   ],
+   "not": "fimbria+isim (düzensiz, OEWN)"
+  },
+  "fistulae": {
+   "tokens": [
+    "fistulae"
+   ],
+   "not": "fistula+isim (düzensiz, OEWN)"
+  },
+  "flagella": {
+   "tokens": [
+    "flagella"
+   ],
+   "not": "flagellum+isim (düzensiz, OEWN)"
+  },
+  "flagstaves": {
+   "tokens": [
+    "flagstaves"
+   ],
+   "not": "flagstaff+isim (düzensiz, OEWN)"
+  },
+  "flambeaux": {
+   "tokens": [
+    "flambeaux"
+   ],
+   "not": "flambeau+isim (düzensiz, OEWN)"
+  },
+  "flamines": {
+   "tokens": [
+    "flamines"
+   ],
+   "not": "flamen+isim (düzensiz, OEWN)"
+  },
+  "flatfeet": {
+   "tokens": [
+    "flatfeet"
+   ],
+   "not": "flatfoot+isim (düzensiz, OEWN)"
+  },
+  "fled": {
+   "tokens": [
+    "fled"
+   ],
+   "not": "flee+fiil (düzensiz, OEWN)"
   },
   "flew": {
    "tokens": [
     "flew"
    ],
-   "not": "fly+geçmiş (düzensiz)"
+   "not": "fly+fiil (düzensiz, OEWN)"
+  },
+  "floodlit": {
+   "tokens": [
+    "floodlit"
+   ],
+   "not": "floodlight+fiil (düzensiz, OEWN)"
+  },
+  "florae": {
+   "tokens": [
+    "florae"
+   ],
+   "not": "flora+isim (düzensiz, OEWN)"
+  },
+  "florilegia": {
+   "tokens": [
+    "florilegia"
+   ],
+   "not": "florilegium+isim (düzensiz, OEWN)"
   },
   "flown": {
    "tokens": [
     "flown"
    ],
-   "not": "fly+geçmiş (düzensiz)"
+   "not": "fly+fiil (düzensiz, OEWN)"
+  },
+  "flung": {
+   "tokens": [
+    "flung"
+   ],
+   "not": "fling+fiil (düzensiz, OEWN)"
+  },
+  "foci": {
+   "tokens": [
+    "foci"
+   ],
+   "not": "focus+isim (düzensiz, OEWN)"
+  },
+  "folia": {
+   "tokens": [
+    "folia"
+   ],
+   "not": "folium+isim (düzensiz, OEWN)"
+  },
+  "fora": {
+   "tokens": [
+    "fora"
+   ],
+   "not": "forum+isim (düzensiz, OEWN)"
+  },
+  "foramina": {
+   "tokens": [
+    "foramina"
+   ],
+   "not": "foramen+isim (düzensiz, OEWN)"
+  },
+  "forbad": {
+   "tokens": [
+    "forbad"
+   ],
+   "not": "forbid+fiil (düzensiz, OEWN)"
+  },
+  "forbade": {
+   "tokens": [
+    "forbade"
+   ],
+   "not": "forbid+fiil (düzensiz, OEWN)"
+  },
+  "forbidden": {
+   "tokens": [
+    "forbidden"
+   ],
+   "not": "forbid+fiil (düzensiz, OEWN)"
+  },
+  "forbore": {
+   "tokens": [
+    "forbore"
+   ],
+   "not": "forbear+fiil (düzensiz, OEWN)"
+  },
+  "forborne": {
+   "tokens": [
+    "forborne"
+   ],
+   "not": "forbear+fiil (düzensiz, OEWN)"
+  },
+  "forefeet": {
+   "tokens": [
+    "forefeet"
+   ],
+   "not": "forefoot+isim (düzensiz, OEWN)"
+  },
+  "foregone": {
+   "tokens": [
+    "foregone"
+   ],
+   "not": "forego+fiil (düzensiz, OEWN)"
+  },
+  "foreknew": {
+   "tokens": [
+    "foreknew"
+   ],
+   "not": "foreknow+fiil (düzensiz, OEWN)"
+  },
+  "foreknown": {
+   "tokens": [
+    "foreknown"
+   ],
+   "not": "foreknow+fiil (düzensiz, OEWN)"
+  },
+  "foresaw": {
+   "tokens": [
+    "foresaw"
+   ],
+   "not": "foresee+fiil (düzensiz, OEWN)"
+  },
+  "foreseen": {
+   "tokens": [
+    "foreseen"
+   ],
+   "not": "foresee+fiil (düzensiz, OEWN)"
+  },
+  "foreshown": {
+   "tokens": [
+    "foreshown"
+   ],
+   "not": "foreshow+fiil (düzensiz, OEWN)"
+  },
+  "foretold": {
+   "tokens": [
+    "foretold"
+   ],
+   "not": "foretell+fiil (düzensiz, OEWN)"
+  },
+  "forewent": {
+   "tokens": [
+    "forewent"
+   ],
+   "not": "forego+fiil (düzensiz, OEWN)"
+  },
+  "forgave": {
+   "tokens": [
+    "forgave"
+   ],
+   "not": "forgive+fiil (düzensiz, OEWN)"
+  },
+  "forgiven": {
+   "tokens": [
+    "forgiven"
+   ],
+   "not": "forgive+fiil (düzensiz, OEWN)"
+  },
+  "forgone": {
+   "tokens": [
+    "forgone"
+   ],
+   "not": "forgo+fiil (düzensiz, OEWN)"
   },
   "forgot": {
    "tokens": [
     "forgot"
    ],
-   "not": "forget+geçmiş (düzensiz)"
+   "not": "forget+fiil (düzensiz, OEWN)"
   },
   "forgotten": {
    "tokens": [
     "forgotten"
    ],
-   "not": "forget+geçmiş (düzensiz)"
+   "not": "forget+fiil (düzensiz, OEWN)"
+  },
+  "formulae": {
+   "tokens": [
+    "formulae"
+   ],
+   "not": "formula+isim (düzensiz, OEWN)"
+  },
+  "fornices": {
+   "tokens": [
+    "fornices"
+   ],
+   "not": "fornix+isim (düzensiz, OEWN)"
+  },
+  "forsaken": {
+   "tokens": [
+    "forsaken"
+   ],
+   "not": "forsake+fiil (düzensiz, OEWN)"
+  },
+  "forsook": {
+   "tokens": [
+    "forsook"
+   ],
+   "not": "forsake+fiil (düzensiz, OEWN)"
+  },
+  "forswore": {
+   "tokens": [
+    "forswore"
+   ],
+   "not": "forswear+fiil (düzensiz, OEWN)"
+  },
+  "forsworn": {
+   "tokens": [
+    "forsworn"
+   ],
+   "not": "forswear+fiil (düzensiz, OEWN)"
+  },
+  "forwent": {
+   "tokens": [
+    "forwent"
+   ],
+   "not": "forgo+fiil (düzensiz, OEWN)"
+  },
+  "fossae": {
+   "tokens": [
+    "fossae"
+   ],
+   "not": "fossa+isim (düzensiz, OEWN)"
   },
   "fought": {
    "tokens": [
     "fought"
    ],
-   "not": "fight+geçmiş (düzensiz)"
+   "not": "fight+fiil (düzensiz, OEWN)"
   },
   "found": {
    "tokens": [
     "found"
    ],
-   "not": "find+geçmiş (düzensiz)"
+   "not": "find+fiil (düzensiz, OEWN)"
+  },
+  "foveae": {
+   "tokens": [
+    "foveae"
+   ],
+   "not": "fovea+isim (düzensiz, OEWN)"
+  },
+  "fricandeaux": {
+   "tokens": [
+    "fricandeaux"
+   ],
+   "not": "fricandeau+isim (düzensiz, OEWN)"
+  },
+  "frijoles": {
+   "tokens": [
+    "frijoles"
+   ],
+   "not": "frijol+isim (düzensiz, OEWN)"
+  },
+  "frolicked": {
+   "tokens": [
+    "frolicked"
+   ],
+   "not": "frolic+fiil (düzensiz, OEWN)"
+  },
+  "frolicking": {
+   "tokens": [
+    "frolicking"
+   ],
+   "not": "frolic+fiil (düzensiz, OEWN)"
   },
   "froze": {
    "tokens": [
     "froze"
    ],
-   "not": "freeze+geçmiş (düzensiz)"
+   "not": "freeze+fiil (düzensiz, OEWN)"
   },
   "frozen": {
    "tokens": [
     "frozen"
    ],
-   "not": "freeze+geçmiş (düzensiz)"
+   "not": "freeze+fiil (düzensiz, OEWN)"
+  },
+  "frusta": {
+   "tokens": [
+    "frusta"
+   ],
+   "not": "frustum+isim (düzensiz, OEWN)"
+  },
+  "fuci": {
+   "tokens": [
+    "fuci"
+   ],
+   "not": "fucus+isim (düzensiz, OEWN)"
+  },
+  "fulcra": {
+   "tokens": [
+    "fulcra"
+   ],
+   "not": "fulcrum+isim (düzensiz, OEWN)"
+  },
+  "fundi": {
+   "tokens": [
+    "fundi"
+   ],
+   "not": "fundus+isim (düzensiz, OEWN)"
+  },
+  "fungi": {
+   "tokens": [
+    "fungi"
+   ],
+   "not": "fungus+isim (düzensiz, OEWN)"
+  },
+  "funiculi": {
+   "tokens": [
+    "funiculi"
+   ],
+   "not": "funiculus+isim (düzensiz, OEWN)"
+  },
+  "furculae": {
+   "tokens": [
+    "furculae"
+   ],
+   "not": "furcula+isim (düzensiz, OEWN)"
   },
   "further": {
    "tokens": [
     "further"
    ],
-   "not": "far+karşılaştırma (düzensiz)"
+   "not": "far+zarf (düzensiz, OEWN)"
   },
-  "furthest": {
+  "gainsaid": {
    "tokens": [
-    "furthest"
+    "gainsaid"
    ],
-   "not": "far+karşılaştırma (düzensiz)"
+   "not": "gainsay+fiil (düzensiz, OEWN)"
+  },
+  "galeae": {
+   "tokens": [
+    "galeae"
+   ],
+   "not": "galea+isim (düzensiz, OEWN)"
+  },
+  "gametangia": {
+   "tokens": [
+    "gametangia"
+   ],
+   "not": "gametangium+isim (düzensiz, OEWN)"
+  },
+  "gametoecia": {
+   "tokens": [
+    "gametoecia"
+   ],
+   "not": "gametoecium+isim (düzensiz, OEWN)"
+  },
+  "gan": {
+   "tokens": [
+    "gan"
+   ],
+   "not": "gin+fiil (düzensiz, OEWN)"
+  },
+  "ganglia": {
+   "tokens": [
+    "ganglia"
+   ],
+   "not": "ganglion+isim (düzensiz, OEWN)"
+  },
+  "gasses": {
+   "tokens": [
+    "gasses"
+   ],
+   "not": "gas+isim (düzensiz, OEWN)"
+  },
+  "gastrulae": {
+   "tokens": [
+    "gastrulae"
+   ],
+   "not": "gastrula+isim (düzensiz, OEWN)"
+  },
+  "gateaux": {
+   "tokens": [
+    "gateaux"
+   ],
+   "not": "gateau+isim (düzensiz, OEWN)"
   },
   "gave": {
    "tokens": [
     "gave"
    ],
-   "not": "give+geçmiş (düzensiz)"
+   "not": "give+fiil (düzensiz, OEWN)"
   },
   "geese": {
    "tokens": [
     "geese"
    ],
-   "not": "goose+çoğul (düzensiz)"
+   "not": "goose+isim (düzensiz, OEWN)"
+  },
+  "gelt": {
+   "tokens": [
+    "gelt"
+   ],
+   "not": "geld+fiil (düzensiz, OEWN)"
+  },
+  "gemboks": {
+   "tokens": [
+    "gemboks"
+   ],
+   "not": "gemsbok+isim (düzensiz, OEWN)"
+  },
+  "gembucks": {
+   "tokens": [
+    "gembucks"
+   ],
+   "not": "gemsbuck+isim (düzensiz, OEWN)"
+  },
+  "gemmae": {
+   "tokens": [
+    "gemmae"
+   ],
+   "not": "gemma+isim (düzensiz, OEWN)"
+  },
+  "genera": {
+   "tokens": [
+    "genera"
+   ],
+   "not": "genus+isim (düzensiz, OEWN)"
+  },
+  "geneses": {
+   "tokens": [
+    "geneses"
+   ],
+   "not": "genesis+isim (düzensiz, OEWN)"
+  },
+  "genii": {
+   "tokens": [
+    "genii"
+   ],
+   "not": "genius+isim (düzensiz, OEWN)"
+  },
+  "gentes": {
+   "tokens": [
+    "gentes"
+   ],
+   "not": "gens+isim (düzensiz, OEWN)"
+  },
+  "genua": {
+   "tokens": [
+    "genua"
+   ],
+   "not": "genu+isim (düzensiz, OEWN)"
+  },
+  "gestalten": {
+   "tokens": [
+    "gestalten"
+   ],
+   "not": "gestalt+isim (düzensiz, OEWN)"
+  },
+  "ghostwritten": {
+   "tokens": [
+    "ghostwritten"
+   ],
+   "not": "ghostwrite+fiil (düzensiz, OEWN)"
+  },
+  "ghostwrote": {
+   "tokens": [
+    "ghostwrote"
+   ],
+   "not": "ghostwrite+fiil (düzensiz, OEWN)"
+  },
+  "gilt": {
+   "tokens": [
+    "gilt"
+   ],
+   "not": "gild+fiil (düzensiz, OEWN)"
+  },
+  "gingivae": {
+   "tokens": [
+    "gingivae"
+   ],
+   "not": "gingiva+isim (düzensiz, OEWN)"
+  },
+  "ginglymi": {
+   "tokens": [
+    "ginglymi"
+   ],
+   "not": "ginglymus+isim (düzensiz, OEWN)"
+  },
+  "girt": {
+   "tokens": [
+    "girt"
+   ],
+   "not": "gird+fiil (düzensiz, OEWN)"
   },
   "given": {
    "tokens": [
     "given"
    ],
-   "not": "give+geçmiş (düzensiz)"
+   "not": "give+fiil (düzensiz, OEWN)"
+  },
+  "glabellae": {
+   "tokens": [
+    "glabellae"
+   ],
+   "not": "glabella+isim (düzensiz, OEWN)"
+  },
+  "gladioli": {
+   "tokens": [
+    "gladioli"
+   ],
+   "not": "gladiolus+isim (düzensiz, OEWN)"
+  },
+  "glandes": {
+   "tokens": [
+    "glandes"
+   ],
+   "not": "glans+isim (düzensiz, OEWN)"
+  },
+  "gliomata": {
+   "tokens": [
+    "gliomata"
+   ],
+   "not": "glioma+isim (düzensiz, OEWN)"
+  },
+  "glissandi": {
+   "tokens": [
+    "glissandi"
+   ],
+   "not": "glissando+isim (düzensiz, OEWN)"
+  },
+  "globigerinae": {
+   "tokens": [
+    "globigerinae"
+   ],
+   "not": "globigerina+isim (düzensiz, OEWN)"
+  },
+  "glochidcia": {
+   "tokens": [
+    "glochidcia"
+   ],
+   "not": "glochidium+isim (düzensiz, OEWN)"
+  },
+  "glochidia": {
+   "tokens": [
+    "glochidia"
+   ],
+   "not": "glochidium+isim (düzensiz, OEWN)"
+  },
+  "glomeruli": {
+   "tokens": [
+    "glomeruli"
+   ],
+   "not": "glomerulus+isim (düzensiz, OEWN)"
+  },
+  "glossae": {
+   "tokens": [
+    "glossae"
+   ],
+   "not": "glossa+isim (düzensiz, OEWN)"
+  },
+  "glottides": {
+   "tokens": [
+    "glottides"
+   ],
+   "not": "glottis+isim (düzensiz, OEWN)"
+  },
+  "glutei": {
+   "tokens": [
+    "glutei"
+   ],
+   "not": "gluteus+isim (düzensiz, OEWN)"
+  },
+  "gnawn": {
+   "tokens": [
+    "gnawn"
+   ],
+   "not": "gnaw+fiil (düzensiz, OEWN)"
+  },
+  "gnoses": {
+   "tokens": [
+    "gnoses"
+   ],
+   "not": "gnosis+isim (düzensiz, OEWN)"
+  },
+  "godchildren": {
+   "tokens": [
+    "godchildren"
+   ],
+   "not": "godchild+isim (düzensiz, OEWN)"
   },
   "gone": {
    "tokens": [
     "gone"
    ],
-   "not": "go+geçmiş (düzensiz)"
+   "not": "go+fiil (düzensiz, OEWN)"
+  },
+  "gonia": {
+   "tokens": [
+    "gonia"
+   ],
+   "not": "gonion+isim (düzensiz, OEWN)"
+  },
+  "gonococci": {
+   "tokens": [
+    "gonococci"
+   ],
+   "not": "gonococcus+isim (düzensiz, OEWN)"
+  },
+  "gooier": {
+   "tokens": [
+    "gooier"
+   ],
+   "not": "gooey+sıfat (düzensiz, OEWN)"
+  },
+  "gooiest": {
+   "tokens": [
+    "gooiest"
+   ],
+   "not": "gooey+sıfat (düzensiz, OEWN)"
   },
   "got": {
    "tokens": [
     "got"
    ],
-   "not": "get+geçmiş (düzensiz)"
+   "not": "get+fiil (düzensiz, OEWN)"
   },
   "gotten": {
    "tokens": [
     "gotten"
    ],
-   "not": "get+geçmiş (düzensiz)"
+   "not": "get+fiil (düzensiz, OEWN)"
+  },
+  "goyim": {
+   "tokens": [
+    "goyim"
+   ],
+   "not": "goy+isim (düzensiz, OEWN)"
+  },
+  "graffiti": {
+   "tokens": [
+    "graffiti"
+   ],
+   "not": "graffito+isim (düzensiz, OEWN)"
+  },
+  "grandchildren": {
+   "tokens": [
+    "grandchildren"
+   ],
+   "not": "grandchild+isim (düzensiz, OEWN)"
+  },
+  "granulomata": {
+   "tokens": [
+    "granulomata"
+   ],
+   "not": "granuloma+isim (düzensiz, OEWN)"
+  },
+  "graven": {
+   "tokens": [
+    "graven"
+   ],
+   "not": "grave+fiil (düzensiz, OEWN)"
   },
   "grew": {
    "tokens": [
     "grew"
    ],
-   "not": "grow+geçmiş (düzensiz)"
+   "not": "grow+fiil (düzensiz, OEWN)"
+  },
+  "gript": {
+   "tokens": [
+    "gript"
+   ],
+   "not": "grip+fiil (düzensiz, OEWN)"
+  },
+  "groszy": {
+   "tokens": [
+    "groszy"
+   ],
+   "not": "grosz+isim (düzensiz, OEWN)"
+  },
+  "ground": {
+   "tokens": [
+    "ground"
+   ],
+   "not": "grind+fiil (düzensiz, OEWN)"
   },
   "grown": {
    "tokens": [
     "grown"
    ],
-   "not": "grow+geçmiş (düzensiz)"
+   "not": "grow+fiil (düzensiz, OEWN)"
+  },
+  "gummata": {
+   "tokens": [
+    "gummata"
+   ],
+   "not": "gumma+isim (düzensiz, OEWN)"
+  },
+  "gymnasia": {
+   "tokens": [
+    "gymnasia"
+   ],
+   "not": "gymnasium+isim (düzensiz, OEWN)"
+  },
+  "gynoecea": {
+   "tokens": [
+    "gynoecea"
+   ],
+   "not": "gynoecium+isim (düzensiz, OEWN)"
+  },
+  "gynoecia": {
+   "tokens": [
+    "gynoecia"
+   ],
+   "not": "gynoecium+isim (düzensiz, OEWN)"
+  },
+  "gyri": {
+   "tokens": [
+    "gyri"
+   ],
+   "not": "gyrus+isim (düzensiz, OEWN)"
   },
   "had": {
    "tokens": [
     "had"
    ],
-   "not": "have+geçmiş (düzensiz)"
+   "not": "have+fiil (düzensiz, OEWN)"
+  },
+  "hadjes": {
+   "tokens": [
+    "hadjes"
+   ],
+   "not": "hadj+isim (düzensiz, OEWN)"
+  },
+  "haematolyses": {
+   "tokens": [
+    "haematolyses"
+   ],
+   "not": "haematolysis+isim (düzensiz, OEWN)"
+  },
+  "haematomata": {
+   "tokens": [
+    "haematomata"
+   ],
+   "not": "haematoma+isim (düzensiz, OEWN)"
+  },
+  "haemodialyses": {
+   "tokens": [
+    "haemodialyses"
+   ],
+   "not": "haemodialysis+isim (düzensiz, OEWN)"
+  },
+  "haemolyses": {
+   "tokens": [
+    "haemolyses"
+   ],
+   "not": "haemolysis+isim (düzensiz, OEWN)"
+  },
+  "haemoptyses": {
+   "tokens": [
+    "haemoptyses"
+   ],
+   "not": "haemoptysis+isim (düzensiz, OEWN)"
+  },
+  "hajjes": {
+   "tokens": [
+    "hajjes"
+   ],
+   "not": "hajj+isim (düzensiz, OEWN)"
+  },
+  "haleru": {
+   "tokens": [
+    "haleru"
+   ],
+   "not": "haler+isim (düzensiz, OEWN)"
+  },
+  "halfpence": {
+   "tokens": [
+    "halfpence"
+   ],
+   "not": "halfpenny+isim (düzensiz, OEWN)"
+  },
+  "halfways": {
+   "tokens": [
+    "halfways"
+   ],
+   "not": "halfway+sıfat (düzensiz, OEWN)"
+  },
+  "hallot": {
+   "tokens": [
+    "hallot"
+   ],
+   "not": "hallah+isim (düzensiz, OEWN)"
+  },
+  "halloth": {
+   "tokens": [
+    "halloth"
+   ],
+   "not": "hallah+isim (düzensiz, OEWN)"
+  },
+  "halluces": {
+   "tokens": [
+    "halluces"
+   ],
+   "not": "hallux+isim (düzensiz, OEWN)"
+  },
+  "halteres": {
+   "tokens": [
+    "halteres"
+   ],
+   "not": "halter+isim (düzensiz, OEWN)"
+  },
+  "hamstrung": {
+   "tokens": [
+    "hamstrung"
+   ],
+   "not": "hamstring+fiil (düzensiz, OEWN)"
+  },
+  "harder": {
+   "tokens": [
+    "harder"
+   ],
+   "not": "hard+zarf (düzensiz, OEWN)"
+  },
+  "hardest": {
+   "tokens": [
+    "hardest"
+   ],
+   "not": "hard+zarf (düzensiz, OEWN)"
   },
   "has": {
    "tokens": [
     "has"
    ],
-   "not": "have+geçmiş (düzensiz)"
+   "not": "have+fiil (düzensiz, OEWN)"
+  },
+  "haustoria": {
+   "tokens": [
+    "haustoria"
+   ],
+   "not": "haustorium+isim (düzensiz, OEWN)"
   },
   "heard": {
    "tokens": [
     "heard"
    ],
-   "not": "hear+geçmiş (düzensiz)"
+   "not": "hear+fiil (düzensiz, OEWN)"
   },
   "held": {
    "tokens": [
     "held"
    ],
-   "not": "hold+geçmiş (düzensiz)"
+   "not": "hold+fiil (düzensiz, OEWN)"
+  },
+  "helices": {
+   "tokens": [
+    "helices"
+   ],
+   "not": "helix+isim (düzensiz, OEWN)"
+  },
+  "heliozoa": {
+   "tokens": [
+    "heliozoa"
+   ],
+   "not": "heliozoan+isim (düzensiz, OEWN)"
+  },
+  "hematolyses": {
+   "tokens": [
+    "hematolyses"
+   ],
+   "not": "hematolysis+isim (düzensiz, OEWN)"
+  },
+  "hematomata": {
+   "tokens": [
+    "hematomata"
+   ],
+   "not": "hematoma+isim (düzensiz, OEWN)"
+  },
+  "hemodialyses": {
+   "tokens": [
+    "hemodialyses"
+   ],
+   "not": "hemodialysis+isim (düzensiz, OEWN)"
+  },
+  "hemolyses": {
+   "tokens": [
+    "hemolyses"
+   ],
+   "not": "hemolysis+isim (düzensiz, OEWN)"
+  },
+  "hemoptyses": {
+   "tokens": [
+    "hemoptyses"
+   ],
+   "not": "hemoptysis+isim (düzensiz, OEWN)"
+  },
+  "herbaria": {
+   "tokens": [
+    "herbaria"
+   ],
+   "not": "herbarium+isim (düzensiz, OEWN)"
+  },
+  "hermae": {
+   "tokens": [
+    "hermae"
+   ],
+   "not": "herm+isim (düzensiz, OEWN)"
+  },
+  "herniae": {
+   "tokens": [
+    "herniae"
+   ],
+   "not": "hernia+isim (düzensiz, OEWN)"
+  },
+  "hewn": {
+   "tokens": [
+    "hewn"
+   ],
+   "not": "hew+fiil (düzensiz, OEWN)"
   },
   "hid": {
    "tokens": [
     "hid"
    ],
-   "not": "hide+geçmiş (düzensiz)"
+   "not": "hide+fiil (düzensiz, OEWN)"
   },
   "hidden": {
    "tokens": [
     "hidden"
    ],
-   "not": "hide+geçmiş (düzensiz)"
+   "not": "hide+fiil (düzensiz, OEWN)"
+  },
+  "hila": {
+   "tokens": [
+    "hila"
+   ],
+   "not": "hilum+isim (düzensiz, OEWN)"
+  },
+  "hili": {
+   "tokens": [
+    "hili"
+   ],
+   "not": "hilus+isim (düzensiz, OEWN)"
+  },
+  "hippocampi": {
+   "tokens": [
+    "hippocampi"
+   ],
+   "not": "hippocampus+isim (düzensiz, OEWN)"
+  },
+  "hippopotami": {
+   "tokens": [
+    "hippopotami"
+   ],
+   "not": "hippopotamus+isim (düzensiz, OEWN)"
+  },
+  "homier": {
+   "tokens": [
+    "homier"
+   ],
+   "not": "homey+sıfat (düzensiz, OEWN)"
+  },
+  "homiest": {
+   "tokens": [
+    "homiest"
+   ],
+   "not": "homey+sıfat (düzensiz, OEWN)"
+  },
+  "homunculi": {
+   "tokens": [
+    "homunculi"
+   ],
+   "not": "homunculus+isim (düzensiz, OEWN)"
+  },
+  "honied": {
+   "tokens": [
+    "honied"
+   ],
+   "not": "honey+fiil (düzensiz, OEWN)"
+  },
+  "honoraria": {
+   "tokens": [
+    "honoraria"
+   ],
+   "not": "honorarium+isim (düzensiz, OEWN)"
+  },
+  "hove": {
+   "tokens": [
+    "hove"
+   ],
+   "not": "heave+fiil (düzensiz, OEWN)"
+  },
+  "humeri": {
+   "tokens": [
+    "humeri"
+   ],
+   "not": "humerus+isim (düzensiz, OEWN)"
+  },
+  "hung": {
+   "tokens": [
+    "hung"
+   ],
+   "not": "hang+fiil (düzensiz, OEWN)"
+  },
+  "hydrae": {
+   "tokens": [
+    "hydrae"
+   ],
+   "not": "hydra+isim (düzensiz, OEWN)"
+  },
+  "hydrozoa": {
+   "tokens": [
+    "hydrozoa"
+   ],
+   "not": "hydrozoan+isim (düzensiz, OEWN)"
+  },
+  "hymenia": {
+   "tokens": [
+    "hymenia"
+   ],
+   "not": "hymenium+isim (düzensiz, OEWN)"
+  },
+  "hymenoptera": {
+   "tokens": [
+    "hymenoptera"
+   ],
+   "not": "hymenopteran+isim (düzensiz, OEWN)"
+  },
+  "hypanthia": {
+   "tokens": [
+    "hypanthia"
+   ],
+   "not": "hypanthium+isim (düzensiz, OEWN)"
+  },
+  "hyphae": {
+   "tokens": [
+    "hyphae"
+   ],
+   "not": "hypha+isim (düzensiz, OEWN)"
+  },
+  "hypnoses": {
+   "tokens": [
+    "hypnoses"
+   ],
+   "not": "hypnosis+isim (düzensiz, OEWN)"
+  },
+  "hypochondria": {
+   "tokens": [
+    "hypochondria"
+   ],
+   "not": "hypochondrium+isim (düzensiz, OEWN)"
+  },
+  "hypophyses": {
+   "tokens": [
+    "hypophyses"
+   ],
+   "not": "hypophysis+isim (düzensiz, OEWN)"
+  },
+  "hypostases": {
+   "tokens": [
+    "hypostases"
+   ],
+   "not": "hypostasis+isim (düzensiz, OEWN)"
+  },
+  "hypothalami": {
+   "tokens": [
+    "hypothalami"
+   ],
+   "not": "hypothalamus+isim (düzensiz, OEWN)"
+  },
+  "hypotheses": {
+   "tokens": [
+    "hypotheses"
+   ],
+   "not": "hypothesis+isim (düzensiz, OEWN)"
+  },
+  "hyraces": {
+   "tokens": [
+    "hyraces"
+   ],
+   "not": "hyrax+isim (düzensiz, OEWN)"
+  },
+  "iambi": {
+   "tokens": [
+    "iambi"
+   ],
+   "not": "iamb+isim (düzensiz, OEWN)"
+  },
+  "ibices": {
+   "tokens": [
+    "ibices"
+   ],
+   "not": "ibex+isim (düzensiz, OEWN)"
+  },
+  "ichthyosauri": {
+   "tokens": [
+    "ichthyosauri"
+   ],
+   "not": "ichthyosaurus+isim (düzensiz, OEWN)"
+  },
+  "ichthyosauruses": {
+   "tokens": [
+    "ichthyosauruses"
+   ],
+   "not": "ichthyosaur+isim (düzensiz, OEWN)"
+  },
+  "icosahedra": {
+   "tokens": [
+    "icosahedra"
+   ],
+   "not": "icosahedron+isim (düzensiz, OEWN)"
+  },
+  "ilia": {
+   "tokens": [
+    "ilia"
+   ],
+   "not": "ilium+isim (düzensiz, OEWN)"
+  },
+  "imagines": {
+   "tokens": [
+    "imagines"
+   ],
+   "not": "imago+isim (düzensiz, OEWN)"
+  },
+  "imperia": {
+   "tokens": [
+    "imperia"
+   ],
+   "not": "imperium+isim (düzensiz, OEWN)"
+  },
+  "incubi": {
+   "tokens": [
+    "incubi"
+   ],
+   "not": "incubus+isim (düzensiz, OEWN)"
+  },
+  "incudes": {
+   "tokens": [
+    "incudes"
+   ],
+   "not": "incus+isim (düzensiz, OEWN)"
+  },
+  "indices": {
+   "tokens": [
+    "indices"
+   ],
+   "not": "index+isim (düzensiz, OEWN)"
+  },
+  "indumenta": {
+   "tokens": [
+    "indumenta"
+   ],
+   "not": "indumentum+isim (düzensiz, OEWN)"
+  },
+  "indusia": {
+   "tokens": [
+    "indusia"
+   ],
+   "not": "indusium+isim (düzensiz, OEWN)"
+  },
+  "indwelt": {
+   "tokens": [
+    "indwelt"
+   ],
+   "not": "indwell+fiil (düzensiz, OEWN)"
+  },
+  "infundibula": {
+   "tokens": [
+    "infundibula"
+   ],
+   "not": "infundibulum+isim (düzensiz, OEWN)"
+  },
+  "inlaid": {
+   "tokens": [
+    "inlaid"
+   ],
+   "not": "inlay+fiil (düzensiz, OEWN)"
+  },
+  "inocula": {
+   "tokens": [
+    "inocula"
+   ],
+   "not": "inoculum+isim (düzensiz, OEWN)"
+  },
+  "intagli": {
+   "tokens": [
+    "intagli"
+   ],
+   "not": "intaglio+isim (düzensiz, OEWN)"
+  },
+  "interbred": {
+   "tokens": [
+    "interbred"
+   ],
+   "not": "interbreed+fiil (düzensiz, OEWN)"
+  },
+  "intermezzi": {
+   "tokens": [
+    "intermezzi"
+   ],
+   "not": "intermezzo+isim (düzensiz, OEWN)"
+  },
+  "interregna": {
+   "tokens": [
+    "interregna"
+   ],
+   "not": "interregnum+isim (düzensiz, OEWN)"
+  },
+  "interwove": {
+   "tokens": [
+    "interwove"
+   ],
+   "not": "interweave+fiil (düzensiz, OEWN)"
+  },
+  "interwoven": {
+   "tokens": [
+    "interwoven"
+   ],
+   "not": "interweave+fiil (düzensiz, OEWN)"
+  },
+  "intimae": {
+   "tokens": [
+    "intimae"
+   ],
+   "not": "intima+isim (düzensiz, OEWN)"
+  },
+  "involucra": {
+   "tokens": [
+    "involucra"
+   ],
+   "not": "involucre+isim (düzensiz, OEWN)"
+  },
+  "inwove": {
+   "tokens": [
+    "inwove"
+   ],
+   "not": "inweave+fiil (düzensiz, OEWN)"
+  },
+  "inwoven": {
+   "tokens": [
+    "inwoven"
+   ],
+   "not": "inweave+fiil (düzensiz, OEWN)"
+  },
+  "irides": {
+   "tokens": [
+    "irides"
+   ],
+   "not": "iris+isim (düzensiz, OEWN)"
   },
   "is": {
    "tokens": [
     "is"
    ],
-   "not": "be+geçmiş (düzensiz)"
+   "not": "be+fiil (düzensiz, OEWN)"
+  },
+  "ischia": {
+   "tokens": [
+    "ischia"
+   ],
+   "not": "ischium+isim (düzensiz, OEWN)"
+  },
+  "isthmi": {
+   "tokens": [
+    "isthmi"
+   ],
+   "not": "isthmus+isim (düzensiz, OEWN)"
+  },
+  "jambeaux": {
+   "tokens": [
+    "jambeaux"
+   ],
+   "not": "jambeau+isim (düzensiz, OEWN)"
+  },
+  "jinn": {
+   "tokens": [
+    "jinn"
+   ],
+   "not": "jinni+isim (düzensiz, OEWN)"
+  },
+  "keeshonden": {
+   "tokens": [
+    "keeshonden"
+   ],
+   "not": "keeshond+isim (düzensiz, OEWN)"
   },
   "kept": {
    "tokens": [
     "kept"
    ],
-   "not": "keep+geçmiş (düzensiz)"
+   "not": "keep+fiil (düzensiz, OEWN)"
+  },
+  "kibbutzim": {
+   "tokens": [
+    "kibbutzim"
+   ],
+   "not": "kibbutz+isim (düzensiz, OEWN)"
+  },
+  "knelt": {
+   "tokens": [
+    "knelt"
+   ],
+   "not": "kneel+fiil (düzensiz, OEWN)"
   },
   "knew": {
    "tokens": [
     "knew"
    ],
-   "not": "know+geçmiş (düzensiz)"
+   "not": "know+fiil (düzensiz, OEWN)"
   },
   "known": {
    "tokens": [
     "known"
    ],
-   "not": "know+geçmiş (düzensiz)"
+   "not": "know+fiil (düzensiz, OEWN)"
+  },
+  "kohlrabies": {
+   "tokens": [
+    "kohlrabies"
+   ],
+   "not": "kohlrabi+isim (düzensiz, OEWN)"
+  },
+  "kronen": {
+   "tokens": [
+    "kronen"
+   ],
+   "not": "krone+isim (düzensiz, OEWN)"
+  },
+  "kroner": {
+   "tokens": [
+    "kroner"
+   ],
+   "not": "krone+isim (düzensiz, OEWN)"
+  },
+  "kronur": {
+   "tokens": [
+    "kronur"
+   ],
+   "not": "krona+isim (düzensiz, OEWN)"
+  },
+  "krooni": {
+   "tokens": [
+    "krooni"
+   ],
+   "not": "kroon+isim (düzensiz, OEWN)"
+  },
+  "kylikes": {
+   "tokens": [
+    "kylikes"
+   ],
+   "not": "kylix+isim (düzensiz, OEWN)"
+  },
+  "labia": {
+   "tokens": [
+    "labia"
+   ],
+   "not": "labium+isim (düzensiz, OEWN)"
+  },
+  "lactobacilli": {
+   "tokens": [
+    "lactobacilli"
+   ],
+   "not": "lactobacillus+isim (düzensiz, OEWN)"
+  },
+  "lacunae": {
+   "tokens": [
+    "lacunae"
+   ],
+   "not": "lacuna+isim (düzensiz, OEWN)"
+  },
+  "lacunaria": {
+   "tokens": [
+    "lacunaria"
+   ],
+   "not": "lacunar+isim (düzensiz, OEWN)"
+  },
+  "laden": {
+   "tokens": [
+    "laden"
+   ],
+   "not": "lade+fiil (düzensiz, OEWN)"
   },
   "laid": {
    "tokens": [
     "laid"
    ],
-   "not": "lay+geçmiş (düzensiz)"
+   "not": "lay+fiil (düzensiz, OEWN)"
   },
   "lain": {
    "tokens": [
     "lain"
    ],
-   "not": "lie+geçmiş (düzensiz)"
+   "not": "lie+fiil (düzensiz, OEWN)"
+  },
+  "lamellae": {
+   "tokens": [
+    "lamellae"
+   ],
+   "not": "lamella+isim (düzensiz, OEWN)"
+  },
+  "lamiae": {
+   "tokens": [
+    "lamiae"
+   ],
+   "not": "lamia+isim (düzensiz, OEWN)"
+  },
+  "laminae": {
+   "tokens": [
+    "laminae"
+   ],
+   "not": "lamina+isim (düzensiz, OEWN)"
+  },
+  "larvae": {
+   "tokens": [
+    "larvae"
+   ],
+   "not": "larva+isim (düzensiz, OEWN)"
+  },
+  "larynges": {
+   "tokens": [
+    "larynges"
+   ],
+   "not": "larynx+isim (düzensiz, OEWN)"
+  },
+  "lati": {
+   "tokens": [
+    "lati"
+   ],
+   "not": "lat+isim (düzensiz, OEWN)"
+  },
+  "latices": {
+   "tokens": [
+    "latices"
+   ],
+   "not": "latex+isim (düzensiz, OEWN)"
+  },
+  "latu": {
+   "tokens": [
+    "latu"
+   ],
+   "not": "lat+isim (düzensiz, OEWN)"
   },
   "lay": {
    "tokens": [
     "lay"
    ],
-   "not": "lie+geçmiş (düzensiz)"
+   "not": "lie+fiil (düzensiz, OEWN)"
   },
-  "least": {
+  "leant": {
    "tokens": [
-    "least"
+    "leant"
    ],
-   "not": "little+karşılaştırma (düzensiz)"
+   "not": "lean+fiil (düzensiz, OEWN)"
+  },
+  "leapt": {
+   "tokens": [
+    "leapt"
+   ],
+   "not": "leap+fiil (düzensiz, OEWN)"
+  },
+  "learnt": {
+   "tokens": [
+    "learnt"
+   ],
+   "not": "learn+fiil (düzensiz, OEWN)"
   },
   "led": {
    "tokens": [
     "led"
    ],
-   "not": "lead+geçmiş (düzensiz)"
+   "not": "lead+fiil (düzensiz, OEWN)"
   },
   "left": {
    "tokens": [
     "left"
    ],
-   "not": "leave+geçmiş (düzensiz)"
+   "not": "leave+fiil (düzensiz, OEWN)"
   },
-  "less": {
+  "lei": {
    "tokens": [
-    "less"
+    "lei"
    ],
-   "not": "little+karşılaştırma (düzensiz)"
+   "not": "leu+isim (düzensiz, OEWN)"
+  },
+  "lemmata": {
+   "tokens": [
+    "lemmata"
+   ],
+   "not": "lemma+isim (düzensiz, OEWN)"
+  },
+  "lemnisci": {
+   "tokens": [
+    "lemnisci"
+   ],
+   "not": "lemniscus+isim (düzensiz, OEWN)"
+  },
+  "lent": {
+   "tokens": [
+    "lent"
+   ],
+   "not": "lend+fiil (düzensiz, OEWN)"
+  },
+  "lentigines": {
+   "tokens": [
+    "lentigines"
+   ],
+   "not": "lentigo+isim (düzensiz, OEWN)"
+  },
+  "lepidoptera": {
+   "tokens": [
+    "lepidoptera"
+   ],
+   "not": "lepidopteran+isim (düzensiz, OEWN)"
+  },
+  "lepta": {
+   "tokens": [
+    "lepta"
+   ],
+   "not": "lepton+isim (düzensiz, OEWN)"
+  },
+  "leptocephali": {
+   "tokens": [
+    "leptocephali"
+   ],
+   "not": "leptocephalus+isim (düzensiz, OEWN)"
+  },
+  "leucocytozoa": {
+   "tokens": [
+    "leucocytozoa"
+   ],
+   "not": "leucocytozoan+isim (düzensiz, OEWN)"
+  },
+  "leva": {
+   "tokens": [
+    "leva"
+   ],
+   "not": "lev+isim (düzensiz, OEWN)"
+  },
+  "libretti": {
+   "tokens": [
+    "libretti"
+   ],
+   "not": "libretto+isim (düzensiz, OEWN)"
+  },
+  "lice": {
+   "tokens": [
+    "lice"
+   ],
+   "not": "louse+isim (düzensiz, OEWN)"
+  },
+  "lieder": {
+   "tokens": [
+    "lieder"
+   ],
+   "not": "lied+isim (düzensiz, OEWN)"
+  },
+  "limbi": {
+   "tokens": [
+    "limbi"
+   ],
+   "not": "limbus+isim (düzensiz, OEWN)"
+  },
+  "limina": {
+   "tokens": [
+    "limina"
+   ],
+   "not": "limen+isim (düzensiz, OEWN)"
+  },
+  "linguae": {
+   "tokens": [
+    "linguae"
+   ],
+   "not": "lingua+isim (düzensiz, OEWN)"
+  },
+  "lipomata": {
+   "tokens": [
+    "lipomata"
+   ],
+   "not": "lipoma+isim (düzensiz, OEWN)"
+  },
+  "lire": {
+   "tokens": [
+    "lire"
+   ],
+   "not": "lira+isim (düzensiz, OEWN)"
+  },
+  "lisente": {
+   "tokens": [
+    "lisente"
+   ],
+   "not": "sente+isim (düzensiz, OEWN)"
+  },
+  "listente": {
+   "tokens": [
+    "listente"
+   ],
+   "not": "sente+isim (düzensiz, OEWN)"
   },
   "lit": {
    "tokens": [
     "lit"
    ],
-   "not": "light+geçmiş (düzensiz)"
+   "not": "light+fiil (düzensiz, OEWN)"
+  },
+  "litai": {
+   "tokens": [
+    "litai"
+   ],
+   "not": "lit+isim (düzensiz, OEWN)"
+  },
+  "litu": {
+   "tokens": [
+    "litu"
+   ],
+   "not": "litas+isim (düzensiz, OEWN)"
+  },
+  "loci": {
+   "tokens": [
+    "loci"
+   ],
+   "not": "locus+isim (düzensiz, OEWN)"
+  },
+  "loculi": {
+   "tokens": [
+    "loculi"
+   ],
+   "not": "loculus+isim (düzensiz, OEWN)"
+  },
+  "loggie": {
+   "tokens": [
+    "loggie"
+   ],
+   "not": "loggia+isim (düzensiz, OEWN)"
+  },
+  "logia": {
+   "tokens": [
+    "logia"
+   ],
+   "not": "logion+isim (düzensiz, OEWN)"
+  },
+  "loricae": {
+   "tokens": [
+    "loricae"
+   ],
+   "not": "lorica+isim (düzensiz, OEWN)"
   },
   "lost": {
    "tokens": [
     "lost"
    ],
-   "not": "lose+geçmiş (düzensiz)"
+   "not": "lose+fiil (düzensiz, OEWN)"
+  },
+  "lumbi": {
+   "tokens": [
+    "lumbi"
+   ],
+   "not": "lumbus+isim (düzensiz, OEWN)"
+  },
+  "lumina": {
+   "tokens": [
+    "lumina"
+   ],
+   "not": "lumen+isim (düzensiz, OEWN)"
+  },
+  "lunulae": {
+   "tokens": [
+    "lunulae"
+   ],
+   "not": "lunula+isim (düzensiz, OEWN)"
+  },
+  "lustra": {
+   "tokens": [
+    "lustra"
+   ],
+   "not": "lustre+isim (düzensiz, OEWN)"
+  },
+  "lymphangitides": {
+   "tokens": [
+    "lymphangitides"
+   ],
+   "not": "lymphangitis+isim (düzensiz, OEWN)"
+  },
+  "lymphomata": {
+   "tokens": [
+    "lymphomata"
+   ],
+   "not": "lymphoma+isim (düzensiz, OEWN)"
+  },
+  "lymphopoieses": {
+   "tokens": [
+    "lymphopoieses"
+   ],
+   "not": "lymphopoiesis+isim (düzensiz, OEWN)"
+  },
+  "lyses": {
+   "tokens": [
+    "lyses"
+   ],
+   "not": "lysis+isim (düzensiz, OEWN)"
+  },
+  "maare": {
+   "tokens": [
+    "maare"
+   ],
+   "not": "maar+isim (düzensiz, OEWN)"
+  },
+  "macaronies": {
+   "tokens": [
+    "macaronies"
+   ],
+   "not": "macaroni+isim (düzensiz, OEWN)"
+  },
+  "macrosporangia": {
+   "tokens": [
+    "macrosporangia"
+   ],
+   "not": "macrosporangium+isim (düzensiz, OEWN)"
+  },
+  "maculae": {
+   "tokens": [
+    "maculae"
+   ],
+   "not": "macula+isim (düzensiz, OEWN)"
   },
   "made": {
    "tokens": [
     "made"
    ],
-   "not": "make+geçmiş (düzensiz)"
+   "not": "make+fiil (düzensiz, OEWN)"
+  },
+  "madornos": {
+   "tokens": [
+    "madornos"
+   ],
+   "not": "madrono+isim (düzensiz, OEWN)"
+  },
+  "maestri": {
+   "tokens": [
+    "maestri"
+   ],
+   "not": "maestro+isim (düzensiz, OEWN)"
+  },
+  "mafiosi": {
+   "tokens": [
+    "mafiosi"
+   ],
+   "not": "mafioso+isim (düzensiz, OEWN)"
+  },
+  "magi": {
+   "tokens": [
+    "magi"
+   ],
+   "not": "magus+isim (düzensiz, OEWN)"
+  },
+  "magmata": {
+   "tokens": [
+    "magmata"
+   ],
+   "not": "magma+isim (düzensiz, OEWN)"
+  },
+  "makuta": {
+   "tokens": [
+    "makuta"
+   ],
+   "not": "likuta+isim (düzensiz, OEWN)"
+  },
+  "mallei": {
+   "tokens": [
+    "mallei"
+   ],
+   "not": "malleus+isim (düzensiz, OEWN)"
+  },
+  "maloti": {
+   "tokens": [
+    "maloti"
+   ],
+   "not": "loti+isim (düzensiz, OEWN)"
+  },
+  "mamillae": {
+   "tokens": [
+    "mamillae"
+   ],
+   "not": "mamilla+isim (düzensiz, OEWN)"
+  },
+  "mammae": {
+   "tokens": [
+    "mammae"
+   ],
+   "not": "mamma+isim (düzensiz, OEWN)"
+  },
+  "mammillae": {
+   "tokens": [
+    "mammillae"
+   ],
+   "not": "mammilla+isim (düzensiz, OEWN)"
+  },
+  "mantes": {
+   "tokens": [
+    "mantes"
+   ],
+   "not": "mantis+isim (düzensiz, OEWN)"
+  },
+  "manubria": {
+   "tokens": [
+    "manubria"
+   ],
+   "not": "manubrium+isim (düzensiz, OEWN)"
+  },
+  "markkaa": {
+   "tokens": [
+    "markkaa"
+   ],
+   "not": "markka+isim (düzensiz, OEWN)"
+  },
+  "marsupia": {
+   "tokens": [
+    "marsupia"
+   ],
+   "not": "marsupium+isim (düzensiz, OEWN)"
+  },
+  "matrices": {
+   "tokens": [
+    "matrices"
+   ],
+   "not": "matrix+isim (düzensiz, OEWN)"
+  },
+  "matzoth": {
+   "tokens": [
+    "matzoth"
+   ],
+   "not": "matzo+isim (düzensiz, OEWN)"
+  },
+  "mausolea": {
+   "tokens": [
+    "mausolea"
+   ],
+   "not": "mausoleum+isim (düzensiz, OEWN)"
+  },
+  "maxillae": {
+   "tokens": [
+    "maxillae"
+   ],
+   "not": "maxilla+isim (düzensiz, OEWN)"
+  },
+  "maxima": {
+   "tokens": [
+    "maxima"
+   ],
+   "not": "maximum+isim (düzensiz, OEWN)"
   },
   "meant": {
    "tokens": [
     "meant"
    ],
-   "not": "mean+geçmiş (düzensiz)"
+   "not": "mean+fiil (düzensiz, OEWN)"
+  },
+  "media": {
+   "tokens": [
+    "media"
+   ],
+   "not": "medium+isim (düzensiz, OEWN)"
+  },
+  "mediastina": {
+   "tokens": [
+    "mediastina"
+   ],
+   "not": "mediastinum+isim (düzensiz, OEWN)"
+  },
+  "medullae": {
+   "tokens": [
+    "medullae"
+   ],
+   "not": "medulla+isim (düzensiz, OEWN)"
+  },
+  "medusae": {
+   "tokens": [
+    "medusae"
+   ],
+   "not": "medusa+isim (düzensiz, OEWN)"
+  },
+  "megasporangia": {
+   "tokens": [
+    "megasporangia"
+   ],
+   "not": "megasporangium+isim (düzensiz, OEWN)"
+  },
+  "megilloth": {
+   "tokens": [
+    "megilloth"
+   ],
+   "not": "megillah+isim (düzensiz, OEWN)"
+  },
+  "meioses": {
+   "tokens": [
+    "meioses"
+   ],
+   "not": "meiosis+isim (düzensiz, OEWN)"
+  },
+  "melanomata": {
+   "tokens": [
+    "melanomata"
+   ],
+   "not": "melanoma+isim (düzensiz, OEWN)"
+  },
+  "memoranda": {
+   "tokens": [
+    "memoranda"
+   ],
+   "not": "memorandum+isim (düzensiz, OEWN)"
   },
   "men": {
    "tokens": [
     "men"
    ],
-   "not": "man+çoğul (düzensiz)"
+   "not": "man+isim (düzensiz, OEWN)"
+  },
+  "menisci": {
+   "tokens": [
+    "menisci"
+   ],
+   "not": "meniscus+isim (düzensiz, OEWN)"
+  },
+  "menservants": {
+   "tokens": [
+    "menservants"
+   ],
+   "not": "manservant+isim (düzensiz, OEWN)"
+  },
+  "menstrua": {
+   "tokens": [
+    "menstrua"
+   ],
+   "not": "menstruum+isim (düzensiz, OEWN)"
+  },
+  "mesdames": {
+   "tokens": [
+    "mesdames"
+   ],
+   "not": "madame+isim (düzensiz, OEWN)"
+  },
+  "mesdemoiselles": {
+   "tokens": [
+    "mesdemoiselles"
+   ],
+   "not": "mademoiselle+isim (düzensiz, OEWN)"
   },
   "met": {
    "tokens": [
     "met"
    ],
-   "not": "meet+geçmiş (düzensiz)"
+   "not": "meet+fiil (düzensiz, OEWN)"
+  },
+  "metacarpi": {
+   "tokens": [
+    "metacarpi"
+   ],
+   "not": "metacarpus+isim (düzensiz, OEWN)"
+  },
+  "metamorphoses": {
+   "tokens": [
+    "metamorphoses"
+   ],
+   "not": "metamorphosis+isim (düzensiz, OEWN)"
+  },
+  "metastases": {
+   "tokens": [
+    "metastases"
+   ],
+   "not": "metastasis+isim (düzensiz, OEWN)"
+  },
+  "metatarsi": {
+   "tokens": [
+    "metatarsi"
+   ],
+   "not": "metatarsus+isim (düzensiz, OEWN)"
+  },
+  "metatheses": {
+   "tokens": [
+    "metatheses"
+   ],
+   "not": "metathesis+isim (düzensiz, OEWN)"
+  },
+  "metazoa": {
+   "tokens": [
+    "metazoa"
+   ],
+   "not": "metazoan+isim (düzensiz, OEWN)"
+  },
+  "metempsychoses": {
+   "tokens": [
+    "metempsychoses"
+   ],
+   "not": "metempsychosis+isim (düzensiz, OEWN)"
+  },
+  "metencephala": {
+   "tokens": [
+    "metencephala"
+   ],
+   "not": "metencephalon+isim (düzensiz, OEWN)"
+  },
+  "mezuzoth": {
+   "tokens": [
+    "mezuzoth"
+   ],
+   "not": "mezuzah+isim (düzensiz, OEWN)"
+  },
+  "miasmata": {
+   "tokens": [
+    "miasmata"
+   ],
+   "not": "miasma+isim (düzensiz, OEWN)"
   },
   "mice": {
    "tokens": [
     "mice"
    ],
-   "not": "mouse+çoğul (düzensiz)"
+   "not": "mouse+isim (düzensiz, OEWN)"
   },
-  "more": {
+  "microsporangia": {
    "tokens": [
-    "more"
+    "microsporangia"
    ],
-   "not": "many+karşılaştırma (düzensiz)"
+   "not": "microsporangium+isim (düzensiz, OEWN)"
   },
-  "most": {
+  "milia": {
    "tokens": [
-    "most"
+    "milia"
    ],
-   "not": "many+karşılaştırma (düzensiz)"
+   "not": "milium+isim (düzensiz, OEWN)"
+  },
+  "milieux": {
+   "tokens": [
+    "milieux"
+   ],
+   "not": "milieu+isim (düzensiz, OEWN)"
+  },
+  "millennia": {
+   "tokens": [
+    "millennia"
+   ],
+   "not": "millennium+isim (düzensiz, OEWN)"
+  },
+  "mimicked": {
+   "tokens": [
+    "mimicked"
+   ],
+   "not": "mimic+fiil (düzensiz, OEWN)"
+  },
+  "mimicking": {
+   "tokens": [
+    "mimicking"
+   ],
+   "not": "mimic+fiil (düzensiz, OEWN)"
+  },
+  "minae": {
+   "tokens": [
+    "minae"
+   ],
+   "not": "mina+isim (düzensiz, OEWN)"
+  },
+  "minima": {
+   "tokens": [
+    "minima"
+   ],
+   "not": "minimum+isim (düzensiz, OEWN)"
+  },
+  "minutiae": {
+   "tokens": [
+    "minutiae"
+   ],
+   "not": "minutia+isim (düzensiz, OEWN)"
+  },
+  "minyanim": {
+   "tokens": [
+    "minyanim"
+   ],
+   "not": "minyan+isim (düzensiz, OEWN)"
+  },
+  "mioses": {
+   "tokens": [
+    "mioses"
+   ],
+   "not": "miosis+isim (düzensiz, OEWN)"
+  },
+  "misdealt": {
+   "tokens": [
+    "misdealt"
+   ],
+   "not": "misdeal+fiil (düzensiz, OEWN)"
+  },
+  "misgave": {
+   "tokens": [
+    "misgave"
+   ],
+   "not": "misgive+fiil (düzensiz, OEWN)"
+  },
+  "misgiven": {
+   "tokens": [
+    "misgiven"
+   ],
+   "not": "misgive+fiil (düzensiz, OEWN)"
+  },
+  "mislaid": {
+   "tokens": [
+    "mislaid"
+   ],
+   "not": "mislay+fiil (düzensiz, OEWN)"
+  },
+  "misled": {
+   "tokens": [
+    "misled"
+   ],
+   "not": "mislead+fiil (düzensiz, OEWN)"
+  },
+  "misspelt": {
+   "tokens": [
+    "misspelt"
+   ],
+   "not": "misspell+fiil (düzensiz, OEWN)"
+  },
+  "misspent": {
+   "tokens": [
+    "misspent"
+   ],
+   "not": "misspend+fiil (düzensiz, OEWN)"
+  },
+  "mistaken": {
+   "tokens": [
+    "mistaken"
+   ],
+   "not": "mistake+fiil (düzensiz, OEWN)"
+  },
+  "mistook": {
+   "tokens": [
+    "mistook"
+   ],
+   "not": "mistake+fiil (düzensiz, OEWN)"
+  },
+  "misunderstood": {
+   "tokens": [
+    "misunderstood"
+   ],
+   "not": "misunderstand+fiil (düzensiz, OEWN)"
+  },
+  "mitochondria": {
+   "tokens": [
+    "mitochondria"
+   ],
+   "not": "mitochondrion+isim (düzensiz, OEWN)"
+  },
+  "mitzvoth": {
+   "tokens": [
+    "mitzvoth"
+   ],
+   "not": "mitzvah+isim (düzensiz, OEWN)"
+  },
+  "modioli": {
+   "tokens": [
+    "modioli"
+   ],
+   "not": "modiolus+isim (düzensiz, OEWN)"
+  },
+  "moduli": {
+   "tokens": [
+    "moduli"
+   ],
+   "not": "modulus+isim (düzensiz, OEWN)"
+  },
+  "molten": {
+   "tokens": [
+    "molten"
+   ],
+   "not": "melt+fiil (düzensiz, OEWN)"
+  },
+  "momenta": {
+   "tokens": [
+    "momenta"
+   ],
+   "not": "momentum+isim (düzensiz, OEWN)"
+  },
+  "monades": {
+   "tokens": [
+    "monades"
+   ],
+   "not": "monad+isim (düzensiz, OEWN)"
+  },
+  "moratoria": {
+   "tokens": [
+    "moratoria"
+   ],
+   "not": "moratorium+isim (düzensiz, OEWN)"
+  },
+  "morceaux": {
+   "tokens": [
+    "morceaux"
+   ],
+   "not": "morceau+isim (düzensiz, OEWN)"
+  },
+  "morphallaxes": {
+   "tokens": [
+    "morphallaxes"
+   ],
+   "not": "morphallaxis+isim (düzensiz, OEWN)"
+  },
+  "morulae": {
+   "tokens": [
+    "morulae"
+   ],
+   "not": "morula+isim (düzensiz, OEWN)"
+  },
+  "moshavim": {
+   "tokens": [
+    "moshavim"
+   ],
+   "not": "moshav+isim (düzensiz, OEWN)"
+  },
+  "mown": {
+   "tokens": [
+    "mown"
+   ],
+   "not": "mow+fiil (düzensiz, OEWN)"
+  },
+  "mucosae": {
+   "tokens": [
+    "mucosae"
+   ],
+   "not": "mucosa+isim (düzensiz, OEWN)"
+  },
+  "muskallunge": {
+   "tokens": [
+    "muskallunge"
+   ],
+   "not": "muskellunge+isim (düzensiz, OEWN)"
+  },
+  "mycelia": {
+   "tokens": [
+    "mycelia"
+   ],
+   "not": "mycelium+isim (düzensiz, OEWN)"
+  },
+  "mycobacteria": {
+   "tokens": [
+    "mycobacteria"
+   ],
+   "not": "mycobacterium+isim (düzensiz, OEWN)"
+  },
+  "myelencephala": {
+   "tokens": [
+    "myelencephala"
+   ],
+   "not": "myelencephalon+isim (düzensiz, OEWN)"
+  },
+  "myiases": {
+   "tokens": [
+    "myiases"
+   ],
+   "not": "myiasis+isim (düzensiz, OEWN)"
+  },
+  "myocardia": {
+   "tokens": [
+    "myocardia"
+   ],
+   "not": "myocardium+isim (düzensiz, OEWN)"
+  },
+  "myofibrillae": {
+   "tokens": [
+    "myofibrillae"
+   ],
+   "not": "myofibrilla+isim (düzensiz, OEWN)"
+  },
+  "myomata": {
+   "tokens": [
+    "myomata"
+   ],
+   "not": "myoma+isim (düzensiz, OEWN)"
+  },
+  "myoses": {
+   "tokens": [
+    "myoses"
+   ],
+   "not": "myosis+isim (düzensiz, OEWN)"
+  },
+  "myrmidones": {
+   "tokens": [
+    "myrmidones"
+   ],
+   "not": "myrmidon+isim (düzensiz, OEWN)"
+  },
+  "myxomata": {
+   "tokens": [
+    "myxomata"
+   ],
+   "not": "myxoma+isim (düzensiz, OEWN)"
+  },
+  "naiades": {
+   "tokens": [
+    "naiades"
+   ],
+   "not": "naiad+isim (düzensiz, OEWN)"
+  },
+  "narcissi": {
+   "tokens": [
+    "narcissi"
+   ],
+   "not": "narcissus+isim (düzensiz, OEWN)"
+  },
+  "nares": {
+   "tokens": [
+    "nares"
+   ],
+   "not": "naris+isim (düzensiz, OEWN)"
+  },
+  "nasopharynges": {
+   "tokens": [
+    "nasopharynges"
+   ],
+   "not": "nasopharynx+isim (düzensiz, OEWN)"
+  },
+  "natatoria": {
+   "tokens": [
+    "natatoria"
+   ],
+   "not": "natatorium+isim (düzensiz, OEWN)"
+  },
+  "naumachiae": {
+   "tokens": [
+    "naumachiae"
+   ],
+   "not": "naumachia+isim (düzensiz, OEWN)"
+  },
+  "nautili": {
+   "tokens": [
+    "nautili"
+   ],
+   "not": "nautilus+isim (düzensiz, OEWN)"
+  },
+  "nebulae": {
+   "tokens": [
+    "nebulae"
+   ],
+   "not": "nebula+isim (düzensiz, OEWN)"
+  },
+  "necropoleis": {
+   "tokens": [
+    "necropoleis"
+   ],
+   "not": "necropolis+isim (düzensiz, OEWN)"
+  },
+  "nemeses": {
+   "tokens": [
+    "nemeses"
+   ],
+   "not": "nemesis+isim (düzensiz, OEWN)"
+  },
+  "neurohypophyses": {
+   "tokens": [
+    "neurohypophyses"
+   ],
+   "not": "neurohypophysis+isim (düzensiz, OEWN)"
+  },
+  "neuromata": {
+   "tokens": [
+    "neuromata"
+   ],
+   "not": "neuroma+isim (düzensiz, OEWN)"
+  },
+  "neuroptera": {
+   "tokens": [
+    "neuroptera"
+   ],
+   "not": "neuropteron+isim (düzensiz, OEWN)"
+  },
+  "neuroses": {
+   "tokens": [
+    "neuroses"
+   ],
+   "not": "neurosis+isim (düzensiz, OEWN)"
+  },
+  "nevi": {
+   "tokens": [
+    "nevi"
+   ],
+   "not": "nevus+isim (düzensiz, OEWN)"
+  },
+  "nidi": {
+   "tokens": [
+    "nidi"
+   ],
+   "not": "nidus+isim (düzensiz, OEWN)"
+  },
+  "nimbi": {
+   "tokens": [
+    "nimbi"
+   ],
+   "not": "nimbus+isim (düzensiz, OEWN)"
+  },
+  "noctilucae": {
+   "tokens": [
+    "noctilucae"
+   ],
+   "not": "noctiluca+isim (düzensiz, OEWN)"
+  },
+  "nonplusses": {
+   "tokens": [
+    "nonplusses"
+   ],
+   "not": "nonplus+fiil (düzensiz, OEWN)"
+  },
+  "noumena": {
+   "tokens": [
+    "noumena"
+   ],
+   "not": "noumenon+isim (düzensiz, OEWN)"
+  },
+  "novae": {
+   "tokens": [
+    "novae"
+   ],
+   "not": "nova+isim (düzensiz, OEWN)"
+  },
+  "novelle": {
+   "tokens": [
+    "novelle"
+   ],
+   "not": "novella+isim (düzensiz, OEWN)"
+  },
+  "novenae": {
+   "tokens": [
+    "novenae"
+   ],
+   "not": "novena+isim (düzensiz, OEWN)"
+  },
+  "nucelli": {
+   "tokens": [
+    "nucelli"
+   ],
+   "not": "nucellus+isim (düzensiz, OEWN)"
+  },
+  "nuchae": {
+   "tokens": [
+    "nuchae"
+   ],
+   "not": "nucha+isim (düzensiz, OEWN)"
+  },
+  "nuclei": {
+   "tokens": [
+    "nuclei"
+   ],
+   "not": "nucleus+isim (düzensiz, OEWN)"
+  },
+  "nucleoli": {
+   "tokens": [
+    "nucleoli"
+   ],
+   "not": "nucleolus+isim (düzensiz, OEWN)"
+  },
+  "nulliparae": {
+   "tokens": [
+    "nulliparae"
+   ],
+   "not": "nullipara+isim (düzensiz, OEWN)"
+  },
+  "numina": {
+   "tokens": [
+    "numina"
+   ],
+   "not": "numen+isim (düzensiz, OEWN)"
+  },
+  "oases": {
+   "tokens": [
+    "oases"
+   ],
+   "not": "oasis+isim (düzensiz, OEWN)"
+  },
+  "obligati": {
+   "tokens": [
+    "obligati"
+   ],
+   "not": "obligato+isim (düzensiz, OEWN)"
+  },
+  "oboli": {
+   "tokens": [
+    "oboli"
+   ],
+   "not": "obolus+isim (düzensiz, OEWN)"
+  },
+  "occipita": {
+   "tokens": [
+    "occipita"
+   ],
+   "not": "occiput+isim (düzensiz, OEWN)"
+  },
+  "ocelli": {
+   "tokens": [
+    "ocelli"
+   ],
+   "not": "ocellus+isim (düzensiz, OEWN)"
+  },
+  "octahedra": {
+   "tokens": [
+    "octahedra"
+   ],
+   "not": "octahedron+isim (düzensiz, OEWN)"
+  },
+  "octopi": {
+   "tokens": [
+    "octopi"
+   ],
+   "not": "octopus+isim (düzensiz, OEWN)"
+  },
+  "oculi": {
+   "tokens": [
+    "oculi"
+   ],
+   "not": "oculus+isim (düzensiz, OEWN)"
+  },
+  "oedemata": {
+   "tokens": [
+    "oedemata"
+   ],
+   "not": "edema+isim (düzensiz, OEWN)"
+  },
+  "oesophagi": {
+   "tokens": [
+    "oesophagi"
+   ],
+   "not": "esophagus+isim (düzensiz, OEWN)"
+  },
+  "omasa": {
+   "tokens": [
+    "omasa"
+   ],
+   "not": "omasum+isim (düzensiz, OEWN)"
+  },
+  "omenta": {
+   "tokens": [
+    "omenta"
+   ],
+   "not": "omentum+isim (düzensiz, OEWN)"
+  },
+  "ommatidia": {
+   "tokens": [
+    "ommatidia"
+   ],
+   "not": "ommatidium+isim (düzensiz, OEWN)"
+  },
+  "onagri": {
+   "tokens": [
+    "onagri"
+   ],
+   "not": "onager+isim (düzensiz, OEWN)"
+  },
+  "opercula": {
+   "tokens": [
+    "opercula"
+   ],
+   "not": "operculum+isim (düzensiz, OEWN)"
+  },
+  "optima": {
+   "tokens": [
+    "optima"
+   ],
+   "not": "optimum+isim (düzensiz, OEWN)"
+  },
+  "ora": {
+   "tokens": [
+    "ora"
+   ],
+   "not": "os+isim (düzensiz, OEWN)"
+  },
+  "organa": {
+   "tokens": [
+    "organa"
+   ],
+   "not": "organon+isim (düzensiz, OEWN)"
+  },
+  "orthoptera": {
+   "tokens": [
+    "orthoptera"
+   ],
+   "not": "orthopteron+isim (düzensiz, OEWN)"
+  },
+  "osar": {
+   "tokens": [
+    "osar"
+   ],
+   "not": "os+isim (düzensiz, OEWN)"
+  },
+  "ossa": {
+   "tokens": [
+    "ossa"
+   ],
+   "not": "os+isim (düzensiz, OEWN)"
+  },
+  "osteomata": {
+   "tokens": [
+    "osteomata"
+   ],
+   "not": "osteoma+isim (düzensiz, OEWN)"
+  },
+  "outbidden": {
+   "tokens": [
+    "outbidden"
+   ],
+   "not": "outbid+fiil (düzensiz, OEWN)"
+  },
+  "outdid": {
+   "tokens": [
+    "outdid"
+   ],
+   "not": "outdo+fiil (düzensiz, OEWN)"
+  },
+  "outdone": {
+   "tokens": [
+    "outdone"
+   ],
+   "not": "outdo+fiil (düzensiz, OEWN)"
+  },
+  "outdrawn": {
+   "tokens": [
+    "outdrawn"
+   ],
+   "not": "outdraw+fiil (düzensiz, OEWN)"
+  },
+  "outdrew": {
+   "tokens": [
+    "outdrew"
+   ],
+   "not": "outdraw+fiil (düzensiz, OEWN)"
+  },
+  "outfought": {
+   "tokens": [
+    "outfought"
+   ],
+   "not": "outfight+fiil (düzensiz, OEWN)"
+  },
+  "outgone": {
+   "tokens": [
+    "outgone"
+   ],
+   "not": "outgo+fiil (düzensiz, OEWN)"
+  },
+  "outgrew": {
+   "tokens": [
+    "outgrew"
+   ],
+   "not": "outgrow+fiil (düzensiz, OEWN)"
+  },
+  "outgrown": {
+   "tokens": [
+    "outgrown"
+   ],
+   "not": "outgrow+fiil (düzensiz, OEWN)"
+  },
+  "outran": {
+   "tokens": [
+    "outran"
+   ],
+   "not": "outrun+fiil (düzensiz, OEWN)"
+  },
+  "outridden": {
+   "tokens": [
+    "outridden"
+   ],
+   "not": "outride+fiil (düzensiz, OEWN)"
+  },
+  "outrode": {
+   "tokens": [
+    "outrode"
+   ],
+   "not": "outride+fiil (düzensiz, OEWN)"
+  },
+  "outshone": {
+   "tokens": [
+    "outshone"
+   ],
+   "not": "outshine+fiil (düzensiz, OEWN)"
+  },
+  "outsold": {
+   "tokens": [
+    "outsold"
+   ],
+   "not": "outsell+fiil (düzensiz, OEWN)"
+  },
+  "outwent": {
+   "tokens": [
+    "outwent"
+   ],
+   "not": "outgo+fiil (düzensiz, OEWN)"
+  },
+  "outwore": {
+   "tokens": [
+    "outwore"
+   ],
+   "not": "outwear+fiil (düzensiz, OEWN)"
+  },
+  "outworn": {
+   "tokens": [
+    "outworn"
+   ],
+   "not": "outwear+fiil (düzensiz, OEWN)"
+  },
+  "ova": {
+   "tokens": [
+    "ova"
+   ],
+   "not": "ovum+isim (düzensiz, OEWN)"
+  },
+  "overbidden": {
+   "tokens": [
+    "overbidden"
+   ],
+   "not": "overbid+fiil (düzensiz, OEWN)"
+  },
+  "overbore": {
+   "tokens": [
+    "overbore"
+   ],
+   "not": "overbear+fiil (düzensiz, OEWN)"
+  },
+  "overborne": {
+   "tokens": [
+    "overborne"
+   ],
+   "not": "overbear+fiil (düzensiz, OEWN)"
+  },
+  "overcame": {
+   "tokens": [
+    "overcame"
+   ],
+   "not": "overcome+fiil (düzensiz, OEWN)"
+  },
+  "overdid": {
+   "tokens": [
+    "overdid"
+   ],
+   "not": "overdo+fiil (düzensiz, OEWN)"
+  },
+  "overdone": {
+   "tokens": [
+    "overdone"
+   ],
+   "not": "overdo+fiil (düzensiz, OEWN)"
+  },
+  "overdrawn": {
+   "tokens": [
+    "overdrawn"
+   ],
+   "not": "overdraw+fiil (düzensiz, OEWN)"
+  },
+  "overdrew": {
+   "tokens": [
+    "overdrew"
+   ],
+   "not": "overdraw+fiil (düzensiz, OEWN)"
+  },
+  "overdriven": {
+   "tokens": [
+    "overdriven"
+   ],
+   "not": "overdrive+fiil (düzensiz, OEWN)"
+  },
+  "overdrove": {
+   "tokens": [
+    "overdrove"
+   ],
+   "not": "overdrive+fiil (düzensiz, OEWN)"
+  },
+  "overflew": {
+   "tokens": [
+    "overflew"
+   ],
+   "not": "overfly+fiil (düzensiz, OEWN)"
+  },
+  "overflown": {
+   "tokens": [
+    "overflown"
+   ],
+   "not": "overflow+fiil (düzensiz, OEWN)"
+  },
+  "overgrew": {
+   "tokens": [
+    "overgrew"
+   ],
+   "not": "overgrow+fiil (düzensiz, OEWN)"
+  },
+  "overgrown": {
+   "tokens": [
+    "overgrown"
+   ],
+   "not": "overgrow+fiil (düzensiz, OEWN)"
+  },
+  "overheard": {
+   "tokens": [
+    "overheard"
+   ],
+   "not": "overhear+fiil (düzensiz, OEWN)"
+  },
+  "overhung": {
+   "tokens": [
+    "overhung"
+   ],
+   "not": "overhang+fiil (düzensiz, OEWN)"
+  },
+  "overlaid": {
+   "tokens": [
+    "overlaid"
+   ],
+   "not": "overlay+fiil (düzensiz, OEWN)"
+  },
+  "overlain": {
+   "tokens": [
+    "overlain"
+   ],
+   "not": "overlie+fiil (düzensiz, OEWN)"
+  },
+  "overlay": {
+   "tokens": [
+    "overlay"
+   ],
+   "not": "overlie+fiil (düzensiz, OEWN)"
+  },
+  "overpaid": {
+   "tokens": [
+    "overpaid"
+   ],
+   "not": "overpay+fiil (düzensiz, OEWN)"
+  },
+  "overran": {
+   "tokens": [
+    "overran"
+   ],
+   "not": "overrun+fiil (düzensiz, OEWN)"
+  },
+  "overridden": {
+   "tokens": [
+    "overridden"
+   ],
+   "not": "override+fiil (düzensiz, OEWN)"
+  },
+  "overrode": {
+   "tokens": [
+    "overrode"
+   ],
+   "not": "override+fiil (düzensiz, OEWN)"
+  },
+  "oversaw": {
+   "tokens": [
+    "oversaw"
+   ],
+   "not": "oversee+fiil (düzensiz, OEWN)"
+  },
+  "overseen": {
+   "tokens": [
+    "overseen"
+   ],
+   "not": "oversee+fiil (düzensiz, OEWN)"
+  },
+  "oversewn": {
+   "tokens": [
+    "oversewn"
+   ],
+   "not": "oversew+fiil (düzensiz, OEWN)"
+  },
+  "overshot": {
+   "tokens": [
+    "overshot"
+   ],
+   "not": "overshoot+fiil (düzensiz, OEWN)"
+  },
+  "overslept": {
+   "tokens": [
+    "overslept"
+   ],
+   "not": "oversleep+fiil (düzensiz, OEWN)"
+  },
+  "overspent": {
+   "tokens": [
+    "overspent"
+   ],
+   "not": "overspend+fiil (düzensiz, OEWN)"
+  },
+  "overtaken": {
+   "tokens": [
+    "overtaken"
+   ],
+   "not": "overtake+fiil (düzensiz, OEWN)"
+  },
+  "overthrew": {
+   "tokens": [
+    "overthrew"
+   ],
+   "not": "overthrow+fiil (düzensiz, OEWN)"
+  },
+  "overthrown": {
+   "tokens": [
+    "overthrown"
+   ],
+   "not": "overthrow+fiil (düzensiz, OEWN)"
+  },
+  "overtook": {
+   "tokens": [
+    "overtook"
+   ],
+   "not": "overtake+fiil (düzensiz, OEWN)"
+  },
+  "overwritten": {
+   "tokens": [
+    "overwritten"
+   ],
+   "not": "overwrite+fiil (düzensiz, OEWN)"
+  },
+  "overwrote": {
+   "tokens": [
+    "overwrote"
+   ],
+   "not": "overwrite+fiil (düzensiz, OEWN)"
+  },
+  "ovoli": {
+   "tokens": [
+    "ovoli"
+   ],
+   "not": "ovolo+isim (düzensiz, OEWN)"
+  },
+  "ovotestes": {
+   "tokens": [
+    "ovotestes"
+   ],
+   "not": "ovotestis+isim (düzensiz, OEWN)"
+  },
+  "oxen": {
+   "tokens": [
+    "oxen"
+   ],
+   "not": "ox+isim (düzensiz, OEWN)"
+  },
+  "oxymora": {
+   "tokens": [
+    "oxymora"
+   ],
+   "not": "oxymoron+isim (düzensiz, OEWN)"
   },
   "paid": {
    "tokens": [
     "paid"
    ],
-   "not": "pay+geçmiş (düzensiz)"
+   "not": "pay+fiil (düzensiz, OEWN)"
   },
-  "people": {
+  "paise": {
    "tokens": [
-    "people"
+    "paise"
    ],
-   "not": "person+çoğul (düzensiz)"
+   "not": "paisa+isim (düzensiz, OEWN)"
+  },
+  "palestrae": {
+   "tokens": [
+    "palestrae"
+   ],
+   "not": "palestra+isim (düzensiz, OEWN)"
+  },
+  "palingeneses": {
+   "tokens": [
+    "palingeneses"
+   ],
+   "not": "palingenesis+isim (düzensiz, OEWN)"
+  },
+  "pallia": {
+   "tokens": [
+    "pallia"
+   ],
+   "not": "pallium+isim (düzensiz, OEWN)"
+  },
+  "panicked": {
+   "tokens": [
+    "panicked"
+   ],
+   "not": "panic+fiil (düzensiz, OEWN)"
+  },
+  "panicking": {
+   "tokens": [
+    "panicking"
+   ],
+   "not": "panic+fiil (düzensiz, OEWN)"
+  },
+  "paparazzi": {
+   "tokens": [
+    "paparazzi"
+   ],
+   "not": "paparazzo+isim (düzensiz, OEWN)"
+  },
+  "papillae": {
+   "tokens": [
+    "papillae"
+   ],
+   "not": "papilla+isim (düzensiz, OEWN)"
+  },
+  "papillomata": {
+   "tokens": [
+    "papillomata"
+   ],
+   "not": "papilloma+isim (düzensiz, OEWN)"
+  },
+  "pappi": {
+   "tokens": [
+    "pappi"
+   ],
+   "not": "pappus+isim (düzensiz, OEWN)"
+  },
+  "papyri": {
+   "tokens": [
+    "papyri"
+   ],
+   "not": "papyrus+isim (düzensiz, OEWN)"
+  },
+  "paraleipses": {
+   "tokens": [
+    "paraleipses"
+   ],
+   "not": "paraleipsis+isim (düzensiz, OEWN)"
+  },
+  "paralyses": {
+   "tokens": [
+    "paralyses"
+   ],
+   "not": "paralysis+isim (düzensiz, OEWN)"
+  },
+  "paramecia": {
+   "tokens": [
+    "paramecia"
+   ],
+   "not": "paramecium+isim (düzensiz, OEWN)"
+  },
+  "paraphyses": {
+   "tokens": [
+    "paraphyses"
+   ],
+   "not": "paraphysis+isim (düzensiz, OEWN)"
+  },
+  "parapodia": {
+   "tokens": [
+    "parapodia"
+   ],
+   "not": "parapodium+isim (düzensiz, OEWN)"
+  },
+  "parapraxes": {
+   "tokens": [
+    "parapraxes"
+   ],
+   "not": "parapraxis+isim (düzensiz, OEWN)"
+  },
+  "parazoa": {
+   "tokens": [
+    "parazoa"
+   ],
+   "not": "parazoan+isim (düzensiz, OEWN)"
+  },
+  "parentheses": {
+   "tokens": [
+    "parentheses"
+   ],
+   "not": "parenthesis+isim (düzensiz, OEWN)"
+  },
+  "parhelia": {
+   "tokens": [
+    "parhelia"
+   ],
+   "not": "parhelion+isim (düzensiz, OEWN)"
+  },
+  "parietes": {
+   "tokens": [
+    "parietes"
+   ],
+   "not": "paries+isim (düzensiz, OEWN)"
+  },
+  "partaken": {
+   "tokens": [
+    "partaken"
+   ],
+   "not": "partake+fiil (düzensiz, OEWN)"
+  },
+  "partook": {
+   "tokens": [
+    "partook"
+   ],
+   "not": "partake+fiil (düzensiz, OEWN)"
+  },
+  "pastorali": {
+   "tokens": [
+    "pastorali"
+   ],
+   "not": "pastorale+isim (düzensiz, OEWN)"
+  },
+  "patellae": {
+   "tokens": [
+    "patellae"
+   ],
+   "not": "patella+isim (düzensiz, OEWN)"
+  },
+  "patinae": {
+   "tokens": [
+    "patinae"
+   ],
+   "not": "patina+isim (düzensiz, OEWN)"
+  },
+  "patresfamilias": {
+   "tokens": [
+    "patresfamilias"
+   ],
+   "not": "paterfamilias+isim (düzensiz, OEWN)"
+  },
+  "pease": {
+   "tokens": [
+    "pease"
+   ],
+   "not": "pea+isim (düzensiz, OEWN)"
+  },
+  "pedes": {
+   "tokens": [
+    "pedes"
+   ],
+   "not": "pes+isim (düzensiz, OEWN)"
+  },
+  "pelves": {
+   "tokens": [
+    "pelves"
+   ],
+   "not": "pelvis+isim (düzensiz, OEWN)"
+  },
+  "pence": {
+   "tokens": [
+    "pence"
+   ],
+   "not": "penny+isim (düzensiz, OEWN)"
+  },
+  "penes": {
+   "tokens": [
+    "penes"
+   ],
+   "not": "penis+isim (düzensiz, OEWN)"
+  },
+  "penetralia": {
+   "tokens": [
+    "penetralia"
+   ],
+   "not": "penetralium+isim (düzensiz, OEWN)"
+  },
+  "pennia": {
+   "tokens": [
+    "pennia"
+   ],
+   "not": "penni+isim (düzensiz, OEWN)"
+  },
+  "pent": {
+   "tokens": [
+    "pent"
+   ],
+   "not": "pen+fiil (düzensiz, OEWN)"
+  },
+  "pentahedra": {
+   "tokens": [
+    "pentahedra"
+   ],
+   "not": "pentahedron+isim (düzensiz, OEWN)"
+  },
+  "pentimenti": {
+   "tokens": [
+    "pentimenti"
+   ],
+   "not": "pentimento+isim (düzensiz, OEWN)"
+  },
+  "penumbrae": {
+   "tokens": [
+    "penumbrae"
+   ],
+   "not": "penumbra+isim (düzensiz, OEWN)"
+  },
+  "pepla": {
+   "tokens": [
+    "pepla"
+   ],
+   "not": "peplum+isim (düzensiz, OEWN)"
+  },
+  "pericardia": {
+   "tokens": [
+    "pericardia"
+   ],
+   "not": "pericardium+isim (düzensiz, OEWN)"
+  },
+  "peridia": {
+   "tokens": [
+    "peridia"
+   ],
+   "not": "peridium+isim (düzensiz, OEWN)"
+  },
+  "perigonia": {
+   "tokens": [
+    "perigonia"
+   ],
+   "not": "perigonium+isim (düzensiz, OEWN)"
+  },
+  "perihelia": {
+   "tokens": [
+    "perihelia"
+   ],
+   "not": "perihelion+isim (düzensiz, OEWN)"
+  },
+  "perinea": {
+   "tokens": [
+    "perinea"
+   ],
+   "not": "perineum+isim (düzensiz, OEWN)"
+  },
+  "periostea": {
+   "tokens": [
+    "periostea"
+   ],
+   "not": "periosteum+isim (düzensiz, OEWN)"
+  },
+  "periphrases": {
+   "tokens": [
+    "periphrases"
+   ],
+   "not": "periphrasis+isim (düzensiz, OEWN)"
+  },
+  "peristalses": {
+   "tokens": [
+    "peristalses"
+   ],
+   "not": "peristalsis+isim (düzensiz, OEWN)"
+  },
+  "perithecia": {
+   "tokens": [
+    "perithecia"
+   ],
+   "not": "perithecium+isim (düzensiz, OEWN)"
+  },
+  "peritonea": {
+   "tokens": [
+    "peritonea"
+   ],
+   "not": "peritoneum+isim (düzensiz, OEWN)"
+  },
+  "personae": {
+   "tokens": [
+    "personae"
+   ],
+   "not": "persona+isim (düzensiz, OEWN)"
+  },
+  "petechiae": {
+   "tokens": [
+    "petechiae"
+   ],
+   "not": "petechia+isim (düzensiz, OEWN)"
+  },
+  "pfennige": {
+   "tokens": [
+    "pfennige"
+   ],
+   "not": "pfennig+isim (düzensiz, OEWN)"
+  },
+  "phalanges": {
+   "tokens": [
+    "phalanges"
+   ],
+   "not": "phalanx+isim (düzensiz, OEWN)"
+  },
+  "phalli": {
+   "tokens": [
+    "phalli"
+   ],
+   "not": "phallus+isim (düzensiz, OEWN)"
+  },
+  "pharynges": {
+   "tokens": [
+    "pharynges"
+   ],
+   "not": "pharynx+isim (düzensiz, OEWN)"
+  },
+  "phenomena": {
+   "tokens": [
+    "phenomena"
+   ],
+   "not": "phenomenon+isim (düzensiz, OEWN)"
+  },
+  "philodendra": {
+   "tokens": [
+    "philodendra"
+   ],
+   "not": "philodendron+isim (düzensiz, OEWN)"
+  },
+  "phyla": {
+   "tokens": [
+    "phyla"
+   ],
+   "not": "phylum+isim (düzensiz, OEWN)"
+  },
+  "phylae": {
+   "tokens": [
+    "phylae"
+   ],
+   "not": "phyle+isim (düzensiz, OEWN)"
+  },
+  "phylogeneses": {
+   "tokens": [
+    "phylogeneses"
+   ],
+   "not": "phylogenesis+isim (düzensiz, OEWN)"
+  },
+  "picnicked": {
+   "tokens": [
+    "picnicked"
+   ],
+   "not": "picnic+fiil (düzensiz, OEWN)"
+  },
+  "picnicking": {
+   "tokens": [
+    "picnicking"
+   ],
+   "not": "picnic+fiil (düzensiz, OEWN)"
+  },
+  "pilei": {
+   "tokens": [
+    "pilei"
+   ],
+   "not": "pileus+isim (düzensiz, OEWN)"
+  },
+  "pineta": {
+   "tokens": [
+    "pineta"
+   ],
+   "not": "pinetum+isim (düzensiz, OEWN)"
+  },
+  "pinnae": {
+   "tokens": [
+    "pinnae"
+   ],
+   "not": "pinna+isim (düzensiz, OEWN)"
+  },
+  "placentae": {
+   "tokens": [
+    "placentae"
+   ],
+   "not": "placenta+isim (düzensiz, OEWN)"
+  },
+  "planetaria": {
+   "tokens": [
+    "planetaria"
+   ],
+   "not": "planetarium+isim (düzensiz, OEWN)"
+  },
+  "planulae": {
+   "tokens": [
+    "planulae"
+   ],
+   "not": "planula+isim (düzensiz, OEWN)"
+  },
+  "plasmodia": {
+   "tokens": [
+    "plasmodia"
+   ],
+   "not": "plasmodium+isim (düzensiz, OEWN)"
+  },
+  "plateaux": {
+   "tokens": [
+    "plateaux"
+   ],
+   "not": "plateau+isim (düzensiz, OEWN)"
+  },
+  "plectra": {
+   "tokens": [
+    "plectra"
+   ],
+   "not": "plectron+isim (düzensiz, OEWN)"
+  },
+  "pled": {
+   "tokens": [
+    "pled"
+   ],
+   "not": "plead+fiil (düzensiz, OEWN)"
+  },
+  "plena": {
+   "tokens": [
+    "plena"
+   ],
+   "not": "plenum+isim (düzensiz, OEWN)"
+  },
+  "pleurae": {
+   "tokens": [
+    "pleurae"
+   ],
+   "not": "pleura+isim (düzensiz, OEWN)"
+  },
+  "plicae": {
+   "tokens": [
+    "plicae"
+   ],
+   "not": "plica+isim (düzensiz, OEWN)"
+  },
+  "ploughmen": {
+   "tokens": [
+    "ploughmen"
+   ],
+   "not": "ploughman+isim (düzensiz, OEWN)"
+  },
+  "pneumococci": {
+   "tokens": [
+    "pneumococci"
+   ],
+   "not": "pneumococcus+isim (düzensiz, OEWN)"
+  },
+  "podetia": {
+   "tokens": [
+    "podetia"
+   ],
+   "not": "podetium+isim (düzensiz, OEWN)"
+  },
+  "podia": {
+   "tokens": [
+    "podia"
+   ],
+   "not": "podium+isim (düzensiz, OEWN)"
+  },
+  "pollices": {
+   "tokens": [
+    "pollices"
+   ],
+   "not": "pollex+isim (düzensiz, OEWN)"
+  },
+  "pollinia": {
+   "tokens": [
+    "pollinia"
+   ],
+   "not": "pollinium+isim (düzensiz, OEWN)"
+  },
+  "polyhedra": {
+   "tokens": [
+    "polyhedra"
+   ],
+   "not": "polyhedron+isim (düzensiz, OEWN)"
+  },
+  "polypi": {
+   "tokens": [
+    "polypi"
+   ],
+   "not": "polypus+isim (düzensiz, OEWN)"
+  },
+  "polyzoa": {
+   "tokens": [
+    "polyzoa"
+   ],
+   "not": "polyzoan+isim (düzensiz, OEWN)"
+  },
+  "pontes": {
+   "tokens": [
+    "pontes"
+   ],
+   "not": "pons+isim (düzensiz, OEWN)"
+  },
+  "pontifices": {
+   "tokens": [
+    "pontifices"
+   ],
+   "not": "pontifex+isim (düzensiz, OEWN)"
+  },
+  "portmanteaux": {
+   "tokens": [
+    "portmanteaux"
+   ],
+   "not": "portmanteau+isim (düzensiz, OEWN)"
+  },
+  "praenomina": {
+   "tokens": [
+    "praenomina"
+   ],
+   "not": "praenomen+isim (düzensiz, OEWN)"
+  },
+  "praxes": {
+   "tokens": [
+    "praxes"
+   ],
+   "not": "praxis+isim (düzensiz, OEWN)"
+  },
+  "prepaid": {
+   "tokens": [
+    "prepaid"
+   ],
+   "not": "prepay+fiil (düzensiz, OEWN)"
+  },
+  "primi": {
+   "tokens": [
+    "primi"
+   ],
+   "not": "primo+isim (düzensiz, OEWN)"
+  },
+  "primigravidae": {
+   "tokens": [
+    "primigravidae"
+   ],
+   "not": "primigravida+isim (düzensiz, OEWN)"
+  },
+  "primiparae": {
+   "tokens": [
+    "primiparae"
+   ],
+   "not": "primipara+isim (düzensiz, OEWN)"
+  },
+  "primordia": {
+   "tokens": [
+    "primordia"
+   ],
+   "not": "primordium+isim (düzensiz, OEWN)"
+  },
+  "proboscides": {
+   "tokens": [
+    "proboscides"
+   ],
+   "not": "proboscis+isim (düzensiz, OEWN)"
+  },
+  "prognoses": {
+   "tokens": [
+    "prognoses"
+   ],
+   "not": "prognosis+isim (düzensiz, OEWN)"
+  },
+  "programmes": {
+   "tokens": [
+    "programmes"
+   ],
+   "not": "program+fiil (düzensiz, OEWN)"
+  },
+  "prolegomena": {
+   "tokens": [
+    "prolegomena"
+   ],
+   "not": "prolegomenon+isim (düzensiz, OEWN)"
+  },
+  "prolepses": {
+   "tokens": [
+    "prolepses"
+   ],
+   "not": "prolepsis+isim (düzensiz, OEWN)"
+  },
+  "promycelia": {
+   "tokens": [
+    "promycelia"
+   ],
+   "not": "promycelium+isim (düzensiz, OEWN)"
+  },
+  "pronuclei": {
+   "tokens": [
+    "pronuclei"
+   ],
+   "not": "pronucleus+isim (düzensiz, OEWN)"
+  },
+  "propositi": {
+   "tokens": [
+    "propositi"
+   ],
+   "not": "propositus+isim (düzensiz, OEWN)"
+  },
+  "proscenia": {
+   "tokens": [
+    "proscenia"
+   ],
+   "not": "proscenium+isim (düzensiz, OEWN)"
+  },
+  "prosencephala": {
+   "tokens": [
+    "prosencephala"
+   ],
+   "not": "prosencephalon+isim (düzensiz, OEWN)"
+  },
+  "prostheses": {
+   "tokens": [
+    "prostheses"
+   ],
+   "not": "prosthesis+isim (düzensiz, OEWN)"
+  },
+  "prothalamia": {
+   "tokens": [
+    "prothalamia"
+   ],
+   "not": "prothalamion+isim (düzensiz, OEWN)"
+  },
+  "prothoraces": {
+   "tokens": [
+    "prothoraces"
+   ],
+   "not": "prothorax+isim (düzensiz, OEWN)"
+  },
+  "protozoa": {
+   "tokens": [
+    "protozoa"
+   ],
+   "not": "protozoan+isim (düzensiz, OEWN)"
+  },
+  "proven": {
+   "tokens": [
+    "proven"
+   ],
+   "not": "prove+fiil (düzensiz, OEWN)"
+  },
+  "psalteria": {
+   "tokens": [
+    "psalteria"
+   ],
+   "not": "psalterium+isim (düzensiz, OEWN)"
+  },
+  "pseudopodia": {
+   "tokens": [
+    "pseudopodia"
+   ],
+   "not": "pseudopodium+isim (düzensiz, OEWN)"
+  },
+  "psychoneuroses": {
+   "tokens": [
+    "psychoneuroses"
+   ],
+   "not": "psychoneurosis+isim (düzensiz, OEWN)"
+  },
+  "psychoses": {
+   "tokens": [
+    "psychoses"
+   ],
+   "not": "psychosis+isim (düzensiz, OEWN)"
+  },
+  "pterygia": {
+   "tokens": [
+    "pterygia"
+   ],
+   "not": "pterygium+isim (düzensiz, OEWN)"
+  },
+  "ptoses": {
+   "tokens": [
+    "ptoses"
+   ],
+   "not": "ptosis+isim (düzensiz, OEWN)"
+  },
+  "pubes": {
+   "tokens": [
+    "pubes"
+   ],
+   "not": "pubis+isim (düzensiz, OEWN)"
+  },
+  "pudenda": {
+   "tokens": [
+    "pudenda"
+   ],
+   "not": "pudendum+isim (düzensiz, OEWN)"
+  },
+  "puli": {
+   "tokens": [
+    "puli"
+   ],
+   "not": "pul+isim (düzensiz, OEWN)"
+  },
+  "pupae": {
+   "tokens": [
+    "pupae"
+   ],
+   "not": "pupa+isim (düzensiz, OEWN)"
+  },
+  "putamina": {
+   "tokens": [
+    "putamina"
+   ],
+   "not": "putamen+isim (düzensiz, OEWN)"
+  },
+  "pycnidia": {
+   "tokens": [
+    "pycnidia"
+   ],
+   "not": "pycnidium+isim (düzensiz, OEWN)"
+  },
+  "pylori": {
+   "tokens": [
+    "pylori"
+   ],
+   "not": "pylorus+isim (düzensiz, OEWN)"
+  },
+  "pyxides": {
+   "tokens": [
+    "pyxides"
+   ],
+   "not": "pyxis+isim (düzensiz, OEWN)"
+  },
+  "pyxidia": {
+   "tokens": [
+    "pyxidia"
+   ],
+   "not": "pyxidium+isim (düzensiz, OEWN)"
+  },
+  "quadrennia": {
+   "tokens": [
+    "quadrennia"
+   ],
+   "not": "quadrennium+isim (düzensiz, OEWN)"
+  },
+  "quanta": {
+   "tokens": [
+    "quanta"
+   ],
+   "not": "quantum+isim (düzensiz, OEWN)"
+  },
+  "quarterstaves": {
+   "tokens": [
+    "quarterstaves"
+   ],
+   "not": "quarterstaff+isim (düzensiz, OEWN)"
+  },
+  "quinquennia": {
+   "tokens": [
+    "quinquennia"
+   ],
+   "not": "quinquennium+isim (düzensiz, OEWN)"
+  },
+  "quizzes": {
+   "tokens": [
+    "quizzes"
+   ],
+   "not": "quiz+isim (düzensiz, OEWN)"
+  },
+  "rabatos": {
+   "tokens": [
+    "rabatos"
+   ],
+   "not": "rebato+isim (düzensiz, OEWN)"
+  },
+  "radices": {
+   "tokens": [
+    "radices"
+   ],
+   "not": "radix+isim (düzensiz, OEWN)"
+  },
+  "radii": {
+   "tokens": [
+    "radii"
+   ],
+   "not": "radius+isim (düzensiz, OEWN)"
+  },
+  "rami": {
+   "tokens": [
+    "rami"
+   ],
+   "not": "ramus+isim (düzensiz, OEWN)"
   },
   "ran": {
    "tokens": [
     "ran"
    ],
-   "not": "run+geçmiş (düzensiz)"
+   "not": "run+fiil (düzensiz, OEWN)"
   },
   "rang": {
    "tokens": [
     "rang"
    ],
-   "not": "ring+geçmiş (düzensiz)"
+   "not": "ring+fiil (düzensiz, OEWN)"
+  },
+  "ranulae": {
+   "tokens": [
+    "ranulae"
+   ],
+   "not": "ranula+isim (düzensiz, OEWN)"
+  },
+  "raphae": {
+   "tokens": [
+    "raphae"
+   ],
+   "not": "raphe+isim (düzensiz, OEWN)"
+  },
+  "reales": {
+   "tokens": [
+    "reales"
+   ],
+   "not": "real+isim (düzensiz, OEWN)"
+  },
+  "rebuilt": {
+   "tokens": [
+    "rebuilt"
+   ],
+   "not": "rebuild+fiil (düzensiz, OEWN)"
+  },
+  "recta": {
+   "tokens": [
+    "recta"
+   ],
+   "not": "rectum+isim (düzensiz, OEWN)"
+  },
+  "recti": {
+   "tokens": [
+    "recti"
+   ],
+   "not": "rectus+isim (düzensiz, OEWN)"
+  },
+  "redid": {
+   "tokens": [
+    "redid"
+   ],
+   "not": "redo+fiil (düzensiz, OEWN)"
+  },
+  "redone": {
+   "tokens": [
+    "redone"
+   ],
+   "not": "redo+fiil (düzensiz, OEWN)"
+  },
+  "referenda": {
+   "tokens": [
+    "referenda"
+   ],
+   "not": "referendum+isim (düzensiz, OEWN)"
+  },
+  "reft": {
+   "tokens": [
+    "reft"
+   ],
+   "not": "reave+fiil (düzensiz, OEWN)"
+  },
+  "reheard": {
+   "tokens": [
+    "reheard"
+   ],
+   "not": "rehear+fiil (düzensiz, OEWN)"
+  },
+  "reis": {
+   "tokens": [
+    "reis"
+   ],
+   "not": "real+isim (düzensiz, OEWN)"
+  },
+  "relata": {
+   "tokens": [
+    "relata"
+   ],
+   "not": "relatum+isim (düzensiz, OEWN)"
+  },
+  "remade": {
+   "tokens": [
+    "remade"
+   ],
+   "not": "remake+fiil (düzensiz, OEWN)"
+  },
+  "rent": {
+   "tokens": [
+    "rent"
+   ],
+   "not": "rend+fiil (düzensiz, OEWN)"
+  },
+  "repaid": {
+   "tokens": [
+    "repaid"
+   ],
+   "not": "repay+fiil (düzensiz, OEWN)"
+  },
+  "reran": {
+   "tokens": [
+    "reran"
+   ],
+   "not": "rerun+fiil (düzensiz, OEWN)"
+  },
+  "reseaux": {
+   "tokens": [
+    "reseaux"
+   ],
+   "not": "reseau+isim (düzensiz, OEWN)"
+  },
+  "resewn": {
+   "tokens": [
+    "resewn"
+   ],
+   "not": "resew+fiil (düzensiz, OEWN)"
+  },
+  "residua": {
+   "tokens": [
+    "residua"
+   ],
+   "not": "residuum+isim (düzensiz, OEWN)"
+  },
+  "retaken": {
+   "tokens": [
+    "retaken"
+   ],
+   "not": "retake+fiil (düzensiz, OEWN)"
+  },
+  "rethought": {
+   "tokens": [
+    "rethought"
+   ],
+   "not": "rethink+fiil (düzensiz, OEWN)"
+  },
+  "retia": {
+   "tokens": [
+    "retia"
+   ],
+   "not": "rete+isim (düzensiz, OEWN)"
+  },
+  "reticula": {
+   "tokens": [
+    "reticula"
+   ],
+   "not": "reticulum+isim (düzensiz, OEWN)"
+  },
+  "retinae": {
+   "tokens": [
+    "retinae"
+   ],
+   "not": "retina+isim (düzensiz, OEWN)"
+  },
+  "retold": {
+   "tokens": [
+    "retold"
+   ],
+   "not": "retell+fiil (düzensiz, OEWN)"
+  },
+  "retook": {
+   "tokens": [
+    "retook"
+   ],
+   "not": "retake+fiil (düzensiz, OEWN)"
+  },
+  "rewound": {
+   "tokens": [
+    "rewound"
+   ],
+   "not": "rewind+fiil (düzensiz, OEWN)"
+  },
+  "rewritten": {
+   "tokens": [
+    "rewritten"
+   ],
+   "not": "rewrite+fiil (düzensiz, OEWN)"
+  },
+  "rewrote": {
+   "tokens": [
+    "rewrote"
+   ],
+   "not": "rewrite+fiil (düzensiz, OEWN)"
+  },
+  "rhabdomyomata": {
+   "tokens": [
+    "rhabdomyomata"
+   ],
+   "not": "rhabdomyoma+isim (düzensiz, OEWN)"
+  },
+  "rhachises": {
+   "tokens": [
+    "rhachises"
+   ],
+   "not": "rachis+isim (düzensiz, OEWN)"
+  },
+  "rhinencephala": {
+   "tokens": [
+    "rhinencephala"
+   ],
+   "not": "rhinencephalon+isim (düzensiz, OEWN)"
+  },
+  "rhombi": {
+   "tokens": [
+    "rhombi"
+   ],
+   "not": "rhombus+isim (düzensiz, OEWN)"
+  },
+  "rhonchi": {
+   "tokens": [
+    "rhonchi"
+   ],
+   "not": "rhonchus+isim (düzensiz, OEWN)"
+  },
+  "rickettsiae": {
+   "tokens": [
+    "rickettsiae"
+   ],
+   "not": "rickettsia+isim (düzensiz, OEWN)"
   },
   "ridden": {
    "tokens": [
     "ridden"
    ],
-   "not": "ride+geçmiş (düzensiz)"
+   "not": "ride+fiil (düzensiz, OEWN)"
+  },
+  "rilievi": {
+   "tokens": [
+    "rilievi"
+   ],
+   "not": "rilievo+isim (düzensiz, OEWN)"
+  },
+  "rimae": {
+   "tokens": [
+    "rimae"
+   ],
+   "not": "rima+isim (düzensiz, OEWN)"
   },
   "risen": {
    "tokens": [
     "risen"
    ],
-   "not": "rise+geçmiş (düzensiz)"
+   "not": "rise+fiil (düzensiz, OEWN)"
+  },
+  "riven": {
+   "tokens": [
+    "riven"
+   ],
+   "not": "rive+fiil (düzensiz, OEWN)"
   },
   "rode": {
    "tokens": [
     "rode"
    ],
-   "not": "ride+geçmiş (düzensiz)"
+   "not": "ride+fiil (düzensiz, OEWN)"
+  },
+  "rondeaux": {
+   "tokens": [
+    "rondeaux"
+   ],
+   "not": "rondeau+isim (düzensiz, OEWN)"
   },
   "rose": {
    "tokens": [
     "rose"
    ],
-   "not": "rise+geçmiş (düzensiz)"
+   "not": "rise+fiil (düzensiz, OEWN)"
+  },
+  "rostra": {
+   "tokens": [
+    "rostra"
+   ],
+   "not": "rostrum+isim (düzensiz, OEWN)"
+  },
+  "rouleaux": {
+   "tokens": [
+    "rouleaux"
+   ],
+   "not": "rouleau+isim (düzensiz, OEWN)"
+  },
+  "rove": {
+   "tokens": [
+    "rove"
+   ],
+   "not": "reeve+fiil (düzensiz, OEWN)"
+  },
+  "rugae": {
+   "tokens": [
+    "rugae"
+   ],
+   "not": "ruga+isim (düzensiz, OEWN)"
+  },
+  "rumina": {
+   "tokens": [
+    "rumina"
+   ],
+   "not": "rumen+isim (düzensiz, OEWN)"
   },
   "rung": {
    "tokens": [
     "rung"
    ],
-   "not": "ring+geçmiş (düzensiz)"
+   "not": "ring+fiil (düzensiz, OEWN)"
+  },
+  "sacra": {
+   "tokens": [
+    "sacra"
+   ],
+   "not": "sacrum+isim (düzensiz, OEWN)"
+  },
+  "saguaros": {
+   "tokens": [
+    "saguaros"
+   ],
+   "not": "sahuaro+isim (düzensiz, OEWN)"
   },
   "said": {
    "tokens": [
     "said"
    ],
-   "not": "say+geçmiş (düzensiz)"
+   "not": "say+fiil (düzensiz, OEWN)"
+  },
+  "salespeople": {
+   "tokens": [
+    "salespeople"
+   ],
+   "not": "salesperson+isim (düzensiz, OEWN)"
+  },
+  "salmonellae": {
+   "tokens": [
+    "salmonellae"
+   ],
+   "not": "salmonella+isim (düzensiz, OEWN)"
+  },
+  "salpae": {
+   "tokens": [
+    "salpae"
+   ],
+   "not": "salpa+isim (düzensiz, OEWN)"
+  },
+  "salpinges": {
+   "tokens": [
+    "salpinges"
+   ],
+   "not": "salpinx+isim (düzensiz, OEWN)"
+  },
+  "sancta": {
+   "tokens": [
+    "sancta"
+   ],
+   "not": "sanctum+isim (düzensiz, OEWN)"
   },
   "sang": {
    "tokens": [
     "sang"
    ],
-   "not": "sing+geçmiş (düzensiz)"
+   "not": "sing+fiil (düzensiz, OEWN)"
+  },
+  "sanitaria": {
+   "tokens": [
+    "sanitaria"
+   ],
+   "not": "sanitarium+isim (düzensiz, OEWN)"
+  },
+  "sank": {
+   "tokens": [
+    "sank"
+   ],
+   "not": "sink+fiil (düzensiz, OEWN)"
+  },
+  "santimi": {
+   "tokens": [
+    "santimi"
+   ],
+   "not": "santims+isim (düzensiz, OEWN)"
+  },
+  "sarcophagi": {
+   "tokens": [
+    "sarcophagi"
+   ],
+   "not": "sarcophagus+isim (düzensiz, OEWN)"
+  },
+  "sartorii": {
+   "tokens": [
+    "sartorii"
+   ],
+   "not": "sartorius+isim (düzensiz, OEWN)"
   },
   "sat": {
    "tokens": [
     "sat"
    ],
-   "not": "sit+geçmiş (düzensiz)"
+   "not": "sit+fiil (düzensiz, OEWN)"
   },
   "saw": {
    "tokens": [
     "saw"
    ],
-   "not": "see+geçmiş (düzensiz)"
+   "not": "see+fiil (düzensiz, OEWN)"
+  },
+  "sawn": {
+   "tokens": [
+    "sawn"
+   ],
+   "not": "saw+fiil (düzensiz, OEWN)"
+  },
+  "scaleni": {
+   "tokens": [
+    "scaleni"
+   ],
+   "not": "scalenus+isim (düzensiz, OEWN)"
+  },
+  "scapulae": {
+   "tokens": [
+    "scapulae"
+   ],
+   "not": "scapula+isim (düzensiz, OEWN)"
+  },
+  "scarabaei": {
+   "tokens": [
+    "scarabaei"
+   ],
+   "not": "scarabaeus+isim (düzensiz, OEWN)"
+  },
+  "schemata": {
+   "tokens": [
+    "schemata"
+   ],
+   "not": "schema+isim (düzensiz, OEWN)"
+  },
+  "scherzi": {
+   "tokens": [
+    "scherzi"
+   ],
+   "not": "scherzo+isim (düzensiz, OEWN)"
+  },
+  "scholia": {
+   "tokens": [
+    "scholia"
+   ],
+   "not": "scholium+isim (düzensiz, OEWN)"
+  },
+  "scleroses": {
+   "tokens": [
+    "scleroses"
+   ],
+   "not": "sclerosis+isim (düzensiz, OEWN)"
+  },
+  "sclerotia": {
+   "tokens": [
+    "sclerotia"
+   ],
+   "not": "sclerotium+isim (düzensiz, OEWN)"
+  },
+  "scoriae": {
+   "tokens": [
+    "scoriae"
+   ],
+   "not": "scoria+isim (düzensiz, OEWN)"
+  },
+  "scotomata": {
+   "tokens": [
+    "scotomata"
+   ],
+   "not": "scotoma+isim (düzensiz, OEWN)"
+  },
+  "scriptoria": {
+   "tokens": [
+    "scriptoria"
+   ],
+   "not": "scriptorium+isim (düzensiz, OEWN)"
+  },
+  "scrota": {
+   "tokens": [
+    "scrota"
+   ],
+   "not": "scrotum+isim (düzensiz, OEWN)"
+  },
+  "scyphi": {
+   "tokens": [
+    "scyphi"
+   ],
+   "not": "scyphus+isim (düzensiz, OEWN)"
+  },
+  "scyphozoa": {
+   "tokens": [
+    "scyphozoa"
+   ],
+   "not": "scyphozoan+isim (düzensiz, OEWN)"
+  },
+  "secondi": {
+   "tokens": [
+    "secondi"
+   ],
+   "not": "secondo+isim (düzensiz, OEWN)"
   },
   "seen": {
    "tokens": [
     "seen"
    ],
-   "not": "see+geçmiş (düzensiz)"
+   "not": "see+fiil (düzensiz, OEWN)"
+  },
+  "segni": {
+   "tokens": [
+    "segni"
+   ],
+   "not": "segno+isim (düzensiz, OEWN)"
   },
   "sent": {
    "tokens": [
     "sent"
    ],
-   "not": "send+geçmiş (düzensiz)"
+   "not": "send+fiil (düzensiz, OEWN)"
+  },
+  "senti": {
+   "tokens": [
+    "senti"
+   ],
+   "not": "sent+isim (düzensiz, OEWN)"
+  },
+  "separatrices": {
+   "tokens": [
+    "separatrices"
+   ],
+   "not": "separatrix+isim (düzensiz, OEWN)"
+  },
+  "septa": {
+   "tokens": [
+    "septa"
+   ],
+   "not": "septum+isim (düzensiz, OEWN)"
+  },
+  "sequelae": {
+   "tokens": [
+    "sequelae"
+   ],
+   "not": "sequela+isim (düzensiz, OEWN)"
+  },
+  "sera": {
+   "tokens": [
+    "sera"
+   ],
+   "not": "serum+isim (düzensiz, OEWN)"
+  },
+  "seraphim": {
+   "tokens": [
+    "seraphim"
+   ],
+   "not": "seraph+isim (düzensiz, OEWN)"
+  },
+  "setae": {
+   "tokens": [
+    "setae"
+   ],
+   "not": "seta+isim (düzensiz, OEWN)"
+  },
+  "sewn": {
+   "tokens": [
+    "sewn"
+   ],
+   "not": "sew+fiil (düzensiz, OEWN)"
+  },
+  "sgraffiti": {
+   "tokens": [
+    "sgraffiti"
+   ],
+   "not": "sgraffito+isim (düzensiz, OEWN)"
   },
   "shaken": {
    "tokens": [
     "shaken"
    ],
-   "not": "shake+geçmiş (düzensiz)"
+   "not": "shake+fiil (düzensiz, OEWN)"
+  },
+  "shat": {
+   "tokens": [
+    "shat"
+   ],
+   "not": "shit+fiil (düzensiz, OEWN)"
+  },
+  "shaven": {
+   "tokens": [
+    "shaven"
+   ],
+   "not": "shave+fiil (düzensiz, OEWN)"
+  },
+  "shellacked": {
+   "tokens": [
+    "shellacked"
+   ],
+   "not": "shellac+fiil (düzensiz, OEWN)"
+  },
+  "shellacking": {
+   "tokens": [
+    "shellacking"
+   ],
+   "not": "shellac+fiil (düzensiz, OEWN)"
+  },
+  "shewn": {
+   "tokens": [
+    "shewn"
+   ],
+   "not": "shew+fiil (düzensiz, OEWN)"
+  },
+  "shittim": {
+   "tokens": [
+    "shittim"
+   ],
+   "not": "shittah+isim (düzensiz, OEWN)"
+  },
+  "shod": {
+   "tokens": [
+    "shod"
+   ],
+   "not": "shoe+fiil (düzensiz, OEWN)"
+  },
+  "shofroth": {
+   "tokens": [
+    "shofroth"
+   ],
+   "not": "shofar+isim (düzensiz, OEWN)"
+  },
+  "shone": {
+   "tokens": [
+    "shone"
+   ],
+   "not": "shine+fiil (düzensiz, OEWN)"
   },
   "shook": {
    "tokens": [
     "shook"
    ],
-   "not": "shake+geçmiş (düzensiz)"
+   "not": "shake+fiil (düzensiz, OEWN)"
+  },
+  "shophroth": {
+   "tokens": [
+    "shophroth"
+   ],
+   "not": "shophar+isim (düzensiz, OEWN)"
+  },
+  "shot": {
+   "tokens": [
+    "shot"
+   ],
+   "not": "shoot+fiil (düzensiz, OEWN)"
   },
   "shown": {
    "tokens": [
     "shown"
    ],
-   "not": "show+geçmiş (düzensiz)"
+   "not": "show+fiil (düzensiz, OEWN)"
+  },
+  "shrank": {
+   "tokens": [
+    "shrank"
+   ],
+   "not": "shrink+fiil (düzensiz, OEWN)"
+  },
+  "shrewmice": {
+   "tokens": [
+    "shrewmice"
+   ],
+   "not": "shrewmouse+isim (düzensiz, OEWN)"
+  },
+  "shriven": {
+   "tokens": [
+    "shriven"
+   ],
+   "not": "shrive+fiil (düzensiz, OEWN)"
+  },
+  "shrove": {
+   "tokens": [
+    "shrove"
+   ],
+   "not": "shrive+fiil (düzensiz, OEWN)"
+  },
+  "shrunk": {
+   "tokens": [
+    "shrunk"
+   ],
+   "not": "shrink+fiil (düzensiz, OEWN)"
+  },
+  "shrunken": {
+   "tokens": [
+    "shrunken"
+   ],
+   "not": "shrink+fiil (düzensiz, OEWN)"
+  },
+  "shyer": {
+   "tokens": [
+    "shyer"
+   ],
+   "not": "shy+sıfat (düzensiz, OEWN)"
+  },
+  "shyest": {
+   "tokens": [
+    "shyest"
+   ],
+   "not": "shy+sıfat (düzensiz, OEWN)"
+  },
+  "sicked": {
+   "tokens": [
+    "sicked"
+   ],
+   "not": "sic+fiil (düzensiz, OEWN)"
+  },
+  "sicking": {
+   "tokens": [
+    "sicking"
+   ],
+   "not": "sic+fiil (düzensiz, OEWN)"
+  },
+  "sightsaw": {
+   "tokens": [
+    "sightsaw"
+   ],
+   "not": "sightsee+fiil (düzensiz, OEWN)"
+  },
+  "sightseen": {
+   "tokens": [
+    "sightseen"
+   ],
+   "not": "sightsee+fiil (düzensiz, OEWN)"
+  },
+  "signore": {
+   "tokens": [
+    "signore"
+   ],
+   "not": "signora+isim (düzensiz, OEWN)"
+  },
+  "signori": {
+   "tokens": [
+    "signori"
+   ],
+   "not": "signior+isim (düzensiz, OEWN)"
+  },
+  "signorine": {
+   "tokens": [
+    "signorine"
+   ],
+   "not": "signorina+isim (düzensiz, OEWN)"
+  },
+  "siliquae": {
+   "tokens": [
+    "siliquae"
+   ],
+   "not": "siliqua+isim (düzensiz, OEWN)"
+  },
+  "silvae": {
+   "tokens": [
+    "silvae"
+   ],
+   "not": "silva+isim (düzensiz, OEWN)"
+  },
+  "simulacra": {
+   "tokens": [
+    "simulacra"
+   ],
+   "not": "simulacrum+isim (düzensiz, OEWN)"
+  },
+  "sincipita": {
+   "tokens": [
+    "sincipita"
+   ],
+   "not": "sinciput+isim (düzensiz, OEWN)"
+  },
+  "singing": {
+   "tokens": [
+    "singing"
+   ],
+   "not": "singe+fiil (düzensiz, OEWN)"
+  },
+  "skydove": {
+   "tokens": [
+    "skydove"
+   ],
+   "not": "skydive+fiil (düzensiz, OEWN)"
+  },
+  "slain": {
+   "tokens": [
+    "slain"
+   ],
+   "not": "slay+fiil (düzensiz, OEWN)"
   },
   "slept": {
    "tokens": [
     "slept"
    ],
-   "not": "sleep+geçmiş (düzensiz)"
+   "not": "sleep+fiil (düzensiz, OEWN)"
+  },
+  "slew": {
+   "tokens": [
+    "slew"
+   ],
+   "not": "slay+fiil (düzensiz, OEWN)"
+  },
+  "slid": {
+   "tokens": [
+    "slid"
+   ],
+   "not": "slide+fiil (düzensiz, OEWN)"
+  },
+  "slidden": {
+   "tokens": [
+    "slidden"
+   ],
+   "not": "slide+fiil (düzensiz, OEWN)"
+  },
+  "slung": {
+   "tokens": [
+    "slung"
+   ],
+   "not": "sling+fiil (düzensiz, OEWN)"
+  },
+  "slunk": {
+   "tokens": [
+    "slunk"
+   ],
+   "not": "slink+fiil (düzensiz, OEWN)"
+  },
+  "slyer": {
+   "tokens": [
+    "slyer"
+   ],
+   "not": "sly+sıfat (düzensiz, OEWN)"
+  },
+  "slyest": {
+   "tokens": [
+    "slyest"
+   ],
+   "not": "sly+sıfat (düzensiz, OEWN)"
+  },
+  "smelt": {
+   "tokens": [
+    "smelt"
+   ],
+   "not": "smell+fiil (düzensiz, OEWN)"
+  },
+  "smit": {
+   "tokens": [
+    "smit"
+   ],
+   "not": "smite+fiil (düzensiz, OEWN)"
+  },
+  "smitten": {
+   "tokens": [
+    "smitten"
+   ],
+   "not": "smite+fiil (düzensiz, OEWN)"
+  },
+  "smote": {
+   "tokens": [
+    "smote"
+   ],
+   "not": "smite+fiil (düzensiz, OEWN)"
+  },
+  "snuck": {
+   "tokens": [
+    "snuck"
+   ],
+   "not": "sneak+fiil (düzensiz, OEWN)"
+  },
+  "solaria": {
+   "tokens": [
+    "solaria"
+   ],
+   "not": "solarium+isim (düzensiz, OEWN)"
   },
   "sold": {
    "tokens": [
     "sold"
    ],
-   "not": "sell+geçmiş (düzensiz)"
+   "not": "sell+fiil (düzensiz, OEWN)"
+  },
+  "soles": {
+   "tokens": [
+    "soles"
+   ],
+   "not": "sol+isim (düzensiz, OEWN)"
+  },
+  "solfeggi": {
+   "tokens": [
+    "solfeggi"
+   ],
+   "not": "solfeggio+isim (düzensiz, OEWN)"
+  },
+  "soli": {
+   "tokens": [
+    "soli"
+   ],
+   "not": "solo+isim (düzensiz, OEWN)"
+  },
+  "solidi": {
+   "tokens": [
+    "solidi"
+   ],
+   "not": "solidus+isim (düzensiz, OEWN)"
+  },
+  "somata": {
+   "tokens": [
+    "somata"
+   ],
+   "not": "soma+isim (düzensiz, OEWN)"
+  },
+  "soprani": {
+   "tokens": [
+    "soprani"
+   ],
+   "not": "soprano+isim (düzensiz, OEWN)"
+  },
+  "sordini": {
+   "tokens": [
+    "sordini"
+   ],
+   "not": "sordino+isim (düzensiz, OEWN)"
+  },
+  "sori": {
+   "tokens": [
+    "sori"
+   ],
+   "not": "sorus+isim (düzensiz, OEWN)"
   },
   "sought": {
    "tokens": [
     "sought"
    ],
-   "not": "seek+geçmiş (düzensiz)"
+   "not": "seek+fiil (düzensiz, OEWN)"
+  },
+  "sown": {
+   "tokens": [
+    "sown"
+   ],
+   "not": "sow+fiil (düzensiz, OEWN)"
+  },
+  "spadices": {
+   "tokens": [
+    "spadices"
+   ],
+   "not": "spadix+isim (düzensiz, OEWN)"
+  },
+  "spat": {
+   "tokens": [
+    "spat"
+   ],
+   "not": "spit+fiil (düzensiz, OEWN)"
+  },
+  "spectra": {
+   "tokens": [
+    "spectra"
+   ],
+   "not": "spectrum+isim (düzensiz, OEWN)"
+  },
+  "specula": {
+   "tokens": [
+    "specula"
+   ],
+   "not": "speculum+isim (düzensiz, OEWN)"
+  },
+  "sped": {
+   "tokens": [
+    "sped"
+   ],
+   "not": "speed+fiil (düzensiz, OEWN)"
+  },
+  "spellbound": {
+   "tokens": [
+    "spellbound"
+   ],
+   "not": "spellbind+fiil (düzensiz, OEWN)"
+  },
+  "spelt": {
+   "tokens": [
+    "spelt"
+   ],
+   "not": "spell+fiil (düzensiz, OEWN)"
   },
   "spent": {
    "tokens": [
     "spent"
    ],
-   "not": "spend+geçmiş (düzensiz)"
+   "not": "spend+fiil (düzensiz, OEWN)"
+  },
+  "spermatozoa": {
+   "tokens": [
+    "spermatozoa"
+   ],
+   "not": "spermatozoon+isim (düzensiz, OEWN)"
+  },
+  "sphinges": {
+   "tokens": [
+    "sphinges"
+   ],
+   "not": "sphinx+isim (düzensiz, OEWN)"
+  },
+  "spicula": {
+   "tokens": [
+    "spicula"
+   ],
+   "not": "spiculum+isim (düzensiz, OEWN)"
+  },
+  "spilt": {
+   "tokens": [
+    "spilt"
+   ],
+   "not": "spill+fiil (düzensiz, OEWN)"
+  },
+  "spirilla": {
+   "tokens": [
+    "spirilla"
+   ],
+   "not": "spirillum+isim (düzensiz, OEWN)"
+  },
+  "splayfeet": {
+   "tokens": [
+    "splayfeet"
+   ],
+   "not": "splayfoot+isim (düzensiz, OEWN)"
+  },
+  "splenii": {
+   "tokens": [
+    "splenii"
+   ],
+   "not": "splenius+isim (düzensiz, OEWN)"
+  },
+  "spoilt": {
+   "tokens": [
+    "spoilt"
+   ],
+   "not": "spoil+fiil (düzensiz, OEWN)"
   },
   "spoke": {
    "tokens": [
     "spoke"
    ],
-   "not": "speak+geçmiş (düzensiz)"
+   "not": "speak+fiil (düzensiz, OEWN)"
   },
   "spoken": {
    "tokens": [
     "spoken"
    ],
-   "not": "speak+geçmiş (düzensiz)"
+   "not": "speak+fiil (düzensiz, OEWN)"
+  },
+  "sporangia": {
+   "tokens": [
+    "sporangia"
+   ],
+   "not": "sporangium+isim (düzensiz, OEWN)"
+  },
+  "sporozoa": {
+   "tokens": [
+    "sporozoa"
+   ],
+   "not": "sporozoan+isim (düzensiz, OEWN)"
+  },
+  "spotlit": {
+   "tokens": [
+    "spotlit"
+   ],
+   "not": "spotlight+fiil (düzensiz, OEWN)"
+  },
+  "sprang": {
+   "tokens": [
+    "sprang"
+   ],
+   "not": "spring+fiil (düzensiz, OEWN)"
+  },
+  "sprung": {
+   "tokens": [
+    "sprung"
+   ],
+   "not": "spring+fiil (düzensiz, OEWN)"
+  },
+  "spun": {
+   "tokens": [
+    "spun"
+   ],
+   "not": "spin+fiil (düzensiz, OEWN)"
+  },
+  "sputa": {
+   "tokens": [
+    "sputa"
+   ],
+   "not": "sputum+isim (düzensiz, OEWN)"
+  },
+  "squamae": {
+   "tokens": [
+    "squamae"
+   ],
+   "not": "squama+isim (düzensiz, OEWN)"
+  },
+  "squilgee": {
+   "tokens": [
+    "squilgee"
+   ],
+   "not": "squeegee+fiil (düzensiz, OEWN)"
+  },
+  "squillae": {
+   "tokens": [
+    "squillae"
+   ],
+   "not": "squilla+isim (düzensiz, OEWN)"
+  },
+  "stadia": {
+   "tokens": [
+    "stadia"
+   ],
+   "not": "stadium+isim (düzensiz, OEWN)"
+  },
+  "stamina": {
+   "tokens": [
+    "stamina"
+   ],
+   "not": "stamen+isim (düzensiz, OEWN)"
+  },
+  "stank": {
+   "tokens": [
+    "stank"
+   ],
+   "not": "stink+fiil (düzensiz, OEWN)"
+  },
+  "stapedes": {
+   "tokens": [
+    "stapedes"
+   ],
+   "not": "stapes+isim (düzensiz, OEWN)"
+  },
+  "staphylococci": {
+   "tokens": [
+    "staphylococci"
+   ],
+   "not": "staphylococcus+isim (düzensiz, OEWN)"
+  },
+  "staretsy": {
+   "tokens": [
+    "staretsy"
+   ],
+   "not": "starets+isim (düzensiz, OEWN)"
+  },
+  "startsy": {
+   "tokens": [
+    "startsy"
+   ],
+   "not": "starets+isim (düzensiz, OEWN)"
+  },
+  "stelae": {
+   "tokens": [
+    "stelae"
+   ],
+   "not": "stele+isim (düzensiz, OEWN)"
+  },
+  "stemmata": {
+   "tokens": [
+    "stemmata"
+   ],
+   "not": "stemma+isim (düzensiz, OEWN)"
+  },
+  "stenoses": {
+   "tokens": [
+    "stenoses"
+   ],
+   "not": "stenosis+isim (düzensiz, OEWN)"
+  },
+  "stepchildren": {
+   "tokens": [
+    "stepchildren"
+   ],
+   "not": "stepchild+isim (düzensiz, OEWN)"
+  },
+  "sterna": {
+   "tokens": [
+    "sterna"
+   ],
+   "not": "sternum+isim (düzensiz, OEWN)"
+  },
+  "stigmata": {
+   "tokens": [
+    "stigmata"
+   ],
+   "not": "stigma+isim (düzensiz, OEWN)"
+  },
+  "stimuli": {
+   "tokens": [
+    "stimuli"
+   ],
+   "not": "stimulus+isim (düzensiz, OEWN)"
   },
   "stole": {
    "tokens": [
     "stole"
    ],
-   "not": "steal+geçmiş (düzensiz)"
+   "not": "steal+fiil (düzensiz, OEWN)"
   },
   "stolen": {
    "tokens": [
     "stolen"
    ],
-   "not": "steal+geçmiş (düzensiz)"
+   "not": "steal+fiil (düzensiz, OEWN)"
+  },
+  "stomata": {
+   "tokens": [
+    "stomata"
+   ],
+   "not": "stoma+isim (düzensiz, OEWN)"
   },
   "stood": {
    "tokens": [
     "stood"
    ],
-   "not": "stand+geçmiş (düzensiz)"
+   "not": "stand+fiil (düzensiz, OEWN)"
+  },
+  "stotinki": {
+   "tokens": [
+    "stotinki"
+   ],
+   "not": "stotinka+isim (düzensiz, OEWN)"
+  },
+  "stotkini": {
+   "tokens": [
+    "stotkini"
+   ],
+   "not": "stotinka+isim (düzensiz, OEWN)"
+  },
+  "stove": {
+   "tokens": [
+    "stove"
+   ],
+   "not": "stave+fiil (düzensiz, OEWN)"
+  },
+  "strata": {
+   "tokens": [
+    "strata"
+   ],
+   "not": "stratum+isim (düzensiz, OEWN)"
+  },
+  "strati": {
+   "tokens": [
+    "strati"
+   ],
+   "not": "stratus+isim (düzensiz, OEWN)"
+  },
+  "streptococci": {
+   "tokens": [
+    "streptococci"
+   ],
+   "not": "streptococcus+isim (düzensiz, OEWN)"
+  },
+  "strewn": {
+   "tokens": [
+    "strewn"
+   ],
+   "not": "strew+fiil (düzensiz, OEWN)"
+  },
+  "striae": {
+   "tokens": [
+    "striae"
+   ],
+   "not": "stria+isim (düzensiz, OEWN)"
+  },
+  "stridden": {
+   "tokens": [
+    "stridden"
+   ],
+   "not": "stride+fiil (düzensiz, OEWN)"
+  },
+  "striven": {
+   "tokens": [
+    "striven"
+   ],
+   "not": "strive+fiil (düzensiz, OEWN)"
+  },
+  "strobili": {
+   "tokens": [
+    "strobili"
+   ],
+   "not": "strobilus+isim (düzensiz, OEWN)"
+  },
+  "strode": {
+   "tokens": [
+    "strode"
+   ],
+   "not": "stride+fiil (düzensiz, OEWN)"
+  },
+  "stromata": {
+   "tokens": [
+    "stromata"
+   ],
+   "not": "stroma+isim (düzensiz, OEWN)"
+  },
+  "strove": {
+   "tokens": [
+    "strove"
+   ],
+   "not": "strive+fiil (düzensiz, OEWN)"
+  },
+  "struck": {
+   "tokens": [
+    "struck"
+   ],
+   "not": "strike+fiil (düzensiz, OEWN)"
+  },
+  "strumae": {
+   "tokens": [
+    "strumae"
+   ],
+   "not": "struma+isim (düzensiz, OEWN)"
+  },
+  "strung": {
+   "tokens": [
+    "strung"
+   ],
+   "not": "string+fiil (düzensiz, OEWN)"
+  },
+  "stuck": {
+   "tokens": [
+    "stuck"
+   ],
+   "not": "stick+fiil (düzensiz, OEWN)"
+  },
+  "stung": {
+   "tokens": [
+    "stung"
+   ],
+   "not": "sting+fiil (düzensiz, OEWN)"
+  },
+  "stunk": {
+   "tokens": [
+    "stunk"
+   ],
+   "not": "stink+fiil (düzensiz, OEWN)"
+  },
+  "styli": {
+   "tokens": [
+    "styli"
+   ],
+   "not": "stylus+isim (düzensiz, OEWN)"
+  },
+  "stylopodia": {
+   "tokens": [
+    "stylopodia"
+   ],
+   "not": "stylopodium+isim (düzensiz, OEWN)"
+  },
+  "subgenera": {
+   "tokens": [
+    "subgenera"
+   ],
+   "not": "subgenus+isim (düzensiz, OEWN)"
+  },
+  "submucosae": {
+   "tokens": [
+    "submucosae"
+   ],
+   "not": "submucosa+isim (düzensiz, OEWN)"
+  },
+  "subphyla": {
+   "tokens": [
+    "subphyla"
+   ],
+   "not": "subphylum+isim (düzensiz, OEWN)"
+  },
+  "substrata": {
+   "tokens": [
+    "substrata"
+   ],
+   "not": "substratum+isim (düzensiz, OEWN)"
+  },
+  "succedanea": {
+   "tokens": [
+    "succedanea"
+   ],
+   "not": "succedaneum+isim (düzensiz, OEWN)"
+  },
+  "succubi": {
+   "tokens": [
+    "succubi"
+   ],
+   "not": "succubus+isim (düzensiz, OEWN)"
+  },
+  "sudatoria": {
+   "tokens": [
+    "sudatoria"
+   ],
+   "not": "sudatorium+isim (düzensiz, OEWN)"
+  },
+  "sulci": {
+   "tokens": [
+    "sulci"
+   ],
+   "not": "sulcus+isim (düzensiz, OEWN)"
   },
   "sung": {
    "tokens": [
     "sung"
    ],
-   "not": "sing+geçmiş (düzensiz)"
+   "not": "sing+fiil (düzensiz, OEWN)"
+  },
+  "sunk": {
+   "tokens": [
+    "sunk"
+   ],
+   "not": "sink+fiil (düzensiz, OEWN)"
+  },
+  "sunken": {
+   "tokens": [
+    "sunken"
+   ],
+   "not": "sink+fiil (düzensiz, OEWN)"
+  },
+  "supernovae": {
+   "tokens": [
+    "supernovae"
+   ],
+   "not": "supernova+isim (düzensiz, OEWN)"
+  },
+  "superstrata": {
+   "tokens": [
+    "superstrata"
+   ],
+   "not": "superstratum+isim (düzensiz, OEWN)"
   },
   "swam": {
    "tokens": [
     "swam"
    ],
-   "not": "swim+geçmiş (düzensiz)"
+   "not": "swim+fiil (düzensiz, OEWN)"
+  },
+  "swamies": {
+   "tokens": [
+    "swamies"
+   ],
+   "not": "swami+isim (düzensiz, OEWN)"
+  },
+  "swept": {
+   "tokens": [
+    "swept"
+   ],
+   "not": "sweep+fiil (düzensiz, OEWN)"
+  },
+  "swollen": {
+   "tokens": [
+    "swollen"
+   ],
+   "not": "swell+fiil (düzensiz, OEWN)"
+  },
+  "swopped": {
+   "tokens": [
+    "swopped"
+   ],
+   "not": "swap+fiil (düzensiz, OEWN)"
+  },
+  "swopping": {
+   "tokens": [
+    "swopping"
+   ],
+   "not": "swap+fiil (düzensiz, OEWN)"
+  },
+  "swops": {
+   "tokens": [
+    "swops"
+   ],
+   "not": "swap+fiil (düzensiz, OEWN)"
+  },
+  "swore": {
+   "tokens": [
+    "swore"
+   ],
+   "not": "swear+fiil (düzensiz, OEWN)"
+  },
+  "sworn": {
+   "tokens": [
+    "sworn"
+   ],
+   "not": "swear+fiil (düzensiz, OEWN)"
   },
   "swum": {
    "tokens": [
     "swum"
    ],
-   "not": "swim+geçmiş (düzensiz)"
+   "not": "swim+fiil (düzensiz, OEWN)"
+  },
+  "swung": {
+   "tokens": [
+    "swung"
+   ],
+   "not": "swing+fiil (düzensiz, OEWN)"
+  },
+  "syconia": {
+   "tokens": [
+    "syconia"
+   ],
+   "not": "syconium+isim (düzensiz, OEWN)"
+  },
+  "syllabi": {
+   "tokens": [
+    "syllabi"
+   ],
+   "not": "syllabus+isim (düzensiz, OEWN)"
+  },
+  "syllepses": {
+   "tokens": [
+    "syllepses"
+   ],
+   "not": "syllepsis+isim (düzensiz, OEWN)"
+  },
+  "symphyses": {
+   "tokens": [
+    "symphyses"
+   ],
+   "not": "symphysis+isim (düzensiz, OEWN)"
+  },
+  "symposia": {
+   "tokens": [
+    "symposia"
+   ],
+   "not": "symposium+isim (düzensiz, OEWN)"
+  },
+  "synapses": {
+   "tokens": [
+    "synapses"
+   ],
+   "not": "synapsis+isim (düzensiz, OEWN)"
+  },
+  "syncytia": {
+   "tokens": [
+    "syncytia"
+   ],
+   "not": "syncytium+isim (düzensiz, OEWN)"
+  },
+  "synopses": {
+   "tokens": [
+    "synopses"
+   ],
+   "not": "synopsis+isim (düzensiz, OEWN)"
+  },
+  "syntagmata": {
+   "tokens": [
+    "syntagmata"
+   ],
+   "not": "syntagma+isim (düzensiz, OEWN)"
+  },
+  "syntheses": {
+   "tokens": [
+    "syntheses"
+   ],
+   "not": "synthesis+isim (düzensiz, OEWN)"
+  },
+  "syringes": {
+   "tokens": [
+    "syringes"
+   ],
+   "not": "syrinx+isim (düzensiz, OEWN)"
+  },
+  "tableaux": {
+   "tokens": [
+    "tableaux"
+   ],
+   "not": "tableau+isim (düzensiz, OEWN)"
+  },
+  "taeniae": {
+   "tokens": [
+    "taeniae"
+   ],
+   "not": "taenia+isim (düzensiz, OEWN)"
   },
   "taken": {
    "tokens": [
     "taken"
    ],
-   "not": "take+geçmiş (düzensiz)"
+   "not": "take+fiil (düzensiz, OEWN)"
+  },
+  "talcked": {
+   "tokens": [
+    "talcked"
+   ],
+   "not": "talc+fiil (düzensiz, OEWN)"
+  },
+  "talcking": {
+   "tokens": [
+    "talcking"
+   ],
+   "not": "talc+fiil (düzensiz, OEWN)"
+  },
+  "tali": {
+   "tokens": [
+    "tali"
+   ],
+   "not": "talus+isim (düzensiz, OEWN)"
+  },
+  "tallaisim": {
+   "tokens": [
+    "tallaisim"
+   ],
+   "not": "tallith+isim (düzensiz, OEWN)"
+  },
+  "tallithes": {
+   "tokens": [
+    "tallithes"
+   ],
+   "not": "tallith+isim (düzensiz, OEWN)"
+  },
+  "tallitoth": {
+   "tokens": [
+    "tallitoth"
+   ],
+   "not": "tallith+isim (düzensiz, OEWN)"
+  },
+  "tarantulae": {
+   "tokens": [
+    "tarantulae"
+   ],
+   "not": "tarantula+isim (düzensiz, OEWN)"
+  },
+  "tarsi": {
+   "tokens": [
+    "tarsi"
+   ],
+   "not": "tarsus+isim (düzensiz, OEWN)"
   },
   "taught": {
    "tokens": [
     "taught"
    ],
-   "not": "teach+geçmiş (düzensiz)"
+   "not": "teach+fiil (düzensiz, OEWN)"
+  },
+  "taxa": {
+   "tokens": [
+    "taxa"
+   ],
+   "not": "taxon+isim (düzensiz, OEWN)"
+  },
+  "taxes": {
+   "tokens": [
+    "taxes"
+   ],
+   "not": "taxis+isim (düzensiz, OEWN)"
+  },
+  "taxies": {
+   "tokens": [
+    "taxies"
+   ],
+   "not": "taxi+isim (düzensiz, OEWN)"
+  },
+  "taxying": {
+   "tokens": [
+    "taxying"
+   ],
+   "not": "taxi+fiil (düzensiz, OEWN)"
   },
   "teeth": {
    "tokens": [
     "teeth"
    ],
-   "not": "tooth+çoğul (düzensiz)"
+   "not": "tooth+isim (düzensiz, OEWN)"
+  },
+  "telamones": {
+   "tokens": [
+    "telamones"
+   ],
+   "not": "telamon+isim (düzensiz, OEWN)"
+  },
+  "tempi": {
+   "tokens": [
+    "tempi"
+   ],
+   "not": "tempo+isim (düzensiz, OEWN)"
+  },
+  "tenderfeet": {
+   "tokens": [
+    "tenderfeet"
+   ],
+   "not": "tenderfoot+isim (düzensiz, OEWN)"
+  },
+  "teniae": {
+   "tokens": [
+    "teniae"
+   ],
+   "not": "tenia+isim (düzensiz, OEWN)"
+  },
+  "terata": {
+   "tokens": [
+    "terata"
+   ],
+   "not": "teras+isim (düzensiz, OEWN)"
+  },
+  "teredines": {
+   "tokens": [
+    "teredines"
+   ],
+   "not": "teredo+isim (düzensiz, OEWN)"
+  },
+  "termini": {
+   "tokens": [
+    "termini"
+   ],
+   "not": "terminus+isim (düzensiz, OEWN)"
+  },
+  "terraria": {
+   "tokens": [
+    "terraria"
+   ],
+   "not": "terrarium+isim (düzensiz, OEWN)"
+  },
+  "terzetti": {
+   "tokens": [
+    "terzetti"
+   ],
+   "not": "terzetto+isim (düzensiz, OEWN)"
+  },
+  "tesserae": {
+   "tokens": [
+    "tesserae"
+   ],
+   "not": "tessera+isim (düzensiz, OEWN)"
+  },
+  "testae": {
+   "tokens": [
+    "testae"
+   ],
+   "not": "testa+isim (düzensiz, OEWN)"
+  },
+  "testes": {
+   "tokens": [
+    "testes"
+   ],
+   "not": "testis+isim (düzensiz, OEWN)"
+  },
+  "testudines": {
+   "tokens": [
+    "testudines"
+   ],
+   "not": "testudo+isim (düzensiz, OEWN)"
+  },
+  "tetrahedra": {
+   "tokens": [
+    "tetrahedra"
+   ],
+   "not": "tetrahedron+isim (düzensiz, OEWN)"
+  },
+  "tetraskelia": {
+   "tokens": [
+    "tetraskelia"
+   ],
+   "not": "tetraskelion+isim (düzensiz, OEWN)"
+  },
+  "thalami": {
+   "tokens": [
+    "thalami"
+   ],
+   "not": "thalamus+isim (düzensiz, OEWN)"
+  },
+  "thalli": {
+   "tokens": [
+    "thalli"
+   ],
+   "not": "thallus+isim (düzensiz, OEWN)"
+  },
+  "thecae": {
+   "tokens": [
+    "thecae"
+   ],
+   "not": "theca+isim (düzensiz, OEWN)"
+  },
+  "therses": {
+   "tokens": [
+    "therses"
+   ],
+   "not": "thyrse+isim (düzensiz, OEWN)"
+  },
+  "thesauri": {
+   "tokens": [
+    "thesauri"
+   ],
+   "not": "thesaurus+isim (düzensiz, OEWN)"
+  },
+  "theses": {
+   "tokens": [
+    "theses"
+   ],
+   "not": "thesis+isim (düzensiz, OEWN)"
+  },
+  "thoraces": {
+   "tokens": [
+    "thoraces"
+   ],
+   "not": "thorax+isim (düzensiz, OEWN)"
   },
   "thought": {
    "tokens": [
     "thought"
    ],
-   "not": "think+geçmiş (düzensiz)"
+   "not": "think+fiil (düzensiz, OEWN)"
   },
   "threw": {
    "tokens": [
     "threw"
    ],
-   "not": "throw+geçmiş (düzensiz)"
+   "not": "throw+fiil (düzensiz, OEWN)"
+  },
+  "thriven": {
+   "tokens": [
+    "thriven"
+   ],
+   "not": "thrive+fiil (düzensiz, OEWN)"
+  },
+  "thrombi": {
+   "tokens": [
+    "thrombi"
+   ],
+   "not": "thrombus+isim (düzensiz, OEWN)"
+  },
+  "throve": {
+   "tokens": [
+    "throve"
+   ],
+   "not": "thrive+fiil (düzensiz, OEWN)"
   },
   "thrown": {
    "tokens": [
     "thrown"
    ],
-   "not": "throw+geçmiş (düzensiz)"
+   "not": "throw+fiil (düzensiz, OEWN)"
+  },
+  "thymi": {
+   "tokens": [
+    "thymi"
+   ],
+   "not": "thymus+isim (düzensiz, OEWN)"
+  },
+  "thyrsi": {
+   "tokens": [
+    "thyrsi"
+   ],
+   "not": "thyrsus+isim (düzensiz, OEWN)"
+  },
+  "tibiae": {
+   "tokens": [
+    "tibiae"
+   ],
+   "not": "tibia+isim (düzensiz, OEWN)"
+  },
+  "titmice": {
+   "tokens": [
+    "titmice"
+   ],
+   "not": "titmouse+isim (düzensiz, OEWN)"
   },
   "told": {
    "tokens": [
     "told"
    ],
-   "not": "tell+geçmiş (düzensiz)"
+   "not": "tell+fiil (düzensiz, OEWN)"
+  },
+  "tomenta": {
+   "tokens": [
+    "tomenta"
+   ],
+   "not": "tomentum+isim (düzensiz, OEWN)"
   },
   "took": {
    "tokens": [
     "took"
    ],
-   "not": "take+geçmiş (düzensiz)"
+   "not": "take+fiil (düzensiz, OEWN)"
+  },
+  "tophi": {
+   "tokens": [
+    "tophi"
+   ],
+   "not": "tophus+isim (düzensiz, OEWN)"
+  },
+  "topoi": {
+   "tokens": [
+    "topoi"
+   ],
+   "not": "topos+isim (düzensiz, OEWN)"
   },
   "tore": {
    "tokens": [
     "tore"
    ],
-   "not": "tear+geçmiş (düzensiz)"
+   "not": "tear+fiil (düzensiz, OEWN)"
+  },
+  "tori": {
+   "tokens": [
+    "tori"
+   ],
+   "not": "torus+isim (düzensiz, OEWN)"
   },
   "torn": {
    "tokens": [
     "torn"
    ],
-   "not": "tear+geçmiş (düzensiz)"
+   "not": "tear+fiil (düzensiz, OEWN)"
+  },
+  "torsi": {
+   "tokens": [
+    "torsi"
+   ],
+   "not": "torso+isim (düzensiz, OEWN)"
+  },
+  "touracos": {
+   "tokens": [
+    "touracos"
+   ],
+   "not": "turaco+isim (düzensiz, OEWN)"
+  },
+  "trabeculae": {
+   "tokens": [
+    "trabeculae"
+   ],
+   "not": "trabecula+isim (düzensiz, OEWN)"
+  },
+  "tracheae": {
+   "tokens": [
+    "tracheae"
+   ],
+   "not": "trachea+isim (düzensiz, OEWN)"
+  },
+  "trafficked": {
+   "tokens": [
+    "trafficked"
+   ],
+   "not": "traffic+fiil (düzensiz, OEWN)"
+  },
+  "trafficking": {
+   "tokens": [
+    "trafficking"
+   ],
+   "not": "traffic+fiil (düzensiz, OEWN)"
+  },
+  "tragi": {
+   "tokens": [
+    "tragi"
+   ],
+   "not": "tragus+isim (düzensiz, OEWN)"
+  },
+  "trameled": {
+   "tokens": [
+    "trameled"
+   ],
+   "not": "trammel+fiil (düzensiz, OEWN)"
+  },
+  "trameling": {
+   "tokens": [
+    "trameling"
+   ],
+   "not": "trammel+fiil (düzensiz, OEWN)"
+  },
+  "tramelled": {
+   "tokens": [
+    "tramelled"
+   ],
+   "not": "trammel+fiil (düzensiz, OEWN)"
+  },
+  "tramelling": {
+   "tokens": [
+    "tramelling"
+   ],
+   "not": "trammel+fiil (düzensiz, OEWN)"
+  },
+  "tramels": {
+   "tokens": [
+    "tramels"
+   ],
+   "not": "trammel+fiil (düzensiz, OEWN)"
+  },
+  "transfixt": {
+   "tokens": [
+    "transfixt"
+   ],
+   "not": "transfix+fiil (düzensiz, OEWN)"
+  },
+  "tranship": {
+   "tokens": [
+    "tranship"
+   ],
+   "not": "transship+fiil (düzensiz, OEWN)"
+  },
+  "trapezia": {
+   "tokens": [
+    "trapezia"
+   ],
+   "not": "trapezium+isim (düzensiz, OEWN)"
+  },
+  "trapezohedra": {
+   "tokens": [
+    "trapezohedra"
+   ],
+   "not": "trapezohedron+isim (düzensiz, OEWN)"
+  },
+  "traumata": {
+   "tokens": [
+    "traumata"
+   ],
+   "not": "trauma+isim (düzensiz, OEWN)"
+  },
+  "treponemata": {
+   "tokens": [
+    "treponemata"
+   ],
+   "not": "treponema+isim (düzensiz, OEWN)"
+  },
+  "trichinae": {
+   "tokens": [
+    "trichinae"
+   ],
+   "not": "trichina+isim (düzensiz, OEWN)"
+  },
+  "triclinia": {
+   "tokens": [
+    "triclinia"
+   ],
+   "not": "triclinium+isim (düzensiz, OEWN)"
+  },
+  "triskelia": {
+   "tokens": [
+    "triskelia"
+   ],
+   "not": "triskelion+isim (düzensiz, OEWN)"
+  },
+  "triumviri": {
+   "tokens": [
+    "triumviri"
+   ],
+   "not": "triumvir+isim (düzensiz, OEWN)"
+  },
+  "trivia": {
+   "tokens": [
+    "trivia"
+   ],
+   "not": "trivium+isim (düzensiz, OEWN)"
+  },
+  "trod": {
+   "tokens": [
+    "trod"
+   ],
+   "not": "tread+fiil (düzensiz, OEWN)"
+  },
+  "trodden": {
+   "tokens": [
+    "trodden"
+   ],
+   "not": "tread+fiil (düzensiz, OEWN)"
+  },
+  "trousseaux": {
+   "tokens": [
+    "trousseaux"
+   ],
+   "not": "trousseau+isim (düzensiz, OEWN)"
+  },
+  "tubae": {
+   "tokens": [
+    "tubae"
+   ],
+   "not": "tuba+isim (düzensiz, OEWN)"
+  },
+  "tympana": {
+   "tokens": [
+    "tympana"
+   ],
+   "not": "tympanum+isim (düzensiz, OEWN)"
+  },
+  "typewritten": {
+   "tokens": [
+    "typewritten"
+   ],
+   "not": "typewrite+fiil (düzensiz, OEWN)"
+  },
+  "typewrote": {
+   "tokens": [
+    "typewrote"
+   ],
+   "not": "typewrite+fiil (düzensiz, OEWN)"
+  },
+  "tyros": {
+   "tokens": [
+    "tyros"
+   ],
+   "not": "tiro+isim (düzensiz, OEWN)"
+  },
+  "uglies": {
+   "tokens": [
+    "uglies"
+   ],
+   "not": "ugli+isim (düzensiz, OEWN)"
+  },
+  "ulnae": {
+   "tokens": [
+    "ulnae"
+   ],
+   "not": "ulna+isim (düzensiz, OEWN)"
+  },
+  "ultimata": {
+   "tokens": [
+    "ultimata"
+   ],
+   "not": "ultimatum+isim (düzensiz, OEWN)"
+  },
+  "umbilici": {
+   "tokens": [
+    "umbilici"
+   ],
+   "not": "umbilicus+isim (düzensiz, OEWN)"
+  },
+  "umbones": {
+   "tokens": [
+    "umbones"
+   ],
+   "not": "umbo+isim (düzensiz, OEWN)"
+  },
+  "umbrae": {
+   "tokens": [
+    "umbrae"
+   ],
+   "not": "umbra+isim (düzensiz, OEWN)"
+  },
+  "unbent": {
+   "tokens": [
+    "unbent"
+   ],
+   "not": "unbend+fiil (düzensiz, OEWN)"
+  },
+  "unbound": {
+   "tokens": [
+    "unbound"
+   ],
+   "not": "unbind+fiil (düzensiz, OEWN)"
+  },
+  "unci": {
+   "tokens": [
+    "unci"
+   ],
+   "not": "uncus+isim (düzensiz, OEWN)"
+  },
+  "unclad": {
+   "tokens": [
+    "unclad"
+   ],
+   "not": "unclothe+fiil (düzensiz, OEWN)"
+  },
+  "undergirt": {
+   "tokens": [
+    "undergirt"
+   ],
+   "not": "undergird+fiil (düzensiz, OEWN)"
+  },
+  "undergone": {
+   "tokens": [
+    "undergone"
+   ],
+   "not": "undergo+fiil (düzensiz, OEWN)"
+  },
+  "underlaid": {
+   "tokens": [
+    "underlaid"
+   ],
+   "not": "underlay+fiil (düzensiz, OEWN)"
+  },
+  "underlain": {
+   "tokens": [
+    "underlain"
+   ],
+   "not": "underlie+fiil (düzensiz, OEWN)"
+  },
+  "underlay": {
+   "tokens": [
+    "underlay"
+   ],
+   "not": "underlie+fiil (düzensiz, OEWN)"
+  },
+  "underpaid": {
+   "tokens": [
+    "underpaid"
+   ],
+   "not": "underpay+fiil (düzensiz, OEWN)"
+  },
+  "undershot": {
+   "tokens": [
+    "undershot"
+   ],
+   "not": "undershoot+fiil (düzensiz, OEWN)"
+  },
+  "undersold": {
+   "tokens": [
+    "undersold"
+   ],
+   "not": "undersell+fiil (düzensiz, OEWN)"
   },
   "understood": {
    "tokens": [
     "understood"
    ],
-   "not": "understand+geçmiş (düzensiz)"
+   "not": "understand+fiil (düzensiz, OEWN)"
+  },
+  "undertaken": {
+   "tokens": [
+    "undertaken"
+   ],
+   "not": "undertake+fiil (düzensiz, OEWN)"
+  },
+  "undertook": {
+   "tokens": [
+    "undertook"
+   ],
+   "not": "undertake+fiil (düzensiz, OEWN)"
+  },
+  "underwent": {
+   "tokens": [
+    "underwent"
+   ],
+   "not": "undergo+fiil (düzensiz, OEWN)"
+  },
+  "underwritten": {
+   "tokens": [
+    "underwritten"
+   ],
+   "not": "underwrite+fiil (düzensiz, OEWN)"
+  },
+  "underwrote": {
+   "tokens": [
+    "underwrote"
+   ],
+   "not": "underwrite+fiil (düzensiz, OEWN)"
+  },
+  "undid": {
+   "tokens": [
+    "undid"
+   ],
+   "not": "undo+fiil (düzensiz, OEWN)"
+  },
+  "undone": {
+   "tokens": [
+    "undone"
+   ],
+   "not": "undo+fiil (düzensiz, OEWN)"
+  },
+  "unfroze": {
+   "tokens": [
+    "unfroze"
+   ],
+   "not": "unfreeze+fiil (düzensiz, OEWN)"
+  },
+  "unfrozen": {
+   "tokens": [
+    "unfrozen"
+   ],
+   "not": "unfreeze+fiil (düzensiz, OEWN)"
+  },
+  "unlearnt": {
+   "tokens": [
+    "unlearnt"
+   ],
+   "not": "unlearn+fiil (düzensiz, OEWN)"
+  },
+  "unmade": {
+   "tokens": [
+    "unmade"
+   ],
+   "not": "unmake+fiil (düzensiz, OEWN)"
+  },
+  "unsaid": {
+   "tokens": [
+    "unsaid"
+   ],
+   "not": "unsay+fiil (düzensiz, OEWN)"
+  },
+  "unstrung": {
+   "tokens": [
+    "unstrung"
+   ],
+   "not": "unstring+fiil (düzensiz, OEWN)"
+  },
+  "untaught": {
+   "tokens": [
+    "untaught"
+   ],
+   "not": "unteach+fiil (düzensiz, OEWN)"
+  },
+  "unwound": {
+   "tokens": [
+    "unwound"
+   ],
+   "not": "unwind+fiil (düzensiz, OEWN)"
+  },
+  "upheld": {
+   "tokens": [
+    "upheld"
+   ],
+   "not": "uphold+fiil (düzensiz, OEWN)"
+  },
+  "uphove": {
+   "tokens": [
+    "uphove"
+   ],
+   "not": "upheave+fiil (düzensiz, OEWN)"
+  },
+  "uprisen": {
+   "tokens": [
+    "uprisen"
+   ],
+   "not": "uprise+fiil (düzensiz, OEWN)"
+  },
+  "uprose": {
+   "tokens": [
+    "uprose"
+   ],
+   "not": "uprise+fiil (düzensiz, OEWN)"
+  },
+  "urethrae": {
+   "tokens": [
+    "urethrae"
+   ],
+   "not": "urethra+isim (düzensiz, OEWN)"
+  },
+  "urinalyses": {
+   "tokens": [
+    "urinalyses"
+   ],
+   "not": "urinalysis+isim (düzensiz, OEWN)"
+  },
+  "uteri": {
+   "tokens": [
+    "uteri"
+   ],
+   "not": "uterus+isim (düzensiz, OEWN)"
+  },
+  "utriculi": {
+   "tokens": [
+    "utriculi"
+   ],
+   "not": "utriculus+isim (düzensiz, OEWN)"
+  },
+  "uvulae": {
+   "tokens": [
+    "uvulae"
+   ],
+   "not": "uvula+isim (düzensiz, OEWN)"
+  },
+  "vacua": {
+   "tokens": [
+    "vacua"
+   ],
+   "not": "vacuum+isim (düzensiz, OEWN)"
+  },
+  "vagi": {
+   "tokens": [
+    "vagi"
+   ],
+   "not": "vagus+isim (düzensiz, OEWN)"
+  },
+  "vaginae": {
+   "tokens": [
+    "vaginae"
+   ],
+   "not": "vagina+isim (düzensiz, OEWN)"
+  },
+  "valleculae": {
+   "tokens": [
+    "valleculae"
+   ],
+   "not": "vallecula+isim (düzensiz, OEWN)"
+  },
+  "varices": {
+   "tokens": [
+    "varices"
+   ],
+   "not": "varix+isim (düzensiz, OEWN)"
+  },
+  "vasa": {
+   "tokens": [
+    "vasa"
+   ],
+   "not": "vas+isim (düzensiz, OEWN)"
+  },
+  "vela": {
+   "tokens": [
+    "vela"
+   ],
+   "not": "velum+isim (düzensiz, OEWN)"
+  },
+  "venae": {
+   "tokens": [
+    "venae"
+   ],
+   "not": "vena+isim (düzensiz, OEWN)"
+  },
+  "ventriculi": {
+   "tokens": [
+    "ventriculi"
+   ],
+   "not": "ventriculus+isim (düzensiz, OEWN)"
+  },
+  "vermes": {
+   "tokens": [
+    "vermes"
+   ],
+   "not": "vermis+isim (düzensiz, OEWN)"
+  },
+  "verrucae": {
+   "tokens": [
+    "verrucae"
+   ],
+   "not": "verruca+isim (düzensiz, OEWN)"
+  },
+  "vertebrae": {
+   "tokens": [
+    "vertebrae"
+   ],
+   "not": "vertebra+isim (düzensiz, OEWN)"
+  },
+  "vertices": {
+   "tokens": [
+    "vertices"
+   ],
+   "not": "vertex+isim (düzensiz, OEWN)"
+  },
+  "vertigines": {
+   "tokens": [
+    "vertigines"
+   ],
+   "not": "vertigo+isim (düzensiz, OEWN)"
+  },
+  "vesicae": {
+   "tokens": [
+    "vesicae"
+   ],
+   "not": "vesica+isim (düzensiz, OEWN)"
+  },
+  "vibrissae": {
+   "tokens": [
+    "vibrissae"
+   ],
+   "not": "vibrissa+isim (düzensiz, OEWN)"
+  },
+  "villi": {
+   "tokens": [
+    "villi"
+   ],
+   "not": "villus+isim (düzensiz, OEWN)"
+  },
+  "virtuosi": {
+   "tokens": [
+    "virtuosi"
+   ],
+   "not": "virtuoso+isim (düzensiz, OEWN)"
+  },
+  "vitelli": {
+   "tokens": [
+    "vitelli"
+   ],
+   "not": "vitellus+isim (düzensiz, OEWN)"
+  },
+  "vivaria": {
+   "tokens": [
+    "vivaria"
+   ],
+   "not": "vivarium+isim (düzensiz, OEWN)"
+  },
+  "voces": {
+   "tokens": [
+    "voces"
+   ],
+   "not": "vox+isim (düzensiz, OEWN)"
+  },
+  "volvae": {
+   "tokens": [
+    "volvae"
+   ],
+   "not": "volva+isim (düzensiz, OEWN)"
+  },
+  "vorticellae": {
+   "tokens": [
+    "vorticellae"
+   ],
+   "not": "vorticella+isim (düzensiz, OEWN)"
+  },
+  "vortices": {
+   "tokens": [
+    "vortices"
+   ],
+   "not": "vortex+isim (düzensiz, OEWN)"
+  },
+  "vulvae": {
+   "tokens": [
+    "vulvae"
+   ],
+   "not": "vulva+isim (düzensiz, OEWN)"
   },
   "was": {
    "tokens": [
     "was"
    ],
-   "not": "be+geçmiş (düzensiz)"
+   "not": "be+fiil (düzensiz, OEWN)"
+  },
+  "waylaid": {
+   "tokens": [
+    "waylaid"
+   ],
+   "not": "waylay+fiil (düzensiz, OEWN)"
   },
   "went": {
    "tokens": [
     "went"
    ],
-   "not": "go+geçmiş (düzensiz)"
+   "not": "go+fiil (düzensiz, OEWN)"
+  },
+  "wept": {
+   "tokens": [
+    "wept"
+   ],
+   "not": "weep+fiil (düzensiz, OEWN)"
   },
   "were": {
    "tokens": [
     "were"
    ],
-   "not": "be+geçmiş (düzensiz)"
+   "not": "be+fiil (düzensiz, OEWN)"
+  },
+  "whipsawn": {
+   "tokens": [
+    "whipsawn"
+   ],
+   "not": "whipsaw+fiil (düzensiz, OEWN)"
+  },
+  "whizzes": {
+   "tokens": [
+    "whizzes"
+   ],
+   "not": "whiz+fiil (düzensiz, OEWN)"
+  },
+  "withdrawn": {
+   "tokens": [
+    "withdrawn"
+   ],
+   "not": "withdraw+fiil (düzensiz, OEWN)"
+  },
+  "withdrew": {
+   "tokens": [
+    "withdrew"
+   ],
+   "not": "withdraw+fiil (düzensiz, OEWN)"
+  },
+  "withheld": {
+   "tokens": [
+    "withheld"
+   ],
+   "not": "withhold+fiil (düzensiz, OEWN)"
+  },
+  "withstood": {
+   "tokens": [
+    "withstood"
+   ],
+   "not": "withstand+fiil (düzensiz, OEWN)"
   },
   "woke": {
    "tokens": [
     "woke"
    ],
-   "not": "wake+geçmiş (düzensiz)"
+   "not": "wake+fiil (düzensiz, OEWN)"
   },
   "woken": {
    "tokens": [
     "woken"
    ],
-   "not": "wake+geçmiş (düzensiz)"
+   "not": "wake+fiil (düzensiz, OEWN)"
   },
   "women": {
    "tokens": [
     "women"
    ],
-   "not": "woman+çoğul (düzensiz)"
+   "not": "woman+isim (düzensiz, elle)"
   },
   "won": {
    "tokens": [
     "won"
    ],
-   "not": "win+geçmiş (düzensiz)"
+   "not": "win+fiil (düzensiz, OEWN)"
+  },
+  "woodlice": {
+   "tokens": [
+    "woodlice"
+   ],
+   "not": "woodlouse+isim (düzensiz, OEWN)"
   },
   "wore": {
    "tokens": [
     "wore"
    ],
-   "not": "wear+geçmiş (düzensiz)"
+   "not": "wear+fiil (düzensiz, OEWN)"
   },
   "worn": {
    "tokens": [
     "worn"
    ],
-   "not": "wear+geçmiş (düzensiz)"
+   "not": "wear+fiil (düzensiz, OEWN)"
   },
   "worse": {
    "tokens": [
     "worse"
    ],
-   "not": "bad+karşılaştırma (düzensiz)"
+   "not": "bad+sıfat (düzensiz, OEWN)"
   },
   "worst": {
    "tokens": [
     "worst"
    ],
-   "not": "bad+karşılaştırma (düzensiz)"
+   "not": "bad+sıfat (düzensiz, OEWN)"
+  },
+  "wound": {
+   "tokens": [
+    "wound"
+   ],
+   "not": "wind+fiil (düzensiz, OEWN)"
+  },
+  "wove": {
+   "tokens": [
+    "wove"
+   ],
+   "not": "weave+fiil (düzensiz, OEWN)"
+  },
+  "woven": {
+   "tokens": [
+    "woven"
+   ],
+   "not": "weave+fiil (düzensiz, OEWN)"
   },
   "written": {
    "tokens": [
     "written"
    ],
-   "not": "write+geçmiş (düzensiz)"
+   "not": "write+fiil (düzensiz, OEWN)"
   },
   "wrote": {
    "tokens": [
     "wrote"
    ],
-   "not": "write+geçmiş (düzensiz)"
+   "not": "write+fiil (düzensiz, OEWN)"
+  },
+  "wrought": {
+   "tokens": [
+    "wrought"
+   ],
+   "not": "work+fiil (düzensiz, OEWN)"
+  },
+  "wrung": {
+   "tokens": [
+    "wrung"
+   ],
+   "not": "wring+fiil (düzensiz, OEWN)"
+  },
+  "wryer": {
+   "tokens": [
+    "wryer"
+   ],
+   "not": "wry+sıfat (düzensiz, OEWN)"
+  },
+  "wryest": {
+   "tokens": [
+    "wryest"
+   ],
+   "not": "wry+sıfat (düzensiz, OEWN)"
+  },
+  "yeshivahs": {
+   "tokens": [
+    "yeshivahs"
+   ],
+   "not": "yeshiva+isim (düzensiz, OEWN)"
+  },
+  "yeshivoth": {
+   "tokens": [
+    "yeshivoth"
+   ],
+   "not": "yeshiva+isim (düzensiz, OEWN)"
+  },
+  "yogin": {
+   "tokens": [
+    "yogin"
+   ],
+   "not": "yogi+isim (düzensiz, OEWN)"
+  },
+  "zoonoses": {
+   "tokens": [
+    "zoonoses"
+   ],
+   "not": "zoonosis+isim (düzensiz, OEWN)"
   }
  },
  "kısaltma": {
