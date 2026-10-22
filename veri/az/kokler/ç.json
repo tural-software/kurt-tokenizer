@@ -172,7 +172,7 @@
   "çezmə": {"tokens": ["çez", "mə"], "tür": "isim", "son_ünlü": "ə", "son_ses": "ünlü", "değişim": null, "türemiş": "ekli"},
   "çəki": {"tokens": ["çə", "ki"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "çəkic": {"tokens": ["çə", "kic"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
-  "çəkik": {"tokens": ["çə", "kik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}},
+  "çəkik": {"tokens": ["çə", "kik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→y": "ünlü_ile_başlayan_ek_gelince"}, "geri": true},
   "çəkil": {"tokens": ["çə", "kil"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "çəkim": {"tokens": ["çə", "kim"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "çəkin": {"tokens": ["çə", "kin"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "türemiş": "ekli"},

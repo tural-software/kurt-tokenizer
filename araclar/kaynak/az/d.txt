@@ -674,7 +674,7 @@ davsonit|isim|
 davul|isim|
 davulçu|isim|
 davulçuluq|isim|q→ğ
-day|isim|
+day|isim|geri
 daya|fiil|
 dayaq|isim|q→ğ
 dayaqaltı|isim|
@@ -977,7 +977,7 @@ demokratlıq|isim|q→ğ
 demoqraf|isim|
 demoqrafik|isim|k→y
 demoqrafiya|isim|
-demon|isim|
+demon|isim|geri
 demonetləş|fiil|
 demonetləşmə|isim|türemiş_ekli
 demonik|isim|k→y
@@ -1655,7 +1655,7 @@ dəriqaşıyan|isim|
 dəriqurudan|isim|
 dərili|isim|
 dərilik|isim|k→y
-dərin|isim|
+dərin|isim|geri
 dərindən|isim|
 dərindüşüncəli|isim|
 dərinfikirli|isim|

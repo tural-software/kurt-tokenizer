@@ -1,6 +1,6 @@
 {
-  "bab": {"tokens": ["bab"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
-  "bac": {"tokens": ["bac"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "bab": {"tokens": ["bab"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "geri": true},
+  "bac": {"tokens": ["bac"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "geri": true},
   "bağ": {"tokens": ["bağ"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "bah": {"tokens": ["bah"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "bax": {"tokens": ["bax"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
@@ -241,7 +241,7 @@
   "başcıl": {"tokens": ["baş", "cıl"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "başçı": {"tokens": ["baş", "çı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
   "başqa": {"tokens": ["baş", "qa"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
-  "başqan": {"tokens": ["baş", "qan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "başqan": {"tokens": ["baş", "qan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "geri": true},
   "başqırd": {"tokens": ["baş", "qırd"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "başla": {"tokens": ["baş", "la"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "başlı": {"tokens": ["baş", "lı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},

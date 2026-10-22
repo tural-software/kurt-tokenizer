@@ -160,7 +160,7 @@ qaçqınlıq|isim|q→ğ
 qaçma|isim|türemiş_ekli
 qada|isim|
 qadağa|isim|
-qadağan|isim|
+qadağan|isim|geri
 qadağanedici|isim|
 qadaq|isim|q→ğ
 qadalı|isim|
@@ -281,7 +281,7 @@ qalama|isim|türemiş_ekli
 qalantereya|isim|
 qalantereyaçı|isim|
 qalaüstü|isim|
-qalay|isim|
+qalay|isim|geri
 qalayçı|isim|
 qalayçılıq|isim|q→ğ
 qalayla|fiil|

@@ -44,9 +44,11 @@ class DilProfili:
     edilgen_tek_heceli_y: bool = False  # tek heceli ünlü-sonu gövdede edilgen (y)Il (AZ deyil, yeyil)
     ettirgen_çok_heceli_rl: bool = False  # -t yalnız ünlü + ÇOK heceli r/l sonrası (AZ oturt/azalt;
                                           # tek heceli gördür/aldır). False: Türkçe (ünlü/r → t)
-    rakam_tire_eki: bool = False  # rakamdan sonra tire + harf = ek (AZ 2024-cü, 5-də; kesme gibi)
-    büyük_tire_eki: bool = False  # büyük harfli parça + tek tire + küçük harfli parça = ek (AZ ABŞ-ın,
-    #                               Magnitsky-nin, XX-ci: kısaltma/yabancı özel ada ek tireyle)
+    rakam_tire_eki: bool = False  # rakamdan (ya da % ² ³ ° işaretinden) sonra tire + harf = ek (AZ 2024-cü,
+    #                               5-də, 30%-i, km²-dir; kesme gibi)
+    büyük_tire_eki: bool = False  # büyük harfli ya da ÜNLÜSÜZ küçük harfli parça + tek tire + küçük harfli
+    #                               parça = ek (AZ ABŞ-ın, Magnitsky-nin, XX-ci, km-i, mm-dir: kısaltma/yabancı
+    #                               özel ada ek tireyle; ünlüsüz dizi AZ sözcüğü olamaz → ev-ev bileşik kalır)
     kişi_lisansı: tuple = ()    # ortak KİŞİ_LİSANS'a dile özgü ek: (ek_adı, tip, kaynak) üçlüleri
     # Seçim politikası eklentileri (pipeline.en_iyi_çözüm; Türkçe politika değişmez):
     son_çare_ekler: frozenset = frozenset()  # bu ekleri içeren çözüm yalnız başka çözüm yoksa

@@ -138,7 +138,7 @@ oğlansayağı|isim|
 oğru|isim|
 oğrubaşı|isim|
 oğrubaşılıq|isim|q→ğ
-oğrun|isim|
+oğrun|isim|geri
 oğrunca|isim|
 oğruncasına|isim|türemiş
 oğul|isim|düşen

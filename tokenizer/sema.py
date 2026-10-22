@@ -45,6 +45,9 @@ class Kök:
     #                         gəlir = gəl+ir); "ekli": yalnız ek alınca (-mA adı: düymə bütün, gəlməliyəm =
     #                         gəl+məli+y+əm); "çıplak": yalnız eksizken (-Ir ettirgen: artır = art+ır,
     #                         artırmalı = artır+malı)
+    geri: bool = False      # eşsesli kök çakışmasında geri çekilir: aynı yüzeyi rakip bir kök de üretiyorsa o
+    #                         yeğlenir (AZ korpus kararı, scripts/az_sozluk/geri.py: bacım = bacı+m, bac+ı+m
+    #                         değil; siyahımıza = siyahı+mız+a). Tek okumada etkisiz
     ek_değişim: dict | None = None  # İKİNCİL sınıf (ek_tür) okumasının yumuşaması; None=ikincilde
     #                                 yumuşama yok (art→artıyor). tat gibi her-iki-yön: {t→d} (tadıyor)
 
@@ -127,6 +130,8 @@ def doğrula(ad: str, kök: Kök, profil=None) -> list[str]:
         hatalar.append(f"{ad!r}: qoşa_tek yalnız çift ünsüzle biten kökte anlamlı")
     if kök.türemiş not in TÜREMİŞ_TÜRLERİ:
         hatalar.append(f"{ad!r}: türemiş alanı {sorted(TÜREMİŞ_TÜRLERİ)} olmalı, bulundu {kök.türemiş!r}")
+    if not isinstance(kök.geri, bool):
+        hatalar.append(f"{ad!r}: geri alanı bool olmalı, bulundu {kök.geri!r}")
     if not isinstance(kök.y_tampon, bool):
         hatalar.append(f"{ad!r}: y_tampon alanı bool olmalı, bulundu {kök.y_tampon!r}")
     elif kök.y_tampon and kök.son_ses != "ünlü":

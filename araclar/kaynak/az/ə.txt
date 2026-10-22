@@ -608,7 +608,7 @@
 əmiqızı|isim|
 əmiqızılıq|isim|q→ğ
 əmilik|isim|k→y
-əmin|isim|
+əmin|isim|geri
 əminəvəsi|isim|
 əminləş|fiil|
 əminləşmə|isim|türemiş_ekli

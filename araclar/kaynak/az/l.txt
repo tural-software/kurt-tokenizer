@@ -161,7 +161,7 @@ lampaaltlığı|isim|
 lampacıq|isim|q→ğ
 lampaçı|isim|
 lampalı|isim|
-lampas|isim|
+lampas|isim|geri
 lampaslı|isim|
 lampaüstlüyü|isim|
 lampaüstü|isim|

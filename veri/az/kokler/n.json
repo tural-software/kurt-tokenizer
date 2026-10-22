@@ -241,7 +241,7 @@
   "norka": {"tokens": ["nor", "ka"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "norma": {"tokens": ["nor", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "normal": {"tokens": ["nor", "mal"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
-  "norman": {"tokens": ["nor", "man"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "norman": {"tokens": ["nor", "man"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "geri": true},
   "norveç": {"tokens": ["nor", "veç"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "nostro": {"tokens": ["nost", "ro"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünlü", "değişim": null},
   "nota": {"tokens": ["no", "ta"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
