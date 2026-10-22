@@ -1,0 +1,472 @@
+# Fransızca altın liste (FR-1, elle denetlendi): sözcük<TAB>beklenen tokenlar (boşlukla). test_fr birebir kilitler.
+# Gövde değişimi/ikizleşme gövde tokenında (commenç+ons, appell+e, bonn+e); ek tek token (parl+ées); 3. grup gövde
+# varyantı (vien+t, viendr+ai); gelecek = mastar gövdesi + ek (parler+ai); düzensiz biçim bütün (est, vont).
+parle	parl e
+parles	parl es
+parlons	parl ons
+parlez	parl ez
+parlent	parl ent
+parlais	parl ais
+parlait	parl ait
+parlions	parl ions
+parlaient	parl aient
+parlai	parl ai
+parla	parl a
+parlèrent	parl èrent
+parlerai	parler ai
+parlera	parler a
+parlerons	parler ons
+parleraient	parler aient
+parlé	parl é
+parlée	parl ée
+parlés	parl és
+parlées	parl ées
+parlant	parl ant
+parlasse	parl asse
+commence	commenc e
+commençons	commenç ons
+commençais	commenç ais
+commencions	commenc ions
+commencé	commenc é
+commença	commenç a
+commencèrent	commenc èrent
+mange	mang e
+mangeons	mange ons
+mangeais	mange ais
+mangeant	mange ant
+mangé	mang é
+lève	lèv e
+levons	lev ons
+lèvent	lèv ent
+lèverai	lèver ai
+levé	lev é
+achète	achèt e
+achetons	achet ons
+achèterai	achèter ai
+appelle	appell e
+appelons	appel ons
+appellent	appell ent
+appellerai	appeller ai
+appelé	appel é
+jette	jett e
+jetons	jet ons
+jetterai	jetter ai
+renouvelle	renouvell e
+renouvèle	renouvèl e
+renouvellera	renouveller a
+renouvèlera	renouvèler a
+cède	cèd e
+cédons	céd ons
+cèdent	cèd ent
+céderai	céder ai
+cèderai	cèder ai
+cédé	céd é
+préfère	préfèr e
+préférons	préfér ons
+protège	protèg e
+protégeons	protége ons
+sèche	sèch e
+régner	régner
+règne	règn e
+paie	pai e
+paye	pay e
+payons	pay ons
+paierai	paier ai
+payerai	payer ai
+nettoie	nettoi e
+nettoyons	nettoy ons
+nettoierai	nettoier ai
+essuie	essui e
+finis	fin is
+finit	fin it
+finissons	fin iss ons
+finissez	fin iss ez
+finissent	fin iss ent
+finissais	fin iss ais
+finirai	finir ai
+fini	fin i
+finie	fin ie
+finît	fin ît
+choisissons	chois iss ons
+réussi	réuss i
+viens	vien s
+vient	vien t
+venons	ven ons
+venez	ven ez
+viennent	vienn ent
+venais	ven ais
+viendrai	viendr ai
+viendrait	viendr ait
+vins	vin s
+vint	vin t
+vînmes	vîn mes
+venu	ven u
+venue	ven ue
+venus	ven us
+devenu	deven u
+obtient	obtien t
+obtenu	obten u
+maintient	maintien t
+prends	prend s
+prend	prend
+prenons	pren ons
+prennent	prenn ent
+prenait	pren ait
+prendrai	prendr ai
+pris	pr is
+prise	pr ise
+prises	pr ises
+compris	compr is
+apprennent	apprenn ent
+mets	met s
+met	met
+mettons	mett ons
+mettent	mett ent
+mis	m is
+mise	m ise
+permis	perm is
+vends	vend s
+vend	vend
+vendons	vend ons
+vendent	vend ent
+vendu	vend u
+vendue	vend ue
+vendrai	vendr ai
+attendu	attend u
+entend	entend
+rompt	romp t
+pars	par s
+part	part
+partons	part ons
+partent	part ent
+parti	part i
+partie	partie
+sortis	sort is
+dors	dor s
+dort	dor t
+dormons	dorm ons
+sers	ser s
+servons	serv ons
+servi	serv i
+ouvre	ouvr e
+ouvrons	ouvr ons
+ouvert	ouver t
+ouverte	ouver te
+offert	offer t
+souffert	souffer t
+cueille	cueill e
+accueilli	accueill i
+cours	cour s
+court	court
+courons	cour ons
+couru	cour u
+mourir	mourir
+meurt	meur t
+mourons	mour ons
+mort	mort
+morte	mor te
+acquis	acqu is
+reçois	reçoi s
+reçoit	reçoi t
+recevons	recev ons
+reçoivent	reçoiv ent
+recevrai	recevr ai
+reçu	reç u
+reçue	reç ue
+aperçu	aperç u
+dois	doi s
+doit	doi t
+devons	dev ons
+doivent	doiv ent
+devrai	devr ai
+dû	d û
+due	d ue
+dus	d us
+peux	peu x
+peut	peu t
+pouvons	pouv ons
+peuvent	peuv ent
+pourrai	pourr ai
+pourrait	pourr ait
+pu	p u
+puisse	puiss e
+veux	veu x
+veut	veu t
+voulons	voul ons
+veulent	veul ent
+voudrais	voudr ais
+voulu	voul u
+veuille	veuill e
+sais	sai s
+sait	sai t
+savons	sav ons
+savent	sav ent
+saurai	saur ai
+su	s u
+sache	sach e
+vaut	vau t
+valent	val ent
+vaudrait	vaudr ait
+valu	val u
+vois	voi s
+voit	voi t
+voyons	voy ons
+voient	voi ent
+verrai	verr ai
+vu	v u
+vue	v ue
+prévoit	prévoi t
+prévoira	prévoir a
+crois	croi s
+croit	croi t
+croyons	croy ons
+croient	croi ent
+cru	cr u
+bois	boi s
+boit	boi t
+buvons	buv ons
+boivent	boiv ent
+bu	b u
+dis	di s
+dit	di t
+disons	dis ons
+dites	dites
+disent	dis ent
+dirai	dir ai
+interdisez	interdis ez
+lis	li s
+lit	lit
+lisons	lis ons
+lu	l u
+écris	écri s
+écrit	écri t
+écrivons	écriv ons
+écrite	écri te
+décrit	décri t
+ris	ri s
+rit	ri t
+riant	ri ant
+ri	r i
+conduis	condui s
+conduit	condui t
+conduisons	conduis ons
+produit	produit
+produite	produi te
+construit	construi t
+connais	connai s
+connaît	connaî t
+connait	connai t
+connaissons	connaiss ons
+connu	conn u
+reconnu	reconn u
+paraît	paraî t
+parait	parai t
+paru	par u
+disparu	dispar u
+naît	naî t
+né	n é
+née	n ée
+plaît	plaî t
+plu	pl u
+craint	crain t
+craignons	craign ons
+crains	crain s
+peint	pein t
+rejoint	rejoin t
+résout	résou t
+résolu	résol u
+vis	vi s
+vit	vi t
+vivons	viv ons
+vécu	véc u
+suis	suis
+suit	sui t
+suivons	suiv ons
+suivi	suiv i
+conclu	concl u
+exclu	excl u
+inclus	inclu s
+inclut	inclu t
+vainc	vainc
+vainquons	vainqu ons
+convaincu	convainc u
+envoie	envoi e
+envoyons	envoy ons
+enverrai	enverr ai
+envoyé	envoy é
+es	es
+est	est
+sommes	sommes
+êtes	êtes
+sont	sont
+étais	ét ais
+était	ét ait
+étions	ét ions
+seront	ser ont
+serait	ser ait
+été	été
+étant	ét ant
+sois	soi s
+soit	soi t
+soyons	soy ons
+fut	f ut
+furent	f urent
+ai	ai
+as	as
+a	a
+avons	av ons
+avez	av ez
+ont	ont
+avais	av ais
+avait	av ait
+aurai	aur ai
+aurait	aur ait
+eu	e u
+eue	e ue
+eus	e us
+ayant	ay ant
+aie	ai e
+ait	ai t
+ayons	ay ons
+vais	vais
+vas	vas
+va	va
+allons	all ons
+allez	all ez
+vont	vont
+allais	all ais
+irai	ir ai
+irait	ir ait
+allé	all é
+allée	all ée
+aille	aill e
+fais	fai s
+fait	fait
+faisons	fais ons
+faites	faites
+font	font
+faisais	fais ais
+ferai	fer ai
+ferait	fer ait
+faite	fai te
+faits	fait s
+fasse	fass e
+homme	homme
+hommes	homme s
+femme	femme
+femmes	femme s
+enfants	enfant s
+yeux	yeux
+journal	journal
+journaux	journ aux
+travail	travail
+travaux	trav aux
+cheval	cheval
+chevaux	chev aux
+animaux	anim aux
+jeux	jeu x
+bijoux	bijou x
+genoux	genou x
+pneus	pneu s
+festivals	festival s
+bals	bal s
+lieux	lieu x
+dieux	dieu x
+bras	bras
+prix	prix
+grand	grand
+grande	grand e
+grands	grand s
+grandes	grand es
+bon	bon
+bonne	bonn e
+bons	bon s
+bonnes	bonn es
+beau	beau
+belle	bell e
+beaux	beau x
+belles	bell es
+nouveau	nouveau
+nouvelle	nouvelle
+nouveaux	nouveau x
+vieux	vieux
+vieille	vieill e
+vieilles	vieill es
+heureux	heureux
+heureuse	heureus e
+heureuses	heureus es
+actif	actif
+active	activ e
+actives	activ es
+premier	premier
+première	premièr e
+premières	premièr es
+long	long
+longue	longu e
+grosse	gross e
+basse	bass e
+épaisse	épaiss e
+gentille	gentill e
+nulle	null e
+blanc	blanc
+blanche	blanch e
+franche	franch e
+publique	publiqu e
+turque	turqu e
+grecque	grecqu e
+douce	douc e
+fausse	fauss e
+fraîche	fraîch e
+favorite	favorit e
+folle	foll e
+molle	moll e
+brève	brèv e
+cruel	cruel
+cruelle	cruell e
+ancien	ancien
+ancienne	ancienn e
+européenne	européenn e
+net	net
+nette	nett e
+muet	muet
+muette	muett e
+complet	complet
+complète	complèt e
+discrète	discrèt e
+inquiète	inquièt e
+sotte	sott e
+idiote	idiot e
+général	général
+généraux	génér aux
+générale	général e
+sociaux	soci aux
+final	final
+finals	final s
+banals	banal s
+égaux	ég aux
+rapidement	rapidement
+lentement	lentement
+heureusement	heureus ement
+activement	activ ement
+vraiment	vraiment
+poliment	poli ment
+absolument	absolu ment
+aisément	aisé ment
+constamment	const amment
+évidemment	évid emment
+récemment	réc emment
+généralement	général ement
+refaire	refaire
+refais	refai s
+refait	refai t
+redire	redire
+relire	relire
+défaire	défaire
+inégaux	in ég aux
+impossible	impossible
+antisocial	anti social
+cœur	cœur
+cœurs	cœur s
+sœur	sœur
+sœurs	sœur s
+œil	œil

@@ -335,9 +335,50 @@ def _klitik_birleştir(altbirimler, profil):
     return sonuç
 
 
+def _elizyon_birleştir(altbirimler, profil):
+    """Soldaki elizyonu tek birime birleştirir (FR l'homme, qu’il): [harf, kesme, harf] üçlüsünde ilk harf koşusu
+    (küçük harfle) bir elizyonsa kesmeyle birleşir ve AYRI birim olur → [l', homme]. Başka kesmeler (aujourd'hui,
+    O'Neill) dokunulmaz; kesmeli bütün sözcükleri çözümleyicinin istisnası ayrıca birleştirir (_kesmeli_birleştir)."""
+    sonuç, j = [], 0
+    while j < len(altbirimler):
+        a, h = altbirimler[j]
+        if (h and j + 2 < len(altbirimler) and altbirimler[j + 1][0] in KESME[:2]
+                and altbirimler[j + 2][1] and profil.küçült(a) in profil.elizyonlar):
+            sonuç.append((a + altbirimler[j + 1][0], True))
+            j += 2
+            continue
+        sonuç.append((a, h))
+        j += 1
+    return sonuç
+
+
+def _kesmeli_birleştir(altbirimler, istisnalar, profil):
+    """Kesmeli bütün sözcük (FR aujourd'hui, presqu'île): [harf, kesme, harf] birleşimi istisnaysa tek birim."""
+    sonuç, j = [], 0
+    while j < len(altbirimler):
+        if (j + 2 < len(altbirimler) and altbirimler[j][1] and altbirimler[j + 1][0] in KESME[:2]
+                and altbirimler[j + 2][1]):
+            birleşik = altbirimler[j][0] + altbirimler[j + 1][0] + altbirimler[j + 2][0]
+            if profil.küçült(birleşik).replace("’", "'") in istisnalar:
+                sonuç.append((birleşik, True))
+                j += 3
+                continue
+        sonuç.append(altbirimler[j])
+        j += 1
+    return sonuç
+
+
 def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=None, ad_okuma=False):
     """(token_listesi, bilinmeyen_mi) döndürür. bilinmeyen_mi: çözülemedi → kuyruğa alındı.
     ad_okuma: kelime Başlık biçiminde (profil.özel_ad_başlık) → özel ad okuması yeğlenir (Gəncə = gəncə, gənc+ə değil)."""
+    if profil is not None and profil.motor == "fr":
+        from tokenizer import fr                 # Fransızca çekim üreteçli çözümleyici (FR-1)
+        çs, _ = fr.çözümle(kelime, kökler, ekler, istisnalar)
+        if çs:
+            return list(fr.en_iyi(çs, kökler, ad_okuma).tokens), False
+        if kuyruk is not None:
+            kuyruk.ekle(kelime, bağlam)
+        return [kelime], True
     if profil is not None and profil.motor == "en":
         from tokenizer import en                 # İngilizce yazım kurallı çözümleyici (EN-1)
         çs, taban = en.çözümle(kelime, kökler, ekler, istisnalar, profil.klitikler)
@@ -518,6 +559,10 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
     altbirimler = list(_altbirimler(parça))
     if profil is not None and profil.klitikler:
         altbirimler = _klitik_birleştir(altbirimler, profil)
+    if profil is not None and profil.elizyonlar:
+        if istisnalar:
+            altbirimler = _kesmeli_birleştir(altbirimler, istisnalar, profil)
+        altbirimler = _elizyon_birleştir(altbirimler, profil)
     kesme_eki = profil is None or profil.kesme_eki
     atla = False
     for j, (altbirim, kelime_mi) in enumerate(altbirimler):
@@ -559,7 +604,8 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
         if profil is not None and profil.casing == "unicode" and durum in BÜYÜK:
             # EN: Python casing'i, decode'un ASCII işaretçisiyle aynı kural (str.upper; 'I' → 'i', 'ı' değil).
             # Klitikli HEP BÜYÜK sözcük (DON'T) bütün: decode'da kesme koşuyu bitirir, klitik büyütülemezdi.
-            durum = ("düz" if durum == HEP_BÜYÜK and any(c in KESME for c in altbirim)
+            # Elizyon birimi (QU') kesmeyle BİTER: kesme koşuyu yalnız sonunda bitirir → işaretçi yeterli.
+            durum = ("düz" if durum == HEP_BÜYÜK and any(c in KESME for c in altbirim[:-1])
                      else ASCII_BAŞ if durum == BAŞ_BÜYÜK else ASCII_HEP)
         if durum == "düz":                       # karışık biçim → bütün-token, koru
             tokenlar.append(altbirim)

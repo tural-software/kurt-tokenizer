@@ -76,7 +76,7 @@ class TürkçeProfilEşitliği(unittest.TestCase):
 
     def test_profil_listesi(self):
         self.assertEqual(PROFİLLER["tr"], TR)
-        self.assertEqual(DOĞAL_DİLLER, frozenset({"az", "en"}))   # Türkçe dil=None ile seçilir
+        self.assertEqual(DOĞAL_DİLLER, frozenset({"az", "en", "fr"}))   # Türkçe dil=None ile seçilir
 
 
 class AçıkTürkçeProfilBirebir(unittest.TestCase):

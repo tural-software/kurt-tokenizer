@@ -73,12 +73,14 @@ class DilProfili:
     #                                          değil; tamlayan + idi: oxundu = oxu+n+du, ox+un+du değil)
     # Dil ailesi (EN-1): Türk dilleri ünlü uyumlu üreteci (birlestir/cozumle) paylaşır; İngilizce yazım
     # kurallı kendi üretecini (tokenizer/en.py) kullanır. Hat, casing, vocab, kuyruk ve seçim ortak.
-    motor: str = "türk"         # "türk" | "en" (sözcük çözümleyicisi)
+    motor: str = "türk"         # "türk" | "en" | "fr" (sözcük çözümleyicisi)
     casing: str = "türk"        # "türk": İ/i I/ı, işaretçi <|Bb|>/<|BB|> | "unicode": str.lower/upper,
     #                             işaretçi <|Ab|>/<|AA|> (İngilizce 'I' → 'ı' olmaz)
-    hece: str = "türk"          # yedek heceleme kuralı: "türk" (hece.py) | "en" (en.hecele)
+    hece: str = "türk"          # yedek heceleme kuralı: "türk" (hece.py) | "en" (en.hecele) | "fr" (fr.hecele)
     kesme_eki: bool = True      # kesme sonrası harf koşusu EK (Türkçe İstanbul'da); EN'de kapalı (O'Brien)
     klitikler: tuple = ()       # kesmeli klitikler (EN 's 're n't …): sözcükle birleşik okunur (en.py)
+    elizyonlar: tuple = ()      # SOLDAKİ kesmeli klitikler (FR l' d' qu' …): kesmeyle tek birim, sonraki sözcükten
+    #                             ayrı token (l'homme = l' + homme; pipeline._elizyon_birleştir)
     yeğlenmeyen_ekler: frozenset = frozenset()  # aynı token sayısında bu ekleri içermeyen çözüm
     #                             yeğlenir (AZ 2. kişi iyelik: altından = alt+ı+n+dan, altı+n+dan değil;
     #                             edilgen/ettirgen: yerinə = yer+i+n+ə, yeri+n+ə değil; yapım -lI: həlli =
@@ -214,6 +216,30 @@ EN = DilProfili(
     özel_ad_başlık=True,
 )
 
-PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ, "en": EN}
+# Fransızca (FR-1): ünlü uyumu yok; çekim kendi üretecinde (tokenizer/fr.py, veri/fr/cekim.json). Harfler a-z +
+# à â æ ç é è ê ë î ï ô œ ù û ü ÿ. Elizyon solda ayrı token; kesme sonrası ek kuralı kapalı (aujourd'hui, l'homme).
+FR = DilProfili(
+    kod="fr",
+    alfabe="aàâæbcçdeéèêëfghiîïjklmnoôœpqrstuùûüvwxyÿz",
+    ünlüler=frozenset("aàâæeéèêëiîïoôœuùûüyÿ"),
+    kalın=frozenset(),
+    ince=frozenset(),
+    düz=frozenset(),
+    yuvarlak=frozenset(),
+    sert=frozenset(),
+    geniş_ince="",
+    ince_karşılık=(),
+    değişken_son="",
+    daralan_son="",
+    daraltma="",
+    motor="fr",
+    casing="unicode",
+    hece="fr",
+    kesme_eki=False,
+    elizyonlar=("l", "d", "j", "m", "t", "s", "n", "c", "ç", "qu", "jusqu", "lorsqu", "puisqu", "quoiqu", "quelqu"),
+    özel_ad_başlık=True,
+)
+
+PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ, "en": EN, "fr": FR}
 # Metin kipinde seçilebilen doğal diller (None = Türkçe). Kod kipindeki 'dil' programlama dilidir.
 DOĞAL_DİLLER = frozenset(k for k in PROFİLLER if k != "tr")
