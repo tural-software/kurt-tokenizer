@@ -149,6 +149,9 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # FR-4 — Fransızca: FR motor tokenları − mevcut vocab (ek/önek/elizyon/istisna parçası + œ Œ ÿ Ÿ hepsi + FineWeb-2
     # train'de kazancı en yüksek bütün gövdeler + yedek yazım heceleri; pay 3.500). Yalnız dil="fr" metin kipinde açık.
     ("fr-1", _statik_bölüm(_VERİ / "fr" / "vocab_fr1.json")),
+    # DE-4 — Almanca: DE motor tokenları − mevcut vocab (ek/Fugen/önek/istisna parçası + ẞ hepsi + FineWeb-2 deu
+    # train/000'de kazancı en yüksek bütün gövdeler + yedek yazım heceleri; pay 3.800). Yalnız dil="de" metin kipinde açık.
+    ("de-1", _statik_bölüm(_VERİ / "de" / "vocab_de1.json")),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -173,6 +176,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("az-2", 39, "87a9d197aa20b2e7f585d4e6c1a54fb4eb54f13f96189aba27c060f671b54d3a"),
     ("en-1", 5000, "ff21a7d8b7530ebc407724110d5ad35830351951c512c24b1a39a14c11ba613f"),
     ("fr-1", 3500, "aed960a28afc27e1332de5d39b387b8019ea854e3e0111a36d5e2aed2d6f44b6"),
+    ("de-1", 3800, "3def40fac7a1c2845ec9c67c5fcf3735c93871305ae4ed217979e6417d001d5b"),
 ]
 
 
