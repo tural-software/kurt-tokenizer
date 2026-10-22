@@ -40,7 +40,7 @@ def okuma(sözcük: str) -> list[str]:
 
 class Veri(unittest.TestCase):
     def test_yüklenir(self):
-        self.assertGreater(len(V.kökler), 700)
+        self.assertGreater(len(V.kökler), 20000)
         self.assertIn("ons", V.ekler.ekler)
         self.assertIn("l'", V.istisnalar)
         self.assertEqual(V.istisnalar["l'"].grup, "elizyon")
@@ -99,12 +99,18 @@ class SahteBölmeYok(unittest.TestCase):
         self.assertEqual(kayıp, [])
 
     def test_önek_sınırı(self):
-        self.assertEqual(okuma("présent"), [])              # pré+sent (sentir) değil: pré- önek değil
-        self.assertEqual(okuma("désert"), [])               # dé+sert (servir) değil: kalan yüzey < 5
+        # fiil önekleri yok: sözlük açığına açık (réglisse ≠ ré+glisse, décadence ≠ dé+cadence, recrues ≠ re+crues)
+        self.assertFalse({"pré", "re", "ré", "dé"} & {ö for ö, _ in V.ekler.önekler})
+        self.assertNotIn("dé", okuma("désert") or ["?"])     # dé+sert (servir) değil: kalan yüzey < 5
         self.assertEqual(okuma("redire"), ["redire"])       # kök bütün
         self.assertEqual(okuma("antisocial"), ["anti", "social"])
-        self.assertEqual(okuma("refermons"), ["re", "ferm", "ons"])   # refermer kök değil: re + fermer
-        self.assertEqual(okuma("relevons"), ["relev", "ons"])         # relever kök: önek okunmaz
+        self.assertEqual(okuma("inacceptables"), ["in", "acceptable", "s"])
+        self.assertEqual(okuma("refermons"), ["referm", "ons"])       # refermer kök: önek okunmaz
+
+    def test_geri_kök(self):
+        self.assertTrue(V.kökler["étayer"].geri)
+        self.assertEqual(okuma("étaient"), ["ét", "aient"])        # être (étai+ent étayer değil)
+        self.assertFalse(V.kökler["être"].geri)
 
     def test_seçim(self):
         self.assertEqual(okuma("portes"), ["porte", "s"])          # ad çoğulu (port+es fiil değil)
