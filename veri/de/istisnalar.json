@@ -1381,6 +1381,18 @@
     "seitdem"
    ],
    "not": "bağlaç: kapalı sınıf"
+  },
+  "sowie": {
+   "tokens": [
+    "sowie"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "sowohl": {
+   "tokens": [
+    "sowohl"
+   ],
+   "not": "bağlaç: kapalı sınıf"
   }
  },
  "zarf": {
@@ -2411,6 +2423,26 @@
     "tausend"
    ],
    "not": "sayı adı: değişmez"
+  }
+ },
+ "düzensiz": {
+  "worden": {
+   "tokens": [
+    "worden"
+   ],
+   "not": "düzensiz biçim (edilgen ortaç worden: ge- yok; değişmez genug; emir siehe): bütün"
+  },
+  "genug": {
+   "tokens": [
+    "genug"
+   ],
+   "not": "düzensiz biçim (edilgen ortaç worden: ge- yok; değişmez genug; emir siehe): bütün"
+  },
+  "siehe": {
+   "tokens": [
+    "siehe"
+   ],
+   "not": "düzensiz biçim (edilgen ortaç worden: ge- yok; değişmez genug; emir siehe): bütün"
   }
  },
  "ünlem": {

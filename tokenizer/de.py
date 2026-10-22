@@ -46,7 +46,8 @@ TÜRLER = SINIFLAR | KAPALI
 #          an + fangen, taban sözlükte), geyok (ortaç ge- almaz: besuchen → besuch+t; ayrılmayan önekli güçlü fiilde
 #          örnek fiilden kendiliğinden: verstehen ← stehen)
 #   geri:  eşsesli çakışmada geri çekilir (EN/FR gibi)
-BAYRAKLAR = frozenset({"u", "z", "dk", "geyok", "geri"})
+#   bz:    bileşen değil — bileşikte parça olamaz (korpusta seyrek kısa kök: schi, klett; schieben ≠ schi+eben)
+BAYRAKLAR = frozenset({"u", "z", "dk", "geyok", "bz", "geri"})
 DEĞERLİ = frozenset({"ç", "çk", "g", "sg", "kom", "sup", "k", "ay"})
 ÇOĞUL_EKLERİ = frozenset({"e", "er", "en", "n", "s", "nen", "0"})
 TAMLAYAN = frozenset({"s", "es", "ns", "ens"})
@@ -78,6 +79,7 @@ class DeKök:
     sınıf: str = ""          # fiil: "" zayıf | cekim.json örnek fiili
     ayrılır: str = ""        # ayrılabilir önek
     geyok: bool = False      # ortaç ge- almaz
+    bileşensiz: bool = False  # bileşikte parça olamaz
     geri: bool = False
 
     def sınıflar(self) -> list[str]:
@@ -177,7 +179,7 @@ def kökleri_çöz(satırlar, sınıflar: dict) -> dict[str, DeKök]:
         sözlük[ad] = DeKök(tür=türler[0], ek_tür=tuple(türler[1:]), çoğul=değer.get("ç", ""),
                            çoğul_gövde=değer.get("çk", ""), umlaut="u" in düz, tamlayan=değer.get("g", ""),
                            zayıf="z" in düz, sıfat_gövde=değer.get("sg", ""), kom=değer.get("kom", ""), sup=değer.get("sup", ""),
-                           derecesiz="dk" in düz, geyok="geyok" in düz, sınıf=sınıf, ayrılır=değer.get("ay", ""), geri="geri" in düz)
+                           derecesiz="dk" in düz, geyok="geyok" in düz, bileşensiz="bz" in düz, sınıf=sınıf, ayrılır=değer.get("ay", ""), geri="geri" in düz)
     for ad, k in sözlük.items():
         if k.ayrılır and ad[len(k.ayrılır):] not in sözlük:
             hatalar.append(f"{ad!r}: ayrılabilir fiilin tabanı {ad[len(k.ayrılır):]!r} sözlükte yok")
@@ -231,10 +233,11 @@ def veri_yükle(dizin: Path):
     for ad in sorted(kökler, key=sıra_anahtarı):
         for tokenlar, _ in biçimler(ad, kökler[ad], ekler, kökler):
             g = gövde_konumu(tokenlar, kökler[ad])
+            önek = 0 if kökler[ad].ayrılır and tokenlar[0] == kökler[ad].ayrılır else -1   # önek bir sözcüktür
             for i, t in enumerate(tokenlar):
                 if not t:
                     hatalar.append(f"{ad!r}: boş token ({tokenlar})")
-                elif i != g and t not in ekler.ekler:
+                elif i not in (g, önek) and t not in ekler.ekler:
                     hatalar.append(f"{ad!r}: ek {t!r} ekler.json'da yok ({'+'.join(tokenlar)})")
     if hatalar:
         raise DeVeriHatası(sorted(set(hatalar))[:50])
@@ -290,7 +293,7 @@ def _ad(ad: str, kök: DeKök) -> list[tuple[tuple, str]]:
 
 def sıfat_gövdesi(ad: str) -> str:
     """Çekim gövdesi: -el → -l (dunkel → dunkl), -euer/-auer → -eur/-aur (teuer → teur), -e düşer (leise → leis)."""
-    if ad.endswith("el") and len(ad) > 3:
+    if ad.endswith("el") and len(ad) > 3 and ad[-3] not in ÜNLÜ:     # ünsüz + el (viel → viel+e, vil+e değil)
         return ad[:-2] + "l"
     if ad.endswith(("euer", "auer")):
         return ad[:-2] + "r"
@@ -449,7 +452,8 @@ _DİZİNLER: dict = {}
 def _dizin(kökler, ekler):
     """(yüzey → [(tokenlar, kök, ek_adı)], bileşen önekleri) — kök sözlüğü kimliğiyle önbellekli, deterministik.
     Bileşen = bileşiğin baş-dışı parçası olabilecek yüzey → tür: "ad" (ad/sıfat yalın), "edüş" (-e düşmüş ad: schul ←
-    schule; Fugen almaz, energi+e = energie+∅ yinelemesi), "fiil" (gövde: spar ← sparen; FİİL_* kısıtları)."""
+    schule; Fugen almaz, energi+e = energie+∅ yinelemesi), "fiil" (gövde: spar ← sparen; FİİL_* kısıtları), "uml:<ek>"
+    (umlautlu çoğul gövdesi: güt ← Gut/Güter; yalnız kendi çoğul ekiyle: güt+er+umschlag, büch+er+regal)."""
     kayıt = _DİZİNLER.get("de")
     if kayıt is None or kayıt[0] is not kökler:
         d: dict[str, list[tuple]] = {}
@@ -461,13 +465,15 @@ def _dizin(kökler, ekler):
                 liste = d.setdefault("".join(tokenlar), [])
                 if not any(t == tokenlar and k == ad for t, k, _ in liste):
                     liste.append((tokenlar, ad, ek))
-            if kök.geri or kök.tür == "özel" or len(ad) < BİLEŞEN_EN_KISA:
+            if kök.geri or kök.bileşensiz or kök.tür == "özel" or len(ad) < BİLEŞEN_EN_KISA:
                 continue
             sınıflar = kök.sınıflar()
             if "isim" in sınıflar or "sıfat" in sınıflar:
                 bileşen[ad] = "ad"
                 if ad.endswith("e") and len(ad) - 1 >= BİLEŞEN_EN_KISA and "isim" in sınıflar:
                     bileşen.setdefault(ad[:-1], "edüş")
+                if "isim" in sınıflar and kök.umlaut and kök.çoğul in ("er", "e") and not kök.çoğul_gövde:
+                    bileşen.setdefault(umlaut(ad), "uml:" + kök.çoğul)   # Güter+umschlag = güt+er+umschlag
             if "fiil" in sınıflar and not kök.ayrılır:
                 g = _mastar_gövdesi(ad)
                 if len(g) >= FİİL_BİLEŞEN_EN_KISA:
@@ -479,7 +485,7 @@ def _dizin(kökler, ekler):
 def _baş_uygun(kökler, k: str) -> bool:
     """Bileşiğin BAŞI (son parça) ad ya da sıfat olmalı (Arbeitsplatz, hochwertig değil: wertig sözlükte sıfatsa)."""
     kök = kökler[k]
-    return kök.tür != "özel" and not kök.geri and bool({"isim", "sıfat"} & set(kök.sınıflar()))
+    return kök.tür != "özel" and not kök.geri and not kök.bileşensiz and bool({"isim", "sıfat"} & set(kök.sınıflar()))
 
 
 def _bileşik(kelime: str, kökler, ekler, istisnalar, derinlik: int = 0) -> list[tuple]:
@@ -493,7 +499,8 @@ def _bileşik(kelime: str, kökler, ekler, istisnalar, derinlik: int = 0) -> lis
             continue
         tür = bileşen[ön]
         for fuge in ("", *FUGEN):
-            if (fuge and tür == "edüş") or (tür == "fiil" and fuge not in FİİL_FUGEN) or not kelime.startswith(fuge, i):
+            if ((fuge and tür == "edüş") or (tür == "fiil" and fuge not in FİİL_FUGEN)
+                    or (tür.startswith("uml:") and fuge != tür[4:]) or not kelime.startswith(fuge, i)):
                 continue
             kalan = kelime[i + len(fuge):]
             en_kısa = FİİL_BİLEŞEN_EN_KISA if tür == "fiil" else BİLEŞEN_EN_KISA   # sonraki parçanın kök tokenı
@@ -527,27 +534,72 @@ def çözümle(kelime: str, kökler, ekler: DeEkler, istisnalar=None) -> tuple[l
     çözümler = [Çözüm(tokens=list(t), kök=k, ekler=[e] if e else []) for t, k, e in dizin.get(kelime, ())]
     if çözümler:
         return çözümler, None
-    adaylar = _bileşik(kelime, kökler, ekler, istisnalar)
-    if not adaylar:
-        return [], None
-    en_az = min(n for *_, n in adaylar)
-    adaylar = [a for a in adaylar if a[3] == en_az]
-    if len({a[0] for a in adaylar}) > 1:
-        return [], None                                    # belirsiz bileşik: tahmin yok
-    t, k, e, n = min(adaylar, key=lambda a: (a[1], a[2]))
+    seçilen = bileşik_seç(_bileşik(kelime, kökler, ekler, istisnalar))
+    if seçilen is None:
+        return [], None                                    # bileşik yok ya da belirsiz: tahmin yok
+    t, k, e, n = seçilen
     return [Çözüm(tokens=list(t), kök=k, ekler=["bileşik"] * (n - 1) + ([e] if e else []))], None
 
 
+def _sınırlar(tokenlar: tuple) -> tuple:
+    """Parça başlangıçları (karakter konumu); Fugen tokenı önceki parçaya sayılır: wart+e+zimmer ≡ warte+zimmer."""
+    konum, sınır = 0, []
+    for i, t in enumerate(tokenlar):
+        if i == 0 or t not in FUGEN:
+            sınır.append(konum)
+        konum += len(t)
+    return tuple(sınır)
+
+
+def bileşik_seç(adaylar: list[tuple]):
+    """En az parçalı okumalar; parça sınırları hepsinde aynıysa (Fugen yazımı farkı: krank+en / kranke+n) en az token,
+    sonra en uzun parçalar seçilir; sınırlar farklıysa (stau+becken / staub+ecken) None = belirsiz, bütün tut."""
+    if not adaylar:
+        return None
+    en_az = min(a[3] for a in adaylar)
+    adaylar = [a for a in adaylar if a[3] == en_az]
+    # parça başlangıçları (Fugen ve baştaki çekim eki önceki parçada sayılır: lampe+n ≡ lampen)
+    if len({_sınırlar(a[0]) for a in adaylar}) > 1:
+        return None
+    return min(adaylar, key=lambda a: (len(a[0]), [-len(t) for t in a[0]], a[0], a[1], a[2]))
+
+
+
 def en_iyi(çözümler: list[Çözüm], kökler=None, ad_okuma: bool = False) -> Çözüm:
-    """Özel ad SONDA → BÜTÜN kök → en az ek → seyrek kip sonda → gövdesi değişmemiş okuma → geri kök → en az token →
-    en uzun kök → tam kırıcı. ad_okuma DE'de kullanılmaz (profil özel_ad_başlık=False)."""
+    """Özel ad SONDA → yazım biçimine uymayan okuma SONDA (Başlık biçimi: ad okuması; küçük harf / HEP BÜYÜK: ad
+    olmayan okuma — Almanca yazım kuralı: her ad büyük yazılır; Habe ~ habe = hab+e) → geri kök SONDA → BÜTÜN kök → en az ek → seyrek kip sonda → gövdesi değişmemiş okuma → en az
+    token → en uzun kök → tam kırıcı. Geri kök bütün kökten ÖNCE (FR'den fark): Almancada sık çekim biçimiyle aynı
+    yazılan seyrek lemma bol (Lampen ~ lampe+n, schönen 'süslemek' ~ schön+en); geri bayrağı korpus aile sıklığıyla
+    AYNI TÜR okumalar arasında verilir (kaynak_uret.py). ad_okuma: sözcük Başlık biçiminde (profil.ad_büyük)."""
     kökler = kökler or {}
     geri = {ç.kök for ç in çözümler if getattr(kökler.get(ç.kök), "geri", False)
             and any(d.kök != ç.kök for d in çözümler)}
     return min(çözümler, key=lambda ç: (
-        getattr(kökler.get(ç.kök), "tür", "") == "özel",
+        getattr(kökler.get(ç.kök), "tür", "") == "özel", _tür_uyumsuz(ç, kökler, ad_okuma), ç.kök in geri,
         0 if not ç.ekler else 1, len(ç.ekler), sum(e in SEYREK for e in ç.ekler), _gövde_değişti(ç, kökler),
-        ç.kök in geri, len(ç.tokens), -len(ç.kök), tuple(ç.tokens), ç.kök, tuple(ç.ekler)))
+        len(ç.tokens), -len(ç.kök), tuple(ç.tokens), ç.kök, tuple(ç.ekler)))
+
+
+AD_EKLERİ = frozenset({"çoğul", "çoğul_yönelme", "tamlayan", "yönelme_e", "zayıf"})
+
+
+def okuma_türü(ç: Çözüm, kökler) -> str:
+    """Okumanın türü: 'ad' (ad çekimi ya da yalnız ad olan kökün yalın biçimi), 'diğer' (fiil/sıfat biçimi), 'ikisi'
+    (hem ad hem başka sınıfı olan kökün yalın biçimi: Leben, Essen). Bileşikte baş belirler; istisna 'ikisi'."""
+    kök = kökler.get(ç.kök)
+    if kök is None:
+        return "ikisi"
+    ek = [e for e in ç.ekler if e != "bileşik"]
+    if ek:
+        return "ad" if ek[-1] in AD_EKLERİ else "diğer"
+    sınıflar = set(kök.sınıflar())
+    adlar = sınıflar & {"isim", "özel"}
+    return "ikisi" if adlar and sınıflar - adlar else "ad" if adlar else "diğer"
+
+
+def _tür_uyumsuz(ç: Çözüm, kökler, ad_okuma: bool) -> bool:
+    tür = okuma_türü(ç, kökler)
+    return tür != "ikisi" and (tür == "ad") != ad_okuma
 
 
 def _gövde_değişti(ç: Çözüm, kökler) -> bool:

@@ -383,7 +383,7 @@ def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=No
         from tokenizer import de                 # Almanca çekim üreteçli + bileşik çözümleyici (DE-1)
         çs, _ = de.çözümle(kelime, kökler, ekler, istisnalar)
         if çs:
-            return list(de.en_iyi(çs, kökler).tokens), False
+            return list(de.en_iyi(çs, kökler, ad_okuma).tokens), False
         if kuyruk is not None:
             kuyruk.ekle(kelime, bağlam)
         return [kelime], True
@@ -620,7 +620,8 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
             continue
         if durum:                                # casing işaretçisi (Başlık / HEP BÜYÜK)
             tokenlar.append(durum)
-        ad_okuma = profil is not None and profil.özel_ad_başlık and durum in (BAŞ_BÜYÜK, ASCII_BAŞ)
+        ad_okuma = (profil is not None and (profil.özel_ad_başlık or profil.ad_büyük)
+                    and durum in (BAŞ_BÜYÜK, ASCII_BAŞ))
         anahtar = küçük if profil is None else (profil.kod, küçük, "ad") if ad_okuma else (profil.kod, küçük)
         if önbellek is not None and anahtar in önbellek:
             _tk, _bilinmeyen = önbellek[anahtar]
