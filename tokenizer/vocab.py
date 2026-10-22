@@ -93,6 +93,14 @@ def _büyük_karşılıklar(küçükler: str) -> list[str]:
             sonuç.append(b)
     return sonuç
 
+def _statik_bölüm(yol: Path) -> list[str]:
+    """Statik (dosyadan) bölüm: dil bölümleri sözlükten HESAPLANMAZ — liste dondurulduğu gibi okunur
+    (az-1: üretici şemsiye scripts/az_sozluk/vocab_bolum.py; sözlük büyüse de bölüm değişmez)."""
+    return json.loads(yol.read_text(encoding="utf-8"))["tokenlar"]
+
+
+_VERİ = Path(__file__).resolve().parent.parent / "veri"
+
 # Ek bölümler (ad, tokenlar) — SIRA KALICI; yeni faz yalnız listenin SONUNA bölüm ekler.
 EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # Faz 1 — Türkçe alfabede olmayan Latin harfleri (önceden <unk> → metinden SİLİNİYORDU).
@@ -129,6 +137,9 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # Matematik — v1'de olmayan işlev adları. Yalnız BÜTÜN sözcük olarak (bilinmeyen 'cos'):
     # hece yedeğinde kullanılmaz (Vocab._yalnız_bütün) → 'coskun' gibi sözcükler değişmez.
     ("matematik-sozcuk", list(_MATEMATİK_SÖZCÜK)),
+    # AZ-5 — Azerbaycan Türkçesi: AZ motor tokenları − mevcut vocab (ek/tampon/istisna hepsi; kök heceleri ve
+    # değişken biçimleri korpusta üretilenler). Yalnız dil="az" metin kipinde açık (dil_bölümü → _dil_izni).
+    ("az-1", _statik_bölüm(_VERİ / "az" / "vocab_az1.json")),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -149,6 +160,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("sembol-matematik2", 55, "a2ff1beaa4b0e0718a7293f68845884eaf84a878018e6eab60ebf74cd1655e00"),
     ("latex", 102, "2336c23eb1a5a01f72eb449e8beed6e1a44541fe3794208ddacff465c7ad93e0"),
     ("matematik-sozcuk", 2, "923883cb54c3d93703e272598b085b6099713e2fed2d09c93c41cf2250ddac95"),
+    ("az-1", 1835, "cdb901d0ac52cc598eb11983f2a8e973032db66dcdbd6020f3dc40d363aa07d9"),
 ]
 
 
