@@ -162,6 +162,26 @@ class CasingVeRoundTrip(unittest.TestCase):
         self.assertIsNone(vocab._id(ASCII_BAŞ, "metin", None))
         self.assertIsNone(vocab._id(ASCII_BAŞ, "metin", "az"))
 
+    def test_en1_bölümü_dil_kapısı(self):
+        # en-1 tokenları YALNIZ dil="en" metin kipinde; EN metin kipi kod sözlüğü (time, data) ve AZ tokenlarını
+        # (very, hard) paylaşır, Türkçe/AZ/kod kipi değişmez.
+        vocab = Vocab.yükle(KÖK / "veri" / "vocab.json")
+        from tokenizer.vocab import EK_BÖLÜMLER
+        en1 = {vocab.tok2id[t] for ad, b in EK_BÖLÜMLER if ad == "en-1" for t in b}
+        self.assertEqual(len(en1), 5000)
+        metin = (VERİ / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")
+        ids = vocab.encode_ids(metin, V.kökler, V.ekler, V.istisnalar, dil="en")
+        self.assertTrue(en1 & set(ids))
+        self.assertEqual(vocab.decode_ids(ids), metin_kanonik(metin))
+        for s, t in (("time", "time"), ("data", "data"), ("very", "very")):          # kod-sozluk / az-1 paylaşımı
+            self.assertEqual(vocab.encode_ids(s, V.kökler, V.ekler, V.istisnalar, dil="en"), [vocab.tok2id[t]])
+        tr, az = diller.yükle(), diller.yükle("az")
+        for m in (metin, (KÖK / "veri" / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")):
+            self.assertFalse(en1 & set(vocab.encode_ids(m, tr.kökler, tr.ekler, tr.istisnalar)))
+            self.assertFalse(en1 & set(vocab.encode_ids(m, tr.kökler, tr.ekler, tr.istisnalar, kip="kod")))
+            self.assertFalse(en1 & set(vocab.encode_ids(m, az.kökler, az.ekler, az.istisnalar, dil="az")))
+        self.assertNotEqual(vocab.encode_ids("time", tr.kökler, tr.ekler, tr.istisnalar), [vocab.tok2id["time"]])
+
     def test_türkçe_kipi_değişmez(self):
         tr = diller.yükle()
         self.assertEqual(encode("I don't", tr.kökler, tr.ekler, tr.istisnalar)[:2], ["<|Bb|>", "ı"])

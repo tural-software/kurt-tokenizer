@@ -143,6 +143,9 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # AZ-7 — danışıq ekleri (-(y)AcAm), -(y)AsI ortacı, soyad ekleri (-ova/-yeva/-zadə) ve özel ad/danışıq kök
     # heceleri (AZ payının kalanı ≤ 165'ten 39). Yalnız dil="az" metin kipinde.
     ("az-2", _statik_bölüm(_VERİ / "az" / "vocab_az2.json")),
+    # EN-4 — İngilizce: EN motor tokenları − mevcut vocab (ek/önek/klitik hepsi + FineWeb'de kazancı en yüksek bütün
+    # gövdeler + yedek yazım heceleri; pay 5.000). Yalnız dil="en" metin kipinde açık.
+    ("en-1", _statik_bölüm(_VERİ / "en" / "vocab_en1.json")),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -165,6 +168,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("matematik-sozcuk", 2, "923883cb54c3d93703e272598b085b6099713e2fed2d09c93c41cf2250ddac95"),
     ("az-1", 1835, "cdb901d0ac52cc598eb11983f2a8e973032db66dcdbd6020f3dc40d363aa07d9"),
     ("az-2", 39, "87a9d197aa20b2e7f585d4e6c1a54fb4eb54f13f96189aba27c060f671b54d3a"),
+    ("en-1", 5000, "ff21a7d8b7530ebc407724110d5ad35830351951c512c24b1a39a14c11ba613f"),
 ]
 
 
@@ -272,6 +276,10 @@ def _v1_kur(kökler, ekler, istisnalar) -> list[str]:
 
 # Metin kipinde ASCII casing işaretçilerini (kod-tanimlayici bölümü) kullanan doğal diller (EN: Unicode casing).
 _ASCII_CASING_DİLLERİ = frozenset(k for k, p in PROFİLLER.items() if p.casing == "unicode")
+# Metin kipinde kod sözlüğü ve öteki dil bölümlerinin tokenlarını da kullanan diller (EN-4: İngilizce 'time', 'data'
+# kod sözlüğünde, 'very', 'hard' AZ hecesi olarak zaten var; yinelenen token eklenemez → paylaşılır). Bu dillerin
+# KENDİ bölümleri (en-1) yine yalnız kendi metin kipinde açıktır.
+_ORTAK_KULLANAN_DİLLER = frozenset({"en"})
 
 
 def dil_bölümü(ad: str) -> str | None:
@@ -296,6 +304,10 @@ class Vocab:
         self._yalnız_kod = frozenset(self.tok2id[t] for ad, bölüm in bölümler
                                      if ad.startswith("kod-") for t in bölüm
                                      if t in self.tok2id and t != SATIR)
+        # EN-4: İngilizce metin kipinde kod sözlüğü/anahtar sözcük tokenları (time, class, data) metin sözcüğüdür →
+        # açık; boşluk koşuları (kod-bosluk) kapalı kalır. Türkçe/AZ metin kipi değişmez.
+        self._kod_boşluk = frozenset(self.tok2id[t] for ad, bölüm in bölümler if ad == "kod-bosluk"
+                                     for t in bölüm if t in self.tok2id)
         # Dil bölümlerinin (az-1…) tokenları YALNIZ o dilin metin kipinde: Türkçe metin kipi ve kod
         # kipi bunları hiç üretemez (yedek hecede de) → Türkçe çıktı dil eklense de birebir aynı.
         # Var olan (Türkçe/ortak) tokenlar her dilde açıktır: AZ 'ev', 'lar' aynı ID'yi kullanır.
@@ -313,12 +325,14 @@ class Vocab:
         """Tokenın ID'si; metin kipinde kod bölümü tokenı, o dilin metin kipi dışında dil bölümü
         tokenı yok sayılır (None)."""
         tid = self.tok2id.get(t)
+        ortak = kip == "metin" and dil in _ORTAK_KULLANAN_DİLLER
         if tid is not None and kip != "kod" and tid in self._yalnız_kod and not (
-                t in ASCII_İŞARET and dil in _ASCII_CASING_DİLLERİ):   # EN metin kipi: <|Ab|> <|AA|> casing
+                (t in ASCII_İŞARET and dil in _ASCII_CASING_DİLLERİ)      # Unicode casing: <|Ab|> <|AA|>
+                or (ortak and tid not in self._kod_boşluk)):              # EN metin kipi: kod sözcükleri
             return None
         if tid is not None and self._dil_izni:
             izin = self._dil_izni.get(tid)
-            if izin is not None and (kip != "metin" or dil not in izin):
+            if izin is not None and (kip != "metin" or (dil not in izin and not ortak)):
                 return None
         return tid
 
