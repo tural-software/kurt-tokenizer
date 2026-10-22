@@ -21,7 +21,7 @@ bütün-kök önceliği ve ek-sınıf kısıtı önler (corner ≠ corn+er: -er 
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from functools import cache
 from pathlib import Path
 
@@ -32,9 +32,12 @@ from tokenizer.istisna import yükle as istisna_yükle
 SINIFLAR = frozenset({"isim", "fiil", "sıfat", "zarf"})            # ek alan açık sınıflar
 KAPALI = frozenset({"zamir", "belirteç", "edat", "bağlaç", "ünlem", "sayı", "yardımcı"})   # ek almaz (klitik alır)
 TÜRLER = SINIFLAR | KAPALI | {"özel"}
-BAYRAKLAR = frozenset({"çift", "es", "ves"})
+BAYRAKLAR = frozenset({"çift", "çift2", "es", "ves", "dg", "dç", "dk", "geri"})
+# Düzensiz biçimi olan kökte düzenli ek YOK (see → saw: seed ≠ see+ed; be: bed ≠ be+ed; child → children)
+ENGEL = {"dg": "geçmiş", "dç": "çoğul", "dk": ("karşılaştırma", "üstünlük")}
 _S_GRUBU = ("s", "x", "z", "ch", "sh")
 MAX_EK = 4
+ÖNEK_KÖK_EN_KISA = 4
 KESMELER = ("'", "’")
 
 
@@ -45,6 +48,10 @@ class EnKök:
     çift: bool = False     # son ünsüz ünlü-başlı ek önünde ikizlenir, ikizi AYRI token (run → run+n+ing; stop+p+ed)
     es: bool = False       # o-sonu -es alır (go → goes, hero → heroes; photo → photos bayraksız)
     ves: bool = False      # f/fe → v + es (knife → kniv+es, leaf → leav+es; roof → roofs bayraksız)
+    çift2: bool = False    # ikizleme isteğe bağlı: iki yazım da yaygın (travel → traveled / travel+l+ed)
+    engel: frozenset = frozenset()   # kökün hemen ardından gelemeyen düzenli ekler (düzensiz biçimi var)
+    geri: bool = False     # eşsesli çakışmada geri çekilir: aynı yüzeyi daha yaygın bir kök de üretiyorsa o yeğlenir
+    #                        (korpus kararı, scripts/en_sozluk/kaynak_uret.py: does = do+es, doe+s değil; putting = put+t+ing)
 
     def sınıflar(self) -> list[str]:
         sonuç = []
@@ -99,14 +106,20 @@ def kökleri_yükle(yol: str | Path) -> dict[str, EnKök]:
         if any(b not in BAYRAKLAR for b in bayraklar):
             hatalar.append(f"{yer}: bayrak {bayraklar} geçersiz ({sorted(BAYRAKLAR)})")
             continue
-        if "çift" in bayraklar and (ad[-1] in ÜNLÜ or ad[-1] in "wxy"):
+        if ("çift" in bayraklar or "çift2" in bayraklar) and (ad[-1] in ÜNLÜ or ad[-1] in "wxy"):
             hatalar.append(f"{yer}: çift yalnız ünsüz-sonu kökte (w/x/y hariç)")
         if "es" in bayraklar and not ad.endswith("o"):
             hatalar.append(f"{yer}: es yalnız o-sonu kökte")
         if "ves" in bayraklar and not ad.endswith(("f", "fe")):
             hatalar.append(f"{yer}: ves yalnız f/fe-sonu kökte")
+        engel = set()
+        for b in bayraklar:
+            e = ENGEL.get(b)
+            if e:
+                engel.update((e,) if isinstance(e, str) else e)
         sözlük[ad] = EnKök(tür=türler[0], ek_tür=tuple(türler[1:]), çift="çift" in bayraklar,
-                           es="es" in bayraklar, ves="ves" in bayraklar)
+                           es="es" in bayraklar, ves="ves" in bayraklar, çift2="çift2" in bayraklar,
+                           engel=frozenset(engel), geri="geri" in bayraklar)
     if hatalar:
         raise EnVeriHatası(hatalar)
     return sözlük
@@ -172,8 +185,8 @@ def üret(kök_ad: str, kök: EnKök, ek_adları, ekler, önek: str | None = Non
                 son_değiştir(2 if gövde.endswith("fe") else 1, "v"); s = "es"   # knife → kniv+es
         elif s[0] in ÜNLÜ:
             if gövde.endswith("e"):
-                if s == "ing" and gövde.endswith(("ee", "ye", "oe")):
-                    pass                               # seeing, dyeing
+                if s == "ing" and gövde.endswith(("ee", "ye", "oe", "inge")):
+                    pass                               # seeing, dyeing, singeing (singing = sing+ing kalsın)
                 elif s == "ing" and gövde.endswith("ie"):
                     son_değiştir(2, "y")               # tie → ty+ing
                 else:
@@ -232,6 +245,8 @@ def _ara(kök_ad, kök, önek, dizi, son_yuva, sınıf, hedef, ekler, çıktı):
         ek = ekler[ad]
         if ek.önek or sınıf not in ek.öbek or ek.yuva <= son_yuva:
             continue
+        if not dizi and ad in kök.engel:              # düzensiz biçimli kökte düzenli ek yok
+            continue
         _, y = üret(kök_ad, kök, dizi + [ad], ekler, önek)
         # öneki tutan dala in; son iki harf sonraki ekle değişebilir (happi+ness → happi+ness+es değil ama
         # care+less → care+less+ness; y→i, e düşmesi) → iki harf payı
@@ -257,15 +272,20 @@ def _gövde_çözümle(hedef: str, kökler, ekler, istisnalar) -> list[Çözüm]
                 kök = kökler[kök_ad]
                 sınıflar = kök.sınıflar()
                 if önek:
-                    sınıflar = [s for s in sınıflar if s in ekler[önek].öbek]
-                    if kök.tür in KAPALI:
+                    # önek kökü en az 4 harf: kısa kök sahte bölmesi (univ = un+iv, dispro = dis+pro) önlenir; kısa
+                    # köklü gerçek önekli sözcük (redo, reset, untie) sözlükte bütün kök
+                    if kök.tür in KAPALI or len(kök_ad) < ÖNEK_KÖK_EN_KISA:
                         continue
+                    sınıflar = [s for s in sınıflar if s in ekler[önek].öbek]
                 if not sınıflar and not önek:               # kapalı sınıf: yalnız bütün okunur
                     if kök_ad == hedef:
                         çözümler.append(Çözüm(tokens=[kök_ad], kök=kök_ad, ekler=[]))
                     continue
                 for sınıf in sınıflar:
                     _ara(kök_ad, kök, önek, [], 0, sınıf, hedef, ekler, çözümler)
+                    if kök.çift2:                       # ikizlemesiz yazım da geçerli (traveled)
+                        _ara(kök_ad, replace(kök, çift2=False, çift=not kök.çift), önek, [], 0, sınıf, hedef,
+                             ekler, çözümler)
     görülen, benzersiz = set(), []
     for ç in çözümler:
         a = (tuple(ç.tokens), ç.kök, tuple(ç.ekler))
@@ -301,11 +321,15 @@ def çözümle(kelime: str, kökler, ekler, istisnalar=None, klitikler=()) -> tu
     return [Çözüm(tokens=ç.tokens + [kk], kök=ç.kök, ekler=ç.ekler + [ad]) for ç in çs], None
 
 
-def en_iyi(çözümler: list[Çözüm]) -> Çözüm:
-    """BÜTÜN kök → en az ek/önek → en uzun kök → en az token → tam kırıcı (deterministik)."""
+def en_iyi(çözümler: list[Çözüm], kökler=None) -> Çözüm:
+    """BÜTÜN kök → en az ek/önek → öneksiz (missing = miss+ing, mis+sing değil) → GERİ kök (başka kök yarışıyorsa) →
+    en uzun kök → en az token → tam kırıcı."""
+    kökler = kökler or {}
+    geri = {ç.kök for ç in çözümler if getattr(kökler.get(ç.kök), "geri", False)
+            and any(d.kök != ç.kök for d in çözümler)}
     return min(çözümler, key=lambda ç: (
         0 if not [e for e in ç.ekler if not e.startswith("klitik_")] else 1,
-        len(ç.ekler), -len(ç.kök), len(ç.tokens), tuple(ç.tokens), ç.kök, tuple(ç.ekler)))
+        len(ç.ekler), sum(e.startswith("önek_") for e in ç.ekler), ç.kök in geri, -len(ç.kök), len(ç.tokens), tuple(ç.tokens), ç.kök, tuple(ç.ekler)))
 
 
 # ── yedek heceleme ──────────────────────────────────────────────────────────────────────────

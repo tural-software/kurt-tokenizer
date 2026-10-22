@@ -77,6 +77,8 @@ class SahteBölmeYok(unittest.TestCase):
         for ad, kök in V.kökler.items():
             for sınıf in kök.sınıflar():
                 for z in zincirler.get(sınıf, []):
+                    if z[0] in kök.engel:              # düzensiz biçimli kök (see → saw): düzenli ek bilerek yok
+                        continue
                     _, yüzey = en.üret(ad, kök, z, V.ekler)
                     if yüzey in V.istisnalar:          # düzensiz biçim (better, being) bütün tutulur
                         continue
@@ -84,6 +86,22 @@ class SahteBölmeYok(unittest.TestCase):
                     if not any(ç.kök == ad and ç.ekler == z for ç in çs):
                         kayıp.append((ad, z, yüzey))
         self.assertEqual(kayıp, [])
+
+    def test_düzensiz_engeli(self):
+        # see → saw, be → was: düzenli -ed yok (seed ≠ see+ed, bed ≠ be+ed); child → children: childs yok
+        self.assertIn("geçmiş", V.kökler["see"].engel)
+        for w in ("seed", "bed", "childs"):
+            çs, _ = en.çözümle(w, V.kökler, V.ekler, V.istisnalar, EN.klitikler)
+            self.assertFalse([ç for ç in çs if ç.kök in ("see", "be", "child")], w)
+
+    def test_önek_kök_sınırı(self):
+        self.assertEqual(kodla("univ"), ["univ"])              # un+iv değil (Roma rakamı lemması)
+        self.assertEqual(kodla("unsubscribe"), ["un", "subscribe"])
+
+    def test_geri_kök(self):
+        self.assertTrue(V.kökler["doe"].geri)
+        self.assertEqual(kodla("does"), ["do", "es"])          # doe+s değil
+        self.assertEqual(kodla("doe"), ["doe"])                # tek okumada geri etkisiz
 
     def test_ek_sınıf_kısıtı(self):
         self.assertEqual(kodla("corner"), ["corner"])         # corn (isim) + -er (sıfat/fiil eki) yok
