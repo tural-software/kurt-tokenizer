@@ -34,9 +34,10 @@ def kodla(metin: str, kuyruk=None) -> list[str]:
     return encode(metin, V.kökler, V.ekler, V.istisnalar, kuyruk, dil="de")
 
 
-def okuma(sözcük: str) -> list[str]:
+def okuma(sözcük: str, ad: bool = False) -> list[str]:
+    """ad: sözcük Başlık biçiminde yazılmış (Almanca adlar büyük yazılır → ad okuması öne)."""
     çs, _ = de.çözümle(sözcük, V.kökler, V.ekler, V.istisnalar)
-    return de.en_iyi(çs, V.kökler).tokens if çs else []
+    return de.en_iyi(çs, V.kökler, ad).tokens if çs else []
 
 
 class Veri(unittest.TestCase):
@@ -78,11 +79,13 @@ class SahteBölmeYok(unittest.TestCase):
     def test_kök_bütünlüğü(self):
         bölünen = []
         for ad, k in V.kökler.items():
-            if ad in V.istisnalar:
+            # özel ad okuması bilerek SONDA (Sachsen = sachse+n da doğru); geri kök bilerek kaybeder (habe = hab+e)
+            if ad in V.istisnalar or k.tür == "özel" or k.geri:
                 continue
             beklenen = list(de._kök_tokenları(ad, k))
-            if okuma(ad) != beklenen:
-                bölünen.append((ad, okuma(ad)))
+            yazım = "isim" in k.sınıflar()                    # ad kökü Başlık biçiminde yazılır (Strafe ≠ strafe)
+            if okuma(ad, yazım) != beklenen:
+                bölünen.append((ad, okuma(ad, yazım)))
         self.assertEqual(bölünen, [])
 
     def test_üret_çözümle_geri_kazanımı(self):
@@ -101,8 +104,11 @@ class SahteBölmeYok(unittest.TestCase):
         self.assertEqual(okuma("arbeitsplatz"), ["arbeit", "s", "platz"])
         self.assertEqual(okuma("schulbuch"), ["schul", "buch"])               # -e düşmesi
         self.assertEqual(okuma("energiesparlampen"), ["energie", "spar", "lampe", "n"])
-        self.assertEqual(okuma("gehalt"), [])                                 # geh+alt değil: kısa fiil gövdesi
-        self.assertEqual(okuma("kommentieren"), [])                           # komm+en+tier değil
+        # kısa fiil gövdesi bileşen olmaz (sözlükten bağımsız: bölücü bu okumayı hiç üretmez)
+        okumalar = lambda w: {a[0] for a in de._bileşik(w, V.kökler, V.ekler, V.istisnalar)}
+        self.assertNotIn(("geh", "alt"), okumalar("gehalt"))
+        self.assertFalse({o for o in okumalar("kommentieren") if o[:2] == ("komm", "en")})
+        self.assertEqual(okuma("gehalt"), ["gehalt"])                         # Wikidata kökü: bütün
         self.assertEqual(okuma("finden"), ["finden"])
 
     def test_belirsiz_bileşik_bütün(self):
@@ -137,8 +143,8 @@ class CasingVeRoundTrip(unittest.TestCase):
 
     def test_bilinmeyen_kuyruğa(self):
         q = OnayKuyruğu()
-        self.assertEqual(kodla("xylophon", q), ["xylophon"])
-        self.assertEqual([b.kelime for b in q.bekleyenler()], ["xylophon"])
+        self.assertEqual(kodla("qxzwort", q), ["qxzwort"])
+        self.assertEqual([b.kelime for b in q.bekleyenler()], ["qxzwort"])
 
     def test_vocab_round_trip(self):
         v = Vocab.yükle(KÖK / "veri" / "vocab.json")

@@ -65,6 +65,8 @@ class DilProfili:
     düşen_isteğe_bağlı: bool = False  # ünlü düşmesi kökü düşmeden de çözülür (AZ danışıq: şəkili ↔ normatif şəkli)
     özel_ad_başlık: bool = False  # Başlık biçimli sözcükte (Gəncə, Quran) özel ad kökü okuması yeğlenir; küçük harflide
     #                               (gəncə) sıradan kök. Önbellek anahtarı ayrı: (dil, kelime, "ad")
+    ad_büyük: bool = False  # Almanca: her AD büyük yazılır → Başlık biçimli sözcükte ad okuması, küçük harflide ad
+    #                         olmayan okuma (fiil/sıfat) öne (Habe ~ habe = hab+e). Özel ad okuması ayrı (özel_ad_başlık)
     birim_say: bool = False  # token sayısı yerine BİRİM (kök hecesi + ek sayısı): tampon tokenı (n/y/s)
     #                          morfem sayılmaz → ünlü-sonu kök cezalanmaz (AZ ata+n+ı = 3 birim, at+an+ı
     #                          = 3; eşitlikte az ek: ata). Token sayısı sonraki kırıcı.
@@ -261,6 +263,7 @@ DE = DilProfili(
     casing="unicode",
     hece="de",
     kesme_eki=False,
+    ad_büyük=True,
 )
 
 PROFİLLER: dict[str, DilProfili] = {"tr": TR, "az": AZ, "en": EN, "fr": FR, "de": DE}

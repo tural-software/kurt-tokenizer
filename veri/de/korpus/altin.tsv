@@ -9,10 +9,10 @@ väter	väter
 vätern	väter n
 männer	männ er
 menschen	mensch en
-namens	name ns
+namens	namens
 hause	haus e
 themen	them en
-daten	dat en
+daten	daten
 freundinnen	freundin nen
 jahre	jahr e
 jahres	jahr es
@@ -86,7 +86,9 @@ lies	lies
 gelesen	ge les en
 fährt	fähr t
 fuhr	fuhr
+# eşsesli: küçük harfli → ad olmayan okuma (ge+fahr+en 'gidilmiş'), Başlık biçimli → ad (Gefahr+en 'tehlikeler')
 gefahren	ge fahr en
+Gefahren	<|Ab|> gefahr en
 hält	hält
 hielt	hielt
 gehalten	ge halt en
@@ -133,17 +135,29 @@ weltkrieg	welt krieg
 bundesregierung	bund es regierung
 tageszeit	tag es zeit
 zeitungsartikel	zeitung s artikel
-krankenversicherung	krank en versicherung
+krankenversicherung	kranke n versicherung
 finden	finden
 aus	aus
 bis	bis
 hier	hier
 mit	mit
 uns	uns
-ende	ende
+ende	end e
+Ende	<|Ab|> ende
 denen	denen
 allem	allem
 gehalt	gehalt
 kommentieren	kommentieren
 gebührenfrei	gebührenfrei
 staubecken	staubecken
+# yazım biçimi (Almanca adlar büyük): küçük harfli fiil/sıfat, Başlık biçimli ad
+habe	hab e
+Habe	<|Ab|> habe
+presse	press e
+Presse	<|Ab|> presse
+strafe	straf e
+Strafe	<|Ab|> strafe
+# umlautlu çoğul bileşen (yalnız kendi çoğul ekiyle)
+güterumschlag	güt er umschlag
+bücherregal	büch er regal
+wörterbuch	wört er buch
