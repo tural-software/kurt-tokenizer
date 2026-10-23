@@ -1,0 +1,2552 @@
+{
+ "belirteç": {
+  "der": {
+   "tokens": [
+    "der"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "die": {
+   "tokens": [
+    "die"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "das": {
+   "tokens": [
+    "das"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "dem": {
+   "tokens": [
+    "dem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "den": {
+   "tokens": [
+    "den"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "des": {
+   "tokens": [
+    "des"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ein": {
+   "tokens": [
+    "ein"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "eine": {
+   "tokens": [
+    "eine"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "einen": {
+   "tokens": [
+    "einen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "einem": {
+   "tokens": [
+    "einem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "einer": {
+   "tokens": [
+    "einer"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "eines": {
+   "tokens": [
+    "eines"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "kein": {
+   "tokens": [
+    "kein"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "keine": {
+   "tokens": [
+    "keine"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "keinen": {
+   "tokens": [
+    "keinen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "keinem": {
+   "tokens": [
+    "keinem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "keiner": {
+   "tokens": [
+    "keiner"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "keines": {
+   "tokens": [
+    "keines"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "dieser": {
+   "tokens": [
+    "dieser"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "diese": {
+   "tokens": [
+    "diese"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "dieses": {
+   "tokens": [
+    "dieses"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "diesem": {
+   "tokens": [
+    "diesem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "diesen": {
+   "tokens": [
+    "diesen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jener": {
+   "tokens": [
+    "jener"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jene": {
+   "tokens": [
+    "jene"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jenes": {
+   "tokens": [
+    "jenes"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jenem": {
+   "tokens": [
+    "jenem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jenen": {
+   "tokens": [
+    "jenen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jeder": {
+   "tokens": [
+    "jeder"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jede": {
+   "tokens": [
+    "jede"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jedes": {
+   "tokens": [
+    "jedes"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jedem": {
+   "tokens": [
+    "jedem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "jeden": {
+   "tokens": [
+    "jeden"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "welcher": {
+   "tokens": [
+    "welcher"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "welche": {
+   "tokens": [
+    "welche"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "welches": {
+   "tokens": [
+    "welches"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "welchem": {
+   "tokens": [
+    "welchem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "welchen": {
+   "tokens": [
+    "welchen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "mein": {
+   "tokens": [
+    "mein"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "meine": {
+   "tokens": [
+    "meine"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "meinen": {
+   "tokens": [
+    "meinen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "meinem": {
+   "tokens": [
+    "meinem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "meiner": {
+   "tokens": [
+    "meiner"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "meines": {
+   "tokens": [
+    "meines"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "dein": {
+   "tokens": [
+    "dein"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "deine": {
+   "tokens": [
+    "deine"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "deinen": {
+   "tokens": [
+    "deinen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "deinem": {
+   "tokens": [
+    "deinem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "deiner": {
+   "tokens": [
+    "deiner"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "deines": {
+   "tokens": [
+    "deines"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "sein": {
+   "tokens": [
+    "sein"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "seine": {
+   "tokens": [
+    "seine"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "seinen": {
+   "tokens": [
+    "seinen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "seinem": {
+   "tokens": [
+    "seinem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "seiner": {
+   "tokens": [
+    "seiner"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "seines": {
+   "tokens": [
+    "seines"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ihr": {
+   "tokens": [
+    "ihr"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ihre": {
+   "tokens": [
+    "ihre"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ihren": {
+   "tokens": [
+    "ihren"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ihrem": {
+   "tokens": [
+    "ihrem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ihrer": {
+   "tokens": [
+    "ihrer"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "ihres": {
+   "tokens": [
+    "ihres"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "unser": {
+   "tokens": [
+    "unser"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "unsere": {
+   "tokens": [
+    "unsere"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "unseren": {
+   "tokens": [
+    "unseren"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "unserem": {
+   "tokens": [
+    "unserem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "unserer": {
+   "tokens": [
+    "unserer"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "unseres": {
+   "tokens": [
+    "unseres"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "euer": {
+   "tokens": [
+    "euer"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "eure": {
+   "tokens": [
+    "eure"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "euren": {
+   "tokens": [
+    "euren"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "eurem": {
+   "tokens": [
+    "eurem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "eurer": {
+   "tokens": [
+    "eurer"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "eures": {
+   "tokens": [
+    "eures"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "alle": {
+   "tokens": [
+    "alle"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "aller": {
+   "tokens": [
+    "aller"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "allen": {
+   "tokens": [
+    "allen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "allem": {
+   "tokens": [
+    "allem"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "alles": {
+   "tokens": [
+    "alles"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "manche": {
+   "tokens": [
+    "manche"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "mancher": {
+   "tokens": [
+    "mancher"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "manchen": {
+   "tokens": [
+    "manchen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "manches": {
+   "tokens": [
+    "manches"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "einige": {
+   "tokens": [
+    "einige"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "einiger": {
+   "tokens": [
+    "einiger"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "einigen": {
+   "tokens": [
+    "einigen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "einiges": {
+   "tokens": [
+    "einiges"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "solche": {
+   "tokens": [
+    "solche"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "solcher": {
+   "tokens": [
+    "solcher"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "solchen": {
+   "tokens": [
+    "solchen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "solches": {
+   "tokens": [
+    "solches"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "beide": {
+   "tokens": [
+    "beide"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "beiden": {
+   "tokens": [
+    "beiden"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "beider": {
+   "tokens": [
+    "beider"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "mehrere": {
+   "tokens": [
+    "mehrere"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "mehrerer": {
+   "tokens": [
+    "mehrerer"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "mehreren": {
+   "tokens": [
+    "mehreren"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "derselbe": {
+   "tokens": [
+    "derselbe"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "dieselbe": {
+   "tokens": [
+    "dieselbe"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "dasselbe": {
+   "tokens": [
+    "dasselbe"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "denselben": {
+   "tokens": [
+    "denselben"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "demselben": {
+   "tokens": [
+    "demselben"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "desselben": {
+   "tokens": [
+    "desselben"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "derjenige": {
+   "tokens": [
+    "derjenige"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "diejenige": {
+   "tokens": [
+    "diejenige"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "dasjenige": {
+   "tokens": [
+    "dasjenige"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  },
+  "diejenigen": {
+   "tokens": [
+    "diejenigen"
+   ],
+   "not": "belirteç (tanımlık, işaret, iyelik, belgisiz): kapalı sınıf, her biçim ayrı"
+  }
+ },
+ "zamir": {
+  "ich": {
+   "tokens": [
+    "ich"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "du": {
+   "tokens": [
+    "du"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "er": {
+   "tokens": [
+    "er"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "sie": {
+   "tokens": [
+    "sie"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "es": {
+   "tokens": [
+    "es"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "wir": {
+   "tokens": [
+    "wir"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "mich": {
+   "tokens": [
+    "mich"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "dich": {
+   "tokens": [
+    "dich"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "sich": {
+   "tokens": [
+    "sich"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "uns": {
+   "tokens": [
+    "uns"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "euch": {
+   "tokens": [
+    "euch"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "mir": {
+   "tokens": [
+    "mir"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "dir": {
+   "tokens": [
+    "dir"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "ihm": {
+   "tokens": [
+    "ihm"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "ihn": {
+   "tokens": [
+    "ihn"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "ihnen": {
+   "tokens": [
+    "ihnen"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "man": {
+   "tokens": [
+    "man"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "wer": {
+   "tokens": [
+    "wer"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "wen": {
+   "tokens": [
+    "wen"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "wem": {
+   "tokens": [
+    "wem"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "wessen": {
+   "tokens": [
+    "wessen"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "was": {
+   "tokens": [
+    "was"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "etwas": {
+   "tokens": [
+    "etwas"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "nichts": {
+   "tokens": [
+    "nichts"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "jemand": {
+   "tokens": [
+    "jemand"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "jemanden": {
+   "tokens": [
+    "jemanden"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "jemandem": {
+   "tokens": [
+    "jemandem"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "niemand": {
+   "tokens": [
+    "niemand"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "niemanden": {
+   "tokens": [
+    "niemanden"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "niemandem": {
+   "tokens": [
+    "niemandem"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "dessen": {
+   "tokens": [
+    "dessen"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "deren": {
+   "tokens": [
+    "deren"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "denen": {
+   "tokens": [
+    "denen"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "selbst": {
+   "tokens": [
+    "selbst"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "selber": {
+   "tokens": [
+    "selber"
+   ],
+   "not": "zamir: kapalı sınıf"
+  },
+  "einander": {
+   "tokens": [
+    "einander"
+   ],
+   "not": "zamir: kapalı sınıf"
+  }
+ },
+ "edat": {
+  "in": {
+   "tokens": [
+    "in"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "an": {
+   "tokens": [
+    "an"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "auf": {
+   "tokens": [
+    "auf"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "aus": {
+   "tokens": [
+    "aus"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "bei": {
+   "tokens": [
+    "bei"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "mit": {
+   "tokens": [
+    "mit"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "nach": {
+   "tokens": [
+    "nach"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "von": {
+   "tokens": [
+    "von"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "zu": {
+   "tokens": [
+    "zu"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "vor": {
+   "tokens": [
+    "vor"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "über": {
+   "tokens": [
+    "über"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "unter": {
+   "tokens": [
+    "unter"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "neben": {
+   "tokens": [
+    "neben"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "zwischen": {
+   "tokens": [
+    "zwischen"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "hinter": {
+   "tokens": [
+    "hinter"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "durch": {
+   "tokens": [
+    "durch"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "für": {
+   "tokens": [
+    "für"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "gegen": {
+   "tokens": [
+    "gegen"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "ohne": {
+   "tokens": [
+    "ohne"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "um": {
+   "tokens": [
+    "um"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "bis": {
+   "tokens": [
+    "bis"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "seit": {
+   "tokens": [
+    "seit"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "während": {
+   "tokens": [
+    "während"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "wegen": {
+   "tokens": [
+    "wegen"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "trotz": {
+   "tokens": [
+    "trotz"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "statt": {
+   "tokens": [
+    "statt"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "anstatt": {
+   "tokens": [
+    "anstatt"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "außer": {
+   "tokens": [
+    "außer"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "gegenüber": {
+   "tokens": [
+    "gegenüber"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "entlang": {
+   "tokens": [
+    "entlang"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "innerhalb": {
+   "tokens": [
+    "innerhalb"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "außerhalb": {
+   "tokens": [
+    "außerhalb"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "oberhalb": {
+   "tokens": [
+    "oberhalb"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "unterhalb": {
+   "tokens": [
+    "unterhalb"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "aufgrund": {
+   "tokens": [
+    "aufgrund"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "mithilfe": {
+   "tokens": [
+    "mithilfe"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "laut": {
+   "tokens": [
+    "laut"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "gemäß": {
+   "tokens": [
+    "gemäß"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "dank": {
+   "tokens": [
+    "dank"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "per": {
+   "tokens": [
+    "per"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "pro": {
+   "tokens": [
+    "pro"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "samt": {
+   "tokens": [
+    "samt"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "nebst": {
+   "tokens": [
+    "nebst"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "ab": {
+   "tokens": [
+    "ab"
+   ],
+   "not": "edat: kapalı sınıf"
+  },
+  "binnen": {
+   "tokens": [
+    "binnen"
+   ],
+   "not": "edat: kapalı sınıf"
+  }
+ },
+ "kaynaşma": {
+  "im": {
+   "tokens": [
+    "im"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "ins": {
+   "tokens": [
+    "ins"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "am": {
+   "tokens": [
+    "am"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "ans": {
+   "tokens": [
+    "ans"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "zum": {
+   "tokens": [
+    "zum"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "zur": {
+   "tokens": [
+    "zur"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "vom": {
+   "tokens": [
+    "vom"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "beim": {
+   "tokens": [
+    "beim"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "aufs": {
+   "tokens": [
+    "aufs"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "fürs": {
+   "tokens": [
+    "fürs"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "durchs": {
+   "tokens": [
+    "durchs"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "übers": {
+   "tokens": [
+    "übers"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "ums": {
+   "tokens": [
+    "ums"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "unters": {
+   "tokens": [
+    "unters"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "vors": {
+   "tokens": [
+    "vors"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  },
+  "hinters": {
+   "tokens": [
+    "hinters"
+   ],
+   "not": "edat + tanımlık kaynaşması (im = in dem): yazımda tek sözcük, bütün token"
+  }
+ },
+ "bağlaç": {
+  "und": {
+   "tokens": [
+    "und"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "oder": {
+   "tokens": [
+    "oder"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "aber": {
+   "tokens": [
+    "aber"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "denn": {
+   "tokens": [
+    "denn"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "sondern": {
+   "tokens": [
+    "sondern"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "dass": {
+   "tokens": [
+    "dass"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "daß": {
+   "tokens": [
+    "daß"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "weil": {
+   "tokens": [
+    "weil"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "ob": {
+   "tokens": [
+    "ob"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "wenn": {
+   "tokens": [
+    "wenn"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "als": {
+   "tokens": [
+    "als"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "wie": {
+   "tokens": [
+    "wie"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "damit": {
+   "tokens": [
+    "damit"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "obwohl": {
+   "tokens": [
+    "obwohl"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "obgleich": {
+   "tokens": [
+    "obgleich"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "nachdem": {
+   "tokens": [
+    "nachdem"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "bevor": {
+   "tokens": [
+    "bevor"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "sobald": {
+   "tokens": [
+    "sobald"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "solange": {
+   "tokens": [
+    "solange"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "sofern": {
+   "tokens": [
+    "sofern"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "falls": {
+   "tokens": [
+    "falls"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "indem": {
+   "tokens": [
+    "indem"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "sodass": {
+   "tokens": [
+    "sodass"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "soweit": {
+   "tokens": [
+    "soweit"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  },
+  "seitdem": {
+   "tokens": [
+    "seitdem"
+   ],
+   "not": "bağlaç: kapalı sınıf"
+  }
+ },
+ "zarf": {
+  "nicht": {
+   "tokens": [
+    "nicht"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "auch": {
+   "tokens": [
+    "auch"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "noch": {
+   "tokens": [
+    "noch"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "schon": {
+   "tokens": [
+    "schon"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "nur": {
+   "tokens": [
+    "nur"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "sehr": {
+   "tokens": [
+    "sehr"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "so": {
+   "tokens": [
+    "so"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dann": {
+   "tokens": [
+    "dann"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "da": {
+   "tokens": [
+    "da"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "hier": {
+   "tokens": [
+    "hier"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dort": {
+   "tokens": [
+    "dort"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "jetzt": {
+   "tokens": [
+    "jetzt"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "nun": {
+   "tokens": [
+    "nun"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "immer": {
+   "tokens": [
+    "immer"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "nie": {
+   "tokens": [
+    "nie"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "niemals": {
+   "tokens": [
+    "niemals"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "oft": {
+   "tokens": [
+    "oft"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "bald": {
+   "tokens": [
+    "bald"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "gern": {
+   "tokens": [
+    "gern"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "gerne": {
+   "tokens": [
+    "gerne"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wieder": {
+   "tokens": [
+    "wieder"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "ja": {
+   "tokens": [
+    "ja"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "nein": {
+   "tokens": [
+    "nein"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "doch": {
+   "tokens": [
+    "doch"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "mal": {
+   "tokens": [
+    "mal"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "eben": {
+   "tokens": [
+    "eben"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "halt": {
+   "tokens": [
+    "halt"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "etwa": {
+   "tokens": [
+    "etwa"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "fast": {
+   "tokens": [
+    "fast"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "kaum": {
+   "tokens": [
+    "kaum"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "sogar": {
+   "tokens": [
+    "sogar"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "zwar": {
+   "tokens": [
+    "zwar"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "also": {
+   "tokens": [
+    "also"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dabei": {
+   "tokens": [
+    "dabei"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dafür": {
+   "tokens": [
+    "dafür"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dagegen": {
+   "tokens": [
+    "dagegen"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "damals": {
+   "tokens": [
+    "damals"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "danach": {
+   "tokens": [
+    "danach"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "daneben": {
+   "tokens": [
+    "daneben"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "daran": {
+   "tokens": [
+    "daran"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "darauf": {
+   "tokens": [
+    "darauf"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "daraus": {
+   "tokens": [
+    "daraus"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "darin": {
+   "tokens": [
+    "darin"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "darüber": {
+   "tokens": [
+    "darüber"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "darum": {
+   "tokens": [
+    "darum"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "darunter": {
+   "tokens": [
+    "darunter"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "davon": {
+   "tokens": [
+    "davon"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "davor": {
+   "tokens": [
+    "davor"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dazu": {
+   "tokens": [
+    "dazu"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dadurch": {
+   "tokens": [
+    "dadurch"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "deshalb": {
+   "tokens": [
+    "deshalb"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "deswegen": {
+   "tokens": [
+    "deswegen"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "daher": {
+   "tokens": [
+    "daher"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "trotzdem": {
+   "tokens": [
+    "trotzdem"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "dennoch": {
+   "tokens": [
+    "dennoch"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "jedoch": {
+   "tokens": [
+    "jedoch"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "allerdings": {
+   "tokens": [
+    "allerdings"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "außerdem": {
+   "tokens": [
+    "außerdem"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "zudem": {
+   "tokens": [
+    "zudem"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "ebenfalls": {
+   "tokens": [
+    "ebenfalls"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "ebenso": {
+   "tokens": [
+    "ebenso"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "sonst": {
+   "tokens": [
+    "sonst"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "bereits": {
+   "tokens": [
+    "bereits"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "erst": {
+   "tokens": [
+    "erst"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "heute": {
+   "tokens": [
+    "heute"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "gestern": {
+   "tokens": [
+    "gestern"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "morgen": {
+   "tokens": [
+    "morgen"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "vielleicht": {
+   "tokens": [
+    "vielleicht"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wohl": {
+   "tokens": [
+    "wohl"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "natürlich": {
+   "tokens": [
+    "natürlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "leider": {
+   "tokens": [
+    "leider"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "eigentlich": {
+   "tokens": [
+    "eigentlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "überhaupt": {
+   "tokens": [
+    "überhaupt"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "einfach": {
+   "tokens": [
+    "einfach"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "genau": {
+   "tokens": [
+    "genau"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "ganz": {
+   "tokens": [
+    "ganz"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "gar": {
+   "tokens": [
+    "gar"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "viel": {
+   "tokens": [
+    "viel"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "mehr": {
+   "tokens": [
+    "mehr"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "weniger": {
+   "tokens": [
+    "weniger"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "meist": {
+   "tokens": [
+    "meist"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "meistens": {
+   "tokens": [
+    "meistens"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "manchmal": {
+   "tokens": [
+    "manchmal"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "selten": {
+   "tokens": [
+    "selten"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "oben": {
+   "tokens": [
+    "oben"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "unten": {
+   "tokens": [
+    "unten"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "vorne": {
+   "tokens": [
+    "vorne"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "hinten": {
+   "tokens": [
+    "hinten"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "draußen": {
+   "tokens": [
+    "draußen"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "drinnen": {
+   "tokens": [
+    "drinnen"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "links": {
+   "tokens": [
+    "links"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "rechts": {
+   "tokens": [
+    "rechts"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "hin": {
+   "tokens": [
+    "hin"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "her": {
+   "tokens": [
+    "her"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "hinaus": {
+   "tokens": [
+    "hinaus"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "heraus": {
+   "tokens": [
+    "heraus"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "herein": {
+   "tokens": [
+    "herein"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "hinein": {
+   "tokens": [
+    "hinein"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "weg": {
+   "tokens": [
+    "weg"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "zurück": {
+   "tokens": [
+    "zurück"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "zusammen": {
+   "tokens": [
+    "zusammen"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "woher": {
+   "tokens": [
+    "woher"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wohin": {
+   "tokens": [
+    "wohin"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wo": {
+   "tokens": [
+    "wo"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wann": {
+   "tokens": [
+    "wann"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "warum": {
+   "tokens": [
+    "warum"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "weshalb": {
+   "tokens": [
+    "weshalb"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wieso": {
+   "tokens": [
+    "wieso"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "womit": {
+   "tokens": [
+    "womit"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wofür": {
+   "tokens": [
+    "wofür"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "worauf": {
+   "tokens": [
+    "worauf"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "worüber": {
+   "tokens": [
+    "worüber"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wovon": {
+   "tokens": [
+    "wovon"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wozu": {
+   "tokens": [
+    "wozu"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "irgendwie": {
+   "tokens": [
+    "irgendwie"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "irgendwo": {
+   "tokens": [
+    "irgendwo"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "überall": {
+   "tokens": [
+    "überall"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "nirgends": {
+   "tokens": [
+    "nirgends"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "bisher": {
+   "tokens": [
+    "bisher"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "bislang": {
+   "tokens": [
+    "bislang"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "inzwischen": {
+   "tokens": [
+    "inzwischen"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "mittlerweile": {
+   "tokens": [
+    "mittlerweile"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "zunächst": {
+   "tokens": [
+    "zunächst"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "schließlich": {
+   "tokens": [
+    "schließlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "endlich": {
+   "tokens": [
+    "endlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "plötzlich": {
+   "tokens": [
+    "plötzlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "sofort": {
+   "tokens": [
+    "sofort"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "gleich": {
+   "tokens": [
+    "gleich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "bestimmt": {
+   "tokens": [
+    "bestimmt"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "sicherlich": {
+   "tokens": [
+    "sicherlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "tatsächlich": {
+   "tokens": [
+    "tatsächlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "wirklich": {
+   "tokens": [
+    "wirklich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "ziemlich": {
+   "tokens": [
+    "ziemlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "besonders": {
+   "tokens": [
+    "besonders"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "insbesondere": {
+   "tokens": [
+    "insbesondere"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "lediglich": {
+   "tokens": [
+    "lediglich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "bloß": {
+   "tokens": [
+    "bloß"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "nämlich": {
+   "tokens": [
+    "nämlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "jeweils": {
+   "tokens": [
+    "jeweils"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "teilweise": {
+   "tokens": [
+    "teilweise"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "beispielsweise": {
+   "tokens": [
+    "beispielsweise"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  },
+  "grundsätzlich": {
+   "tokens": [
+    "grundsätzlich"
+   ],
+   "not": "değişmez zarf/olumsuzluk/söylem: kapalı sınıf"
+  }
+ },
+ "sayı": {
+  "eins": {
+   "tokens": [
+    "eins"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "zwei": {
+   "tokens": [
+    "zwei"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "drei": {
+   "tokens": [
+    "drei"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "vier": {
+   "tokens": [
+    "vier"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "fünf": {
+   "tokens": [
+    "fünf"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "sechs": {
+   "tokens": [
+    "sechs"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "sieben": {
+   "tokens": [
+    "sieben"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "acht": {
+   "tokens": [
+    "acht"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "neun": {
+   "tokens": [
+    "neun"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "zehn": {
+   "tokens": [
+    "zehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "elf": {
+   "tokens": [
+    "elf"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "zwölf": {
+   "tokens": [
+    "zwölf"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "dreizehn": {
+   "tokens": [
+    "dreizehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "vierzehn": {
+   "tokens": [
+    "vierzehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "fünfzehn": {
+   "tokens": [
+    "fünfzehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "sechzehn": {
+   "tokens": [
+    "sechzehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "siebzehn": {
+   "tokens": [
+    "siebzehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "achtzehn": {
+   "tokens": [
+    "achtzehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "neunzehn": {
+   "tokens": [
+    "neunzehn"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "zwanzig": {
+   "tokens": [
+    "zwanzig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "dreißig": {
+   "tokens": [
+    "dreißig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "vierzig": {
+   "tokens": [
+    "vierzig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "fünfzig": {
+   "tokens": [
+    "fünfzig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "sechzig": {
+   "tokens": [
+    "sechzig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "siebzig": {
+   "tokens": [
+    "siebzig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "achtzig": {
+   "tokens": [
+    "achtzig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "neunzig": {
+   "tokens": [
+    "neunzig"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "hundert": {
+   "tokens": [
+    "hundert"
+   ],
+   "not": "sayı adı: değişmez"
+  },
+  "tausend": {
+   "tokens": [
+    "tausend"
+   ],
+   "not": "sayı adı: değişmez"
+  }
+ },
+ "ünlem": {
+  "ach": {
+   "tokens": [
+    "ach"
+   ],
+   "not": "ünlem"
+  },
+  "oh": {
+   "tokens": [
+    "oh"
+   ],
+   "not": "ünlem"
+  },
+  "ah": {
+   "tokens": [
+    "ah"
+   ],
+   "not": "ünlem"
+  },
+  "na": {
+   "tokens": [
+    "na"
+   ],
+   "not": "ünlem"
+  },
+  "tja": {
+   "tokens": [
+    "tja"
+   ],
+   "not": "ünlem"
+  },
+  "hallo": {
+   "tokens": [
+    "hallo"
+   ],
+   "not": "ünlem"
+  },
+  "danke": {
+   "tokens": [
+    "danke"
+   ],
+   "not": "ünlem"
+  },
+  "bitte": {
+   "tokens": [
+    "bitte"
+   ],
+   "not": "ünlem"
+  },
+  "tschüss": {
+   "tokens": [
+    "tschüss"
+   ],
+   "not": "ünlem"
+  }
+ },
+ "kısaltma": {
+  "usw": {
+   "tokens": [
+    "usw"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "ca": {
+   "tokens": [
+    "ca"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "bzw": {
+   "tokens": [
+    "bzw"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "ggf": {
+   "tokens": [
+    "ggf"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "evtl": {
+   "tokens": [
+    "evtl"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "inkl": {
+   "tokens": [
+    "inkl"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "zzgl": {
+   "tokens": [
+    "zzgl"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "sog": {
+   "tokens": [
+    "sog"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "vgl": {
+   "tokens": [
+    "vgl"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "dr": {
+   "tokens": [
+    "dr"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "nr": {
+   "tokens": [
+    "nr"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "str": {
+   "tokens": [
+    "str"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  },
+  "tel": {
+   "tokens": [
+    "tel"
+   ],
+   "not": "yaygın kısaltma: bütün"
+  }
+ }
+}

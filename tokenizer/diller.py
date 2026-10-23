@@ -51,6 +51,9 @@ def yükle(dil: str | None = None) -> DilVerisi:
     if profil is not None and profil.motor == "fr":   # Fransızca: kendi veri biçimi (kokler.txt + cekim.json, tokenizer/fr.py)
         from tokenizer import fr
         return DilVerisi(*fr.veri_yükle(dizin))
+    if profil is not None and profil.motor == "de":   # Almanca: kendi veri biçimi (kokler.txt + cekim.json, tokenizer/de.py)
+        from tokenizer import de
+        return DilVerisi(*de.veri_yükle(dizin))
     ek_dosyalar = [dizin / ad for ad in ("zamirler.json", "islev_kokleri.json", "ozel_adlar.json")
                    if (dizin / ad).exists()]
     kökler = çalışma_sözlüğü(dizin / "kokler", *ek_dosyalar, profil=profil)

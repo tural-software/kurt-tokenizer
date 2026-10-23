@@ -1,0 +1,149 @@
+# Almanca altın liste (DE-1, elle denetlendi): sözcük<TAB>beklenen tokenlar (boşlukla). test_de birebir kilitler.
+# Umlaut/ablaut gövde tokenında (häus+er, gab+en), ekler sırayla ayrı (häus+er+n); ge-/zu- ve ayrılabilir önek ayrı;
+# bileşik parça + Fugen + parça; sözlük dışı tek morfem ve belirsiz bileşik BÜTÜN (gehalt, staubecken).
+häuser	häus er
+häusern	häus er n
+kinder	kind er
+kindern	kind er n
+väter	väter
+vätern	väter n
+männer	männ er
+menschen	mensch en
+namens	name ns
+hause	haus e
+themen	them en
+daten	dat en
+freundinnen	freundin nen
+jahre	jahr e
+jahres	jahr es
+gab	gab
+gaben	gab en
+gegeben	ge geb en
+gibt	gib t
+gibst	gib st
+gib	gib
+nimmt	nimm t
+genommen	ge nomm en
+gesungen	ge sung en
+sang	sang
+sangen	sang en
+verstand	verstand
+verstanden	verstand en
+versteht	versteh t
+bekommt	bekomm t
+bekommen	bekommen
+anfangen	an fangen
+anfängt	an fäng t
+angefangen	an ge fang en
+anzufangen	an zu fangen
+fängt	fäng t
+machte	mach te
+machten	mach ten
+gemacht	ge mach t
+gemachte	ge mach t e
+arbeitet	arbeit et
+gearbeitet	ge arbeit et
+arbeitete	arbeit ete
+wandert	wander t
+gewandert	ge wander t
+handle	handl e
+handelt	handel t
+besucht	besuch t
+besuchte	besuch te
+studiert	studier t
+hatte	hat te
+hätte	hät te
+hat	hat
+hast	hast
+habe	hab e
+wurde	wurd e
+würde	würd e
+würden	würd en
+wird	wird
+wirst	wirst
+geworden	ge word en
+gewesen	ge wes en
+bin	bin
+bist	bist
+ist	ist
+sind	sind
+war	war
+waren	war en
+wäre	wär e
+kann	kann
+kannst	kann st
+konnte	konn te
+könnte	könn te
+könnten	könn ten
+möchte	möch te
+musst	muss t
+müssen	müssen
+gewusst	ge wuss t
+weiß	weiß
+wissen	wissen
+liest	lies t
+lies	lies
+gelesen	ge les en
+fährt	fähr t
+fuhr	fuhr
+gefahren	ge fahr en
+hält	hält
+hielt	hielt
+gehalten	ge halt en
+tut	tu t
+tat	tat
+getan	ge ta n
+ging	ging
+gegangen	ge gang en
+kam	kam
+gekommen	ge komm en
+läuft	läuf t
+größer	größ er
+größte	größt e
+größten	größt en
+besser	bess er
+beste	best e
+besten	best en
+höher	höh er
+hohe	hoh e
+höchsten	höchst en
+älter	ält er
+ältesten	ält est en
+dunkle	dunkl e
+dunkler	dunkl er
+teure	teur e
+teurer	teur er
+kürzeste	kürz est e
+schönere	schön er e
+schönen	schön en
+neue	neu e
+neuen	neu en
+kleiner	klein er
+arbeitsplatz	arbeit s platz
+geburtstag	geburt s tag
+sozialversicherung	sozial versicherung
+energiesparlampen	energie spar lampe n
+hausarbeit	haus arbeit
+kinderspiel	kind er spiel
+kinderzimmer	kind er zimmer
+schulbuch	schul buch
+wartezimmer	wart e zimmer
+spielplatz	spiel platz
+weltkrieg	welt krieg
+bundesregierung	bund es regierung
+tageszeit	tag es zeit
+zeitungsartikel	zeitung s artikel
+krankenversicherung	krank en versicherung
+finden	finden
+aus	aus
+bis	bis
+hier	hier
+mit	mit
+uns	uns
+ende	ende
+denen	denen
+allem	allem
+gehalt	gehalt
+kommentieren	kommentieren
+gebührenfrei	gebührenfrei
+staubecken	staubecken

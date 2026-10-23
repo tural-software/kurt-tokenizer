@@ -29,6 +29,9 @@ def hecele(kelime: str, profil=None) -> list[str]:
     if profil is not None and profil.hece == "fr":
         from tokenizer import fr
         return fr.hecele(kelime)
+    if profil is not None and profil.hece == "de":
+        from tokenizer import de
+        return de.hecele(kelime)
     ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
     ünlü_yerleri = [i for i, harf in enumerate(kelime) if harf in ünlüler]
     if not ünlü_yerleri:

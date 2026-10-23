@@ -379,6 +379,14 @@ def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=No
         if kuyruk is not None:
             kuyruk.ekle(kelime, bağlam)
         return [kelime], True
+    if profil is not None and profil.motor == "de":
+        from tokenizer import de                 # Almanca çekim üreteçli + bileşik çözümleyici (DE-1)
+        çs, _ = de.çözümle(kelime, kökler, ekler, istisnalar)
+        if çs:
+            return list(de.en_iyi(çs, kökler).tokens), False
+        if kuyruk is not None:
+            kuyruk.ekle(kelime, bağlam)
+        return [kelime], True
     if profil is not None and profil.motor == "en":
         from tokenizer import en                 # İngilizce yazım kurallı çözümleyici (EN-1)
         çs, taban = en.çözümle(kelime, kökler, ekler, istisnalar, profil.klitikler)
