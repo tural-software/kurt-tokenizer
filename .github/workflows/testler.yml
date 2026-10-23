@@ -1,0 +1,25 @@
+# PR kapısı: tüm testler (stdlib, kurulum yok). En uzun iki modül (test_az, test_kod) ve kalanlar üç paralel süreçte.
+name: testler
+on:
+  pull_request:
+concurrency:
+  group: testler-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  testler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: unittest (3 paralel grup)
+        run: |
+          diger=$(cd testler && ls test_*.py | sed 's/\.py$//' | grep -vx -e test_az -e test_kod | sed 's/^/testler./')
+          python -X utf8 -m unittest testler.test_az > az.log 2>&1 & a=$!
+          python -X utf8 -m unittest testler.test_kod > kod.log 2>&1 & k=$!
+          python -X utf8 -m unittest $diger > diger.log 2>&1 & d=$!
+          s=0; for p in $a $k $d; do wait $p || s=1; done
+          if [ $s -ne 0 ]; then cat az.log kod.log diger.log; exit 1; fi
+          tail -n 3 az.log kod.log diger.log
