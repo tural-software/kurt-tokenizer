@@ -162,6 +162,13 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # örnekleminin gerçek bölmesindeki kazanç; üretici şemsiye scripts/v2/demet_uret.py. Yalnız sürüm="v2" metin kipinde.
     ("v2-demet", _statik_bölüm(_VERİ / "v2" / "demet.json")),
     ("v2-demet-duz", _statik_bölüm(_VERİ / "v2" / "demet_duz.json")),
+    # V2-3 — gövde: v1'de yedeğe (hece/harf/bayt) düşen sık motor tokenları (vocab'da olmayan kök/gövde, bütün tutulan
+    # sözcük: unexpectedly, windows, itibariyle) tek token; sıradan decode. Süzgeç: tek yazı sistemi, ≥10 belge, kumar/
+    # yetişkin kalıbı dışı. Üretici şemsiye scripts/v2/govde_uret.py. Ardından ikinci tur demet (gövdelerin ▁/Başlık
+    # önekli ve iç demetleri dahil; scripts/v2/demet_uret.py bütçe 19.813). Yalnız sürüm="v2" metin kipinde.
+    ("v2-govde", _statik_bölüm(_VERİ / "v2" / "govde.json")),
+    ("v2-demet2", _statik_bölüm(_VERİ / "v2" / "demet2.json")),
+    ("v2-demet2-duz", _statik_bölüm(_VERİ / "v2" / "demet2_duz.json")),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -190,6 +197,9 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("v2-kaynasma", 20448, "896202c33e1b98943467948f05c00ea9e5d42eb00f248af20b5dbdf39b6c5200"),
     ("v2-demet", 1099, "6b5937f61e479ec129450725fe10927836495521588aba1132fb782c32b36747"),
     ("v2-demet-duz", 48901, "dc6a839db635d523cabb0ff8e407126a68a8e71dfdde9220eed07c9534fb8304"),
+    ("v2-govde", 10326, "67a0078e8564cdfe0e95a95d5b1fcfb70cc658e1cde1a4a23f1fbf0987dcc82a"),
+    ("v2-demet2", 12169, "5577d5a601be378a8a6662696807ac3e35480bec5fc0eaf79d048a5b1919f1ee"),
+    ("v2-demet2-duz", 17318, "61ed06926ffa1c26360039b7eb99322a043b442836ade24110251f9014a56b25"),
 ]
 
 
@@ -354,7 +364,7 @@ class Vocab:
                              for t in bölüm if t in self.tok2id)
         self._v2_id = frozenset(self.tok2id[t] for t in self._v2)
         # Harfiyen decode edilen (▁/Başlık önekli) v2 tokenları; v2-demet sıradan token gibi çözülür.
-        self._düz = frozenset(t for ad, bölüm in bölümler if ad in ("v2-kaynasma", "v2-demet-duz")
+        self._düz = frozenset(t for ad, bölüm in bölümler if ad in ("v2-kaynasma", "v2-demet-duz", "v2-demet2-duz")
                               for t in bölüm if t in self.tok2id)
 
     def __len__(self):
@@ -377,6 +387,18 @@ class Vocab:
                     ortak and self._dil_sırası[tid] < self._dil_ilk.get(dil, len(self.id2tok))))):
                 return None
         return tid
+
+    def v2_izinli(self, kip: str, dil: str | None):
+        """v2 sözcük birimine girebilen token: vocab'daki her harf tokenı (önekli/düz v2 tokenı hariç). v2'de dil kapısı
+        YOK: dil bölümü kapısı v1 çıktısını birebir korumak içindi; v2'de Türkçe metindeki 'the' en-1 tokenını kullanır."""
+        açık: dict[str, bool] = {}
+
+        def izinli(t):
+            r = açık.get(t)
+            if r is None:
+                r = açık[t] = harf_tokenı(t) and t in self.tok2id and t not in self._düz
+            return r
+        return izinli
 
     def _fallback(self, kelime: str, kip: str = "metin", dil: str | None = None) -> list[int]:
         """Bilinmeyen bütün-token → hece (dilin ünlüleriyle), vocab'da yoksa harf, o da yoksa
@@ -412,19 +434,11 @@ class Vocab:
             raise ValueError(f"bilinmeyen sürüm: {sürüm!r} (geçerli: {', '.join(SÜRÜMLER)})")
         tokenlar = encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil)
         if sürüm == "v2" and kip == "metin":
-            açık: dict[str, bool] = {}
-
-            def izinli(t):
-                r = açık.get(t)
-                if r is None:
-                    r = açık[t] = harf_tokenı(t) and self._id(t, kip, dil) is not None
-                return r
-
-            tokenlar = kaynaştır(tokenlar, izinli, lambda t, düz: t in self._düz if düz else (
-                t in self._v2 and t not in self._düz or izinli(t)))
+            izinli = self.v2_izinli(kip, dil)
+            tokenlar = kaynaştır(tokenlar, izinli, lambda t, düz: t in self._düz if düz else izinli(t))
         ids: list[int] = []
         for t in tokenlar:
-            if sürüm == "v2" and t in self._v2:
+            if sürüm == "v2" and kip == "metin" and (t in self._düz or izinli(t)):
                 ids.append(self.tok2id[t])
                 continue
             tid = self._id(t, kip, dil)

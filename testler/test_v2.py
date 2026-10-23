@@ -79,6 +79,13 @@ class V2Test(unittest.TestCase):
                     self.assertEqual(self.v.decode_ids(self._ids(metin, dil, "v2")),
                                      self.v.decode_ids(self._ids(metin, dil, "v1")))
 
+    def test_v2_dil_kapısı_yok(self):
+        # v1'de Türkçe kip en-1 tokenını kullanamaz (the harf harf); v2'de vocab'daki her harf tokenı açık
+        v1, v2 = self._ids("bir the yazısı", None, "v1"), self._ids("bir the yazısı", None, "v2")
+        self.assertIn(self.v.tok2id["▁the"], v2)
+        self.assertNotIn(self.v.tok2id["the"], v1)
+        self.assertEqual(self.v.decode_ids(v2), self.v.decode_ids(v1))
+
     def test_geçersiz_sürüm(self):
         with self.assertRaises(ValueError):
             self._ids("ev", None, "v3")
