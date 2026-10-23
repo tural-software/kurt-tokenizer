@@ -35,7 +35,7 @@ class VocabTest(unittest.TestCase):
 
     def test_benzersiz_ve_makul_boyut(self):
         self.assertEqual(len(self.v.id2tok), len(set(self.v.id2tok)))
-        self.assertTrue(2000 <= len(self.v) <= 30000, len(self.v))
+        self.assertTrue(2000 <= len(self.v) <= 131072, len(self.v))   # V2-3 hedefi 2^17
 
     def test_id_round_trip(self):
         for metin in ["Bugün İstanbul'da öğrencilerin hazırladığı projeler sergilendi.",

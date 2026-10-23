@@ -635,7 +635,7 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
         tokenlar.extend(_tk)
 
 
-def decode(tokenlar, kip: str = "metin") -> str:
+def decode(tokenlar, kip: str = "metin", düz=frozenset()) -> str:
     """Token dizisini metne geri çevirir (özel tokenları atar, ▁→boşluk, casing uygular).
 
     kip "kod": baş/son boşluk KIRPILMAZ (girinti ve son satır sonu koddur); ▁-koşusu tokenı
@@ -647,7 +647,9 @@ def decode(tokenlar, kip: str = "metin") -> str:
     (noktalama, sembol, kesme) koşuyu bitirir → casing yalnız işaretçinin ait olduğu kelimeye.
 
     Bayt tokenları: ardışık koşu UTF-8 çözülür ve HARFİYEN metin olur (asla boşluk/özel token
-    sayılmaz: metindeki '▁' geri '▁' döner); casing ona da aynı ölçütle uygulanır."""
+    sayılmaz: metindeki '▁' geri '▁' döner); casing ona da aynı ölçütle uygulanır.
+
+    düz: harfiyen yazılan tokenlar (v2 kaynaşık yüzeyleri: "▁Haus" → " Haus"; tokenizer/v2.py)."""
     sonuç: list[str] = []
     durum = None                                 # bekleyen casing işaretçisi
     baytlar = bytearray()
@@ -677,7 +679,10 @@ def decode(tokenlar, kip: str = "metin") -> str:
         if baytlar:
             metin_ekle(_bayt_çöz(baytlar))
             baytlar.clear()
-        if t in BÜYÜK or t in ASCII_İŞARET:
+        if t in düz:
+            sonuç.append(" " + t[1:] if t[0] == BOŞLUK else t)
+            durum = None
+        elif t in BÜYÜK or t in ASCII_İŞARET:
             durum = t
         elif t in _BOŞLUK_KOŞULARI:
             sonuç.append(" " * len(t))
