@@ -63,6 +63,15 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   birebir aynı; vocab'da olmayan sözcüğün hece/harf yedeği de aynı kuralla birleşir. Token/karakter: TR 0,62 → 0,27,
   AZ 0,59 → 0,26, EN 0,46 → 0,25, FR 0,46 → 0,27, DE 0,47 → 0,24.
   Varsayılan `sürüm="v1"` donmuş kodlamadır.
+  Web metni (FineWeb-2 / FineWeb test bölümleri, ~190 bin belge, 611M karakter; round-trip hepsinde kayıpsız), token/karakter:
+
+  | Dil | Kurt v1 | **Kurt v2** | GPT-4o (o200k) | GPT-4 (cl100k) | Qwen2.5 | Mistral Nemo |
+  |---|---:|---:|---:|---:|---:|---:|
+  | Türkçe | 0,571 | **0,225** | 0,291 | 0,389 | 0,338 | 0,326 |
+  | Azerbaycan T. | 0,567 | **0,213** | 0,318 | 0,491 | 0,471 | 0,356 |
+  | İngilizce | 0,468 | 0,256 | 0,216 | 0,218 | 0,223 | 0,227 |
+  | Fransızca | 0,456 | 0,263 | 0,234 | 0,273 | 0,274 | 0,244 |
+  | Almanca | 0,469 | 0,244 | 0,234 | 0,282 | 0,284 | 0,254 |
 - **131.072 (2^17) token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
   harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-*`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
   dilin bölümü yalnız o dilin metin kipinde kullanılır; İngilizce metin kipi kod sözlüğündeki (`time`, `data`) ve AZ
