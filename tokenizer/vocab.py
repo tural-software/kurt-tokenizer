@@ -35,6 +35,7 @@ from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜY�
                                 BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR, LATEX_TOKENLARI)
 from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
 from tokenizer.dil import PROFİLLER, DOĞAL_DİLLER
+from tokenizer.v2 import SÜRÜMLER, kaynaştır
 
 # Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
 # yanlış bırakılırsa bölümleri_ekle tekrar hatası verir → liste kendini denetler).
@@ -152,6 +153,10 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # DE-4 — Almanca: DE motor tokenları − mevcut vocab (ek/Fugen/önek/istisna parçası + ẞ hepsi + FineWeb-2 deu
     # train/000'de kazancı en yüksek bütün gövdeler + yedek yazım heceleri; pay 3.800). Yalnız dil="de" metin kipinde açık.
     ("de-1", _statik_bölüm(_VERİ / "de" / "vocab_de1.json")),
+    # V2-1 — v2 kodlaması: sözcük başı ▁ + Başlık işaretçisi + ilk token kaynaşık yüzeyleri (▁Haus, ▁gel, Gel). Beş
+    # dilin eğitim örnekleminde (10M karakter/dil) ≥10 oluşum; üretici şemsiye scripts/v2/kaynasma_uret.py. Yalnız
+    # sürüm="v2" metin kipinde (Vocab._v2); v1 kipi bu tokenları hiç üretmez.
+    ("v2-kaynasma", _statik_bölüm(_VERİ / "v2" / "kaynasma.json")),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -177,6 +182,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("en-1", 5000, "ff21a7d8b7530ebc407724110d5ad35830351951c512c24b1a39a14c11ba613f"),
     ("fr-1", 3500, "aed960a28afc27e1332de5d39b387b8019ea854e3e0111a36d5e2aed2d6f44b6"),
     ("de-1", 3800, "3def40fac7a1c2845ec9c67c5fcf3735c93871305ae4ed217979e6417d001d5b"),
+    ("v2-kaynasma", 20448, "896202c33e1b98943467948f05c00ea9e5d42eb00f248af20b5dbdf39b6c5200"),
 ]
 
 
@@ -336,6 +342,10 @@ class Vocab:
         # Bütün-sözcük tokenları (matematik-sozcuk): hece yedeğinde kullanılmaz.
         self._yalnız_bütün = frozenset(self.tok2id[t] for t in _MATEMATİK_SÖZCÜK
                                        if t in self.tok2id)
+        # v2 bölümleri (kaynaşık yüzeyler): yalnız sürüm="v2" metin kipinde, kaynaştır() üzerinden.
+        self._v2 = frozenset(t for ad, bölüm in bölümler if ad.startswith("v2-")
+                             for t in bölüm if t in self.tok2id)
+        self._v2_id = frozenset(self.tok2id[t] for t in self._v2)
 
     def __len__(self):
         return len(self.id2tok)
@@ -344,6 +354,8 @@ class Vocab:
         """Tokenın ID'si; metin kipinde kod bölümü tokenı, o dilin metin kipi dışında dil bölümü
         tokenı yok sayılır (None)."""
         tid = self.tok2id.get(t)
+        if tid in self._v2_id:
+            return None
         ortak = kip == "metin" and dil in _ORTAK_KULLANAN_DİLLER
         if tid is not None and kip != "kod" and tid in self._yalnız_kod and not (
                 (t in ASCII_İŞARET and dil in _ASCII_CASING_DİLLERİ)      # Unicode casing: <|Ab|> <|AA|>
@@ -379,20 +391,30 @@ class Vocab:
         return ids
 
     def encode_ids(self, metin, kökler, ekler, istisnalar=None, kuyruk=None,
-                   önbellek=None, kip: str = "metin", dil: str | None = None) -> list[int]:
+                   önbellek=None, kip: str = "metin", dil: str | None = None,
+                   sürüm: str = "v1") -> list[int]:
         """Metin → ID dizisi. Bilinen token doğrudan; bilinmeyen bütün-token fallback'lenir.
         önbellek: büyük korpus için kelime-memoization (encode'a iletilir). kip: "metin"|"kod";
         dil: kod kipinde programlama dili (ör. "python"), metin kipinde doğal dil (ör. "az";
-        None = Türkçe) — o zaman kökler/ekler/istisnalar o dilin verisidir."""
+        None = Türkçe) — o zaman kökler/ekler/istisnalar o dilin verisidir. sürüm: "v1" (donmuş kodlama) |
+        "v2" (metin kipinde sözcük başı kaynaşması, tokenizer/v2.py; kod kipinde v1 ile aynı)."""
+        if sürüm not in SÜRÜMLER:
+            raise ValueError(f"bilinmeyen sürüm: {sürüm!r} (geçerli: {', '.join(SÜRÜMLER)})")
+        tokenlar = encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil)
+        if sürüm == "v2" and kip == "metin":
+            tokenlar = kaynaştır(tokenlar, lambda y, t: y in self._v2 and self._id(t, kip, dil) is not None)
         ids: list[int] = []
-        for t in encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil):
+        for t in tokenlar:
+            if sürüm == "v2" and t in self._v2:
+                ids.append(self.tok2id[t])
+                continue
             tid = self._id(t, kip, dil)
             ids.append(tid) if tid is not None else ids.extend(self._fallback(t, kip, dil))
         return ids
 
     def decode_ids(self, ids, kip: str = "metin") -> str:
         """ID dizisi → metin (casing/▁/özel tokenlar pipeline.decode ile çözülür)."""
-        return decode([self.id2tok[i] for i in ids], kip)
+        return decode([self.id2tok[i] for i in ids], kip, self._v2)
 
     def kaydet(self, yol: str | Path) -> None:
         Path(yol).write_text(json.dumps({"id2tok": self.id2tok}, ensure_ascii=False),
