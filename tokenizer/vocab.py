@@ -35,7 +35,7 @@ from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜY�
                                 BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR, LATEX_TOKENLARI)
 from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
 from tokenizer.dil import PROFİLLER, DOĞAL_DİLLER
-from tokenizer.v2 import SÜRÜMLER, kaynaştır
+from tokenizer.v2 import SÜRÜMLER, kaynaştır, harf_tokenı
 
 # Python anahtar sözcüklerinden v1'de Türkçe hece/token olarak zaten bulunanlar (tekrar eklenmez;
 # yanlış bırakılırsa bölümleri_ekle tekrar hatası verir → liste kendini denetler).
@@ -157,6 +157,11 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     # dilin eğitim örnekleminde (10M karakter/dil) ≥10 oluşum; üretici şemsiye scripts/v2/kaynasma_uret.py. Yalnız
     # sürüm="v2" metin kipinde (Vocab._v2); v1 kipi bu tokenları hiç üretmez.
     ("v2-kaynasma", _statik_bölüm(_VERİ / "v2" / "kaynasma.json")),
+    # V2-2 — morfem demetleri: sözcük birimi içindeki ardışık tokenların birleşimi (lerin, ▁geliyorum, ▁Azərbaycan).
+    # v2-demet yalnız harf tokenları (decode sıradan), v2-demet-duz ▁/Başlık önekli (decode harfiyen). Seçim: eğitim
+    # örnekleminin gerçek bölmesindeki kazanç; üretici şemsiye scripts/v2/demet_uret.py. Yalnız sürüm="v2" metin kipinde.
+    ("v2-demet", _statik_bölüm(_VERİ / "v2" / "demet.json")),
+    ("v2-demet-duz", _statik_bölüm(_VERİ / "v2" / "demet_duz.json")),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -183,6 +188,8 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("fr-1", 3500, "aed960a28afc27e1332de5d39b387b8019ea854e3e0111a36d5e2aed2d6f44b6"),
     ("de-1", 3800, "3def40fac7a1c2845ec9c67c5fcf3735c93871305ae4ed217979e6417d001d5b"),
     ("v2-kaynasma", 20448, "896202c33e1b98943467948f05c00ea9e5d42eb00f248af20b5dbdf39b6c5200"),
+    ("v2-demet", 1099, "6b5937f61e479ec129450725fe10927836495521588aba1132fb782c32b36747"),
+    ("v2-demet-duz", 48901, "dc6a839db635d523cabb0ff8e407126a68a8e71dfdde9220eed07c9534fb8304"),
 ]
 
 
@@ -346,6 +353,9 @@ class Vocab:
         self._v2 = frozenset(t for ad, bölüm in bölümler if ad.startswith("v2-")
                              for t in bölüm if t in self.tok2id)
         self._v2_id = frozenset(self.tok2id[t] for t in self._v2)
+        # Harfiyen decode edilen (▁/Başlık önekli) v2 tokenları; v2-demet sıradan token gibi çözülür.
+        self._düz = frozenset(t for ad, bölüm in bölümler if ad in ("v2-kaynasma", "v2-demet-duz")
+                              for t in bölüm if t in self.tok2id)
 
     def __len__(self):
         return len(self.id2tok)
@@ -402,7 +412,16 @@ class Vocab:
             raise ValueError(f"bilinmeyen sürüm: {sürüm!r} (geçerli: {', '.join(SÜRÜMLER)})")
         tokenlar = encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil)
         if sürüm == "v2" and kip == "metin":
-            tokenlar = kaynaştır(tokenlar, lambda y, t: y in self._v2 and self._id(t, kip, dil) is not None)
+            açık: dict[str, bool] = {}
+
+            def izinli(t):
+                r = açık.get(t)
+                if r is None:
+                    r = açık[t] = harf_tokenı(t) and self._id(t, kip, dil) is not None
+                return r
+
+            tokenlar = kaynaştır(tokenlar, izinli, lambda t, düz: t in self._düz if düz else (
+                t in self._v2 and t not in self._düz or izinli(t)))
         ids: list[int] = []
         for t in tokenlar:
             if sürüm == "v2" and t in self._v2:
@@ -414,7 +433,7 @@ class Vocab:
 
     def decode_ids(self, ids, kip: str = "metin") -> str:
         """ID dizisi → metin (casing/▁/özel tokenlar pipeline.decode ile çözülür)."""
-        return decode([self.id2tok[i] for i in ids], kip, self._v2)
+        return decode([self.id2tok[i] for i in ids], kip, self._düz)
 
     def kaydet(self, yol: str | Path) -> None:
         Path(yol).write_text(json.dumps({"id2tok": self.id2tok}, ensure_ascii=False),
