@@ -172,7 +172,9 @@ class CasingVeRoundTrip(unittest.TestCase):
 
     def test_doğrulama_metni(self):
         metin = (VERİ / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")
-        self.assertEqual(decode(kodla(metin)), metin_kanonik(metin))
+        q = OnayKuyruğu()
+        self.assertEqual(decode(kodla(metin, q)), metin_kanonik(metin))
+        self.assertEqual([b.kelime for b in q.bekleyenler()], [])      # DE-5 kapısı: 10 alan, bilinmeyen 0
 
     def test_ad_başlıkta_öne_alınmaz(self):
         self.assertFalse(DE.özel_ad_başlık)
