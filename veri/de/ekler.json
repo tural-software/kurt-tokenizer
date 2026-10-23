@@ -12,7 +12,10 @@
     "önek":        ["ge", "zu"],
     "ayrılabilir": ["ab", "an", "auf", "aus", "bei", "dar", "ein", "fest", "fort", "her", "hin", "los", "mit", "nach",
                     "vor", "weg", "zu", "zurück", "zusammen", "weiter", "wieder", "vorbei", "hinaus", "heraus",
-                    "herein", "hinein", "herum", "voran", "voraus", "statt", "teil", "kennen", "frei", "fern", "um"],
+                    "herein", "hinein", "herum", "voran", "voraus", "statt", "teil", "kennen", "frei", "fern", "um",
+                    "zurecht", "weh", "kund", "gut", "schwer", "zuwider", "hervor", "hindurch", "nieder", "glatt",
+                    "herunter", "hinauf", "herauf", "hinunter", "herab", "hinab", "entgegen", "empor", "zuvor",
+                    "rein", "raus", "runter", "rum", "hoch", "heim", "bereit", "kaputt", "vonstatten", "zuteil", "nahe"],
     "fugen":       ["s", "es", "n", "en", "e", "er", "ens"]
   }
 }
