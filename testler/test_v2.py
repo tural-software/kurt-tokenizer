@@ -73,7 +73,8 @@ class V2Test(unittest.TestCase):
 
     def test_kenar_durumları(self):
         for metin in ("İstanbul'da In der Stadt ( gel ) TÜRKİYE Haus", "a\n\nBir  iki", "▁ harfiyen ▁gel",
-                      "EVLERİNDE Evlerinde evlerinde ARABALARININ Azərbaycanın", "geliyorum. Geliyorum, GELİYORUM!"):
+                      "EVLERİNDE Evlerinde evlerinde ARABALARININ Azərbaycanın", "geliyorum. Geliyorum, GELİYORUM!",
+                      "uninsured NEMATODES Zwickau iPhone l’azote ArchWiki"):     # yedek parçaları birime girer (V2-4)
             for dil in DİLLER:
                 with self.subTest(metin=metin, dil=dil):
                     self.assertEqual(self.v.decode_ids(self._ids(metin, dil, "v2")),

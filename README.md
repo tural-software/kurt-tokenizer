@@ -60,7 +60,8 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
 - **v2 kodlaması** (`sürüm="v2"`, büyük modeller için): sözcük başındaki boşluk ve Başlık harfi ilk tokenla
   kaynaşır (`▁ <|Bb|> haus` → `▁Haus`), sık morfem dizileri tek token olur (`▁annelerin`, `ların`, `▁gedir`), v1'de
   yedeğe düşen sık gövdeler tek tokendır. Yalnız var olan sınırlar kalkar, yeni sınır oluşmaz; decode metni v1 ile
-  birebir aynı. Token/karakter: TR 0,62 → 0,29, AZ 0,59 → 0,28, EN 0,46 → 0,27, FR 0,46 → 0,29, DE 0,47 → 0,27.
+  birebir aynı; vocab'da olmayan sözcüğün hece/harf yedeği de aynı kuralla birleşir. Token/karakter: TR 0,62 → 0,27,
+  AZ 0,59 → 0,26, EN 0,46 → 0,25, FR 0,46 → 0,27, DE 0,47 → 0,24.
   Varsayılan `sürüm="v1"` donmuş kodlamadır.
 - **131.072 (2^17) token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
   harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-*`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir

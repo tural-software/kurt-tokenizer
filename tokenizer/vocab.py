@@ -400,6 +400,23 @@ class Vocab:
             return r
         return izinli
 
+    def _v2_yedek(self, tokenlar, izinli, dil):
+        """v2: vocab'da olmayan harf tokenını yedek PARÇALARINA açar (hece; vocab'da yoksa harf; o da yoksa bayt) — parçalar
+        sözcük birimine girer, kaynaştır ardışık parçaları en uzun eşleşmeyle birleştirir (yine yalnız sınır kalkar)."""
+        profil = PROFİLLER[dil] if dil in DOĞAL_DİLLER else None
+        çıktı: list[str] = []
+        for t in tokenlar:
+            if not harf_tokenı(t) or izinli(t):
+                çıktı.append(t)
+                continue
+            for hece in hecele(t, profil):
+                if izinli(hece):
+                    çıktı.append(hece)
+                    continue
+                for ch in hece:
+                    çıktı.extend([ch] if ch in self.tok2id else bayt_tokenları(ch))
+        return çıktı
+
     def _fallback(self, kelime: str, kip: str = "metin", dil: str | None = None) -> list[int]:
         """Bilinmeyen bütün-token → hece (dilin ünlüleriyle), vocab'da yoksa harf, o da yoksa
         UTF-8 baytları (bayt bölümü olmayan eski vocab'da son çare <unk>)."""
@@ -435,6 +452,7 @@ class Vocab:
         tokenlar = encode(metin, kökler, ekler, istisnalar, kuyruk, önbellek, kip, dil)
         if sürüm == "v2" and kip == "metin":
             izinli = self.v2_izinli(kip, dil)
+            tokenlar = self._v2_yedek(tokenlar, izinli, dil)
             tokenlar = kaynaştır(tokenlar, izinli, lambda t, düz: t in self._düz if düz else izinli(t))
         ids: list[int] = []
         for t in tokenlar:
