@@ -58,10 +58,13 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
 - **Kod kipi** (`kip="kod"`, `dil="python"`): boşluk/satır birebir korunur; kendi Python lexer'ı,
   tanımlayıcı bölme ve kod sözlüğü.
 - **v2 kodlaması** (`sürüm="v2"`, büyük modeller için): sözcük başındaki boşluk ve Başlık harfi ilk tokenla
-  kaynaşır (`▁ <|Bb|> haus` → `▁Haus`, `▁ gel` → `▁gel`). Morfem sınırları aynı, decode metni v1 ile birebir aynı;
-  token sayısı TR/AZ'de ~%21–23, EN/FR/DE'de ~%31–35 azalır. Varsayılan `sürüm="v1"` donmuş kodlamadır.
-- **41.259 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
-  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-kaynasma`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
+  kaynaşır (`▁ <|Bb|> haus` → `▁Haus`), sık morfem dizileri tek token olur (`▁annelerin`, `ların`, `▁gedir`), v1'de
+  yedeğe düşen sık gövdeler tek tokendır. Yalnız var olan sınırlar kalkar, yeni sınır oluşmaz; decode metni v1 ile
+  birebir aynı; vocab'da olmayan sözcüğün hece/harf yedeği de aynı kuralla birleşir. Token/karakter: TR 0,62 → 0,27,
+  AZ 0,59 → 0,26, EN 0,46 → 0,25, FR 0,46 → 0,27, DE 0,47 → 0,24.
+  Varsayılan `sürüm="v1"` donmuş kodlamadır.
+- **131.072 (2^17) token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
+  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-*`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
   dilin bölümü yalnız o dilin metin kipinde kullanılır; İngilizce metin kipi kod sözlüğündeki (`time`, `data`) ve AZ
   bölümündeki aynı yazımlı tokenları da paylaşır (aynı dizgi iki kez eklenemez).
 - **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): metin kipinde
@@ -105,7 +108,7 @@ ids = vocab.encode_ids("Türkçe'yi gerçekten anlayan bir model.", tr.kökler, 
 tokenizer/      çekirdek motor: sesler, alfabe, hece, kökler, ekler, birleştir (üretim),
                 çözümle (ek soyma + üretimle doğrulama), trie, pipeline (encode/decode),
                 vocab, istisna, onay (bilinmeyen kuyruğu), kod (Python lexer),
-                dil (dil profilleri), diller (dil verisi yükleyici), v2 (v2 kaynaşması)
+                dil (dil profilleri), diller (dil verisi yükleyici), v2 (v2 kaynaşma ve demetleme)
 veri/           Türkçe kök sözlüğü (harf başına), ek/istisna/zamir/işlev-kökü listeleri,
                 vocab.json, kod sözlüğü, doğrulama korpusu
 veri/az/        Azerbaycan Türkçesi: kök sözlüğü, ekler, istisnalar, vocab bölümü (az-1),
@@ -115,10 +118,10 @@ veri/fr/        Fransızca: kök sözlüğü (kokler.txt), çekim sınıfları (
                 vocab bölümü (fr-1), altın liste ve doğrulama metni
 veri/de/        Almanca: kök sözlüğü (kokler.txt), çekim sınıfları (cekim.json), ekler, istisnalar,
                 vocab bölümü (de-1), altın liste ve doğrulama metni
-veri/v2/        v2 bölümleri (kaynasma.json: sözcük başı kaynaşık yüzeyler)
+veri/v2/        v2 bölümleri (kaynasma, demet, demet_duz, govde, demet2, demet2_duz)
 araclar/        kaynak → JSON üretici (uret), vocab üretici (vocab_uret), korpus doğrulayıcı
                 (dogrula_korpus), regresyon karşılaştırıcı (regresyon), kod doğrulayıcı (kod_dogrula)
-testler/        stdlib unittest (333 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
+testler/        stdlib unittest (334 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
 ```
 
 ## Veri kaynakları (Azerbaycan Türkçesi)

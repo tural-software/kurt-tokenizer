@@ -40,12 +40,17 @@ class V2Test(unittest.TestCase):
         self.assertEqual(yüzey(False, None, "gel"), "gel")
 
     def test_kaynaştır_sırası(self):
-        var = {"▁gel", "Haus"}.__contains__
-        self.assertEqual(kaynaştır([BOŞLUK, "gel", "iyor"], lambda y, t: var(y)), ["▁gel", "iyor"])
-        # tam üçlü yoksa ▁ ayrı + Başlık kaynaşması
-        self.assertEqual(kaynaştır(["x", BOŞLUK, BAŞ_BÜYÜK, "haus"], lambda y, t: var(y)), ["x", BOŞLUK, "Haus"])
-        # hiçbiri yoksa v1 dizisi
-        self.assertEqual(kaynaştır([BOŞLUK, BAŞ_BÜYÜK, "ev"], lambda y, t: var(y)), [BOŞLUK, BAŞ_BÜYÜK, "ev"])
+        izinli = {"gel", "i", "yor", "um", "haus", "ev", "ler", "in"}.__contains__
+        düz, demet = {"▁gel", "Haus", "▁geliyor"}, {"lerin"}
+        var = lambda t, d: t in düz if d else (t in demet or izinli(t))
+        k = lambda tk: kaynaştır(tk, izinli, var)
+        # en uzun eşleşme: ▁geliyor + um
+        self.assertEqual(k([BOŞLUK, "gel", "i", "yor", "um"]), ["▁geliyor", "um"])
+        # tam önekli dizi yoksa ▁ ayrı + Başlık kaynaşması
+        self.assertEqual(k(["x", BOŞLUK, BAŞ_BÜYÜK, "haus"]), ["x", BOŞLUK, "Haus"])
+        # iç demet; hiçbiri yoksa v1 dizisi
+        self.assertEqual(k([BOŞLUK, "ev", "ler", "in"]), [BOŞLUK, "ev", "lerin"])
+        self.assertEqual(k([BOŞLUK, BAŞ_BÜYÜK, "ev"]), [BOŞLUK, BAŞ_BÜYÜK, "ev"])
 
     def test_decode_eşit_ve_kısa(self):
         for dil in DİLLER:
@@ -67,11 +72,20 @@ class V2Test(unittest.TestCase):
         self.assertEqual(self._ids(kod, None, "v2", "kod", "python"), self._ids(kod, None, "v1", "kod", "python"))
 
     def test_kenar_durumları(self):
-        for metin in ("İstanbul'da In der Stadt ( gel ) TÜRKİYE Haus", "a\n\nBir  iki", "▁ harfiyen ▁gel"):
+        for metin in ("İstanbul'da In der Stadt ( gel ) TÜRKİYE Haus", "a\n\nBir  iki", "▁ harfiyen ▁gel",
+                      "EVLERİNDE Evlerinde evlerinde ARABALARININ Azərbaycanın", "geliyorum. Geliyorum, GELİYORUM!",
+                      "uninsured NEMATODES Zwickau iPhone l’azote ArchWiki"):     # yedek parçaları birime girer (V2-4)
             for dil in DİLLER:
                 with self.subTest(metin=metin, dil=dil):
                     self.assertEqual(self.v.decode_ids(self._ids(metin, dil, "v2")),
                                      self.v.decode_ids(self._ids(metin, dil, "v1")))
+
+    def test_v2_dil_kapısı_yok(self):
+        # v1'de Türkçe kip en-1 tokenını kullanamaz (the harf harf); v2'de vocab'daki her harf tokenı açık
+        v1, v2 = self._ids("bir the yazısı", None, "v1"), self._ids("bir the yazısı", None, "v2")
+        self.assertIn(self.v.tok2id["▁the"], v2)
+        self.assertNotIn(self.v.tok2id["the"], v1)
+        self.assertEqual(self.v.decode_ids(v2), self.v.decode_ids(v1))
 
     def test_geçersiz_sürüm(self):
         with self.assertRaises(ValueError):
