@@ -189,6 +189,24 @@ class CasingVeRoundTrip(unittest.TestCase):
         ids = v.encode_ids(metin, V.kökler, V.ekler, V.istisnalar, dil="de")
         self.assertEqual(v.decode_ids(ids), metin_kanonik(metin))
 
+    def test_de1_bölümü_dil_kapısı(self):
+        # de-1 tokenları YALNIZ dil="de" metin kipinde; önce eklenmiş ortak diller (EN, FR) de-1'i göremez.
+        from tokenizer.vocab import EK_BÖLÜMLER
+        v = Vocab.yükle(KÖK / "veri" / "vocab.json")
+        de1 = {v.tok2id[t] for ad, b in EK_BÖLÜMLER if ad == "de-1" for t in b}
+        self.assertEqual(len(de1), 3800)
+        metin = (VERİ / "korpus" / "dogrulama.txt").read_text(encoding="utf-8") + " GROẞE Straße"
+        ids = v.encode_ids(metin, V.kökler, V.ekler, V.istisnalar, dil="de")
+        self.assertTrue(de1 & set(ids))
+        self.assertEqual(v.decode_ids(ids), metin_kanonik(metin))
+        self.assertIn(v.tok2id["ẞ"], v.encode_ids("ẞ", V.kökler, V.ekler, V.istisnalar, dil="de"))
+        tr, az, en, fr = diller.yükle(), diller.yükle("az"), diller.yükle("en"), diller.yükle("fr")
+        self.assertFalse(de1 & set(v.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar)))
+        self.assertFalse(de1 & set(v.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar, kip="kod")))
+        self.assertFalse(de1 & set(v.encode_ids(metin, az.kökler, az.ekler, az.istisnalar, dil="az")))
+        self.assertFalse(de1 & set(v.encode_ids(metin, en.kökler, en.ekler, en.istisnalar, dil="en")))
+        self.assertFalse(de1 & set(v.encode_ids(metin, fr.kökler, fr.ekler, fr.istisnalar, dil="fr")))
+
     def test_türkçe_kipi_değişmez(self):
         tr = diller.yükle()
         self.assertEqual(encode("finden", tr.kökler, tr.ekler, tr.istisnalar), ["fin", "den"])
