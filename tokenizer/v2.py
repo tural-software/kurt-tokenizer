@@ -1,7 +1,7 @@
 """v2 kodlaması (büyük modeller için): v1 token dizisi üzerinde DETERMİNİSTİK kaynaşma ve demetleme.
 
 v1 dizisinde bir sözcük BİRİMİ: varsa ▁ (boşluk), varsa Başlık işaretçisi (<|Bb|> / <|Ab|>), ardından harf tokenları
-(morfem/hece). v2 her birimi soldan sağa EN UZUN eşleşmeyle böler: birimin ardışık tokenlarının birleşimi vocab'da
+(morfem/hece); ya da ▁ + harf olmayan tek token (▁( ▁1 ▁l’ — yalnız düz eşi vocab'daysa birleşir). v2 her birimi soldan sağa EN UZUN eşleşmeyle böler: birimin ardışık tokenlarının birleşimi vocab'da
 (v2 bölümleri ya da var olan token) varsa tek token olur. Yalnız var olan token sınırları kalkar → yeni sınır,
 dolayısıyla yanlış bölme yapısal olarak imkânsız; çözüm aynı, kodlama kabalaşır.
 
@@ -57,6 +57,11 @@ def birimler(tokenlar, izinli):
             continue
         if t in _BAŞLIK and k == [BOŞLUK]:
             k.append(t)
+            continue
+        if k == [BOŞLUK] and t != BOŞLUK:
+            # ▁ + harf olmayan tek token (noktalama, rakam, elizyon l’): böl ▁( ▁1 ▁l’ düz eşini dener (V2-6)
+            yield True, [BOŞLUK, t]
+            k = []
             continue
         if k:
             yield harf_tokenı(k[-1]) and len(k) > 1, k

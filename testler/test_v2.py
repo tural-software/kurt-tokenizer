@@ -51,6 +51,9 @@ class V2Test(unittest.TestCase):
         # iç demet; hiçbiri yoksa v1 dizisi
         self.assertEqual(k([BOŞLUK, "ev", "ler", "in"]), [BOŞLUK, "ev", "lerin"])
         self.assertEqual(k([BOŞLUK, BAŞ_BÜYÜK, "ev"]), [BOŞLUK, BAŞ_BÜYÜK, "ev"])
+        # V2-6: ▁ + harf olmayan tek token, düz eşi varsa birleşir; yoksa ayrı kalır
+        düz.add("▁(")
+        self.assertEqual(k(["ev", BOŞLUK, "(", "ev", ")", BOŞLUK, "-"]), ["ev", "▁(", "ev", ")", BOŞLUK, "-"])
 
     def test_decode_eşit_ve_kısa(self):
         for dil in DİLLER:
@@ -74,7 +77,7 @@ class V2Test(unittest.TestCase):
     def test_kenar_durumları(self):
         for metin in ("İstanbul'da In der Stadt ( gel ) TÜRKİYE Haus", "a\n\nBir  iki", "▁ harfiyen ▁gel",
                       "EVLERİNDE Evlerinde evlerinde ARABALARININ Azərbaycanın", "geliyorum. Geliyorum, GELİYORUM!",
-                      "uninsured NEMATODES Zwickau iPhone l’azote ArchWiki"):     # yedek parçaları birime girer (V2-4)
+                      "uninsured NEMATODES Zwickau iPhone l’azote ArchWiki", "a ( 1 ) « b » 2,5 - c l'homme \"x\""):     # yedek parçaları birime girer (V2-4)
             for dil in DİLLER:
                 with self.subTest(metin=metin, dil=dil):
                     self.assertEqual(self.v.decode_ids(self._ids(metin, dil, "v2")),
