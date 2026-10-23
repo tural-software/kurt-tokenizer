@@ -6,7 +6,7 @@ Kurt Tokenizer; Türkçe'yi birinci sınıf dil olarak ele alan **Kurt** dil mod
 projesinin temel taşıdır. İstatistiksel (BPE/WordPiece gibi) değil; Türkçe'nin
 morfolojisini elle modellenmiş kök sözlüğü, ek listesi ve birleştirme kurallarıyla
 çözen **deterministik** bir sistemdir. Aynı motor Azerbaycan Türkçesini de kendi
-kök sözlüğü ve ek kurallarıyla çözer; İngilizce ve Fransızca için aynı ilkeyle (kök sözlüğü + ek kuralı +
+kök sözlüğü ve ek kurallarıyla çözer; İngilizce, Fransızca ve Almanca için aynı ilkeyle (kök sözlüğü + ek kuralı +
 üret-doğrula) yazılmış kendi çözümleyicileri vardır.
 
 > Bu bileşen, "vatana millete hayırlı uğurlu olsun" niyetiyle **MIT lisansıyla
@@ -48,10 +48,17 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   (`l'+homme`, `qu’+il`), düzensiz biçim bütün (`est`, `sont`). ~26.000 kök (Wikidata Lexemes CC0 + elle), ~3.300
   özel ad, sıra sayısı/Roma rakamı (`deux+ième`, `xix+e`). 3.500 tokenlık `fr-1` bölümü (ekler, elizyonlar, œ Œ ÿ Ÿ,
   sık gövdeler bütün, yedek heceler): Fransızca web metninde 0,45 token/karakter (Türkçe kipte 0,70).
+- **Almanca** (`dil="de"`): çekim üreteçli ve bileşik kurallı kendi çözümleyicisi (`tokenizer/de.py`) — umlaut ve
+  ablaut gövde tokenında, ekler sırayla ayrı (`häus+er+n`, `schön+er+e`, `ge+mach+t`, `gab+en`); ayrılmayan önekli
+  fiil tek kök (`verstand+en`), ayrılabilir önek ayrı (`an+ge+fang+en`, `aus+ge+statt+et`). Bileşik sözcük parça +
+  Fugen + parça (`arbeit+s+platz`, `benutzer+ober+fläche`); birden çok bölme mümkünse bütün tutulur. Adlar büyük
+  yazıldığı için yazım biçimi okumayı seçer (`habe = hab+e`, `Habe`). İsviçre ve eski yazım (`gross+e`, `muß+te`).
+  ~123.600 kök (Wikidata Lexemes CC0 + elle), ~2.900 özel ad. 3.800 tokenlık `de-1` bölümü (ekler, Fugen, ẞ, sık
+  gövdeler, yedek heceler): Almanca web metninde 0,47 token/karakter (Türkçe kipte 0,75).
 - **Kod kipi** (`kip="kod"`, `dil="python"`): boşluk/satır birebir korunur; kendi Python lexer'ı,
   tanımlayıcı bölme ve kod sözlüğü.
-- **17.011 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
-  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
+- **20.811 token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
+  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
   dilin bölümü yalnız o dilin metin kipinde kullanılır; İngilizce metin kipi kod sözlüğündeki (`time`, `data`) ve AZ
   bölümündeki aynı yazımlı tokenları da paylaşır (aynı dizgi iki kez eklenemez).
 - **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): metin kipinde
@@ -100,9 +107,11 @@ veri/az/        Azerbaycan Türkçesi: kök sözlüğü, ekler, istisnalar, voca
 veri/en/        İngilizce: kök sözlüğü (kokler.txt), ekler, istisnalar (düzensiz/kısaltma), altın liste
 veri/fr/        Fransızca: kök sözlüğü (kokler.txt), çekim sınıfları (cekim.json), ekler, istisnalar,
                 vocab bölümü (fr-1), altın liste ve doğrulama metni
+veri/de/        Almanca: kök sözlüğü (kokler.txt), çekim sınıfları (cekim.json), ekler, istisnalar,
+                vocab bölümü (de-1), altın liste ve doğrulama metni
 araclar/        kaynak → JSON üretici (uret), vocab üretici (vocab_uret), korpus doğrulayıcı
                 (dogrula_korpus), regresyon karşılaştırıcı (regresyon), kod doğrulayıcı (kod_dogrula)
-testler/        stdlib unittest (302 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
+testler/        stdlib unittest (326 test) — round-trip, sahte bölme, regresyon ve dil kapısı dahil
 ```
 
 ## Veri kaynakları (Azerbaycan Türkçesi)
@@ -135,6 +144,16 @@ testler/        stdlib unittest (302 test) — round-trip, sahte bölme, regresy
 - **Korpus kanıtı:** FineWeb-2 `fra_Latn` (ODC-By). Eşsesli kök kararları, elle denetlenen sözcük/özel ad adayları ve
   vocab bölümü seçimi bu korpustaki gerçek kullanımla bir kez verilip veri dosyasına işlendi; çalışma anında frekans
   kullanılmaz. Korpus metni depoda yoktur.
+
+## Veri kaynakları (Almanca)
+
+- **Kök listesi:** [Wikidata Lexemes](https://www.wikidata.org/wiki/Wikidata:Lexicographical_data) (CC0) — Almanca
+  lemma, tür, biçimler (yalnız bayrak kanıtı: çoğul, tamlayan, ortaç) ve bileşik parça bildirimleri (doğrulama).
+  Çekim kuralları, güçlü fiil sınıfları, bileşik kuralı, istisnalar, özel ad listesi ve eksik sözcükler bizim (elle).
+  Copyleft ya da kısıtlı şartlı sözlük kullanılmadı.
+- **Korpus kanıtı:** FineWeb-2 `deu_Latn` (ODC-By). Fiil sınıfı, iki yönlü önek, tamlayan biçimi, seyrek/bileşen olmayan
+  kök kararları, elle denetlenen sözcük/özel ad adayları ve vocab bölümü seçimi bu korpustaki gerçek kullanımla bir kez
+  verilip veri dosyasına işlendi; çalışma anında frekans kullanılmaz. Korpus metni depoda yoktur.
 
 ## Veriyi yeniden üretme
 
