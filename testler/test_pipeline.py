@@ -30,6 +30,17 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.enc("evler"), ["ev", "ler"])
         self.assertEqual(self.enc("kitabı"), ["ki", "tab", "ı"])
 
+    def test_k1b_seçimler(self):
+        # -An ortacı + ek-fiil seyrek dizi: başka okuma varsa geride (incele+n+di); yoksa seçilir (sat+an+dı)
+        self.assertEqual(self.enc("incelendi"), ["in", "ce", "le", "n", "di"])
+        self.assertEqual(self.enc("atandı"), ["a", "ta", "n", "dı"])
+        self.assertEqual(self.enc("satandı"), ["sat", "an", "dı"])
+        # norm dışı okuma yalnız normatif okuma yokken: omzu normatif, omuzu norm dışı
+        self.assertEqual(self.enc("omzu"), ["o", "mz", "u"])
+        self.assertEqual(self.enc("omuzu"), ["o", "muz", "u"])
+        self.assertEqual(self.enc("hakkı"), ["hakk", "ı"])
+        self.assertEqual(self.enc("hepsini"), ["hep", "si", "n", "i"])
+
     def test_boşluk_tokenı(self):
         t = self.enc("ev araba")
         self.assertIn(BOŞLUK, t)
