@@ -74,7 +74,7 @@ gevşek|sıfat|k→ğ
 geyik|isim|k→ğ
 gezi|isim|
 gıda|isim|
-gider|isim|
+gider|isim||fiil
 gizli|sıfat|
 gonca|isim|
 gömlek|isim|k→ğ
@@ -87,7 +87,7 @@ güney|isim|
 günlük|sıfat|k→ğ
 gürbüz|sıfat|
 güveç|isim|ç→c
-güven|isim|
+güven|isim||fiil
 güzel|sıfat|
 genç|sıfat|ç→c
 gazete|isim|
@@ -265,7 +265,7 @@ gövdelen|fiil|
 göver|fiil|
 göy|fiil|
 göynü|fiil|
-göze|fiil|
+göze|fiil||isim
 gözük|fiil|
 göçebeleş|fiil|
 göçer|fiil|
@@ -1917,3 +1917,7 @@ gavurluk|isim|k→ğ
 gülgun|isim
 günahkarlık|isim|k→ğ
 günaşık|isim|k→ğ
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+galvanize|sıfat
+gençten|sıfat

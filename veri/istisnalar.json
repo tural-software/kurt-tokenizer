@@ -275,6 +275,12 @@
         "da"
       ],
       "not": "bağlaç klitik (de/da)"
+    },
+    "halbuki": {
+      "tokens": [
+        "halbuki"
+      ],
+      "not": "hâlbuki'nin imsiz yazımı"
     }
   },
   "edat": {
@@ -596,6 +602,19 @@
         "herhangi"
       ],
       "not": "belgisiz/nicelik işlev sözcüğü"
+    },
+    "günkü": {
+      "tokens": [
+        "gün",
+        "kü"
+      ],
+      "not": "düzensiz -kü (dünkü/bugünkü gibi): o günkü"
+    },
+    "dolayısıyla": {
+      "tokens": [
+        "dolayısıyla"
+      ],
+      "not": "sözlükselleşmiş belirteç"
     }
   },
   "ünlem": {
@@ -2200,6 +2219,102 @@
         "iken"
       ],
       "not": "ayrık ek-fiil (imek) biçimi"
+    },
+    "isem": {
+      "tokens": [
+        "isem"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "isen": {
+      "tokens": [
+        "isen"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "isek": {
+      "tokens": [
+        "isek"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "iseniz": {
+      "tokens": [
+        "iseniz"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "iseler": {
+      "tokens": [
+        "iseler"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "idim": {
+      "tokens": [
+        "idim"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "idin": {
+      "tokens": [
+        "idin"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "idik": {
+      "tokens": [
+        "idik"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "idiniz": {
+      "tokens": [
+        "idiniz"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "idiler": {
+      "tokens": [
+        "idiler"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "imiş": {
+      "tokens": [
+        "imiş"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "imişim": {
+      "tokens": [
+        "imişim"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "imişsin": {
+      "tokens": [
+        "imişsin"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "imişiz": {
+      "tokens": [
+        "imişiz"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "imişsiniz": {
+      "tokens": [
+        "imişsiniz"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
+    },
+    "imişler": {
+      "tokens": [
+        "imişler"
+      ],
+      "not": "ek-fiil ayrı yazımı (i- + kişi)"
     }
   },
   "harf": {

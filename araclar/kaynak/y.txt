@@ -27,7 +27,7 @@ yansı|fiil||isim
 yargıla|fiil|
 yakala|fiil|
 yaklaş|fiil|
-yakın|fiil|
+yakın|sıfat||fiil
 yapış|fiil|
 yarala|fiil|
 yıka|fiil|
@@ -91,7 +91,7 @@ yamaç|isim|ç→c
 yanak|isim|k→ğ
 yangın|isim|
 yaprak|isim|k→ğ
-yara|isim|
+yara|isim||fiil
 yarış|isim||fiil
 yarım|sıfat|
 yasak|isim|k→ğ
@@ -250,7 +250,7 @@ yapılagel|fiil|
 yapılan|fiil|
 yapılaş|fiil|
 yapısallaş|fiil|
-yarama|fiil|
+yarama|fiil||isim
 yaramazlaş|fiil|
 yararlan|fiil|
 yaraş|fiil||sıfat
@@ -1993,3 +1993,13 @@ yarenbaşı|isim
 yarence|zarf
 yarenlik|isim|k→ğ
 yarlik|isim|k→ğ
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+yalız|sıfat
+yaygın|sıfat
+yağız|sıfat
+yetim|sıfat
+yetkin|sıfat
+yoksun|sıfat
+yılgın|sıfat
+yeter|isim|

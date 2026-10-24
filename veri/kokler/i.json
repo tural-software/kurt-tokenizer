@@ -580,6 +580,7 @@
   "inatlık": {"tokens": ["i", "nat", "lık"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "inayet": {"tokens": ["i", "na", "yet"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "incecik": {"tokens": ["in", "ce", "cik"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "inceden": {"tokens": ["in", "ce", "den"], "tür": "sıfat", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "incele": {"tokens": ["in", "ce", "le"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "incelik": {"tokens": ["in", "ce", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "inceliş": {"tokens": ["in", "ce", "liş"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},

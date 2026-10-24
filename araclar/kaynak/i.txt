@@ -1834,3 +1834,6 @@ itaatkarlık|isim|k→ğ
 itikaf|isim
 itikal|isim|ince
 işkal|isim|ince
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+inceden|sıfat

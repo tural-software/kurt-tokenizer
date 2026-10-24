@@ -18,6 +18,7 @@
   "üçlü": {"tokens": ["üç", "lü"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünlü", "değişim": null},
   "üçlük": {"tokens": ["üç", "lük"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "üçtaş": {"tokens": ["üç", "taş"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "üçüz": {"tokens": ["ü", "çüz"], "tür": "sıfat", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
   "üfle": {"tokens": ["üf", "le"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "üfleç": {"tokens": ["üf", "leç"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"ç→c": "ünlü_ile_başlayan_ek_gelince"}},
   "üfür": {"tokens": ["ü", "für"], "tür": "fiil", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},

@@ -6,5 +6,8 @@
   "mu":    { "tokens": ["mu"],        "tür": "edat", "son_ünlü": "u", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
   "mü":    { "tokens": ["mü"],        "tür": "edat", "son_ünlü": "ü", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
   "gibi":  { "tokens": ["gi", "bi"],        "tür": "edat", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
-  "ait":   { "tokens": ["a", "it"],        "tür": "edat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "sadece_koşaç": true }
+  "ait":   { "tokens": ["a", "it"],        "tür": "edat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "sadece_koşaç": true },
+  "bu":    { "tokens": ["bu"],              "tür": "edat", "son_ünlü": "u", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true, "çoğulsuz": true },
+  "şu":    { "tokens": ["şu"],              "tür": "edat", "son_ünlü": "u", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true, "çoğulsuz": true },
+  "o":     { "tokens": ["o"],               "tür": "edat", "son_ünlü": "o", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true, "çoğulsuz": true }
 }

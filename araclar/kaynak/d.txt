@@ -15,7 +15,7 @@ derhal|zarf|
 demin|zarf|
 dışarı|zarf|
 # --- Faz 30: fiiller ---
-dara|fiil|
+dara|fiil||isim
 değ|fiil|
 değiş|fiil|
 dene|fiil|
@@ -44,7 +44,7 @@ dalaş|fiil||isim
 dağla|fiil|
 daya|fiil|
 deş|fiil|
-devir|fiil||isim
+devir|isim|düşen|fiil
 darıl|fiil|
 dayan|fiil|
 deneyimle|fiil|
@@ -61,7 +61,7 @@ dil|isim|
 diş|isim|
 dip|isim|p→b
 diz|isim||fiil
-don|isim|
+don|isim||fiil
 dök|fiil|
 dön|fiil|
 dur|fiil|
@@ -125,7 +125,7 @@ düdük|isim|k→ğ
 dümen|isim|
 denet|fiil|
 devril|fiil|
-dikiz|fiil|
+dikiz|fiil||isim
 dinlen|fiil|
 doğrul|fiil|
 dökül|fiil|
@@ -365,7 +365,7 @@ dişileş|fiil|
 dişilleştir|fiil|
 dişle|fiil|
 dogmalaş|fiil|
-doku|fiil|
+doku|fiil||isim
 dola|fiil|
 dolgunlaş|fiil|
 doluk|fiil|
@@ -418,7 +418,7 @@ dürtüş|fiil|
 dürtüşle|fiil|
 dürümle|fiil|
 düvesi|fiil|
-düze|fiil|
+düze|fiil||isim
 düzel|fiil|
 düzleş|fiil|
 düğ|fiil|
@@ -3025,3 +3025,15 @@ dahiliye|isim
 dahiliyeci|isim
 dahiyane|zarf
 dügah|isim
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+disipline|sıfat
+dolgun|sıfat
+doygun|sıfat
+durgun|sıfat
+duruksun|sıfat
+duygun|sıfat
+dördüz|sıfat
+düşkün|sıfat
+dığdığı|sıfat
+dıştan|sıfat

@@ -3423,3 +3423,8 @@ mükafatlandır|fiil
 mükafatlandırma|isim
 mükaleme|isim
 müsamahakarlık|isim|k→ğ
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+mevzun|sıfat
+meydanda|sıfat
+mistik|sıfat|k→ğ

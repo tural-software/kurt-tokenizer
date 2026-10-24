@@ -27,7 +27,7 @@
 ılıca|isim|
 ırgat|isim|t→d
 ışıltı|isim|
-ısın|fiil|
+ısın|fiil||isim
 ıslan|fiil|
 ıraksak|sıfat|k→ğ
 # --- TDK 11. baskı fiil tabanları (filtreli) ---

@@ -202,7 +202,7 @@ enikle|fiil|
 ensele|fiil|
 epri|fiil|
 ergenleş|fiil|
-ergi|fiil|
+ergi|fiil||isim
 erginle|fiil|
 erginleş|fiil|
 ergür|fiil|
@@ -1662,3 +1662,8 @@ erkanıharbiyeiumumiye|isim
 erkanıharp|isim|p→b,ince
 erkanıharplik|isim|k→ğ
 eşkal|isim|ince
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+edilgin|sıfat
+ekstrem|sıfat
+ezgin|sıfat

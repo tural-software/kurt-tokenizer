@@ -151,6 +151,7 @@ TR = DilProfili(
     daraltma="gövde",
     sıra_eş=(("â", "a"), ("î", "i"), ("û", "u")),
     norm_dışı_ses=True,
+    ettirgen_çok_heceli_rl=True,
 )
 
 # Azerbaycan Türkçesi (32 harf; ə ince-düz ünlü; x/q ünsüz; w yok). Kaynak: Azərbaycan dilinin

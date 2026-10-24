@@ -28,15 +28,18 @@ HÂL_PRONOMİNAL_N = frozenset({"belirtme", "yönelme", "bulunma", "ayrılma", "
 
 
 # Geniş zamanda -Ir alan tek-heceli fiiller (kapalı, bilinen küme); gerisi -Ar/-r.
-GENİŞ_IR = frozenset({"al", "bil", "bul", "dur", "den", "gel", "gör", "kal", "kıl",
+GENİŞ_IR = frozenset({"al", "bil", "bul", "dur", "den", "gel", "gör", "kal",
                       "ol", "öl", "san", "var", "ver", "vur"})
 
 
-def _geniş_şablon(gövde: str, ad: str, ünlüler=sesler.ÜNLÜLER) -> str:
+def _geniş_şablon(gövde: str, ad: str, ünlüler=sesler.ÜNLÜLER, et_bileşik: bool = False) -> str:
     """Geniş zaman ekinin köke göre şablonu: ünlü-sonu→r, çok-heceli ünsüz→Ir,
-    tek-heceli→Ar (istisna kümesi→Ir)."""
+    tek-heceli→Ar (istisna kümesi→Ir). et_bileşik (t→d yumuşayan -et bileşiği: hisset, affet, kaybet): son
+    hece tek heceli 'et' fiili → Ar (hisseder; yönetir/tüketir bayraksız, -Ir)."""
     if gövde[-1] in ünlüler:
         return "r"
+    if et_bileşik and gövde == ad:
+        return "Ar"
     çok_heceli = sum(1 for c in gövde if c in ünlüler) > 1
     if çok_heceli:
         return "Ir"
@@ -63,6 +66,10 @@ def _ettirgen_şablon(gövde: str, ünlüler=sesler.ÜNLÜLER, ünsüz_şablon: 
     if çok_heceli_rl:
         return "t" if son in "rl" and sum(c in ünlüler for c in gövde) > 1 else ünsüz_şablon
     return "t" if son == "r" else ünsüz_şablon
+
+
+# TR de- bu ekler önünde daralmaz (deyip, deyince, deyiş; ye- daralır: yiyip, yiyince)
+_DE_DARALMAZ = frozenset({"ulaç_ip", "ulaç_inca", "isim_fiil"})
 
 
 # AZ geniş zaman olumsuzu: 1. kişi eki önünde -mAr- (gəlmərəm, gəlmərik), diğerlerinde -mAz.
@@ -135,18 +142,20 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
         kural = getattr(ek, "kök_koşullu", "")
         if kural == "geniş":
             # Olumsuz/yetersizlik sonrası geniş zaman düzensiz: -Ar/-Ir değil -z (gelmez).
-            olumsuz_bağlam = any(a in ("olumsuz", "yetersizlik") for a in ek_adları[:idx])
+            olumsuz_bağlam = (any(a in ("olumsuz", "yetersizlik") for a in ek_adları[:idx])
+                              and "yeterlilik_olası" not in ek_adları[:idx])     # gelmeyebilir: -Ir
             if profil is not None and profil.geniş == "az":
                 sonraki = ek_adları[idx + 1] if idx + 1 < len(ek_adları) else None
                 şablon = (("r" if sonraki in _AZ_GENİŞ_R_KİŞİ else "z") if olumsuz_bağlam
                           else "(y)Ar")
             else:
-                şablon = "z" if olumsuz_bağlam else _geniş_şablon(gövde, ad, ünlüler)
+                şablon = "z" if olumsuz_bağlam else _geniş_şablon(
+                    gövde, ad, ünlüler, ad.endswith("et") and bool(kök.değişim) and "t→d" in kök.değişim)
         elif kural == "edilgen":
             şablon = (_edilgen_şablon(gövde, ünlüler) if profil is None
                       else _edilgen_şablon(gövde, ünlüler, profil.edilgen_tek_heceli_y))
         elif kural == "ettirgen":
-            şablon = (_ettirgen_şablon(gövde, ünlüler) if profil is None else
+            şablon = (_ettirgen_şablon(gövde, ünlüler, çok_heceli_rl=True) if profil is None else
                       _ettirgen_şablon(gövde, ünlüler, profil.ettirgen_ünsüz,
                                        profil.ettirgen_çok_heceli_rl))
         else:
@@ -190,7 +199,8 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
         # Ünlü düşmesi: düşen-ünlü kökte ilk ekte ünlü-başlı ek gelince kökün son ünlüsü
         # düşer (akıl+ım→aklım, ağız+ı→ağzı). Harmony orijinal son ünlüden alındı (ek_çöz
         # öncesi); kayıp gibi düşen+yumuşamada önce düşer sonra yumuşar (kayp→kayb→kaybı).
-        if idx == 0 and getattr(kök, "düşen", False) and ilk_ses in ünlüler:
+        if (idx == 0 and getattr(kök, "düşen", False) and ilk_ses in ünlüler
+                and ek.öbek in ("her", "fiil" if kök.tür == "fiil" else "isim")):   # birincil sınıf (devir: devri/deviriyor)
             tokenlar[-1] = _ünlü_düşür(tokenlar[-1], ünlüler)
             gövde = _ünlü_düşür(gövde, ünlüler)
         # Çift ünsüz tekleşmesi (AZ qoşa_tek): ünsüzle başlayan ilk ek önünde kök sonu teke iner
@@ -201,7 +211,8 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
         # ye/de düzensizi: çekirdek e→i, yalnız y-glide'lı ek öncesi (ünlü-başlı ek → tampon
         # y; -Iyor → 'yor'). Ünsüz-başlı ekte (yedi/yer/dedi/der) değişmez. Yalnız ilk ek.
         if (idx == 0 and getattr(kök, "daralan", False)
-                and (tampon + gövde_eki).startswith("y")):
+                and (tampon + gövde_eki).startswith("y")
+                and not (ad == "de" and profil is None and ek_adı in _DE_DARALMAZ)):
             tokenlar[-1] = _e_i(tokenlar[-1], ünlüler)
             gövde = _e_i(gövde, ünlüler)
         # Sınıf-farkındalıklı yumuşama (kural #7): YUMUŞAMA KÖKÜN BİRİNCİL SINIFINA AİTTİR.
