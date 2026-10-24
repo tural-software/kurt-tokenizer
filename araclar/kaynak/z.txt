@@ -2,7 +2,7 @@
 # --- Faz 31: sıfat ---
 zalim|sıfat|
 zorlu|sıfat|
-zıt|sıfat|t→d
+zıt|sıfat|t→d,ikiz
 zinde|sıfat|
 zehirli|sıfat|
 # --- Faz 30: fiiller ---
@@ -12,7 +12,7 @@ zonkla|fiil|
 zedele|fiil|
 zincirle|fiil|
 zımbala|fiil|
-zam|isim|
+zam|isim|ikiz
 zar|isim|
 zil|isim|
 zor|sıfat|
@@ -174,7 +174,7 @@ zamme|isim|
 zammetme|isim|
 zamparalık|isim|k→ğ
 zamsızlık|isim|k→ğ
-zan|isim|
+zan|isim|ikiz
 zanaatkâr|isim|
 zanaatkârlık|isim|k→ğ
 zanaatçı|isim|

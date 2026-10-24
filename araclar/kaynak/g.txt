@@ -345,7 +345,7 @@ gala|isim|
 galago|isim|
 galalit|isim|
 galat|isim|
-galatıhis|isim|
+galatıhis|isim|ikiz
 galatımeşhur|isim|
 gale|isim|
 galebe|isim|

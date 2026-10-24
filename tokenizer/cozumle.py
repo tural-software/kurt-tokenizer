@@ -152,6 +152,8 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
             continue
         if ek.yalnız_kökler and kök_ad not in ek.yalnız_kökler:
             continue
+        if kök_ad in ek.hariç_kökler:
+            continue
         if ek.yalnız_sonra and not (ek_dizi and ek_dizi[-1] in ek.yalnız_sonra):
             continue
         if ek.ünlü_sonra and yüzey[-1] not in (sesler.ÜNLÜLER if profil is None else profil.ünlüler):
@@ -159,6 +161,8 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
         # sadece-koşaç kökler (mı/değil) isim eki almaz; yalnız koşaç/ek-fiil ('her')
         # → "mide" yanlışlıkla mi+bulunma diye bölünmez
         if getattr(kök, "sadece_koşaç", False) and ek.öbek != "her":
+            continue
+        if ek_ad in ("çoğul", "koşaç_3çoğul") and getattr(kök, "çoğulsuz", False):   # tamamlar = tamamla+r
             continue
         if not _kişi_uygun(ek_ad, ek_dizi, sınıf, profil):    # kişi-bağlamı (tip+kaynak)
             continue
@@ -198,13 +202,22 @@ def çözümle(kelime, kökler, ekler, istisnalar=None, profil=None) -> list[Ç�
         türler = [kök.tür, *(kök.ek_tür or [])]
         sınıflar = {"fiil" if t == "fiil" else "isim" for t in türler}
         for sınıf in sınıflar:
-            _ara(kök_ad, kök, [], 0, sınıf, hedef, ekler, çözümler, profil)
+            iy = getattr(kök, "iyelik", "")      # iyelikli kök (hepsi): yuva o ekten sonra başlar
+            _ara(kök_ad, kök, [], ekler[iy].yuva if iy else 0, sınıf, hedef, ekler, çözümler, profil)
             if kök.düşen and profil is not None and profil.düşen_isteğe_bağlı:
                 # danışıq/normatif olmayan yazım: ünlüsü düşmeden (şəkili, ağızı); yüzey normatifinden farklı
                 # olduğundan (şəkli) iki okuma aynı sözcükte yarışmaz
                 geçici: list[Çözüm] = []
                 _ara(kök_ad, replace(kök, düşen=False), [], 0, sınıf, hedef, ekler, geçici, profil)
                 çözümler.extend(replace(ç, normatif_dışı=True) for ç in geçici)
+            elif ((profil is None or profil.norm_dışı_ses) and sınıf == "isim"
+                  and (kök.düşen or kök.ince or kök.ikiz or kök.değişim)):
+                # TR norm dışı yazım: kökün ses değişimi uygulanmadan (kontrolu, omuzu, hakını, standartı); normatif
+                # okuma varsa seçilmez (pipeline.en_iyi_çözüm) → yalnız normatif biçimi olmayan sözcük çözülür
+                geçici = []
+                _ara(kök_ad, replace(kök, düşen=False, ince=False, ikiz=False, değişim=None), [],
+                     ekler[iy].yuva if iy else 0, sınıf, hedef, ekler, geçici, profil)
+                çözümler.extend(replace(ç, normatif_dışı=True) for ç in geçici if ç.ekler)
 
     # aynı (token, kök, ek) çözümünü tekilleştir (eşseslide çıplak kök yinelenebilir)
     görülen, benzersiz = set(), []

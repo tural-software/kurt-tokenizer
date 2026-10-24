@@ -1091,7 +1091,7 @@ sarıhalile|isim|
 sarıhani|isim|
 sarıhumma|isim|
 sarık|isim|k→ğ
-sarıkanat|isim|
+sarıkanat|isim|t→d
 sarıkuyruk|isim|k→ğ
 sarıkçı|isim|
 sarıkız|isim|
@@ -1657,7 +1657,7 @@ sergilik|isim|k→ğ
 sergüzeşt|isim|
 sergüzeştçi|isim|
 sergüzeştçilik|isim|k→ğ
-serhat|isim|
+serhat|isim|ikiz,t→d
 serhatli|isim|
 seri|isim|
 serigrafi|isim|
@@ -2627,7 +2627,7 @@ strüktür|isim|
 strüktüralizm|isim|
 stupa|isim|
 stüdyo|isim|
-su|isim|
+su|isim|y_tampon
 suare|isim|
 subasar|isim|
 subasman|isim|
@@ -2663,7 +2663,7 @@ suikastçı|isim|
 suikastçılık|isim|k→ğ
 suiniyet|isim|
 suistimal|isim|ince
-suizan|isim|
+suizan|isim|ikiz
 sukut|isim|
 sukutuhayal|isim|ince
 sulak|isim|k→ğ
@@ -2771,7 +2771,7 @@ suzeni|isim|
 suzidil|isim|
 suzidilara|isim|
 suzinak|isim|ince
-suç|isim|ç→c
+suç|isim|
 suçiçeği|isim|
 suçlama|isim|
 suçlandırma|isim|
@@ -3246,7 +3246,7 @@ sınırlayış|isim|
 sınırlılık|isim|k→ğ
 sınırsızlık|isim|k→ğ
 sıpa|isim|
-sır|isim|
+sır|isim|ikiz
 sıraca|isim|
 sıracagiller|isim|
 sıracı|isim|

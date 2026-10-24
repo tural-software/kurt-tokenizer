@@ -8,7 +8,7 @@ fukara|sıfat|
 # Not: 'f' ile başlayan köklerin çoğu alıntıdır; gerçek olanlar alınır.
 fal|isim|
 fark|isim|
-fen|isim|
+fen|isim|ikiz
 fes|isim|
 fert|isim|t→d
 fit|sıfat|
@@ -358,7 +358,7 @@ fehametli|isim|
 fehim|isim|düşen
 fehmetme|isim|
 fehva|isim|
-fek|isim|
+fek|isim|ikiz
 fekül|isim|
 fel|isim|
 felah|isim|
@@ -856,7 +856,7 @@ fruktoz|isim|
 fuarcı|isim|
 fuarcılık|isim|k→ğ
 fuaye|isim|
-fuhuş|isim|
+fuhuş|isim|düşen
 fujer|isim|
 fukaralık|isim|k→ğ
 fukuslar|isim|

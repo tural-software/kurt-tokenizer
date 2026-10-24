@@ -42,6 +42,9 @@ def kök_önekleri(ad: str, kök, profil=None) -> set[str]:
         ön.add(_yumuşat_son(ad, kök.ek_değişim))
     if getattr(kök, "qoşa_tek", False):          # AZ çift ünsüz tekleşmesi (xətt → xət-lər)
         ön.add(ad[:-1])
+    if getattr(kök, "ikiz", False):              # TR ikizleşme (hak → hakk-ı, tıp → tıbb-ı)
+        y = _yumuşat_son(ad, kök.değişim) if kök.değişim else ad
+        ön.add(y + y[-1])
     return ön
 
 

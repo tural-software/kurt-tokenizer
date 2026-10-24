@@ -4,5 +4,7 @@
   "mı":    { "tokens": ["mı"],        "tür": "edat", "son_ünlü": "ı", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
   "mi":    { "tokens": ["mi"],        "tür": "edat", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
   "mu":    { "tokens": ["mu"],        "tür": "edat", "son_ünlü": "u", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
-  "mü":    { "tokens": ["mü"],        "tür": "edat", "son_ünlü": "ü", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true }
+  "mü":    { "tokens": ["mü"],        "tür": "edat", "son_ünlü": "ü", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
+  "gibi":  { "tokens": ["gi", "bi"],        "tür": "edat", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null, "sadece_koşaç": true },
+  "ait":   { "tokens": ["a", "it"],        "tür": "edat", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "sadece_koşaç": true }
 }

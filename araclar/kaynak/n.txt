@@ -39,7 +39,7 @@ nahiye|isim|
 numara|isim|
 nitelik|isim|k→ğ
 nehir|isim|düşen
-nakış|isim|
+nakış|isim|düşen
 nakit|isim|t→d,düşen
 nimet|isim|
 nine|isim|
@@ -575,7 +575,7 @@ nodullama|isim|
 nodullanma|isim|
 nodül|isim|
 nohudi|isim|
-nohut|isim|
+nohut|isim|t→d
 nokra|isim|
 noksan|isim|
 noksanlık|isim|k→ğ

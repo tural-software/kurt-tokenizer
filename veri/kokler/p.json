@@ -546,7 +546,7 @@
   "pantograf": {"tokens": ["pan", "tog", "raf"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "pantolon": {"tokens": ["pan", "to", "lon"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "pantufla": {"tokens": ["pan", "tuf", "la"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
-  "panzehir": {"tokens": ["pan", "ze", "hir"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "panzehir": {"tokens": ["pan", "ze", "hir"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "düşen": true},
   "papağan": {"tokens": ["pa", "pa", "ğan"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "papalık": {"tokens": ["pa", "pa", "lık"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "papara": {"tokens": ["pa", "pa", "ra"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},

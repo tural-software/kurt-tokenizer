@@ -216,6 +216,10 @@ def _geri_cezalı(çözümler, kökler) -> set[str]:
     return cezalı
 
 
+# TR seyrek ardışık ekler: -An ortacı + ek-fiil (atandı = ata+n+dı, at+an+dı değil); başka okuma yoksa seçilir (satandı)
+_TR_SEYREK_DİZİ = frozenset({("ortaç_an", "ek_fiil_idi"), ("ortaç_an", "ek_fiil_imiş")})
+
+
 _KİŞİ_İYELİK = frozenset({"iyelik_1tekil", "iyelik_2tekil", "iyelik_1çoğul", "iyelik_2çoğul"})
 
 
@@ -297,7 +301,8 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None, ad_okuma=False):
         )
     return min(
         çözümler,
-        key=lambda ç: (0 if not ç.ekler else 1, len(ç.tokens),
+        key=lambda ç: (ç.normatif_dışı, 0 if not ç.ekler else 1,
+                       sum(çift in _TR_SEYREK_DİZİ for çift in zip(ç.ekler, ç.ekler[1:])), len(ç.tokens),
                        _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök),
                        tuple(ç.tokens), ç.kök, tuple(ç.ekler)),
     )

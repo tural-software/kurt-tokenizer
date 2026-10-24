@@ -310,7 +310,7 @@
   "çiğde": {"tokens": ["çiğ", "de"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "çiğdem": {"tokens": ["çiğ", "dem"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "çiğin": {"tokens": ["çi", "ğin"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
-  "çiğit": {"tokens": ["çi", "ğit"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "çiğit": {"tokens": ["çi", "ğit"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}},
   "çiğleş": {"tokens": ["çiğ", "leş"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "çiğlik": {"tokens": ["çiğ", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "çiğne": {"tokens": ["çiğ", "ne"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},

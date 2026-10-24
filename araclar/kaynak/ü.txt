@@ -15,7 +15,7 @@
 ürper|fiil|
 üç|sıfat|
 ün|isim|
-üs|isim|
+üs|isim|ikiz
 üst|isim|
 ülke|isim|
 ülkü|isim|

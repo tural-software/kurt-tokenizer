@@ -332,7 +332,7 @@ veledrom|isim|
 velense|isim|
 velespit|isim|
 veli|isim|
-veliaht|isim|
+veliaht|isim|t→d
 veliahtlık|isim|k→ğ
 velilik|isim|k→ğ
 velinimet|isim|

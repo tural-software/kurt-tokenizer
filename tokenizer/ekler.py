@@ -124,6 +124,8 @@ class Ek:
     #                            gereklilik ekidir, -mA + -lI diye bölünmez)
     yalnız_kökler: frozenset = frozenset()  # boş değilse ek YALNIZ bu köklerin zincirinde bulunur (AZ sıra
     #                            sayısı -(I)ncI: sayılar, altıncı = altı+ncı; belirsizlik -sA: zamirler, nəyisə)
+    hariç_kökler: frozenset = frozenset()   # ek bu köklerin zincirinde bulunmaz (TR yapım_ıcı: kılıcı =
+    #                            kılıç+ı, kıl+ıcı değil)
     yalnız_sonra: frozenset = frozenset()   # boş değilse ek YALNIZ bu eklerden HEMEN sonra gelir (AZ kişi
     #                            eki + -sA: deyilsinizsə, oldularsa)
     ünlü_sonra: bool = False   # ek yalnız ÜNLÜYLE biten gövdeye gelir (AZ y'siz ek-fiil -dI: yaxşıdı; ünsüzden
@@ -174,6 +176,7 @@ def yükle(yol: str | Path, profil=None) -> dict[str, Ek]:
                 son_düşer=girdi.get("son_düşer", ""),
                 önce_olamaz=tuple(girdi.get("önce_olamaz", ())),
                 yalnız_kökler=frozenset(girdi.get("yalnız_kökler", ())),
+                hariç_kökler=frozenset(girdi.get("hariç_kökler", ())),
                 yalnız_sonra=frozenset(girdi.get("yalnız_sonra", ())),
                 ünlü_sonra=girdi.get("ünlü_sonra", False))
         g = doğrula(ad, ek, profil)

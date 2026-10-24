@@ -461,7 +461,7 @@ restoran|isim|
 restorasyon|isim|
 resul|isim|ince
 resülmal|isim|ince
-ret|isim|
+ret|isim|ikiz,t→d
 retina|isim|
 retorik|isim|k→ğ
 revak|isim|k→ğ

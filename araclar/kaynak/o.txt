@@ -71,7 +71,7 @@ ocaklık|isim|k→ğ
 okçu|isim|
 operatör|isim|
 orkestra|isim|
-otopark|isim|k→ğ
+otopark|isim|
 otoyol|isim|
 oryantal|sıfat|ince
 olumsuzlaş|fiil|
@@ -97,7 +97,7 @@ oymalı|sıfat|
 olgunlaşma|isim|
 onaylama|isim|
 oyalanma|isim|
-omuz|isim|
+omuz|isim|düşen
 ozon|isim|
 olgunluk|isim|k→ğ
 ovacık|isim|k→ğ

@@ -10,5 +10,9 @@
   "nere":   { "tokens": ["ne", "re"],   "tür": "zamir", "son_ünlü": "e", "son_ses": "ünlü",  "değişim": null },
   "kimse":  { "tokens": ["kim", "se"],  "tür": "zamir", "son_ünlü": "e", "son_ses": "ünlü",  "değişim": null },
   "herkes": { "tokens": ["her", "kes"], "tür": "zamir", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null },
-  "kendi":  { "tokens": ["ken", "di"],  "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null }
+  "kendi":  { "tokens": ["ken", "di"],  "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null },
+  "birbir": { "tokens": ["bir", "bir"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null },
+  "hepsi":  { "tokens": ["hep", "si"],  "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null, "iyelik": "iyelik_3tekil" },
+  "birisi": { "tokens": ["bi", "ri", "si"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil" },
+  "birileri": { "tokens": ["bi", "ri", "le", "ri"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3çoğul" }
 }

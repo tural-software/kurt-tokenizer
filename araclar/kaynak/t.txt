@@ -58,7 +58,7 @@ ten|isim|
 tek|sıfat|
 tel|isim|
 ter|isim|
-tıp|isim|
+tıp|isim|ikiz,p→b
 tip|isim|
 tok|sıfat|
 top|isim|
@@ -98,7 +98,7 @@ tepe|isim|
 tepsi|isim|
 terlik|isim|k→ğ
 tertip|isim|p→b
-teşvik|isim|k→ğ
+teşvik|isim|
 tezgah|isim|
 tıraş|isim|
 tohum|isim|
@@ -544,7 +544,7 @@ tahaccüm|isim|
 tahaccür|isim|
 tahaffuz|isim|
 tahaffuzhane|isim|
-tahakkuk|isim|k→ğ
+tahakkuk|isim|
 tahakküm|isim|
 tahammuz|isim|
 tahammülsüzlük|isim|k→ğ
@@ -595,7 +595,7 @@ tahra|isim|
 tahribat|isim|
 tahrif|isim|
 tahrifat|isim|
-tahrik|isim|k→ğ
+tahrik|isim|
 tahrikât|isim|
 tahrikçi|isim|
 tahrikçilik|isim|k→ğ
@@ -822,7 +822,7 @@ tangırdatma|isim|
 tangırtı|isim|
 tanin|isim|
 tanjant|isim|
-tank|isim|k→g
+tank|isim|
 tanker|isim|
 tankerci|isim|
 tankercilik|isim|k→ğ
@@ -1057,7 +1057,7 @@ tasasızlık|isim|k→ğ
 tasavvuf|isim|
 tasavvur|isim|
 tasdi|isim|
-tasdik|isim|k→ğ
+tasdik|isim|
 tasdikleme|isim|
 tasdikleniş|isim|
 tasdiklenme|isim|
@@ -1094,7 +1094,7 @@ tatarcık|isim|k→ğ
 tatava|isim|
 tatavacı|isim|
 tatavacılık|isim|k→ğ
-tatbik|isim|k→ğ
+tatbik|isim|
 tatbikat|isim|
 tatilci|isim|
 tatilcilik|isim|k→ğ
@@ -1558,7 +1558,7 @@ telesinema|isim|
 telesiyej|isim|
 teleskobik|isim|k→ğ
 teleskop|isim|p→b
-teletıp|isim|p→b
+teletıp|isim|p→b,ikiz
 televizyoncu|isim|
 televizyonculuk|isim|k→ğ
 telfin|isim|
@@ -1653,7 +1653,7 @@ temizlikçilik|isim|k→ğ
 temkin|isim|
 temkinlilik|isim|k→ğ
 temkinsizlik|isim|k→ğ
-temlik|isim|k→ğ
+temlik|isim|
 temlikname|isim|
 temmuz|isim|
 temperleme|isim|
@@ -1939,7 +1939,7 @@ tetiklik|isim|k→ğ
 tetikçi|isim|
 tetikçilik|isim|k→ğ
 tetir|isim|
-tetkik|isim|k→ğ
+tetkik|isim|
 tetkikat|isim|
 tevabi|isim|
 tevafuk|isim|k→ğ
@@ -2755,7 +2755,7 @@ tükürüklenme|isim|
 tükürülme|isim|
 tükürüş|isim|
 tül|isim|
-tülbent|isim|
+tülbent|isim|t→d
 tülbentçi|isim|
 tülbentçilik|isim|k→ğ
 tüleme|isim|
@@ -3304,3 +3304,4 @@ tezgahtarlık|isim|k→ğ
 ticaretgah|isim
 topyekun|zarf
 tövbekarlık|isim|k→ğ
+tamam|sıfat|çoğulsuz

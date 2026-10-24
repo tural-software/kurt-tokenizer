@@ -292,7 +292,7 @@
   "batçık": {"tokens": ["bat", "çık"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "batı": {"tokens": ["ba", "tı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
   "batık": {"tokens": ["ba", "tık"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
-  "batın": {"tokens": ["ba", "tın"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "batın": {"tokens": ["ba", "tın"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null, "düşen": true},
   "bâtın": {"tokens": ["bâ", "tın"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "batır": {"tokens": ["ba", "tır"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "batış": {"tokens": ["ba", "tış"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},

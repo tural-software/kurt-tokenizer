@@ -403,7 +403,7 @@ ehlîleştirilme|isim|
 ehlîleştirme|isim|
 ehram|isim|
 ehveniyet|isim|
-ehvenişer|isim|
+ehvenişer|isim|ikiz
 ehvenlik|isim|k→ğ
 ejder|isim|
 ejektör|isim|
@@ -569,7 +569,7 @@ elektronikçi|isim|
 elektronikçilik|isim|k→ğ
 elektroradyoloji|isim|
 elektrosaz|isim|
-elektroskop|isim|p→b
+elektroskop|isim|
 elektrostatik|isim|k→ğ
 elektrot|isim|t→d
 elektroşok|isim|k→ğ
@@ -717,7 +717,7 @@ emredilme|isim|
 emrediş|isim|
 emretme|isim|
 emreyleme|isim|
-emrihak|isim|k→ğ
+emrihak|isim|ikiz
 emrivaki|isim|
 emrolunma|isim|
 emsal|isim|ince
@@ -1535,7 +1535,7 @@ eksperimantalist|sıfat
 ekspresyonist|sıfat
 ekzotermik|sıfat|k→ğ
 ekşimtırak|sıfat|k→ğ
-elastik|sıfat|k→ğ
+elastik|sıfat|
 elektrobiyolojik|sıfat|k→ğ
 elektrojen|sıfat
 elektromanyetik|sıfat|k→ğ

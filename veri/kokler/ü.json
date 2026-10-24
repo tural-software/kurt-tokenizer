@@ -2,7 +2,7 @@
   "üç": {"tokens": ["üç"], "tür": "sıfat", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
   "ün": {"tokens": ["ün"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
   "ürk": {"tokens": ["ürk"], "tür": "fiil", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
-  "üs": {"tokens": ["üs"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
+  "üs": {"tokens": ["üs"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null, "ikiz": true},
   "üst": {"tokens": ["üst"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
   "üş": {"tokens": ["üş"], "tür": "fiil", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
   "üt": {"tokens": ["üt"], "tür": "fiil", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},

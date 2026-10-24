@@ -13,7 +13,7 @@
   "cep": {"tokens": ["cep"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"p→b": "ünlü_ile_başlayan_ek_gelince"}},
   "cer": {"tokens": ["cer"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "cerh": {"tokens": ["cerh"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
-  "cet": {"tokens": ["cet"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "cet": {"tokens": ["cet"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}, "ikiz": true},
   "cezp": {"tokens": ["cezp"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"p→b": "ünlü_ile_başlayan_ek_gelince"}},
   "chat": {"tokens": ["chat"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "cılk": {"tokens": ["cılk"], "tür": "sıfat", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},

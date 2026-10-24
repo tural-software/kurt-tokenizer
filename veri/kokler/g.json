@@ -1180,7 +1180,7 @@
   "gagalama": {"tokens": ["ga", "ga", "la", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "gagalanma": {"tokens": ["ga", "ga", "lan", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "gagalaşma": {"tokens": ["ga", "ga", "laş", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
-  "galatıhis": {"tokens": ["ga", "la", "tı", "his"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
+  "galatıhis": {"tokens": ["ga", "la", "tı", "his"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "ikiz": true},
   "galerici": {"tokens": ["ga", "le", "ri", "ci"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "galibarda": {"tokens": ["ga", "li", "bar", "da"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "galibiyet": {"tokens": ["ga", "li", "bi", "yet"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},

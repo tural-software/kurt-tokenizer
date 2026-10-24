@@ -1166,7 +1166,7 @@
 çiğdem|isim|
 çiğin|isim|
 çiğindirik|isim|k→ğ
-çiğit|isim|
+çiğit|isim|t→d
 çiğleşme|isim|
 çiğlik|isim|k→ğ
 çiğnek|isim|k→ğ

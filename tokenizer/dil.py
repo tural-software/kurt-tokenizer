@@ -63,6 +63,8 @@ class DilProfili:
     zamir_önce: bool = False  # birim + ek sayısı eşitliğinde kapalı sınıf zamir kökü yeğlenir (AZ haraya =
     #                           hara+y+a, haray 'feryat'+a değil)
     düşen_isteğe_bağlı: bool = False  # ünlü düşmesi kökü düşmeden de çözülür (AZ danışıq: şəkili ↔ normatif şəkli)
+    norm_dışı_ses: bool = False  # ad kökü ses değişimi (düşen/ince/ikiz/yumuşama) uygulanmadan da çözülür, normatif_dışı
+    #                              işaretli (TR web yazımı: kontrolu, omuzu, hakını, standartı)
     özel_ad_başlık: bool = False  # Başlık biçimli sözcükte (Gəncə, Quran) özel ad kökü okuması yeğlenir; küçük harflide
     #                               (gəncə) sıradan kök. Önbellek anahtarı ayrı: (dil, kelime, "ad")
     ad_büyük: bool = False  # Almanca: her AD büyük yazılır → Başlık biçimli sözcükte ad okuması, küçük harflide ad
@@ -148,6 +150,7 @@ TR = DilProfili(
     daralan_son="ae",
     daraltma="gövde",
     sıra_eş=(("â", "a"), ("î", "i"), ("û", "u")),
+    norm_dışı_ses=True,
 )
 
 # Azerbaycan Türkçesi (32 harf; ə ince-düz ünlü; x/q ünsüz; w yok). Kaynak: Azərbaycan dilinin

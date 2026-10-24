@@ -160,7 +160,7 @@ mühürlen|fiil|
 müphemlik|isim|k→ğ
 mırıltı|isim|
 mide|isim|
-merak|isim|k→ğ
+merak|isim|
 meltem|isim|
 merhem|isim|
 muhasebeci|isim|
@@ -490,7 +490,7 @@ makaslanma|isim|
 makastar|isim|
 makasçı|isim|
 makasçılık|isim|k→ğ
-makat|isim|
+makat|isim|t→d
 makber|isim|
 makbullük|isim|k→ğ
 maket|isim|
@@ -547,7 +547,7 @@ malcı|isim|
 malcılık|isim|k→ğ
 malgama|isim|
 malihülya|isim|
-malik|isim|k→ğ
+malik|isim|
 malikiyet|isim|
 malikâne|isim|
 maliye|isim|
@@ -1416,7 +1416,7 @@ mezarcı|isim|
 mezarcılık|isim|k→ğ
 mezaristan|isim|
 mezarlık|isim|k→ğ
-mezat|isim|
+mezat|isim|t→d
 mezatçı|isim|
 mezatçılık|isim|k→ğ
 mezbaha|isim|
@@ -2310,7 +2310,7 @@ mültezim|isim|
 mültezimlik|isim|k→ğ
 mümanaat|isim|
 mümarese|isim|
-mümas|isim|
+mümas|isim|ikiz
 mümbitlik|isim|k→ğ
 mümessil|isim|
 mümessillik|isim|k→ğ
@@ -2413,7 +2413,7 @@ müspetlik|isim|k→ğ
 müsriflik|isim|k→ğ
 müstaceliyet|isim|
 müstafilik|isim|k→ğ
-müstahak|isim|k→ğ
+müstahak|isim|ikiz
 müstahaklık|isim|k→ğ
 müstahdem|isim|
 müstahdemlik|isim|k→ğ
@@ -2521,7 +2521,7 @@ müçtehit|isim|t→d
 müşabehet|isim|
 müşahede|isim|
 müşahhaslık|isim|k→ğ
-müşahit|isim|
+müşahit|isim|t→d
 müşareket|isim|
 müşarünileyh|isim|
 müşavere|isim|
@@ -2537,7 +2537,7 @@ müşkülleşme|isim|
 müşküllük|isim|k→ğ
 müşkülpesentlik|isim|k→ğ
 müşriklik|isim|k→ğ
-müştak|isim|k→ğ
+müştak|isim|ikiz
 müştemilat|isim|
 mıcır|isim|
 mıgri|isim|
@@ -3345,7 +3345,7 @@ müteyakkız|sıfat
 mütezayit|sıfat
 müteşekkil|sıfat
 müteşekkir|sıfat
-müttefik|sıfat|k→ğ
+müttefik|sıfat|
 müttehit|sıfat|t→d
 müvesvis|sıfat
 müyesser|sıfat
