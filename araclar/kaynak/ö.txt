@@ -90,10 +90,10 @@
 övünme|isim|
 öğünme|isim|
 öğürtü|isim|
-ökse|isim|
+ökse|isim||fiil
 örs|isim|
 özek|isim|k→ğ
-öveç|isim|
+öveç|isim|ç→c
 övendire|isim|
 ötücü|sıfat|
 özekli|sıfat|
@@ -155,7 +155,7 @@
 özleş|fiil|
 özümle|fiil|
 öçlen|fiil|
-öğür|fiil|
+öğür|fiil||isim
 öğürleş|fiil|
 öğürtle|fiil|
 # --- TDK 12. baskı tekli isim/zarf (sistematik yumuşama) ---
@@ -517,7 +517,7 @@
 özümsenme|isim|
 özümsetme|isim|
 özümseyiş|isim|
-özür|isim|
+özür|isim|düşen
 özürlülük|isim|k→ğ
 özürsüzlük|isim|k→ğ
 özüt|isim|
@@ -599,3 +599,32 @@
 öğleüstü|zarf|
 öğleüzeri|zarf|
 özkütle|isim|
+
+# --- K-1a: TDK v12 (gts) — sözlükte olmayan madde + düzeltme imsiz yazım varyantı ---
+ödevcil|sıfat
+ödlek|sıfat|k→ğ
+öfkelendirici|sıfat
+öksüzleş|fiil
+öldürücü|sıfat
+ölgün|sıfat
+ölçünlü|sıfat
+ölümcül|sıfat
+örfi|sıfat
+örtük|sıfat|k→ğ
+örüşük|sıfat|k→ğ
+ötümlü|sıfat
+ötümsüz|sıfat
+övüngen|sıfat
+özbeslenen|sıfat
+özbeöz|sıfat
+özdeş|sıfat
+özengen|sıfat
+özenilesi|sıfat
+özerk|sıfat|k→ğ
+özge|sıfat
+özgecil|sıfat
+özgül|sıfat
+öznel|sıfat
+özsever|sıfat
+özveren|sıfat
+özünlü|sıfat

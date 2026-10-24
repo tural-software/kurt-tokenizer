@@ -14,7 +14,7 @@ judo|isim|
 jüri|isim|
 jaguar|isim|
 jandarma|isim|
-jimnastik|isim|
+jimnastik|isim|k→ğ
 jeneratör|isim|
 jeoloji|isim|
 # --- TDK 11. baskı fiil tabanları (filtreli) ---
@@ -41,7 +41,7 @@ jelleşme|isim|
 jeloz|isim|
 jenerasyon|isim|
 jenerik|isim|k→ğ
-jenosit|isim|
+jenosit|isim|t→d
 jeodezi|isim|
 jeodinamik|isim|k→ğ
 jeofizik|isim|k→ğ
@@ -53,7 +53,7 @@ jeomorfolog|isim|
 jeomorfoloji|isim|
 jeopolitik|isim|k→ğ
 jeosantrizm|isim|
-jeosenklinal|isim|
+jeosenklinal|isim|ince
 jeotermi|isim|
 jeotropizma|isim|
 jersey|isim|
@@ -79,8 +79,8 @@ jokeylik|isim|k→ğ
 jorjet|isim|
 judocu|isim|
 judoculuk|isim|k→ğ
-jul|isim|
-jurnal|isim|
+jul|isim|ince
+jurnal|isim|ince
 jurnalci|isim|
 jurnalcilik|isim|k→ğ
 jurnalleme|isim|
@@ -91,3 +91,16 @@ jübile|isim|
 jüpon|isim|
 jüt|isim|
 japon|sıfat|
+
+# --- K-1a: TDK v12 (gts) — sözlükte olmayan madde + düzeltme imsiz yazım varyantı ---
+janjan|sıfat
+janti|sıfat
+japone|sıfat
+jeolojik|sıfat|k→ğ
+jeomorfolojik|sıfat|k→ğ
+jeosantrik|sıfat|k→ğ
+jeosismik|sıfat|k→ğ
+jeotermal|sıfat
+jeotermik|sıfat|k→ğ
+jinekolojik|sıfat|k→ğ
+jullük|sıfat|k→ğ

@@ -40,8 +40,8 @@
 ılıklaş|fiil|
 ılıştır|fiil|
 ımızgan|fiil|
-ır|fiil|
-ıra|fiil|
+ır|fiil||isim
+ıra|fiil||isim
 ıraklaş|fiil|
 ıraksa|fiil|
 ıraksın|fiil|
@@ -196,9 +196,9 @@
 ıtriyatçı|isim|
 ıtriyatçılık|isim|k→ğ
 ıttıla|isim|
-ıttırat|isim|
+ıttırat|isim|t→d
 ıttıratsızlık|isim|k→ğ
-ıtır|isim|
+ıtır|isim|düşen
 ıtırşahi|isim|
 ıydiye|isim|
 ızdırap|isim|p→b
@@ -245,3 +245,16 @@
 ışığan|isim|
 ısrarlı|zarf|
 ıssızca|zarf|
+
+# --- K-1a: TDK v12 (gts) — sözlükte olmayan madde + düzeltme imsiz yazım varyantı ---
+ılıcak|sıfat|k→ğ
+ıpıslak|sıfat|k→ğ
+ıpıssız|sıfat
+ırki|sıfat
+ıstırari|sıfat
+ısıalan|sıfat
+ısırımlık|sıfat|k→ğ
+ısıveren|sıfat
+ıtri|sıfat
+ıztırari|sıfat
+ışıl|sıfat
