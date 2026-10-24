@@ -303,7 +303,7 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None, ad_okuma=False):
         )
     return min(
         çözümler,
-        key=lambda ç: (ç.normatif_dışı, 0 if not ç.ekler else 1,
+        key=lambda ç: (_özel(ç, kökler), ç.normatif_dışı, 0 if not ç.ekler else 1,
                        sum(çift in _TR_SEYREK_DİZİ for çift in zip(ç.ekler, ç.ekler[1:]))
                        + sum(e in _TR_SEYREK_EK for e in ç.ekler), len(ç.tokens),
                        _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök),

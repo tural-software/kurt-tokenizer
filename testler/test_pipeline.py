@@ -8,6 +8,7 @@ from tokenizer.ekler import yükle as ekleri_yükle
 from tokenizer.istisna import yükle as istisna_yükle
 from tokenizer.onay import OnayKuyruğu
 from tokenizer.pipeline import encode, decode, BOŞLUK
+from tokenizer.cozumle import çözümle
 
 KÖK_DİZİN = Path(__file__).resolve().parent.parent / "veri" / "kokler"
 EK_DOSYASI = Path(__file__).resolve().parent.parent / "veri" / "ekler.json"
@@ -160,3 +161,24 @@ class PipelineTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TürkçeÖzelAdTest(unittest.TestCase):
+    """K-2: Türkçe özel ad kapalı listesi (veri/ozel_adlar.json) — ad okuması en sonda, 1./2. kişi iyelik yok."""
+
+    @classmethod
+    def setUpClass(cls):
+        from tokenizer import diller
+        cls.d = diller.yükle(None)
+
+    def enc(self, metin):
+        return encode(metin, self.d.kökler, self.d.ekler, self.d.istisnalar)
+
+    def test_ad(self):
+        self.assertEqual(self.d.kökler["istanbul"].tür, "özel")
+        self.assertEqual(self.enc("İstanbul'da"), ["<|Bb|>", "is", "tan", "bul", "'", "da"])
+        self.assertEqual(self.enc("Konya"), ["<|Bb|>", "kon", "ya"])
+
+    def test_sıradan_okuma_önce(self):
+        self.assertEqual(self.enc("Deniz"), ["<|Bb|>", "de", "niz"])            # sıradan kök
+        self.assertNotIn("amerika", [ç.kök for ç in çözümle("amerikan", self.d.kökler, self.d.ekler)])
