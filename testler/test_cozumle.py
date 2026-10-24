@@ -69,16 +69,16 @@ class ÇözümleTest(unittest.TestCase):
                 kk = self.k[ç.kök]
                 sınıflar = {"fiil" if t == "fiil" else "isim"
                             for t in [kk.tür, *(kk.ek_tür or [])]}
-                self.assertTrue(
-                    all(self.e[a].öbek == "her" or self.e[a].öbek in sınıflar
-                        for a in ç.ekler), f"{kelime}: öbek uyumsuz {ç}")
-                yuvalar = [self.e[a].yuva for a in ç.ekler]
-                self.assertEqual(yuvalar, sorted(set(yuvalar)),
-                                 f"{kelime}: yuva artan değil {ç}")
+                son = 0                                    # çıkışlı ek (yapım/nominalizer) sınıfı değiştirir, yuva sıfırlanır
+                for a in ç.ekler:
+                    ek = self.e[a]
+                    self.assertTrue(ek.öbek == "her" or ek.öbek in sınıflar, f"{kelime}: öbek uyumsuz {ç}")
+                    self.assertGreater(ek.yuva, son, f"{kelime}: yuva artan değil {ç}")
+                    sınıflar, son = ({ek.çıkış}, 0) if ek.çıkış else (sınıflar, ek.yuva)
 
     def test_sahte_azaldı(self):
         # morfotaktik + kişi-bağlamı ile sahteler kökten elendi (14 → 2)
-        self.assertLessEqual(len(self.çöz("evlerim")), 2)   # my houses / I-am-houses
+        self.assertLessEqual(len(self.çöz("evlerim")), 3)   # my houses / I-am-houses / evle+r+im (K-1d -lA)
         # isim kökü + fiil eki sahtesi (öbek ihlali) yok
         for ç in self.çöz("oynuyor"):
             self.assertNotEqual(self.k[ç.kök].tür, "isim")
@@ -366,7 +366,8 @@ class ÇözümleTest(unittest.TestCase):
         self.assertFalse(any(ç.normatif_dışı for ç in self.çöz("omzu")))
         self.assertFalse(any(ç.normatif_dışı for ç in self.çöz("kontrolü")))
         # çoğulsuz kök -lAr almaz: tamamlar yalnız tamamla+r
-        self.assertFalse(any(ç.kök == "tamam" for ç in self.çöz("tamamlar")))
+        self.assertFalse(any(ç.kök == "tamam" and ç.ekler[-1:] in (["çoğul"], ["koşaç_3çoğul"])
+                             for ç in self.çöz("tamamlar")))
         self.assertTrue(self._var_mı("tıbbı", ["tıbb", "ı"], "tıp", ["iyelik_3tekil"]))
         self.assertTrue(self._var_mı("akıllar", ["a", "kıl", "lar"], "akıl", ["çoğul"]))
 
