@@ -138,6 +138,10 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
     tokenlar, yüzey = birleştir(kök_ad, kök, ek_dizi, ekler, profil)
     if yüzey == hedef:
         # iyelik-gerektiren ortaç (-DIk) çıplak kabul edilmez (geldik=1.çoğul kalsın)
+        # ad→fiil -lA çatıyla bitemez (veri+le+n 'verilen' sahte; yayın+la+n+an geçer)
+        if (len(ek_dizi) >= 2 and ek_dizi[-2] == "yapım_la"
+                and ek_dizi[-1] in ("edilgen", "dönüşlü", "ettirgen")):
+            return
         if not (ek_dizi and ek_dizi[-1] in İYELİK_GEREKTİREN):
             çıktı.append(Çözüm(tokens=tokenlar, kök=kök_ad, ekler=list(ek_dizi)))
         return                                   # tam eşleşme; daha derini taşar
@@ -153,6 +157,8 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
         if ek.yalnız_kökler and kök_ad not in ek.yalnız_kökler:
             continue
         if kök_ad in ek.hariç_kökler:
+            continue
+        if ek_ad == "yapım_la" and (len(kök_ad) < 2 or kök.tür == "zamir"):   # ö+le, on+la+n sahte
             continue
         if ek.yalnız_sonra and not (ek_dizi and ek_dizi[-1] in ek.yalnız_sonra):
             continue

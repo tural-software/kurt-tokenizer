@@ -41,6 +41,12 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.enc("hakkı"), ["hakk", "ı"])
         self.assertEqual(self.enc("hepsini"), ["hep", "si", "n", "i"])
 
+    def test_k1d_la(self):
+        # ad→fiil -lA: yayın+la+n+an; başka okuma varsa geride, çatıyla bitemez (verilen = ver+i+l+en)
+        self.assertEqual(self.enc("yayınlanan"), ["ya", "yın", "la", "n", "an"])
+        self.assertEqual(self.enc("verilen"), ["ver", "i", "l", "en"])
+        self.assertEqual(self.enc("yapılıyor"), ["yap", "ı", "l", "ı", "yor"])
+
     def test_boşluk_tokenı(self):
         t = self.enc("ev araba")
         self.assertIn(BOŞLUK, t)
