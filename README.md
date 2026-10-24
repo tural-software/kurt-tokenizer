@@ -28,7 +28,7 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
 ## Öne çıkanlar
 
 - **Saf Python, sıfır bağımlılık** (yalnız standart kütüphane).
-- **Türkçe:** ~48.400 kök (TDK Güncel Türkçe Sözlük 12. baskı tabanlı; yalnız başlık, tür ve çekim işareti), 77 ek; ünlü uyumu, ünsüz yumuşaması (t→d, k→ğ, p→b, ç→c),
+- **Türkçe:** ~48.500 kök (TDK Güncel Türkçe Sözlük 12. baskı tabanlı; yalnız başlık, tür ve çekim işareti), 79 ek; ünlü uyumu, ünsüz yumuşaması (t→d, k→ğ, p→b, ç→c),
   ünlü düşmesi, ikizleşme (`hak → hakk+ı`), kaynaştırma/tampon sesler — hepsi kural tabanlı. Norm dışı web yazımı
   (`kontrolu`, `omuzu`) de çözülür; normatif okuma varsa o seçilir.
 - **Azerbaycan Türkçesi** (`dil="az"`): 65.740 kök (400 özel ad dahil), 96 ek; kendi ses kuralları (ə, q~ğ / k~y
