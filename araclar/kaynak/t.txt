@@ -58,7 +58,7 @@ ten|isim|
 tek|sıfat|
 tel|isim|
 ter|isim|
-tıp|isim|
+tıp|isim|ikiz,p→b
 tip|isim|
 tok|sıfat|
 top|isim|
@@ -1558,7 +1558,7 @@ telesinema|isim|
 telesiyej|isim|
 teleskobik|isim|k→ğ
 teleskop|isim|p→b
-teletıp|isim|p→b
+teletıp|isim|p→b,ikiz
 televizyoncu|isim|
 televizyonculuk|isim|k→ğ
 telfin|isim|

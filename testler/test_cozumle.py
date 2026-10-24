@@ -348,6 +348,8 @@ class ÇözümleTest(unittest.TestCase):
         self.assertTrue(self._var_mı("ağzı", ["a", "ğz", "ı"], "ağız", ["iyelik_3tekil"]))
         self.assertTrue(self._var_mı("kaybı", ["ka", "yb", "ı"], "kayıp", ["iyelik_3tekil"]))
         # ünsüz-başlı ekte düşmez
+        self.assertTrue(self._var_mı("hakkı", ["hakk", "ı"], "hak", ["iyelik_3tekil"]))   # ikizleşme
+        self.assertTrue(self._var_mı("tıbbı", ["tıbb", "ı"], "tıp", ["iyelik_3tekil"]))
         self.assertTrue(self._var_mı("akıllar", ["a", "kıl", "lar"], "akıl", ["çoğul"]))
 
     def test_pronominal_n(self):

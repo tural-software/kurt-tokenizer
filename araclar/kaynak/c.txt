@@ -394,7 +394,7 @@ cesaretlilik|isim|k→ğ
 cesaretsizlenme|isim|
 cesaretsizlik|isim|k→ğ
 cesurluk|isim|k→ğ
-cet|isim|
+cet|isim|ikiz,t→d
 cevahir|isim|
 cevahirci|isim|
 cevahircilik|isim|k→ğ

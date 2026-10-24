@@ -217,6 +217,11 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
         if değ and ilk_ses in ünlüler:
             tokenlar[-1] = _yumuşat_son(tokenlar[-1], değ)
             gövde = _yumuşat_son(gövde, değ)
+        # İkizleşme (TR hak → hakkı, tıp → tıbbı): ünlüyle başlayan ilk ek önünde (yumuşamadan sonra) kök
+        # sonu ünsüz ikizleşir; yazım değişimi kök tokenında (hakk+ı). Ünsüz önünde tek (haklar).
+        if idx == 0 and getattr(kök, "ikiz", False) and ilk_ses in ünlüler:
+            tokenlar[-1] = tokenlar[-1] + tokenlar[-1][-1]
+            gövde = gövde + gövde[-1]
         if önceki_son_düşer and ilk_ses == önceki_son_düşer:
             tokenlar[-1] = tokenlar[-1][:-1]
             gövde = gövde[:-1]

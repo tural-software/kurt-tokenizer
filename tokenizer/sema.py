@@ -48,6 +48,8 @@ class Kök:
     geri: bool = False      # eşsesli kök çakışmasında geri çekilir: aynı yüzeyi rakip bir kök de üretiyorsa o
     #                         yeğlenir (AZ korpus kararı, scripts/az_sozluk/geri.py: bacım = bacı+m, bac+ı+m
     #                         değil; siyahımıza = siyahı+mız+a). Tek okumada etkisiz
+    ikiz: bool = False      # son ünsüz, ünlüyle başlayan İLK ek önünde ikizleşir (TR hak → hakk+ı, his → hiss+i,
+    #                         tıp → tıbb+ı; TDK taki). Ünsüz önünde tek (haklar)
     ek_değişim: dict | None = None  # İKİNCİL sınıf (ek_tür) okumasının yumuşaması; None=ikincilde
     #                                 yumuşama yok (art→artıyor). tat gibi her-iki-yön: {t→d} (tadıyor)
 
@@ -130,6 +132,10 @@ def doğrula(ad: str, kök: Kök, profil=None) -> list[str]:
         hatalar.append(f"{ad!r}: qoşa_tek yalnız çift ünsüzle biten kökte anlamlı")
     if kök.türemiş not in TÜREMİŞ_TÜRLERİ:
         hatalar.append(f"{ad!r}: türemiş alanı {sorted(TÜREMİŞ_TÜRLERİ)} olmalı, bulundu {kök.türemiş!r}")
+    if not isinstance(kök.ikiz, bool):
+        hatalar.append(f"{ad!r}: ikiz alanı bool olmalı, bulundu {kök.ikiz!r}")
+    elif kök.ikiz and not (ad and ad[-1] not in ünlüler):
+        hatalar.append(f"{ad!r}: ikiz yalnız ünsüzle biten kökte anlamlı")
     if not isinstance(kök.geri, bool):
         hatalar.append(f"{ad!r}: geri alanı bool olmalı, bulundu {kök.geri!r}")
     if not isinstance(kök.y_tampon, bool):

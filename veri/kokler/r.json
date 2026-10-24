@@ -12,7 +12,7 @@
   "re": {"tokens": ["re"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "renk": {"tokens": ["renk"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"k→g": "ünlü_ile_başlayan_ek_gelince"}},
   "rest": {"tokens": ["rest"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
-  "ret": {"tokens": ["ret"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
+  "ret": {"tokens": ["ret"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}, "ikiz": true},
   "rey": {"tokens": ["rey"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "rıh": {"tokens": ["rıh"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "ring": {"tokens": ["ring"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},

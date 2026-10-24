@@ -354,7 +354,7 @@ ihbariye|isim|
 ihbarlama|isim|
 ihbarname|isim|
 ihdas|isim|
-ihkakıhak|isim|k→ğ
+ihkakıhak|isim|ikiz
 ihlak|isim|ince
 ihlal|isim|ince
 ihlas|isim|

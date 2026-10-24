@@ -2,7 +2,7 @@
   "ab": {"tokens": ["ab"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "aç": {"tokens": ["aç"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["sıfat"]},
   "ad": {"tokens": ["ad"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
-  "af": {"tokens": ["af"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "af": {"tokens": ["af"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "ikiz": true},
   "aft": {"tokens": ["aft"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ağ": {"tokens": ["ağ"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ah": {"tokens": ["ah"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},

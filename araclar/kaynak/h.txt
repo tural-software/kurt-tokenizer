@@ -17,16 +17,16 @@ homurda|fiil|
 hışırda|fiil|
 hıçkır|fiil|
 harca|fiil|
-hak|isim|
+hak|isim|ikiz
 hal|isim|ince
 ham|sıfat|
 han|isim|
 harç|isim|ç→c
 harp|isim|p→b,ince
 has|sıfat|
-hat|isim|
-haz|isim|
-his|isim|
+hat|isim|ikiz
+haz|isim|ikiz
+his|isim|ikiz
 hız|isim|
 hoş|sıfat|
 hür|sıfat|
@@ -317,7 +317,7 @@ habip|isim|p→b
 habislik|isim|k→ğ
 habitat|isim|
 habitus|isim|
-hac|isim|
+hac|isim|ikiz
 hacamat|isim|
 hacamatlama|isim|
 hacamatçı|isim|
@@ -339,7 +339,7 @@ hacıbaba|isim|
 hacılarkuşağı|isim|
 hacılık|isim|k→ğ
 hacıyatmaz|isim|
-had|isim|
+had|isim|ikiz,ince
 hadde|isim|
 haddeci|isim|
 haddecilik|isim|k→ğ
@@ -1555,7 +1555,7 @@ hürriyetsizlik|isim|k→ğ
 hürriyetçilik|isim|k→ğ
 hüryemez|isim|
 hüseyni|isim|
-hüsnühat|isim|
+hüsnühat|isim|ikiz
 hüsnühâl|isim|ince
 hüsnükabul|isim|ince
 hüsnükuruntu|isim|
@@ -1564,7 +1564,7 @@ hüsnütalil|isim|
 hüsnütelakki|isim|
 hüsnüteveccüh|isim|
 hüsnüyusuf|isim|
-hüsnüzan|isim|
+hüsnüzan|isim|ikiz
 hüsran|isim|
 hüsün|isim|düşen
 hüthüt|isim|t→d

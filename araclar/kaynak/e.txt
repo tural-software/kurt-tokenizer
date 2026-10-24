@@ -403,7 +403,7 @@ ehlîleştirilme|isim|
 ehlîleştirme|isim|
 ehram|isim|
 ehveniyet|isim|
-ehvenişer|isim|
+ehvenişer|isim|ikiz
 ehvenlik|isim|k→ğ
 ejder|isim|
 ejektör|isim|
@@ -717,7 +717,7 @@ emredilme|isim|
 emrediş|isim|
 emretme|isim|
 emreyleme|isim|
-emrihak|isim|k→ğ
+emrihak|isim|ikiz
 emrivaki|isim|
 emrolunma|isim|
 emsal|isim|ince

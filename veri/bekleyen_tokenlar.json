@@ -1,5 +1,5 @@
 {
-"not": "Türkçe kök sözlüğünün (K-1a, 2026-10-24) vocab'da olmayan tokenları: v1 donmuş, şimdilik harf yedeğine düşer (kayıpsız); vocab büyütme fazında bir Türkçe bölümüne eklenir (kullanıcı kararı). token → örnek kök.",
+"not": "Türkçe kök sözlüğünün (K-1a/K-1b, 2026-10-24) vocab'da olmayan tokenları: v1 donmuş, şimdilik harf yedeğine düşer (kayıpsız); vocab büyütme fazında bir Türkçe bölümüne eklenir (kullanıcı kararı). token → örnek kök.",
 "tokenlar": {
 "besğ": "arabesk",
 "bl": "makabil",
@@ -75,6 +75,7 @@
 "sulb": "sulp",
 "sâ": "sâdır",
 "sıd": "rasıt",
+"sırr": "sır",
 "tibl": "konvertibl",
 "trib": "trip",
 "trüğ": "trük",
@@ -100,6 +101,7 @@
 "zuz": "mahzuz",
 "zv": "uzuv",
 "zühd": "züht",
+"zıdd": "zıt",
 "zırt": "zırtlak",
 "zıy": "zıypak",
 "ğn": "eğin",

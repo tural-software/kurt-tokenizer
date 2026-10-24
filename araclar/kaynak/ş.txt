@@ -4,7 +4,7 @@
 şanlı|sıfat|
 şaşkın|sıfat|
 şen|sıfat|
-şık|sıfat|
+şık|sıfat|ikiz
 şirin|sıfat|
 # --- Faz 30: fiiller ---
 şaşır|fiil|
@@ -451,7 +451,7 @@
 şehvetsizlik|isim|k→ğ
 şehzade|isim|
 şehzadelik|isim|k→ğ
-şek|isim|
+şek|isim|ikiz
 şekavet|isim|
 şekel|isim|
 şekerci|isim|
@@ -515,7 +515,7 @@
 şenleniş|isim|
 şenlik|isim|k→ğ
 şepit|isim|t→d
-şer|isim|
+şer|isim|ikiz
 şerait|isim|
 şerare|isim|
 şerbetleme|isim|
@@ -548,7 +548,7 @@
 şeritçilik|isim|k→ğ
 şerpa|isim|
 şerç|isim|ç→c
-şet|isim|
+şet|isim|ikiz,t→d
 şetaret|isim|
 şetim|isim|düşen
 şetlant|isim|t→d

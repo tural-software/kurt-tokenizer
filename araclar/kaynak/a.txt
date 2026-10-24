@@ -691,7 +691,7 @@ adımsayar|isim|
 aerobik|isim|k→ğ
 aerodinamik|isim|k→ğ
 aeroloji|isim|
-af|isim|
+af|isim|ikiz
 afacanlaşma|isim|
 afacanlık|isim|k→ğ
 afak|isim|k→ğ

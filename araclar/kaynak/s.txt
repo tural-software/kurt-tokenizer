@@ -1657,7 +1657,7 @@ sergilik|isim|k→ğ
 sergüzeşt|isim|
 sergüzeştçi|isim|
 sergüzeştçilik|isim|k→ğ
-serhat|isim|
+serhat|isim|ikiz,t→d
 serhatli|isim|
 seri|isim|
 serigrafi|isim|
@@ -2663,7 +2663,7 @@ suikastçı|isim|
 suikastçılık|isim|k→ğ
 suiniyet|isim|
 suistimal|isim|ince
-suizan|isim|
+suizan|isim|ikiz
 sukut|isim|
 sukutuhayal|isim|ince
 sulak|isim|k→ğ
@@ -3246,7 +3246,7 @@ sınırlayış|isim|
 sınırlılık|isim|k→ğ
 sınırsızlık|isim|k→ğ
 sıpa|isim|
-sır|isim|
+sır|isim|ikiz
 sıraca|isim|
 sıracagiller|isim|
 sıracı|isim|

@@ -1045,7 +1045,7 @@
   "ihbariye": {"tokens": ["ih", "ba", "ri", "ye"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "ihbarlama": {"tokens": ["ih", "bar", "la", "ma"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "ihbarname": {"tokens": ["ih", "bar", "na", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
-  "ihkakıhak": {"tokens": ["ih", "ka", "kı", "hak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "ihkakıhak": {"tokens": ["ih", "ka", "kı", "hak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "ikiz": true},
   "ihlaslıca": {"tokens": ["ih", "las", "lı", "ca"], "tür": "zarf", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "ihlaslılık": {"tokens": ["ih", "las", "lı", "lık"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "ihlassızca": {"tokens": ["ih", "las", "sız", "ca"], "tür": "zarf", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},

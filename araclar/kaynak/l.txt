@@ -254,8 +254,8 @@ lebdeğmez|isim|
 lebiderya|isim|
 leblebici|isim|
 leblebicilik|isim|k→ğ
-ledün|isim|
-lef|isim|
+ledün|isim|ikiz
+lef|isim|ikiz
 leffetme|isim|
 leffüneşir|isim|düşen
 legalleşme|isim|
