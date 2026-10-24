@@ -3304,3 +3304,4 @@ tezgahtarlık|isim|k→ğ
 ticaretgah|isim
 topyekun|zarf
 tövbekarlık|isim|k→ğ
+tamam|sıfat|çoğulsuz

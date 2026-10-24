@@ -85,6 +85,12 @@ class BirleştirTest(unittest.TestCase):
         self.assertEqual(self.b("ret", "iyelik_3tekil")[1], "reddi")
         self.assertEqual(self.b("had", "iyelik_3tekil")[1], "haddi")
 
+    def test_y_tampon_su(self):
+        # su: ünlü-başlı ek önünde y (suyu, suyun); ünsüz-başlı ek düzenli (sular)
+        self.assertEqual(self.b("su", "iyelik_3tekil", "belirtme")[1], "suyunu")
+        self.assertEqual(self.b("su", "tamlayan")[1], "suyun")
+        self.assertEqual(self.b("su", "çoğul")[1], "sular")
+
     def test_pronominal_n(self):
         # 3.tekil/çoğul iyelik + hâl → araya -n- (ayrı token)
         self.assertEqual(self.b("araba", "iyelik_3tekil", "bulunma"),

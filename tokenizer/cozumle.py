@@ -160,6 +160,8 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
         # → "mide" yanlışlıkla mi+bulunma diye bölünmez
         if getattr(kök, "sadece_koşaç", False) and ek.öbek != "her":
             continue
+        if ek_ad in ("çoğul", "koşaç_3çoğul") and getattr(kök, "çoğulsuz", False):   # tamamlar = tamamla+r
+            continue
         if not _kişi_uygun(ek_ad, ek_dizi, sınıf, profil):    # kişi-bağlamı (tip+kaynak)
             continue
         if not _koşaç_bağlanır(ek_ad, ek_dizi, sınıf, ekler):  # koşaç çıplak fiile bağlanmaz
@@ -198,7 +200,8 @@ def çözümle(kelime, kökler, ekler, istisnalar=None, profil=None) -> list[Ç�
         türler = [kök.tür, *(kök.ek_tür or [])]
         sınıflar = {"fiil" if t == "fiil" else "isim" for t in türler}
         for sınıf in sınıflar:
-            _ara(kök_ad, kök, [], 0, sınıf, hedef, ekler, çözümler, profil)
+            iy = getattr(kök, "iyelik", "")      # iyelikli kök (hepsi): yuva o ekten sonra başlar
+            _ara(kök_ad, kök, [], ekler[iy].yuva if iy else 0, sınıf, hedef, ekler, çözümler, profil)
             if kök.düşen and profil is not None and profil.düşen_isteğe_bağlı:
                 # danışıq/normatif olmayan yazım: ünlüsü düşmeden (şəkili, ağızı); yüzey normatifinden farklı
                 # olduğundan (şəkli) iki okuma aynı sözcükte yarışmaz

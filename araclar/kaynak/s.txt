@@ -2627,7 +2627,7 @@ strüktür|isim|
 strüktüralizm|isim|
 stupa|isim|
 stüdyo|isim|
-su|isim|
+su|isim|y_tampon
 suare|isim|
 subasar|isim|
 subasman|isim|

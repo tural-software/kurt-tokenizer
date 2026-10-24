@@ -207,6 +207,7 @@
   "talveg": {"tokens": ["tal", "veg"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "talyum": {"tokens": ["tal", "yum"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
   "tamah": {"tokens": ["ta", "mah"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "tamam": {"tokens": ["ta", "mam"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null, "çoğulsuz": true},
   "tambur": {"tokens": ["tam", "bur"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
   "tamik": {"tokens": ["ta", "mik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "tamim": {"tokens": ["ta", "mim"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},

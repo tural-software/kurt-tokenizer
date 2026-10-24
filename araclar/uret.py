@@ -39,7 +39,7 @@ def kaynak_oku(txt_yol: str | Path) -> list[tuple]:
 
     Satır biçimi: kelime|tür|değişim|ek_tür  (değişim ve ek_tür virgülle çoklu, boş olabilir)
     Ünlü düşmesi: değişim sütununda 'düşen' özel değeri (tek başına ya da 'p→b,düşen' gibi).
-    Aynı sütunda bayraklar: ince, daralan, y_tampon, qoşa_tek, ikiz (TR hak→hakkı), türemiş / türemiş_ekli / türemiş_çıplak (AZ: bileşik
+    Aynı sütunda bayraklar: ince, daralan, y_tampon, qoşa_tek, ikiz (TR hak→hakkı), çoğulsuz (tamam), türemiş / türemiş_ekli / türemiş_çıplak (AZ: bileşik
     biçimle eşsesli başlık — hep / yalnız ekliyken / yalnız eksizken geri çekilir), geri (AZ: eşsesli kök çakışmasında
     rakip kök yeğlenir — korpus kararı).
     """
@@ -54,7 +54,7 @@ def kaynak_oku(txt_yol: str | Path) -> list[tuple]:
         değişim_ham = parçalar[2] if len(parçalar) > 2 else ""
         ek_tür_ham = parçalar[3] if len(parçalar) > 3 else ""
         ek_değişim_ham = parçalar[4] if len(parçalar) > 4 else ""
-        düşen = ince = daralan = y_tampon = qoşa_tek = geri = ikiz = False
+        düşen = ince = daralan = y_tampon = qoşa_tek = geri = ikiz = çoğulsuz = False
         türemiş = ""
         kurallar = []
         for m in (p.strip() for p in değişim_ham.split(",") if p.strip()):
@@ -72,6 +72,8 @@ def kaynak_oku(txt_yol: str | Path) -> list[tuple]:
                 geri = True
             elif m == "ikiz":
                 ikiz = True
+            elif m == "çoğulsuz":
+                çoğulsuz = True
             elif m in TÜREMİŞ_ANAHTAR:
                 türemiş = TÜREMİŞ_ANAHTAR[m]
             else:
@@ -81,7 +83,7 @@ def kaynak_oku(txt_yol: str | Path) -> list[tuple]:
         ek_kurallar = [m.strip() for m in ek_değişim_ham.split(",") if m.strip()]
         ek_değişim = {m: DEĞİŞİM_KOŞULU for m in ek_kurallar} if ek_kurallar else None
         kayıtlar.append((kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim, y_tampon,
-                         türemiş, qoşa_tek, geri, ikiz))
+                         türemiş, qoşa_tek, geri, ikiz, çoğulsuz))
     return kayıtlar
 
 
@@ -89,7 +91,7 @@ def kök_üret(kelime: str, tür: str, değişim: dict | None, ek_tür=None,
              düşen: bool = False, ince: bool = False, daralan: bool = False,
              ek_değişim: dict | None = None, profil=None, y_tampon: bool = False,
              türemiş: str = "", qoşa_tek: bool = False, geri: bool = False,
-             ikiz: bool = False) -> dict:
+             ikiz: bool = False, çoğulsuz: bool = False) -> dict:
     """Mekanik alanları (tokens, son_ünlü, son_ses) türeterek tam kök girdisi üretir."""
     ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
     giriş = {
@@ -120,6 +122,8 @@ def kök_üret(kelime: str, tür: str, değişim: dict | None, ek_tür=None,
         giriş["geri"] = True
     if ikiz:                                     # yalnız son ünsüzü ünlü önünde ikizleşen kökte (hak → hakkı)
         giriş["ikiz"] = True
+    if çoğulsuz:                                 # yalnız çoğul almayan kökte (tamam)
+        giriş["çoğulsuz"] = True
     return giriş
 
 
@@ -135,12 +139,12 @@ def sözlük_üret(kayıtlar, profil=None) -> dict[str, dict]:
     girişler: dict[str, dict] = {}
     hatalar: list[str] = []
     for (kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim, y_tampon, türemiş,
-         qoşa_tek, geri, ikiz) in kayıtlar:
+         qoşa_tek, geri, ikiz, çoğulsuz) in kayıtlar:
         if kelime in girişler:
             hatalar.append(f"{kelime!r}: kaynakta yinelenmiş")
             continue
         giriş = kök_üret(kelime, tür, değişim, ek_tür, düşen, ince, daralan, ek_değişim, profil,
-                         y_tampon, türemiş, qoşa_tek, geri, ikiz)
+                         y_tampon, türemiş, qoşa_tek, geri, ikiz, çoğulsuz)
         hatalar.extend(doğrula(kelime, Kök(**giriş), profil))
         girişler[kelime] = giriş
     if hatalar:

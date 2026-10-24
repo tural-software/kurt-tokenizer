@@ -88,7 +88,8 @@ class KöklerTest(unittest.TestCase):
     def test_zamir_gövdeleri_geçerli(self):
         zamirler = yükle(ZAMİR_DOSYASI)
         self.assertEqual(set(zamirler), {"ben", "biz", "bun", "kim", "on", "sen", "siz",
-                                         "şun", "nere", "kimse", "herkes", "kendi"})
+                                         "şun", "nere", "kimse", "herkes", "kendi",
+                                     "birbir", "hepsi", "birisi", "birileri"})
         for ad, kök in zamirler.items():
             self.assertEqual(doğrula(ad, kök), [], ad)
             self.assertEqual(hecele(ad), kök.tokens, ad)
@@ -97,7 +98,7 @@ class KöklerTest(unittest.TestCase):
     def test_zamir_içerik_köküyle_çakışmaz(self):
         # çalışma sözlüğü harf fazları + zamir köklerini çakışmadan birleştirir
         birleşik = çalışma_sözlüğü(VERİ_DİZİN, ZAMİR_DOSYASI)
-        self.assertEqual(len(birleşik), len(self.sözlük) + 12)
+        self.assertEqual(len(birleşik), len(self.sözlük) + 16)
 
     # --- dosya yapısı (her harf dosyası, otomatik) ---
     def test_dosya_harf_tutarlı(self):

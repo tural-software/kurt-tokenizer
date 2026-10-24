@@ -349,6 +349,12 @@ class ÇözümleTest(unittest.TestCase):
         self.assertTrue(self._var_mı("kaybı", ["ka", "yb", "ı"], "kayıp", ["iyelik_3tekil"]))
         # ünsüz-başlı ekte düşmez
         self.assertTrue(self._var_mı("hakkı", ["hakk", "ı"], "hak", ["iyelik_3tekil"]))   # ikizleşme
+        # iyelikli kök (hepsi = hep+si): sonraki hâl eki pronominal -n- alır
+        self.assertTrue(self._var_mı("hepsini", ["hep", "si", "n", "i"], "hepsi", ["belirtme"]))
+        self.assertTrue(self._var_mı("birilerine", ["bi", "ri", "le", "ri", "n", "e"], "birileri", ["yönelme"]))
+        self.assertTrue(self._var_mı("gibidir", ["gi", "bi", "dir"], "gibi", ["ek_fiil_dir"]))
+        # çoğulsuz kök -lAr almaz: tamamlar yalnız tamamla+r
+        self.assertFalse(any(ç.kök == "tamam" for ç in self.çöz("tamamlar")))
         self.assertTrue(self._var_mı("tıbbı", ["tıbb", "ı"], "tıp", ["iyelik_3tekil"]))
         self.assertTrue(self._var_mı("akıllar", ["a", "kıl", "lar"], "akıl", ["çoğul"]))
 

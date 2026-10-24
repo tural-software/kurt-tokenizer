@@ -112,7 +112,7 @@
   "stor": {"tokens": ["stor"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "streç": {"tokens": ["streç"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": {"ç→c": "ünlü_ile_başlayan_ek_gelince"}},
   "stres": {"tokens": ["stres"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
-  "su": {"tokens": ["su"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünlü", "değişim": null},
+  "su": {"tokens": ["su"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünlü", "değişim": null, "y_tampon": true},
   "suç": {"tokens": ["suç"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": {"ç→c": "ünlü_ile_başlayan_ek_gelince"}},
   "sulh": {"tokens": ["sulh"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
   "sulp": {"tokens": ["sulp"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": {"p→b": "ünlü_ile_başlayan_ek_gelince"}, "ince": true},

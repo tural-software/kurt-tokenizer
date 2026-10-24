@@ -123,11 +123,11 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
               ) -> tuple[list[str], str]:
     """Kök + sıralı ek adları → (token listesi, yüzey biçimi). profil: dil (None = Türkçe)."""
     ünlüler = sesler.ÜNLÜLER if profil is None else profil.ünlüler
-    y_tampon = profil is not None and getattr(kök, "y_tampon", False)
+    y_tampon = getattr(kök, "y_tampon", False)
     tokenlar = list(kök.tokens)
     gövde = ad
     önceki_değişim = kök.değişim          # son morfemin yumuşama kuralı (önce kök, sonra ekler)
-    önceki_ek = None                      # bir önceki ek adı (pronominal-n kararı için)
+    önceki_ek = getattr(kök, "iyelik", "") or None   # bir önceki ek adı (pronominal-n; iyelikli kök: hepsi+n+i)
     önceki_son_düşer = ""                 # önceki ekin son ünsüzü bu harf önünde düşer (AZ gəlmisən)
     for idx, ek_adı in enumerate(ek_adları):
         ek = ekler[ek_adı]
