@@ -1,5 +1,6 @@
 """vocab modülü — token↔ID, ID-düzeyi round-trip, kapsama ve fallback testleri."""
 
+import json
 import random
 import unittest
 from pathlib import Path
@@ -139,7 +140,7 @@ class VocabTest(unittest.TestCase):
         self.assertNotIn(self.v.tok2id["▁"], self.v.encode_ids("▁", self.k, self.e, self.i))
 
     def test_çözülen_token_kapsama(self):
-        # RESOLVED kelimelerin ürettiği her morfem token vocab'da olmalı (fallback YOK)
+        # RESOLVED kelimelerin ürettiği her morfem token vocab'da olmalı (fallback YOK; bekleyenler hariç)
         s = yükle_dizin(KÖK_DİZİN)
         random.seed(7)
         çek = [["belirtme"], ["iyelik_3tekil"], ["iyelik_3tekil", "bulunma"]]
@@ -153,6 +154,10 @@ class VocabTest(unittest.TestCase):
                     kaçan |= {t for t in tk if t not in self.v.tok2id}
                 except Exception:
                     pass
+        # K-1a: yeni Türkçe köklerin vocab'da olmayan heceleri vocab büyütmesini bekler (bekleyen_tokenlar.json);
+        # listede OLMAYAN her eksik token kırmızı (yeni kök eklenince liste güncellenir)
+        bekleyen = set(json.loads((KÖK_DİZİN.parent / "bekleyen_tokenlar.json").read_text(encoding="utf-8"))["tokenlar"])
+        kaçan -= bekleyen
         self.assertEqual(kaçan, set(), f"vocab'da olmayan morfem tokenlar: {sorted(kaçan)[:20]}")
 
     def test_matematik_sembol_latex(self):

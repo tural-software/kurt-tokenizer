@@ -14,7 +14,7 @@ insana sorulur). Vocab'da olmayan karakter (ā, Ω, emoji…) UTF-8 bayt tokenla
 (Faz 2) → encode_ids hiçbir girdi için <unk> üretmez (<unk> ID 1 model uyumu için durur).
 
 SONA-EKLEME SÖZLEŞMESİ: model her tokenı ID'siyle öğrenir → bir ID'nin anlamı ASLA değişmez.
-Vocab bölümlerden oluşur: v1 (yukarıdaki 1-3, Türkçe çekirdek, 4112, DONMUŞ) + EK_BÖLÜMLER
+Vocab bölümlerden oluşur: v1 (yukarıdaki 1-3, Türkçe çekirdek, 4112, DONMUŞ — statik veri/vocab_v1.json) + EK_BÖLÜMLER
 sırayla SONA eklenir. Yeni token yalnız YENİ bir bölümle girer; var olan bölüm değişmez, araya
 token girmez. DONMUŞ_BÖLÜMLER her bölümün boyu + SHA-256 özetini kilitler (test_vocab önek
 kapısı): bir kök eklemesi v1'i kaydırırsa ya da bir bölüm sessizce değişirse test KIRMIZI.
@@ -27,9 +27,7 @@ import json
 from pathlib import Path
 
 from tokenizer import sesler
-from tokenizer.alfabe import ALFABE, alfabetik_anahtar
 from tokenizer.hece import hecele
-from tokenizer.birlestir import birleştir
 from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
                                 BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR, LATEX_TOKENLARI)
@@ -45,8 +43,6 @@ _PY_V1_ORTAK = frozenset({"and", "as", "def", "del", "for", "if", "in", "is", "n
 ÖZEL_TOKENLAR = ["<pad>", "<unk>", "<s>", "</s>", "<|sistem|>", "<|kullanici|>",
                  "<|asistan|>", "<|bitis|>", BAŞ_BÜYÜK, HEP_BÜYÜK, BOŞLUK]
 
-NOKTALAMA = list(".,;:!?'\"`()[]{}<>-–—/\\|@#$%&*+=~^_°²³…’‘“”«»·•")
-RAKAM = list("0123456789")
 
 # ── Faz 3 karakter aileleri (kaynakların tamamında ölçüldü: 3,18 milyar karakter, 16 kaynak;
 #    eşik ≥1.000 oluşum + ≥3 kaynak, aileler tamamlanır; kullanıcı onaylı). Yalnız KÜÇÜK harf:
@@ -221,88 +217,14 @@ def bölümleri_ekle(taban: list[str], bölümler) -> list[str]:
     return tokenlar
 
 
-def _atomik_taban() -> list[str]:
-    """Her dizinin temsil edilebilmesi için zemin: harf (iki büyüklük) + rakam + noktalama."""
-    küçük = set(ALFABE) | set("âîû")
-    büyük = {sesler.türkçe_büyült(c) for c in küçük}
-    return sorted(küçük | büyük | set(RAKAM) | set(NOKTALAMA))
+def vocab_kur(kökler=None, ekler=None, istisnalar=None) -> list[str]:
+    """Deterministik vocab: v1 çekirdek (statik, veri/vocab_v1.json) + EK_BÖLÜMLER (sırayla sona eklenir).
 
-
-def _ek_yüzeyleri(kökler, ekler) -> set[str]:
-    """Ek yüzey + tampon tokenlarını, çeşitli kökler üzerinde çekim üreterek toplar.
-
-    Her ekin yüzeyi gövdenin son ünlüsüne/sesine bağlı → tüm son_ünlü sınıflarını +
-    ünsüz/ünlü/l/r-sonu + yumuşama/düşen/ince köklerini kapsayan bir prob kümesi seçilir.
-    """
-    # Çeşitli prob kökleri: her son_ünlü + özel sınıflar, isim ve fiil ayrı.
-    isim_prob, fiil_prob = {}, {}
-    for ad, k in kökler.items():
-        hedef = isim_prob if k.tür != "fiil" else fiil_prob
-        anahtar = (k.son_ünlü, ad[-1] in sesler.ÜNLÜLER, ad[-1] in "lr",
-                   bool(k.değişim), getattr(k, "düşen", False), getattr(k, "ince", False))
-        hedef.setdefault(anahtar, ad)
-    isimler, fiiller = list(isim_prob.values()), list(fiil_prob.values())
-
-    isim_zinc = [[e] for e, x in ekler.items() if x.öbek == "isim"]
-    isim_zinc += [["çoğul", "iyelik_1tekil"], ["iyelik_3tekil", "bulunma"],
-                  ["iyelik_3tekil", "araç"], ["iyelik_2tekil", "bulunma", "aitlik"]]
-    fiil_zinc = [[e] for e, x in ekler.items() if x.öbek == "fiil"]
-    fiil_zinc += [["şimdiki_zaman", "şahıs_1tekil_t1"], ["görülen_geçmiş", "şahıs_1tekil_t2"],
-                  ["gelecek_zaman", "şahıs_1çoğul_t1"], ["olumsuz", "geniş_zaman"],
-                  ["edilgen", "görülen_geçmiş"], ["ettirgen", "edilgen", "görülen_geçmiş"],
-                  ["ortaç_dik", "iyelik_3tekil"], ["şimdiki_zaman", "ek_fiil_idi"]]
-    her_zinc = [["ek_fiil_idi"], ["ek_fiil_imiş"], ["koşaç_1tekil_t1"]]
-
-    tokens: set[str] = set()
-    for kökler_l, zincirler in ((isimler, isim_zinc), (fiiller, fiil_zinc),
-                                (isimler + fiiller, her_zinc)):
-        for ad in kökler_l:
-            kök = kökler[ad]
-            for zinc in zincirler:
-                try:
-                    tk, _ = birleştir(ad, kök, zinc, ekler)
-                    tokens.update(tk)
-                except Exception:
-                    pass
-
-    # Yumuşama/düşme TÜM köklerde kök-son heceyi değiştirir (kitap→tab, böcek→böceğ,
-    # affet→fed, akıl→akl). Bu yüzden değişim/düşen köklerin ünlü-başlı çekimini üret.
-    for ad, kök in kökler.items():
-        if not (kök.değişim or getattr(kök, "düşen", False)):
-            continue
-        z = ([["şimdiki_zaman"], ["gelecek_zaman", "şahıs_1tekil_t1"]]
-             if kök.tür == "fiil" else [["belirtme"], ["iyelik_3tekil"]])
-        for zinc in z:
-            try:
-                tk, _ = birleştir(ad, kök, zinc, ekler)
-                tokens.update(tk)
-            except Exception:
-                pass
-    return tokens
-
-
-def vocab_kur(kökler, ekler, istisnalar) -> list[str]:
-    """Deterministik vocab: v1 çekirdek + EK_BÖLÜMLER (sırayla sona eklenir)."""
-    return bölümleri_ekle(_v1_kur(kökler, ekler, istisnalar), EK_BÖLÜMLER)
-
-
-def _v1_kur(kökler, ekler, istisnalar) -> list[str]:
-    """v1 — Türkçe çekirdek (DONMUŞ): özel + atomik taban + hece/morfem/ek/istisna tokenları."""
-    morfem: set[str] = set()
-    for kök in kökler.values():                 # kök heceleri
-        morfem.update(kök.tokens)
-    for ist in istisnalar.values():             # istisna bütün-tokenları
-        morfem.update(ist.tokens)
-    morfem |= _ek_yüzeyleri(kökler, ekler)      # ek yüzeyleri + tamponlar
-
-    atom = _atomik_taban()
-    morfem -= set(ÖZEL_TOKENLAR) | set(atom)    # önce-gelenleri çıkar (tekrar yok)
-    # Sıra: önce hece sayısı/uzunluk, sonra Türkçe alfabetik, son TAM kırıcı ham token
-    # (â/î/û temel ünlüye eşlendiğinden 'di'/'dî' aynı anahtara düşer → kararlılık için ham).
-    _harfli = set(ALFABE) | set("âîû")
-    sıralı_morfem = sorted(morfem, key=lambda t: (
-        len(t), alfabetik_anahtar("".join(c for c in t if c in _harfli) or "a"), t))
-    return ÖZEL_TOKENLAR + atom + sıralı_morfem
+    v1 eskiden kök sözlüğünden hesaplanıyordu (kök heceleri + ek yüzeyleri + istisna tokenları, uzunluk/Türkçe alfabe
+    sıralı). K-1a (2026-10-24) Türkçe sözlüğü büyütünce yeni heceler v1'i kaydıracaktı → v1 dondurulmuş listedir. Yeni
+    Türkçe kökün vocab'da olmayan heceleri harf yedeğine düşer (kayıpsız) ve veri/bekleyen_tokenlar.json'da vocab
+    büyütme fazını bekler. Parametreler geriye uyumluluk için durur (kullanılmaz)."""
+    return bölümleri_ekle(_statik_bölüm(_VERİ / "vocab_v1.json"), EK_BÖLÜMLER)
 
 
 # Metin kipinde ASCII casing işaretçilerini (kod-tanimlayici bölümü) kullanan doğal diller (EN: Unicode casing).

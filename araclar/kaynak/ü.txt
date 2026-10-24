@@ -5,13 +5,13 @@
 # --- Faz 30: fiiller ---
 üfle|fiil|
 ürk|fiil|
-üre|fiil|
+üre|fiil||isim
 üz|fiil|
 üşen|fiil|
 üstle|fiil|
 üşüş|fiil|
 ütüle|fiil|
-üleş|fiil|
+üleş|fiil||isim
 ürper|fiil|
 üç|sıfat|
 ün|isim|
@@ -27,7 +27,7 @@
 üstün|sıfat|
 üşü|fiil|
 ütü|isim|
-üvey|sıfat|
+üvey|sıfat||fiil
 üye|isim|
 üzüm|isim|
 üzgün|sıfat|
@@ -253,7 +253,7 @@
 üçgenleşme|isim|
 üçgül|isim|
 üçkat|isim|
-üçkâğıt|isim|
+üçkâğıt|isim|t→d
 üçkâğıtçı|isim|
 üçkâğıtçılık|isim|k→ğ
 üçleme|isim|
@@ -298,3 +298,28 @@
 üzerine|zarf|
 üzüntülü|zarf|
 üzüntüsüz|zarf|
+
+# --- K-1a: TDK v12 (gts) — sözlükte olmayan madde + düzeltme imsiz yazım varyantı ---
+ümitsizlen|fiil
+ümitvar|sıfat
+ümmi|sıfat
+ünik|sıfat|k→ğ
+üniseks|sıfat
+üniter|sıfat
+üniversal|sıfat
+üremik|sıfat|k→ğ
+üretken|sıfat
+ürkünç|sıfat|ç→c
+ürolojik|sıfat|k→ğ
+üryan|sıfat
+üstel|sıfat
+üstüvani|sıfat
+ütopik|sıfat|k→ğ
+ütopist|sıfat
+üçgenleş|fiil
+üçüncül|sıfat
+üşengen|sıfat
+üşengeç|sıfat|ç→c
+üçkağıt|isim|t→d
+üçkağıtçı|isim
+üçkağıtçılık|isim|k→ğ
