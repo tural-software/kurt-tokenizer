@@ -27,7 +27,7 @@
   "ırla": {"tokens": ["ır", "la"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "ırmak": {"tokens": ["ır", "mak"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "ısı": {"tokens": ["ı", "sı"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
-  "ısın": {"tokens": ["ı", "sın"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
+  "ısın": {"tokens": ["ı", "sın"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
   "ısır": {"tokens": ["ı", "sır"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "ısıt": {"tokens": ["ı", "sıt"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "ıska": {"tokens": ["ıs", "ka"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},

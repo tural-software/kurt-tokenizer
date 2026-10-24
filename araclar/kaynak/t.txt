@@ -19,7 +19,7 @@ tut|fiil|
 tüt|fiil|
 tık|fiil||isim
 tıka|fiil|
-tanı|fiil|
+tanı|fiil||isim
 tanış|fiil||sıfat
 tasarla|fiil|
 tıkla|fiil|
@@ -413,7 +413,7 @@ tümörleş|fiil|
 tün|fiil||isim
 tünekle|fiil|
 tüple|fiil|
-türe|fiil|
+türe|fiil||isim
 türküle|fiil|
 türküleş|fiil|
 tüylen|fiil|
@@ -3305,3 +3305,10 @@ ticaretgah|isim
 topyekun|zarf
 tövbekarlık|isim|k→ğ
 tamam|sıfat|çoğulsuz
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+tatarı|sıfat
+tokuz|sıfat
+tutkun|sıfat
+tüvana|sıfat
+tıkırında|sıfat

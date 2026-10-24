@@ -31,7 +31,7 @@ ağar|fiil|
 anımsa|fiil|
 arala|fiil|
 arzula|fiil|
-aksa|fiil|
+aksa|fiil||sıfat
 alkışla|fiil|
 anlaş|fiil|
 ayarla|fiil|
@@ -57,7 +57,7 @@ ay|isim|
 az|sıfat||fiil
 abla|isim|
 açık|sıfat|k→ğ
-ada|isim|
+ada|isim||fiil
 adam|isim|
 adres|isim|
 ağaç|isim|ç→c
@@ -367,7 +367,7 @@ aslanlaş|fiil|
 asrileş|fiil|
 astarla|fiil|
 asılan|fiil|
-ata|fiil|
+ata|fiil||isim
 ateşle|fiil|
 atfedil|fiil|
 atfet|fiil|t→d
@@ -3562,3 +3562,14 @@ azimkarane|zarf
 azimkarlık|isim|k→ğ
 aşikare|zarf
 aşikarlık|isim|k→ğ
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+afişe|sıfat
+aksi|sıfat
+algın|sıfat
+altız|sıfat
+alışkın|sıfat
+arız|sıfat
+askıda|sıfat
+ayan|sıfat
+aynı|sıfat

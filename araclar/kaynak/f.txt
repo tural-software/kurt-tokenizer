@@ -1150,3 +1150,7 @@ fedakarca|zarf
 fedakarcasına|zarf
 fedakarlık|isim|k→ğ
 ferdilik|isim|k→ğ
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+ferdası|sıfat
+formüle|sıfat

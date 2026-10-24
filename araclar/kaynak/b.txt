@@ -25,7 +25,7 @@ benze|fiil|
 boz|fiil||isim
 böğür|fiil||isim
 becer|fiil|
-beze|fiil|
+beze|fiil||isim
 bağla|fiil|
 belle|fiil|
 benimse|fiil|
@@ -272,7 +272,7 @@ bayramlaş|fiil|
 bayılayaz|fiil|
 bayındırlaş|fiil|
 bayırlaş|fiil|
-bağda|fiil|
+bağda|fiil||isim
 bağdala|fiil|
 bağdaşıklaş|fiil|
 bağlaş|fiil|
@@ -3587,3 +3587,11 @@ bezirganbaşı|isim
 bezirganlık|isim|k→ğ
 biganelik|isim|k→ğ
 batınilik|isim|k→ğ
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+batkın|sıfat
+belgin|sıfat
+beşiz|sıfat
+boktan|sıfat
+böylesi|sıfat
+böylesine|sıfat

@@ -21,7 +21,7 @@ koy|fiil||isim
 kur|fiil||isim
 kus|fiil|
 küs|fiil||sıfat
-kına|fiil|
+kına|fiil||isim
 kıs|fiil|
 kavur|fiil|
 kayır|fiil||isim
@@ -94,7 +94,7 @@ kalın|sıfat|
 kanat|isim|t→d
 kapak|isim|k→ğ
 kapı|isim|
-karar|isim|
+karar|isim||fiil
 kardeş|isim|
 kasap|isim|p→b
 kaşık|isim|k→ğ
@@ -109,7 +109,7 @@ kılıç|isim|ç→c
 kibar|sıfat|
 kiraz|isim|
 kitap|isim|p→b
-koca|isim|
+koca|isim||fiil
 konak|isim|k→ğ
 korku|isim|
 köpek|isim|k→ğ
@@ -358,7 +358,7 @@ kamulaştır|fiil|
 kamusallaş|fiil|
 kamçıla|fiil|
 kamçılaş|fiil|
-kana|fiil|
+kana|fiil||isim
 kanatlan|fiil|
 kancala|fiil|
 kandilleş|fiil|
@@ -381,7 +381,7 @@ kapitalistleş|fiil|
 kapsa|fiil|
 kapılan|fiil|
 kapış|fiil|
-kara|fiil|
+kara|fiil||isim
 karamsarlaş|fiil|
 kararla|fiil|
 kararlaş|fiil|
@@ -401,7 +401,7 @@ kartal|fiil||isim
 kartelleş|fiil|
 kartlaş|fiil|
 kartonla|fiil|
-karı|fiil|
+karı|fiil||isim
 karık|fiil||isim
 karıkla|fiil|
 karılaş|fiil|
@@ -461,7 +461,7 @@ kayıtsızlaş|fiil|
 kayşa|fiil||isim
 kazan|fiil|
 kazıkla|fiil|
-kaça|fiil|
+kaça|fiil||zarf
 kaçımsa|fiil|
 kaçır|fiil|
 kaçış|fiil|
@@ -573,7 +573,7 @@ korkunçlaş|fiil|
 korkut|fiil|
 korlan|fiil|
 korlaş|fiil|
-koru|fiil|
+koru|fiil||isim
 kostaklan|fiil|
 kotar|fiil|
 kotla|fiil|
@@ -674,7 +674,7 @@ külçeleş|fiil|
 kümbetlen|fiil|
 kümeleş|fiil|
 kündele|fiil|
-küre|fiil|
+küre|fiil||isim
 kürele|fiil|
 küreselleş|fiil|
 kürne|fiil|
@@ -5571,3 +5571,16 @@ kufi|isim
 kündekar|isim
 kündekari|isim
 kürdilihicazkar|isim
+
+# --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
+keke|sıfat
+keleme|sıfat
+kerim|sıfat
+kilsi|sıfat
+kocaman|sıfat
+kucakta|sıfat
+kurada|sıfat
+kökten|sıfat
+köse|sıfat
+kılgın|sıfat
+kıygın|sıfat
