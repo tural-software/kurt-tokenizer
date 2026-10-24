@@ -34,6 +34,14 @@ class İstisnaTest(unittest.TestCase):
         self.assertIsNotNone(istisna_bul(self.sözlük, "VE"))   # Türkçe küçültme
         self.assertIsNone(istisna_bul(self.sözlük, "araba"))
 
+    def test_k1c_grupları(self):
+        # tek harf, Roma rakamı (Türkçe küçük harf: II → ıı), kısaltma/web, sık yabancı sözcük bütün
+        for k in ("a", "ı", "q", "ıı", "ııı", "xıv", "www", "com", "kdv", "tbmm", "the"):
+            self.assertIsNotNone(istisna_bul(self.sözlük, k), k)
+        self.assertIsNotNone(istisna_bul(self.sözlük, "XIV"))
+        for k in ("ö", "org", "inci"):                 # kök ya da motorca çözülür: istisna değil
+            self.assertIsNone(istisna_bul(self.sözlük, k), k)
+
     def test_bozuk_reddedilir(self):
         bozuk = {"istisnalar": {"xy": {"tokens": ["x"], "not": "join != xy"}}}
         p = tempfile.mktemp(suffix=".json")

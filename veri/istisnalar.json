@@ -1518,6 +1518,216 @@
         "smartphone"
       ],
       "not": "bütün tut"
+    },
+    "web": {
+      "tokens": [
+        "web"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "online": {
+      "tokens": [
+        "online"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "the": {
+      "tokens": [
+        "the"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "and": {
+      "tokens": [
+        "and"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "to": {
+      "tokens": [
+        "to"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "for": {
+      "tokens": [
+        "for"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "by": {
+      "tokens": [
+        "by"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "with": {
+      "tokens": [
+        "with"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "you": {
+      "tokens": [
+        "you"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "this": {
+      "tokens": [
+        "this"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "new": {
+      "tokens": [
+        "new"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "full": {
+      "tokens": [
+        "full"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "email": {
+      "tokens": [
+        "email"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "e-mail": {
+      "tokens": [
+        "e-mail"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "facebook": {
+      "tokens": [
+        "facebook"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "twitter": {
+      "tokens": [
+        "twitter"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "google": {
+      "tokens": [
+        "google"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "youtube": {
+      "tokens": [
+        "youtube"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "windows": {
+      "tokens": [
+        "windows"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "microsoft": {
+      "tokens": [
+        "microsoft"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "android": {
+      "tokens": [
+        "android"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "hotel": {
+      "tokens": [
+        "hotel"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "hotels": {
+      "tokens": [
+        "hotels"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "booking": {
+      "tokens": [
+        "booking"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "download": {
+      "tokens": [
+        "download"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "copyright": {
+      "tokens": [
+        "copyright"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "admin": {
+      "tokens": [
+        "admin"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "flash": {
+      "tokens": [
+        "flash"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "play": {
+      "tokens": [
+        "play"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "show": {
+      "tokens": [
+        "show"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "review": {
+      "tokens": [
+        "review"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "support": {
+      "tokens": [
+        "support"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "player": {
+      "tokens": [
+        "player"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "office": {
+      "tokens": [
+        "office"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
+    },
+    "explorer": {
+      "tokens": [
+        "explorer"
+      ],
+      "not": "sık yabancı sözcük: bütün tut"
     }
   },
   "kısaltma": {
@@ -1646,6 +1856,336 @@
         "hz"
       ],
       "not": "yaygın kısaltma"
+    },
+    "com": {
+      "tokens": [
+        "com"
+      ],
+      "not": "kısaltma / web"
+    },
+    "www": {
+      "tokens": [
+        "www"
+      ],
+      "not": "kısaltma / web"
+    },
+    "http": {
+      "tokens": [
+        "http"
+      ],
+      "not": "kısaltma / web"
+    },
+    "https": {
+      "tokens": [
+        "https"
+      ],
+      "not": "kısaltma / web"
+    },
+    "html": {
+      "tokens": [
+        "html"
+      ],
+      "not": "kısaltma / web"
+    },
+    "htm": {
+      "tokens": [
+        "htm"
+      ],
+      "not": "kısaltma / web"
+    },
+    "php": {
+      "tokens": [
+        "php"
+      ],
+      "not": "kısaltma / web"
+    },
+    "pdf": {
+      "tokens": [
+        "pdf"
+      ],
+      "not": "kısaltma / web"
+    },
+    "jpg": {
+      "tokens": [
+        "jpg"
+      ],
+      "not": "kısaltma / web"
+    },
+    "tr": {
+      "tokens": [
+        "tr"
+      ],
+      "not": "kısaltma / web"
+    },
+    "tv": {
+      "tokens": [
+        "tv"
+      ],
+      "not": "kısaltma / web"
+    },
+    "hd": {
+      "tokens": [
+        "hd"
+      ],
+      "not": "kısaltma / web"
+    },
+    "pc": {
+      "tokens": [
+        "pc"
+      ],
+      "not": "kısaltma / web"
+    },
+    "cd": {
+      "tokens": [
+        "cd"
+      ],
+      "not": "kısaltma / web"
+    },
+    "dvd": {
+      "tokens": [
+        "dvd"
+      ],
+      "not": "kısaltma / web"
+    },
+    "mp": {
+      "tokens": [
+        "mp"
+      ],
+      "not": "kısaltma / web"
+    },
+    "mb": {
+      "tokens": [
+        "mb"
+      ],
+      "not": "kısaltma / web"
+    },
+    "kb": {
+      "tokens": [
+        "kb"
+      ],
+      "not": "kısaltma / web"
+    },
+    "gb": {
+      "tokens": [
+        "gb"
+      ],
+      "not": "kısaltma / web"
+    },
+    "tb": {
+      "tokens": [
+        "tb"
+      ],
+      "not": "kısaltma / web"
+    },
+    "sms": {
+      "tokens": [
+        "sms"
+      ],
+      "not": "kısaltma / web"
+    },
+    "kdv": {
+      "tokens": [
+        "kdv"
+      ],
+      "not": "kısaltma / web"
+    },
+    "tbmm": {
+      "tokens": [
+        "tbmm"
+      ],
+      "not": "kısaltma / web"
+    },
+    "chp": {
+      "tokens": [
+        "chp"
+      ],
+      "not": "kısaltma / web"
+    },
+    "akp": {
+      "tokens": [
+        "akp"
+      ],
+      "not": "kısaltma / web"
+    },
+    "mhp": {
+      "tokens": [
+        "mhp"
+      ],
+      "not": "kısaltma / web"
+    },
+    "meb": {
+      "tokens": [
+        "meb"
+      ],
+      "not": "kısaltma / web"
+    },
+    "trt": {
+      "tokens": [
+        "trt"
+      ],
+      "not": "kısaltma / web"
+    },
+    "sgk": {
+      "tokens": [
+        "sgk"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ssk": {
+      "tokens": [
+        "ssk"
+      ],
+      "not": "kısaltma / web"
+    },
+    "pkk": {
+      "tokens": [
+        "pkk"
+      ],
+      "not": "kısaltma / web"
+    },
+    "kpss": {
+      "tokens": [
+        "kpss"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ytl": {
+      "tokens": [
+        "ytl"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ltd": {
+      "tokens": [
+        "ltd"
+      ],
+      "not": "kısaltma / web"
+    },
+    "şti": {
+      "tokens": [
+        "şti"
+      ],
+      "not": "kısaltma / web"
+    },
+    "bkz": {
+      "tokens": [
+        "bkz"
+      ],
+      "not": "kısaltma / web"
+    },
+    "yy": {
+      "tokens": [
+        "yy"
+      ],
+      "not": "kısaltma / web"
+    },
+    "mg": {
+      "tokens": [
+        "mg"
+      ],
+      "not": "kısaltma / web"
+    },
+    "st": {
+      "tokens": [
+        "st"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ms": {
+      "tokens": [
+        "ms"
+      ],
+      "not": "kısaltma / web"
+    },
+    "gov": {
+      "tokens": [
+        "gov"
+      ],
+      "not": "kısaltma / web"
+    },
+    "edu": {
+      "tokens": [
+        "edu"
+      ],
+      "not": "kısaltma / web"
+    },
+    "usb": {
+      "tokens": [
+        "usb"
+      ],
+      "not": "kısaltma / web"
+    },
+    "gps": {
+      "tokens": [
+        "gps"
+      ],
+      "not": "kısaltma / web"
+    },
+    "bm": {
+      "tokens": [
+        "bm"
+      ],
+      "not": "kısaltma / web"
+    },
+    "tdk": {
+      "tokens": [
+        "tdk"
+      ],
+      "not": "kısaltma / web"
+    },
+    "tsk": {
+      "tokens": [
+        "tsk"
+      ],
+      "not": "kısaltma / web"
+    },
+    "aa": {
+      "tokens": [
+        "aa"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ıd": {
+      "tokens": [
+        "ıd"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ımdb": {
+      "tokens": [
+        "ımdb"
+      ],
+      "not": "kısaltma / web"
+    },
+    "nci": {
+      "tokens": [
+        "nci"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ncı": {
+      "tokens": [
+        "ncı"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ncu": {
+      "tokens": [
+        "ncu"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ncü": {
+      "tokens": [
+        "ncü"
+      ],
+      "not": "kısaltma / web"
+    },
+    "ıncı": {
+      "tokens": [
+        "ıncı"
+      ],
+      "not": "kısaltma / web"
     }
   },
   "ekfiil": {
@@ -1660,6 +2200,406 @@
         "iken"
       ],
       "not": "ayrık ek-fiil (imek) biçimi"
+    }
+  },
+  "harf": {
+    "a": {
+      "tokens": [
+        "a"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "b": {
+      "tokens": [
+        "b"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "c": {
+      "tokens": [
+        "c"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "ç": {
+      "tokens": [
+        "ç"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "d": {
+      "tokens": [
+        "d"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "e": {
+      "tokens": [
+        "e"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "f": {
+      "tokens": [
+        "f"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "g": {
+      "tokens": [
+        "g"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "ğ": {
+      "tokens": [
+        "ğ"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "h": {
+      "tokens": [
+        "h"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "ı": {
+      "tokens": [
+        "ı"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "i": {
+      "tokens": [
+        "i"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "j": {
+      "tokens": [
+        "j"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "k": {
+      "tokens": [
+        "k"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "l": {
+      "tokens": [
+        "l"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "m": {
+      "tokens": [
+        "m"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "n": {
+      "tokens": [
+        "n"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "p": {
+      "tokens": [
+        "p"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "r": {
+      "tokens": [
+        "r"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "s": {
+      "tokens": [
+        "s"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "ş": {
+      "tokens": [
+        "ş"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "t": {
+      "tokens": [
+        "t"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "u": {
+      "tokens": [
+        "u"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "ü": {
+      "tokens": [
+        "ü"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "v": {
+      "tokens": [
+        "v"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "y": {
+      "tokens": [
+        "y"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "z": {
+      "tokens": [
+        "z"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "q": {
+      "tokens": [
+        "q"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "w": {
+      "tokens": [
+        "w"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    },
+    "x": {
+      "tokens": [
+        "x"
+      ],
+      "not": "tek harf (sıralama, şık, değişken)"
+    }
+  },
+  "roma": {
+    "ıı": {
+      "tokens": [
+        "ıı"
+      ],
+      "not": "Roma rakamı 2 (Türkçe küçük harf)"
+    },
+    "ııı": {
+      "tokens": [
+        "ııı"
+      ],
+      "not": "Roma rakamı 3 (Türkçe küçük harf)"
+    },
+    "ıv": {
+      "tokens": [
+        "ıv"
+      ],
+      "not": "Roma rakamı 4 (Türkçe küçük harf)"
+    },
+    "vı": {
+      "tokens": [
+        "vı"
+      ],
+      "not": "Roma rakamı 6 (Türkçe küçük harf)"
+    },
+    "vıı": {
+      "tokens": [
+        "vıı"
+      ],
+      "not": "Roma rakamı 7 (Türkçe küçük harf)"
+    },
+    "vııı": {
+      "tokens": [
+        "vııı"
+      ],
+      "not": "Roma rakamı 8 (Türkçe küçük harf)"
+    },
+    "ıx": {
+      "tokens": [
+        "ıx"
+      ],
+      "not": "Roma rakamı 9 (Türkçe küçük harf)"
+    },
+    "xı": {
+      "tokens": [
+        "xı"
+      ],
+      "not": "Roma rakamı 11 (Türkçe küçük harf)"
+    },
+    "xıı": {
+      "tokens": [
+        "xıı"
+      ],
+      "not": "Roma rakamı 12 (Türkçe küçük harf)"
+    },
+    "xııı": {
+      "tokens": [
+        "xııı"
+      ],
+      "not": "Roma rakamı 13 (Türkçe küçük harf)"
+    },
+    "xıv": {
+      "tokens": [
+        "xıv"
+      ],
+      "not": "Roma rakamı 14 (Türkçe küçük harf)"
+    },
+    "xv": {
+      "tokens": [
+        "xv"
+      ],
+      "not": "Roma rakamı 15 (Türkçe küçük harf)"
+    },
+    "xvı": {
+      "tokens": [
+        "xvı"
+      ],
+      "not": "Roma rakamı 16 (Türkçe küçük harf)"
+    },
+    "xvıı": {
+      "tokens": [
+        "xvıı"
+      ],
+      "not": "Roma rakamı 17 (Türkçe küçük harf)"
+    },
+    "xvııı": {
+      "tokens": [
+        "xvııı"
+      ],
+      "not": "Roma rakamı 18 (Türkçe küçük harf)"
+    },
+    "xıx": {
+      "tokens": [
+        "xıx"
+      ],
+      "not": "Roma rakamı 19 (Türkçe küçük harf)"
+    },
+    "xx": {
+      "tokens": [
+        "xx"
+      ],
+      "not": "Roma rakamı 20 (Türkçe küçük harf)"
+    },
+    "xxı": {
+      "tokens": [
+        "xxı"
+      ],
+      "not": "Roma rakamı 21 (Türkçe küçük harf)"
+    },
+    "xxıı": {
+      "tokens": [
+        "xxıı"
+      ],
+      "not": "Roma rakamı 22 (Türkçe küçük harf)"
+    },
+    "xxııı": {
+      "tokens": [
+        "xxııı"
+      ],
+      "not": "Roma rakamı 23 (Türkçe küçük harf)"
+    },
+    "xxıv": {
+      "tokens": [
+        "xxıv"
+      ],
+      "not": "Roma rakamı 24 (Türkçe küçük harf)"
+    },
+    "xxv": {
+      "tokens": [
+        "xxv"
+      ],
+      "not": "Roma rakamı 25 (Türkçe küçük harf)"
+    },
+    "xxvı": {
+      "tokens": [
+        "xxvı"
+      ],
+      "not": "Roma rakamı 26 (Türkçe küçük harf)"
+    },
+    "xxvıı": {
+      "tokens": [
+        "xxvıı"
+      ],
+      "not": "Roma rakamı 27 (Türkçe küçük harf)"
+    },
+    "xxvııı": {
+      "tokens": [
+        "xxvııı"
+      ],
+      "not": "Roma rakamı 28 (Türkçe küçük harf)"
+    },
+    "xxıx": {
+      "tokens": [
+        "xxıx"
+      ],
+      "not": "Roma rakamı 29 (Türkçe küçük harf)"
+    },
+    "xxx": {
+      "tokens": [
+        "xxx"
+      ],
+      "not": "Roma rakamı 30 (Türkçe küçük harf)"
+    },
+    "xxxı": {
+      "tokens": [
+        "xxxı"
+      ],
+      "not": "Roma rakamı 31 (Türkçe küçük harf)"
+    },
+    "xxxıı": {
+      "tokens": [
+        "xxxıı"
+      ],
+      "not": "Roma rakamı 32 (Türkçe küçük harf)"
+    },
+    "xxxııı": {
+      "tokens": [
+        "xxxııı"
+      ],
+      "not": "Roma rakamı 33 (Türkçe küçük harf)"
+    },
+    "xxxıv": {
+      "tokens": [
+        "xxxıv"
+      ],
+      "not": "Roma rakamı 34 (Türkçe küçük harf)"
+    },
+    "xxxv": {
+      "tokens": [
+        "xxxv"
+      ],
+      "not": "Roma rakamı 35 (Türkçe küçük harf)"
+    },
+    "xxxvı": {
+      "tokens": [
+        "xxxvı"
+      ],
+      "not": "Roma rakamı 36 (Türkçe küçük harf)"
+    },
+    "xxxvıı": {
+      "tokens": [
+        "xxxvıı"
+      ],
+      "not": "Roma rakamı 37 (Türkçe küçük harf)"
+    },
+    "xxxvııı": {
+      "tokens": [
+        "xxxvııı"
+      ],
+      "not": "Roma rakamı 38 (Türkçe küçük harf)"
+    },
+    "xxxıx": {
+      "tokens": [
+        "xxxıx"
+      ],
+      "not": "Roma rakamı 39 (Türkçe küçük harf)"
     }
   }
 }
