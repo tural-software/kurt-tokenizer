@@ -139,7 +139,7 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
     if yüzey == hedef:
         # iyelik-gerektiren ortaç (-DIk) çıplak kabul edilmez (geldik=1.çoğul kalsın)
         # ad→fiil -lA çatıyla bitemez (veri+le+n 'verilen' sahte; yayın+la+n+an geçer)
-        if (len(ek_dizi) >= 2 and ek_dizi[-2] == "yapım_la"
+        if ((profil is None or profil.kod == "tr") and len(ek_dizi) >= 2 and ek_dizi[-2] == "yapım_la"
                 and ek_dizi[-1] in ("edilgen", "dönüşlü", "ettirgen")):
             return
         if not (ek_dizi and ek_dizi[-1] in İYELİK_GEREKTİREN):
@@ -161,7 +161,8 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
             continue
         if kök_ad in ek.hariç_kökler:
             continue
-        if ek_ad == "yapım_la" and (len(kök_ad) < 2 or kök.tür == "zamir"):   # ö+le, on+la+n sahte
+        if (ek_ad == "yapım_la" and (profil is None or profil.kod == "tr")
+                and (len(kök_ad) < 2 or kök.tür == "zamir")):             # TR ö+le, on+la+n sahte
             continue
         if ek.yalnız_sonra and not (ek_dizi and ek_dizi[-1] in ek.yalnız_sonra):
             continue
