@@ -350,7 +350,7 @@
   "frizbi": {"tokens": ["friz", "bi"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "fruktoz": {"tokens": ["fruk", "toz"], "tür": "isim", "son_ünlü": "o", "son_ses": "ünsüz", "değişim": null},
   "fuar": {"tokens": ["fu", "ar"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
-  "fuhuş": {"tokens": ["fu", "huş"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
+  "fuhuş": {"tokens": ["fu", "huş"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null, "düşen": true},
   "fujer": {"tokens": ["fu", "jer"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "fular": {"tokens": ["fu", "lar"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "fule": {"tokens": ["fu", "le"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},

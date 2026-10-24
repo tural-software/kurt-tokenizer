@@ -1091,7 +1091,7 @@ sarıhalile|isim|
 sarıhani|isim|
 sarıhumma|isim|
 sarık|isim|k→ğ
-sarıkanat|isim|
+sarıkanat|isim|t→d
 sarıkuyruk|isim|k→ğ
 sarıkçı|isim|
 sarıkız|isim|
@@ -2771,7 +2771,7 @@ suzeni|isim|
 suzidil|isim|
 suzidilara|isim|
 suzinak|isim|ince
-suç|isim|ç→c
+suç|isim|
 suçiçeği|isim|
 suçlama|isim|
 suçlandırma|isim|

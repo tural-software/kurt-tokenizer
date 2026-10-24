@@ -1633,7 +1633,7 @@ karbon|isim|
 karbonado|isim|
 karbonat|isim|
 karbonatlama|isim|
-karbondioksit|isim|
+karbondioksit|isim|t→d
 karbonhidrat|isim|
 karbonifer|isim|
 karbonil|isim|
@@ -1872,7 +1872,7 @@ kasidehan|isim|
 kasis|isim|
 kasiyer|isim|
 kask|isim|
-kaskat|isim|
+kaskat|isim|t→d
 kaskatılık|isim|k→ğ
 kasketçi|isim|
 kasketçilik|isim|k→ğ
@@ -5046,7 +5046,7 @@ kızılşap|isim|p→b
 kızışma|isim|
 kızıştırma|isim|
 kızıştırış|isim|
-kıç|isim|ç→c
+kıç|isim|
 kıçtankara|isim|
 kığ|isim|
 kığı|isim|

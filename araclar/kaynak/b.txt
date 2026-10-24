@@ -1020,7 +1020,7 @@ batçık|isim|k→ğ
 batı|isim|
 batık|isim|k→ğ
 batıllık|isim|k→ğ
-batın|isim|
+batın|isim|düşen
 batırma|isim|
 batırtma|isim|
 batırık|isim|k→ğ

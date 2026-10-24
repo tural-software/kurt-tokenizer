@@ -764,7 +764,7 @@ hastel|isim|
 hasutluk|isim|k→ğ
 hasıla|isim|
 hasılat|isim|
-hasım|isim|
+hasım|isim|düşen
 hasımlık|isim|k→ğ
 hasır|isim|
 hasırcı|isim|
@@ -1313,7 +1313,7 @@ hizmetkârlık|isim|k→ğ
 hizmetli|isim|
 hizmetlilik|isim|k→ğ
 hizmetçilik|isim|k→ğ
-hiç|isim|ç→c
+hiç|isim|
 hiçleme|isim|
 hiçleştirme|isim|
 hiçlik|isim|k→ğ
@@ -1627,7 +1627,7 @@ hırıltı|isim|
 hırıltıcı|isim|
 hırızma|isim|
 hırızmalı|isim|
-hısım|isim|
+hısım|isim|düşen
 hısımlık|isim|k→ğ
 hıyaban|isim|
 hıyanet|isim|

@@ -856,7 +856,7 @@ fruktoz|isim|
 fuarcı|isim|
 fuarcılık|isim|k→ğ
 fuaye|isim|
-fuhuş|isim|
+fuhuş|isim|düşen
 fujer|isim|
 fukaralık|isim|k→ğ
 fukuslar|isim|

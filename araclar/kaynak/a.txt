@@ -2656,7 +2656,7 @@ ayvazlık|isim|k→ğ
 ayyarlık|isim|k→ğ
 ayyaşlaşma|isim|
 ayyaşlık|isim|k→ğ
-ayyuk|isim|k→ğ
+ayyuk|isim|
 ayça|isim|
 ayıbacağı|isim|
 ayıcı|isim|

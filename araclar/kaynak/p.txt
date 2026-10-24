@@ -370,7 +370,7 @@ pantolonculuk|isim|k→ğ
 pantufla|isim|
 pantuflacı|isim|
 pantuflacılık|isim|k→ğ
-panzehir|isim|
+panzehir|isim|düşen
 panzer|isim|
 panç|isim|ç→c
 panço|isim|

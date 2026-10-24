@@ -100,7 +100,7 @@ iletişim|isim|
 imalat|isim|
 inceleme|isim|
 insanlık|isim|k→ğ
-ittifak|isim|k→ğ
+ittifak|isim|
 ihale|isim|
 ilkokul|isim|
 irmik|isim|k→ğ
@@ -1134,7 +1134,7 @@ istihbarat|isim|
 istihdaf|isim|
 istihdam|isim|
 istihfaf|isim|
-istihkak|isim|k→ğ
+istihkak|isim|
 istihkar|isim|
 istihkâm|isim|
 istihkâmcı|isim|
@@ -1375,7 +1375,7 @@ izomerleşme|isim|
 izometri|isim|
 izomorf|isim|
 izomorfizm|isim|
-izotop|isim|p→b
+izotop|isim|
 izzet|isim|
 izzetinefis|isim|düşen
 izzetüikbal|isim|ince

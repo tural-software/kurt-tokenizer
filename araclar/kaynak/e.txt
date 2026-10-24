@@ -569,7 +569,7 @@ elektronikçi|isim|
 elektronikçilik|isim|k→ğ
 elektroradyoloji|isim|
 elektrosaz|isim|
-elektroskop|isim|p→b
+elektroskop|isim|
 elektrostatik|isim|k→ğ
 elektrot|isim|t→d
 elektroşok|isim|k→ğ
@@ -1535,7 +1535,7 @@ eksperimantalist|sıfat
 ekspresyonist|sıfat
 ekzotermik|sıfat|k→ğ
 ekşimtırak|sıfat|k→ğ
-elastik|sıfat|k→ğ
+elastik|sıfat|
 elektrobiyolojik|sıfat|k→ğ
 elektrojen|sıfat
 elektromanyetik|sıfat|k→ğ

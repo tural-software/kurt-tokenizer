@@ -210,6 +210,14 @@ def çözümle(kelime, kökler, ekler, istisnalar=None, profil=None) -> list[Ç�
                 geçici: list[Çözüm] = []
                 _ara(kök_ad, replace(kök, düşen=False), [], 0, sınıf, hedef, ekler, geçici, profil)
                 çözümler.extend(replace(ç, normatif_dışı=True) for ç in geçici)
+            elif ((profil is None or profil.norm_dışı_ses) and sınıf == "isim"
+                  and (kök.düşen or kök.ince or kök.ikiz or kök.değişim)):
+                # TR norm dışı yazım: kökün ses değişimi uygulanmadan (kontrolu, omuzu, hakını, standartı); normatif
+                # okuma varsa seçilmez (pipeline.en_iyi_çözüm) → yalnız normatif biçimi olmayan sözcük çözülür
+                geçici = []
+                _ara(kök_ad, replace(kök, düşen=False, ince=False, ikiz=False, değişim=None), [],
+                     ekler[iy].yuva if iy else 0, sınıf, hedef, ekler, geçici, profil)
+                çözümler.extend(replace(ç, normatif_dışı=True) for ç in geçici if ç.ekler)
 
     # aynı (token, kök, ek) çözümünü tekilleştir (eşseslide çıplak kök yinelenebilir)
     görülen, benzersiz = set(), []

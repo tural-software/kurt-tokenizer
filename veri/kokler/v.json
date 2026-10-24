@@ -305,7 +305,7 @@
   "velense": {"tokens": ["ve", "len", "se"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "velespit": {"tokens": ["ve", "les", "pit"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "velhasıl": {"tokens": ["vel", "ha", "sıl"], "tür": "zarf", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
-  "veliaht": {"tokens": ["ve", "li", "aht"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "veliaht": {"tokens": ["ve", "li", "aht"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}},
   "velilik": {"tokens": ["ve", "li", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "velvele": {"tokens": ["vel", "ve", "le"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "veranda": {"tokens": ["ve", "ran", "da"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},

@@ -574,7 +574,7 @@
   "ayvaz": {"tokens": ["ay", "vaz"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ayyar": {"tokens": ["ay", "yar"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ayyaş": {"tokens": ["ay", "yaş"], "tür": "sıfat", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
-  "ayyuk": {"tokens": ["ay", "yuk"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "ayyuk": {"tokens": ["ay", "yuk"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": null},
   "aza": {"tokens": ["a", "za"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünlü", "değişim": null},
   "azal": {"tokens": ["a", "zal"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "azalt": {"tokens": ["a", "zalt"], "tür": "fiil", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
