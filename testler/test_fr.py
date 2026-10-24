@@ -259,3 +259,26 @@ class Determinizm(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FrBüyükHarfAksan(unittest.TestCase):
+    """K-3: büyük harfte düşmüş aksan (Etat = État) — yalnız ilk harf, iç aksanla da çözülüyorsa bütün (Apres)."""
+
+    @classmethod
+    def setUpClass(cls):
+        from tokenizer import diller
+        cls.d = diller.yükle("fr")
+
+    def enc(self, w):
+        from tokenizer.onay import OnayKuyruğu
+        from tokenizer.pipeline import encode, decode
+        q = OnayKuyruğu()
+        t = encode(w, self.d.kökler, self.d.ekler, self.d.istisnalar, q, None, "metin", "fr")
+        self.assertEqual(decode(t), w)
+        return t, [g.kelime for g in q.bekleyenler()]
+
+    def test_aksan(self):
+        self.assertEqual(self.enc("Etats"), (["<|Ab|>", "etat", "s"], []))
+        self.assertEqual(self.enc("Ecole")[1], [])
+        self.assertEqual(self.enc("etat")[1], ["etat"])          # küçük harfte norm dışı tahmin yok
+        self.assertEqual(self.enc("Apres")[1], ["apres"])        # après / âpres belirsiz → bütün
