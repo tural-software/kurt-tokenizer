@@ -85,6 +85,14 @@ class BirleştirTest(unittest.TestCase):
         self.assertEqual(self.b("ret", "iyelik_3tekil")[1], "reddi")
         self.assertEqual(self.b("had", "iyelik_3tekil")[1], "haddi")
 
+    def test_k1d_çatı_ve_geniş(self):
+        # ettirgen: tek heceli r/l → DIr (durdur, öldür), çok heceli r/l → t (oturt); -et bileşiği geniş -Ar (hisseder)
+        self.assertEqual(self.b("dur", "ettirgen")[1], "durdur")
+        self.assertEqual(self.b("öl", "ettirgen")[1], "öldür")
+        self.assertEqual(self.b("otur", "ettirgen")[1], "oturt")
+        self.assertEqual(self.b("hisset", "geniş_zaman")[1], "hisseder")
+        self.assertEqual(self.b("yönet", "geniş_zaman")[1], "yönetir")
+
     def test_y_tampon_su(self):
         # su: ünlü-başlı ek önünde y (suyu, suyun); ünsüz-başlı ek düzenli (sular)
         self.assertEqual(self.b("su", "iyelik_3tekil", "belirtme")[1], "suyunu")

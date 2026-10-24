@@ -28,15 +28,18 @@ HÂL_PRONOMİNAL_N = frozenset({"belirtme", "yönelme", "bulunma", "ayrılma", "
 
 
 # Geniş zamanda -Ir alan tek-heceli fiiller (kapalı, bilinen küme); gerisi -Ar/-r.
-GENİŞ_IR = frozenset({"al", "bil", "bul", "dur", "den", "gel", "gör", "kal", "kıl",
+GENİŞ_IR = frozenset({"al", "bil", "bul", "dur", "den", "gel", "gör", "kal",
                       "ol", "öl", "san", "var", "ver", "vur"})
 
 
-def _geniş_şablon(gövde: str, ad: str, ünlüler=sesler.ÜNLÜLER) -> str:
+def _geniş_şablon(gövde: str, ad: str, ünlüler=sesler.ÜNLÜLER, et_bileşik: bool = False) -> str:
     """Geniş zaman ekinin köke göre şablonu: ünlü-sonu→r, çok-heceli ünsüz→Ir,
-    tek-heceli→Ar (istisna kümesi→Ir)."""
+    tek-heceli→Ar (istisna kümesi→Ir). et_bileşik (t→d yumuşayan -et bileşiği: hisset, affet, kaybet): son
+    hece tek heceli 'et' fiili → Ar (hisseder; yönetir/tüketir bayraksız, -Ir)."""
     if gövde[-1] in ünlüler:
         return "r"
+    if et_bileşik and gövde == ad:
+        return "Ar"
     çok_heceli = sum(1 for c in gövde if c in ünlüler) > 1
     if çok_heceli:
         return "Ir"
@@ -141,12 +144,13 @@ def birleştir(ad: str, kök, ek_adları: list[str], ekler: dict[str, Ek], profi
                 şablon = (("r" if sonraki in _AZ_GENİŞ_R_KİŞİ else "z") if olumsuz_bağlam
                           else "(y)Ar")
             else:
-                şablon = "z" if olumsuz_bağlam else _geniş_şablon(gövde, ad, ünlüler)
+                şablon = "z" if olumsuz_bağlam else _geniş_şablon(
+                    gövde, ad, ünlüler, ad.endswith("et") and bool(kök.değişim) and "t→d" in kök.değişim)
         elif kural == "edilgen":
             şablon = (_edilgen_şablon(gövde, ünlüler) if profil is None
                       else _edilgen_şablon(gövde, ünlüler, profil.edilgen_tek_heceli_y))
         elif kural == "ettirgen":
-            şablon = (_ettirgen_şablon(gövde, ünlüler) if profil is None else
+            şablon = (_ettirgen_şablon(gövde, ünlüler, çok_heceli_rl=True) if profil is None else
                       _ettirgen_şablon(gövde, ünlüler, profil.ettirgen_ünsüz,
                                        profil.ettirgen_çok_heceli_rl))
         else:
