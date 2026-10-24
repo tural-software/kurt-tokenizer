@@ -490,7 +490,7 @@
   "kayıp": {"tokens": ["ka", "yıp"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"p→b": "ünlü_ile_başlayan_ek_gelince"}, "düşen": true},
   "kayır": {"tokens": ["ka", "yır"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
   "kayış": {"tokens": ["ka", "yış"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
-  "kayıt": {"tokens": ["ka", "yıt"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
+  "kayıt": {"tokens": ["ka", "yıt"], "tür": "isim", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}, "ek_tür": ["fiil"], "düşen": true},
   "kaykaç": {"tokens": ["kay", "kaç"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"ç→c": "ünlü_ile_başlayan_ek_gelince"}},
   "kaykay": {"tokens": ["kay", "kay"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "kaykıl": {"tokens": ["kay", "kıl"], "tür": "fiil", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},

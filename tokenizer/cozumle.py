@@ -150,7 +150,10 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
     for ek_ad, ek in ekler.items():
         # MORFOTAKTİK: ek öbeği gövde sınıfıyla uyumlu (koşaç 'her' her sınıfa) +
         # yuva kesin artan olmalı
-        if (ek.öbek not in ("her", sınıf)) or ek.yuva <= son_yuva:
+        if ek.öbek not in ("her", sınıf):
+            continue
+        if ek.yuva <= son_yuva and not (ek.yalnız_sonra and ek_dizi and ek_dizi[-1] in ek.yalnız_sonra
+                                        and ek.yuva == son_yuva):      # olumsuz+yeterlilik (gelmeyebilir)
             continue
         if ek_dizi and ek.önce_olamaz and ek_dizi[-1] in ek.önce_olamaz:
             continue

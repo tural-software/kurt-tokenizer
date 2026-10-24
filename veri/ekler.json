@@ -33,6 +33,7 @@
   "ettirgen":        { "şablon": "DIr",     "tür": "çatı_ettirgen",  "öbek": "fiil", "yuva": 1, "çıkış": "fiil", "kök_koşullu": "ettirgen" },
   "olumsuz":         { "şablon": "mA",      "tür": "olumsuzluk",     "öbek": "fiil", "yuva": 1 },
   "yeterlilik":      { "şablon": "(y)Abil", "tür": "yeterlilik",     "öbek": "fiil", "yuva": 1 },
+  "yeterlilik_olası": { "şablon": "(y)Abil", "tür": "yeterlilik_olası", "öbek": "fiil", "yuva": 1, "yalnız_sonra": ["olumsuz", "yetersizlik"] },
   "yetersizlik":     { "şablon": "(y)AmA",  "tür": "yetersizlik",    "öbek": "fiil", "yuva": 1 },
   "şimdiki_zaman":   { "şablon": "(I)yor",  "tür": "zaman_şimdiki",  "öbek": "fiil", "yuva": 2, "daraltır": true },
   "görülen_geçmiş":  { "şablon": "DI",      "tür": "zaman_görülen",  "öbek": "fiil", "yuva": 2 },

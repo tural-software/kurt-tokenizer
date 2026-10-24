@@ -27,7 +27,7 @@ yansı|fiil||isim
 yargıla|fiil|
 yakala|fiil|
 yaklaş|fiil|
-yakın|fiil|
+yakın|sıfat||fiil
 yapış|fiil|
 yarala|fiil|
 yıka|fiil|
@@ -2002,3 +2002,4 @@ yetim|sıfat
 yetkin|sıfat
 yoksun|sıfat
 yılgın|sıfat
+yeter|isim|

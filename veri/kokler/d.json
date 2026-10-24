@@ -299,7 +299,7 @@
   "deve": {"tokens": ["de", "ve"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "devim": {"tokens": ["de", "vim"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "devin": {"tokens": ["de", "vin"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
-  "devir": {"tokens": ["de", "vir"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["isim"]},
+  "devir": {"tokens": ["de", "vir"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null, "ek_tür": ["fiil"], "düşen": true},
   "devit": {"tokens": ["de", "vit"], "tür": "fiil", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null},
   "devleş": {"tokens": ["dev", "leş"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "devlet": {"tokens": ["dev", "let"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},

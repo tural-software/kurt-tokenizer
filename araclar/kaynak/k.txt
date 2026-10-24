@@ -455,7 +455,7 @@ kaymaklan|fiil|
 kaynaklan|fiil|
 kaynaş|fiil|
 kaypaklaş|fiil|
-kayıt|fiil||isim
+kayıt|isim|düşen,t→d|fiil
 kayıtla|fiil|
 kayıtsızlaş|fiil|
 kayşa|fiil||isim

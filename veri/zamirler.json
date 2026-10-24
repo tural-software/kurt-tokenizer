@@ -14,5 +14,9 @@
   "birbir": { "tokens": ["bir", "bir"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": null },
   "hepsi":  { "tokens": ["hep", "si"],  "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü",  "değişim": null, "iyelik": "iyelik_3tekil" },
   "birisi": { "tokens": ["bi", "ri", "si"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil" },
-  "birileri": { "tokens": ["bi", "ri", "le", "ri"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3çoğul" }
+  "birileri": { "tokens": ["bi", "ri", "le", "ri"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3çoğul" },
+  "hiçbiri": { "tokens": ["hiç", "bi", "ri"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil" },
+  "birçoğu": { "tokens": ["bir", "ço", "ğu"], "tür": "zamir", "son_ünlü": "u", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil" },
+  "birkaçı": { "tokens": ["bir", "ka", "çı"], "tür": "zamir", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil" },
+  "çoğu":    { "tokens": ["ço", "ğu"],        "tür": "zamir", "son_ünlü": "u", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil" }
 }

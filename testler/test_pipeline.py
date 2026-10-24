@@ -47,6 +47,16 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.enc("verilen"), ["ver", "i", "l", "en"])
         self.assertEqual(self.enc("yapılıyor"), ["yap", "ı", "l", "ı", "yor"])
 
+    def test_k1d_işlev(self):
+        cases = {"budur": ["bu", "dur"], "hiçbirini": ["hiç", "bi", "ri", "n", "i"],
+                 "olmayabilir": ["ol", "ma", "y", "abil", "ir"], "yapamayabilir": ["yap", "ama", "y", "abil", "ir"],
+                 "gelmez": ["gel", "me", "z"], "deyip": ["de", "y", "ip"], "yiyip": ["yi", "y", "ip"],
+                 "devri": ["de", "vr", "i"], "deviriyor": ["de", "vir", "i", "yor"], "durdurmak": ["dur", "dur", "mak"],
+                 "hisseder": ["his", "sed", "er"], "karısı": ["ka", "rı", "s", "ı"], "giderir": ["gi", "der", "ir"]}
+        for w, t in cases.items():
+            self.assertEqual(self.enc(w), t, w)
+        self.assertEqual(self.enc("onlar"), ["on", "lar"])
+
     def test_boşluk_tokenı(self):
         t = self.enc("ev araba")
         self.assertIn(BOŞLUK, t)

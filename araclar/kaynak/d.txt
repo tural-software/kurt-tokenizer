@@ -44,7 +44,7 @@ dalaş|fiil||isim
 dağla|fiil|
 daya|fiil|
 deş|fiil|
-devir|fiil||isim
+devir|isim|düşen|fiil
 darıl|fiil|
 dayan|fiil|
 deneyimle|fiil|
