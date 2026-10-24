@@ -152,6 +152,8 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
             continue
         if ek.yalnız_kökler and kök_ad not in ek.yalnız_kökler:
             continue
+        if kök_ad in ek.hariç_kökler:
+            continue
         if ek.yalnız_sonra and not (ek_dizi and ek_dizi[-1] in ek.yalnız_sonra):
             continue
         if ek.ünlü_sonra and yüzey[-1] not in (sesler.ÜNLÜLER if profil is None else profil.ünlüler):
