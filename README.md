@@ -30,7 +30,8 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
 - **Saf Python, sıfır bağımlılık** (yalnız standart kütüphane).
 - **Türkçe:** ~48.500 kök (TDK Güncel Türkçe Sözlük 12. baskı tabanlı; yalnız başlık, tür ve çekim işareti), 79 ek; ünlü uyumu, ünsüz yumuşaması (t→d, k→ğ, p→b, ç→c),
   ünlü düşmesi, ikizleşme (`hak → hakk+ı`), kaynaştırma/tampon sesler — hepsi kural tabanlı. Norm dışı web yazımı
-  (`kontrolu`, `omuzu`) de çözülür; normatif okuma varsa o seçilir.
+  (`kontrolu`, `omuzu`) de çözülür; normatif okuma varsa o seçilir. ~1.040 özel ad (kapalı liste: `İstanbul'da`,
+  `Konya`); ad okuması yalnız sıradan okuma yoksa seçilir (`Deniz` = deniz).
 - **Azerbaycan Türkçesi** (`dil="az"`): 65.740 kök (400 özel ad dahil), 96 ek; kendi ses kuralları (ə, q~ğ / k~y
   yumuşaması, -(y)Ar geniş zaman, -mAlI, çift ünsüz tekleşmesi). Özel adlar Başlık biçiminde ad olarak okunur
   (`Gəncə`), küçük harfte sıradan sözcük olarak (`gəncə` = gənc+ə); soyadlar ad + ek (`Əliyev`, `Məmmədova`).

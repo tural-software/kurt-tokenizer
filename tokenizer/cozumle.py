@@ -126,6 +126,9 @@ def _koşaç_bağlanır(ek_ad, ek_dizi, sınıf, ekler):
     return any(ekler[a].öbek == "fiil" and ekler[a].yuva == 2 for a in ek_dizi)
 
 
+_TR_KİŞİ_İYELİK = frozenset({"iyelik_1tekil", "iyelik_2tekil", "iyelik_1çoğul", "iyelik_2çoğul"})
+
+
 @dataclass(frozen=True)
 class Çözüm:
     tokens: list[str]
@@ -141,6 +144,10 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
         # ad→fiil -lA çatıyla bitemez (veri+le+n 'verilen' sahte; yayın+la+n+an geçer)
         if ((profil is None or profil.kod == "tr") and len(ek_dizi) >= 2 and ek_dizi[-2] == "yapım_la"
                 and ek_dizi[-1] in ("edilgen", "dönüşlü", "ettirgen")):
+            return
+        # TR özel ad 1./2. kişi iyelik almaz (amerikan ≠ amerika+n, azeri ≠ azer+i; AZ'de seçimde geride)
+        if ((profil is None or profil.kod == "tr") and kök.tür == "özel"
+                and _TR_KİŞİ_İYELİK & set(ek_dizi)):
             return
         if not (ek_dizi and ek_dizi[-1] in İYELİK_GEREKTİREN):
             çıktı.append(Çözüm(tokens=tokenlar, kök=kök_ad, ekler=list(ek_dizi)))
