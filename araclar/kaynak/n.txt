@@ -843,3 +843,28 @@ nikahsız|zarf
 nikahsızlık|isim|k→ğ
 nişangah|isim
 nükul|isim|ince
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+namâz|isim
+nisâ|isim
+nüfûs|isim
+nihaî|sıfat
+nebî|isim
+nezâret|isim
+nâil|sıfat
+nâme|isim
+nîmet|isim
+nebevî|sıfat
+nihâyet|isim
+nazarî|sıfat
+nizâm|isim
+nâmus|isim
+nifâk|isim|k→ğ
+nâfile|isim
+nâzil|sıfat
+nezâket|isim
+nâmûs|isim
+nâsır|isim
+
+# --- K-4: bitişik yazım (kapalı liste, elle) ---
+nekadar|zarf

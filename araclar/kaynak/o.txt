@@ -927,3 +927,7 @@ oyunbaz|sıfat
 oyunbozan|sıfat
 oğuz|sıfat
 ordugah|isim
+
+# --- K-4: bitişik yazım (kapalı liste, elle) ---
+okadar|zarf
+ortaçağ|isim

@@ -844,3 +844,30 @@ cüretkarlık|isim|k→ğ
 # --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
 cemi|sıfat
 coşkun|sıfat
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+câmi|isim
+câiz|sıfat
+ceberût|isim
+coğrafî|sıfat
+celâl|isim|ince
+cehâlet|isim
+cemâat|isim|ince
+ciddî|sıfat
+civâr|isim
+cânân|isim
+cimâ|isim
+cumhûriyet|isim
+cihân|isim
+cinâyet|isim
+cihângir|isim
+câriye|isim
+cüdâ|sıfat
+cemî|sıfat
+cihangirâne|zarf
+cebelî|isim
+câhil|sıfat
+cezaî|sıfat
+cellât|isim|t→d
+cezâ|isim
+cismânî|sıfat

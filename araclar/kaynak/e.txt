@@ -1667,3 +1667,21 @@ eşkal|isim|ince
 edilgin|sıfat
 ekstrem|sıfat
 ezgin|sıfat
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+esmâ|isim
+eyâlet|isim
+evlât|isim|t→d
+enbiyâ|isim
+emlâk|isim
+efsanevî|sıfat
+evvelâ|zarf
+evliyâ|isim
+etrâf|isim
+esnâsında|zarf
+ezân|isim
+emânet|isim
+emîn|sıfat
+eşyâ|isim
+esâret|isim
+edebiyât|isim

@@ -1709,3 +1709,6 @@
 çandır|sıfat
 çatkın|sıfat
 çözgün|sıfat
+
+# --- K-4: bitişik yazım (kapalı liste, elle) ---
+çevrimiçi|sıfat

@@ -3595,3 +3595,28 @@ beşiz|sıfat
 boktan|sıfat
 böylesi|sıfat
 böylesine|sıfat
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+bâzı|isim
+belâ|isim
+bektaşî|isim
+bayatî|isim
+bedevî|isim
+bilânço|isim
+bilâhare|zarf
+bağdadî|isim
+bektâşi|isim
+binâ|isim
+beyân|isim
+bâtınîlik|isim|k→ğ
+bekâ|isim
+bâlâ|isim
+bîhaber|zarf
+bâkî|sıfat
+
+# --- K-4: bitişik yazım (kapalı liste, elle) ---
+birşey|isim
+bişey|isim
+birgün|zarf
+birarada|zarf
+biraraya|zarf

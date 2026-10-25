@@ -1310,6 +1310,7 @@
   "çevresellik": {"tokens": ["çev", "re", "sel", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "çevrileme": {"tokens": ["çev", "ri", "le", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "çevrilgenlik": {"tokens": ["çev", "ril", "gen", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
+  "çevrimiçi": {"tokens": ["çev", "ri", "mi", "çi"], "tür": "sıfat", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null},
   "çevrimsellik": {"tokens": ["çev", "rim", "sel", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "çeyizcilik": {"tokens": ["çe", "yiz", "ci", "lik"], "tür": "isim", "son_ünlü": "i", "son_ses": "ünsüz", "değişim": {"k→ğ": "ünlü_ile_başlayan_ek_gelince"}},
   "çeyizleme": {"tokens": ["çe", "yiz", "le", "me"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},

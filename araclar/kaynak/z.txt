@@ -610,3 +610,20 @@ ziyankarlık|isim|k→ğ
 ziyaretgah|isim
 zükam|isim
 zülfüyar|isim
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+zamânında|zarf
+ziraî|sıfat
+zeâmet|isim
+zâhir|isim
+zimmî|isim
+zamân|isim
+zâlim|sıfat
+zâten|zarf
+zâti|zarf
+zillî|sıfat
+ziyâde|zarf
+ziyâret|isim
+zemîn|isim
+zekî|sıfat
+zarurî|sıfat

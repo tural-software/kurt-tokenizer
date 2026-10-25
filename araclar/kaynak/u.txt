@@ -678,3 +678,15 @@ uzvi|sıfat
 
 # --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
 umum|sıfat
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+usûl|isim|ince
+ulvî|sıfat
+umûmî|sıfat
+usûli|sıfat
+umumî|sıfat
+ulûhiyet|isim
+ulemâ|isim
+ulûfe|isim
+umûmiyetle|zarf
+ulûm|isim

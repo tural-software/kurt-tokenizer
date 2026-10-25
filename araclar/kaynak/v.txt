@@ -660,3 +660,22 @@ vekaleten|zarf
 vekaletname|isim
 verimkarlık|isim|k→ğ
 vakıfane|zarf
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+velî|isim
+vefât|isim
+vilâyet|isim
+vâli|isim
+vâdi|isim
+vâsıl|sıfat
+vefâ|isim
+vicdân|isim
+vazîfe|isim
+vâcip|sıfat|p→b
+vâkıa|isim
+vahşî|sıfat
+vatanî|sıfat
+vâlide|isim
+vezâret|isim
+vükelâ|isim
+velâyet|isim

@@ -2003,3 +2003,16 @@ yetkin|sıfat
 yoksun|sıfat
 yılgın|sıfat
 yeter|isim|
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+yahûdî|sıfat
+yâni|zarf
+yahûdi|sıfat
+yakîn|isim
+yabanî|sıfat
+yemîn|isim
+yûnus|isim
+
+# --- K-4: bitişik yazım (kapalı liste, elle) ---
+yurtdışı|isim|iyelik
+yurtiçi|isim|iyelik

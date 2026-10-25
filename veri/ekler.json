@@ -54,6 +54,7 @@
   "ulaç_ip":         { "şablon": "(y)Ip",   "tür": "ulaç",           "öbek": "fiil", "yuva": 2 },
   "ulaç_arak":       { "şablon": "(y)ArAk", "tür": "ulaç",           "öbek": "fiil", "yuva": 2 },
   "ulaç_inca":       { "şablon": "(y)IncA", "tür": "ulaç",           "öbek": "fiil", "yuva": 2 },
+  "ulaç_inceye":     { "şablon": "(y)IncAyA", "tür": "ulaç",         "öbek": "fiil", "yuva": 2 },
   "ulaç_madan":      { "şablon": "mAdAn",   "tür": "ulaç",           "öbek": "fiil", "yuva": 2 },
   "ortaç_an":        { "şablon": "(y)An",   "tür": "ortaç",          "öbek": "fiil", "yuva": 2, "çıkış": "isim" },
   "yapım_ıcı":       { "şablon": "(y)IcI",  "tür": "yapım_ıcı",      "öbek": "fiil", "yuva": 2, "çıkış": "isim",
