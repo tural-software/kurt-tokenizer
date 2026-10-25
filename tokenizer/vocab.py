@@ -174,7 +174,8 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     ("v2-demet3-duz", _statik_bölüm(_VERİ / "v2" / "demet3_duz.json")),
     # VB-1 — ayrılmış özel tokenlar (ileride sohbet rolü/araç; ID kaydırmadan). Metinden üretilmez, decode atar;
     # boyutu 196.608'e (1536 × 128) tamamlar (demet3 ikinci geçişi 10 adayı düşürdü; 1 yer tr-1'e: yd). V2-7 son 4 yeri
-    # v2-isaret'e verdi (9 → 5; ID'ler aynı yerde, henüz hiçbir model kullanmadı).
+    # v2-isaret'e verdi (9 → 5; ID'ler aynı yerde, henüz hiçbir model kullanmadı). İlk 4 yer sohbet ek tokenları oldu
+    # (<|dusunce|> <|dusunce_son|> <|arac|> <|arac_sonuc|>; pipeline.REZERV), 1 yedek.
     ("ozel-rezerv", list(REZERV)),
     # V2-7 — sözcük başı ▁ + casing işaretçisi (demetlenmeyen ▁ <|Bb|> ...; HEP BÜYÜK ▁ <|BB|>). Yalnız sürüm="v2" metin kipinde.
     ("v2-isaret", list(BOŞLUK_İŞARET)),
@@ -212,7 +213,7 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("tr-1", 135, "d784a6a4ef04501877a98a181c9a56eff37ddb70ccca0c15df72b7d205ca4b76"),
     ("v2-demet3", 7474, "ad846101ac60183032498be8314e9a446c0fd60bd82b8d2e98db1a059b2b6bad"),
     ("v2-demet3-duz", 57918, "744ea5ddf9c21e410f2cb747d4d253b1f056fdbe1b65b1bb24a10041de90bddb"),
-    ("ozel-rezerv", 5, "7267aa3d2ee887bf2cabb595630f73ae6d682409784acb907244ade1c7382bd6"),
+    ("ozel-rezerv", 5, "5cf57f3bf6e703424b0e3859b00dd24d0a540451ed3c9a86fbc7a876cc7935ae"),
     ("v2-isaret", 4, "d81a12d96bc76af13bf989c2cf8e92463fa1053658f3e50b72bdbcf0ebbd9cf5"),
 ]
 
