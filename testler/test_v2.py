@@ -96,7 +96,16 @@ class V2Test(unittest.TestCase):
         izinli = self.v.v2_izinli("metin", None)
         for t in ("<|BB|>", "<|AA|>", "<0xE2>"):
             self.assertNotIn((True, [BOŞLUK, t]), list(birimler([BOŞLUK, t, "ev"], izinli)), t)
-        self.assertFalse(any(t.startswith("▁<") and len(t) > 3 for t in self.v.id2tok))
+        self.assertFalse(any(t.startswith("▁<") and len(t) > 3 for t in self.v._düz))
+
+    def test_boşluk_işaretçi(self):
+        # V2-7: demetlenmeyen ▁ + casing işaretçisi tek token; decode v1 ile aynı. v1 bu tokenları üretmez
+        m = "Dün TBMM ÜYESİ Kazancıoğulları ile NASA'ya gitti."
+        v1, v2 = self._ids(m, None, "v1"), self._ids(m, None, "v2")
+        self.assertIn(self.v.tok2id["▁<|BB|>"], v2)
+        self.assertFalse(set(v1) & {self.v.tok2id[t] for t in self.v._işaret})
+        self.assertEqual(self.v.decode_ids(v2), self.v.decode_ids(v1))
+        self.assertEqual(len(self.v._işaret), 4)
 
     def test_tr1_yalnız_türkçe(self):
         # tr-1 (Türkçe kök heceleri: hakk) yalnız Türkçe metin kipinde

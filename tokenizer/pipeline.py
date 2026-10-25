@@ -47,7 +47,7 @@ BAŞ_BÜYÜK = "<|Bb|>"   # sonraki kelime Başlık-biçimi (ilk harf büyük): 
 HEP_BÜYÜK = "<|BB|>"   # sonraki kelime HEP BÜYÜK: TÜRK
 PAD, UNK, BOS, EOS = "<pad>", "<unk>", "<s>", "</s>"
 # VB-1: ileride özel token (sohbet rolü, araç) için ayrılmış yerler — metinden üretilmez, decode atar.
-REZERV = [f"<|rezerv_{i}|>" for i in range(9)]
+REZERV = [f"<|rezerv_{i}|>" for i in range(5)]
 ÖZEL = {PAD, UNK, BOS, EOS, "<|sistem|>", "<|kullanici|>", "<|asistan|>", "<|bitis|>", *REZERV}
 BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKETİLİR, atılmaz)
 
@@ -70,6 +70,8 @@ _KOD_BÜTÜN = frozenset(PY_İŞLEM + PY_TIRNAK + ("__",))   # dil kipinde büt�
 # Kod kipi tanımlayıcı casing'i (K3): ASCII kuralı (str.upper; i→I, İ değil). Yalnız kod kipi.
 ASCII_BAŞ, ASCII_HEP = "<|Ab|>", "<|AA|>"
 ASCII_İŞARET = (ASCII_BAŞ, ASCII_HEP)
+# V2-7: v2'de sözcük başı boşluk + casing işaretçisi tek token (decode: boşluk, ardından işaretçi). Yalnız v2 metin kipi.
+BOŞLUK_İŞARET = {BOŞLUK + m: m for m in ("<|Bb|>", ASCII_BAŞ, "<|BB|>", ASCII_HEP)}
 
 # Bayt tokenları (vocab Faz 2): vocab'da olmayan HER karakter UTF-8 baytlarına iner → hiçbir
 # girdi <unk> üretmez. Tüm 0x00-0xFF (UTF-8'in hiç üretmediği baytlar dahil → tablo tam, basit).
@@ -722,6 +724,9 @@ def decode(tokenlar, kip: str = "metin", düz=frozenset()) -> str:
         if t in düz:
             sonuç.append(" " + t[1:] if t[0] == BOŞLUK else t)
             durum = None
+        elif t in BOŞLUK_İŞARET:
+            sonuç.append(" ")
+            durum = BOŞLUK_İŞARET[t]
         elif t in BÜYÜK or t in ASCII_İŞARET:
             durum = t
         elif t in _BOŞLUK_KOŞULARI:

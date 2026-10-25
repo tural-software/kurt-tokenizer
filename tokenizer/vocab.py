@@ -28,7 +28,7 @@ from pathlib import Path
 
 from tokenizer import sesler
 from tokenizer.hece import hecele
-from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL, REZERV,
+from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL, REZERV, BOŞLUK_İŞARET,
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
                                 BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR, LATEX_TOKENLARI)
 from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
@@ -173,8 +173,11 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     ("v2-demet3", _statik_bölüm(_VERİ / "v2" / "demet3.json")),
     ("v2-demet3-duz", _statik_bölüm(_VERİ / "v2" / "demet3_duz.json")),
     # VB-1 — ayrılmış özel tokenlar (ileride sohbet rolü/araç; ID kaydırmadan). Metinden üretilmez, decode atar;
-    # boyutu 196.608'e (1536 × 128) tamamlar (demet3 ikinci geçişi 10 adayı düşürdü; 1 yer tr-1'e: yd).
+    # boyutu 196.608'e (1536 × 128) tamamlar (demet3 ikinci geçişi 10 adayı düşürdü; 1 yer tr-1'e: yd). V2-7 son 4 yeri
+    # v2-isaret'e verdi (9 → 5; ID'ler aynı yerde, henüz hiçbir model kullanmadı).
     ("ozel-rezerv", list(REZERV)),
+    # V2-7 — sözcük başı ▁ + casing işaretçisi (demetlenmeyen ▁ <|Bb|> ...; HEP BÜYÜK ▁ <|BB|>). Yalnız sürüm="v2" metin kipinde.
+    ("v2-isaret", list(BOŞLUK_İŞARET)),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -209,7 +212,8 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("tr-1", 135, "d784a6a4ef04501877a98a181c9a56eff37ddb70ccca0c15df72b7d205ca4b76"),
     ("v2-demet3", 7474, "ad846101ac60183032498be8314e9a446c0fd60bd82b8d2e98db1a059b2b6bad"),
     ("v2-demet3-duz", 57918, "744ea5ddf9c21e410f2cb747d4d253b1f056fdbe1b65b1bb24a10041de90bddb"),
-    ("ozel-rezerv", 9, "c33f12e90bbdae937426323a9cf2c8d25be02e39311066c0748966ec20b3dd12"),
+    ("ozel-rezerv", 5, "7267aa3d2ee887bf2cabb595630f73ae6d682409784acb907244ade1c7382bd6"),
+    ("v2-isaret", 4, "d81a12d96bc76af13bf989c2cf8e92463fa1053658f3e50b72bdbcf0ebbd9cf5"),
 ]
 
 
@@ -299,6 +303,7 @@ class Vocab:
         self._v2 = frozenset(t for ad, bölüm in bölümler if ad.startswith("v2-")
                              for t in bölüm if t in self.tok2id)
         self._v2_id = frozenset(self.tok2id[t] for t in self._v2)
+        self._işaret = frozenset(t for t in BOŞLUK_İŞARET if t in self.tok2id)     # V2-7 ▁+işaretçi
         # Harfiyen decode edilen (▁/Başlık önekli) v2 tokenları; v2-demet sıradan token gibi çözülür.
         self._düz = frozenset(t for ad, bölüm in bölümler if ad == "v2-kaynasma" or (ad.startswith("v2-")
                                                                                    and ad.endswith("-duz"))
@@ -402,10 +407,10 @@ class Vocab:
         if sürüm == "v2" and kip == "metin":
             izinli = self.v2_izinli(kip, dil)
             tokenlar = self._v2_yedek(tokenlar, izinli, dil)
-            tokenlar = kaynaştır(tokenlar, izinli, lambda t, düz: t in self._düz if düz else izinli(t))
+            tokenlar = kaynaştır(tokenlar, izinli, lambda t, düz: t in self._düz if düz else izinli(t), self._işaret)
         ids: list[int] = []
         for t in tokenlar:
-            if sürüm == "v2" and kip == "metin" and (t in self._düz or izinli(t)):
+            if sürüm == "v2" and kip == "metin" and (t in self._düz or t in self._işaret or izinli(t)):
                 ids.append(self.tok2id[t])
                 continue
             tid = self._id(t, kip, dil)
