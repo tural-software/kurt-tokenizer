@@ -48,6 +48,14 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.enc("verilen"), ["ver", "i", "l", "en"])
         self.assertEqual(self.enc("yapılıyor"), ["yap", "ı", "l", "ı", "yor"])
 
+    def test_k6_konuşma_gelecek(self):
+        # konuşma yazımı -(y)IcAk / -(y)IcAm / -(y)IcAz seyrek: standart okuma varsa o (yapıcı, gelecek bütün)
+        cases = {"olucak": ["ol", "ucak"], "yapıcam": ["yap", "ıcam"], "gidicem": ["gid", "icem"],
+                 "alıcaz": ["al", "ıcaz"], "olucaksın": ["ol", "ucak", "sın"], "başlıcam": ["baş", "l", "ıcam"],
+                 "yapıcı": ["ya", "pı", "cı"], "gelecek": ["ge", "le", "cek"], "kimisinde": ["ki", "mi", "si", "n", "de"]}
+        for w, t in cases.items():
+            self.assertEqual(self.enc(w), t, w)
+
     def test_k1d_işlev(self):
         cases = {"budur": ["bu", "dur"], "hiçbirini": ["hiç", "bi", "ri", "n", "i"],
                  "olmayabilir": ["ol", "ma", "y", "abil", "ir"], "yapamayabilir": ["yap", "ama", "y", "abil", "ir"],

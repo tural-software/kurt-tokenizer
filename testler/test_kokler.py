@@ -93,7 +93,8 @@ class KöklerTest(unittest.TestCase):
         self.assertEqual(set(zamirler), {"ben", "biz", "bun", "kim", "on", "sen", "siz",
                                          "şun", "nere", "kimse", "herkes", "kendi",
                                      "birbir", "hepsi", "birisi", "birileri",
-                                     "hiçbiri", "birçoğu", "birkaçı", "çoğu", "herbiri", "hiçbirisi"}
+                                     "hiçbiri", "birçoğu", "birkaçı", "çoğu", "herbiri", "hiçbirisi",
+                                     "kimisi", "kimileri"}
                          # K-4 konuşma yazımı (AZ burda emsali): burda/burdan … nerde/nerden
                          | {g + s for g in ("bur", "or", "şur", "yukar", "aşağ", "dışar") for s in ("da", "dan")}
                          | {g + s for g in ("ner", "iler", "içer") for s in ("de", "den")})
@@ -105,7 +106,7 @@ class KöklerTest(unittest.TestCase):
     def test_zamir_içerik_köküyle_çakışmaz(self):
         # çalışma sözlüğü harf fazları + zamir köklerini çakışmadan birleştirir
         birleşik = çalışma_sözlüğü(VERİ_DİZİN, ZAMİR_DOSYASI)
-        self.assertEqual(len(birleşik), len(self.sözlük) + 40)
+        self.assertEqual(len(birleşik), len(self.sözlük) + 42)
 
     # --- dosya yapısı (her harf dosyası, otomatik) ---
     def test_dosya_harf_tutarlı(self):

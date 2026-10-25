@@ -84,6 +84,7 @@
   "arakanlı": {"tokens": ["a", "ra", "kan", "lı"], "tür": "özel", "son_ünlü": "ı", "son_ses": "ünlü", "değişim": null},
   "aral": {"tokens": ["a", "ral"], "tür": "özel", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "ardahan": {"tokens": ["ar", "da", "han"], "tür": "özel", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
+  "arıcak": {"tokens": ["a", "rı", "cak"], "tür": "özel", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": null},
   "arınç": {"tokens": ["a", "rınç"], "tür": "özel", "son_ünlü": "ı", "son_ses": "ünsüz", "değişim": null},
   "aristo": {"tokens": ["a", "ris", "to"], "tür": "özel", "son_ünlü": "o", "son_ses": "ünlü", "değişim": null},
   "aristoteles": {"tokens": ["a", "ris", "to", "te", "les"], "tür": "özel", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},

@@ -38,5 +38,7 @@
   "içerde": {"tokens": ["i", "çer", "de"], "tür": "zamir", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "içerden": {"tokens": ["i", "çer", "den"], "tür": "zamir", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "herbiri": {"tokens": ["her", "bi", "ri"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil"},
-  "hiçbirisi": {"tokens": ["hiç", "bi", "ri", "si"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil"}
+  "hiçbirisi": {"tokens": ["hiç", "bi", "ri", "si"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil"},
+  "kimisi": {"tokens": ["ki", "mi", "si"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil"},
+  "kimileri": {"tokens": ["ki", "mi", "le", "ri"], "tür": "zamir", "son_ünlü": "i", "son_ses": "ünlü", "değişim": null, "iyelik": "iyelik_3tekil"}
 }

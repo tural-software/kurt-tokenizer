@@ -225,7 +225,9 @@ def _geri_cezalı(çözümler, kökler) -> set[str]:
 # TR seyrek ardışık ekler: -An ortacı + ek-fiil (atandı = ata+n+dı, at+an+dı değil); başka okuma yoksa seçilir (satandı)
 _TR_SEYREK_DİZİ = frozenset({("ortaç_an", "ek_fiil_idi"), ("ortaç_an", "ek_fiil_imiş")})
 # TR seyrek ek: ad→fiil -lA başka okuma varsa geride (verilen = ver+i+l+en, veri+le+n değil; yayınlanan = yayın+la+n+an)
-_TR_SEYREK_EK = frozenset({"yapım_la", "ulaç_inceye"})   # -(y)IncAyA: düşünce+y+e ≠ düş+ünceye
+_TR_SEYREK_EK = frozenset({"yapım_la", "ulaç_inceye"})
+# TR konuşma yazımı gelecek -(y)IcAk/-(y)IcAm/-(y)IcAz: özel ad okuması dahil HER okumadan sonra (Arıcak ad, ara+ıcak değil)
+_TR_KONUŞMA_EK = frozenset({"gelecek_konuşma", "gelecek_1tekil_k", "gelecek_1çoğul_k"})   # -(y)IncAyA: düşünce+y+e ≠ düş+ünceye
 
 
 _KİŞİ_İYELİK = frozenset({"iyelik_1tekil", "iyelik_2tekil", "iyelik_1çoğul", "iyelik_2çoğul"})
@@ -309,7 +311,7 @@ def en_iyi_çözüm(çözümler, kökler, ekler, profil=None, ad_okuma=False):
         )
     return min(
         çözümler,
-        key=lambda ç: (_özel(ç, kökler), ç.normatif_dışı, 0 if not ç.ekler else 1,
+        key=lambda ç: (sum(e in _TR_KONUŞMA_EK for e in ç.ekler), _özel(ç, kökler), ç.normatif_dışı, 0 if not ç.ekler else 1,
                        sum(çift in _TR_SEYREK_DİZİ for çift in zip(ç.ekler, ç.ekler[1:]))
                        + sum(e in _TR_SEYREK_EK for e in ç.ekler), len(ç.tokens),
                        _öbek_uyumsuz(ç, kökler, ekler), -len(ç.kök),

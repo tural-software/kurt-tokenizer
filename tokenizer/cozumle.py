@@ -50,7 +50,7 @@ def _trie_al(kökler, profil=None) -> KökTrie:
 # zamanına (V) bağlı; koşaç (-(y)Im…) ek-fiil işaretine (K) ya da ad-yüklem present-zero'ya.
 # (Düzensiz değil, kapalı dilbilgisel olgu → kod-içi sabit.)
 KİŞİ_LİSANS = {
-    "şimdiki_zaman": (1, "V"), "gelecek_zaman": (1, "V"),
+    "şimdiki_zaman": (1, "V"), "gelecek_zaman": (1, "V"), "gelecek_konuşma": (1, "V"),
     "duyulan_geçmiş": (1, "V"), "geniş_zaman": (1, "V"),
     "görülen_geçmiş": (2, "V"), "şart": (2, "V"),
     "ek_fiil_imiş": (1, "K"), "ek_fiil_dir": (1, "K"),
