@@ -51,6 +51,9 @@ class Kök:
     çoğulsuz: bool = False  # -lAr almaz, ne çoğul ne 3. çoğul koşaç (sözlük olgusu: tamamlar = tamamla+r, tamam+lar değil)
     iyelik: str = ""        # kök bir iyelik ekiyle biter (sözlükselleşmiş/düzensiz: hepsi = hep+si, birisi, birileri);
     #                         sonraki ek o ekten sonra gelmiş gibi bağlanır (hepsi+n+i, birileri+n+e; iyelik/çoğul almaz)
+    bileşik_gövde: bool = False  # 3. tekil iyelikle biten bileşiğin iyeliksiz gövdesi (milletvekili → milletvekil):
+    #                         yalnız iyelik taşıyan çoğul / 1.-2. kişi biçimde (milletvekil+ler+i, milletvekil+im);
+    #                         çıplak ya da doğrudan 3. tekil iyelikli okuması yok (o, iyelikli bileşik kökün kendisi)
     ikiz: bool = False      # son ünsüz, ünlüyle başlayan İLK ek önünde ikizleşir (TR hak → hakk+ı, his → hiss+i,
     #                         tıp → tıbb+ı; TDK taki). Ünsüz önünde tek (haklar)
     ek_değişim: dict | None = None  # İKİNCİL sınıf (ek_tür) okumasının yumuşaması; None=ikincilde
@@ -139,6 +142,8 @@ def doğrula(ad: str, kök: Kök, profil=None) -> list[str]:
         hatalar.append(f"{ad!r}: çoğulsuz alanı bool olmalı, bulundu {kök.çoğulsuz!r}")
     if kök.iyelik not in ("", "iyelik_3tekil", "iyelik_3çoğul"):
         hatalar.append(f"{ad!r}: iyelik alanı iyelik_3tekil/iyelik_3çoğul olmalı, bulundu {kök.iyelik!r}")
+    if not isinstance(kök.bileşik_gövde, bool):
+        hatalar.append(f"{ad!r}: bileşik_gövde alanı bool olmalı, bulundu {kök.bileşik_gövde!r}")
     if not isinstance(kök.ikiz, bool):
         hatalar.append(f"{ad!r}: ikiz alanı bool olmalı, bulundu {kök.ikiz!r}")
     elif kök.ikiz and not (ad and ad[-1] not in ünlüler):

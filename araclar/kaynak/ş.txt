@@ -929,3 +929,7 @@
 şûrâ|isim
 şâhâne|sıfat
 şuarâ|isim
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+şahdamarı|isim|iyelik
+şahdamar|isim|bileşik_gövde

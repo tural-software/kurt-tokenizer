@@ -2428,7 +2428,7 @@ sotelenme|isim|
 sovhoz|isim|
 soya|isim|
 soyabilme|isim|
-soyadı|isim|
+soyadı|isim|iyelik
 soyağacı|isim|
 soydaş|isim|
 soydaşlık|isim|k→ğ
@@ -3899,3 +3899,6 @@ süvârî|isim
 
 # --- K-4: bitişik yazım (kapalı liste, elle) ---
 sözkonusu|isim|iyelik
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+soyad|isim|bileşik_gövde

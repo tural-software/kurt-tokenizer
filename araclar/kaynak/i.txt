@@ -1472,7 +1472,7 @@ işaretsizlik|isim|k→ğ
 işaretçi|isim|
 işaretçilik|isim|k→ğ
 işba|isim|
-işbaşı|isim|
+işbaşı|isim|iyelik
 işeme|isim|
 işetme|isim|
 işeyiş|isim|
@@ -1909,3 +1909,12 @@ ihtiyâç|isim|ç→c
 # --- K-4: bitişik yazım (kapalı liste, elle) ---
 işbirliği|isim|iyelik
 işyeri|isim|iyelik
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+işbaş|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+işadamı|isim|iyelik
+işgünü|isim|iyelik
+işadam|isim|bileşik_gövde
+işgün|isim|bileşik_gövde

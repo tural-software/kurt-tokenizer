@@ -784,7 +784,7 @@ masarif|isim|
 masarika|isim|
 masasızlık|isim|k→ğ
 masat|isim|
-masaüstü|isim|
+masaüstü|isim|iyelik
 masiko|isim|
 mask|isim|
 maskanyin|isim|
@@ -1571,7 +1571,7 @@ milletseverlik|isim|k→ğ
 milletsizlik|isim|k→ğ
 millettaş|isim|
 millettaşlık|isim|k→ğ
-milletvekili|isim|
+milletvekili|isim|iyelik
 milletvekilliği|isim|
 milliyet|isim|
 milliyetperverlik|isim|k→ğ
@@ -3498,3 +3498,7 @@ melûl|zarf
 müsâade|isim
 müzâkere|isim
 mâmur|sıfat
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+masaüst|isim|bileşik_gövde
+milletvekil|isim|bileşik_gövde

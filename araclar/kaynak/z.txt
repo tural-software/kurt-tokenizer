@@ -59,7 +59,7 @@ zınk|isim|
 zonklama|isim|
 zerzevat|isim|
 zakkum|isim|
-zeytinyağı|isim|
+zeytinyağı|isim|iyelik
 zırhlı|sıfat|
 zilli|sıfat|
 zıpkın|isim|
@@ -627,3 +627,10 @@ ziyâret|isim
 zemîn|isim
 zekî|sıfat
 zarurî|sıfat
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+zeytinyağ|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+zamanaşımı|isim|iyelik
+zamanaşım|isim|bileşik_gövde

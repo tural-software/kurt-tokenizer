@@ -948,7 +948,7 @@ yayın|isim|
 yayıncılık|isim|k→ğ
 yayındırma|isim|
 yayındırıcı|isim|
-yayınevi|isim|
+yayınevi|isim|iyelik
 yayınispi|isim|
 yayınlama|isim|
 yayınma|isim|
@@ -1207,7 +1207,7 @@ yerme|isim|
 yermerkezcilik|isim|k→ğ
 yersizleşme|isim|
 yersizlik|isim|k→ğ
-yeryüzü|isim|
+yeryüzü|isim|iyelik
 yeröte|isim|
 yestehleme|isim|
 yeteneklilik|isim|k→ğ
@@ -1726,7 +1726,7 @@ yılaniğnesi|isim|
 yılankemiği|isim|
 yılanyastığı|isim|
 yılanyastığıgiller|isim|
-yılbaşı|isim|
+yılbaşı|isim|iyelik
 yıldırabilme|isim|
 yıldırak|isim|k→ğ
 yıldırama|isim|
@@ -2016,3 +2016,18 @@ yûnus|isim
 # --- K-4: bitişik yazım (kapalı liste, elle) ---
 yurtdışı|isim|iyelik
 yurtiçi|isim|iyelik
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+yayınev|isim|bileşik_gövde
+yeryüz|isim|bileşik_gövde
+yılbaş|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+yapıtaşı|isim|iyelik
+yerçekimi|isim|iyelik
+yüzölçümü|isim|iyelik
+yıldönümü|isim|iyelik
+yapıtaş|isim|bileşik_gövde
+yerçekim|isim|bileşik_gövde
+yüzölçüm|isim|bileşik_gövde
+yıldönüm|isim|bileşik_gövde
