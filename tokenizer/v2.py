@@ -16,7 +16,7 @@ dolayısıyla yanlış bölme yapısal olarak imkânsız; çözüm aynı, kodlam
 from __future__ import annotations
 
 from tokenizer import sesler
-from tokenizer.pipeline import BOŞLUK, BAŞ_BÜYÜK, ASCII_BAŞ, _harf_mi
+from tokenizer.pipeline import BOŞLUK, BAŞ_BÜYÜK, ASCII_BAŞ, BOŞLUK_İŞARET, _harf_mi
 
 SÜRÜMLER = ("v1", "v2")
 _BAŞLIK = (BAŞ_BÜYÜK, ASCII_BAŞ)
@@ -95,9 +95,14 @@ def böl(birim, var) -> list[str]:
     return çıktı
 
 
-def kaynaştır(tokenlar: list[str], izinli, var) -> list[str]:
-    """v1 token dizisi → v2 dizisi (birimler en uzun eşleşmeyle demetlenir)."""
+def kaynaştır(tokenlar: list[str], izinli, var, işaret=frozenset()) -> list[str]:
+    """v1 token dizisi → v2 dizisi (birimler en uzun eşleşmeyle demetlenir). işaret: vocab'daki ▁+işaretçi tokenları
+    (V2-7) — demetlemeden sonra kalan ▁ + casing işaretçisi çifti tek token olur (▁<|Bb|> ▁<|AA|>)."""
     çıktı: list[str] = []
     for birim_mi, k in birimler(tokenlar, izinli):
-        çıktı.extend(böl(k, var) if birim_mi else k)
+        for t in (böl(k, var) if birim_mi else k):
+            if çıktı and çıktı[-1] == BOŞLUK and BOŞLUK + t in işaret:
+                çıktı[-1] = BOŞLUK + t
+            else:
+                çıktı.append(t)
     return çıktı
