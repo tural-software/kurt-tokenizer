@@ -77,7 +77,7 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   | Fransızca | 0,456 | 0,242 | 0,234 | 0,273 | 0,274 | 0,244 |
   | Almanca | 0,469 | **0,229** | 0,234 | 0,282 | 0,284 | 0,254 |
 - **196.608 (1536 × 128) token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
-  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-*`, `tr-1`, 5 ayrılmış özel token, `v2-isaret`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
+  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-*`, `tr-1`, düşünce/araç özel tokenları + 1 yedek, `v2-isaret`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
   dilin bölümü yalnız o dilin metin kipinde kullanılır; İngilizce metin kipi kod sözlüğündeki (`time`, `data`) ve AZ
   bölümündeki aynı yazımlı tokenları da paylaşır (aynı dizgi iki kez eklenemez).
 - **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): metin kipinde

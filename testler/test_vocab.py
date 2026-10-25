@@ -34,6 +34,17 @@ class VocabTest(unittest.TestCase):
         self.assertEqual(self.v.tok2id["<pad>"], 0)
         self.assertEqual(self.v.tok2id["<unk>"], 1)
 
+    def test_sohbet_ek_tokenları(self):
+        # düşünce/araç tokenları sabit ID'de; metinde harfiyen yazılsa da üretilmez, decode atar
+        ad = ["<|dusunce|>", "<|dusunce_son|>", "<|arac|>", "<|arac_sonuc|>", "<|rezerv_4|>"]
+        self.assertEqual([self.v.tok2id[t] for t in ad], list(range(196599, 196604)))
+        metin = "Metinde <|dusunce|> ve <|arac_sonuc|> yazıyor."
+        for sürüm in ("v1", "v2"):
+            ids = self.v.encode_ids(metin, self.k, self.e, self.i, sürüm=sürüm)
+            self.assertFalse(set(ids) & {self.v.tok2id[t] for t in ad}, sürüm)
+            self.assertEqual(self.v.decode_ids(ids), metin)
+        self.assertEqual(self.v.decode_ids([self.v.tok2id[t] for t in (ad[0], "ev", ad[1])]), "ev")
+
     def test_benzersiz_ve_makul_boyut(self):
         self.assertEqual(len(self.v.id2tok), len(set(self.v.id2tok)))
         self.assertTrue(2000 <= len(self.v) <= 196608, len(self.v))   # VB-1 hedefi 196.608 (1536 × 128)
