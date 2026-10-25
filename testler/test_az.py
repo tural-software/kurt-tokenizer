@@ -187,7 +187,7 @@ class AzHat(unittest.TestCase):
         self.assertEqual(self.vocab.decode_ids(az), metin_kanonik(self.metin))
         tr = diller.yükle()
         for metin in (self.metin, (KÖK / "veri" / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")):
-            self.assertFalse(az1 & set(self.vocab.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar)))
+            self.assertFalse((az1 - self.vocab._tr_açık) & set(self.vocab.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar)))   # VB-1: Türkçe açık liste
             self.assertFalse(az1 & set(self.vocab.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar,
                                                              kip="kod")))
 

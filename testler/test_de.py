@@ -203,7 +203,7 @@ class CasingVeRoundTrip(unittest.TestCase):
         self.assertEqual(v.decode_ids(ids), metin_kanonik(metin))
         self.assertIn(v.tok2id["ẞ"], v.encode_ids("ẞ", V.kökler, V.ekler, V.istisnalar, dil="de"))
         tr, az, en, fr = diller.yükle(), diller.yükle("az"), diller.yükle("en"), diller.yükle("fr")
-        self.assertFalse(de1 & set(v.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar)))
+        self.assertFalse((de1 - v._tr_açık) & set(v.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar)))   # VB-1: Türkçe açık liste
         self.assertFalse(de1 & set(v.encode_ids(metin, tr.kökler, tr.ekler, tr.istisnalar, kip="kod")))
         self.assertFalse(de1 & set(v.encode_ids(metin, az.kökler, az.ekler, az.istisnalar, dil="az")))
         self.assertFalse(de1 & set(v.encode_ids(metin, en.kökler, en.ekler, en.istisnalar, dil="en")))

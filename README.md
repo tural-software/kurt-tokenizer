@@ -63,21 +63,21 @@ Bilinmeyen kelime kayıpsız biçimde hece → harf → bayt'a iner; `<unk>` hi�
   kaynaşır (`▁ <|Bb|> haus` → `▁Haus`), sık morfem dizileri tek token olur (`▁annelerin`, `ların`, `▁gedir`), v1'de
   yedeğe düşen sık gövdeler tek tokendır. Yalnız var olan sınırlar kalkar, yeni sınır oluşmaz; decode metni v1 ile
   birebir aynı; vocab'da olmayan sözcüğün hece/harf yedeği de aynı kuralla birleşir; boşluk noktalama/rakamla da
-  kaynaşır (`▁(`, `▁1`, `▁l’`). Token/karakter (~1M karakter örneklem): TR 0,62 → 0,26, AZ 0,59 → 0,25, EN 0,46 → 0,24,
-  FR 0,46 → 0,26, DE 0,47 → 0,24.
+  kaynaşır (`▁(`, `▁1`, `▁l’`). Token/karakter (~1M karakter örneklem): TR 0,62 → 0,25, AZ 0,59 → 0,24, EN 0,46 → 0,24,
+  FR 0,46 → 0,25, DE 0,47 → 0,23.
   Varsayılan `sürüm="v1"` donmuş kodlamadır.
-  Web metni (FineWeb-2 / FineWeb test bölümleri, ~190 bin belge, 611M karakter; round-trip hepsinde kayıpsız; V2-5
-  ölçümü — V2-6 ile v2 değerleri biraz daha düşer), token/karakter:
+  Web metni (FineWeb-2 / FineWeb test bölümleri, ~190 bin belge, 611M karakter; round-trip hepsinde kayıpsız; vocab
+  196.608), token/karakter:
 
   | Dil | Kurt v1 | **Kurt v2** | GPT-4o (o200k) | GPT-4 (cl100k) | Qwen2.5 | Mistral Nemo |
   |---|---:|---:|---:|---:|---:|---:|
-  | Türkçe | 0,571 | **0,225** | 0,291 | 0,389 | 0,338 | 0,326 |
-  | Azerbaycan T. | 0,567 | **0,213** | 0,318 | 0,491 | 0,471 | 0,356 |
-  | İngilizce | 0,468 | 0,256 | 0,216 | 0,218 | 0,223 | 0,227 |
-  | Fransızca | 0,456 | 0,263 | 0,234 | 0,273 | 0,274 | 0,244 |
-  | Almanca | 0,469 | 0,244 | 0,234 | 0,282 | 0,284 | 0,254 |
-- **131.072 (2^17) token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
-  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-*`) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
+  | Türkçe | 0,571 | **0,209** | 0,291 | 0,389 | 0,338 | 0,326 |
+  | Azerbaycan T. | 0,567 | **0,200** | 0,318 | 0,491 | 0,471 | 0,356 |
+  | İngilizce | 0,468 | 0,244 | 0,216 | 0,218 | 0,223 | 0,227 |
+  | Fransızca | 0,456 | 0,242 | 0,234 | 0,273 | 0,274 | 0,244 |
+  | Almanca | 0,469 | **0,229** | 0,234 | 0,282 | 0,284 | 0,254 |
+- **196.608 (1536 × 128) token'lık vocab, sona-ekleme sözleşmesiyle:** ilk 4.112 ID (v1) donmuş; her yeni bölüm (bayt,
+  harf, sembol, kod, `az-1`, `az-2`, `en-1`, `fr-1`, `de-1`, `v2-*`, `tr-1`, 9 ayrılmış özel token) sona eklenir ve özetiyle kilitlenir → var olan hiçbir ID kaymaz. Bir
   dilin bölümü yalnız o dilin metin kipinde kullanılır; İngilizce metin kipi kod sözlüğündeki (`time`, `data`) ve AZ
   bölümündeki aynı yazımlı tokenları da paylaşır (aynı dizgi iki kez eklenemez).
 - **Kayıpsız round-trip** (büyük harf, kesme eki, sayı dahil): metin kipinde

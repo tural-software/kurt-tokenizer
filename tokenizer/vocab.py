@@ -28,7 +28,7 @@ from pathlib import Path
 
 from tokenizer import sesler
 from tokenizer.hece import hecele
-from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL,
+from tokenizer.pipeline import (encode, decode, BOŞLUK, BAŞ_BÜYÜK, HEP_BÜYÜK, ÖZEL, REZERV,
                                 BAYT_TOKENLARI, bayt_tokenları, KOD_BOŞLUKLARI,
                                 BOŞLUK_KOŞULARI, ASCII_İŞARET, SATIR, LATEX_TOKENLARI)
 from tokenizer.kod import PY_ANAHTAR, PY_İŞLEM, PY_TIRNAK, KOD_SÖZLÜK_YENİ
@@ -165,6 +165,16 @@ EK_BÖLÜMLER: list[tuple[str, list[str]]] = [
     ("v2-govde", _statik_bölüm(_VERİ / "v2" / "govde.json")),
     ("v2-demet2", _statik_bölüm(_VERİ / "v2" / "demet2.json")),
     ("v2-demet2-duz", _statik_bölüm(_VERİ / "v2" / "demet2_duz.json")),
+    # VB-1 — Türkçe kök sözlüğünün (K-1a–K-2) vocab'da olmayan morfem tokenları (hakk, hiss, tıbb, kş…; eskiden yedeğe
+    # düşüyordu). Yalnız Türkçe metin kipinde (Vocab._yalnız_tr): AZ/EN/FR/DE ve kod kipi çıktısı birebir.
+    ("tr-1", _statik_bölüm(_VERİ / "vocab_tr1.json")),
+    # VB-1 — vocab 196.608'e büyütme: üçüncü tur demet (scripts/v2/demet_uret.py bütçe 65.402; tr-1 vocab'dayken;
+    # V2-6 birimi özel tokensız). Yalnız sürüm="v2" metin kipinde.
+    ("v2-demet3", _statik_bölüm(_VERİ / "v2" / "demet3.json")),
+    ("v2-demet3-duz", _statik_bölüm(_VERİ / "v2" / "demet3_duz.json")),
+    # VB-1 — ayrılmış özel tokenlar (ileride sohbet rolü/araç; ID kaydırmadan). Metinden üretilmez, decode atar;
+    # boyutu 196.608'e (1536 × 128) tamamlar (demet3 ikinci geçişi 10 adayı düşürdü; 1 yer tr-1'e: yd).
+    ("ozel-rezerv", list(REZERV)),
 ]
 
 # Tamamlanmış (dondurulmuş) bölümler: (ad, boy, SHA-256 özeti). Faz bitince buraya işlenir.
@@ -196,6 +206,10 @@ DONMUŞ_BÖLÜMLER: list[tuple[str, int, str]] = [
     ("v2-govde", 10326, "67a0078e8564cdfe0e95a95d5b1fcfb70cc658e1cde1a4a23f1fbf0987dcc82a"),
     ("v2-demet2", 12169, "5577d5a601be378a8a6662696807ac3e35480bec5fc0eaf79d048a5b1919f1ee"),
     ("v2-demet2-duz", 17318, "61ed06926ffa1c26360039b7eb99322a043b442836ade24110251f9014a56b25"),
+    ("tr-1", 135, "d784a6a4ef04501877a98a181c9a56eff37ddb70ccca0c15df72b7d205ca4b76"),
+    ("v2-demet3", 7474, "ad846101ac60183032498be8314e9a446c0fd60bd82b8d2e98db1a059b2b6bad"),
+    ("v2-demet3-duz", 57918, "744ea5ddf9c21e410f2cb747d4d253b1f056fdbe1b65b1bb24a10041de90bddb"),
+    ("ozel-rezerv", 9, "c33f12e90bbdae937426323a9cf2c8d25be02e39311066c0748966ec20b3dd12"),
 ]
 
 
@@ -286,8 +300,17 @@ class Vocab:
                              for t in bölüm if t in self.tok2id)
         self._v2_id = frozenset(self.tok2id[t] for t in self._v2)
         # Harfiyen decode edilen (▁/Başlık önekli) v2 tokenları; v2-demet sıradan token gibi çözülür.
-        self._düz = frozenset(t for ad, bölüm in bölümler if ad in ("v2-kaynasma", "v2-demet-duz", "v2-demet2-duz")
+        self._düz = frozenset(t for ad, bölüm in bölümler if ad == "v2-kaynasma" or (ad.startswith("v2-")
+                                                                                   and ad.endswith("-duz"))
                               for t in bölüm if t in self.tok2id)
+        # Türkçe bölümleri (tr-1…): yalnız Türkçe metin kipinde (dil None) açık — AZ/EN/FR/DE ve kod kipi bu tokenları
+        # (yedek hecede de) üretmez → o dillerin çıktısı birebir aynı kalır.
+        self._yalnız_tr = frozenset(self.tok2id[t] for ad, bölüm in bölümler if ad.startswith("tr-")
+                                    for t in bölüm if t in self.tok2id)
+        # Başka bölümde (v2-govde/demet, dil bölümü, kod sözlüğü) zaten bulunan Türkçe morfem tokenları (hakk, vr, zad,
+        # pid): aynı dizgi iki bölüme eklenemez → Türkçe v1 metin kipinde de açık (o bölümün kapısı Türkçede aşılır)
+        self._tr_açık = frozenset(self.tok2id[t] for t in _statik_bölüm(_VERİ / "vocab_tr_acik.json")
+                                  if t in self.tok2id)
 
     def __len__(self):
         return len(self.id2tok)
@@ -296,7 +319,11 @@ class Vocab:
         """Tokenın ID'si; metin kipinde kod bölümü tokenı, o dilin metin kipi dışında dil bölümü
         tokenı yok sayılır (None)."""
         tid = self.tok2id.get(t)
+        if tid in self._tr_açık and kip == "metin" and dil is None:
+            return tid
         if tid in self._v2_id:
+            return None
+        if tid in self._yalnız_tr and not (kip == "metin" and dil is None):
             return None
         ortak = kip == "metin" and dil in _ORTAK_KULLANAN_DİLLER
         if tid is not None and kip != "kod" and tid in self._yalnız_kod and not (
