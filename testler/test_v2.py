@@ -90,6 +90,22 @@ class V2Test(unittest.TestCase):
         self.assertNotIn(self.v.tok2id["the"], v1)
         self.assertEqual(self.v.decode_ids(v2), self.v.decode_ids(v1))
 
+    def test_özel_token_birime_girmez(self):
+        # ▁ + HEP BÜYÜK işaretçisi / bayt tokenı düz v2 tokenı olamaz (harfiyen decode'da metne sızardı)
+        from tokenizer.v2 import birimler
+        izinli = self.v.v2_izinli("metin", None)
+        for t in ("<|BB|>", "<|AA|>", "<0xE2>"):
+            self.assertNotIn((True, [BOŞLUK, t]), list(birimler([BOŞLUK, t, "ev"], izinli)), t)
+        self.assertFalse(any(t.startswith("▁<") and len(t) > 3 for t in self.v.id2tok))
+
+    def test_tr1_yalnız_türkçe(self):
+        # tr-1 (Türkçe kök heceleri: hakk) yalnız Türkçe metin kipinde
+        tid = self.v.tok2id["hakk"]
+        self.assertEqual(self.v._id("hakk", "metin", None), tid)
+        for dil in ("az", "en", "fr", "de"):
+            self.assertIsNone(self.v._id("hakk", "metin", dil), dil)
+        self.assertIsNone(self.v._id("hakk", "kod", "python"))
+
     def test_geçersiz_sürüm(self):
         with self.assertRaises(ValueError):
             self._ids("ev", None, "v3")

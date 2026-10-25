@@ -32,6 +32,11 @@ def yüzey(boşluk: bool, işaret: str | None, t: str) -> str:
     return BOŞLUK + t if boşluk else t
 
 
+def _özel(t: str) -> bool:
+    """Özel/işaretçi/bayt tokenı (<…>): düz v2 tokenına giremez."""
+    return len(t) > 2 and t[0] == "<" and t[-1] == ">"
+
+
 def harf_tokenı(t: str) -> bool:
     """Birime girebilen token: tümü harf (noktalama decode'da casing koşusunu bitirir; özel/boşluk/satır değil)."""
     return bool(t) and all(_harf_mi(c) for c in t)
@@ -58,8 +63,9 @@ def birimler(tokenlar, izinli):
         if t in _BAŞLIK and k == [BOŞLUK]:
             k.append(t)
             continue
-        if k == [BOŞLUK] and t != BOŞLUK:
-            # ▁ + harf olmayan tek token (noktalama, rakam, elizyon l’): böl ▁( ▁1 ▁l’ düz eşini dener (V2-6)
+        if k == [BOŞLUK] and t != BOŞLUK and not _özel(t):
+            # ▁ + harf olmayan tek token (noktalama, rakam, elizyon l’): böl ▁( ▁1 ▁l’ düz eşini dener (V2-6). Özel token
+            # (HEP BÜYÜK işaretçisi <|BB|> <|AA|>, bayt <0xE2>, <s>) giremez: harfiyen decode'da metne sızardı
             yield True, [BOŞLUK, t]
             k = []
             continue

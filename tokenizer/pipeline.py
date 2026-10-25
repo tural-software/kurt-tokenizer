@@ -46,7 +46,9 @@ _LATEX = frozenset(LATEX_TOKENLARI)
 BAŞ_BÜYÜK = "<|Bb|>"   # sonraki kelime Başlık-biçimi (ilk harf büyük): Bugün
 HEP_BÜYÜK = "<|BB|>"   # sonraki kelime HEP BÜYÜK: TÜRK
 PAD, UNK, BOS, EOS = "<pad>", "<unk>", "<s>", "</s>"
-ÖZEL = {PAD, UNK, BOS, EOS, "<|sistem|>", "<|kullanici|>", "<|asistan|>", "<|bitis|>"}
+# VB-1: ileride özel token (sohbet rolü, araç) için ayrılmış yerler — metinden üretilmez, decode atar.
+REZERV = [f"<|rezerv_{i}|>" for i in range(9)]
+ÖZEL = {PAD, UNK, BOS, EOS, "<|sistem|>", "<|kullanici|>", "<|asistan|>", "<|bitis|>", *REZERV}
 BÜYÜK = {BAŞ_BÜYÜK, HEP_BÜYÜK}   # casing işaretçileri (decode'da TÜKETİLİR, atılmaz)
 
 # Kod kipi (K1): boşluk kayıpsız. Satır sonu/sekme/CR harfiyen token; boşluk koşusu ▁×n

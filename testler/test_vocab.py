@@ -36,7 +36,7 @@ class VocabTest(unittest.TestCase):
 
     def test_benzersiz_ve_makul_boyut(self):
         self.assertEqual(len(self.v.id2tok), len(set(self.v.id2tok)))
-        self.assertTrue(2000 <= len(self.v) <= 131072, len(self.v))   # V2-3 hedefi 2^17
+        self.assertTrue(2000 <= len(self.v) <= 196608, len(self.v))   # VB-1 hedefi 196.608 (1536 × 128)
 
     def test_id_round_trip(self):
         for metin in ["Bugün İstanbul'da öğrencilerin hazırladığı projeler sergilendi.",
@@ -151,7 +151,7 @@ class VocabTest(unittest.TestCase):
             for z in (fçek if kök.tür == "fiil" else çek):
                 try:
                     tk, _ = birleştir(ad, kök, z, self.e)
-                    kaçan |= {t for t in tk if t not in self.v.tok2id}
+                    kaçan |= {t for t in tk if self.v._id(t, "metin", None) is None}   # v1'de görünür (v2-only değil)
                 except Exception:
                     pass
         # K-1a: yeni Türkçe köklerin vocab'da olmayan heceleri vocab büyütmesini bekler (bekleyen_tokenlar.json);

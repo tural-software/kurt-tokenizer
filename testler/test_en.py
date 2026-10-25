@@ -183,7 +183,7 @@ class CasingVeRoundTrip(unittest.TestCase):
             self.assertEqual(vocab.encode_ids(s, V.kökler, V.ekler, V.istisnalar, dil="en"), [vocab.tok2id[t]])
         tr, az = diller.yükle(), diller.yükle("az")
         for m in (metin, (KÖK / "veri" / "korpus" / "dogrulama.txt").read_text(encoding="utf-8")):
-            self.assertFalse(en1 & set(vocab.encode_ids(m, tr.kökler, tr.ekler, tr.istisnalar)))
+            self.assertFalse((en1 - vocab._tr_açık) & set(vocab.encode_ids(m, tr.kökler, tr.ekler, tr.istisnalar)))   # VB-1: Türkçe açık liste
             self.assertFalse(en1 & set(vocab.encode_ids(m, tr.kökler, tr.ekler, tr.istisnalar, kip="kod")))
             self.assertFalse(en1 & set(vocab.encode_ids(m, az.kökler, az.ekler, az.istisnalar, dil="az")))
         self.assertNotEqual(vocab.encode_ids("time", tr.kökler, tr.ekler, tr.istisnalar), [vocab.tok2id["time"]])
