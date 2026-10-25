@@ -225,7 +225,7 @@ def _geri_cezalı(çözümler, kökler) -> set[str]:
 # TR seyrek ardışık ekler: -An ortacı + ek-fiil (atandı = ata+n+dı, at+an+dı değil); başka okuma yoksa seçilir (satandı)
 _TR_SEYREK_DİZİ = frozenset({("ortaç_an", "ek_fiil_idi"), ("ortaç_an", "ek_fiil_imiş")})
 # TR seyrek ek: ad→fiil -lA başka okuma varsa geride (verilen = ver+i+l+en, veri+le+n değil; yayınlanan = yayın+la+n+an)
-_TR_SEYREK_EK = frozenset({"yapım_la"})
+_TR_SEYREK_EK = frozenset({"yapım_la", "ulaç_inceye"})   # -(y)IncAyA: düşünce+y+e ≠ düş+ünceye
 
 
 _KİŞİ_İYELİK = frozenset({"iyelik_1tekil", "iyelik_2tekil", "iyelik_1çoğul", "iyelik_2çoğul"})

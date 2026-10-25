@@ -803,3 +803,24 @@ razı|sıfat
 revaçta|sıfat
 reye|sıfat
 romansı|sıfat
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+rivâyet|isim
+risâle|isim
+rüyâ|isim
+reâyâ|isim
+ruhî|sıfat
+râzı|sıfat
+râvi|isim
+rızâ|isim
+reklâm|isim
+rabbânî|sıfat
+rûmî|isim
+riâyet|isim
+rumî|isim
+râhip|isim|p→b
+rahmânî|sıfat
+rahmân|sıfat
+rûhi|sıfat
+râbıta|isim
+rabbanî|sıfat

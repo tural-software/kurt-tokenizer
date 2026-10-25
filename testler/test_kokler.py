@@ -23,6 +23,9 @@ TAMAMLANAN = {"a": 50, "b": 50, "c": 40, "ç": 40, "d": 50, "e": 50,
               "t": 50, "u": 18, "ü": 18, "v": 20, "y": 50, "z": 20}
 
 
+_İMSİZ = str.maketrans("âîû", "aiu")
+
+
 class KöklerTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -90,7 +93,10 @@ class KöklerTest(unittest.TestCase):
         self.assertEqual(set(zamirler), {"ben", "biz", "bun", "kim", "on", "sen", "siz",
                                          "şun", "nere", "kimse", "herkes", "kendi",
                                      "birbir", "hepsi", "birisi", "birileri",
-                                     "hiçbiri", "birçoğu", "birkaçı", "çoğu"})
+                                     "hiçbiri", "birçoğu", "birkaçı", "çoğu", "herbiri", "hiçbirisi"}
+                         # K-4 konuşma yazımı (AZ burda emsali): burda/burdan … nerde/nerden
+                         | {g + s for g in ("bur", "or", "şur", "yukar", "aşağ", "dışar") for s in ("da", "dan")}
+                         | {g + s for g in ("ner", "iler", "içer") for s in ("de", "den")})
         for ad, kök in zamirler.items():
             self.assertEqual(doğrula(ad, kök), [], ad)
             self.assertEqual(hecele(ad), kök.tokens, ad)
@@ -99,7 +105,7 @@ class KöklerTest(unittest.TestCase):
     def test_zamir_içerik_köküyle_çakışmaz(self):
         # çalışma sözlüğü harf fazları + zamir köklerini çakışmadan birleştirir
         birleşik = çalışma_sözlüğü(VERİ_DİZİN, ZAMİR_DOSYASI)
-        self.assertEqual(len(birleşik), len(self.sözlük) + 20)
+        self.assertEqual(len(birleşik), len(self.sözlük) + 40)
 
     # --- dosya yapısı (her harf dosyası, otomatik) ---
     def test_dosya_harf_tutarlı(self):
@@ -107,7 +113,9 @@ class KöklerTest(unittest.TestCase):
             harf = dosya.stem
             ham = json.loads(dosya.read_text(encoding="utf-8"))
             for ad in ham:
-                self.assertTrue(ad.startswith(harf), f"{dosya.name}: {ad}")
+                # düzeltme imli baş harf temel harfin dosyasında (K-4: âyet → a.json)
+                self.assertTrue(ad[0].translate(_İMSİZ) == harf if ad[0] in "âîû" else ad.startswith(harf),
+                                f"{dosya.name}: {ad}")
 
     def test_dosya_sıralı(self):
         # önce hece sayısı, sonra Türkçe alfabetik

@@ -33,9 +33,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from tokenizer.kokler import çalışma_sözlüğü
-from tokenizer.ekler import yükle as ekleri_yükle
-from tokenizer.istisna import yükle as istisna_yükle
+from tokenizer import diller
 from tokenizer.pipeline import BAYT_TOKENLARI
 from tokenizer.vocab import Vocab
 
@@ -45,9 +43,8 @@ VERİ = KÖK / "veri"
 
 def _ölç(örnek: Path) -> dict:
     """Örneklemi güncel tokenizer'la kodlar: parça→ID, kayıplı parça/karakter, <unk>, token."""
-    k = çalışma_sözlüğü(VERİ / "kokler", VERİ / "zamirler.json", VERİ / "islev_kokleri.json")
-    e = ekleri_yükle(VERİ / "ekler.json")
-    i = istisna_yükle(VERİ / "istisnalar.json")
+    d = diller.yükle(None)                 # hattın kendi Türkçe verisi (özel ad listesi dahil; K-4 düzeltmesi)
+    k, e, i = d.kökler, d.ekler, d.istisnalar
     v = Vocab.yükle(VERİ / "vocab.json")
     unk = v.tok2id["<unk>"]
     bayt = {v.tok2id[t] for t in BAYT_TOKENLARI if t in v.tok2id}

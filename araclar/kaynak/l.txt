@@ -640,3 +640,18 @@ lüzuci|sıfat
 lisanıhal|isim|ince
 lütufkarane|zarf
 lütufkarlık|isim|k→ğ
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+lâzım|sıfat
+lâle|isim
+lâyık|sıfat|k→ğ
+lâhût|isim
+lâik|sıfat|k→ğ
+lâhut|isim
+lânet|isim
+levâzım|isim
+lisân|isim
+lâtife|isim
+lâiklik|isim|k→ğ
+lügât|isim|ince
+lâikleşme|isim

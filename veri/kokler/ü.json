@@ -62,6 +62,7 @@
   "üsküf": {"tokens": ["üs", "küf"], "tür": "isim", "son_ünlü": "ü", "son_ses": "ünsüz", "değişim": null},
   "üslen": {"tokens": ["üs", "len"], "tür": "fiil", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},
   "üslup": {"tokens": ["üs", "lup"], "tür": "isim", "son_ünlü": "u", "son_ses": "ünsüz", "değişim": {"p→b": "ünlü_ile_başlayan_ek_gelince"}},
+  "üslûp": {"tokens": ["üs", "lûp"], "tür": "isim", "son_ünlü": "û", "son_ses": "ünsüz", "değişim": {"p→b": "ünlü_ile_başlayan_ek_gelince"}},
   "üstat": {"tokens": ["üs", "tat"], "tür": "isim", "son_ünlü": "a", "son_ses": "ünsüz", "değişim": {"t→d": "ünlü_ile_başlayan_ek_gelince"}},
   "üste": {"tokens": ["üs", "te"], "tür": "isim", "son_ünlü": "e", "son_ses": "ünlü", "değişim": null},
   "üstel": {"tokens": ["üs", "tel"], "tür": "sıfat", "son_ünlü": "e", "son_ses": "ünsüz", "değişim": null},

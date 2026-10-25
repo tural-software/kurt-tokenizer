@@ -2716,5 +2716,312 @@
       ],
       "not": "Roma rakamı 39 (Türkçe küçük harf)"
     }
+  },
+  "ek_parçası": {
+    "nin": {
+      "tokens": [
+        "nin"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "nın": {
+      "tokens": [
+        "nın"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "nun": {
+      "tokens": [
+        "nun"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ın": {
+      "tokens": [
+        "ın"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "dan": {
+      "tokens": [
+        "dan"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ndan": {
+      "tokens": [
+        "ndan"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "nden": {
+      "tokens": [
+        "nden"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "dir": {
+      "tokens": [
+        "dir"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "dır": {
+      "tokens": [
+        "dır"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "tir": {
+      "tokens": [
+        "tir"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "yi": {
+      "tokens": [
+        "yi"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "yı": {
+      "tokens": [
+        "yı"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "yü": {
+      "tokens": [
+        "yü"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lik": {
+      "tokens": [
+        "lik"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lık": {
+      "tokens": [
+        "lık"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "luk": {
+      "tokens": [
+        "luk"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "li": {
+      "tokens": [
+        "li"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lı": {
+      "tokens": [
+        "lı"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lu": {
+      "tokens": [
+        "lu"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lü": {
+      "tokens": [
+        "lü"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "le": {
+      "tokens": [
+        "le"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "na": {
+      "tokens": [
+        "na"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ni": {
+      "tokens": [
+        "ni"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "nı": {
+      "tokens": [
+        "nı"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "nu": {
+      "tokens": [
+        "nu"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "nda": {
+      "tokens": [
+        "nda"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "nde": {
+      "tokens": [
+        "nde"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "daki": {
+      "tokens": [
+        "daki"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ndaki": {
+      "tokens": [
+        "ndaki"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ndeki": {
+      "tokens": [
+        "ndeki"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ler": {
+      "tokens": [
+        "ler"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lar": {
+      "tokens": [
+        "lar"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "leri": {
+      "tokens": [
+        "leri"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ları": {
+      "tokens": [
+        "ları"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lerin": {
+      "tokens": [
+        "lerin"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "ların": {
+      "tokens": [
+        "ların"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lere": {
+      "tokens": [
+        "lere"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lara": {
+      "tokens": [
+        "lara"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lerde": {
+      "tokens": [
+        "lerde"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "larda": {
+      "tokens": [
+        "larda"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lerden": {
+      "tokens": [
+        "lerden"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "lardan": {
+      "tokens": [
+        "lardan"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    },
+    "sü": {
+      "tokens": [
+        "sü"
+      ],
+      "not": "ayrı yazılmış ek parçası (Türkiye 'nin, 2020 de)"
+    }
+  },
+  "bitişik": {
+    "hemde": {
+      "tokens": [
+        "hem",
+        "de"
+      ],
+      "not": "yanlış bitişik yazım: hem de"
+    },
+    "vede": {
+      "tokens": [
+        "ve",
+        "de"
+      ],
+      "not": "yanlış bitişik yazım: ve de"
+    },
+    "olarakta": {
+      "tokens": [
+        "ol",
+        "arak",
+        "ta"
+      ],
+      "not": "yanlış bitişik yazım: olarak ta"
+    },
+    "olarakda": {
+      "tokens": [
+        "ol",
+        "arak",
+        "da"
+      ],
+      "not": "yanlış bitişik yazım: olarak da"
+    },
+    "olsada": {
+      "tokens": [
+        "ol",
+        "sa",
+        "da"
+      ],
+      "not": "yanlış bitişik yazım: olsa da"
+    },
+    "amada": {
+      "tokens": [
+        "ama",
+        "da"
+      ],
+      "not": "yanlış bitişik yazım: ama da"
+    }
   }
 }

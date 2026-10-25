@@ -910,3 +910,22 @@
 # --- K-1d: TDK v12 (gts) — K-1a çakışma kapısına takılan sahte okumalı madde ---
 şeni|sıfat
 şeri|sıfat
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+şehzâde|isim
+şâir|isim
+şifâ|isim
+şîve|isim
+şehâdet|isim
+şerîf|isim
+şerî|sıfat
+şâhit|isim|t→d
+şeyhülislâm|isim
+şühedâ|isim
+şifahî|sıfat
+şerîat|isim
+şîrâze|isim
+şiâr|isim
+şûrâ|isim
+şâhâne|sıfat
+şuarâ|isim

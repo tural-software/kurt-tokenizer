@@ -3037,3 +3037,29 @@ dördüz|sıfat
 düşkün|sıfat
 dığdığı|sıfat
 dıştan|sıfat
+
+# --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
+delâlet|isim
+dünyâ|isim
+divân|isim
+devâm|isim
+dünyevî|sıfat
+dâva|isim
+dünyâda|zarf
+dalâlet|isim
+dâvet|isim
+defâ|isim
+dâire|isim
+diyâr|isim
+dâima|zarf
+derûn|isim
+destanî|sıfat
+deccâl|sıfat
+dairevî|sıfat
+dîvân|isim
+dâvetçi|isim
+dârüşşifâ|isim
+dersiâm|isim
+
+# --- K-4: bitişik yazım (kapalı liste, elle) ---
+doğalgaz|isim
