@@ -540,7 +540,7 @@
 öğretim|isim|
 öğretiş|isim|
 öğretme|isim|
-öğretmenevi|isim|
+öğretmenevi|isim|iyelik
 öğürleşme|isim|
 öğürlük|isim|k→ğ
 öğürme|isim|
@@ -634,3 +634,6 @@
 
 # --- K-4: düzeltme imli yazım varyantı (korpus kanıtı; scripts/tr_sozluk/k4_imli.py) ---
 örfî|sıfat
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+öğretmenev|isim|bileşik_gövde

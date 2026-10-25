@@ -149,6 +149,10 @@ def _ara(kök_ad, kök, ek_dizi, son_yuva, sınıf, hedef, ekler, çıktı, prof
         if ((profil is None or profil.kod == "tr") and kök.tür == "özel"
                 and _TR_KİŞİ_İYELİK & set(ek_dizi)):
             return
+        # bileşik gövdesi (milletvekil) yalnız iyelik taşıyan biçimde; doğrudan 3. tekil iyelik bileşik kökün kendisi
+        if getattr(kök, "bileşik_gövde", False) and not (
+                ek_dizi and ek_dizi[0] != "iyelik_3tekil" and any(e.startswith("iyelik") for e in ek_dizi)):
+            return
         if not (ek_dizi and ek_dizi[-1] in İYELİK_GEREKTİREN):
             çıktı.append(Çözüm(tokens=tokenlar, kök=kök_ad, ekler=list(ek_dizi)))
         return                                   # tam eşleşme; daha derini taşar

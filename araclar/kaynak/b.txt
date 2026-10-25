@@ -641,7 +641,7 @@ bakılış|isim|
 bakım|isim|
 bakımcı|isim|
 bakımcılık|isim|k→ğ
-bakımevi|isim|
+bakımevi|isim|iyelik
 bakımlık|isim|k→ğ
 bakımlılık|isim|k→ğ
 bakımsızlık|isim|k→ğ
@@ -671,7 +671,7 @@ balar|isim|
 balast|isim|
 balat|isim|t→d
 balata|isim|
-balayı|isim|
+balayı|isim|iyelik
 balbal|isim|
 balcı|isim|
 balcılık|isim|k→ğ
@@ -2107,7 +2107,7 @@ bilinme|isim|
 bilinmemezlik|isim|k→ğ
 bilinmezlik|isim|k→ğ
 bilinç|isim|ç→c
-bilinçaltı|isim|
+bilinçaltı|isim|iyelik
 bilinçlendirilme|isim|
 bilinçlendiriş|isim|
 bilinçlendirme|isim|
@@ -3620,3 +3620,18 @@ bişey|isim
 birgün|zarf
 birarada|zarf
 biraraya|zarf
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+bakımev|isim|bileşik_gövde
+balay|isim|bileşik_gövde
+bilinçalt|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+balmumu|isim|iyelik
+başkanvekili|isim|iyelik
+bilimadamı|isim|iyelik
+buzdağı|isim|iyelik
+balmum|isim|bileşik_gövde
+başkanvekil|isim|bileşik_gövde
+bilimadam|isim|bileşik_gövde
+buzdağ|isim|bileşik_gövde

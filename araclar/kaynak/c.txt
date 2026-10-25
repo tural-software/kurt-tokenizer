@@ -413,7 +413,7 @@ cevizlik|isim|k→ğ
 cevretme|isim|
 cevvaliyet|isim|
 cevvallik|isim|k→ğ
-cezaevi|isim|
+cezaevi|isim|iyelik
 cezalandırma|isim|
 cezalandırılma|isim|
 cezalandırılış|isim|
@@ -599,8 +599,8 @@ cumburdama|isim|
 cumburlop|isim|p→b
 cumburtu|isim|
 cumhur|isim|
-cumhurbaşkanlığı|isim|
-cumhurbaşkanı|isim|
+cumhurbaşkanlığı|isim|iyelik
+cumhurbaşkanı|isim|iyelik
 cumhuriyetperverlik|isim|k→ğ
 cumhuriyetçilik|isim|k→ğ
 cunda|isim|
@@ -871,3 +871,10 @@ cezaî|sıfat
 cellât|isim|t→d
 cezâ|isim
 cismânî|sıfat
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+cezaev|isim|bileşik_gövde
+cumhurbaşkan|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+cumhurbaşkanlığ|isim|bileşik_gövde

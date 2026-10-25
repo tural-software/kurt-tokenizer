@@ -469,9 +469,9 @@ halkalanış|isim|
 halkalayış|isim|
 halkalı|isim|
 halkalılar|isim|
-halkevi|isim|
+halkevi|isim|iyelik
 halkiyat|isim|
-halkoyu|isim|
+halkoyu|isim|iyelik
 halkçı|isim|
 halkçılık|isim|k→ğ
 hallaç|isim|ç→c
@@ -804,7 +804,7 @@ hatırlılık|isim|k→ğ
 hatırsızlık|isim|k→ğ
 hatırşinaslık|isim|k→ğ
 hav|isim|
-havaalanı|isim|
+havaalanı|isim|iyelik
 havacılık|isim|k→ğ
 havacıva|isim|
 havadarlık|isim|k→ğ
@@ -821,7 +821,7 @@ havalanış|isim|
 havale|isim|
 havalename|isim|
 havali|isim|
-havalimanı|isim|
+havalimanı|isim|iyelik
 havalık|isim|k→ğ
 havalılık|isim|k→ğ
 havan|isim|
@@ -2068,3 +2068,9 @@ herşey|isim
 hergün|zarf
 herzaman|zarf
 haftasonu|isim|iyelik
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+halkev|isim|bileşik_gövde
+halkoy|isim|bileşik_gövde
+havaalan|isim|bileşik_gövde
+havaliman|isim|bileşik_gövde

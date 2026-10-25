@@ -1156,7 +1156,7 @@ dereceleniş|isim|
 derecelenme|isim|
 derecik|isim|k→ğ
 dereke|isim|
-dereotu|isim|
+dereotu|isim|iyelik
 dergici|isim|
 dergicilik|isim|k→ğ
 dergilik|isim|k→ğ
@@ -3063,3 +3063,16 @@ dersiâm|isim
 
 # --- K-4: bitişik yazım (kapalı liste, elle) ---
 doğalgaz|isim
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+dereot|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+dalgaboyu|isim|iyelik
+dişhekimi|isim|iyelik
+diştaşı|isim|iyelik
+doğumgünü|isim|iyelik
+dalgaboy|isim|bileşik_gövde
+dişhekim|isim|bileşik_gövde
+diştaş|isim|bileşik_gövde
+doğumgün|isim|bileşik_gövde

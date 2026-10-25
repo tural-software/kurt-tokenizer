@@ -894,7 +894,7 @@ kafakol|isim|
 kafalılık|isim|k→ğ
 kafasızlık|isim|k→ğ
 kafatasçılık|isim|k→ğ
-kafatası|isim|
+kafatası|isim|iyelik
 kafe|isim|
 kafein|isim|
 kafesleme|isim|
@@ -1202,7 +1202,7 @@ kamu|isim|
 kamuflaj|isim|
 kamulaştırma|isim|
 kamulaştırılma|isim|
-kamuoyu|isim|
+kamuoyu|isim|iyelik
 kamus|isim|
 kamusallaşma|isim|
 kamusallaştırma|isim|
@@ -5622,3 +5622,13 @@ kadîm|sıfat
 kitâbi|sıfat
 kâsım|isim
 kütüphâne|isim
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+kafatas|isim|bileşik_gövde
+kamuoy|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+kireçtaşı|isim|iyelik
+koltukaltı|isim|iyelik
+kireçtaş|isim|bileşik_gövde
+koltukalt|isim|bileşik_gövde

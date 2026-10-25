@@ -138,7 +138,7 @@ gümrük|isim|k→ğ
 gündem|isim|
 güzergah|isim|
 gerekçe|isim|
-gözaltı|isim|
+gözaltı|isim|iyelik
 geciktir|fiil|
 geliştir|fiil|
 girişimci|isim|
@@ -172,7 +172,7 @@ geçişkenlik|isim|k→ğ
 gümüş|isim|
 gurur|isim|
 gönenç|isim|ç→c
-gözyaşı|isim|
+gözyaşı|isim|iyelik
 gedik|isim|k→ğ
 gürgen|isim|
 garson|isim|
@@ -1140,7 +1140,7 @@ gökkuzgunumsular|isim|
 gökkuşağı|isim|
 göknar|isim|
 göktırmalayan|isim|
-gökyüzü|isim|
+gökyüzü|isim|iyelik
 gökçe|isim|
 gökçeklik|isim|k→ğ
 gökçül|isim|
@@ -1929,3 +1929,14 @@ gınâ|isim
 günâh|isim
 gâyet|zarf
 gâfil|sıfat
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+gözalt|isim|bileşik_gövde
+gözyaş|isim|bileşik_gövde
+gökyüz|isim|bileşik_gövde
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+gemiadamı|isim|iyelik
+gözönü|isim|iyelik
+gemiadam|isim|bileşik_gövde
+gözön|isim|bileşik_gövde

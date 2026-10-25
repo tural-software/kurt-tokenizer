@@ -829,7 +829,7 @@ performans|isim|
 pergola|isim|
 perhiz|isim|
 perhizkârlık|isim|k→ğ
-peribacası|isim|
+peribacası|isim|iyelik
 pericik|isim|k→ğ
 peridot|isim|
 peridotit|isim|
@@ -1798,3 +1798,6 @@ plâket|isim
 
 # --- K-4: bitişik yazım (kapalı liste, elle) ---
 pekçok|sıfat|k→ğ
+
+# --- K-5: bileşik iyelik gövdesi (scripts/tr_sozluk/k5_bilesik.py) ---
+peribaca|isim|bileşik_gövde
