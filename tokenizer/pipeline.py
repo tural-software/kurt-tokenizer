@@ -376,14 +376,42 @@ def _kesmeli_birleştir(altbirimler, istisnalar, profil):
     return sonuç
 
 
-def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=None, ad_okuma=False):
+# FR büyük harfte düşmüş aksan (Etat = État, Ecole = École): yalnız ilk harf, yalnız doğrudan çözüm yoksa
+_FR_BÜYÜK_AKSAN = {"e": "éèê", "a": "àâ", "i": "î", "o": "ô", "u": "ùû", "c": "ç"}
+
+
+def _fr_iç_aksan_çözülür(kelime, kökler, ekler, istisnalar) -> bool:
+    """İç harflere aksan konunca da çözülüyor mu (Apres: après) → büyük harf aksanı belirsiz, bütün tutulur."""
+    from tokenizer import fr
+    yer = [i for i, c in enumerate(kelime) if i and c in _FR_BÜYÜK_AKSAN][:6]
+    for seçim in itertools.product(*[(kelime[i], *_FR_BÜYÜK_AKSAN[kelime[i]]) for i in yer]):
+        aday = list(kelime)
+        for i, c in zip(yer, seçim):
+            aday[i] = c
+        aday = "".join(aday)
+        if aday != kelime and any(fr.çözümle(b + aday[1:], kökler, ekler, istisnalar)[0]
+                                  for b in (aday[0], *_FR_BÜYÜK_AKSAN.get(aday[0], ""))):
+            return True
+    return False
+
+
+def _kelime_token(kelime, kökler, ekler, istisnalar, kuyruk, bağlam, profil=None, ad_okuma=False, büyük=False):
     """(token_listesi, bilinmeyen_mi) döndürür. bilinmeyen_mi: çözülemedi → kuyruğa alındı.
-    ad_okuma: kelime Başlık biçiminde (profil.özel_ad_başlık) → özel ad okuması yeğlenir (Gəncə = gəncə, gənc+ə değil)."""
+    ad_okuma: kelime Başlık biçiminde (profil.özel_ad_başlık) → özel ad okuması yeğlenir (Gəncə = gəncə, gənc+ə değil).
+    büyük: kelime Başlık ya da HEP BÜYÜK yazılmış (FR: büyük harfte aksan yazılmayabilir)."""
     if profil is not None and profil.motor == "fr":
         from tokenizer import fr                 # Fransızca çekim üreteçli çözümleyici (FR-1)
         çs, _ = fr.çözümle(kelime, kökler, ekler, istisnalar)
         if çs:
             return list(fr.en_iyi(çs, kökler, ad_okuma).tokens), False
+        if büyük and kelime[:1] in _FR_BÜYÜK_AKSAN:
+            # norm dışı (yaygın) yazım: aksanlı biçim çözülür, ilk tokenın ilk harfi yazılan harfe döner (kayıpsız)
+            aday = [ç for a in _FR_BÜYÜK_AKSAN[kelime[0]] for ç in fr.çözümle(a + kelime[1:], kökler, ekler,
+                                                                                 istisnalar)[0]]
+            if aday and not _fr_iç_aksan_çözülür(kelime, kökler, ekler, istisnalar):
+                tk = list(fr.en_iyi(aday, kökler, ad_okuma).tokens)
+                tk[0] = kelime[0] + tk[0][1:]
+                return tk, False
         if kuyruk is not None:
             kuyruk.ekle(kelime, bağlam)
         return [kelime], True
@@ -630,14 +658,16 @@ def _parça_ekle(parça, tokenlar, kökler, ekler, istisnalar, kuyruk, önbellek
             tokenlar.append(durum)
         ad_okuma = (profil is not None and (profil.özel_ad_başlık or profil.ad_büyük)
                     and durum in (BAŞ_BÜYÜK, ASCII_BAŞ))
-        anahtar = küçük if profil is None else (profil.kod, küçük, "ad") if ad_okuma else (profil.kod, küçük)
+        büyük = bool(durum) and profil is not None and profil.motor == "fr"
+        anahtar = (küçük if profil is None else (profil.kod, küçük, "ad") if ad_okuma
+                   else (profil.kod, küçük, "B") if büyük else (profil.kod, küçük))
         if önbellek is not None and anahtar in önbellek:
             _tk, _bilinmeyen = önbellek[anahtar]
             if _bilinmeyen and kuyruk is not None:   # isabet'te de kuyruğa al (frekans doğru)
                 kuyruk.ekle(küçük, metin)
             tokenlar.extend(_tk)
             continue
-        _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin, profil, ad_okuma)
+        _tk, _bilinmeyen = _kelime_token(küçük, kökler, ekler, istisnalar, kuyruk, metin, profil, ad_okuma, büyük)
         if önbellek is not None:
             önbellek[anahtar] = (_tk, _bilinmeyen)
         tokenlar.extend(_tk)

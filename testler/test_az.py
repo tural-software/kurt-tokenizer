@@ -250,3 +250,14 @@ class AzDanışıqVeÖzelAd(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AzİstisnaGrupları(unittest.TestCase):
+    """K-3: tək hərf, Roma rəqəmi (AZ kiçik hərf), ixtisar/veb, İngilizce, ayrı yazılmış sıra şəkilçisi bütün."""
+
+    def test_gruplar(self):
+        from tokenizer.istisna import istisna_bul
+        v = diller.yükle("az")
+        for k in ("ə", "q", "ıı", "xıv", "abş", "azn", "www", "casino", "ci"):
+            self.assertIsNotNone(istisna_bul(v.istisnalar, k), k)
+        self.assertIsNone(istisna_bul(v.istisnalar, "az"))        # sıradan kök
